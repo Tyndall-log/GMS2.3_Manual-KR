@@ -23,15 +23,15 @@ var backgroundColor = "#509de6";
   model.publish(rh.consts("KEY_MOBILE_TOC_DRILL_DOWN"), true);
 	model.publish(rh.consts('KEY_DEFAULT_SEARCH_LOCATION'), "tabbar");
 	model.publish(rh.consts('KEY_SEARCH_LOCATION'), "tabbar");
-	
+
   model.publish(rh.consts('KEY_SEARCH_HIGHLIGHT_COLOR'), "#FFFFFF");
   model.publish(rh.consts('KEY_SEARCH_BG_COLOR'), "rgba(255, 147, 0, 0.75)");
-	model.publish('l.desktop_sidebar_visible', true);	
+	model.publish('l.desktop_sidebar_visible', true);
 	model.publish('l.mobile_header_visible', false);
-	model.publish(rh.consts('KEY_CUSTOM_BUTTONS_CONFIG'), [{"image":"expand_all.svg","name":"Expand/Collapse All","onclick":"rh.model.publish(rh.consts('EVT_EXPAND_COLLAPSE_ALL'));return false;","title":"Expand/Collapse All"},{"image":"removesearch_mark.svg","name":"RemoveHighlight","onclick":"rh.model.publish(rh.consts('EVT_REMOVE_HIGHLIGHT'));return false;","title":"Remove Highlight"},{"image":"print_desktop.png","name":"Print","onclick":"rh.model.publish(rh.consts('EVT_PRINT_TOPIC'));return false;","title":"Print"}])
+	model.publish(rh.consts('KEY_CUSTOM_BUTTONS_CONFIG'), [{"image":"expand_all.svg","name":"Expand/Collapse All","onclick":"rh.model.publish(rh.consts('EVT_EXPAND_COLLAPSE_ALL'));return false;","title":"모든 요소 펼치기/접기"},{"image":"removesearch_mark.svg","name":"RemoveHighlight","onclick":"rh.model.publish(rh.consts('EVT_REMOVE_HIGHLIGHT'));return false;","title":"강조 표시 제거"},{"image":"print_desktop.png","name":"Print","onclick":"rh.model.publish(rh.consts('EVT_PRINT_TOPIC'));return false;","title":"인쇄"}])
 	model.publish(rh.consts('KEY_DO_NOT_PRESERVE_AR'), true);
 	model.publish(rh.consts('KEY_IS_RESPONSIVE'), true);
-	
+
   model.subscribe([rh.consts('KEY_DEFAULT_SEARCH_LOCATION'), rh.consts('KEY_FEATURE')], function() {
     var features = model.get(rh.consts('KEY_FEATURE')) || {},
       searchResultInTabbar = model.get(rh.consts('KEY_DEFAULT_SEARCH_LOCATION')) === 'tabbar'
@@ -80,7 +80,7 @@ var backgroundColor = "#509de6";
 
 	rh.model.publish(rh.consts('KEY_DEFAULT_TAB'), "toc");
 	rh.model.publish(rh.consts('KEY_LAYOUT_FONT_FAMILY'), fontFamily);
-	
+
 
 	//If there are are no panes available
 	if (!useTOC && !useGLO && !useIDX) {
