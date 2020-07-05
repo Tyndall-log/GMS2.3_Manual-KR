@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "3.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Amazon Fire</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that details the Amazon Fire Platform Preferences"/>
+  <meta name="rh-index-keywords" content="Prefs - Amazon Fire"/>
+  <meta name="search-keywords" content="Amazon Fire Platform Preferences"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Amazon Fire">
+        <span>Amazon Fire</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Amazon Fire Preferences</h1>
+  <p>The <strong>Amazon Fire</strong> preferences are split into various sections listed below. A number of these refer to <strong>Android </strong>tools, since the Amazon Fire target is based off of Android and share the same SDK requirements.</p>
+  <p><img alt="Amazon Fire Preferences Packaging" class="center" src="../../assets/Images/Setup_And_Version/Platform_Preferences/AmazonFire_Prefs_1.png"/>At the top of the preferences you have the option to <strong>synchronise the settings from the Android</strong>.
+    This is for those people that have the Mobile Licence and have already set up and used the Android export, since Amazon Fire uses almost the exact same build tools as Android. Just click this to import all the appropriate settings from Android, then
+    check through them to make sure that they are correct.</p>
+  <p>Under the Sync button you can set the maximum size of the <strong>JDK Memory Heap</strong> (default is 2GB). Next you have to set up the various different <strong>Paths </strong>so that GameMaker Studio 2 knows where to look for the various tools required
+    to build the final executable package and test your game. This is split into three sections for the <strong>Android SDK</strong>, <strong>Android NDK </strong>and <strong>Java JDK</strong>. These paths should have been filled in automatically for
+    you, but should you have any issues you can click the button to the right to open the file explorer and manually select the locations for each element. You can find details of what versions are required for each of the SDK elements <a href="https://help.yoyogames.com/hc/en-us/articles/227860547">here</a>.
+    Paths should be validated as you apply them and a message will show &quot;<em>Found</em>&quot; or tell you of any errors (in which case you should revise all the information to make sure it is correct).</p>
+  <p>Below that you have the different Packaging options which are:</p>
+  <ul class="colour">
+    <li><strong>Always do full install of APK</strong>: Flagging this will make GameMaker Studio 2 remove any previous runners of your game from your device, as well as all associated files (for example, <span class="inline">*.ini</span> files) from your
+      test device before installing a new version of the game.</li>
+    <li><strong>Install on package</strong>: When this option is flagged, compiling a final executable <span class="inline">*.apk</span> package will also install it automatically on the currently selected target device.</li>
+  </ul>
+  <p>Finally we come to the <strong>KeyStore</strong>. This is a file that will be used to &quot;sign&quot; all your Amazon Fire apps so please fill in all the details correctly and keep in mind that this file will be required to create and update all your
+    Amazon Fire apps in the future, meaning that after setting it up<em><strong> it is advised to take a screenshot of the settings used and make a backup of the final file</strong></em>. If you lose this file you will <strong>not </strong>be able to
+    update any existing games that have been uploaded to the store.</p>
+  <p class="note"><strong>NOTE</strong>: The same keystore can be used for both the Android and Amazon Fire targets.</p>
+  <p>To create a new keystore file the following details are required:</p>
+  <p><img alt="Amazon Fire Preferences Keystore" class="center" src="../../assets/Images/Setup_And_Version/Platform_Preferences/AmazonFire_Prefs_2.png"/></p>
+  <ul class="colour">
+    <li><strong>Filename</strong>: This is the name of the KeyStore file.<br/>
+      <br/>
+      <strong>NOTE</strong>: <em>This is not your name or the company name, but the name of the file to be generated! If you already have a keystore file from previous projects then you can click the file browser button here and direct GameMaker Studio 2 to the previously created keystore file (or click the <strong>Import </strong>button). In this case, you must still fill out the rest of the required information (<strong>exactly as it was when you first generated the file</strong>) but you must <strong>not </strong>click the <strong>Generate Keystore </strong>button!. That will generate a new keystore file, overwriting the previous one.</em></li>
+    <li><strong>Common Name</strong>: This would normally be your name.</li>
+    <li><strong>Password</strong>: Your security password for the KeyStore file which must be at least six characters long.</li>
+    <li><strong>Alias</strong>: This is another name that can be used for the KeyStore file and should be different to the name entered above.</li>
+    <li><strong>Alias Password</strong>: Your alias security password for the KeyStore file which must be at least six characters long.</li>
+    <li><strong>Organisational Unit</strong>: The department within the company that you are a part of.</li>
+    <li><strong>Organisation</strong>: The name of your company.</li>
+    <li><strong>Location</strong>: The name of the town or city where you are based.</li>
+    <li><strong>Country</strong>: The standard <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">two letter code</a> for the country where you are based.</li>
+  </ul>
+  <p>Once this information is filled in and you are happy with it, press the button marked <strong>Generate Keystore</strong> for GameMaker Studio 2 to create the necessary KeyStore file. This may take a moment but once it is finished, it normally will not
+    need to be changed again. Note that you can click the <strong>Import </strong>button to import a previously created keystore file (see the <strong>Filename </strong>section, above) and you can also retrieve the keystore SHA1 hash by clicking the <strong>Generate Key Hash </strong>button.
+    Pressing this will generate two special security hash keys directly linked to your keystore file that some web sites require for correct functionality (for example, Facebook, or Google Play for the Sha1 hash). Should you need this, simply press the
+    button, then copy and paste the hash keys that are generated.</p>
+  <p>For further details on how to set up the required Amazon Fire SDKs, please see <a href="https://help.yoyogames.com/hc/en-us/articles/115001368727-Setting-Up-For-Android-or-Amazon-Fire">this article on the YoYo Games Knowledge Base</a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Platform_Preferences.htm">Platform Preferences</a></div>
+        <div style="float:right">Next: <a href="Android.htm">Android</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Amazon Fire Preferences
+-->
+  <!-- TAGS
+prefs_amazon_fire
+-->
+
+</body></html>
