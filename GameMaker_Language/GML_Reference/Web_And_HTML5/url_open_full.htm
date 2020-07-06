@@ -81,128 +81,128 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>url_open_full</h1>
-  <p>This will open the specified URL on the browser of the chosen target device, or, if you are using the HTML5 module, in the currently open browser. The &quot;target&quot; parameter that you specify is the same as the standard JavaScript &quot;name&quot;
-    value when you use the <tt>open()</tt> method (be aware that all but &quot;<strong>_self</strong>&quot; may result in the browser blocking, or asking the user if they wish to allow it) and the &quot;options&quot; is the same as the JavaScript &quot;specs&quot;
-    parameter for controlling what properties the new window/tab should display (not all browsers may support all features).</p>
-  <p>Valid targets are:</p>
+  <p>이 함수는 유저가 선택한 브라우저로 해당 URL을 열어줍니다. 또는 HTML5 모듈을 사용하고 있는경우, 현재 작동하고 있는 브라우저에서 URL이 열립니다. <br><br>&quot;target&quot; 파라미터는 Javascript에서 open() 함수의 &quot;name&quot; 파라미터와 동일한 역할을 합니다. <br>&quot;options&quot; 파라미터는 Javascript에서 open() 함수의 &quot;specs&quot; 파라미터와 동일한 역할을 합니다.</p>
+  <p>※주의: target에서 &quot;<strong>_self</strong>&quot; 값은 브라우저에서 자동으로 차단하거나, 유저가 이를 허용할지 묻는 안내가 뜰 수 있습니다.<br>※주의: options 값은 모든 브라우저에서 적용되지 않을 수 있습니다.</p>
+  <p> </p>
+  <p>가능한 target 종류:</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
         <th>Target</th>
-        <th>Description</th>
+        <th>설명</th>
       </tr>
       <tr>
         <td>_blank</td>
-        <td>Opens the linked document in a new window or tab (this will not work if pop-ups are being blocked by the user, in which case you can use the <a href="Web_And_HTML5.htm"><tt>clickable_*</tt></a> functions instead).</td>
+        <td>링크된 문서를 새 창 혹은 새 탭에서 엽니다. (이 작업은 팝업에 경우 유저에게 막힐 수 있습니다. 대신 <a href="Web_And_HTML5.htm"><tt>clickable_*</tt></a> 함수를 사용할 수 있습니다.)</td>
       </tr>
       <tr>
         <td>_self</td>
-        <td>Opens the linked document in the same frame as it was clicked (this is default).</td>
+        <td>링크된 문서를 함수가 실행된 창에서 엽니다. (기본)</td>
       </tr>
       <tr>
         <td>_parent</td>
-        <td>Opens the linked document in the parent frame.</td>
+        <td>링크된 문서를 부모 창에서 엽니다.</td>
       </tr>
       <tr>
         <td>_top</td>
-        <td>Opens the linked document in the full body of the window.</td>
+        <td>링크된 문서를 최상위 윈도우에 표시합니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>Valid options are:</p>
+  <p>가능한 options 종류:</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Parameters</th>
-        <th>Description</th>
+        <th>파라미터</th>
+        <th>설명</th>
       </tr>
       <tr>
         <td><b>&#39;height=[</b>px<b>]&#39;</b></td>
-        <td>The height of the window, with the minimum value being 100.</td>
+        <td>윈도우의 높이 (최소 100 이상)</td>
       </tr>
       <tr>
         <td><b>&#39;width=[</b>px<b>]&#39;</b></td>
-        <td>The width of the window, with the minimum value being 100.</td>
+        <td>윈도우의 너비 (최소 100 이상)</td>
       </tr>
       <tr>
         <td><b>&#39;left=[</b>px<b>]&#39;</b></td>
-        <td>The left position of the window.</td>
+        <td>윈도우의 x축 위치를 지정</td>
       </tr>
       <tr>
         <td><b>&#39;top=[</b>px<b>]&#39;</b></td>
-        <td>The top position of the window (IE only).</td>
+        <td>윈도우의 y축 위치를 지정 (IE only)</td>
       </tr>
       <tr>
         <td><b>&#39;location=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the address field (default is 1).</td>
+        <td>URL 입력란을 표시할지 여부입니다 (default is 1).</td>
       </tr>
       <tr>
         <td><b>&#39;menubar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the menu bar (default is 1).</td>
+        <td>메뉴바를 표시할지 여부입니다 (default is 1).</td>
       </tr>
       <tr>
         <td><b>&#39;resizable=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not the window is resizable (default is 1).</td>
+        <td>창의 크기를 조절할 수 있는 여부를 결정 (default is 1).</td>
       </tr>
       <tr>
         <td><b>&#39;scrollbars=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display scroll bars (default is 1).</td>
+        <td>스크롤 바를 표시할지 여부입니다 (default is 1).</td>
       </tr>
       <tr>
         <td><b>&#39;status=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to add a status bar (default is 1).</td>
+        <td>상태 표시줄을 표시할지 여부입니다 (default is 1).</td>
       </tr>
       <tr>
         <td><b>&#39;titlebar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the title bar. This is ignored unless the calling application is an HTML Application or a trusted dialog box (default is 1);</td>
+        <td>제목 표시줄을 표시할지 여부입니다. 호출하는 응용 프로그램이 HTML 응용 프로그램이거나 신뢰할 수 있는 대화 상자가 아니면 무시됩니다. (default is 1)</td>
       </tr>
       <tr>
         <td><b>&#39;toolbar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the browser toolbar (default is yes).</td>
+        <td>도구상자(toolbar)을 표시할지 여부입니다 (default is yes).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">url_open_full(url, target, options);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자</th>
+        <th>설명</th>
       </tr>
       <tr>
         <td>url</td>
-        <td>The URL (website address) to link to.</td>
+        <td>이동하고자 하는 URL (웹 사이트 주소)</td>
       </tr>
       <tr>
         <td>target</td>
-        <td>This is the target area to open the URL in (see description).</td>
+        <td>URL을 열고자 하는 위치</td>
       </tr>
       <tr>
         <td>options</td>
-        <td>Standard browser options (see description).</td>
+        <td>브라우저 옵션 (설명 참조)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
-  <p class="code">N/A</p>
+  <h4>반환값:</h4>
+  <p class="code">없음</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예시:</h4>
   <p class="code">url_open_full(&quot;http://yoyogames.com&quot;, &quot;_blank&quot;, &quot;resizable=0, height=200, scrollbars=0&quot;);</p>
-  <p>This would open the YoYo Games homepage in a new window that can&#39;t be resized, has a height of 200 pixels and no scrollbars.</p>
+  <p>이 예시는 요요게임즈 홈페이지를, 사이즈 조절이 불가하고 높이가 200px이며 스크롤바가 없는 새 창에서 열어줍니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Web_And_HTML5.htm">Web And HTML5</a></div>
-        <div style="float:right">Next: <a href="url_get_domain.htm">url_get_domain</a></div>
+        <div style="float:left">이전: <a href="Web_And_HTML5.htm">Web And HTML5</a></div>
+        <div style="float:right">다음: <a href="url_get_domain.htm">url_get_domain</a></div>
       </div>
     </div>
     <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
