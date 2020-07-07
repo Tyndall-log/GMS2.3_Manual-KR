@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,21 +81,21 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_get_font</h1>
-  <p>This function will get the font currently assigned for drawing text. The function will return -1 if no font is set, or the ID value (a positive integer) for the font resource assigned.</p>
+  <p>이 함수는 현제 할당된 폰트를 반환합니다. 만약 폰트가 없다면 -1을 반환합니다, 혹은 할당된 폰트의 ID값(양의 정수)을 얻습니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">draw_get_font();</p>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">Integer (-1 or font ID value)</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예제:</h4>
   <p class="code">if draw_get_font() != fnt_MainMenu<br/>     {
     <br/>     draw_set_colour(c_blue);
     <br/>     draw_set_font(fnt_MainMenu);
     <br/>     }
     <br/> draw_text(room_width / 2, 200, &quot;MENU&quot; );</p>
-  <p>The above code will check to see which font is being used for drawing and if it&#39;s not <tt>fnt_MainMenu</tt>, then the font and draw colour are set before some text is drawn to the screen.</p>
+  <p>이 위의 코드는 현제 어떤 폰트를 사용하는지 확인합니다 그리고 만약 폰트가 <tt>fnt_MainMenu</tt>가 아니라면, 문자를 그리기 전에 폰트로 바꾸고 색을 바꿉니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
