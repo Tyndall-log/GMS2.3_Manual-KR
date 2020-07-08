@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -77,44 +77,43 @@
   </div>
   <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
 
-
-
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text</h1>
-  <p>With this function you can draw any string at any position within the room (for drawing real numbers you should use the <a href="../../Strings/string.htm"><tt>string</tt><tt>()</tt></a> function to convert them into text). To combine strings you can
-    use <b>+</b> (see example below) and you can also use <b>\n</b> within a string to add a line break so it is drawn over multiple lines (for information on how to properly format a string and what escape characters you can use, please see <a href="../../Strings/Strings.htm">here</a>).
-    The colour of the text and the alpha are governed by the current base alpha and colour values as set by <a href="../Colour_And_Alpha/draw_set_alpha.htm"><tt>draw_set_alpha</tt><tt>()</tt><tt></tt></a> and <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour</tt><tt>()</tt><tt></tt></a>.</p>
-  <p class="note"><b>NOTE</b>:The actual position of the text will be influenced by the alignment values set by <a href="draw_set_halign.htm"><tt><span style="font-size:14px;">draw_set_halign</span></tt><tt>()</tt><tt></tt></a> and <a href="draw_set_valign.htm"><tt><span style="font-size:14px;">draw_set_valign</span></tt><tt>()</tt><tt></tt></a>.</p>
+  <p>
+      이 함수를 사용하면 룸에 어디에 있든 문자열을 그릴수 있습니다 (만약 실수 숫자를 사용하고 싶다면  <a href="../../Strings/string.htm"><tt>string</tt><tt>()</tt></a> 함수를 문자에 감싸면 됩니다.). 만약 문자열을 결합하고 싶으면
+      <b>+</b>를 사용하면 됩니다 (밑에 예제를 보십쇼) 또한  <b>\n</b> 를 문자열안에 넣으면 줄바꿈이되어 여러줄을 그릴수 있게됩니다. (어떻게 옳바른 형식을 사용하고 어떤 이스케이프 문자를 사용할수 있는지는, 이곳을 봐주십쇼 <a href="../../Strings/Strings.htm">here</a>).
+      문자의 색과 알파값(투명값)은 현제 설정된 <a href="../Colour_And_Alpha/draw_set_alpha.htm"><tt>draw_set_alpha</tt><tt>()</tt><tt></tt></a> 그리고 <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour</tt><tt>()</tt><tt></tt></a>를 통해 결정됩니다. </p>
+  <p class="NOTE"><b>NOTE</b>:정확한 문자의 위치는 <a href="draw_set_halign.htm"><tt><span style="font-size:14px;">draw_set_halign</span></tt><tt>()</tt><tt></tt></a> 와 <a href="draw_set_valign.htm"><tt><span style="font-size:14px;">draw_set_valign</span></tt><tt>()</tt><tt></tt></a>에 영향을 받습니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">draw_text(x, y, string);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자</th>
+        <th>설명</th>
       </tr>
       <tr>
         <td>x</td>
-        <td>The x coordinate of the drawn string.</td>
+        <td>그려진 문자열의 x 좌표값.</td>
       </tr>
       <tr>
         <td>y</td>
-        <td>The y coordinate of the drawn string.</td>
+        <td>그려진 문자열의 y 좌표값.</td>
       </tr>
       <tr>
         <td>string</td>
-        <td>The string to draw.</td>
+        <td>그려질 문자열.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예시:</h4>
   <p class="code">draw_text(x, y, &quot;Hello, &quot; + global.Name + &quot;!\nI hope you are well!&quot;);</p>
-  <p>The above code will draw a string at the instance x/y position, which will use the string stored in the global variable &quot;Name&quot; and split it over two lines.</p>
+  <p>이 위의 코드는 개체의 x/y 에 문자열이 그려집니다, 이는 전역변수 &quot;Name&quot;에 저장된 문자열을 사용하고 2줄로 나눠집니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
