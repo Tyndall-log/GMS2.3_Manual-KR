@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,14 +81,13 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_set_halign</h1>
-  <p>This function is used to align text along the horizontal axis and changing the horizontal alignment will change the position and direction in which all further text is drawn with the default value being <tt>fa_left</tt>. The following constants are
-    accepted:</p>
+  <p>이 함수는 수평기준선을 정하는데 사용됩니다. 정확히 말하면 앞으로 사용될 모든 문자 그리기 수평기준선을 인자에 넣은 상수로 바뀝니다. 기본설정값은 <tt>fa_left</tt> 입니다. 이 앞에 나온 싱수들만 사용가능 합니다:</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Alignment</th>
+        <th>상수</th>
+        <th>조정</th>
       </tr>
       <tr>
         <td>fa_left</td>
@@ -105,28 +104,28 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">draw_set_halign(halign);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자</th>
+        <th>설명</th>
       </tr>
       <tr>
         <td>halign</td>
-        <td>Horizontal alignment.</td>
+        <td>수평기준선.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예시:</h4>
   <p class="code">draw_set_halign(fa_left);<br/> draw_text(100, 32, &quot;Score: &quot; + string(score));<br/> draw_set_halign(fa_right);
     <br/> draw_text(room_width - 100, 32, &quot;Health: &quot; + string(health));</p>
-  <p>The above code will draw two strings on the same line, with the score being left-hand aligned and the health being right-hand aligned.</p>
+  <p>이 위의 코드는 같은줄에 두개의 문자열을 그립니다, Score는 왼쪽 중심이며 Health는 오른쪽 중심으로 조정됩니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
