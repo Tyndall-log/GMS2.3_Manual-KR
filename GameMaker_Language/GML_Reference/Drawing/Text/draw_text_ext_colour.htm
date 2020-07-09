@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,69 +81,71 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text_ext_colour</h1>
-  <p>This function is a combination of the base <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> function with the <a href="draw_text_ext.htm"><tt>draw_text_ext</tt><tt>()</tt><tt></tt></a> and <a href="draw_text_colour.htm"><tt>draw_text_colour</tt><tt>()</tt><tt></tt></a>    functions, permitting you to define gradient colours for text as well as the line spacing and maximum width per line all together.</p>
-  <p class="note"><b>NOTE: </b>Gradient blending is not available for the HTML5 target unless WebGL is enabled, although you can still set the blending colours and it will blend the font with the first given colour. However all blending in this way creates a duplicate
-    font which is then stored in the cache and used when required, which is far from optimal and if you use multiple colour changes it will slow down your games performance. You can set the font cache size to try and limit this should it be necessary
-    using the function <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>.</p>
+  <p>이 함수는<a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> 함수에 <a href="draw_text_ext.htm"><tt>draw_text_ext</tt><tt>()</tt><tt></tt></a> 와 <a href="draw_text_colour.htm"><tt>draw_text_colour</tt><tt>()</tt><tt></tt></a> 함수를 섞은 버전입니다, 이를 사용하면 색변경과 일정 픽셀을 넘겼을때 줄바꿈을 동시에 사용할수 있습니다.</p>
+  <p class="note">
+    <b>NOTE</b>: HTML5 타겟일때 WebGL 이 불가능하면 변화 블렌딩(Gradient blending)은 불가능 합니다,비록 블렌드 색을 설정할수 있고 처음에 주어진 색으로 폰트가 그려질수 있지만. 이 방법으로 그려지는 블렌딩은
+    복사된후 캐시에 저장됩니다 그리고나서 필요하면 사용됩니다, 이는 최적화와 거리가 멀며 만약 당신이 다양한 색을 사용하면 게임은 느려집니다. 그러므로 당신은 <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>
+    을 사용하여 캐시의 크기를 제한을 걸면 괜찮아집니다.
+  </p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">draw_text_ext_colour(x, y, string, sep, w, c1, c2, c3, c4, alpha);</p>
   <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>The x coordinate of the drawn string.</td>
-      </tr>
-      <tr>
-        <td>y</td>
-        <td>The y coordinate of the drawn string.</td>
-      </tr>
-      <tr>
-        <td>string</td>
-        <td>The string to draw.</td>
-      </tr>
-      <tr>
-        <td>sep</td>
-        <td>The distance in pixels between lines of text.</td>
-      </tr>
-      <tr>
-        <td>w</td>
-        <td>The maximum width in pixels of the string before a line break.</td>
-      </tr>
-      <tr>
-        <td>c1</td>
-        <td>The colour for the top left of the drawn text.</td>
-      </tr>
-      <tr>
-        <td>c2</td>
-        <td>The colour for the top right of the drawn text.</td>
-      </tr>
-      <tr>
-        <td>c3</td>
-        <td>The colour for the bottom right of the drawn text.</td>
-      </tr>
-      <tr>
-        <td>c4</td>
-        <td>The colour for the bottom left of the drawn text.</td>
-      </tr>
-      <tr>
-        <td>alpha</td>
-        <td>The alpha for the text.</td>
-      </tr>
-    </tbody>
+      <tbody>
+          <tr>
+              <th>인자</th>
+              <th>설명</th>
+          </tr>
+          <tr>
+              <td>x</td>
+              <td>그려질 문자열의 x좌표.</td>
+          </tr>
+          <tr>
+              <td>y</td>
+              <td>그려질 문자열의 y좌표.</td>
+          </tr>
+          <tr>
+              <td>string</td>
+              <td>그려질 문자열</td>
+          </tr>
+          <tr>
+              <td>sep</td>
+              <td>각 문자열줄들간의 픽셀간격.</td>
+          </tr>
+          <tr>
+              <td>w</td>
+              <td>줄바꿈의 기준인 최대가로픽셀값.</td>
+          </tr>
+          <tr>
+              <td>c1</td>
+              <td>그려질 문자열 좌측상단의 색.</td>
+          </tr>
+          <tr>
+              <td>c2</td>
+              <td>그려질 문자열 우측상단의 색.</td>
+          </tr>
+          <tr>
+              <td>c3</td>
+              <td>그려질 문자열 우측하단의 색</td>
+          </tr>
+          <tr>
+              <td>c4</td>
+              <td>그려질 문자열 좌측하단의 색.</td>
+          </tr>
+          <tr>
+              <td>alpha</td>
+              <td>문자열의 투명도.</td>
+          </tr>
+      </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예시:</h4>
   <p class="code">draw_text_ext_colour(200, 200, keyboard_string, 5, 300, c_blue, c_blue, c_navy, c_navy, 1);</p>
-  <p>The above code will draw whatever text the user types into the keyboard, splitting it onto new lines every time the string length for that line exceeds 300 pixels. the code will also maintain a separation of 5 pixels between lines should this occur.
-    Each line of the text will be coloured using a blue gradient, with light blue at the top and dark blue at the bottom.</p>
+  <p>이 위의 코드는 유저가 키보드로 입력한 문자열을 그립니다, 만약 문자열의 가로가 300픽셀을 넘기면 줄바꿈을 하며 줄 사이의 간격은 5픽셀만큼 차지합니다.
+    모든 줄들의 문자는 위쪽은 밝은 파란색, 밑은 어두운 파란색으로 바뀌는색으로 그려집니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
