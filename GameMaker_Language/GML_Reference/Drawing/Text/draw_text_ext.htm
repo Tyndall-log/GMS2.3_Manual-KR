@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,48 +81,47 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text_ext</h1>
-  <p>This function will draw text in a similar way to <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> only now you can set the space between each line of text - should the text occupy more than one line - and limit the width (in pixels)
-    of the string per line so that should any line exceed this value, GameMaker Studio 2 will automatically split the text to the next line at the nearest available white-space (if the text has no white-spaces then it will overrun this maximum
-    width value). Note that any white space placed at the start of the string will be stripped out before being parsed for drawing because of this. Also note that a value of -1 for the line separation argument will default to a separation based on the
-    height of the &quot;M&quot; character in the chosen font.</p>
+  <p>이 함수는 <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a>와 비슷하게 그릴겁니다 다른점은 각각의 문자열줄의 공간을 설정할수 있습니다 이때 한줄의 픽셀길이가 설정한 최대가로길이 (단위는 픽셀)보다 길다면
+   게임메이커 스튜디오2는 자동으로 가장 가까운 빈 공간으로 줄바꿈을 합니다. (만약 빈 공간이 없다면 문자는 최대가로길이를 뚫고 그려집니다). 이런이유로 모든 문자열의 시작점에 위치한 빈 공간은 이전에 그려진 문자열의 배치구조를 없에버립니다.
+    또한 중요한점은 sep인자에 -1값을 넣으면 결정된 글꼴의&quot;M&quot;의 높이를 기준으로 작동됩니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">draw_text_ext(x, y, string, sep, w);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자</th>
+        <th>설명</th>
       </tr>
       <tr>
         <td>x</td>
-        <td>The x coordinate of the drawn string.</td>
+        <td>그려질 문자열의 x좌표.</td>
       </tr>
       <tr>
         <td>y</td>
-        <td>The y coordinate of the drawn string.</td>
+        <td>그려질 문자열의 y좌표.</td>
       </tr>
       <tr>
         <td>string</td>
-        <td>The string to draw.</td>
+        <td>그려질 문자열</td>
       </tr>
       <tr>
         <td>sep</td>
-        <td>The distance in pixels between lines of text.</td>
+        <td>각 문자열줄들간의 픽셀간격.</td>
       </tr>
       <tr>
         <td>w</td>
-        <td>The maximum width in pixels of the string before a line break.</td>
+        <td>줄바꿈의 기준인 최대가로픽셀값.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
   <h4>Example:</h4>
   <p class="code">draw_text_ext(100, 50, keyboard_string, 3, 300);</p>
-  <p>The above code will draw whatever text the user types into the keyboard, splitting it onto new lines every time the string length for that line exceeds 300 pixels. the code will also maintain a separation of 3 pixels between lines should this occur.</p>
+  <p>이 위의 코드는 사용자가 키보드에친 문자를 그립니다, 이때 가로가 300픽셀을 넘을때마다 줄바꿈이 됩니다. 이코드는 또한 줄간의 간격은 3픽셀만큼 차지합니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>

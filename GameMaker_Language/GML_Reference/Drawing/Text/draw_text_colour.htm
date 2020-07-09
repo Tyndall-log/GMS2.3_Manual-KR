@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,61 +81,63 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text_colour</h1>
-  <p>This function will draw text in a similar way to <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> only now you can choose the colours to use for colouring the text as well as the alpha value, and these new values will be used instead
-    of the base drawing colour and alpha.</p>
-  <p class="note"><b>NOTE</b>: Gradient blending is not available for the HTML5 target unless WebGL is enabled, although you can still set the blending colours and it will blend the font with the first given colour. However all blending in this way creates a duplicate
-    font which is then stored in the cache and used when required, which is far from optimal and if you use multiple colour changes it will slow down your games performance. You can set the font cache size to try and limit this should it be necessary
-    using the function <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>.</p>
+  <p>이 함수는 <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a>와 비슷하지만 문자의 색과 알파값(투명도)를 정할수 있습니다, 그리고 이는 기존에 설정된 색과 알파값(투명도)
+    를 사용하지 않고 인자의 설정을 따릅니다.</p>
+  <p class="note">
+      <b>NOTE</b>: HTML5 타겟일때 WebGL 이 불가능하면 변화 블렌딩(Gradient blending)은 불가능 합니다,비록 블렌드 색을 설정할수 있고 처음에 주어진 색으로 폰트가 그려질수 있지만. 이 방법으로 그려지는 블렌딩은
+      복사된후 캐시에 저장됩니다 그리고나서 필요하면 사용됩니다, 이는 최적화와 거리가 멀며 만약 당신이 다양한 색을 사용하면 게임은 느려집니다. 그러므로 당신은  a<a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>
+      을 사용하여 캐시의 크기를 제한을 걸면 괜찮아집니다.
+  </p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">draw_text_colour(x, y, string, c1, c2, c3, c4, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자</th>
+        <th>설명</th>
       </tr>
       <tr>
         <td>x</td>
-        <td>The x coordinate of the drawn string.</td>
+        <td>그려질 x의 좌표.</td>
       </tr>
       <tr>
         <td>y</td>
-        <td>The y coordinate of the drawn string.</td>
+        <td>그려질 y의 좌표.</td>
       </tr>
       <tr>
         <td>string</td>
-        <td>The string to draw.</td>
+        <td>그려질 문자열.</td>
       </tr>
       <tr>
         <td>c1</td>
-        <td>The colour for the top left of the drawn text.</td>
+        <td>그려질 문자열 좌측상단의 색.</td>
       </tr>
       <tr>
         <td>c2</td>
-        <td>The colour for the top right of the drawn text.</td>
+        <td>그려질 문자열 우측상단의 색.</td>
       </tr>
       <tr>
         <td>c3</td>
-        <td>The colour for the bottom right of the drawn text.</td>
+        <td>그려질 문자열 우측하단의 색</td>
       </tr>
       <tr>
         <td>c4</td>
-        <td>The colour for the bottom left of the drawn text.</td>
+        <td>그려질 문자열 좌측하단의 색.</td>
       </tr>
       <tr>
         <td>alpha</td>
-        <td>The alpha for the text.</td>
+        <td>문자열의 투명도.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예시:</h4>
   <p class="code">draw_set_colour(c_white);<br/> draw_text(100, 100, &quot;Health&quot;);<br/> draw_text_colour(100, 200, string(health), c_lime, c_lime, c_green, c_green, 1);</p>
-  <p>The above code will draw two sections of text on the same line, with the first text being drawn white (as that is the base drawing colour) and the second text being drawn with a lime green to normal green gradient.</p>
+  <p>이위의 코드는 같은줄에 두개의 문자열이 그려집니다, 첫번째 문자열은 하얀색이며 (기본값에 의해서) 두번째 문자열은 라임이 초록색으로 변화되며 그려집니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
