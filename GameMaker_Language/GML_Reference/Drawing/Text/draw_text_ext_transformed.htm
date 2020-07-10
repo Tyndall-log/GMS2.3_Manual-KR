@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,59 +81,59 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text_ext_transformed</h1>
-  <p>This function is a combination of the base <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> function with the <a href="draw_text_ext.htm"><tt>draw_text_ext</tt><tt>()</tt><tt></tt></a> and <a href="draw_text_transformed.htm"><tt>draw_text_transformed</tt><tt>()</tt><tt></tt></a>    functions, permitting you to scale and rotate text while maintaining a specific line spacing and maximum width per line. Note that the &quot;width&quot; argument is based on a scale of 1, so if the scale is different, this value should be changed
-    proportionally. For example, if the base width for a line break is 300 and you set the scale to 2, then the text will appear wrong, over-running the given width. Instead you should have set the width to 150 to compensate the scaling.</p>
+  <p>이 함수는 <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> 함수에 <a href="draw_text_ext.htm"><tt>draw_text_ext</tt><tt>()</tt><tt></tt></a> 와 <a href="draw_text_transformed.htm"><tt>draw_text_transformed</tt><tt>()</tt><tt></tt></a> 함수를 합친버전 입니다, 이는 각 줄의 최대길이와 빈 공간을 유지시켜주면서 문자의 크기와 회전값을 바꿀수 있도록 해줍니다. 중요한건 인자의&quot;w&quot;은 크기를 1을 기준으로 둡니다, 그래서 만약 크기가 1이 아니라면, 크기값이 바뀐만큼의 비율로 변경됩니다
+    . 예를들어, 2의 크기로 설정하고 300픽셀마다 줄바꿈을 하라고 인자에 넣으면, 문자는 예상과 다르게 주어진 픽셀을 넘길 것입니다. 대신 크기에 맞춰 150픽셀로 설정하면 잘 작동됩니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">draw_text_ext_transformed(x, y, string, sep, w, xscale, yscale, angle);</p>
   <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>The x coordinate of the drawn string.</td>
-      </tr>
-      <tr>
-        <td>y</td>
-        <td>The y coordinate of the drawn string.</td>
-      </tr>
-      <tr>
-        <td>string</td>
-        <td>The string to draw.</td>
-      </tr>
-      <tr>
-        <td>sep</td>
-        <td>The distance in pixels between lines of text.</td>
-      </tr>
-      <tr>
-        <td>w</td>
-        <td>The maximum width in pixels of the string before a line break.</td>
-      </tr>
-      <tr>
-        <td>xscale</td>
-        <td>The horizontal scale.</td>
-      </tr>
-      <tr>
-        <td>yscale</td>
-        <td>The vertical scale.</td>
-      </tr>
-      <tr>
-        <td>angle</td>
-        <td>The angle of the text.</td>
-      </tr>
-    </tbody>
+      <tbody>
+          <tr>
+              <th>인자</th>
+              <th>설명</th>
+          </tr>
+          <tr>
+              <td>x</td>
+              <td>그려질 문자열의 x좌표.</td>
+          </tr>
+          <tr>
+              <td>y</td>
+              <td>그려질 문자열의 y좌표.</td>
+          </tr>
+          <tr>
+              <td>string</td>
+              <td>그려질 문자열</td>
+          </tr>
+          <tr>
+              <td>sep</td>
+              <td>각 문자열줄들간의 픽셀간격.</td>
+          </tr>
+          <tr>
+              <td>w</td>
+              <td>줄바꿈의 기준인 최대가로픽셀값.</td>
+          </tr>
+          <tr>
+              <td>xscale</td>
+              <td>수평 크기.</td>
+          </tr>
+          <tr>
+              <td>yscale</td>
+              <td>수직 크기.</td>
+          </tr>
+          <tr>
+              <td>angle</td>
+              <td>문자의 각도.</td>
+          </tr>
+      </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예시:</h4>
   <p class="code">draw_set_halign(fa_center);<br/> draw_set_valign(fa_middle);
     <br/> image_angle += 1;<br/> draw_text_ext_transformed(room_width / 2, room_height / 2, keyboard_string, 10, 300, 2, 2, image_angle);</p>
-  <p>The above code will draw the given text in the middle of the room, with a maximum string length of 300 pixels, a spacing between each line of 10 pixels, spinning round and scaled to twice its original size.</p>
+  <p>이 위의 코드는 룸 중앙에 주어진 문자열을 그립니다, 각 줄의 최대길이는 300픽셀이며, 각 줄간의 공간은 10픽셀 입니다, 기존의 크기보다 2배 크며 image_angle값만큼 돌아갑니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>

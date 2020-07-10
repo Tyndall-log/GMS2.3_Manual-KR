@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,74 +81,77 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text_ext_transformed_colour</h1>
-  <p>This function is a combination of the base <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> function with the <a href="draw_text_ext.htm"><tt>draw_text_ext</tt><tt>()</tt><tt></tt></a>, <a href="draw_text_transformed.htm"><tt>draw_text_transformed</tt><tt>()</tt><tt></tt></a>    and <a href="draw_text_colour.htm"><tt>draw_text_colour</tt><tt>()</tt><tt></tt></a> functions. As such, this is the most general of all functions for drawing text and gives a large amount of flexibility when drawing. Note that the &quot;width&quot;
-    argument is based on a scale of 1, so if the scale is different, this value should be changed proportionally. For example, if the base width for a line break is 300 and you set the scale to 2, then the text will appear wrong, over-running the given
-    width. Instead you should have set the width to 150 to compensate the scaling.</p>
-  <p class="note"><b>NOTE</b>: Gradient blending is not available for the HTML5 target unless WebGL is enabled, although you can still set the blending colours and it will blend the font with the first given colour. However all blending in this way creates a duplicate
-    font which is then stored in the cache and used when required, which is far from optimal and if you use multiple colour changes it will slow down your games performance. You can set the font cache size to try and limit this should it be necessary
-    using the function <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>.</p>
+  <p>
+      이 함수는 <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a>함수를 기본으로 <a href="draw_text_ext.htm"><tt>draw_text_ext</tt><tt>()</tt><tt></tt></a>, <a href="draw_text_transformed.htm"><tt>draw_text_transformed</tt><tt>()</tt><tt></tt></a> 그리고 <a href="draw_text_colour.htm"><tt>draw_text_colour</tt><tt>()</tt><tt></tt></a>을 합친 함수입니다. 이 함수는 모든 문자 그리기 함수 중 가장 기본이 되는 함수이며 그리는 점에서 가장 부드러운 함수입니다. 중요한건 인자의&quot;w&quot;은 크기를 1을 기준으로 둡니다, 그래서 만약 크기가 1이 아니라면, 크기값이 바뀐만큼의 비율로 변경됩니다
+      . 예를들어, 2의 크기로 설정하고 300픽셀마다 줄바꿈을 하라고 인자에 넣으면, 문자는 예상과 다르게 주어진 픽셀을 넘길 것입니다. 대신 크기에 맞춰 150픽셀로 설정하면 잘 작동됩니다.
+  </p>
+  <p class="note">
+      <b>NOTE</b>: HTML5 타겟일때 WebGL 이 불가능하면 변화 블렌딩(Gradient blending)은 불가능 합니다,비록 블렌드 색을 설정할수 있고 처음에 주어진 색으로 폰트가 그려질수 있지만. 이 방법으로 그려지는 블렌딩은
+      복사된후 캐시에 저장됩니다 그리고나서 필요하면 사용됩니다, 이는 최적화와 거리가 멀며 만약 당신이 다양한 색을 사용하면 게임은 느려집니다. 그러므로 당신은 <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><tt style="font-size: 14px">font_set_cache_size()</tt></a>
+      을 사용하여 캐시의 크기를 제한을 걸면 괜찮아집니다.
+  </p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">draw_text_ext_transformed_colour(x, y, string, sep, w, xscale, yscale, angle, c1, c2, c3, c4, alpha);</p>
   <table>
-    <tbody>
-      <tr>
-        <th>Argument</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>x</td>
-        <td>The x coordinate of the drawn string.</td>
-      </tr>
-      <tr>
-        <td>y</td>
-        <td>The y coordinate of the drawn string.</td>
-      </tr>
-      <tr>
-        <td>string</td>
-        <td>The string to draw.</td>
-      </tr>
-      <tr>
-        <td>sep</td>
-        <td>The distance in pixels between lines of text.</td>
-      </tr>
-      <tr>
-        <td>w</td>
-        <td>The maximum width in pixels of the string before a line break.</td>
-      </tr>
-      <tr>
-        <td>xscale</td>
-        <td>The horizontal scale.</td>
-      </tr>
-      <tr>
-        <td>yscale</td>
-        <td>The vertical scale.</td>
-      </tr>
-      <tr>
-        <td>angle</td>
-        <td>The angle of the text.</td>
-      </tr>
-      <tr>
-        <td>c1</td>
-        <td>The colour for the top left of the drawn text.</td>
-      </tr>
-      <tr>
-        <td>c2</td>
-        <td>The colour for the top right of the drawn text.</td>
-      </tr>
-      <tr>
-        <td>c3</td>
-        <td>The colour for the bottom right of the drawn text.</td>
-      </tr>
-      <tr>
-        <td>c4</td>
-        <td>The colour for the bottom left of the drawn text.</td>
-      </tr>
-      <tr>
-        <td>alpha</td>
-        <td>The alpha for the text.</td>
-      </tr>
-    </tbody>
+      <tbody>
+          <tr>
+              <th>인자</th>
+              <th>설명</th>
+          </tr>
+          <tr>
+              <td>x</td>
+              <td>그려질 문자열의 x좌표.</td>
+          </tr>
+          <tr>
+              <td>y</td>
+              <td>그려질 문자열의 y좌표.</td>
+          </tr>
+          <tr>
+              <td>string</td>
+              <td>그려질 문자열</td>
+          </tr>
+          <tr>
+              <td>sep</td>
+              <td>각 문자열줄들간의 픽셀간격.</td>
+          </tr>
+          <tr>
+              <td>w</td>
+              <td>줄바꿈의 기준인 최대가로픽셀값.</td>
+          </tr>
+          <tr>
+              <td>xscale</td>
+              <td>수평 크기.</td>
+          </tr>
+          <tr>
+              <td>yscale</td>
+              <td>수직 크기.</td>
+          </tr>
+          <tr>
+              <td>angle</td>
+              <td>문자의 각도.</td>
+          </tr>
+          <tr>
+              <td>c1</td>
+              <td>그려질 문자열 좌측상단의 색.</td>
+          </tr>
+          <tr>
+              <td>c2</td>
+              <td>그려질 문자열 우측상단의 색.</td>
+          </tr>
+          <tr>
+              <td>c3</td>
+              <td>그려질 문자열 우측하단의 색</td>
+          </tr>
+          <tr>
+              <td>c4</td>
+              <td>그려질 문자열 좌측하단의 색.</td>
+          </tr>
+          <tr>
+              <td>alpha</td>
+              <td>문자열의 투명도.</td>
+          </tr>
+      </tbody>
   </table>
   <p> </p>
   <h4>Returns:</h4>
@@ -157,8 +160,8 @@
   <h4>Example:</h4>
   <p class="code">draw_set_halign(fa_center);<br/> draw_set_valign(fa_middle);
     <br/> draw_text_ext_transformed_colour(200, 200, &quot;My name is&quot; + global.name +&quot;.&quot;, 20, 200, 0.5, 0.5, 180, c_blue, c_blue, c_navy, c_navy, 1);</p>
-  <p>This will draw the given text with a blue to dark blue downward gradient, at position (200,200) in the room, rotated to be upside down and at half the normal point size of the font. There will be 20 pixels between each line should there be more than
-    one line drawn and each line will have a maximum width of 200 pixels.</p>
+  <p>이 위의 코드는 파란색에서 검은 파란색으로 가는 변화되면서 그려지고, 룸에서 (200, 200)위치에 그려집니다, 또한 위 아래가 뒤집혀서 그려지고 폰트의 반정도 크기만큼 그려집니다. 200픽셀만큼 줄바꿈이 되며 각 줄은
+    20픽셀 만큼의 빈 공간을 가집니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
