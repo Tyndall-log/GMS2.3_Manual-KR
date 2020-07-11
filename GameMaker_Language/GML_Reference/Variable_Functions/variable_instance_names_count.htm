@@ -83,28 +83,30 @@
   <h1>variable_instance_names_count</h1>
   <p>With this function you can find the total number number of variables defined for an instance. You supply the instance ID to check, and the function will return an integer value for the number of variables encountered, or (if no instance of the given
     ID exists) -1.</p>
+   <p>이 함수를 사용하면 개체에 정의된 총 변수값의 수를 알아낼 수 있습니다. 함수의 인자값에 확인할 개체 ID를 넣으면, 함수는 개체내에 변수의 수를 정수값으로 반환해주고, 또는 -1(개체에 지정된 개체ID값이 없을 경우)을 반환해 줄 것입니다.  </p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">variable_instance_names_count(struct_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
       </tr>
       <tr>
         <td>instance_id</td>
-        <td>The unique ID value of the instance to check.</td>
+        <td>확인할 특정 개체의 ID 값.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">Integer</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예제:</h4>
   <p class="code">var _num = variable_instance_names_count(mystruct);<br/> show_debug_message(&quot;Instance Variables = &quot; + string(_num));</p>
   <p>The above code will retrieve the number of variables in the given instance and show a debug message in the console output with this value.</p>
+  <p>위 코드는 주어진 개체에 있는 변수의 수를 검색해주고 콘솔창에 디버그 메세지로 변수 숫자를 출력을 해줍니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
