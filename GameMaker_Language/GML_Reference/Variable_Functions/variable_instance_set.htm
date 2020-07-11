@@ -80,42 +80,47 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_instance_set</h1>
-  <p>With this function you can set the value of a given variable in an instance. You supply the unique instance ID value (which can be found from the <a href="../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Instance Properties</a> in the
-    room editor, or is returned when you call the function <a href="../Asset_Management/Instances/instance_create_layer.htm"><tt>instance_create_layer()</tt></a>) as well as the name of the variable to set the value of <i>as a string</i> (see example
-    code below), and then finally the value to set (can be any valid <a href="../../GML_Overview/Data_Types.htm">data type</a>). If the variable does not exist already in the instance it will be created and then assigned the value.</p>
+  <h1>variable_instance_set</h1>  
+  <p> 이 함수를 사용하면 개체에서 주어진 변수의 값을 설정할 수 있습니다. <i>문자열</i>로써 체크되는 <u>변수이름</u>뿐만 아니라 고유한 <u>개체 ID</u>(Instance ID)값(룸 에디터의 
+    <a href="../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Instance Properties</a>
+    에서 찾을 수 있거나, 함수
+    <a href="../Asset_Management/Instances/instance_create_layer.htm"><tt>instance_create_layer()</tt></a>
+    를 호출할 때 반환되는 값)을 인자값으로 받고, 마지막으로 변수의 값을 <u>설정하고 싶은 값</u>( 
+    <a href="../../GML_Overview/Data_Types.htm">data type</a> 항목에 부합되면 어떤 형태든 상관없다)
+    을 넣어주면 됩니다(샘플 코드는 아래에서 확인할 수 있다). 만약 개체안에 존재하지 않는 변수이름을 함수의 인자로 넣게 된다면 해당 변수이름의 값을 생성하고 값을 부여하게 됩니다. 
+  </p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">variable_instance_set(instance_id, name, val);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
       </tr>
       <tr>
         <td>instance_id</td>
-        <td>The unique ID value of the instance to use</td>
+        <td>사용할 개체의 고유의 ID값</td>
       </tr>
       <tr>
         <td>name</td>
-        <td>The name of the variable to set (as a string)</td>
+        <td>설정하고 싶은 변수의 이름(문자열 데이터)</td>
       </tr>
       <tr>
         <td>val</td>
-        <td>The value to set the variable to</td>
+        <td>변수에 설정하고 싶은 값</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예제:</h4>
   <p class="code">if !variable_instance_exists(id, &quot;shields&quot;)<br/>    {
     <br/>    variable_instance_set(id, &quot;shields&quot;, 0);<br/>    }
   </p>
-  <p>The above code will check to see if an instance variable exists in the calling instance and if it does not then it is created and set to 0.</p>
+  <p>위 코드를 보면 먼저 개체안에 해당 변수이름이 존재하지 않는 것을 체크하고, 존재하지 않는 경우 해당 변수이름으로 새로운 변수를 생성하고 값을 0으로 설정합니다.  </p>
   <p> </p>
   <p> </p>
   <p> </p>
