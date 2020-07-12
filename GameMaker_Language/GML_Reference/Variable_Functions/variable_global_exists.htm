@@ -81,8 +81,6 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>variable_global_exists</h1>
-  <p>With this function you can check whether a global scope variable exists or not. You supply the global variable name to check for <i>as a string</i> (see example code below) and the function will return <tt>true</tt> if
-    a global variable with the given name exists or <tt>false</tt> otherwise.</p>
   <p>이 함수를 사용하면 <u>전역 영역 변수</u>(global scope variable)가 존재하는지 여부를 확인하실 수 있습니다. 확인하고 싶은 전역변수의 <i>이름(문자열)</i>을 전역변수의 인자값으로 주게 되고(아래 코드 예제 참조), 함수는 인자값으로 넣어준 전역변수가 존재한다면 <tt>true</tt>를 
   반환하게 되고, 그렇지않다면 <tt>false</tt>를 반환하게 됩니다.</p>
   <p> </p>
@@ -108,7 +106,6 @@
   <p class="code">if !variable_global_exists(&quot;enemy_num&quot;))<br/> {
     <br/> global.enemy_num = instance_number(obj_Enemey_Parent);<br/> }
   </p>
-  <p>The above code will check to see if the global variable called &quot;enemy_num&quot; exists and if it does not it is created and set a value.</p>
   <p>위 코드는 "enemy_num"으로 선언된 전역변수가 존재하는지를 확인하고, 그렇지않다면 새로운 enemy_num이라는 변수를 만들어서 값을 지정해주고 있습니다. </p>
   <p> </p>
   <p> </p>
