@@ -81,42 +81,46 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>variable_instance_get_names</h1>
-  <p>With this function you can retrieve an array populated with the <b>instance</b> variable names for an instance, or the <b>global</b> variables for a game. When you pass in an instance ID value, each
-    entry in the array will be a string of the variable name that corresponds to an <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">instance scope</a> variable that has been created in the instance. However if you
-    pass in the keyword <tt>global</tt>, each entry in the array will be a string of the variable name that corresponds to an <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">global scope</a> variable.</p>
+  
+  <p>이 함수를 사용하시면 특정 <b>개체</b>의 변수이름, 또는 게임 내에 <b>전역(global)</b>변수가 들어있는 배열을 검색할 수 있습니다. 함수 인자에 개체 ID값을 넣게 되면, 배열의 각 항목들은 개체에서 만들어진 
+    <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">instance scope</a> 
+    변수에 대응되는 변수이름의 문자열이 됩니다. 하지만 함수 인자값에 <tt>&quot;global&quot;</tt>이란 키워드를 넣게되면, 배열의 각 항목들은 변수에 
+    <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">global scope</a> 
+    대응되는 변수이름의 문자열이 됩니다.
+   </p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">variable_instance_get_names(instance_id/global);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자값(Argument)</th>
+        <th>서술(Description)</th>
       </tr>
       <tr>
         <td>instance_id/global</td>
-        <td>The unique ID value of the instance to check or the keyword <tt>global</tt></td>
+        <td>확인 할 특정 개체의 ID값 또는 <tt>&quot;global&quot;</tt>키워드 </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">Array (each entry is a string)</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예제:</h4>
   <p class="code">var str = &quot;&quot;;<br/> var array = variable_instance_get_names(id);<br/> show_debug_message(&quot;Variables for &quot; + object_get_name(object_index) + string(id));<br/> for (var i = 0; i &lt; array_length(array); i++;)<br/>     {
     <br/>     str = array[i] + &quot;:&quot; + string(variable_instance_get(id, array[i]));<br/>     show_debug_message(str);
     <br/>     }
   </p>
-  <p>The above code will retrieve an array of all instance scope variables for the instance running the code block and then display these along with their values in the debug output.</p>
+  <p>위 코드는 코드블럭에서 동작하는 모든 개체 범위 변수의 배열을 검색하고, 해당 값들을 디버그 출력으로 보여줍니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a href="variable_instance_names_count.htm">variable_instance_names_count</a></div>
+        <div style="float:left">이전: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">다음: <a href="variable_instance_names_count.htm">variable_instance_names_count</a></div>
       </div>
     </div>
     <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>

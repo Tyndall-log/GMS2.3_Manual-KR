@@ -81,49 +81,57 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>variable_instance_get</h1>
-  <p>With this function you can get the value from a given named variable. You supply the unique instance ID value (which can be found from the <a href="../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Instance Properties</a> in the room
-    editor, or is returned when you call the function <a href="../Asset_Management/Instances/instance_create_layer.htm"><tt>instance_create_layer()</tt></a>) as well as the name of the variable to get the value of <i>as a string</i> (see example code
-    below). The function will return the value held by the variable, or <span class="inline">undefined</span> if the variable does not exist.</p>
-  <p class="note"><b>IMPORTANT!</b> If the variable you are getting does not exist then the function will return the keyword <tt>undefined</tt> and you may get errors that will stop the game from functioning, so if in doubt use the function <a href="variable_instance_exists.htm"><tt>variable_instance_exists</tt></a>    first.</p>
+  <p>이 함수를 사용하면 지명된 변수에서 값을 얻을 수 있습니다. <i>문자열</i>로써 체크되는 <u>변수이름</u>뿐만 아니라 고유한 <u>개체 ID</u>(Insance ID)값(룸 데이터의
+    <a href="../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Instance Properties</a>
+    에서 찾을 수 있거나, 함수
+    <a href="../Asset_Management/Instances/instance_create_layer.htm"><tt>instance_create_layer()</tt></a>
+    를 호출할 때 반환되는 값)을 인자값으로 넣어줘야 합니다(샘플 코드는 아래에서 확인할 수 있다). 이 함수는 인자값으로 넣어준 &quot;변수이름&quot;의 값을 반환하고, 변수가 존재하지 않으면 &quot;undefined&quot;라고 출력됩니다.
+  </p>
+  <p class="note">
+    <b>주위!</b>
+    만약 존재하지 않는 변수의 값을 함수의 인자로 넣게 된다면 반환값으로 <span class="inline">undefined</span> 키워드를 출력할 것입니다. 그리고 이것은 당신의 게임에서 에러를 일으키고 함수가 동작할 때 게임이 멈춰버릴 수 있습니다. 혹시 이런 증상이 의심이 된다면 먼저
+    <a href="variable_instance_exists.htm"><tt>variable_instance_exists</tt></a>
+    함수를 사용해서 인자로 넣은 변수가 존재하는지 확인하시길 바랍니다.
+  </p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">variable_instance_get(instance_id, name);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
       </tr>
       <tr>
         <td>instance_id</td>
-        <td>The unique ID value of the instance to use</td>
+        <td>사용할 개체의 고유한 ID값</td>
       </tr>
       <tr>
         <td>name</td>
-        <td>The name of the variable to get (as a string)</td>
+        <td>값을 얻고자 하는 변수의 이름(문자형 데이터)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">Value (any data type) or <tt>undefined</tt> (if the named variable does not exist)</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예제:</h4>
   <p class="code">if variable_instance_exists(id, &quot;shields&quot;)<br/>    {
     <br/>    var ss = variable_instance_get(id, &quot;shields&quot;);<br/>    }
     <br/> else
     <br/>    }
     <br/>    var ss = -1;<br/>    }
   </p>
-  <p>The above code will check to see if a variable exists and if it does then the value it holds is retrieved and stored in a local variable. If it does not exist, the local variable is set to -1.</p>
+  <p>위 코드는 변수가 존재한다면 변수가 가진 값을 지역변수로 저장할 것이고, 만약 존재하지 않는다면 지역변수로 저장되는 값은 -1로 설정하게 됩니다. </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a href="variable_instance_set.htm">variable_instance_set</a></div>
+        <div style="float:left">이전: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">다음: <a href="variable_instance_set.htm">variable_instance_set</a></div>
       </div>
     </div>
     <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>

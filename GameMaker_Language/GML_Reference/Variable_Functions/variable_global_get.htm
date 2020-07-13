@@ -81,42 +81,43 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>variable_global_get</h1>
-  <p>With this function you can get the value from a given named global variable. You supply the name of the global variable to get the value of <i>as a string</i> (see example code below) and the function will return the value
-    held by the global variable or <span class="inline">undefined</span> if the variable does not exist.<b></b></p>
-  <p class="note"><b>IMPORTANT!</b> If the global variable you are getting does not exist then the function will return the keyword <tt>undefined</tt> and you may get errors that will stop the game from functioning, so if in doubt
-    use the function <a href="variable_global_exists.htm"><tt>variable_global_exists</tt></a> first.</p>
+  <p>이 함수를 사용하시면 인자값으로 넣어준 전역변수의 값을 받아올 수 있습니다. 얻고자 하는 전역변수의 이름(<i>문자열</i>)을 함수의 인자로 넣어주면 해당 전역변수의 값을 반환하거나 변수가 존재하지 않는다면 &quot;<span class="inline">undefined</span>&quot;
+  키워드를 반환합니다.<b></b></p></p>
+  <p class="note"><b>주의!</b> 만약 전역변수가 존재하지 않는다면 함수는 <tt>undefined</tt>을 반환할 것입니다. 그리고 만약 존재하지 않는 변수의 값을 함수의 인자로 넣게 된다면 반환값으로 undefined 키워드를 출력할 것입니다. 
+    그리고 이것은 당신의 게임에서 에러를 일으키고 함수가 동작할 때 게임이 멈춰버릴 수 있습니다. 혹시 이런 증상이 의심이 된다면 먼저
+    <a href="variable_global_exists.htm"><tt>variable_global_exists</tt></a>함수를 사용해서 인자로 넣은 변수가 존재하는지 확인하시길 바랍니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">variable_global_get(name);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
       </tr>
       <tr>
         <td>name</td>
-        <td>The name of the global variable to get (as a string)</td>
+        <td>얻고 싶은 전역변수의 이름(문자열)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">Value (any data type) or <tt>undefined</tt> (if the named variable does not exist)</p>
   <p> </p>
   <h4>Example:</h4>
   <p class="code">if variable_global_exists(&quot;enemy_num&quot;)<br/>    {
     <br/>    show_debug_message(&quot;enemy_num = &quot; + string(variable_global_get(&quot;enemy_num&quot;));)<br/>    }
   </p>
-  <p>The above code will check to see if a global variable exists and if it does then it is output to the console.</p>
+  <p>위 코드는 전역변수가 존재하는지 여부를 판단하고 존재한다면 그 값을 콘솔창에 출력을 합니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a href="variable_global_set.htm">variable_global_set</a></div>
+        <div style="float:left">이전: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">다음: <a href="variable_global_set.htm">variable_global_set</a></div>
       </div>
     </div>
     <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
