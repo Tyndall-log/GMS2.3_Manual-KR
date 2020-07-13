@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="General Preferences">
-        <span>General Preferences</span>
+        <span>일반 환경 설정</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,320 +80,250 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>General Preferences</h1>
-  <p><img alt="General Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Prefs.png"/>The <strong>General Preferences</strong> are used to define the general behaviour of the GameMaker Studio 2 <a class="tooltip" title="The IDE, or Integrated Development Environment, is a software application that provides comprehensive facilities to computer programmers for software development. In this case, the entire frontend of GameMaker Studio 2 is considered the IDE, and includes sections to create graphics, add sounds, and add code to make your games.">IDE</a>. The most general ones are listed on the main page while many others are split into multiple sub-categories, explained further down this page.</p>
+  <h1>일반 환경 설정</h1>
+  <p><img alt="General Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Prefs.png"/><strong>일반 기본 설정</strong> 은 GameMaker Studio 2 <a class="tooltip" title="IDE (Integrated Development Environment)는 컴퓨터 프로그래머에게 소프트웨어 개발을위한 포괄적 인 기능을 제공하는 소프트웨어 응용 프로그램입니다. 이 경우 GameMaker Studio 2의 전체 프론트 엔드는 IDE로 간주되며 그래픽을 생성하고 사운드를 추가하며 게임을 만들기위한 코드를 추가하는 섹션을 포함합니다.">IDE</a> 의 일반 동작을 정의하는 데 사용됩니다. 가장 일반적인 것들은 메인 페이지에 나열되어 있고 다른 것들은 여러 개의 하위 카테고리로 나뉘어져 있습니다.</p>
   <ul class="colour">
-    <li><strong>IDE Language</strong>: This option permits you to select the language for the IDE from the list of options supplied. Default is English.</li>
-    <li><strong>IDE Skin</strong>: Here you can select from the different skins that the IDE can use. By default GameMaker Studio 2 comes with two skins, one light and one dark, and the initial setup uses the dark skin.</li>
-    <li><strong>Maximum Framerate of GameMaker Studio 2 Editor</strong>: This option permits you to set the maximum framerate that the GameMaker Studio 2 IDE will update at, permitting you to set the framerate to match the update speed of your monitor. Default
-      value is 60.</li>
-    <li><strong>Default Audio Device</strong>: Here you can choose the default audio device for the GameMaker Studio 2 IDE to use. You can refresh the list by clicking the Refresh Button  <img alt="Refresh Button Icon" class="icon" src="../../assets/Images/Icons/Icon_Refresh.png"/>.</li>
-    <li><strong>Automatic Response to Exit Confirmation</strong>: This option permits you to set whether a confirmation message should be shown when you exit GameMaker Studio 2. By default this is set to &quot;show message&quot;, but can be set to skip the
-      message as if you&#39;d clicked OK.</li>
-    <li><strong>Automatic Response to The System Font Changed Dialog</strong>: This option permits you to set whether a confirmation message should be shown when a system font has been added, removed or edited. By default this is set to &quot;show message&quot;,
-      but can be set to skip the message as if you&#39;d clicked OK.</li>
-    <li><strong>Enable notifications</strong>: Checking this will enable the IDE to show notifications about new runtimes, etc... This is on by default.</li>
-    <li><strong>Notification timeout (ms)</strong>: This sets the length of time (in milliseconds) that a notification is shown for. Default is 6000.</li>
-    <li><strong>Set FileWatcher tolerance in MS after saving In the IDE</strong>: This adjusts the time ebtween saving a file and the file watcher checking for changes. You would adjust this value if you were saving your project and the filewatcher was erroneously
-      appearing saying something had changed, in which cvase you would increase the delay until the message no longer appears. The default value is 2000ms, but can range from 1ms up to 10,000ms.</li>
-    <li><strong>Logout on exit</strong>: If this option is checked then the IDE will automatically log out the user session when GameMaker Studio 2 is closed. This is primarily aimed at Education users, as - when checked - this means that whenever the program
-      shuts down the user would be logged out and so free up the session seat for other users to use. This is off by default.</li>
-    <li><strong>Enable DPI Override</strong>: This option lets you override the default DPI setting with your own. You must first enable the option and then set either the <strong>Raw DPi Override</strong> value (the default value is 96) or set the <strong>Percentage of the native DPi</strong>      (default value 100%), and once changed you will be prompted to restart the IDE, which may require you to save any work being done on the currently open project. Note that the DPi has a minimum percentage of 50% and a maximum of 500%, and if you
-      you mouse over the information icon you can see the recommended maximum setting for the display being used:<br/>
-      <br/>
-      <img alt="General DPi Override Recommendation" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_DPi_Override_Recomendation.png"/>Note that if you go above the recommended DPi setting for the monitor, you will be shown
-      a notification that permits you to reset the DPi.</li>
-    <li><strong>Show welcome screen on startup</strong>: This is on by default and simply tells GameMaker Studio 2 to show a brief splash screen when you start the program. Un-checking this will prevent the splash screen from showing.</li>
-    <li><strong>Allow empty tabs to close via shortcut</strong>: You can close any open Tabs using the keyboard shortcut <img alt="Icon CTRL" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="Icon CMD" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <strong>W</strong>, but if you disable this option that shortcut will no longer work. This is enabled by default.</li>
-    <li><strong>Open new resources for edit on dragging files into IDE</strong>: Certain resources (like sprites or sounds) can be dragged onto the main Workspace in the GameMaker Studio 2 IDE and will be detected and added as a new resource in the Asset
-      Browser. By default the corresponding resource editor will also be opened for editing when this happens, but un-checking this option will prevent the editors from being opened and you will be required to open them manually.</li>
-    <li><strong>Open new resources for edit on creation</strong>: If this is checked, every time you create a new resource in the Asset Browser, the corresponding resource editor will be opened automatically. This is checked by default and un-checking it
-      will mean that you have to manually open all newly created resources.</li>
-    <li><strong>Automatically reload changed files</strong>: If this is checked then the IDE will automatically scan and check files to see if any of them have been changed outside of GameMaker Studio 2 and reload them if they have.</li>
-    <li><strong>Disable IDE transition animations</strong>: The GameMaker Studio 2 IDE has a number of animated transitions for things like opening windows etc... however they are not to everyone&#39;s taste and you may experience a performance boost if they
-      are disabled on older or under-powered machines if they are disabled. You can disable them here, and they are on by default.</li>
-    <li><strong>Opt-in To Feedback Surveys</strong>: When this option is checked, you are telling GameMaker Studio 2 that you wish to participate in feedback surveys, meaning that occasionally while working a message will be shown about the area you are working
-      on and request a rating and feedback. This option is on by default.</li>
+    <li><strong>IDE Language</strong> :이 옵션을 사용하면 제공된 옵션 목록에서 IDE 언어를 선택할 수 있습니다. 기본값은 영어입니다.</li>
+    <li><strong>IDE Skin</strong> : <strong>IDE</strong> 에서 사용할 수있는 다른 스킨 중에서 선택할 수 있습니다. 기본적으로 GameMaker Studio 2에는 두 개의 스킨 (하나는 밝고 하나는 어두움)이 있으며 초기 설정은 어두운 스킨을 사용합니다.</li>
+    <li><strong>GameMaker Studio 2 Editor</strong> 의 최대 프레임 속도 :이 옵션을 사용하면 GameMaker Studio 2 IDE가 업데이트 할 최대 프레임 속도를 설정하여 모니터의 업데이트 속도와 일치하도록 프레임 속도를 설정할 수 있습니다. 기본값은 60입니다.</li>
+    <li><strong>기본 오디오 장치</strong> : 여기서 GameMaker Studio 2 IDE에서 사용할 기본 오디오 장치를 선택할 수 있습니다. 새로 고침 버튼을 클릭하여 목록을 새로 고침 할 수 있습니다 .</li>
+    <li><strong>자동 응답 종료 확인</strong> :이 옵션을 사용하면 GameMaker Studio 2를 종료 할 때 확인 메시지를 표시할지 여부를 설정할 수 있습니다. 기본적으로 &quot;메시지 표시&quot;로 설정되어 있지만 마치 마치 메시지를 건너 뛰도록 설정할 수 있습니다 확인을 클릭하십시오.</li>
+    <li><strong>시스템 글꼴 변경 대화 상자에 대한 자동 응답</strong> :이 옵션을 사용하면 시스템 글꼴을 추가, 제거 또는 편집 할 때 확인 메시지를 표시할지 여부를 설정할 수 있습니다. 기본적으로이 메시지는 &quot;메시지 표시&quot;로 설정되어 있지만 확인을 클릭 한 것처럼 메시지를 건너 뛰도록 설정할 수 있습니다.</li>
+    <li><strong>알림 활성화</strong> :이 옵션을 선택하면 IDE가 새 런타임 등에 대한 알림을 표시 할 수 있습니다. 기본적으로 켜져 있습니다.</li>
+    <li><strong>알림 시간 초과 (ms)</strong> : 알림이 표시되는 시간 (밀리 초)을 설정합니다. 기본값은 6000입니다.</li>
+    <li><strong>저장 후 MS에서 FileWatcher 공차 설정 IDE에서</strong> : 파일 저장 시간과 파일 감시자가 변경 사항을 확인하는 시간을 조정합니다. 프로젝트를 저장 중이고 파일 감시자가 무언가 변경되었다는 메시지가 잘못 표시되는 경우이 값을 조정하면 메시지가 더 이상 표시되지 않을 때까지 cvase를 지연시킬 수 있습니다. 기본값은 2000ms이지만 1ms에서 10,000ms까지 다양합니다.</li>
+    <li><strong>종료시 로그 아웃</strong> :이 옵션을 선택하면 GameMaker 스튜디오 2를 닫을 때 다음 IDE가 자동으로 사용자 세션을 로그 아웃합니다. 이것은 체크 될 때 주로 교육 사용자를 대상으로합니다. 즉, 프로그램을 종료 할 때마다 사용자가 로그 아웃되어 다른 사용자가 사용할 수 있도록 세션 자리를 비 웁니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>DPI 재정의 사용</strong> :이 옵션을 사용하면 기본 DPI 설정을 직접 재정의 할 수 있습니다. <strong>먼저이</strong> 옵션을 활성화 한 다음 <strong>Raw DPi Override</strong> 값 (기본값은 96)을 설정하거나 <strong>기본 DPi</strong> 의 <strong>백분율</strong> (기본값 100 %)을 설정해야합니다. 일단 변경되면 IDE를 다시 시작하라는 메시지가 표시됩니다. 현재 열려있는 프로젝트에서 수행중인 작업을 저장해야 할 수도 있습니다. DPi의 최소 백분율은 50 %이고 최대 500 %입니다. 정보 아이콘 위로 마우스를 가져 가면 사용중인 디스플레이에 권장되는 최대 설정을 볼 수 있습니다. 모니터의 권장 DPi 설정을 초과하면 DPi를 재설정 할 수 있다는 알림이 표시됩니다.</li>
+    <li><strong>시작시 시작 화면 표시</strong> : 기본적으로 켜져 있으며 프로그램을 시작할 때 간단한 스플래시 화면을 표시하도록 GameMaker Studio 2에 지시합니다. 이 옵션을 선택 취소하면 스플래시 화면이 표시되지 않습니다.</li>
+    <li><strong>빈 탭이 바로 가기를 통해 닫히도록 허용</strong> : 키보드 바로 가기를 사용하여 열려 <strong>있는 탭을 닫을</strong> 수 있습니다 / + <strong>W</strong> 이지만이 옵션을 비활성화하면 해당 바로 가기가 더 이상 작동하지 않습니다. 기본적으로 활성화되어 있습니다.</li>
+    <li><strong>파일을 IDE로 드래그 할 때 편집 할 새 리소스 열기</strong> : 스프라이트 또는 사운드와 같은 특정 리소스를 GameMaker Studio 2 IDE의 메인 작업 공간으로 드래그 할 수 있으며 자산 브라우저에서 새로운 리소스로 감지 및 추가됩니다. 기본적으로이 경우 편집 할 수 있도록 해당 자원 편집기가 열리지 만이 옵션을 선택 취소하면 편집기가 열리지 않으므로 수동으로 열어야합니다.</li>
+    <li><strong>생성시 편집 할 새 리소스 열기</strong> :이 옵션을 선택하면 자산 브라우저에서 새 리소스를 생성 할 때마다 해당 리소스 편집기가 자동으로 열립니다. 기본적으로 선택되어 있으며 선택 해제하면 새로 만든 모든 리소스를 수동으로 열어야합니다.</li>
+    <li><strong>변경된 파일 자동 재로드</strong> :이 옵션을 선택하면 IDE가 파일을 자동으로 스캔하고 검사하여 GameMaker Studio 2 외부에서 <strong>변경된 파일</strong> 이 있는지 확인한 다음 파일이 있으면 다시로드합니다.</li>
+    <li><strong>IDE 전환 애니메이션 비활성화</strong> : GameMaker Studio 2 IDE에는 창 열기 등과 같은 여러 애니메이션 전환이 있지만 모든 사람의 취향에 맞지는 않으며 구형 또는 저전력 시스템에서 비활성화하면 성능이 향상 될 수 있습니다 비활성화 된 경우 여기서 비활성화 할 수 있으며 기본적으로 켜져 있습니다.</li>
+    <li><strong>피드백 설문 조사에 참여하기</strong> :이 옵션을 선택하면 GameMaker Studio 2에 피드백 설문 조사에 참여하고 싶다는 메시지가 표시됩니다. 즉, 작업중인 메시지가 작업중인 영역에 대해 표시되고 평가를 요청하는 경우가 있습니다. 피드백. 이 옵션은 기본적으로 켜져 있습니다.</li>
   </ul>
-  <p>The options above are the main options available from the <strong>General </strong>preferences, but there are a number of extra options available to you in the sub-categories listed below:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#"><span data-open-text="true">Asset Explorer</span><span data-close-text="true">Asset Explorer</span></a></p>
+  <p>위의 옵션은 <strong>일반</strong> 환경 설정에서 사용할 수있는 기본 옵션이지만 아래 나열된 하위 범주에서 사용할 수있는 추가 옵션이 많이 있습니다.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#"><span data-open-text="true">자산 탐색기</span> <span data-close-text="true">자산 탐색기</span></a></p>
   <div class="droptext" data-targetname="drop_down">
     <p><img alt="The Asset Explorer Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_AssetExplorer_Prefs.png"/></p>
-    <p class="dropspot">When you go to add a sprite to an object or when you want to use a font in Drag and Drop™ or in any number of situations, you will be presented with the Asset Explorer:</p>
+    <p class="dropspot">객체에 스프라이트를 추가하거나 드래그 앤 드롭으로 글꼴을 사용하려는 경우 또는 여러 상황에서 자산 탐색기가 표시됩니다.</p>
     <p><img alt="The Asset Explorer" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Asset_Explorer.png"/></p>
-    <p class="dropspot">By default it shows both a <strong>Tree View</strong> (on the left) and a <strong>List View</strong> (on the right) but using this preference you can choose to have it only show one or the other.</p>
-    <p><br/>
-    </p>
+    <p class="dropspot">기본적으로 <strong>트리보기</strong> (왼쪽)와 <strong>목록보기</strong> (오른쪽)가 모두 표시되지만이 환경 설정을 사용하면 하나만 표시하도록 선택할 수 있습니다.</p>
+    <p></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="#"><span data-open-text="true">Background</span><span data-close-text="true">Background</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="#"><span data-open-text="true">배경</span> <span data-close-text="true">배경</span></a></p>
   <div class="droptext" data-targetname="drop_down1">
     <p class="dropspot"><img alt="Background Preferences" class="center" height="463" src="../../assets/Images/Setup_And_Version/Preferences/General_Background_Prefs.png" width="787"/></p>
-    <p class="dropspot">The <strong>Background </strong>preferences deal with the Workspace background and what it will display as well as how it will be displayed. The options are:</p>
+    <p class="dropspot"><strong>배경</strong> 환경 설정은 작업 공간 배경과 배경 및 표시 방법을 처리합니다. 옵션은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Background Image</strong>: This is the image file that will be used as the background for the different Workspaces. There is a default image supplied and it is enabled by default, but you can select your own image here. The types of image
-        that you can select from are <span class="inline">*.png</span>, <span class="inline">*.gif</span>, <span class="inline">*.jpg</span>, <span class="inline">*.jpeg</span>, <span class="inline">*.tif</span>, <span class="inline">*.tiff</span>,
-        <span class="inline">*.ico</span>, <span class="inline">*.bmp</span>, <span class="inline">*.2bp</span> or <span class="inline">*.mdi</span>, but note that regardless of initial image format, all files will be saved out for use as <span class="inline">*.png</span>        files, so animated <span class="inline">*.gif</span> files for example will only be rendered as a single initial frame.</li>
-      <li class="dropspot"><strong>Image Scaling</strong>: This controls how the background image will be scaled within the different workspaces. The choices are:
-        <ul class="colour">
-          <li class="dropspot"><strong>Stretch </strong>- The image will be stretched to fit the workspace, changing scale depending on the visible docks</li>
-          <li class="dropspot"><strong>Tile </strong>- The image will be tiled to cover the workspace</li>
-          <li class="dropspot"><strong>Best Fit </strong>- The image will be scaled to fit the workspace proportionally, with bars being added around the edge if it is not a 1:1 fit</li>
-          <li class="dropspot"><strong>Desktop Stretch</strong> - The background will cover the whole workspace, and will move rather than change scale when docks are opened/closed</li>
-          <li class="dropspot"><strong>Screen Stretch</strong> - The background will cover an area the size of the window and will be cropped/extended to show more or less of the image as docks are opened/closed.</li>
+      <li class="dropspot"><strong>배경 이미지</strong> : 다른 작업 공간의 배경으로 사용될 이미지 파일입니다. 기본 이미지가 제공되며 기본적으로 활성화되어 있지만 여기에서 자신의 이미지를 선택할 수 있습니다. 선택할 수있는 이미지 유형은 <span class="inline">* .png</span> , <span class="inline">* .gif</span> , <span class="inline">* .jpg</span> , <span class="inline">* .jpeg</span> , <span class="inline">* .tif</span> , <span class="inline">* .tiff</span> , <span class="inline">* .ico</span> , <span class="inline">* .bmp</span> , <span class="inline">* .2bp</span> 또는 <span class="inline">* .mdi입니다</span> . 그러나 초기 이미지 형식에 관계없이 모든 파일은 <span class="inline">* .png</span> 파일로 사용하기 위해 저장되므로 예를 들어 애니메이션 <span class="inline">* .gif</span> 파일은 단일 초기 프레임으로 만 렌더링됩니다.</li>
+      <li class="dropspot"><strong>이미지 스케일링</strong> : 다른 작업 공간 내에서 배경 이미지의 스케일을 조정하는 방법을 제어합니다. 선택 사항은 다음과 같습니다. <strong>스트레치</strong> -이미지는 작업 영역에 맞게 <strong>스트레치</strong> 되며 보이는 도크에 따라 스케일이 변경됩니다.</li>
+          <li class="dropspot"><strong>타일</strong> -이미지가 작업 공간을 덮도록 바둑판 식으로 배열됩니다</li>
+          <li class="dropspot"><strong>최적 맞춤</strong> -이미지가 1 : 1 맞춤이 아닌 경우 가장자리 주위에 막대가 추가되어 작업 공간에 비례하여 크기가 조정됩니다.</li>
+          <li class="dropspot"><strong>데스크탑 스트레치</strong> -배경이 전체 작업 공간을 덮고 도크를 열거 나 닫을 때 크기가 변경되지 않고 이동합니다.</li>
+          <li class="dropspot"><strong>화면 늘이기</strong> -배경은 창 크기의 영역을 덮고 도크를 열거 나 닫을 때 이미지의 일부를 표시하도록 자르기 / 확장됩니다.</li>
         </ul>
       </li>
-      <li class="dropspot"><strong>Show background images on workspaces</strong>: This option controls whether the selected background image should be shown or not. By default this is checked as on.</li>
+      <li class="dropspot"><strong>작업 공간에 배경 이미지 표시</strong> :이 옵션은 선택한 배경 이미지의 표시 여부를 제어합니다. 기본적으로이 설정은 켜져 있습니다.</li>
     </ul>
-    <p class="dropspot"><br/>
-    </p>
+    <p class="dropspot"></p>
     <ul class="dropspotlist">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#"><span data-open-text="true">Compiling</span><span data-close-text="true">Compiling</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#"><span data-open-text="true">컴파일</span> <span data-close-text="true">컴파일</span></a></p>
   <div class="droptext" data-targetname="drop_down2">
     <p class="dropspot"><img alt="Compiling Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Compiling_Prefs.png"/></p>
-    <p class="dropspot">The Compiling preferences deal with certain options related to the output when compiling your game for testing or creating a package, as well as certain areas of the compiling process. The options are:</p>
+    <p class="dropspot">컴파일 환경 설정은 게임을 컴파일하거나 패키지를 만들 때 게임을 컴파일 할 때 출력 과정과 관련된 특정 옵션을 처리합니다. 옵션은 다음과 같습니다.</p>
     <ul class="colour">
-      <li class="dropspot"><strong>Automatically open syntax error window on detection</strong>: Enable or disable syntax error notification when compiling. This is off by default.</li>
-      <li class="dropspot"><strong>Show the compile window during compilation</strong>: By default the compile window will be shown when you compile your projects, even if the compile doc is closed (it will open for the compile). Unchecking this will switch this behavior
-        off and the compile window will on be visible if open.</li>
-      <li class="dropspot">Sh <strong>ow compiler commands in compile output</strong>: This is checked by default and forces the compiler to show all relevant commands in the compile window. Un-checking this will make the output smaller and have less information.</li>
-      <li class="dropspot"><strong>Show verbose compiler output</strong>: Checking this will force the compiler to show extra commands related to the compilation process. In general this is only required when debugging and may be requested by support should you have an issue.
-        It is off by default (and this is the recommended setting).</li>
-      <li class="dropspot"><strong>Use Subst for drive paths</strong>: When this is checked, GameMaker Studio 2 will create - and remove again when no longer required - virtual drives to use as a substitution for full file paths. These virtual drives bypass any potential
-        issue with file paths being too long for the OS (particularly when compiling for Android or using extensions) and it is recommended to have this enabled. However, if you are having issues with GameMaker Studio 2 creating virtual drives like this,
-        you can disable the option. By default, this is enabled.</li>
-      <li class="dropspot"><strong>Show package in explorer on build completion</strong>: Checking this will make GameMaker Studio 2 open the OS explorer window at the location where the final executable package has been created. It is on by default.</li>
-      <li class="dropspot"><strong>Clear output window on compile start</strong>: By default the compiler window will clear all previous messages from the compile output window at the start of each build, however un-checking this will maintain previous compiler logs. This
-        is on by default and is the recommended configuration since large compiler logs can slow down compile times.</li>
-      <li class="dropspot"><strong>Maximum parallel compile jobs</strong>: This value sets the maximum number of CPU cores to dedicate to compiling a project. The default value is 8 and in general you shouldn&#39;t have to change this, but if you are on a laptop or a lower
-        end machine you may want to lower this value. The default is set to 8.</li>
+      <li class="dropspot"><strong>감지시 구문 오류 창 자동 열기</strong> : 컴파일시 구문 오류 알림을 활성화 또는 비활성화합니다. 기본적으로 해제되어 있습니다.</li>
+      <li class="dropspot"><strong>컴파일 중에 컴파일 창 표시</strong> : 컴파일 문서가 닫혀 있어도 컴파일 컴파일이 열리더라도 프로젝트를 컴파일 할 때 기본적으로 컴파일 창이 표시됩니다. 체크를 해제하면이 동작이 꺼지고 컴파일 창이 열리면 켜집니다.</li>
+      <li class="dropspot"><strong>컴파일 출력에서 ​​컴파일러 명령 표시</strong> : 기본적으로 선택되어 있으며 컴파일러가 컴파일 창에 모든 관련 명령을 표시하도록합니다. 이 옵션을 선택 취소하면 출력이 작아지고 정보가 줄어 듭니다.</li>
+      <li class="dropspot"><strong>자세한 컴파일러 출력 표시</strong> :이 옵션을 선택하면 컴파일 프로세스와 관련된 추가 명령이 컴파일러에 표시됩니다. 일반적으로 이것은 디버깅 할 때만 필요하며 문제가있는 경우 지원 센터에서 요청할 수 있습니다. 기본적으로 꺼져 있습니다 (권장 설정).</li>
+      <li class="dropspot"><strong>드라이브 경로에 Subst 사용</strong> :이 옵션을 선택하면 GameMaker Studio 2가 전체 파일 경로를 대체 할 가상 드라이브를 생성하고 더 이상 필요하지 않은 경우 다시 제거합니다. 이 가상 드라이브는 OS에 대해 파일 경로가 너무 길어서 (특히 Android 용으로 컴파일하거나 확장을 사용할 때) 잠재적 인 문제를 우회하므로이 기능을 활성화하는 것이 좋습니다. 그러나 GameMaker Studio 2에서 이와 같은 가상 드라이브 생성에 문제가있는 경우 옵션을 비활성화 할 수 있습니다. 기본적으로 활성화되어 있습니다.</li>
+      <li class="dropspot"><strong>빌드 완료시 탐색기에 패키지 표시</strong> :이를 체크하면 GameMaker Studio 2가 최종 실행 패키지가 생성 된 위치에서 OS 탐색기 창을 엽니 다. 기본적으로 켜져 있습니다.</li>
+      <li class="dropspot"><strong>컴파일 시작시 출력 창 지우기</strong> : 기본적으로 컴파일러 창은 각 빌드 시작시 컴파일 출력 창에서 모든 이전 메시지를 지우지 만,이 옵션을 선택 취소하면 이전 컴파일러 로그가 유지됩니다. 기본적으로 설정되어 있으며 큰 컴파일러 로그로 인해 컴파일 시간이 느려질 수 있으므로 권장되는 구성입니다.</li>
+      <li class="dropspot"><strong>최대 병렬 컴파일 작업</strong> :이 값은 프로젝트 컴파일 전용의 최대 CPU 코어 수를 설정합니다. 기본값은 8이며 일반적으로이 값을 변경할 필요는 없지만 랩톱 또는 저가형 컴퓨터에있는 경우이 값을 낮추고 싶을 수 있습니다. 기본값은 8로 설정되어 있습니다.</li>
     </ul>
-    <p class="dropspot"><br/>
-    </p>
+    <p class="dropspot"></p>
     <ul class="colour">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Confirm</span><span data-close-text="true">Confirm</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">확인</span> <span data-close-text="true">확인</span></a></p>
   <div class="droptext" data-targetname="drop-down">
     <p><img alt="Confirm Dialog Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Confirm_Prefs.png"/></p>
-    <p class="dropspot">The Confirm Dialogue preferences deal with some of the general confirmation pop-ups that will appear when performing certain actions in the GameMaker Studio 2 IDE. The options are:</p>
+    <p class="dropspot">대화 확인 확인 환경 설정은 GameMaker Studio 2 IDE에서 특정 작업을 수행 할 때 나타나는 일반적인 확인 팝업 중 일부를 처리합니다. 옵션은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Automatic response to closing a workspace via keyboard shortcut</strong>: The keyboard shortcut mentioned above can be used to close any open tab, but sometimes you may accidentally close an empty tab that you require. To prevent this you
-        can set this option to &quot;Show message&quot; (the default option) to ask if you really want to close that empty tab. The other settings are &quot;No&quot;, to simply do nothing if the shortcut is used, or &quot;Okay&quot; to close the tab without
-        any message.</li>
-      <li><strong>Automatic response to restarting a running build</strong>: When you restart a build and another previous one is still running, you will be asked whether you want to stop the current build first. Un checking this message will suppress that
-        message and force GameMaker Studio 2 to assume you had clicked &quot;Okay&quot; as a response. This option is set to &quot;Show Message&quot; by default.</li>
-      <li><strong>Automatic response to warning when attempting to debug YYC</strong>: The YYC target compiles to native code and as such cannot be debugged using the built in debugger. When you try to use the debugger on the YYC target, you will get a warning
-        informing you of this, and the fact that the project will be compiled using the VM instead. This option is set to &quot;Show Message&quot; by default, but setting it to &quot;OK&quot; will suppress this warning.</li>
-      <li><strong>Automatic response to resetting the project layout</strong>: When you select to reset the project layout (from the <a href="../../IDE_Navigation/Menus/The_Layouts_Menu.htm">Layouts Menu</a>) you will, by default, be shown a warning message
-        about how this will close any open resource windows. However you can suppress this message and automatically reset the layout by selecting &quot;Okay&quot;, or have it do nothing by selecting &quot;No&quot;. The default value is to have &quot;Show
-        Message&quot;.
-      </li>
+      <li><strong>키보드 단축키를 통해 작업 공간을 닫는 것에 대한 자동 응답</strong> : 위에서 언급 한 키보드 단축키를 사용하여 열린 탭을 닫을 수 있지만 때로는 빈 탭을 실수로 닫을 수도 있습니다. 이를 방지하기 위해이 옵션을 &quot;메시지 표시&quot;(기본 옵션)로 설정하여 빈 탭을 닫을 것인지 묻습니다. 다른 설정은 &quot;아니오&quot;입니다. 바로 가기를 사용하는 경우 아무 작업도 수행하지 않거나 메시지없이 탭을 닫으려면 &quot;확인&quot;을 누르십시오.</li>
+      <li><strong>실행중인 빌드 재시작에 대한 자동 응답</strong> : <strong>빌드</strong> 를 재시작하고 다른 이전 빌드가 여전히 실행중인 경우 현재 빌드를 먼저 중지할지 묻는 메시지가 표시됩니다. 이 메시지를 체크하지 않으면 해당 메시지가 억제되고 GameMaker Studio 2가 &quot;확인&quot;을 응답으로 클릭했다고 가정합니다. 이 옵션은 기본적으로 &quot;메시지 표시&quot;로 설정되어 있습니다.</li>
+      <li><strong>YYC 디버깅 시도시 경고에 대한 자동 응답</strong> : YYC 대상은 기본 코드로 컴파일되므로 내장 디버거를 사용하여 디버깅 할 수 없습니다. YYC 대상에서 디버거를 사용하려고하면이를 알려주는 경고 메시지가 표시되고 대신 VM을 사용하여 프로젝트가 컴파일된다는 사실이 표시됩니다. 이 옵션은 기본적으로 &quot;메시지 표시&quot;로 설정되어 있지만 &quot;확인&quot;으로 설정하면이 경고가 표시되지 않습니다.</li>
+      <li><strong>프로젝트 레이아웃 재설정에 대한 자동 응답</strong> : <a href="../../IDE_Navigation/Menus/The_Layouts_Menu.htm">레이아웃 메뉴</a> 에서 프로젝트 레이아웃을 재설정하도록 선택하면 기본적으로 열려있는 리소스 창을 닫는 방법에 대한 경고 메시지가 표시됩니다. 그러나이 메시지를 표시하지 않고 &quot;확인&quot;을 선택하여 레이아웃을 자동으로 재설정하거나 &quot;아니요&quot;를 선택하여 아무 것도 설정하지 마십시오. 기본값은 &quot;메시지 표시&quot;입니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
     <ul class="dropspotlist">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Debugging</span><span data-close-text="true">Debugging</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">디버깅</span> <span data-close-text="true">디버깅</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
     <p><img alt="Debugging Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Debugging.png"/></p>
-    <p class="dropspot">The preferences here are related to the <a href="../../IDE_Tools/The_Debugger.htm">GameMaker Studio 2 Debugger</a> and you have the following options:</p>
+    <p class="dropspot">여기에 기본 설정은 <a href="../../IDE_Tools/The_Debugger.htm">GameMaker Studio 2 디버거</a> 와 관련이 있으며 다음 옵션이 있습니다 :</p>
     <ul class="dropspotlist">
-      <li><strong>Automatic response to closing the debugger</strong>: This option permits you to set the automatic response when closing the debugger. If set to &quot;Show message&quot;, you will be shown the dialogue when you want to close the debugger,
-        while setting it to &quot;Yes&quot; or &quot;No&quot; will not show this dialogue and perform the task as indicated.</li>
-      <li><strong>Enable real-time debugging</strong>: Checking this option will permit you to debug your game projects in real time as you run them from the IDE. This is checked by default.</li>
-      <li><strong>Debugger port</strong>: This sets the port number for the Debug Module to use. The default value is 6509.</li>
-      <li><strong>Show event icons in Debugger Resource View</strong>: Set whether icons should be shown in the Debugger resource view. This is checked by default.</li>
+      <li><strong>디버거 종료에 대한 자동 응답</strong> :이 옵션을 사용하면 <strong>디버거를 닫을</strong> 때 자동 응답을 설정할 수 있습니다. &quot;메시지 표시&quot;로 설정하면 디버거를 닫을 때 대화 상자가 표시되며 &quot;예&quot;또는 &quot;아니요&quot;로 설정하면이 대화 상자가 표시되지 않고 표시된대로 작업을 수행합니다.</li>
+      <li><strong>실시간 디버깅 활성화</strong> :이 옵션을 체크하면 IDE에서 실행할 때 게임 프로젝트를 실시간으로 디버깅 할 수 있습니다. 기본적으로 선택되어 있습니다.</li>
+      <li><strong>디버거 포트</strong> : 디버그 모듈이 사용할 포트 번호를 설정합니다. 기본값은 6509입니다.</li>
+      <li><strong>디버거 리소스 뷰에 이벤트 아이콘 표시</strong> : <strong>디버거 리소스 뷰에 아이콘을 표시</strong> 할지 여부를 설정합니다. 기본적으로 선택되어 있습니다.</li>
     </ul>
     <p> </p>
     <ul class="dropspotlist">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">GoTo</span><span data-close-text="true">GoTo</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">고토</span> <span data-close-text="true">고토</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p><img alt="Go To Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_GoTo_Prefs.png"/></p>
-    <p class="dropspot">The preferences here are for <strong>Go To</strong> window, which you can open using the keyboard shortcut <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + T.</p>
+    <p class="dropspot">The preferences here are for <strong>Go To</strong> window, which you can open using the keyboard shortcut <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/>/ + T.</p>
     <ul class="dropspotlist">
-      <li><strong>Maximum number of search results to display</strong>: This option controls the maximum number of returned results when you use the Go To search window.</li>
-      <li><strong>Enable styling on search results (turn off for better performance)</strong>: This option enables or disables the text styling for the assets found in the Go To window. Default is enabled.</li>
-      <li><strong>Search In Assets</strong>: Disabling this will mean that the Go To window will omit any items from the Asset Browser that coincide with the given search phrase. The default value is that this is enabled.</li>
-      <li><strong>Search In Preferences</strong>: Disabling this will mean that the Go To window will omit any items from the Preferences that coincide with the given search phrase. The default value is that this is enabled.</li>
-      <li><strong>Search In Game Options</strong>: Disabling this will mean that the Go To window will omit any items from the Game Options that coincide with the given search phrase. The default value is that this is enabled.</li>
+      <li><strong>표시 할 최대 검색 결과 수</strong> :이 옵션은 검색 이동 창을 사용할 때 반환되는 최대 결과 수를 제어합니다.</li>
+      <li><strong>검색 결과에서 스타일링 사용 (성능 향상을 위해 끄십시오)</strong> :이 옵션은 이동 창에서 찾은 자산의 텍스트 스타일을 활성화하거나 비활성화합니다. 기본값은 활성화입니다.</li>
+      <li><strong>자산 검색</strong> :이 옵션을 비활성화하면 이동 창에서 지정된 검색 구와 일치하는 항목을 자산 브라우저에서 생략합니다. 기본값은 활성화되어 있습니다.</li>
+      <li><strong>환경 설정에서 검색</strong> :이 기능을 비활성화하면 이동 창이 특정 검색 구문과 일치하는 환경 설정의 항목을 생략합니다. 기본값은 활성화되어 있습니다.</li>
+      <li><strong>게임 옵션에서 검색</strong> :이 <strong>옵션을</strong> 비활성화하면 이동 창에서 게임 옵션에서 주어진 검색 구와 일치하는 항목이 생략됩니다. 기본값은 활성화되어 있습니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
     <ul class="dropspotlist">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Help</span><span data-close-text="true">Help</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">도움말</span> <span data-close-text="true">도움말</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
     <p><img alt="Help Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Help_Prefs.png"/></p>
-    <p class="dropspot">The helpfile is designed to operate like a web page and as such requires the use of the GameMaker Studio 2 micro web server, or the use of an external browser. These settings can be changed here:</p>
+    <p class="dropspot">도움말 파일은 웹 페이지처럼 작동하도록 설계되었으므로 GameMaker Studio 2 마이크로 웹 서버를 사용하거나 외부 브라우저를 사용해야합니다. 이 설정은 여기에서 변경할 수 있습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Manual Language</strong>: This sets language for the IDE to use. The default is &quot;English&quot;.</li>
-      <li><strong>Help manual port</strong>: This sets the port number for the manual micro web server to use. The default value is 51291.</li>
-      <li><strong>Use an external browser for help</strong>: If this is checked then opening the help file will open it using the default browser for your system. This is on by default, and switching it off will force the help file to open in workspace within
-        the IDE.</li>
+      <li><strong>Manual Language</strong> : IDE가 사용할 언어를 설정합니다. 기본값은 &quot;영어&quot;입니다.</li>
+      <li><strong>Help manual port</strong> : 수동 마이크로 웹 서버가 사용할 포트 번호를 설정합니다. 기본값은 51291입니다.</li>
+      <li><strong>도움말을 위해 외부 브라우저 사용</strong> : 이것이 체크되어 있으면 도움말 파일을 열면 시스템의 기본 브라우저를 사용하여 파일이 열립니다. 이 기능은 기본적으로 설정되어 있으며 해제하면 IDE 내 작업 공간에서 도움말 파일이 열립니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
     <ul class="dropspotlist">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Input</span><span data-close-text="true">Input</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">입력</span> <span data-close-text="true">입력</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
     <p><img alt="Input Window Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Input_Prefs.png"/></p>
-    <p class="dropspot">The <strong>Input </strong>preferences control certain aspects of the mouse and keyboard input within the IDE. The available options are:</p>
+    <p class="dropspot"><strong>입력</strong> 환경 설정은 IDE 내에서 마우스 및 키보드 입력의 특정 측면을 제어합니다. 사용 가능한 옵션은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Slow double click time (ms)</strong>: Some areas of the IDE require a slower double click to work correctly, for example when renaming a resource (a fast double click will open the resource editor, while a slow double click will permit you
-        to rename it). This option permits you to set the detection speed, with a default value of 500ms.</li>
-      <li><strong>Scroll lock time (ms)</strong>: This option deals with the time that GameMaker Studio 2 should wait between scrolling windows that are overlapping. Essentially, When you&#39;re scrolling in window &quot;A&quot;, the cursor might hover over
-        another scrollable area in window &quot;B&quot;, so this preference defines how long you have to wait after you stop scrolling &quot;A&quot; before you can then scroll &quot;B&quot;, so you don&#39;t accidentally start scrolling different panels.
-        The default value is 500ms.</li>
-      <li><strong>Wrap cursor around the screen when panning</strong>: When enabled, this will wrap the cursor around the screen bounds when panning workspaces. Default is enabled.<br/>
-      </li>
-      <li><strong>Scroll speed</strong>: This controls the scrolling speed within the different workspaces. The default value is 1.</li>
-      <li><strong>Tab drag distance to un-maximise desktop (px)</strong>: When you drag a workspace tab away from its default position within the IDE, if there is only one workspace active at that time then the GameMaker Studio 2 window will un-maximise and
-        move with the mouse (if you have more than one workspace active a new instance of the IDE will be created to hold the workspace). This setting controls how far you have to drag the tab before the workspace recognises it, and the default value
-        is 50px.</li>
-      <li><strong>Minimum zoom level for interacting with window contents (%)</strong>: This option controls the zoom cut-off point at which the mouse will no longer be able to interact with workspace windows (ie: add nodes, drag windows, etc...). The default
-        value is 40.</li>
-      <li><strong>Mouse wheel zoom requires Ctrl key</strong>: When this is checked all editors (and the main workspace) will have zoom enabled with <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + the mouse wheel <img alt="MMB Icon" class="icon" src="../../assets/Images/Icons/Icon_MMB.png"/>, while un-checking it will enable zoom
-        with only the mouse wheel MMB Icon.</li>
-      <li><strong>Ctrl + MMB to open the inherited event instead of the manual</strong>: When this is checked, holding <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + the middle mouse button <img alt="MMB Icon" class="icon" src="../../assets/Images/Icons/Icon_MMB.png"/> in an object will open the objects inherited event (if it has one)
-        rather than the manual.</li>
-      <li><strong>Add bias to text selection to prevent line jumping</strong>: When this is checked, the conceived line height while selecting a single line in any text window will be padded, making it less prone to vertical imprecision. This is enabled by
-        default.
-      </li>
-      <li><strong>Enable laptop mode on all devices</strong>: Checking this will show the <a href="../../IDE_Navigation/IDE_Input.htm">Laptop Mode</a> button on the IDE, enabling you to switch it on or off as required regardless of whether the device running
-        GameMaker Studio 2 is a laptop or not. This is unchecked by default.</li>
+      <li><strong>느린 더블 클릭 시간 (ms)</strong> : IDE의 일부 영역에서는 리소스 이름을 바꿀 때와 같이 제대로 작동하려면 느린 더블 클릭이 필요합니다 (빨리 더블 클릭하면 리소스 편집기가 열리고 느린 더블 클릭하면 이름을 바꿀 수 있음) ). 이 옵션을 사용하면 기본값 500ms로 감지 속도를 설정할 수 있습니다.</li>
+      <li><strong>스크롤 잠금 시간 (ms)</strong> :이 옵션은 GameMaker Studio 2가 겹치는 스크롤 창 사이에서 대기해야하는 시간을 처리합니다. 기본적으로 &quot;A&quot;창에서 스크롤 할 때 커서가 &quot;B&quot;창의 다른 스크롤 가능 영역 위로 마우스를 가져갈 수 있으므로이 환경 설정은 &quot;A&quot;스크롤을 중지 한 후 &quot; B &quot;이므로 실수로 다른 패널을 스크롤하지 않습니다. 기본값은 500ms입니다.</li>
+      <li><strong>패닝시 화면 주위에 커서 줄 바꿈</strong> :이 옵션을 활성화하면 작업 영역을 패닝 할 때 커서가 화면 경계를 둘러 싸게됩니다. 기본값은 활성화입니다.</li>
+      <li><strong>스크롤 속도</strong> : 다른 작업 공간 내에서 스크롤 속도를 제어합니다. 기본값은 1입니다.</li>
+      <li><strong>바탕 화면 최대화를 해제하기위한 탭 드래그 거리 (px)</strong> : IDE 내에서 작업 공간 탭을 기본 위치에서 멀어지게 드래그 할 때 해당 시간에 하나의 작업 공간 만 활성화되어 있으면 GameMaker Studio 2 창이 최대화되지 않고 마우스 (여러 개의 작업 공간이 활성화 된 경우 작업 공간을 보유하기 위해 IDE의 새 인스턴스가 작성됩니다). 이 설정은 작업 영역이 인식하기 전에 탭을 얼마나 멀리 드래그해야하는지 제어하며 기본값은 50px입니다.</li>
+      <li><strong>창 내용과 상호 작용하기위한 최소 확대 / 축소 수준 (%)</strong> :이 옵션은 마우스가 더 이상 작업 공간 창과 상호 작용할 수없는 확대 / 축소 지점을 제어합니다 (예 : 노드 추가, 창 끌기 등). 기본값은 40입니다.</li>
+      <li><strong>마우스 휠 줌에는 Ctrl 키가 필요합니다</strong> .이 옵션을 선택하면 모든 편집기 (및 기본 작업 공간)에서 / + 마우스 휠 을 선택 해제하면 마우스 휠 MMB 아이콘만으로 확대 / 축소가 활성화됩니다.</li>
+      <li><strong>수동 대신 상속 된 이벤트를 열려면 Ctrl + MMB</strong> :이 항목을 선택하면 / + 마우스 가운데 버튼 객체에서 매뉴얼 대신 객체 상속 이벤트 (있는 경우)를 엽니 다.</li>
+      <li><strong>줄 넘김을 방지하기 위해 텍스트 선택에 바이어스 추가</strong> :이 옵션을 선택하면 텍스트 창에서 한 줄을 선택하는 동안 생각되는 줄 높이가 채워져 세로 방향의 부정확성이 줄어 듭니다. 기본적으로 활성화되어 있습니다.</li>
+      <li><strong>모든 장치에서 랩탑 모드 활성화</strong> : 이것을 체크하면 IDE에 <a href="../../IDE_Navigation/IDE_Input.htm">랩탑 모드</a> 버튼이 표시되어 GameMaker Studio 2를 실행하는 장치가 랩탑인지 여부에 관계없이 필요에 따라 스위치를 켜거나 끌 수 있습니다. 기본적으로 선택되어 있지 않습니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
     <ul class="dropspotlist">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Output Windows</span><span data-close-text="true">Output Windows</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">출력 창</span> <span data-close-text="true">출력 창</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
     <p><img alt="Output Window Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_OutputWindow_Prefs.png"/></p>
-    <p class="dropspot">The <strong>Output Window</strong> preferences control the different colour and formatting options for the various different output windows in the IDE. Each of the different windows has the same set of options, which are listed below:</p>
+    <p class="dropspot"><strong>출력 창</strong> 환경 설정은 IDE의 다양한 출력 창에 대해 다른 색상 및 서식 옵션을 제어합니다. 각기 다른 창에는 아래와 같은 옵션 세트가 있습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Colour</strong>: The default colour for the text being written to the window.</li>
-      <li><strong>Font Name</strong>: The name of the font to use (available fonts will depend on those installed on your system).</li>
-      <li><strong>Style</strong>: The font style to use, like <strong>bold </strong>or <em>italics </em>(note that not all windows will permit the same styles and it will also depend on the font used).</li>
-      <li><strong>Size</strong>: The size to set the font to for the given output window.</li>
-      <li><strong>Anti-Aliasing</strong>: Here you can set the <a class="tooltip" title="This is a technique used to smooth otherwise jagged lines or textures by blending the color of an edge with the color of the pixels around it. The result should be a more pleasing and realistic appearance, depending on the intensity of the effect.">anti-aliasing</a> mode for the output windows font rendering. You can choose to let the IDE decide by selecting <em>Use Default</em>,
-        or you can force it <em>On </em>or <em>Off </em>by selecting either of those options.</li>
+      <li><strong>색상</strong> : 창에 쓰여지는 텍스트의 기본 색상입니다.</li>
+      <li><strong>글꼴 이름</strong> : 사용할 글꼴 이름입니다 (사용 가능한 글꼴은 시스템에 설치된 글꼴에 따라 다름).</li>
+      <li><strong>스타일</strong> : <strong>굵은 체</strong> 또는 <em>이탤릭체</em> 와 같이 사용할 글꼴 스타일 (일부 창에서 동일한 스타일을 사용할 수있는 것은 아니며 사용 된 글꼴에 따라 다름).</li>
+      <li><strong>크기</strong> : 주어진 출력 창에 글꼴을 설정할 크기입니다.</li>
+      <li><strong>앤티 앨리어싱</strong> : 여기에서 출력 창 글꼴 렌더링에 <a class="tooltip" title="가장자리의 색상과 주변 픽셀의 색상을 혼합하여 울퉁불퉁 한 선이나 질감을 부드럽게하는 데 사용되는 기술입니다. 결과는 효과의 강도에 따라 더 즐겁고 사실적인 모양이어야합니다.">앤티 앨리어싱</a> 모드를 설정할 수 있습니다. <em>기본값 사용</em> 을 선택하여 IDE가 결정하도록하거나 해당 옵션 중 하나를 선택하여 강제로 <em>켜</em> 거나 <em>끌</em> 수 있습니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
     <ul class="dropspotlist">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Paths</span><span data-close-text="true">Paths</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">경로</span> <span data-close-text="true">경로</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
     <p><img alt="Path Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Paths_Prefs.png"/></p>
-    <p class="dropspot">The <strong>Path </strong>preferences control the different file paths required by elements in the GameMaker Studio 2 IDE as well as for any external editors that you require. The following options exist for the IDE:</p>
+    <p class="dropspot"><strong>경로</strong> 환경 설정은 GameMaker Studio 2 IDE의 요소와 필요한 외부 편집기에 필요한 다른 파일 경로를 제어합니다. IDE에는 다음과 같은 옵션이 있습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Temp directory</strong>: The location for saving all the temporary folders. By default this is <span class="inline">\Users\&lt;Username&gt;\AppData\Local\Temp\GameMakerStudio2</span>.</li>
-      <li><strong>IDE cache directory</strong>: The location for saving the IDE cache. By default this is <span class="inline">\Users\&lt;Username&gt;\AppData\Roaming\GameMakerStudio2-Dev\Cache</span>.</li>
-      <li><strong>Asset cache directory</strong>: The location for saving the asset cache for each project. By default this is <span class="inline">\Users\&lt;Username&gt;\AppData\Roaming\GameMakerStudio2-Dev\Cache</span>.</li>
-      <li><strong>&quot;My Projects&quot; Location</strong>: The location where GameMaker Studio 2 will initially create new projects. By default this is <span class="inline">\Users\&lt;Username&gt;\Documents\GameMakerStudio2</span>.</li>
-      <li><strong>Automatically delete temp directory on close</strong>: Checking this will force GameMaker Studio 2 to automatically delete the Temp folder that it creates per project for compiling etc... This setting is on by default, and un-checking it
-        will switch it off (meaning that you will have to manually remove any temp files later).</li>
-      <li><strong>Automatically delete asset cache on close</strong>: If this is checked then the asset compiler cache folder will be removed when you quit GameMaker Studio 2. This is off by default, and enabling it will mean that every time you load and
-        run any project the cache will need to be rebuilt (which can take time depending on the size of the game).</li>
-      <li><strong>Automatically delete IDE cache on close</strong>: If this is checked then the IDE compiler cache folder will be removed when you quit GameMaker Studio 2. This is off by default, and enabling it will mean that every time you start GameMaker
-        Studio 2 the cache will need to be rebuilt.</li>
-      <li><strong>Delete Temp Folder</strong>: Clicking this button will delete the temp folder for the project.</li>
-      <li><strong>Delete Asset Cache</strong>: Clicking this button will delete the compiler asset cache for the project.</li>
-      <li><strong>Delete IDE Cache</strong>: Clicking this button will delete the IDE cache<br/>
-      </li>
+      <li><strong>임시 디렉토리</strong> : 모든 임시 폴더를 저장하는 위치입니다. 기본적으로 이것은 <span class="inline">\\ Users \\ &lt;Username&gt; \\ AppData \\ Local \\ Temp \\ GameMakerStudio2</span> 입니다.</li>
+      <li><strong>IDE cache directory</strong> : <strong>IDE 캐시</strong> 저장 위치. 기본적으로 이것은 <span class="inline">\\ Users \\ &lt;Username&gt; \\ AppData \\ Roaming \\ GameMakerStudio2-Dev \\ Cache</span> 입니다.</li>
+      <li><strong>자산 캐시 디렉토리</strong> : 각 프로젝트의 자산 캐시를 저장하는 위치입니다. 기본적으로 이것은 <span class="inline">\\ Users \\ &lt;Username&gt; \\ AppData \\ Roaming \\ GameMakerStudio2-Dev \\ Cache</span> 입니다.</li>
+      <li><strong>&quot;내 프로젝트&quot;위치</strong> : GameMaker Studio 2가 처음에 새 프로젝트를 생성 할 위치입니다. 기본적으로 이것은 <span class="inline">\\ Users \\ &lt;Username&gt; \\ Documents \\ GameMakerStudio2</span> 입니다.</li>
+      <li><strong>닫을 때 임시 디렉토리 자동 삭제</strong> : 체크하면 GameMaker Studio 2가 컴파일 등을 위해 프로젝트별로 생성 한 Temp 폴더를 자동으로 강제로 삭제합니다.이 설정은 기본적으로 켜져 있으며, 체크를 해제하면 해제됩니다 (즉, 나중에 임시 파일을 수동으로 제거해야합니다).</li>
+      <li><strong>닫을 때 자동으로 자산 캐시 삭제</strong> :이 옵션을 선택하면 GameMaker Studio 2를 종료 할 때 자산 컴파일러 캐시 폴더가 제거됩니다. 이것은 기본적으로 해제되어 있으며 활성화하면 프로젝트를로드하고 실행할 때마다 캐시가 게임의 크기에 따라 시간이 걸릴 수 있습니다.</li>
+      <li><strong>닫을 때 IDE 캐시 자동 삭제</strong> :이 옵션을 선택하면 GameMaker Studio 2를 종료 할 때 IDE 컴파일러 캐시 폴더가 제거됩니다. 기본적으로 해제되어 있으며,이를 활성화하면 GameMaker Studio 2를 시작할 때마다 캐시가 필요합니다. 재건 될 것입니다.</li>
+      <li><strong>임시 폴더 삭제</strong> :이 버튼을 클릭하면 프로젝트의 임시 폴더가 삭제됩니다.</li>
+      <li><strong>자산 캐시 삭제</strong> :이 버튼을 클릭하면 프로젝트의 컴파일러 자산 캐시가 삭제됩니다.</li>
+      <li><strong>IDE 캐시 삭제</strong> :이 버튼을 클릭하면 <strong>IDE 캐시</strong> 가 삭제됩니다</li>
     </ul>
-    <p class="dropspot">The following options exist for setting paths to external editors:</p>
+    <p class="dropspot">외부 편집기의 경로를 설정하기위한 다음 옵션이 있습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Path to external editor/viewer for SWF files</strong>: If you are working with SWF format sprites, you can set this to the path of your preferred viewer/editor and when you click the <em>Edit Image</em> button in the Sprite Editor then it
-        will open the given program. The default value here is to have no path.</li>
-      <li><strong>Path to external editor/viewer for Spine files</strong>: If you are working with Spine format sprites, you can set this to the path of your preferred viewer/editor and when you click the <em>Edit Image</em> button in the Sprite Editor then
-        it will open the given program. The default value here is to have no path.</li>
+      <li><strong>SWF 파일의 외부 편집기 / 뷰어 경로</strong> : SWF 형식 스프라이트로 작업하는 경우 원하는 뷰어 / 편집기의 경로로 설정할 수 있으며 스프라이트 편집기에서 <em>이미지 편집</em> 버튼을 클릭하면 해당 파일이 열립니다. 프로그램. 여기서 기본값은 경로가없는 것입니다.</li>
+      <li><strong>Spine 파일의 외부 편집기 / 뷰어 경로</strong> : Spine 형식 스프라이트로 작업하는 경우 원하는 뷰어 / 편집기의 경로로 설정할 수 있으며 Sprite 편집기에서 <em>이미지 편집</em> 버튼을 클릭하면 해당 파일이 열립니다. 프로그램. 여기서 기본값은 경로가없는 것입니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Power Saving</span><span data-close-text="true">Power Saving</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">절전</span> <span data-close-text="true">절전</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
     <p><img alt="Power Saving Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Power_Prefs.png"/></p>
-    <p class="dropspot">The <strong>Power Saving</strong> preferences here will affect how much CPU power and GPU power will be used to generate the GameMaker Studio 2 IDE (essentially this will lower the base framerate at which the program runs and so lower power consumption).
-      Note that some of these are specific to the <strong>File Watcher</strong> background process. The File Watcher scans the project folders for external changes - for example if you change a gml script in Notepad++ then the file watcher will detect
-      this change and ask you if you want to reload it or discard it - and as such the frequency that this scan happens can severely impact performance and power consumption.</p>
-    <p class="dropspot">The options here are:</p>
+    <p class="dropspot">여기의 <strong>절전</strong> 설정은 GameMaker Studio 2 IDE를 생성하는 데 사용되는 CPU 전력 및 GPU 전력의 양에 영향을 미칩니다 (실제로 프로그램이 실행되는 기본 프레임 속도가 낮아져 전력 소비가 줄어 듭니다). 이 중 일부는 <strong>File Watcher</strong> 백그라운드 프로세스에만 해당됩니다. File Watcher는 외부 변경 사항이 있는지 프로젝트 폴더를 스캔합니다 (예 : Notepad ++에서 gml 스크립트를 변경 한 경우 파일 워처는이 변경 사항을 감지하여 다시로드 할 것인지 또는 폐기 할 것인지 묻습니다). 발생하면 성능 및 전력 소비에 심각한 영향을 줄 수 있습니다.</p>
+    <p class="dropspot">옵션은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>AC power framerate (%)</strong>: The base IDE framerate modifier when connected to a power input. Default is 100%.</li>
-      <li><strong>Battery power framerate (%)</strong>: The base IDE framerate modifier when using battery to power the machine. Default is 35%.</li>
-      <li><strong>Background framerate (%)</strong>: The base IDE framerate modifier when GameMaker Studio 2 is not in focus (regardless of the power supply). Default is 15%.</li>
-      <li><strong>File watcher frequency (ms)</strong>: This is the frequency that the file watcher will run at when on desktop (or a docked laptop). Default is 2000.</li>
-      <li><strong>Laptop file watcher frequency (ms)</strong>: This is the frequency that the file watcher will run at when in laptop mode. Default is 5000.</li>
+      <li><strong>AC 전원 프레임 속도 (%)</strong> : 전원 입력에 연결된 경우 기본 IDE 프레임 속도 수정 자. 기본값은 100 %입니다.</li>
+      <li><strong>배터리 전력 프레임 속도 (%)</strong> : 배터리를 사용하여 기계에 전원을 공급할 때 기본 IDE 프레임 속도 수정 자입니다. 기본값은 35 %입니다.</li>
+      <li><strong>배경 프레임 속도 (%)</strong> : GameMaker Studio 2의 초점이 맞지 않을 때 (전원 공급 장치에 관계없이 <strong>)</strong> 기본 IDE 프레임 속도 수정 자. 기본값은 15 %입니다.</li>
+      <li><strong>파일 감시자 빈도 (ms)</strong> : 데스크톱 (또는 도킹 된 랩톱)에서 파일 감시자가 실행할 빈도입니다. 기본값은 2000입니다.</li>
+      <li><strong>랩톱 파일 감시자 빈도 (ms)</strong> : 랩톱 모드에서 파일 감시자가 실행할 빈도입니다. 기본값은 5000입니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Recent Windows</span><span data-close-text="true">Recent Windows</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">최근 Windows</span> <span data-close-text="true">최근 Windows</span></a></p>
   <div class="droptext" data-targetname="drop-down8">
     <p><img alt="Recent Wndows Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Recent_Windows_Prefs.png"/></p>
-    <p class="dropspot">The preferences here contain options for how the <a href="../../IDE_Navigation/Recent_Windows.htm">Recent Windows</a> list will display items:</p>
+    <p class="dropspot">여기에 환경 설정에는 <a href="../../IDE_Navigation/Recent_Windows.htm">최근 Windows</a> 목록이 항목을 표시하는 방법에 대한 옵션이 있습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Open automatically on Project load</strong>: When enabled, the Recent Windows list will be shown when you load a new project. Default is disabled.</li>
-      <li><strong>Move focused windows to top</strong>: When this is enabled and you click on any item in the Recent Window list, the selected item will be moved to the top of the list. By default this is disabled.</li>
-      <li><strong>Display only currently open windows</strong>: Enabling this will make the Recent Windows list remove those items that are no longer open in a workspace (ie: closing any window will remove it from the list too). By default this is disabled.</li>
-      <li><strong>Maximum windows to display</strong>: This sets the maximum number of previously opened windows that will be shown within the Recent Windows list. Default is 10.</li>
+      <li><strong>프로젝트로드시 자동으로 열기</strong> : 활성화하면 새 프로젝트를로드 할 때 최근 Windows 목록이 표시됩니다. 기본값은 비활성화입니다.</li>
+      <li><strong>포커스 된 창을 맨 위로 이동</strong> :이 옵션을 활성화하고 최근 창 목록에서 항목을 클릭하면 선택한 항목이 목록의 맨 위로 이동합니다. 기본적으로이 기능은 비활성화되어 있습니다.</li>
+      <li><strong>현재 열려</strong> 있는 창만 표시 :이 옵션을 활성화하면 최근 Windows 목록이 더 이상 작업 공간에서 열리지 않은 항목을 제거합니다 (예 : 창을 닫으면 목록에서도 제거됨). 기본적으로이 기능은 비활성화되어 있습니다.</li>
+      <li><strong>표시 할 최대 창</strong> : 최근 창 목록에 표시 될 이전에 열린 창의 최대 수를 설정합니다. 기본값은 10입니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Resources</span><span data-close-text="true">Resources</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">자료</span> <span data-close-text="true">자료</span></a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot">The preferences here contain options for how certain <strong>resources </strong>will be drawn in your projects:</p>
+    <p class="dropspot">여기 환경 설정에는 프로젝트에서 특정 <strong>리소스</strong> 를 그리는 방법에 대한 옵션이 포함되어 있습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Initial default draw colour for new projects</strong>: When you use a font or draw a shape using the GameMaker Studio 2 functions or DnD™ actions without specifying a colour, the colour set here is the one that will be used. The default
-        colour is white ( <a class="tooltip" title="This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). ">ARGB</a>: $FFFFFFFF).</li>
-      <li><strong>Initial default window colour for new projects</strong>: This option is used to set the HTML page background colour for the HTML5 target, as well as set the colour shown outside of rooms on all targets (including HTML5). The default colour
-        is black (ARGB: $000000FF).</li>
+      <li><strong>새 프로젝트의 초기 기본 그리기 색상</strong> : GameMaker Studio 2 기능 또는 DnD ™ 액션을 사용하여 색상을 지정하지 않고 글꼴을 사용하거나 도형을 그릴 때 여기에 설정된 색상이 사용됩니다. 기본 색상은 흰색입니다 ( <a class="tooltip" title="이것은 Alpha, Red, Green, Blue의 약어이며 16 진수 값으로 지정된 색상 구성 요소를 나타내는 데 사용됩니다 (예 : # FF53E270). 여기서 두 자리 숫자 각각은 단일 구성 요소를 나타냅니다. 위의 ARGB 예제를 분류하면 Alpha (FF), Red (53), Green (E2) 및 Blue (70)의 구성 요소 값이 제공됩니다.">ARGB</a> : $ FFFFFFFF).</li>
+      <li><strong>새 프로젝트의 초기 기본 창 색상</strong> :이 옵션은 HTML5 대상의 HTML 페이지 배경색을 설정하고 모든 대상 (HTML5 포함)의 방 외부에 표시되는 색상을 설정하는 데 사용됩니다. 기본 색상은 검은 색입니다 (ARGB : $ 000000FF).</li>
     </ul>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">Workspaces</span><span data-close-text="true">Workspaces</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">작업</span> <span data-close-text="true">공간</span> <span data-open-text="true">작업</span> <span data-close-text="true">공간</span></a></p>
   <div class="droptext" data-targetname="drop-down10">
     <p><img alt="Workspace Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_Workspace_Prefs.png"/></p>
-    <p class="dropspot">The preferences here will affect how you move around within the different GameMaker Studio 2 <strong>workspaces</strong>. The options are:</p>
+    <p class="dropspot">여기에있는 환경 설정은 다른 GameMaker Studio 2 <strong>작업 공간</strong> 내에서의 이동 방법에 영향을줍니다. 옵션은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li><strong>Workspace keyboard navigation degree range</strong>: Within a workspace you can have multiple windows open for different objects and resources, and so to move around quickly between them you can use the keyboard shortcut <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="ALT Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55"/> + <span class="inline">&lt;Arrow Keys&gt;</span> to move between them. Given that the windows within a workspace are not grid aligned the IDE has to choose which window you mean when you press any of the possible 8 directions, and
-        this option permits you to set the &quot;look angle&quot; that is used. The default value is 40°.</li>
-      <li><strong>Workspace chain column padding (px)</strong>: Workspace elements are often &quot;chained&quot; to each other (for example, the Code Editor is chained to the Event Editor is chained to the Object Editor), and this option permits you to set
-        the horizontal distance between any two chained windows. The default value is 30px.</li>
-      <li><strong>Workspace chain row padding (px)</strong>: As mentioned above, workspace elements are often &quot;chained&quot; to each other and this option permits you to set the vertical distance between any two chained windows. The default value is
-        20px.
-      </li>
-      <li><strong>Workspace chain rendering segment count</strong>: Here you can set the maximum number of segments for render chains. Lowering this value may help performance on lower end machines. The default value is 20.</li>
-      <li><strong>Workspace chain link colour</strong>: This is the colour that will be used to display chains between workspace elements. Default colour is ARGB $99DD00.</li>
-      <li><strong>Workspace keyboard navigation resets zoom</strong>: As mentioned above, you can skip from window to window within the workspace using keyboard shortcuts. You can also zoom the workspace in and out using the <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + the mouse wheel <img alt="MMB Icon" class="icon" src="../../assets/Images/Icons/Icon_MMB.png"/>. Setting this option will mean that if you have the workspace zoomed and use the shortcuts to skip to another window, then the workspace will be returned to a 1:1 view and centered on the selected window. This option is off by default.</li>
-      <li><strong>Workspace chains can overlap</strong>: When enabled this option will permit workspace chains to cross and overlap. This is off by default.</li>
+      <li><strong>작업 공간 키보드 탐색 정도 범위</strong> : 작업 공간 내에서 서로 다른 객체와 리소스에 대해 여러 개의 창을 열 수 있으므로 그 사이를 빠르게 이동하려면 키보드 단축키를 사용할 수 있습니다 / + + <span class="inline">&lt;화살표 키&gt;</span> 사이를 이동합니다. 작업 공간 내의 윈도우가 그리드로 정렬되지 않은 경우, IDE는 가능한 8 개의 방향 중 하나를 누를 때 어떤 윈도우를 의미하는지 선택해야하며,이 옵션을 사용하면 사용되는 &quot;모양 각도&quot;를 설정할 수 있습니다. 기본값은 40 °입니다.</li>
+      <li><strong>작업 공간 체인 열 패딩 (px)</strong> : 작업 공간 요소는 서로 &quot;체인&quot;되어있는 경우가 많습니다 (예 : 코드 편집기가 이벤트 편집기에 연결되어 있고 개체 편집기에 연결되어 있음).이 옵션을 사용하면 다음과 같은 수평 거리를 설정할 수 있습니다. 두 개의 연결된 창문. 기본값은 30px입니다.</li>
+      <li><strong>작업 공간 체인 행 패딩 (px)</strong> : 위에서 언급했듯이 작업 공간 요소는 종종 서로 &quot;체인&quot;되어 있으며이 옵션을 사용하면 두 체인 윈도우 사이의 수직 거리를 설정할 수 있습니다. 기본값은 20px입니다.</li>
+      <li><strong>작업 공간 체인 렌더링 세그먼트 수</strong> : 렌더 체인의 최대 세그먼트 수를 설정할 수 있습니다. 이 값을 낮추면 저가형 시스템의 성능에 도움이 될 수 있습니다. 기본값은 20입니다.</li>
+      <li><strong>작업 공간 체인 링크 색상</strong> : 작업 공간 요소 사이에 체인을 표시하는 데 사용되는 색상입니다. 기본 색상은 ARGB $ 99DD00입니다.</li>
+      <li><strong>작업 공간 키보드 탐색으로 확대 / 축소가 재설정됩니다</strong> . 위에서 언급 한 것처럼 키보드 단축키를 사용하여 작업 공간 내에서 창을 건너 뛸 수 있습니다. 작업 공간을 사용하여 작업 공간을 확대하거나 축소 할 수도 있습니다. / + 마우스 휠 . 이 옵션을 설정하면 작업 공간을 확대 한 상태에서 바로 가기를 사용하여 다른 창으로 건너 뛰면 작업 공간이 1 : 1보기로 돌아가고 선택된 창을 중심으로합니다. 이 옵션은 기본적으로 해제되어 있습니다.</li>
+      <li><strong>작업 공간 체인이 겹칠 수 있습니다</strong> :이 옵션을 사용하면 작업 공간 체인이 교차하고 겹칠 수 있습니다. 기본적으로 해제되어 있습니다.</li>
     </ul>
-    <p><br/>
-    </p>
+    <p></p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Setting_Up_And_Version_Information\IDE_Preferences\General_Preferences.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Drag_And_Drop_Preferences.htm">Drag And Drop™ Preferences</a></div>
+        <div style="float:left">뒤로: <a href="../IDE_Preferences.htm">IDE 환경 설정</a></div>
+        <div style="float:right">다음: <a href="Drag_And_Drop_Preferences.htm">끌어서 놓기 환경 설정</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Asset Explorer
@@ -429,4 +359,4 @@ prefs_recent_windows
 prefs_output_windows
 -->
 
-</body></html>
+</body></html> 

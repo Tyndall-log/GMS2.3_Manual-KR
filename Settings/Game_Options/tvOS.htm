@@ -71,7 +71,7 @@
         <span>tvOS</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,58 +80,48 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tvOS Game Options</h1>
-  <p>This section outlines the different options available to you that control how your tvOS game projects will be compiled. The different sections are:</p>
+  <h1>tvOS 게임 옵션</h1>
+  <p>이 섹션에서는 tvOS 게임 프로젝트를 컴파일하는 방법을 제어 할 수있는 다양한 옵션에 대해 간략하게 설명합니다. 다른 섹션은 다음과 같습니다.</p>
   <p> </p>
-  <h2>General</h2>
-  <p><img alt="iOS General Options" class="center" src="../../assets/Images/Settings/tvOS_General_Options.png"/>Here you can fill in the <strong>Product Information</strong> about your game, including its <strong>Display Name</strong>, its <strong>Bundle ID</strong>    and the <strong>Version </strong>info. Note that the Bundle ID must be in the correct reverse URL format for the final build of the game to work correctly, EG: <span class="inline">com.[Company].[GameName]</span>. You can also set the <strong>App Output</strong>    location on the build Mac, and you can give the Team Identifier that you wish to use for signing the final application that GameMaker Studio 2 creates for you. Setting it here will override the Team ID that you have supplied in the <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/tvOS.htm">tvOS Preferences</a>.</p>
+  <h2>일반</h2>
+  <p><img alt="iOS General Options" class="center" src="../../assets/Images/Settings/tvOS_General_Options.png"/>여기에서 <strong>표시 이름</strong> , <strong>번들 ID</strong> 및 <strong>버전</strong> 정보를 포함하여 게임에 대한 <strong>제품 정보</strong> 를 입력 할 수 있습니다. 번들 ID는 게임의 최종 빌드가 올바르게 작동하려면 올바른 리버스 URL 형식이어야합니다 (예 : <span class="inline">com. [Company]. [GameName])</span> . 빌드 Mac에서 <strong>앱 출력</strong> 위치를 설정할 수도 있고 GameMaker Studio 2가 생성 한 최종 응용 프로그램에 서명하는 데 사용할 팀 식별자를 제공 할 수도 있습니다. 여기에서 <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/tvOS.htm">설정</a> 하면 <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/tvOS.htm">tvOS 환경 설정</a> 에서 제공 한 팀 ID가 무시됩니다.</p>
   <p> </p>
-  <h2>Graphics</h2>
-  <p><img alt="tvOS Graphics Options" class="center" src="../../assets/Images/Settings/tvOS_Graphics_Options.png"/>Here you can change the following details related to how your game will be displayed, with the following options available:</p>
+  <h2>제도법</h2>
+  <p><img alt="tvOS Graphics Options" class="center" src="../../assets/Images/Settings/tvOS_Graphics_Options.png"/>다음 옵션을 사용하여 게임 표시 방법과 관련된 다음 세부 정보를 변경할 수 있습니다.</p>
   <ul class="colour">
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be
-      off, but if you have nice alpha blends and smoothed edged graphics it is better left on. This is off by default.</li>
-    <li><strong>Scaling</strong>: Here you can select to scale the draw canvas maintaining the aspect ratio within the device screen - adding &quot;padding&quot; around the edges to fit the screen - or you can select to have the draw canvas stretched to fit
-      the device screen.</li>
+    <li><strong>픽셀 간 색상 보간</strong> : 기본적으로 &quot;매끄러운&quot;픽셀 인 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간을</a> 켭니다. 선명한 픽셀 그래픽의 경우 꺼져 있어야하지만 멋진 알파 블렌드와 매끄러운 가장자리 그래픽이있는 경우 그대로 유지하는 것이 좋습니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>크기 조정</strong> : 여기에서 화면에 맞게 가장자리 주위에 &quot;패딩&quot;을 추가하여 장치 화면 내에서 가로 세로 비율을 유지하여 그리기 캔버스의 배율을 조정하거나 장치 화면에 맞게 그리기 캔버스를 확장하도록 선택할 수 있습니다.</li>
   </ul>
-  <p>Next there is the option to set the size of the <a class="tooltip" title="A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There
-    is also a button marked <strong>Preview </strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are structured and
-    to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
-  <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be with different browsers and devices.</p>
-  <p>Finally, you choose to <strong>Display a cursor</strong> or not. If checked, the OS will show a cursor whenever the mouse is moved (at the mouse position), and the cursor will fade out and disappear when the mouse is not moved for a period of time.
-    If unchecked, then no cursor will be shown.</p>
+  <p>다음으로 <a class="tooltip" title="텍스처 페이지 (텍스처 아틀라스라고도 함)는 게임에서 가장 적은 텍스처 메모리를 차지하도록 최적의 방식으로 그룹화 된 이미지 모음 (스프라이트, 타일셋, 글꼴 문자 등)입니다. 실행됩니다.">텍스처 페이지</a> 의 크기를 설정하는 옵션이 있습니다. 기본 (가장 호환되는) 크기는 2048x2048이지만 256x256에서 최대 8192x8192 사이에서 선택할 수 있습니다. 또한이 플랫폼에 대한 텍스처 페이지를 생성 한 다음 <strong>미리보기</strong> 로 표시된 단추가 있으며, 창을 열어서 모양을 볼 수 있습니다. 텍스처 페이지가 어떻게 구성되어 있는지 확인하고 텍스처 페이지가 필요 이상으로 커지는 것을 방지하려는 경우 매우 유용 할 수 있습니다. 텍스처 페이지에 대한 자세한 내용은 <a href="../Texture_Information/Texture_Pages.htm">여기</a> 를 참조 <a href="../Texture_Information/Texture_Pages.htm">하십시오</a> .</p>
+  <p class="note"><strong>참고</strong> : 텍스처 페이지의 크기가 클수록 게임이 다른 브라우저 및 장치와 호환되지 않습니다.</p>
+  <p>마지막으로 <strong>커서 표시 여부</strong> 를 선택합니다. 이 옵션을 선택하면 마우스를 움직일 때마다 (마우스 위치에서) 커서가 표시되고 일정 시간 동안 마우스를 움직이지 않으면 커서가 사라지고 사라집니다. 이 확인란을 선택하지 않으면 커서가 표시되지 않습니다.</p>
   <p> </p>
-  <h2>Icons</h2>
-  <p><img alt="tvOS Images Icons Options" class="center" src="../../assets/Images/Settings/tvOS_Icons_Options.png"/>This section permits you to add the various different <strong>Icons </strong>required by the various devices and the different parts of the
-    App Store. These icons should be authored as 24bit <span class="inline">*.png</span> images at the size specified for each one.</p>
-  <p>It is worth noting that GameMaker Studio 2 has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game
-    is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require, especially for this platform as the icons required are rectangular and not square. This tool will also generate Images (explained
-    below) as well as Icons.</p>
+  <h2>아이콘</h2>
+  <p><img alt="tvOS Images Icons Options" class="center" src="../../assets/Images/Settings/tvOS_Icons_Options.png"/>이 섹션에서는 다양한 장치와 App Store의 다른 부분에 필요한 다양한 <strong>아이콘</strong> 을 추가 할 수 있습니다. 이 아이콘은 각각 지정된 크기의 24 비트 <span class="inline">* .png</span> 이미지로 작성해야합니다.</p>
+  <p>GameMaker Studio 2에는 게임이 컴파일되는 모든 다른 대상 플랫폼에 필요한 모든 이미지를 자동으로 만드는 데 사용할 수있는 <a href="../../IDE_Tools/Project_Image_Generator.htm">프로젝트 이미지 생성기</a> 도구가 있습니다. 이 도구를 사용하는 경우 필요한 아이콘이 정사각형이 아닌 직사각형이므로 특히이 플랫폼에 필요한 이미지가되도록 이미지를 수정해야합니다. 이 도구는 아이콘뿐만 아니라 이미지 (아래 설명)도 생성합니다.</p>
   <p> </p>
-  <h2>Images</h2>
-  <p><img alt="tvOS Images Splash Screens Options" class="center" src="../../assets/Images/Settings/tvOS_Images_Options.png"/>This section permits you to add separate graphics as &quot;Top Shelf&quot; images and splash screens for each of the different
-    tvOS target sizes. These images must be authored as individual 24bit <span class="inline">*.png</span> images with no transparencies and at the correct size. You can also set a minimum time for showing the splash screens from the drop down menu at
-    the bottom (from 0 to 10 seconds).</p>
-  <p>As mentioned in the section on Icons, you can use the <strong>Project Image Generator</strong> to create these images.</p>
+  <h2>이미지</h2>
+  <p><img alt="tvOS Images Splash Screens Options" class="center" src="../../assets/Images/Settings/tvOS_Images_Options.png"/>이 섹션에서는 서로 다른 tvOS 대상 크기 각각에 대해 &quot;Top Shelf&quot;이미지와 스플래시 화면으로 별도의 그래픽을 추가 할 수 있습니다. 이 이미지는 투명 필름이없고 올바른 크기의 개별 24 비트 <span class="inline">* .png</span> 이미지로 작성해야합니다. 하단의 드롭 다운 메뉴에서 스플래시 화면을 표시하기위한 최소 시간을 설정할 수도 있습니다 (0-10 초).</p>
+  <p>아이콘 섹션에서 언급했듯이 <strong>프로젝트 이미지 생성기</strong> 를 사용하여 이러한 이미지를 만들 수 있습니다.</p>
   <p> </p>
-  <h2>Social</h2>
-  <p><img alt="tvOS Social Options" class="center" src="../../assets/Images/Settings/tvOS_Social_Options.png"/>This section is for enabling different <strong>Social </strong>features in your tvOS game. The following options can be chosen:</p>
+  <h2>사회적인</h2>
+  <p><img alt="tvOS Social Options" class="center" src="../../assets/Images/Settings/tvOS_Social_Options.png"/>이 섹션은 tvOS 게임에서 다양한 <strong>소셜</strong> 기능을 활성화하기위한 것입니다. 다음과 같은 옵션을 선택할 수 있습니다.</p>
   <ul class="colour">
-    <li><strong>Enable Push Notifications</strong>: In order for your game to use Push Notifications they must be enabled here first otherwise they will not work.</li>
-    <li><strong>Enable Sign In With Apple</strong>: This option is for using the <strong>Apple Sign In Extension</strong> on iOS. You can get this extension from the <a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">YoYo Games Marketplace</a>,
-      and the extension itself contains full instructions for use. If you are not using this extension then you should not tick this options.</li>
+    <li><strong>푸시 알림 활성화</strong> : 게임에서 푸시 알림을 사용하려면 먼저 푸시 알림을 활성화해야합니다. 그렇지 않으면 작동하지 않습니다.</li>
+    <li><strong>Apple로 로그인 활성화</strong> :이 옵션은 iOS에서 <strong>Apple 로그인 확장</strong> 을 사용하기위한 것입니다. 이 확장은 <a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">YoYo Games Marketplace</a> 에서 얻을 수 있으며 확장 자체에는 사용 지침이 포함되어 있습니다. 이 확장을 사용하지 않는 경우이 옵션을 선택하지 마십시오.</li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings\Game_Options\tvOS.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a href="Windows.htm">Windows</a></div>
+        <div style="float:left">뒤로: <a href="../Game_Options.htm">게임 옵션</a></div>
+        <div style="float:right">다음: <a href="Windows.htm">윈도우</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 tvOS Game Options
@@ -140,4 +130,4 @@ tvOS Game Options
 tvos_options
 -->
 
-</body></html>
+</body></html> 

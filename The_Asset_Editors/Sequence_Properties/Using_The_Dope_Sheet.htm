@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Using The Dope Sheet">
-        <span>Using The Dope Sheet</span>
+        <span>도프 시트 사용</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,115 +80,98 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Using The Dope Sheet</h1>
-  <p><img alt="The Dope Sheet Editor" class="center" src="../../assets/Images/Asset_Editors/DopeSheet_Editor.png"/>The <strong>Dope Sheet </strong>is where the data from the different tracks added to the sequence is displayed over time, giving you not just
-    an overview of each track, but also a means to edit the position of them as well as the timings for changes in parameters, etc...</p>
-  <p>When you add a new asset to a sequence, an <a class="tooltip" title="A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.">asset track</a> will be created in the Track Panel and an <a class="tooltip" title="A position on the timeline in the dope sheet where an asset has been placed. An asset key can be made to last multiple frames.">asset key</a> will be added to the
-    dope sheet at the current <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet, the Animation Curve editor or the Sprite editor. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> position. This key will reflect the play length of the asset in frames:</p>
-  <p><img alt="Add An Asset To The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Add_Asset.gif"/>The asset key itself can then be edited by moving the mouse to either the start or the end of the key frame and when the cursor
-    changes clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> and dragging. This will either move the start of the key or the end of the key, depending on which you have selected, but both
-    will affect the length of the key. Note that you can also change an asset key position by simply clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> anywhere on it and dragging left or right:</p>
-  <p><img alt="Move Or Change An Asset Key In The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Move_Key.gif"/>Other than asset keys, the dope sheet will also show <a class="tooltip" title="A parameter key (also called a keyframe) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">parameter key</a>    <span class="glossextra">s</span>. Parameter keys are initially &quot;points&quot; in time where you signal a change to a property for the asset they are related to, and the sequence will use the value for that point to change the asset. How this
-    is done will depend on whether you have set the keys to <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a> or not in the <a href="The_Track_Panel.htm">Track Panel</a>. Parameter keys, like track keys, can
-    be moved by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> and dragging them along the timeline to a new position, and you can also extend the key to more than a single frame using
-    the <img alt="Alt Icon" class="icon" src="../../assets/Images/Icons/Icon_Alt.png"/> key at the same time as dragging (the cursor will change to show this). This means that you can hold key values over time before continuing with any interpolation
-    to the next key:</p>
-  <p><img alt="Move Or Change A Parameter Key In The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Parameter_Keys.gif"/>When working with the dope sheet the usual keyboard shortcuts can be used too, ie: <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> and the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to select one or more tracks in any order, <img alt="Shift Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Shift.png" width="55"/> and the left mouse button
-    <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to select consecutive tracks, and you can also cut, copy and paste them using the <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> +&quot;<span class="inline">X</span>&quot;,  <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">C</span>&quot; and  <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">V</span>&quot; key combinations.</p>
-  <p>There are also different options for keys available from the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> menu, which are detailed below. Note that when pasting keys into the dope sheet using these
-    commands, the keys will be pasted at the <em>current </em>position of the playhead.</p>
-  <p>That&#39;s the basics of using the dope sheet, but below we go into a bit more detail on what each of the different sections are for and how to use them:</p>
+  <h1>도프 시트 사용</h1>
+  <p><img alt="The Dope Sheet Editor" class="center" src="../../assets/Images/Asset_Editors/DopeSheet_Editor.png"/><strong>도프 시트</strong> 는 시퀀스에 추가 된 서로 다른 트랙의 데이터가 시간이 지남에 따라 표시되는 위치로, 각 트랙의 개요뿐만 아니라 트랙의 위치 및 매개 변수 변경 타이밍을 편집 할 수있는 수단을 제공합니다. 기타...</p>
+  <p>시퀀스에 새 자산을 추가하면 트랙 패널에 <a class="tooltip" title="단일 트랙, 스프라이트, 사운드, 인스턴스 또는 시퀀스를 보유하는 시퀀스 트랙 패널의 트랙.">자산 트랙</a> 이 만들어지고 <a class="tooltip" title="자산이 배치 된 도프 시트에서 타임 라인의 위치입니다. 여러 키를 지속하기 위해 자산 키를 만들 수 있습니다.">자산 키</a> 가 현재 <a class="tooltip" title="시퀀스 도프 시트, 애니메이션 커브 편집기 또는 스프라이트 편집기의 타임 라인 내 현재 &#39;재생&#39;위치. 시퀀스 (및 스프라이트)에서는 애니메이션을 미리 볼 때 이동하며 특정 프레임에 배치하여 해당 위치에서 키와 키 프레임을보고 편집 할 수 있습니다.">재생 헤드</a> 위치의 도프 시트에 추가됩니다. 이 키는 자산의 재생 길이를 프레임으로 반영합니다 :</p>
+  <p><img alt="Add An Asset To The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Add_Asset.gif"/>마우스를 키 프레임의 시작 또는 끝으로 이동하고 커서가 클릭을 변경하면 자산 키 자체를 편집 할 수 있습니다 그리고 끌기. 선택한 항목에 따라 키 시작 또는 키 끝이 이동하지만 둘 다 키 길이에 영향을줍니다. 간단히 클릭하여 자산 키 위치를 변경할 수도 있습니다. 어디서나 왼쪽 또는 오른쪽으로 드래그하십시오.</p>
+  <p><img alt="Move Or Change An Asset Key In The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Move_Key.gif"/>자산 키 이외의 도프 시트에도 <a class="tooltip" title="매개 변수 키 (키 프레임이라고도 함)는 도프 시트의 타임 라인에서 매개 변수 값의 변경이 정의 된 지점입니다.">매개 변수 키가</a> 표시 <a class="tooltip" title="매개 변수 키 (키 프레임이라고도 함)는 도프 시트의 타임 라인에서 매개 변수 값의 변경이 정의 된 지점입니다.">됩니다</a> . 매개 변수 키는 처음에 관련 자산의 속성에 대한 변경을 알리는 &quot;포인트&quot;이며 시퀀스는 해당 지점의 값을 사용하여 자산을 변경합니다. 이 작업을 수행하는 방법은 <a href="The_Track_Panel.htm">트랙 패널</a> 에서 키를 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간으로</a> 설정했는지 여부에 따라 다릅니다. 클릭하면 트랙 키와 같은 파라미터 키를 이동할 수 있습니다 타임 라인을 따라 새 위치로 드래그하고 키를 사용하여 키를 하나 이상의 프레임으로 확장 할 수도 있습니다. 드래그하는 동시에 키를 누릅니다 (커서가이를 표시하도록 변경됨). 이는 다음 키에 대한 보간을 계속하기 전에 시간이 지남에 따라 키 값을 유지할 수 있음을 의미합니다.</p>
+  <p><img alt="Move Or Change A Parameter Key In The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Parameter_Keys.gif"/>도프 시트로 작업 할 때 일반적인 키보드 단축키를 사용할 수도 있습니다. / 마우스 왼쪽 버튼 순서에 상관없이 하나 이상의 트랙을 선택하려면 마우스 왼쪽 버튼 연속 트랙을 선택하고을 사용하여 잘라 내기, 복사 및 붙여 넣기를 할 수도 있습니다. / + &quot; <span class="inline">X</span> &quot;, / + &quot; <span class="inline">C</span> &quot;및 / + &quot; <span class="inline">V</span> &quot;키 조합.</p>
+  <p>There are also different options for keys available from the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/>메뉴는 아래에 자세히 설명되어 있습니다. 이러한 명령을 사용하여 도프 시트에 키를 붙여 넣을 때 키가 재생 헤드의 <em>현재</em> 위치에 붙여집니다.</p>
+  <p>이것이 도프 시트를 사용하는 기본 사항이지만 아래에서는 각기 다른 섹션의 용도와 사용법에 대해 좀 더 자세히 설명합니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Region Start / Region End</span><span data-close-text="true">Region Start / Region End</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">지역 시작 / 지역 끝</span> <span data-close-text="true">지역 시작 / 지역 끝</span></a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">These markers are the <strong>clip region</strong> start and end points. These can be used to set a specific section of the sequence to be shown in the room when the game is run, and will also be used as the loop points when previewing the sequence
-      in the editor. These points cannot be greater or less than the total sequence length as set in the Sequence Editor <strong>Sequence Controls</strong>. To change the position of a clip region marker, simply click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> and drag them to the desired frame.</p>
-    <p class="dropspot"><br/></p>
+      in the editor. These points cannot be greater or less than the total sequence length as set in the Sequence Editor <strong>Sequence Controls</strong>. To change the position of a clip region marker, simply click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/>원하는 프레임으로 드래그하십시오.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Zoom Controls</span><span data-close-text="true">Zoom Controls</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">줌 컨트롤</span> <span data-close-text="true">줌 컨트롤</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This bar is used to show the current zoom of the dope sheet and it can also be used to change this zoom level. You can click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on the end widgets and then drag to change the level of zoom:</p>
+    <p class="dropspot">This bar is used to show the current zoom of the dope sheet and it can also be used to change this zoom level. You can click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/>끝 위젯에서 드래그하여 확대 / 축소 수준을 변경합니다.</p>
     <p><img data-cke-saved-src="../../assets/Images/Asset_Editors/Dope_Sheet_Zoom.gif" src="../../assets/Images/Asset_Editors/Dope_Sheet_Zoom.gif" class="center" alt="Dope Sheet Zoom Controls"/></p>
-    <p class="dropspot">Note too that you can zoom the dope sheet in or out using the <img alt="CONTROL Icon" class="icon" height="20" data-cke-saved-src="../../assets/Images/Icons/Icon_Ctrl.png" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" data-cke-saved-src="../../assets/Images/Icons/Icon_Cmd.png" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> key and the mouse wheel <img data-cke-saved-src="../../assets/Images/Icons/Icon_MMB.png" src="../../assets/Images/Icons/Icon_MMB.png" alt="MMB Icon" class="icon"/>.</p>
-    <p><br/></p>
+    <p class="dropspot">Note too that you can zoom the dope sheet in or out using the <img alt="CONTROL Icon" class="icon" height="20" data-cke-saved-src="../../assets/Images/Icons/Icon_Ctrl.png" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/>/ 키와 마우스 휠 .</p>
+    <p></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Asset Tracks</span><span data-close-text="true">Asset Tracks</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">자산 트랙</span> <span data-close-text="true">자산 트랙</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">Asset tracks are represented on the dope sheet as &quot;keys&quot;, which are coloured bars representing the position of the asset and the length of time it&#39;s active in the sequence. As mentioned above these can be moved around and lengthened
       and shortened as required. Note that an asset track key that is longer than the asset itself in duration - for example a sound might last 5 frames and you stretch its key to 15 frames - will be repeated for the entire duration of its key. Asset
-      tracks and keys can be copied and pasted using the standard keyboard shortcuts or further modified using the right mouse button <img alt="RMB Icon" class="icon" data-cke-saved-src="../../assets/Images/Icons/Icon_RMB.png" src="../../assets/Images/Icons/Icon_RMB.png"/> menu options (explained further down this page).</p>
-    <p class="dropspot">If you delete an asset track key, this does not delete the track itself, nor does it delete any track parameters that have been added, it simply deletes the asset key from the dope sheet. If there are no further keys for this track, you can re-add
-      them by dragging an asset from the Asset Browser into the dope sheet and it will be added as a new key, but note that you cannot add an asset that is distinct to the original asset (ie: if you delete a a key for a sprite, you cannot then add a sound
-      asset into that key position).</p>
-    <p class="dropspot"><br/></p>
+      tracks and keys can be copied and pasted using the standard keyboard shortcuts or further modified using the right mouse button <img alt="RMB Icon" class="icon" data-cke-saved-src="../../assets/Images/Icons/Icon_RMB.png" src="../../assets/Images/Icons/Icon_RMB.png"/>메뉴 옵션 (이 페이지 아래에 설명)</p>
+    <p class="dropspot">자산 트랙 키를 삭제하면 트랙 자체는 삭제되지 않으며 추가 된 트랙 매개 변수도 삭제되지 않고 도프 시트에서 자산 키를 삭제하기 만합니다. 이 트랙에 대한 추가 키가없는 경우 자산 브라우저에서 자산을 도프 시트로 드래그하여 자산을 다시 추가 할 수 있으며 새 키로 추가되지만 고유 한 자산을 추가 할 수는 없습니다. 원래 자산 (예 : 스프라이트의 키를 삭제하면 해당 키 위치에 사운드 자산을 추가 할 수 없음)</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Parameter Tracks</span><span data-close-text="true">Parameter Tracks</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">파라미터 트랙</span> <span data-close-text="true">파라미터 트랙</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Parameter tracks are represented on the dope sheet as coloured bars underneath the main asset track they belong to. The bars of colour themselves cannot be edited and are purely a visual representation of the track that the parameter keys are being
-      applied to, and it&#39;s the individial points on the parameter track that are edited (see <strong>Parameter Keys</strong>, below).</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">매개 변수 트랙은 도프 시트에서 그들이 속한 주요 자산 트랙 아래에 컬러 막대로 표시됩니다. 색상 막대 자체는 편집 할 수 없으며 매개 변수 키가 적용되는 트랙을 시각적으로 표현한 것이며 편집되는 매개 변수 트랙의 개별 지점입니다 (아래의 <strong>매개 변수 키</strong> 참조).</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">The Playhead</span><span data-close-text="true">The Playhead</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">플레이 헤드 플레이</span> <span data-close-text="true">헤드</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
     <p class="dropspot">The playhead is the position in time at which the timeline is currently being previewed. This position is used when dropping assets into the <a href="The_Sequence_Canvas.htm">Sequence Canvas</a> to set the position where they have been added as well
-      as a number of other things, like adding parameters, or splitting keys. When you press &quot;play&quot; on the sequence editor canvas, the playhead will move through the sequence, and you can also click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on it and drag it to move to a specific frame within the sequence or to &quot;scrub&quot; over multiple frames and get a quick
-      preview without playing the whole thing.</p>
-    <p class="dropspot"><br/></p>
+      as a number of other things, like adding parameters, or splitting keys. When you press &quot;play&quot; on the sequence editor canvas, the playhead will move through the sequence, and you can also click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/>그 위에 드래그하여 시퀀스 내 특정 프레임으로 이동하거나 여러 프레임을 &quot;스크럽&quot;하고 전체 내용을 재생하지 않고 빠르게 미리 볼 수 있습니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Parameter Keys</span><span data-close-text="true">Parameter Keys</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">파라미터 키</span> <span data-close-text="true">파라미터 키</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">Parameter keys are the &quot;points&quot; shown on a parameter track wherever a change in that parameter has occurred. These points can be moved as required and expanded so that they last more than one frame (as explained further up this page), and
-      you can edit their value either from the <a href="The_Track_Panel.htm">Track Panel</a>, or by changing the asset on the <a href="The_Sequence_Canvas.htm">canvas</a> (if it is a scale, position or rotation parameter). Note that all parameter track
-      keys will also be reflected as a point on the <em>asset key </em>track that the parameter belongs to, but these points cannot be edited and are there as an informational aid when you have collapsed the different parameter tracks in the track panel.</p>
+    <p class="dropspot">파라미터 키는 해당 파라미터의 변경이 발생한 곳마다 파라미터 트랙에 표시되는 &quot;포인트&quot;입니다. 이 포인트는 필요에 따라 이동하고 확장하여 둘 이상의 프레임을 지속 할 수 있으며 (이 페이지에서 추가로 설명) <a href="The_Track_Panel.htm">트랙 패널</a> 에서 또는 <a href="The_Sequence_Canvas.htm">캔버스</a> 에서 자산을 변경하여 해당 값을 편집 할 수 있습니다 (있는 경우) 스케일, 위치 또는 회전 매개 변수). 모든 매개 변수 트랙 키는 매개 변수가 속한 <em>자산 키</em> 트랙의 한 지점으로 반영되지만 이러한 지점은 편집 할 수 없으며 트랙 패널에서 다른 매개 변수 트랙을 축소 한 경우 정보를 제공합니다.</p>
   </div>
   <p> </p>
   <p> </p>
   <p> </p>
-  <h1>RMB Menu</h1>
-  <p>Clicking the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> within the dope sheet on an <strong>asset track</strong> will bring up the following menu options (note some options may not be visible
-    depending on whether the part of the track clicked has a key or not):</p>
+  <h1>인민폐 메뉴</h1>
+  <p>Clicking the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/><strong>자산 트랙</strong> 의 도프 시트 내에서 다음 메뉴 옵션을 표시합니다 (클릭 한 트랙의 일부에 키가 있는지 여부에 따라 일부 옵션이 표시되지 않을 수 있음).</p>
   <p><img alt="Dope Sheet Right Mouse Button Menu For Asset Tracks" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_RMB.png"/></p>
   <ul class="colour">
-    <li><strong>Cut</strong>, <strong>Copy</strong>, and <strong>Paste key(s)</strong>: These options permit you to cut/copy/paste asset. Note that any keys pasted into the dope sheet using these options will be pasted at the position of the playhead.</li>
-    <li><strong>Paste Key(s) In Place</strong>: When you use this option, the copied or cut key(s) will be pasted at the position where the right mouse button was clicked, and <em>not </em>at the playhead position.</li>
-    <li><strong>Delete Key(s)</strong>: Selecting this will be delete the currently selected key or keys.</li>
-    <li><strong>Copy To Start</strong>: This option will copy the selected key(s) to the very start of the sequence (<em>not </em>the start of the clip region).</li>
-    <li><strong>Copy To End</strong>: This option will copy the selected key(s) to the very end of the sequence (<em>not </em>the end of the clip region).</li>
-    <li><strong>Stretch Asset Key</strong>: When you select this, the asset key selected will be stretched to the end of the sequence (not the end of the clip region).</li>
-    <li><strong>Delete Asset Key</strong>: When you use this, the asset key selected will be deleted and you can then add a new asset to the track by dragging it from the asset browser onto the dope sheet track that was deleted. This will create a new asset
-      key which can then be edited, while maintaining any parameter tracks associated with the asset.</li>
+    <li><strong>잘라</strong> 내기, <strong>복사</strong> 및 <strong>붙여 넣기 키</strong> :이 옵션을 사용하면 자산을 잘라내거나 복사 / 붙여 넣기 할 수 있습니다. 이러한 옵션을 사용하여 도프 시트에 붙여 넣은 키는 재생 헤드 위치에 붙여집니다.</li>
+    <li><strong>키 붙여 넣기</strong> :이 옵션을 사용하면 복사 또는 잘라낸 키가 재생 헤드 위치가 <em>아닌</em> 마우스 오른쪽 버튼을 클릭 한 위치에 붙여집니다.</li>
+    <li><strong>Delete Key (s)</strong> : 이것을 선택하면 현재 선택된 키가 삭제됩니다.</li>
+    <li><strong>Copy To Start</strong> :이 옵션은 선택한 키를 클립 영역의 시작이 <em>아닌</em> 시퀀스의 맨 처음에 복사합니다.</li>
+    <li><strong>Copy To End</strong> :이 옵션은 선택한 키를 시퀀스의 맨 끝 (클립 영역의 끝이 <em>아닌</em> )으로 복사합니다.</li>
+    <li><strong>자산 키 늘이기</strong> :이 옵션을 선택하면 선택한 자산 키가 클립 영역의 끝이 아닌 시퀀스의 끝까지 늘어납니다.</li>
+    <li><strong>자산 키 삭제</strong> : 이것을 사용하면 선택된 자산 키가 삭제되고 자산 브라우저에서 삭제 된 도프 시트 트랙으로 드래그하여 새 자산을 트랙에 추가 할 수 있습니다. 그러면 자산과 관련된 모든 파라미터 트랙을 유지하면서 편집 할 수있는 새로운 자산 키가 생성됩니다.</li>
   </ul>
-  <p>Clicking the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> within the dope sheet on a <strong>parameter track</strong> will bring up the following menu options (note some options may not be visible
-    depending on whether the part of the track clicked has a key frame or not):</p>
+  <p>Clicking the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/><strong>매개 변수 트랙</strong> 의 도프 시트 내에서 다음 메뉴 옵션이 나타납니다 (클릭 한 트랙의 일부에 키 프레임이 있는지 여부에 따라 일부 옵션이 표시되지 않을 수 있음).</p>
   <p><img alt="Dope Sheet Right Mouse Button Menu For Parameter Tracks" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_RMB_Parameter.png"/></p>
   <ul class="colour">
-    <li><strong>Cut</strong>, <strong>Copy</strong>, and <strong>Paste key(s)</strong>: These options permit you to cut/copy/paste parameter keys. Note that any keys pasted into the dope sheet using these options will be pasted at the position of the playhead.</li>
-    <li><strong>Paste Key(s) In Place</strong>: When you use this option, the copied or cut keyframe(s) will be pasted at the position where the right mouse button was clicked, and not at the playhead position.</li>
-    <li><strong>Delete Key(s)</strong>: Selecting this will be delete the currently selected keyframe or keyframes.</li>
-    <li><strong>Convert To Embedded Anim Curve</strong>: This option will convert all the keyframes for the selected parameter track(s) into embedded animation curves (see the section on <a href="Using_Animation_Curves.htm">Using Animation Curves</a> for
-      more information).</li>
-    <li><strong>Set To External Anim Curve</strong>: This option permits you to assign an Animation Curve asset to the parameter track (see the section on <a href="Using_Animation_Curves.htm">Using Animation Curves</a> for more information).</li>
-    <li><strong>Convert To Keys</strong>: With this option you can convert an animation curve to individual keyframes. Note that if the curve has used <a class="tooltip" title="This is a type of non-linear interpolation based on mathematical splines. It is used to estimate a new value by connecting two adjacent known values using &#39;smooth&#39; curves (splines), and a new value can be derived from any point along the line.">catmull-rom interpolation</a> this
-      will be lost and the keyframes will use <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a> between the points on the curve instead, and also note that keys generated from an animation curve <em>must fall on a frame</em>.
-      This means that any curve with points that are between frames will be placed at the nearest integer frame value when converted into keys, potentially changing the behaviour of the curve.</li>
-    <li><strong>Export Embedded Anim Curve</strong>: This option lets you take an embedded animation curve and convert it into an <a href="../Animation_Curves.htm">Animation Curve asset</a>, which will be shown in the Asset Browser and can then be used elsewhere.</li>
-    <li><strong>Copy To Start</strong>: This option will copy the selected keyframe(s) to the very start of the sequence (<em>not </em>the start of the clip region).</li>
-    <li><strong>Copy To End</strong>: This option will copy the selected keyframe(s) to the very end of the sequence (<em>not </em>the end of the clip region).</li>
-    <li><strong>Stretch Parameter Key</strong>: When you select this, the asset key selected will be stretched to the end of the sequence (not the end of the clip region). A stretched parameter key means that it will maintain it&#39;s value for as many frames
-      as it&#39;s stretched over.</li>
-    <li><strong>Delete Parameter Key</strong>: When you use this, the parameter keyframe(s) selected will be deleted.</li>
+    <li><strong>잘라</strong> 내기, <strong>복사</strong> 및 <strong>붙여 넣기 키</strong> :이 옵션을 사용하면 매개 변수 키 잘라 내기 / 복사 / 붙여 넣기를 수행 할 수 있습니다. 이러한 옵션을 사용하여 도프 시트에 붙여 넣은 키는 재생 헤드 위치에 붙여집니다.</li>
+    <li><strong>키 붙여 넣기</strong> :이 옵션을 사용하면 복사 또는 잘라낸 키 프레임이 마우스 오른쪽 버튼을 클릭 한 위치에 표시되며 플레이 헤드 위치가 아닙니다.</li>
+    <li><strong>키 삭제</strong> : 이것을 선택하면 현재 선택된 키 프레임이 삭제됩니다.</li>
+    <li><strong>포함 된 애님 커브</strong> 로 변환 :이 옵션은 선택한 매개 변수 트랙의 모든 키 프레임을 포함 된 애니메이션 커브로 변환합니다 (자세한 내용은 <a href="Using_Animation_Curves.htm">애니메이션 커브 사용</a> 섹션 참조).</li>
+    <li><strong>외부 애님 커브로 설정</strong> :이 옵션을 사용하면 애니메이션 커브 자산을 매개 변수 트랙에 할당 할 수 있습니다 (자세한 내용은 <a href="Using_Animation_Curves.htm">애니메이션 커브 사용</a> 섹션 참조).</li>
+    <li><strong>키로 변환</strong> :이 옵션을 사용하면 애니메이션 곡선을 개별 키 프레임으로 변환 할 수 있습니다. 곡선이 <a class="tooltip" title="수학적 스플라인을 기반으로하는 비선형 보간 유형입니다. &#39;평활 한&#39;곡선 (스플라인)을 사용하여 인접한 두 개의 알려진 값을 연결하여 새 값을 추정하는 데 사용되며 새 값은 선을 따라 어느 지점에서나 얻을 수 있습니다.">catmull-rom 보간법을</a> 사용한 경우,이 값은 손실되고 키 프레임은 대신 곡선의 점 사이에 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간법</a> 을 사용하며 애니메이션 곡선에서 생성 된 키 <em>는 프레임에 있어야합니다</em> . 즉, 키 사이로 변환 할 때 프레임 사이에 점이있는 커브는 가장 가까운 정수 프레임 값에 배치되어 커브의 동작이 변경 될 수 있습니다.</li>
+    <li><strong>임베드 된 애님 커브 내보내기</strong> :이 옵션을 사용하면 임베드 된 애니메이션 커브를 가져 와서 애셋 브라우저에 표시되어 다른 곳에서 사용할 수있는 <a href="../Animation_Curves.htm">애니메이션 커브 애셋</a> 으로 변환 할 수 있습니다.</li>
+    <li><strong>Copy To Start</strong> :이 옵션은 선택한 키 프레임을 클립 영역의 시작이 <em>아닌</em> 시퀀스의 맨 처음에 복사합니다.</li>
+    <li><strong>Copy To End</strong> :이 옵션은 선택한 키 프레임을 클립 영역의 끝이 <em>아니라</em> 시퀀스의 맨 끝으로 복사합니다.</li>
+    <li><strong>Stretch Parameter Key</strong> :이 옵션을 선택하면 선택한 자산 키가 클립 영역의 끝이 아닌 시퀀스의 끝까지 확장됩니다. 늘려 진 매개 변수 키는 늘어난 프레임 수만큼 값을 유지한다는 의미입니다.</li>
+    <li><strong>매개 변수 키 삭제</strong> :이 <strong>매개 변수</strong> 를 사용하면 선택한 매개 변수 키 프레임이 삭제됩니다.</li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Sequence_Properties\Using_The_Dope_Sheet.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
+        <div style="float:left">뒤로: <a href="../Sequences.htm">시퀀스</a></div>
+        <div style="float:right">다음: <a href="Using_Animation_Curves.htm">
+      <div class="clear">
         <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="Using_Animation_Curves.htm">Using Animation Curves</a> </div>
+        <div style="float:right">Next: <a href="Using_Animation_Curves.htm">Using Animation Curves</a> </div>iv class="clear">
+        <div style="float:left">Back: <a href="../Sequences.htm">시퀀스</a></div>
+        <div style="float:right">Next: <a href="Using_Animation_Curves.htm">애니메이션 커브 사용</a> </div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Sequences - The Dope Sheet
@@ -198,4 +181,4 @@ Dope Sheet
 sequences_dope_sheet
 -->
 
-</body></html>
+</body></html> 

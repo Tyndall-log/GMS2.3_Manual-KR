@@ -71,7 +71,7 @@
         <span>gamepad_test_mapping</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -84,82 +84,81 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gamepad_test_mapping</h1>
-  <p>This function can be used to set the gamepad mapping on those targets that permit it. You supply the &quot;slot&quot; index for the gamepad to set, and then the map string, which should have been created using the SDL format with the following fields:</p>
+  <p>이 기능은 그것을 허용하는 대상에 게임 패드 매핑을 설정하는데 사용될 수 있습니다. 게임 패드에 설정할 &quot;슬롯&quot;인덱스를 제공 한 후 다음 필드와 함께 SDL 형식을 사용하여 생성 한 맵 문자열을 제공합니다.</p>
   <p class="code">&lt;guid&gt;,&lt;description&gt;,platform:&lt;platform-name&gt;,&lt;bindings&gt;</p>
-  <p>The details that should be included in each of these fields are:</p>
+  <p>각 필드에 포함되어야하는 세부 사항은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><tt>guid</tt> - a string of digits and letters that uniquely identifies a device type (this can be retrieved using the <a href="gamepad_get_guid.htm"><tt>gamepad_get_guid()</tt></a> function)</li>
-    <li><tt>description</tt> - an Ascii description of the device (this can be retrieved using the <a href="gamepad_get_description.htm"><tt>gamepad_get_description()</tt></a> function)</li>
-    <li><tt>platform-name</tt> - will be either &quot;platform:android&quot;, &quot;platform:windows&quot;, &quot;linux&quot;, or &quot;mac&quot; (note that <b>this will be appended automatically onto the string when you call this function</b>, and so you
-      do not need to supply it when constructing your own mapping strings)</li>
-    <li><tt>bindings</tt> - a set of entries separated by a &#39;,&#39; to bind actual input to specific GML constants</li>
+    <li><tt>GUID를</tt> - 고유 디바이스 타입을 식별하는 숫자와 문자의 스트링 (이는 사용하여 검색 될 수 <a href="gamepad_get_guid.htm"><tt>gamepad_get_guid ()를</tt></a> 함수)</li>
+    <li><tt>description-</tt> 장치의 ASCII 설명 ( <a href="gamepad_get_description.htm"><tt>gamepad_get_description ()</tt></a> 함수를 사용하여 검색 할 수 있음)</li>
+    <li><tt>platform-</tt> name- &quot;platform : android&quot;, &quot;platform : windows&quot;, &quot;linux&quot;또는 &quot;mac&quot; <b>이됩니다</b> ( <b>이 함수를 호출하면 문자열에 자동으로 추가</b> 되므로 필요하지 않습니다. 자신의 매핑 문자열을 만들 때 제공하기 위해)</li>
+    <li><tt>bindings-</tt> 실제 입력을 특정 GML 상수에 바인딩하기 위해 &#39;,&#39;로 구분 된 항목 세트</li>
   </ul>
-  <p>The comma separated list of entries follows a specific format for each entry:</p>
+  <p>쉼표로 구분 된 항목 목록은 각 항목에 대한 특정 형식을 따릅니다.</p>
   <p class="code">&lt;abstract-gp-name&gt;:&lt;value-binding&gt;</p>
-  <p>Here <tt>&lt;value-binding&gt;</tt> (ie: the direct gamepad input) can be any one of the following:</p>
+  <p>여기서 <tt>&lt;값 바인딩&gt;</tt> (즉, 직접 게임 패드 입력)은 다음 중 하나 일 수 있습니다.</p>
   <ul class="colour">
-    <li><tt>a&lt;N&gt;</tt> - This represents an axis of the gamepad, where the &lt;N&gt; is one of the axis from 0 to <a href="gamepad_axis_count.htm"><tt>gamepad_axis_count()</tt></a> -1</li>
-    <li><tt>b&lt;N&gt;</tt> - This represents a button of the gamepad, where the &lt;N&gt; is one of the buttons from 0 to <a href="gamepad_button_count.htm"><tt>gamepad_button_count()</tt></a> -1</li>
-    <li><tt>h&lt;N&gt;.&lt;mask&gt;</tt> - This represents a hat of the gamepad, where the &lt;N&gt; represents a hat from 0 to <a href="gamepad_hat_count.htm"><tt>gamepad_hat_count()</tt></a> -1, and the <tt>&lt;mask&gt;</tt> will be either 1, 2, 4, or 8.</li>
+    <li><tt>a &lt;N&gt;</tt> -게임 패드의 축을 나타냅니다. 여기서 &lt;N&gt;은 0에서 <a href="gamepad_axis_count.htm"><tt>gamepad_axis_count ()</tt></a> -1까지의 축 중 하나입니다.</li>
+    <li><tt>b &lt;N&gt;</tt> -게임 패드의 버튼을 나타냅니다. 여기서 &lt;N&gt;은 0에서 <a href="gamepad_button_count.htm"><tt>gamepad_button_count ()</tt></a> -1까지의 버튼 중 하나입니다.</li>
+    <li><tt>h &lt;N&gt;. &lt;mask&gt;</tt> -게임 패드의 모자를 나타냅니다. 여기서 &lt;N&gt;은 0에서 <a href="gamepad_hat_count.htm"><tt>gamepad_hat_count ()</tt></a> -1까지의 모자를 나타내고 <tt>&lt;mask&gt;</tt> 는 1, 2, 4 또는 8입니다. .</li>
   </ul>
-  <p>Each input value should be bound to an SDL name, which is expressed as <tt>&lt;&gt;abstract-gp-name&gt;</tt>, which in turn is bound to a GML constant. The table below shows the equivalence between the SDL name and the GameMaker Studio 2 constant:</p>
+  <p>각 입력 값은 <tt>&lt;&gt; abstract-gp-name&gt;</tt> 으로 표시되는 SDL 이름에 바인드되어야하며, 이는 차례로 GML 상수에 바인드됩니다. 아래 표는 SDL 이름과 GameMaker Studio 2 상수의 동등성을 보여줍니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>SDL Name</th>
-        <th>GML Name</th>
+        <th>SDL 이름</th>
+        <th>GML 이름</th>
       </tr>
       <tr>
-        <td><tt>a</tt></td>
+        <td><tt>ㅏ</tt></td>
         <td>gp_face1</td>
       </tr>
       <tr>
-        <td><tt>b</tt></td>
+        <td><tt>비</tt></td>
         <td>gp_face2</td>
       </tr>
       <tr>
-        <td><tt>x</tt></td>
+        <td><tt>엑스</tt></td>
         <td>gp_face3</td>
       </tr>
       <tr>
-        <td><tt>y</tt></td>
+        <td><tt>와이</tt></td>
         <td>gp_face4</td>
       </tr>
       <tr>
-        <td><tt>leftshoulder</tt></td>
+        <td><tt>왼쪽 어깨</tt></td>
         <td>gp_shoulderl</td>
       </tr>
       <tr>
-        <td><tt>lefttrigger</tt></td>
+        <td><tt>왼쪽 트리거</tt></td>
         <td>gp_shoulderlb</td>
       </tr>
       <tr>
-        <td><tt>rightshoulder</tt></td>
+        <td><tt>권리</tt></td>
         <td>gp_shoulderr</td>
       </tr>
       <tr>
-        <td><tt>righttrigger</tt></td>
+        <td><tt>오른쪽 트리거</tt></td>
         <td>gp_shoulderrb</td>
       </tr>
       <tr>
-        <td><tt>guide</tt></td>
+        <td><tt>안내서</tt></td>
         <td>gp_select</td>
       </tr>
       <tr>
-        <td><tt>start</tt></td>
+        <td><tt>스타트</tt></td>
         <td>gp_start</td>
       </tr>
       <tr>
-        <td><tt>leftstick</tt></td>
+        <td><tt>왼손잡이</tt></td>
         <td>gp_stickl</td>
       </tr>
       <tr>
-        <td><tt>rightstick</tt></td>
+        <td><tt>오른쪽 스틱</tt></td>
         <td>gp_stickr</td>
       </tr>
       <tr>
-        <td><tt>dpup</tt></td>
+        <td><tt>강아지</tt></td>
         <td>gp_padu</td>
       </tr>
       <tr>
@@ -175,11 +174,11 @@
         <td>gp_padd</td>
       </tr>
       <tr>
-        <td><tt>leftx</tt></td>
+        <td><tt>왼쪽</tt></td>
         <td>gp_axislh</td>
       </tr>
       <tr>
-        <td><tt>lefty</tt></td>
+        <td><tt>왼손잡이</tt></td>
         <td>gp_axislv</td>
       </tr>
       <tr>
@@ -187,52 +186,53 @@
         <td>gp_axisrh</td>
       </tr>
       <tr>
-        <td><tt>righty</tt></td>
+        <td><tt>옳은</tt></td>
         <td>gp_axisrv</td>
       </tr>
     </tbody>
   </table>
-  <p><br/> When you have constructed your mapping string it should look something like this:</p>
+  <p>매핑 문자열을 구성하면 다음과 같이 보일 것입니다.</p>
   <p class="code">&quot;050000005e040000fd020000ffff3f00,Xbox Wireless Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b6,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,x:b2,y:b3,platform:android&quot;</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">gamepad_test_mapping(index, mapping_string);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td>Which gamepad index &quot;slot&quot; to set.</td>
+        <td>인덱스</td>
+        <td>설정할 게임 패드 인덱스 &quot;슬롯&quot;입니다.</td>
       </tr>
       <tr>
-        <td>colour</td>
-        <td>The map string to use (see the description for more information).</td>
+        <td>색깔</td>
+        <td>사용할 맵 문자열입니다 (자세한 내용은 설명 참조).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">var mapping = gamepad_get_guid(global.padIndex) + &quot;,&quot; + gamepad_get_description(global.padIndex);<br/> var len = array_length(global.PadInstances);<br/> for( i = 0; i &lt; len; i += 2)<br/>     {
     <br/>     var left = global.PadInstances[i];<br/>     var right = global.PadInstances[i+1];<br/>     mapping += &quot;,&quot; + left.sdlLabel + &quot;:&quot; + right.binding;<br/>     }
     <br/> gamepad_test_mapping(global.padIndex, mapping);</p>
-  <p>The above code will loop through a number of instances and use the values of different variables that they contain to create a mapping string, which is then set for use on the gamepad in the given slot index.</p>
+  <p>위의 코드는 여러 인스턴스를 반복하고 포함 된 다른 변수의 값을 사용하여 매핑 문자열을 만든 다음 지정된 슬롯 인덱스의 게임 패드에서 사용하도록 설정합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Game_Input\GamePad_Input\gamepad_test_mapping.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_remove_mapping.htm">gamepad_remove_mapping</a></div>
+        <div style="float:left">뒤로: <a href="Gamepad_Input.htm">게임 패드 입력</a></div>
+        <div style="float:right">다음: <a href="gamepad_remove_mapping.htm">gamepad_remove_mapping</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 gamepad_test_mapping
@@ -241,4 +241,4 @@ gamepad_test_mapping
 gamepad_test_mapping
 -->
 
-</body></html>
+</body></html> 

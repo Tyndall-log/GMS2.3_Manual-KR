@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Surfaces">
-        <span>Surfaces</span>
+        <span>표면</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,28 +80,18 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Surfaces</h1>
-  <p>In the normal draw events, GameMaker Studio 2 doesn&#39;t actually draw directly to the screen, but rather draws to a <b>surface</b> called the <i>application surface</i>. This surface is basically a blank &quot;canvas&quot; that can then later
-    be manipulated before being drawn to the screen when needed, and in most cases GameMaker Studio 2 handles this for you (although you can also manipulate it yourself in code for shaders, scaling and many other things - further details are given below).</p>
-  <p>However, apart from this application surface, you can also create your own surfaces and use them to create stunning or subtle special effects in your game. For example, you can use surfaces to &quot;catch&quot; instances, which can then be destroyed,
-    and in this way you can create a decal effect where the sprite for the instance is displayed on the surface as if it still existed, permitting graphical effects like debris, blood, etc... without any real processing overhead. Another thing you can
-    do with surfaces is use them as textures to be manipulated, or to create sprites &quot;on the fly&quot;, or to create complex overlays. in fact, the uses for surfaces are endless!</p>
-  <p>Normal surfaces are quite easy to use, but there are a few basic rules to be followed when you use them:</p>
+  <h1>표면</h1>
+  <p>일반적인 그리기 이벤트에서 GameMaker Studio 2는 실제로 화면에 직접 그리지는 않지만 <i>응용 프로그램 표면</i> 이라는 <b>표면에</b> 그립니다. 이 표면은 기본적으로 빈 &quot;캔버스&quot;이며 나중에 필요할 때 화면에 그려지기 전에 조작 할 수 있으며 대부분의 경우 GameMaker Studio 2에서이를 처리합니다 (셰이더, 스케일링 및 코드에 대한 코드에서 직접 조작 할 수도 있음) 다른 많은 것들-자세한 내용은 아래에 제공됩니다).</p>
+  <p>그러나이 응용 프로그램 표면과 별도로, 자신 만의 표면을 만들어서 게임에서 놀랍거나 미묘한 특수 효과를 만드는 데 사용할 수도 있습니다. 예를 들어, 표면을 사용하여 인스턴스를 &quot;캐치&quot;할 수 있습니다. 그러면 인스턴스가 파괴 될 수 있습니다. 이런 방식으로 인스턴스의 스프라이트가 마치 마치 마치 존재하는 것처럼 표면에 표시되는 데칼 효과를 만들 수 있습니다. 실제 처리 오버 헤드가없는 잔해, 혈액 등. 표면으로 할 수있는 또 다른 일은 표면을 조작 할 텍스처로 사용하거나 &quot;즉석에서&quot;스프라이트를 만들거나 복잡한 오버레이를 만드는 것입니다. 사실, 표면의 사용은 끝이 없습니다!</p>
+  <p>일반 표면은 사용하기가 쉽지만 사용할 때 따라야 할 몇 가지 기본 규칙이 있습니다.</p>
   <ul class="colour">
-    <li>First, you should realise that surfaces (<i>except</i> the application surface) are &quot;volatile&quot;. This means that if the device or window loses focus or is minimised (good examples are when you ALT +Tab to different window and back again on Windows,
-      or on an Android device when the app loses focus due to a call) then the surface <strong>may be destroyed</strong>. This is because it is stored <em>only</em> in the texture memory (<a class="tooltip" title="VRAM is the amount of memory available for video, ie: the memory space that can store textures and images.">VRAM</a>) and
-      may be overwritten when the target platform needs that memory for something else which means that you should <i><b>always</b></i> have some type of fail-safe code in place, usually with the <a href="surface_exists.htm"><tt>surface_exists()</tt></a>      function.</li>
+    <li>먼저 표면 (응용 표면 <i>제외</i> )이 &quot;휘발성&quot;이라는 것을 알아야합니다. 즉, 장치 나 창의 포커스가 사라지거나 최소화 된 경우 (예를 들어 ALT + Tab을 다른 창으로 되돌 리거나 다시 Windows에서 다시 호출하거나 Android 앱에서 호출로 인해 포커스가 사라지는 경우) 표면에 표면이 <strong>나타날 수 있습니다. 파괴된다</strong> . 이는 텍스처 메모리 ( <a class="tooltip" title="VRAM은 비디오에 사용 가능한 메모리의 양입니다. 즉, 텍스처와 이미지를 저장할 수있는 메모리 공간입니다.">VRAM</a> ) <em>에만</em> 저장되고 대상 플랫폼에 다른 메모리가 필요할 때 덮어 쓸 수 있기 때문에 <b>항상</b> <a href="surface_exists.htm"><tt>surface_exists ( )</tt></a> 기능.</li>
   </ul>
-  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><strong>NOTE</strong>: This doesn&#39;t appear to happen with sprites or other visual assets (but actually does!) as they are also stored in regular memory (RAM) and when they are removed from texture memory (VRAM) they immediately get restored from
-    regular memory when the game regains focus.</p>
+  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><strong>참고</strong> : 스프라이트 또는 기타 시각적 자산 (정말 실제로는!)은 일반 메모리 (RAM)에 저장되므로 텍스처 메모리 (VRAM)에서 제거되면 즉시 일반 메모리에서 복원됩니다. 게임이 다시 집중할 때.</p>
   <ul class="colour">
-    <li>Second, you should note that surfaces can require large quantities of VRAM to be used, and so you should attempt to keep them as small as possible. Normally you would try and keep them no larger than the size of the view or display window.</li>
-    <li>Third, you should <b>only create surfaces in the draw event</b>. If you create a surface in the Create Event of an instance, you could potentially get the <i>same</i> index as the <tt>application_surface</tt>. This can then cause lots of problems
-      and confusion as you think you are using your own surface, but you are actually using the current render target. You should also always try to limit <i>drawing</i> to a surface in the draw event too, since due to the optimised way in which GameMaker Studio 2      draws to the screen, it is recommended that you keep all draw functions <i>within the draw event</i> - this includes clearing a surface when it is first created, etc... Drawing to a surface outside of the draw event is possible and may even be necessary
-      for some effects, but it&#39;s not how it <em>should</em> be done.</li>
-    <li>Fourth, when drawing to a surface manually, the surface is <i>always</i> at the position of (0,0). This means that you may need to convert <em>absolute</em> coordinates into <em>relative</em> coordinates for the surface. For example, if you have a
-      camera-sized surface and wish to draw something that is currently visible in the camera to that surface, you should subtract the camera view x and y coordinates from the actual x and y coordinates to get a relative position to the surface (0,0)
-      position. So, the code would look something like this:</li>
+    <li>둘째, 표면에는 대량의 VRAM을 사용해야 할 수 있으므로 가능한 한 작게 유지해야합니다. 일반적으로 뷰 또는 디스플레이 창의 크기보다 크지 않게 유지하려고 시도합니다.</li>
+    <li>셋째, <b>draw 이벤트에서만 표면을 만들어야합니다</b> . 인스턴스의 이벤트 생성에서 표면을 생성하면 <tt>application_surface</tt> <i>와 동일한</i> 인덱스를 얻을 수 있습니다. 그러면 자신의 표면을 사용하고 있다고 생각할 때 많은 문제와 혼란이 생길 ​​수 있지만 실제로는 현재 렌더링 대상을 사용하고 있습니다. 또한 항상 한계에 시도해야 <i>도면</i> GameMaker 스튜디오 2는 화면에 그립니다있는 최적화 된 방법에 의한 때문에, 모든 그리기 기능을 유지하는 것이 좋습니다 너무 추첨 이벤트의 표면에 <i>추첨 이벤트에서</i> -이 청산을 포함 처음 생성 될 때의 표면 등 ... 드로우 이벤트 외부의 표면으로 그리는 것이 가능하며 일부 효과에 필요할 수도 있지만, 그렇게하는 방법 <em>은</em> 아닙니다.</li>
+    <li>넷째, 표면을 수동으로 그릴 때 표면은 <i>항상</i> (0,0)의 위치에 있습니다. 즉, <em>절대</em> 좌표를 표면의 <em>상대</em> 좌표로 변환해야 할 수도 있습니다. 예를 들어, 카메라 크기의 표면이 있고 카메라에서 현재 보이는 표면을 해당 표면에 그리려면 실제 x 및 y 좌표에서 카메라 뷰 x 및 y 좌표를 빼서 상대 위치를 가져와야합니다. 표면 (0,0) 위치. 따라서 코드는 다음과 같습니다.</li>
   </ul>
   <p class="code" style="margin-top: 0px;margin-right: 50px;margin-bottom: 0px;margin-left: 100px">if view_current = 0<br/>     {<br/>     surface_set_target(surf);
     <br/>     with (obj_Effect)<br/>         {
@@ -113,17 +103,16 @@
     <br/>     draw_surface(surf, 0, 0);<br/>     }
   </p>
   <p> </p>
-  <p>The basic use of a surface would be as follows:</p>
+  <p>표면의 기본 사용법은 다음과 같습니다.</p>
   <ul class="colour">
-    <li>You first create a surface and assign its index to a variable.</li>
-    <li>You would then set the drawing target to the surface rather than the display.</li>
-    <li>Next, you would draw the things you wish as well as perform any other manipulations.</li>
-    <li>Once you are done you reset the drawing target so that all further drawing happens on the screen again.</li>
-    <li>Finally, you would draw the surface (or use it in a shader, or whatever is required).</li>
+    <li>먼저 지표면을 작성하고 해당 지표를 변수에 지정합니다.</li>
+    <li>그런 다음 그리기 대상을 화면이 아닌 표면으로 설정합니다.</li>
+    <li>다음으로, 원하는 조작을하고 다른 조작을 수행합니다.</li>
+    <li>완료되면 도면 대상을 재설정하여 모든 추가 도면이 화면에서 다시 발생하도록합니다.</li>
+    <li>마지막으로 표면을 그립니다 (또는 셰이더에 사용하거나 필요한 것).</li>
   </ul>
-  <p>One thing to note is that should you require drawing the whole display to a surface (including tiles, backgrounds etc...) you can simply access the application surface itself (see below for further details) or you could assign a surface to a view port
-    using the variable <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><tt>view_surface_id[0..7]</tt></a> as with this, all that is visible in that view port will be drawn to the corresponding surface.</p>
-  <p>The following functions exist to deal with surfaces (these functions are specific for creating and manipulating surfaces, but to actually draw them to the screen you should be using the specific draw functions that can be found below):</p>
+  <p>주목해야 할 것은 전체 디스플레이를 표면 (타일, 배경 등 포함)에 그려야하는 경우 애플리케이션 표면 자체에 액세스하거나 (자세한 내용은 아래 참조) 뷰에 표면을 할당 할 수 있다는 것입니다. <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><tt>이처럼 view_surface_id [0..7]</tt></a> 변수를 사용하는 포트는 해당 뷰 포트에 보이는 모든 것이 해당 표면에 그려집니다.</p>
+  <p>표면을 처리하기 위해 다음과 같은 기능이 있습니다 (이 기능은 표면을 생성하고 조작하는 데 고유하지만 실제로 화면에 그릴 때는 아래에서 찾을 수있는 특정 그리기 기능을 사용해야합니다).</p>
   <p> </p>
   <ul class="colour">
     <li><a href="surface_exists.htm">surface_exists</a></li>
@@ -149,9 +138,8 @@
     <li><a href="surface_save_part.htm">surface_save_part</a></li>
   </ul>
   <p> </p>
-  <p>The following functions exist for drawing surfaces:</p>
-  <p class="note"><b>NOTE: </b>When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in texture memory. You should <b>ALWAYS</b> check that a surface exists using <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists()</tt></a></span> before
-    referencing them directly.</p>
+  <p>표면 그리기에는 다음과 같은 기능이 있습니다.</p>
+  <p class="note"><b>참고 :</b> 표면 작업시 표면이 텍스처 메모리에 저장되어 있기 때문에 표면이 더 이상 존재하지 않을 수 있습니다. 표면을 직접 참조하기 전에 <span style="font-size:1px;"><a href="surface_exists.htm"><tt style="font-size: 14px">surface_exists ()</tt></a></span> 를 사용하여 표면이 존재하는지 <b>항상</b> 확인해야합니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="draw_surface.htm">draw_surface</a></li>
@@ -165,42 +153,36 @@
     <li><a href="draw_surface_general.htm">draw_surface_general</a></li>
   </ul>
   <p> </p>
-  <p>Finally, you have two functions for storing and retrieving surfaces in <a href="../../Buffers/Buffers.htm">Buffers</a>:</p>
+  <p>마지막으로, <a href="../../Buffers/Buffers.htm">버퍼</a> 에서 표면을 저장하고 검색하는 두 가지 기능이 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="../../Buffers/buffer_get_surface.htm">buffer_get_surface</a></li>
     <li><a href="../../Buffers/buffer_set_surface.htm">buffer_set_surface</a></li>
   </ul>
   <p> </p>
-  <p>As mentioned above, GameMaker Studio 2 doesn&#39;t actually render most things to the screen directly, but instead it renders them to the <b>application surface</b>. This is essentially a surface - just like any that you can make yourself using the
-    surface functions - and as such it can be manipulated, drawn to, sent to shaders, etc... Basically, anything that you would normally do with a surface you created can also be applied to the application surface.</p>
-  <p class="note"><b>NOTE</b>: The only thing you <b>cannot</b> do with the application surface is free it. It always exists, although the index value to access it may change.</p>
-  <p>When you run your game, this surface is created the first time that the <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">draw event</a> is called in each new room that you enter, which means that nothing is drawn until that
-    point. However, you can still get the application surface position and resize it in the <b>Create Event</b> or any other event without getting any errors and the values used will be relevant to the surface when it is created. The actual sequence of
-    events for the creation and drawing of the application surface is as follows:</p>
+  <p>위에서 언급했듯이 GameMaker Studio 2는 실제로 대부분의 것을 화면에 직접 렌더링하지 않고 대신 <b>응용 프로그램 표면에</b> 렌더링합니다. 이것은 본질적으로 표면입니다. 표면 기능을 사용하여 스스로 만들 수있는 것과 마찬가지로 표면은 조작, 드로잉, 셰이더 등으로 보낼 수 있습니다. 기본적으로 표면에서 일반적으로 수행하는 모든 작업 응용 프로그램 표면에도 생성 할 수 있습니다.</p>
+  <p class="note"><b>참고</b> : 응용 프로그램 표면으로 할 <b>수없는</b> 유일한 것은 무료입니다. 액세스하는 인덱스 값이 변경 될 수 있지만 항상 존재합니다.</p>
+  <p>게임을 실행하면 처음 입력 한 각 방에서 <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">드로우 이벤트</a> 가 호출 될 때이 표면이 만들어 지므로 해당 지점까지 아무것도 그려지지 않습니다. 그러나 오류없이 응용 프로그램 표면 위치를 가져 와서 이벤트 <b>만들기</b> 또는 다른 이벤트에서 크기를 조정할 수 있으며 사용 된 값은 표면을 만들 때 표면과 관련이 있습니다. 응용 프로그램 표면의 생성 및 그리기에 대한 실제 이벤트 순서는 다음과 같습니다.</p>
   <ul class="colour">
-    <li>Pre-draw event<br/>          --- &gt; <b>the application surface is created (if it doesn&#39;t exist) and the render target is set</b></li>
-    <li><b></b>For each visible view port, or, if no views ports are active, once
-      <ul class="colour">
-        <li>Draw begin event</li>
-        <li>Draw event</li>
-        <li>Draw end event<br/>         --- &gt; <b>the application surface render target is reset here</b></li>
+    <li>프리 드로우 이벤트 ---&gt; <b>응용 프로그램 표면이 생성되고 (존재하지 않는 경우) 렌더 대상이 설정됩니다</b></li>
+    <li>보이는 각보기 포트에 대해 또는 활성화 된보기 포트가없는 경우 한 번 시작 이벤트 그리기</li>
+        <li>이벤트 추첨</li>
+        <li>종료 이벤트 그리기 ---&gt; <b>응용 프로그램 표면 렌더링 대상이 여기에서 재설정됩니다.</b></li>
       </ul>
     </li>
-    <li><b></b>Post draw event<br/>         --- &gt; <b>the application surface is now drawn to the <a class="tooltip" title="The display buffer is the &#39;canvas&#39; where everything is finally drawn. Some events target this directly (like the Pre Draw event), while others will first draw to the application surface and then draw that to the display buffer.">display buffer</a> by default<br/>
-	                 </b>(although you can switch this off using <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span>)</li>
-    <li><b></b>Draw GUI begin event</li>
-    <li>Draw GUI event</li>
-    <li>Draw GUI end event</li>
+    <li>포스트 드로우 이벤트 ---&gt; <b>이제 응용 프로그램 화면이</b> 기본적으로 <a class="tooltip" title="디스플레이 버퍼는 모든 것이 최종적으로 그려지는 &#39;캔버스&#39;입니다. 일부 이벤트는이를 Pre Target 이벤트와 같이 직접 대상으로하는 반면, 다른 이벤트는 먼저 응용 프로그램 화면으로 그린 ​​다음이를 디스플레이 버퍼로 그립니다.">디스플레이 버퍼</a> 에 <b>그려집니다</b> ( <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable ()을</a></span> 사용하여 끌 수는 있지만)</li>
+    <li><b></b> GUI 시작 이벤트 그리기</li>
+    <li>GUI 이벤트 그리기</li>
+    <li>GUI 종료 이벤트 그리기</li>
   </ul>
-  <p>The use of this surface means that you can easily create incredible transitions using shaders, or take the screen and wrap it around a 3D form, or simply scale a low-res game up to any resolution screen... The possibilities are endless!</p>
-  <p>To access this surface, you need to use the built-in global variable <tt>application_surface</tt> which is explained on the following page:</p>
+  <p>이 표면을 사용하면 셰이더를 사용하여 놀라운 전환을 쉽게 만들거나 화면을 가져와 3D 형태로 감싸거나 저해상도 게임을 모든 해상도 화면으로 확장 할 수 있습니다 ... 가능성은 무한합니다!</p>
+  <p>이 표면에 액세스하려면 다음 페이지에서 설명하는 내장 전역 변수 <tt>application_surface</tt> 를 사용해야합니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="application_surface.htm">application_surface</a></li>
   </ul>
   <p> </p>
-  <p>You also have a few specialist functions that are designed <em>only </em>for use with the application surface:</p>
+  <p>또한 응용 프로그램 표면 <em>에만</em> 사용하도록 설계된 몇 가지 특수 기능이 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="application_surface_enable.htm">application_surface_enable</a></li>
@@ -210,15 +192,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Drawing\Surfaces\Surfaces.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="../Lighting/Lighting.htm">Lighting</a></div>
+        <div style="float:left">뒤로: <a href="../Drawing.htm">그림</a></div>
+        <div style="float:right">다음: <a href="../Lighting/Lighting.htm">조명</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Surfaces
@@ -229,4 +212,4 @@ application surface
 surfaces_functions
 -->
 
-</body></html>
+</body></html> 

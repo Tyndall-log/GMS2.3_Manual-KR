@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Tile Map Layers">
-        <span>Tile Map Layers</span>
+        <span>타일 ​​맵 레이어</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,17 +80,14 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Tile Map Layers</h1>
-  <p>The GameMaker Studio 2 <a href="../../../../../The_Asset_Editors/Rooms.htm">Room Editor</a> permits you to add tiles into any given room using <i>layers</i>. As the name implies, a tile map layer is simply a collection of tile set tiles that
-    are all considered to be at the same depth within the room, and by stacking layers you can make some things draw over or under others. You can also control certain aspects of layers from code, adding or removing things, or changing certain properties
-    of the layer or what it contains at run time. Note that in the room editor you are limited to one tile map per layer (the <a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm"><i>Tile Layer</i></a>), but when working with
-    them in code, you can have multiple tile maps assigned to a single layer, with each map having its own unique ID and properties, so:</p>
+  <h1>타일 ​​맵 레이어</h1>
+  <p>GameMaker Studio 2 <a href="../../../../../The_Asset_Editors/Rooms.htm">Room Editor를</a> 사용하면 <i>레이어를</i> 사용하여 주어진 방에 타일을 추가 할 수 있습니다. 이름에서 알 수 있듯이 타일 맵 레이어는 단순히 방 안에서 같은 깊이에있는 것으로 간주되는 타일 세트 타일의 모음입니다. 레이어를 쌓아서 다른 것들 위에 또는 그 아래에 무언가를 그릴 수 있습니다. 코드에서 레이어의 특정 측면을 제어하거나, 항목을 추가 또는 제거하거나, 레이어의 특정 속성이나 런타임에 포함 된 속성을 변경하는 것도 가능합니다. 룸 편집기에서는 레이어 당 하나의 타일 맵 ( <i>타일 ​​레이어</i> )으로 제한되지만 코드에서 타일 맵으로 작업 할 때 단일 맵에 여러 개의 타일 맵을 할당 할 수 있으며 각 맵에는 고유 한 ID와 속성 :</p>
   <ul class="colour">
-    <li>The <i>tile set</i> is the resource that you use to create tile layers and tile maps</li>
-    <li>The <i>tile layer</i> is what you create in the Room Editor to add tile sets to</li>
-    <li>The <i>tile map</i> is what you call the collection of tiles that are added to a layer, either in the room editor or through code, as a single element on that layer</li>
+    <li><i>타일 ​​세트</i> 는 타일 레이어 및 타일 맵을 만드는 데 사용하는 리소스입니다.</li>
+    <li><i>타일 ​​레이어</i> 는 룸 편집기에서 타일 세트를 추가하기 위해 생성 한 것입니다.</li>
+    <li><i>타일 ​​맵</i> 은 룸 편집기 또는 코드를 통해 해당 레이어의 단일 요소로 레이어에 추가 된 타일 모음입니다.</li>
   </ul>
-  <p>Below is a list of all the functions that can be used for editing <b>tile map layers</b>:</p>
+  <p>다음은 <b>타일 ​​맵 레이어</b> 를 편집하는 데 사용할 수있는 모든 기능의 목록입니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="layer_tilemap_get_id.htm">layer_tilemap_get_id</a></li>
@@ -124,12 +121,8 @@
     <li><a href="../../../Drawing/Sprites_And_Tiles/draw_tilemap.htm">draw_tilemap</a></li>
   </ul>
   <p> </p>
-  <p>Apart from the functions listed above to set tile maps, you also have a number of functions that can be used to manipulate the data of individual tiles. A &quot;blob&quot; of tile data is made up of the tile index plus a few extra bits to show whether
-    the tile has been rotated, flipped or mirrored. You also have the possibility of adding your own bitmask to the tile data, although this is for advanced users only as you will be masking off bits that are reserved for the tile index - essentially
-    there are 19 bits reserved for your tile indices, but if you only use 8 of them, then you have eleven bits left over that can be used to create a custom mask. This mask can then be used and checked in code to create custom tile collisions or whatever.
-    However, you would normally not need to create your own tile data blobs, and would instead use the function <a href="tilemap_get.htm"><tt>tilemap_get()</tt></a> to get the tile data, then you would manipulate it using the functions below, and then
-    you would set it again using <a href="tilemap_set.htm"><tt>tilemap_set()</tt></a>.</p>
-  <p>Below is a list of all the functions that can be used for editing individual <b>tiles</b>:</p>
+  <p>타일 ​​맵을 설정하기 위해 위에 나열된 기능 외에도 개별 타일의 데이터를 조작하는 데 사용할 수있는 여러 기능이 있습니다. 타일 ​​데이터의 &quot;블롭 (blob)&quot;은 타일 색인과 몇 개의 추가 비트로 구성되어 타일의 회전, 반전 또는 미러링 여부를 보여줍니다. 타일 ​​데이터에 고유 한 비트 마스크를 추가 할 수도 있습니다. 타일 인덱스 용으로 예약 된 비트를 마스킹 할 때만 고급 사용자를위한 것이지만 기본적으로 타일 인덱스 용으로 예약 된 19 비트가 있습니다. 그 중 8 개만 사용하면 11 개의 비트가 남게되어 사용자 지정 마스크를 만드는 데 사용할 수 있습니다. 그런 다음이 마스크를 코드에서 사용하고 확인하여 사용자 지정 타일 충돌 등을 만들 수 있습니다. 그러나 일반적으로 자신의 타일 데이터 얼룩을 만들 필요가 없으며 대신 <a href="tilemap_get.htm"><tt>tilemap_get ()</tt></a> 함수를 사용하여 타일 데이터를 가져온 다음 아래 함수를 사용하여 조작 한 다음 <a href="tilemap_set.htm"><tt>tilemap_set ( )</tt></a></p>
+  <p>아래는 개별 <b>타일</b> 편집에 사용할 수있는 모든 기능의 목록입니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="tile_get_empty.htm">tile_get_empty</a></li>
@@ -142,19 +135,20 @@
     <li><a href="tile_set_flip.htm">tile_set_flip</a></li>
     <li><a href="tile_set_mirror.htm">tile_set_mirror</a></li>
     <li><a href="tile_set_rotate.htm">tile_set_rotate</a></li>
-    <li><a href="../../../Drawing/Sprites_And_Tiles/draw_tile.htm">draw_tile</a></li>
+    <li><a href="../../../Drawing/Sprites_And_Tiles/draw_tile.htm">무승부</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Asset_Management\Rooms\Tile_Map_Layers\Tile_Map_Layers.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next: <a href="../Background_Layers/Background_Layers.htm">Background Layers</a></div>
+        <div style="float:left">뒤로: <a href="../Rooms.htm">객실</a></div>
+        <div style="float:right">다음: <a href="../Background_Layers/Background_Layers.htm">배경 레이어</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Tile Map Layers
@@ -163,4 +157,4 @@ Tile Map Layers
 tilemap_layer_functions
 -->
 
-</body></html>
+</body></html> 

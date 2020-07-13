@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Timelines">
-        <span>Timelines</span>
+        <span>타임 라인</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,75 +80,57 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Timeline Editor</h1>
-  <p><img alt="The Timeline Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Timelines.png"/>In most games you will want certain things to happen at precise moments in time. Now, you can try to achieve this by using the alarm events but
-    when things get too complicated this won&#39;t work any more, especially as you are limited to only twelve alarms. That&#39;s why we have the <strong>timeline </strong>asset. In a timeline you specify which actions must happen at certain moments in
-    game time, and you can use all the actions that are also available for an object in its different events or code to define this. Once you create a time line you can then assign it to an object, and the instance of that object will then execute the
-    actions at the indicated moments of time when placed or created within a room.</p>
-  <p>For example, assume you want to make a guard and that this guard should move 20 time steps to the left, then 10 upwards, then 20 to the right, then 10 downwards and then finally stop. To achieve this you can make a timeline where you start with setting
-    a motion to the left. You would then create moment 20 (a &quot;moment&quot; is just another way of saying &quot;game step&quot; or &quot;game frame&quot;) and set a motion upward, then at moment 30 a motion to the right, at moment 50 a motion downwards
-    and finally at moment 60 you would stop the motion. Once that is done, you can assign this timeline to the guard object and the guard instance will do exactly what you planned when placed in a room. You could even set an alarm in the time line so
-    that it is repeated after a certain length of time and in this way your guard can patrol an area. You can also use a time line to control your game more globally, for example by creating an invisible controller object, then a time line that at certain
-    moments creates enemies, and then assigning it to the controller object and placing an instance into the room. This is an easy way to get timed spawns of the enemies in a space shoorter game or something like that.</p>
-  <p>To create a time line, right click <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> on <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and select &quot;Create Timeline&quot;. This will open the window pictured
-    at the top of this page with the following sections:</p>
+  <h1>타임 라인 편집기</h1>
+  <p><img alt="The Timeline Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Timelines.png"/>대부분의 게임에서 특정 순간에 정확한 일이 발생하기를 원할 것입니다. 이제 알람 이벤트를 사용하여이 작업을 수행 할 수 있지만 상황이 너무 복잡하면 더 이상 작동하지 않습니다. 특히 12 개의 알람으로 제한되어 있기 때문입니다. 이것이 <strong>타임 라인</strong> 자산을 보유한 이유입니다. 타임 라인에서 게임 시간의 특정 순간에 어떤 동작을 수행해야하는지 지정하고, 다른 이벤트 나 코드에서 오브젝트에 사용 가능한 모든 동작을 사용하여이를 정의 할 수 있습니다. 타임 라인을 생성 한 후에는이를 객체에 할당 할 수 있으며 해당 객체의 인스턴스는 룸 내에 배치하거나 생성 할 때 표시된 순간에 작업을 실행합니다.</p>
+  <p>예를 들어, 경비원을 원하고이 경비원이 20 개의 시간 단계를 왼쪽으로 이동 한 다음 10을 위로, 20을 오른쪽으로, 10을 아래로 이동 한 다음 마지막으로 정지시켜야한다고 가정합니다. 이를 위해 모션을 왼쪽으로 설정하는 것으로 시작하는 타임 라인을 만들 수 있습니다. 그런 다음 모멘트 20 ( &quot;모멘트&quot;는 &quot;게임 단계&quot;또는 &quot;게임 프레임&quot;을 말하는 또 다른 방법 임)을 만들고 모션을 위쪽으로 설정 한 다음, 30을 순간에 오른쪽으로, 50을 순간에 아래로, 마지막으로 순간 60에 당신은 운동을 멈출 것입니다. 이 작업이 완료되면이 타임 라인을 가드 객체에 할당 할 수 있으며 가드 인스턴스는 방에 배치 할 때 계획 한대로 정확하게 수행합니다. 일정 시간 후에 알람이 반복되도록 시간 표시 막대에 알람을 설정하여 경비원이 지역을 순찰 할 수도 있습니다. 또한 타임 라인을 사용하여 보이지 않는 컨트롤러 오브젝트를 생성 한 다음 특정 순간에 적을 생성 한 타임 라인을 컨트롤러 오브젝트에 할당하고 인스턴스를 룸에 배치함으로써 게임을보다 전체적으로 제어 할 수 있습니다. 이것은 우주 정거장 게임이나 그와 비슷한 게임에서 적의 시간을 산란하는 쉬운 방법입니다.</p>
+  <p>To create a time line, right click <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/><a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> 에서 &quot;Create Timeline&quot;을 선택하십시오. 그러면이 페이지 상단에 그림으로 표시된 창이 다음 섹션과 함께 열립니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Name</span><span data-close-text="true">Name</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">이름</span> <span data-close-text="true">이름</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you give your timeline resource a <strong>name</strong>. This must only contain alpha-numeric characters or the &quot;_&quot; under-bar and cannot start with a number, as it will be used to reference your timeline through code. This name will
-      also be the unique timeline ID which can be used in DnD™ actions or code functions to identify the timeline.</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">여기서 타임 라인 리소스에 <strong>이름을 지정</strong> 합니다. 여기에는 영숫자 문자 또는 &quot;_&quot;밑줄 만 포함되어야하며 코드를 통해 타임 라인을 참조하는 데 사용되므로 숫자로 시작할 수 없습니다. 이 이름은 또한 타임 라인을 식별하기 위해 DnD ™ 액션 또는 코드 기능에 사용될 수있는 고유 한 타임 라인 ID입니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Moment</span><span data-close-text="true">Moment</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">순간</span> <span data-close-text="true">순간</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
     <p class="dropspot">You can set the <strong>moment </strong>value here. The moment value is calculated as the number of game steps after the timeline has started. So if you have a timeline with moments at positions 0 and 60, then moment 0 will be triggered when the timeline
-      is <em>started </em>and moment 60 will happen 60 steps <em>later</em>. If your room speed is set to 60 too, then moment 60 will happen one second after the timeline is started. You can do a double click <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/> on the moment value or you can use the right button <img alt="RMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_RMB.png" src="../assets/Images/Icons/Icon_RMB.png"/> menu and select
-      &quot;
-      <em>change</em>&quot; (see the section on the button menu below) to change it. To add a new moment, simply click the <strong>Add </strong>button at the bottom of the editor. Adding new moments will open the <a href="Scripts.htm">code editor</a>      (or action editor) where you can add the functions or DnD™ that you want to call in that moment.</p>
-    <p class="dropspot"><br/></p>
+      is <em>started </em>and moment 60 will happen 60 steps <em>later</em>. If your room speed is set to 60 too, then moment 60 will happen one second after the timeline is started. You can do a double click <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/>모멘트 값 또는 오른쪽 버튼을 사용할 수 있습니다 메뉴에서 &quot; <em>변경</em> &quot;을 선택하십시오 (아래 버튼 메뉴의 섹션 참조). 새로운 순간을 추가하려면 편집기 하단의 <strong>추가</strong> 버튼을 클릭하십시오. 새로운 모멘트를 추가하면 해당 시점에 호출하려는 기능 또는 DnD ™를 추가 할 수있는 <a href="Scripts.htm">코드 편집기</a> (또는 액션 편집기)가 열립니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Moment Name</span><span data-close-text="true">Moment Name</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">순간 이름</span> <span data-close-text="true">순간 이름</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">To help you understand what your timeline is doing it is permitted that you give moments a name to identify them. This is simply a string and will not be used in the game code or anywhere else, as it&#39;s purely for organising and understanding what
-      your timeline does. To add a name/description to your moment, you need to use the <span class="inline">/// @description</span> format on the first line of the code block, for example:<br/>
-    </p>
+    <p class="dropspot">타임 라인이하는 일을 이해하는 데 도움이되도록 순간을 식별 할 수있는 이름을 부여 할 수 있습니다. 이것은 단순히 문자열이며 게임 코드 또는 다른 곳에서는 사용되지 않습니다. 이는 타임 라인의 기능을 순수하게 구성하고 이해하기위한 것입니다. 순간에 이름 / 설명을 추가하려면 다음과 같이 코드 블록의 첫 번째 줄에 <span class="inline">/// @ 설명</span> 형식을 사용해야합니다.</p>
     <p class="code">/// @description Hello World</p>
-    <p class="dropspot">Which would look like this:</p>
+    <p class="dropspot">다음과 같이 보일 것입니다.</p>
     <p class="dropspot">
-      <img src="../assets/Images/Asset_Editors/Editor_Timelines_Name.png" class="center" alt="Timeline Editor Name/Description"/>
-    </p>
+      <img src="../assets/Images/Asset_Editors/Editor_Timelines_Name.png" class="center" alt="Timeline Editor Name/Description"/></p>
   </div>
   <p> </p>
-  <p>The timeline editor permits you to use <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55"/> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> select
-    all moments between the first click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> and the second click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/>, or you can use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> to click on single moments to select them independently. Timeline moments can be edited using the right mouse button <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> menu on one of the selected elements:</p>
+  <p>The timeline editor permits you to use <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55"/>+ 첫 번째 클릭 사이의 모든 순간을 선택하십시오 두 번째 클릭 또는 사용할 수 있습니다 / + 단일 순간을 클릭하여 독립적으로 선택합니다. 마우스 오른쪽 버튼을 사용하여 타임 라인 순간을 편집 할 수 있습니다 선택한 요소 중 하나의 메뉴 :</p>
   <p><img alt="Timeline RMB Menu" class="center" src="../assets/Images/Asset_Editors/Editor_Timelines_RMBMenu.png"/></p>
   <ul class="colour">
-    <li><strong>Add</strong>: This option permits you to add a new moment to the timeline. It will be added directly after the last moment, so if the last moment in your timeline is 120, the next one you add will be 121. You can change the moment position
-      by double clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the moment value in the editor or by right-clicking <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> and choosing &quot;<em>Change</em>&quot;.</li>
-    <li><strong>Edit</strong>: This opens the current timeline moment for editing.</li>
-    <li><strong>Change Moment</strong>: Change the value for the selected timeline moment. This is the same as slow double clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the timeline value
-      in the editor window.</li>
-    <li><strong>Change Description</strong>: Change the descriptive name for the selected timeline moment. This is the same as slow double clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the
-      timeline description in the editor window.</li>
-    <li><strong>Duplicate</strong>: This will duplicate all the selected timeline moments and add them consecutively to the end of the current timeline.</li>
-    <li><strong>Merge</strong>: If you select two or more moments from a timeline you can choose to merge them. This will create a single timeline moment at the position of the first moment selected with all the code and actions together concurrently.</li>
-    <li><strong>Remove</strong>: This will remove the selected moment (or moments) from the timeline.</li>
-    <li><strong>Cut </strong>/ <strong>Copy </strong>/ <strong>Paste</strong>: These options permit you to cut, copy or paste one or more timeline moments. You can use the standard keyboard shortcuts here too: <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">X</span>&quot;, <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">C</span>&quot;, and <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">V</span>&quot;.</li>
-    <li><strong>Select All</strong>: With this option you can select all the moments in a timeline. Selected moments can then be removed, merged, duplicated, cut, or copied.</li>
-    <li><strong>Convert to Drag and Drop / Code</strong>: Timeline moments will be created using the method chosen when you created the project, either using code or using Drag and Drop™ actions. With this option you can convert from one to the other, regardless
-      of the project type.</li>
+    <li><strong>추가</strong> :이 옵션을 사용하면 타임 라인에 새로운 순간을 추가 할 수 있습니다. 마지막 순간 직후에 추가되므로 타임 라인의 마지막 순간이 120이면 추가 한 다음 순간은 121이됩니다. 두 번 클릭하여 순간 위치를 변경할 수 있습니다. 에디터에서 모멘트 값 또는 마우스 오른쪽 버튼을 클릭하여 &quot; <em>변경</em> &quot;을 선택 <em>하십시오</em> .</li>
+    <li><strong>편집</strong> : <strong>편집</strong> 할 현재 타임 라인 순간을 엽니 다.</li>
+    <li><strong>순간 변경</strong> : 선택한 타임 라인 순간의 값을 변경합니다. 느린 더블 클릭과 동일 편집기 창의 타임 라인 값</li>
+    <li><strong>설명 변경</strong> : 선택한 타임 라인 순간의 설명 이름을 변경합니다. 느린 더블 클릭과 동일 편집기 창의 타임 라인 설명에</li>
+    <li><strong>복제</strong> : 선택한 모든 타임 라인 순간을 복제하여 현재 타임 라인의 끝에 연속적으로 추가합니다.</li>
+    <li><strong>병합</strong> : 타임 라인에서 둘 이상의 순간을 선택하면 순간을 병합하도록 선택할 수 있습니다. 그러면 모든 코드와 작업이 동시에 선택된 첫 번째 순간의 위치에 단일 타임 라인 순간이 만들어집니다.</li>
+    <li><strong>제거</strong> : 타임 라인에서 선택한 순간을 제거합니다.</li>
+    <li><strong>잘라</strong> 내기 / <strong>복사</strong> / <strong>붙여 넣기</strong> :이 옵션을 사용하면 하나 이상의 타임 라인 순간을 잘라내거나 복사하거나 붙여 넣을 수 있습니다. 여기에서도 표준 키보드 단축키를 사용할 수 있습니다. / + &quot; <span class="inline">X</span> &quot;, / + &quot; <span class="inline">C</span> &quot; / + &quot; <span class="inline">V</span> &quot;.</li>
+    <li><strong>모두 선택</strong> :이 옵션을 사용하면 타임 라인에서 모든 순간을 선택할 수 있습니다. 그런 다음 선택한 순간을 제거, 병합, 복제, 잘라 내기 또는 복사 할 수 있습니다.</li>
+    <li><strong>드래그 앤 드롭으로 변환 / 코드</strong> : 타임 라인 모멘트는 코드를 사용하거나 드래그 앤 드롭 작업을 사용하여 프로젝트를 만들 때 선택한 방법을 사용하여 생성됩니다. 이 옵션을 사용하면 프로젝트 유형에 관계없이 하나에서 다른 것으로 변환 할 수 있습니다.</li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Timelines.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Image_Editor.htm">Image Editor</a></div>
+        <div style="float:left">뒤로: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
+        <div style="float:right">다음: <a href="Image_Editor.htm">이미지 편집기</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Image Editor
@@ -158,4 +140,4 @@ Image Editor
 image_editor
 -->
 
-</body></html>
+</body></html> 

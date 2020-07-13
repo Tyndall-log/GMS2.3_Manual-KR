@@ -71,7 +71,7 @@
         <span>clickable_add</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,148 +81,144 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>clickable_add</h1>
-  <p>With this function you can create a custom, clickable, icon that acts as a &quot;button&quot; outside of the game canvas, but within the browser window itself. The function will return an id value which must be stored in a variable to be used in all
-    further button functions that reference the new icon. This function is very useful to prevent the browser creating a pop-up window when clicking on the button as it is all done through GameMaker Studio 2 itself.</p>
-  <p>You must first set the position, which is relative to the (0,0) of the browser window (top left corner) and then give the texture page entry for the sprite you wish the button icon to have (see: <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><tt>sprite_get_tpe()</tt></a>).
-    You can then specify either a URL to open or a script (from the Asset Browser of GameMaker Studio 2) to be opened or run. The &quot;target&quot; parameter that you specify is the same as the standard JavaScript &quot;name&quot; value when you
-    use the <tt>open()</tt> method (be aware that all but &#39;_self&#39; may result in the browser blocking, or asking the user if they wish to allow it) and the &quot;params&quot; argument is the same as the JavaScript &quot;specs&quot; parameter for
-    controlling what properties the new window/tab should display (not all browsers may support all features). If you are using the icon to run an internal script, these last two arguments can be left as empty strings &quot;&quot;.</p>
-  <p>Valid targets are:</p>
+  <p>이 기능을 사용하면 게임 캔버스 외부에서 브라우저 창 자체 내에서 &quot;버튼&quot;으로 작동하는 클릭 가능한 사용자 정의 아이콘을 만들 수 있습니다. 이 함수는 새 아이콘을 참조하는 모든 추가 버튼 기능에 사용되도록 변수에 저장해야하는 id 값을 반환합니다. 이 기능은 GameMaker Studio 2 자체를 통해 버튼을 클릭 할 때 브라우저가 팝업 창을 만들지 못하게하는 데 매우 유용합니다.</p>
+  <p>먼저 브라우저 창의 (0,0)에 상대적인 위치 (왼쪽 위 모서리)를 설정 한 다음 버튼 아이콘에 원하는 스프라이트에 대한 텍스처 페이지 항목을 제공해야합니다 ( <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><tt>sprite_get_tpe ()</tt></a> 참조) . 그런 다음 URL을 열거 나 GameMaker Studio 2의 Asset Browser에서 스크립트를 열거 나 실행할 수 있습니다. 지정하는 &quot;target&quot;매개 변수는 <tt>open ()</tt> 메소드를 사용할 때 표준 JavaScript &quot;name&quot;값과 동일합니다 <tt>(</tt> &#39;_self&#39;를 제외한 모든 것이 브라우저를 차단하거나 원하는 경우 사용자에게 요청할 수 있음에 유의하십시오) &quot;params&quot;인수는 새 창 / 탭에 표시 할 속성을 제어하기위한 JavaScript &quot;specs&quot;매개 변수와 동일합니다 (모든 브라우저가 모든 기능을 지원하지는 않습니다). 아이콘을 사용하여 내부 스크립트를 실행하는 경우이 마지막 두 인수는 빈 문자열 &quot;&quot;로 남겨 둘 수 있습니다.</p>
+  <p>유효한 목표는 다음과 같습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Target</th>
-        <th>Description</th>
+        <th>표적</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>_blank</td>
-        <td>Opens the linked document in a new window or tab.</td>
+        <td>_공백</td>
+        <td>링크 된 문서를 새 창이나 탭에서 엽니 다.</td>
       </tr>
       <tr>
-        <td>_self</td>
-        <td>Opens the linked document in the same frame as it was clicked (this is default).</td>
+        <td>_본인</td>
+        <td>클릭 한 것과 동일한 프레임에서 링크 된 문서를 엽니 다 (기본값).</td>
       </tr>
       <tr>
-        <td>_parent</td>
-        <td>Opens the linked document in the parent frame.</td>
+        <td>_부모의</td>
+        <td>연결된 문서를 부모 프레임에서 엽니 다.</td>
       </tr>
       <tr>
-        <td>_top</td>
-        <td>Opens the linked document in the full body of the window.</td>
+        <td>_상단</td>
+        <td>링크 된 문서를 창의 전체 본문에서 엽니 다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>Valid parameters are:</p>
+  <p>유효한 매개 변수는 다음과 같습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Parameters</th>
-        <th>Description</th>
+        <th>매개 변수</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td><b>&#39;height=[</b>px<b>]&#39;</b></td>
-        <td>The height of the window, with the minimum value being 100.</td>
+        <td><b>&#39;height = [</b> px <b>]&#39;</b></td>
+        <td>최소값이 100 인 창의 높이입니다.</td>
       </tr>
       <tr>
-        <td><b>&#39;width=[</b>px<b>]&#39;</b></td>
-        <td>The width of the window, with the minimum value being 100.</td>
+        <td><b>&#39;width = [</b> px <b>]&#39;</b></td>
+        <td>창의 너비로 최소값은 100입니다.</td>
       </tr>
       <tr>
-        <td><b>&#39;left=[</b>px<b>]&#39;</b></td>
-        <td>The left position of the window.</td>
+        <td><b>&#39;left = [</b> px <b>]&#39;</b></td>
+        <td>창의 왼쪽 위치</td>
       </tr>
       <tr>
-        <td><b>&#39;top=[</b>px<b>]&#39;</b></td>
-        <td>The top position of the window (IE only).</td>
+        <td><b>&#39;top = [</b> px <b>]&#39;</b></td>
+        <td>창의 상단 위치 (IE 만 해당)</td>
       </tr>
       <tr>
-        <td><b>&#39;location=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the address field (default is 1).</td>
+        <td><b>&#39;location = [</b> 부울 <b>]&#39;</b></td>
+        <td>주소 필드 표시 여부 (기본값은 1)</td>
       </tr>
       <tr>
-        <td><b>&#39;menubar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the menu bar (default is 1).</td>
+        <td><b>&#39;menubar = [</b> 부울 <b>]&#39;</b></td>
+        <td>메뉴 표시 줄 표시 여부 (기본값은 1)</td>
       </tr>
       <tr>
-        <td><b>&#39;resizable=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not the window is resizable (default is 1).</td>
+        <td><b>&#39;resizable = [</b> 부울 <b>]&#39;</b></td>
+        <td>창의 크기를 조정할 수 있는지 여부 (기본값은 1)</td>
       </tr>
       <tr>
-        <td><b>&#39;scrollbars=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display scroll bars (default is 1).</td>
+        <td><b>&#39;scrollbars = [</b> 부울 <b>]&#39;</b></td>
+        <td>스크롤 막대를 표시할지 여부 (기본값은 1)</td>
       </tr>
       <tr>
-        <td><b>&#39;status=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to add a status bar (default is 1).</td>
+        <td><b>&#39;status = [</b> 부울 <b>]&#39;</b></td>
+        <td>상태 표시 줄을 추가할지 여부 (기본값은 1)</td>
       </tr>
       <tr>
-        <td><b>&#39;titlebar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the title bar. This is ignored unless the calling application is an HTML Application or a trusted dialog box (default is 1);</td>
+        <td><b>&#39;titlebar = [</b> 부울 <b>]&#39;</b></td>
+        <td>제목 표시 줄을 표시할지 여부입니다. 호출하는 응용 프로그램이 HTML 응용 프로그램이거나 신뢰할 수있는 대화 상자가 아닌 경우 (기본값은 1) 무시됩니다.</td>
       </tr>
       <tr>
-        <td><b>&#39;toolbar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the browser toolbar (default is yes).</td>
+        <td><b>&#39;toolbar = [</b> 부울 <b>]&#39;</b></td>
+        <td>브라우저 툴바를 표시할지 여부 (기본값은 yes)</td>
       </tr>
     </tbody>
   </table>
-  <p><br/> It is also worth noting that if the URL argument you pass in is the name of a <a href="../../GML_Overview/Script_Functions.htm">script function</a> (ie: it doesn&#39;t start with &quot;http://&quot;) AND the script is called <tt><b>gmcallback_*</b></tt>    then you can get direct feeds into an html5 event. GameMaker Studio 2 script function names are <i>not</i> obfuscated if they begin with <tt>gmcallback_</tt>.</p>
+  <p>전달한 URL 인수가 <a href="../../GML_Overview/Script_Functions.htm">스크립트 함수</a> 의 이름 인 경우 (예 : &quot;http : //&quot;로 시작하지 않음) 스크립트가 <tt><b>gmcallback_ *</b></tt> 이면 직접 피드를 가져올 수 있습니다. html5 이벤트 GameMaker Studio 2 스크립트 함수 이름은 <tt>gmcallback_로</tt> 시작하면 난독 화 <i>되지 않습니다</i> .</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">clickable_add(x, y, tpe, url, target, params);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position within the <i>window</i>.</td>
+        <td>엑스</td>
+        <td><i>윈도우</i> 내의 x 위치.</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position within the <i>window</i>.</td>
+        <td>와이</td>
+        <td><i>윈도우</i> 내의 y 위치.</td>
       </tr>
       <tr>
         <td>tpe</td>
-        <td>The texture page entry for the sprite to be used.</td>
+        <td>사용할 스프라이트의 텍스처 페이지 항목입니다.</td>
       </tr>
       <tr>
         <td>url</td>
-        <td>The URL (website address) to link to, or the script to be run.</td>
+        <td>링크 할 URL (웹 사이트 주소) 또는 실행할 스크립트입니다.</td>
       </tr>
       <tr>
-        <td>target</td>
-        <td>This is the target area to open the URL in (see description).</td>
+        <td>표적</td>
+        <td>URL을 열기위한 대상 영역입니다 (설명 참조).</td>
       </tr>
       <tr>
-        <td>params</td>
-        <td>The various parameters for the icon (see description).</td>
+        <td>매개 변수</td>
+        <td>아이콘의 다양한 매개 변수 (설명 참조).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">home_but = clickable_add(32, 32, sprite_get_tpe(spr_MS_Home, 0), &quot;http://macsweeney_games.com&quot;, &quot;_blank&quot;, &quot;width=700, height=500, menubar=0, toolbar=0, scrollbars=0&quot;);</p>
-  <p>The above code creates a clickable DOM icon at the position (32, 32) of the page that the game canvas is running on. The icon uses the sprite referenced from the texture page as &quot;spr_MS_Home&quot; and when clicked the icon will open a new window
-    for the specified URL and with the defined properties for that window.</p>
+  <p>위 코드는 게임 캔버스가 실행중인 페이지의 위치 (32, 32)에 클릭 가능한 DOM 아이콘을 만듭니다. 아이콘은 텍스처 페이지에서 &quot;spr_MS_Home&quot;으로 참조 된 스프라이트를 사용하며, 클릭하면 아이콘은 지정된 URL에 대해 새 창을 열고 해당 창에 대해 정의 된 속성을 갖습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Web_And_HTML5\clickable_add.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Web_And_HTML5.htm">Web And HTML5</a></div>
-        <div style="float:right">Next: <a href="clickable_add_ext.htm">clickable_add_ext</a></div>
+        <div style="float:left">뒤로: <a href="Web_And_HTML5.htm">웹과 HTML5</a></div>
+        <div style="float:right">다음: <a href="clickable_add_ext.htm">clickable_add_ext</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 clickable_add
@@ -231,4 +227,4 @@ clickable_add
 clickable_add
 -->
 
-</body></html>
+</body></html> 

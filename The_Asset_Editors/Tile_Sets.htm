@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Tile Sets">
-        <span>Tile Sets</span>
+        <span>타일 ​​세트</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,99 +80,75 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Tile Set Editor</h1>
-  <p><img alt="Tile Set Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets.png"/>A <strong>tile set</strong> is a graphic resource for drawing levels and other static components of your game. A tile set is comprised of a single image
-    that is then split into different &quot;cells&quot; (tiles), and each tile can then be placed into the room editor to create a complete image. Below you can see two example sprites that can be used as tile sets:</p>
+  <h1>타일 ​​세트 편집기</h1>
+  <p><img alt="Tile Set Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets.png"/><strong>타일 ​​세트</strong> 는 게임의 레벨 및 기타 정적 구성 요소를 그리기위한 그래픽 리소스입니다. 타일 ​​세트는 하나의 이미지로 구성되어 다른 &quot;셀&quot;(타일)로 분할 된 다음 각 타일을 룸 편집기에 배치하여 완전한 이미지를 만들 수 있습니다. 아래는 타일 세트로 사용할 수있는 두 가지 스프라이트 예제입니다.</p>
   <p><img alt="Tile Set Example" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Example.png" style="margin-top: -10px; margin-bottom: -20px;"/></p>
-  <p style="text-align:center;padding-top:0.5em;padding-right:1em;padding-bottom:1.5em;padding-left:1em"><span style="font-size:14px;font-style:italic">Images by <a href="http://www.lostgarden.com/2006/07/more-free-game-graphics.html">Lost Garden</a></span></p>
-  <p>These are the most common ways that people create tile sets - either all jammed up together or with little spaces separating them out, and GameMaker Studio 2 can handle both types. Essentially all tile sets must be comprised of images that fit within
-    a clearly defined grid, with each cell of the grid being the <em>exact same size</em> (note that while the images shown above are all made up of square tiles, a tile set can be made from rectangular tiles too).</p>
-  <p>When creating your tile sets, keep in mind that <strong>the top left grid cell must <em>always </em>be empty</strong> as this is the tile that GameMaker Studio 2 will use for &quot;empty&quot; tiles in a room and for erasing existing tiles (and even
-    if you have pixels in that part of the image they will be ignored).</p>
-  <p>When you first create a tile set resource the Tile Set Editor window will open with the following options:</p>
+  <p style="text-align:center;padding-top:0.5em;padding-right:1em;padding-bottom:1.5em;padding-left:1em"><span style="font-size:14px;font-style:italic"><a href="http://www.lostgarden.com/2006/07/more-free-game-graphics.html">로스트 가든</a> 이미지</span></p>
+  <p>이들은 사람들이 타일 세트를 만드는 가장 일반적인 방법입니다-모두 뭉쳐 있거나 공간이 거의 없어 타일 세트가 있으며 GameMaker Studio 2는 두 유형을 모두 처리 할 수 ​​있습니다. 기본적으로 모든 타일 세트는 명확하게 정의 된 그리드에 맞는 이미지로 구성되어야하며 그리드의 각 셀은 <em>동일한 크기</em> 여야합니다 (위의 이미지는 모두 정사각형 타일로 구성되지만 타일 세트를 만들 수 있음에 유의하십시오) 직사각형 타일에서도).</p>
+  <p>타일 ​​세트를 생성 할 때 GameMaker Studio 2가 룸의 &quot;빈&quot;타일에 사용하고 기존 타일을 지우는 데 (픽셀이있는 경우에도) <strong>왼쪽 상단 격자 셀은 <em>항상</em> 비어 있어야합니다.</strong> 이미지의 해당 부분에서는 무시됩니다.)</p>
+  <p>타일 ​​세트 리소스를 처음 만들면 다음 옵션과 함께 타일 세트 편집기 창이 열립니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Name</span><span data-close-text="true">Name</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">이름</span> <span data-close-text="true">이름</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you can give a name to your tile set. Names can only be alpha-numeric and may only use the underbar &quot;_&quot; symbol, and they cannot start with a number.</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">여기에서 타일 세트의 이름을 지정할 수 있습니다. 이름은 영숫자 일 수 있으며 밑줄 &quot;_&quot;기호 만 사용할 수 있으며 숫자로 시작할 수 없습니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Sprite</span><span data-close-text="true">Sprite</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">스프라이트</span> <span data-close-text="true">스프라이트</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Here you can select the <a href="../Quick_Start_Guide/Creating_Sprites.htm">sprite</a> asset from which to create our tile set. Clicking on the main button will open the Asset Explorer where you can choose the sprite you wish to use for the tile set:<br/></p>
-    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Tilesets_AssetExplorer.png" src="../assets/Images/Asset_Editors/Editor_Tilesets_AssetExplorer.png" class="center" alt="The Asset Explorer Window"/>You can also click on the <strong>New Sprite</strong>      button <img data-cke-saved-src="../assets/Images/Icons/Icon_NewSprite.png" src="../assets/Images/Icons/Icon_NewSprite.png" width="24" height="24" alt="New Sprite Icon" class="icon"/> button to create a new sprite asset (which will open the <a href="Sprites.htm">Sprite Editor</a>      for the new asset within the workspace for editing), or you can edit the currently selected sprite using the <strong>Edit Sprite</strong> button <img data-cke-saved-src="../assets/Images/Icons/Icon_EditSprite.png" src="../assets/Images/Icons/Icon_EditSprite.png" class="icon" alt="Edit Sprite Icon"/>, or even choose to edit the sprite image itself in the <a href="Image_Editor.htm">Image Editor</a> by pressing the <img data-cke-saved-src="../assets/Images/Icons/Icon_EditImage.png" src="../assets/Images/Icons/Icon_EditImage.png" alt="Edit Image Icon" class="icon"/> button.</p>
-    <p class="dropspot">By default when you open a tile set the <strong>Tile Set Properties</strong> window will also be shown (see below), but if you close it then you can click the button here to reopen it again.</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">타일 ​​세트를 만들 <a href="../Quick_Start_Guide/Creating_Sprites.htm">스프라이트</a> 자산을 선택할 수 있습니다. 메인 버튼을 클릭하면 Asset Explorer가 열리고 타일 세트에 사용할 스프라이트를 선택할 수 있습니다.</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Tilesets_AssetExplorer.png" src="../assets/Images/Asset_Editors/Editor_Tilesets_AssetExplorer.png" class="center" alt="The Asset Explorer Window"/><strong>New Sprite</strong> 버튼을 클릭해도됩니다 버튼을 클릭하여 새 스프라이트 자산을 만들거나 (편집 할 작업 영역 내에서 새 자산의 <a href="Sprites.htm">스프라이트 편집기</a> 를 엽니 다) 스프라이트 <strong>편집</strong> 버튼을 사용하여 현재 선택된 스프라이트를 편집 할 수 있습니다 또는 <a href="Image_Editor.htm">이미지 편집기</a> 에서 스프라이트 이미지 자체를 편집하여 단추.</p>
+    <p class="dropspot">타일 ​​세트를 열면 기본적으로 <strong>타일 ​​세트 속성</strong> 창이 표시되지만 (아래 참조) 닫으면 여기 버튼을 클릭하여 다시 열 수 있습니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Properties</span><span data-close-text="true">Properties</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">속성</span> <span data-close-text="true">속성</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><strong></strong>The <strong>Tile Set Properties</strong> window is for designating the base tile size (default is 16px square), the offset amount and the separation between tiles (these last two options are for use with sprites like the one shown
-      in the example image further up this page where there are gaps between the individual parts of the tiles). You can also set the <strong>Output Border</strong> values for the tile set image, which controls how the image will be stored on disk and
-      add extra pixels around each tile as required.</p>
-    <p class="dropspot">Due to how tiles are rendered they need to be prepared beforehand with a border around each one to &quot;smear&quot; the edges. The image shown below illustrates how tiles are generally mapped by the device graphic drivers, with the red line around
-      the tile showing where the U,V coordinates are mapped to (The letters &quot;U&quot; and &quot;V&quot; are used to describe the 2D texture mesh because &quot;X&quot;, &quot;Y&quot; and &quot;Z&quot; are already used to describe room and object spatial
-      coordinates):
-    </p>
-    <p class="dropspot"><img alt="Single Tile" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Single.png" style="margin-top: -20px; margin-bottom: -10px;"/>As you can see it picks the center of the <a class="tooltip" title="Texel (or texture element) is the fundamental unit of texture space, much like a pixel is the fundamental element of picture space. Textures are represented by arrays of Texels, just as pictures are represented by arrays of pixels. When texturing a 3D surface (a process known as texture mapping) the renderer maps texels to appropriate pixels in the output picture.">texel</a> to
-      map directly when drawing the image in the room. Now at a scale of 1:1, this is all well and good, but what will happen when we scale this tile down? The issue with scaling down is that when you shrink the image, the UVs also scale down and try
-      to fit into a more compressed space, but this obviously can&#39;t happen, so the graphics driver picks which texels to draw based on the available pixel centers.</p>
-    <p class="dropspot">So, if we are &quot;just&quot; moving into a new screen pixel then, because the graphics drivers use the center of the pixel to decide what to draw with, it&#39;ll pick a texel surrounding the tile, not a texel on the tile itself.</p>
+    <p class="dropspot"><strong>타일 ​​세트 속성</strong> 창은 기본 타일 크기 (기본값은 16px 정사각형), 오프셋 양 및 타일 간 분리를 지정하기위한 것입니다 (이 마지막 두 옵션은이 이미지의 위쪽 그림 이미지에 표시된 것과 같은 스프라이트와 함께 사용됩니다) 타일의 각 부분 사이에 간격이 있습니다). 타일 ​​세트 이미지의 <strong>출력 테두리</strong> 값을 설정하여 이미지가 디스크에 저장되는 방법을 제어하고 필요에 따라 각 타일 주위에 추가 픽셀을 추가 할 수도 있습니다.</p>
+    <p class="dropspot">타일이 렌더링되는 방식으로 인해 각 타일 주위에 테두리를 만들어 가장자리를 &quot;바르게&quot;준비해야합니다. 아래 이미지는 장치 그래픽 드라이버가 타일을 일반적으로 매핑하는 방법을 보여줍니다. 타일 주위의 빨간색 선은 U, V 좌표가 매핑되는 위치를 나타냅니다 (문자 &quot;U&quot;및 &quot;V&quot;는 2D 텍스처를 설명하는 데 사용됨). &quot;X&quot;, &quot;Y&quot;및 &quot;Z&quot;는 이미 공간 및 객체 공간 좌표를 설명하는 데 사용되므로 메시) :</p>
+    <p class="dropspot"><img alt="Single Tile" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Single.png" style="margin-top: -20px; margin-bottom: -10px;"/>보시다시피, 방에서 이미지를 그릴 때 직접 매핑 할 <a class="tooltip" title="텍셀 (또는 텍스쳐 요소)은 텍스쳐 공간의 기본 단위이며, 픽셀이 그림 공간의 기본 요소와 매우 유사합니다. 그림이 픽셀 배열로 표현되는 것처럼 텍스처는 텍셀 배열로 표현됩니다. 3D 표면을 텍스처링 할 때 (텍스처 매핑이라고 알려진 프로세스) 렌더러는 텍셀을 출력 그림의 적절한 픽셀에 매핑합니다.">텍셀</a> 의 중심을 선택합니다. 이제 1 : 1 규모로이 모든 것이 훌륭하지만이 타일을 축소하면 어떻게됩니까? 축소 할 때의 문제는 이미지를 축소 할 때 UV도 축소되고 더 압축 된 공간에 맞추려고하지만, 분명히 불가능한 일이므로 그래픽 드라이버가 사용 가능한 픽셀을 기준으로 그릴 텍셀을 선택합니다. 센터.</p>
+    <p class="dropspot">우리가 새로운 스크린 픽셀로 &quot;이동&quot;한다면 그래픽 드라이버가 픽셀 중심을 사용하여 그릴 대상을 결정하기 때문에 타일 자체의 텍셀이 아닌 타일 주변의 텍셀을 선택합니다. .</p>
     <p class="dropspot"><img alt="Texel Tile" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Texel.png" style="margin-top: -20px; margin-bottom: -20px;"/></p>
-    <p class="dropspot">Shown above is a tile being draw scaled down into 6 screen pixels, and this shows that when you overlap a little into the next screen pixel, the graphics driver has to make a choice to either drop that texel, or it try and fill it with what it thinks
-      is a valid texel. Let&#39;s just say that in this case it decides to draw the overlapped texel into the screen pixel, and, since it&#39;s now clearly outside our tile it gets this pixel from either the next tile, or the little bits of space you
-      provided around the tiles, which means that when it shrinks you&#39;ll get cracks between tiles &quot;glitches&quot; in how they are drawn and this is where a lot of confusion arises... Each graphics driver and device actually does this in its own
-      way, meaning that the results can be unpredictable and look terrible... but if you&#39;re careful and plan ahead you can work around it.</p>
-    <p class="dropspot">With high end games if you draw from a single texture (not on a texture page or texture atlas), you have the option of using a texture mode called <strong>clamp </strong>and what this does is repeats the last row of texels infinitely off into the
-      distance, allowing you to scale without problems as it forces the hardware to get the last row of pixels no matter what. This is what the <strong>Output Border </strong>settings here do for you:</p>
-    <p class="dropspot"><img alt="Smear Tile" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Smear.png" style="margin-top: -10px;margin-bottom: 1px"/>Shown above is a &quot;fixed&quot; tile sprite and you can see it now has a repeated section around
-      each tile meaning that when the hardware overruns, it will always pick the last texel from the tile rather than one of the spaces or the tile after that. So, when creating a tile set, keep in mind that if you are going to be zooming the game view
-      in or out or are going to be rendering the tiles scaled, you may need to have a higher Output Border width or height than the default value of 2.</p>
-    <p class="dropspot">Next, you can chose the <strong>texture group</strong> that you wish the tileset resource to belong to. Basically, a texture group (previously defined in the <a href="../Settings/Texture_Groups.htm">Texture Group Manager</a>) is something that you
-      can set up so that all the image assets that you need for specific rooms or levels of your game can be stored together. So, for example, you can have all your level 1 images in one texture group, all your level 2 images in another etc... and GameMaker
-      Studio 2 will try to place all those grouped assets on the same <a class="tooltip" title="A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.">texture page</a> to reduce texture page swapping while your game is running on the chosen target platform.</p>
+    <p class="dropspot">위 그림은 6 개의 화면 픽셀로 축소 된 타일입니다. 이는 다음 화면 픽셀에 약간 겹치면 그래픽 드라이버가 해당 텍셀을 떨어 뜨리거나 채우기로 선택해야한다는 것을 보여줍니다. 그것이 생각하는 것은 유효한 텍셀입니다. 이 경우 겹친 텍셀을 화면 픽셀로 그리겠다고 결정하고, 이제 타일 외부에 분명히 있기 때문에 다음 타일 또는 타일 주위에 제공 한 작은 공간 에서이 픽셀을 가져옵니다. 즉, 줄어드는 방식으로 타일 &quot;글리치&quot;사이에 균열이 생길 수 있으며 이는 많은 혼란이 발생하는 곳입니다 ... 각 그래픽 드라이버와 장치는 실제로 자체 방식으로 결과를 나타냅니다. 예측할 수없고 끔찍한 것처럼 보일 수 있지만주의해서 미리 계획하면 문제를 해결할 수 있습니다.</p>
+    <p class="dropspot">하이 엔드 게임에서는 텍스처 페이지 나 텍스처 아틀라스가 아닌 단일 텍스처에서 그리는 경우 <strong>클램프</strong> 라는 텍스처 모드를 사용할 수 있으며이 기능은 마지막 텍셀 행을 거리에서 무한정 반복합니다. 하드웨어가 무엇이든 관계없이 마지막 픽셀 행을 가져 오므로 문제없이 확장 할 수 있습니다. 이것이 바로 <strong>출력 테두리</strong> 설정입니다.</p>
+    <p class="dropspot"><img alt="Smear Tile" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Smear.png" style="margin-top: -10px;margin-bottom: 1px"/>위의 그림은 &quot;고정 된&quot;타일 스프라이트이며 이제 각 타일 주위에 반복 된 섹션이 있음을 알 수 있습니다. 즉, 하드웨어가 오버런 될 때 항상 공백이나 타일 중 하나가 아니라 타일에서 마지막 텍셀을 선택합니다. . 따라서 타일 세트를 생성 할 때 게임 뷰를 확대 또는 축소하거나 타일 크기를 조정하려는 경우 기본보다 출력 테두리 너비 또는 높이가 더 높아야합니다. 2의 값</p>
+    <p class="dropspot">다음으로, 타일셋 리소스가 속할 <strong>텍스처 그룹</strong> 을 선택할 수 있습니다. 기본적으로 텍스처 그룹 (이전 <a href="../Settings/Texture_Groups.htm">텍스처 그룹 관리자</a> 에서 정의 됨)은 특정 방이나 게임 레벨에 필요한 모든 이미지 자산을 함께 저장할 수 있도록 설정할 수있는 것입니다. 예를 들어, 하나의 텍스처 그룹에 모든 레벨 1 이미지를, 다른 텍스처 그룹에 모든 레벨 2 이미지를 배치 할 수 있으며 GameMaker Studio 2는 그룹화 된 모든 자산을 동일한 <a class="tooltip" title="텍스처 페이지 (텍스처 아틀라스라고도 함)는 게임에서 가장 적은 텍스처 메모리를 차지하도록 최적의 방식으로 그룹화 된 이미지 모음 (스프라이트, 타일셋, 글꼴 문자 등)입니다. 실행됩니다.">텍스처 페이지에 배치</a> 하여 <a class="tooltip" title="텍스처 페이지 (텍스처 아틀라스라고도 함)는 게임에서 가장 적은 텍스처 메모리를 차지하도록 최적의 방식으로 그룹화 된 이미지 모음 (스프라이트, 타일셋, 글꼴 문자 등)입니다. 실행됩니다.">텍스처 페이지</a> 를 줄입니다. 게임이 선택된 대상 플랫폼에서 실행되는 동안 교환.</p>
     <div class="dropspotnote"><strong>NOTE</strong>: This may not always be necessary and the performance increase from this method will depend on whether the target device is CPU bound or GPU bound.</div>
-    <p class="dropspot">The final option in the tile set properties is <strong>Disable Source Sprite Export</strong>. This is checked by default, and what it does is flags the source sprite asset to be omitted when the texture page for your project is being generated. This
-      works under the assumption that a sprite used as a tile set will not be getting used for anything else, and so only needs to be exported once. However if you are using the base sprite resource for anything other than tiles, then you would want to
-      un-check this so that the base sprite <em>and </em>the tile set are both added into the texture page on compile.</p>
+    <p class="dropspot">타일 ​​세트 속성의 마지막 옵션은 <strong>소스 스프라이트 내보내기 비활성화</strong> 입니다. 이것은 기본적으로 선택되어 있으며 프로젝트의 텍스처 페이지가 생성 될 때 소스 스프라이트 자산이 생략되도록 플래그를 지정합니다. 타일 ​​세트로 사용 된 스프라이트는 다른 용도로는 사용되지 않으므로 한 번만 내 보내면된다는 가정하에 작동합니다. 그러나 타일 이외의 용도로 기본 스프라이트 리소스를 사용하는 경우, 기본 스프라이트 <em>와</em> 타일 ​​세트가 모두 컴파일시 텍스처 페이지에 추가되도록이 옵션을 선택 취소하려고합니다.</p>
     <p class="dropspot"><strong></strong></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Editors</span><span data-close-text="true">Editors</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">편집자</span> <span data-close-text="true">편집자</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Each of the buttons in the <strong>Editors </strong>section will open a different editor for specific tile set functionality. You can create tile set <em>brushes </em>based on multiple tiles together, <em>animated tiles</em>, using different tiles
-      as individual frames, and you can also create <em>auto tiles</em> that will &quot;join&quot; together based on the tiles that surround them. Each of these editors is explained in detail in the sections linked at the end of this page.</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot"><strong>Editors</strong> 섹션의 각 버튼은 특정 타일 세트 기능에 대해 다른 편집기를 엽니 다. 서로 다른 타일을 개별 프레임으로 사용하여 여러 타일을 기반으로 한 타일 세트 <em>브러시</em> , <em>애니메이션 타일</em> 을 만들 수 있으며 주변 타일을 기반으로 함께 &quot;결합&quot;하는 <em>자동 타일</em> 을 만들 수도 있습니다. 이러한 각 편집기는이 페이지 끝에 링크 된 섹션에 자세히 설명되어 있습니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Preview Toolbox</span><span data-close-text="true">Preview Toolbox</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">미리보기 도구 상자</span> <span data-close-text="true">미리보기 도구 상자</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">These are the tools you can use to preview the sprite selected for the tile set. These buttons control the current preview zoom level and you can use them to zoom in or out and clicking the <img alt="Zoom Reset Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_ZoomReset.png" src="../assets/Images/Icons/Icon_ZoomReset.png"/> button will reset the preview to be 1:1 with the tile set sprite being edited. You can also click the <strong>Window Fit</strong> button <img data-cke-saved-src="../assets/Images/Icons/Icon_CanvasFit.png" src="../assets/Images/Icons/Icon_CanvasFit.png" alt="Canvas Fit Icon" class="icon"/> to make the entire tile set fit within the current preview window (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out
-      using the <img data-cke-saved-src="../assets/Images/Icons/Icon_Ctrl.png" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" height="20" alt="Control Icon" class="icon"/> / <img data-cke-saved-src="../assets/Images/Icons/Icon_Cmd.png" src="../assets/Images/Icons/Icon_Cmd.png" width="55" height="20" alt="CMD Icon" class="icon"/> and the Mouse Wheel <img data-cke-saved-src="../assets/Images/Icons/Icon_MMB.png" src="../assets/Images/Icons/Icon_MMB.png" class="icon" alt="MMB Icon"/>, and pressing <img data-cke-saved-src="../assets/Images/Icons/Icon_Ctrl.png" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" height="20" alt="Control Icon" class="icon"/> / <img data-cke-saved-src="../assets/Images/Icons/Icon_Cmd.png" src="../assets/Images/Icons/Icon_Cmd.png" width="55" height="20" alt="CMD Icon" class="icon"/> + <img data-cke-saved-src="../assets/Images/Icons/Icon_Enter.png" src="../assets/Images/Icons/Icon_Enter.png" width="55" height="20" alt="Enter Icon" class="icon"/> will set the canvas to be 1:1 with the tile set sprite.<br/></p>
-    <p class="dropspot">Another feature is that you can switch the grid view on or off by clicking the <img data-cke-saved-src="../assets/Images/Icons/Icon_CanvasGrid.png" src="../assets/Images/Icons/Icon_CanvasGrid.png" class="icon" alt="Grid Icon"/> button, as well as
-      set the colour for the grid to be used (clicking the <img data-cke-saved-src="../assets/Images/Icons/Icon_CanvasOptions.png" src="../assets/Images/Icons/Icon_CanvasOptions.png" alt="Preview Options Button" class="icon"/> button). When the grid
-      is active it will show a coloured outline for each of the tiles in the grid, respecting the settings for separation, etc...</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">These are the tools you can use to preview the sprite selected for the tile set. These buttons control the current preview zoom level and you can use them to zoom in or out and clicking the <img alt="Zoom Reset Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_ZoomReset.png" src="../assets/Images/Icons/Icon_ZoomReset.png"/>버튼은 타일 세트 스프라이트가 편집 된 상태에서 미리보기를 1 : 1로 재설정합니다. <strong>창 맞춤</strong> 버튼을 클릭해도됩니다 전체 타일 세트를 현재 미리보기 창에 맞추려면 (적합한 크기에 맞게 확대 / 축소) 을 사용하여 확대 및 축소 할 수도 있습니다. / 그리고 마우스 휠 을 누르고 / + 타일 ​​세트 스프라이트와 함께 캔버스를 1 : 1로 설정합니다.</p>
+    <p class="dropspot">Another feature is that you can switch the grid view on or off by clicking the <img data-cke-saved-src="../assets/Images/Icons/Icon_CanvasGrid.png" src="../assets/Images/Icons/Icon_CanvasGrid.png" class="icon" alt="Grid Icon"/>버튼을 클릭하고 사용할 그리드의 색상을 설정합니다 ( 단추). 그리드가 활성화되면 분리 설정 등을 고려하여 그리드의 각 타일에 대해 컬러 아웃 라인이 표시됩니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Preview</span><span data-close-text="true">Preview</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">미리</span> <span data-close-text="true">보기</span> <span data-open-text="true">미리</span> <span data-close-text="true">보기</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">This section is the tile set Preview window. To navigate around the preview, you can use the same basic controls as for general Workspaces, ie: Use the middle mouse button <img alt="MMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_MMB.png" src="../assets/Images/Icons/Icon_MMB.png"/> and drag to pan the preview (or alternatively use the <img alt="Space Icon" class="icon" height="20" data-cke-saved-src="../assets/Images/Icons/Icon_Space.png" src="../assets/Images/Icons/Icon_Space.png" width="55"/> + <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/> combination), and you can scroll horizontally with the mouse wheel <img alt="MMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_MMB.png" src="../assets/Images/Icons/Icon_MMB.png"/> or zoom in and out using the <img alt="Control Icon" class="icon" height="20" data-cke-saved-src="../assets/Images/Icons/Icon_Ctrl.png" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" data-cke-saved-src="../assets/Images/Icons/Icon_Cmd.png" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> key and the mouse wheel <img alt="MMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_MMB.png" src="../assets/Images/Icons/Icon_MMB.png"/>. You can also use the different buttons in the <strong>Preview Toolbox</strong> to change the zoom and enable/disable the grid cell overlay.</p>
+    <p class="dropspot">This section is the tile set Preview window. To navigate around the preview, you can use the same basic controls as for general Workspaces, ie: Use the middle mouse button <img alt="MMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_MMB.png" src="../assets/Images/Icons/Icon_MMB.png"/>드래그하여 미리보기를 이동 (또는 + 마우스 휠로 가로로 스크롤 할 수 있습니다. 또는를 사용하여 확대 및 축소 / 키와 마우스 휠 . 또한 <strong>미리보기 도구 상자</strong> 의 다른 버튼을 사용하여 확대 / 축소를 변경하고 격자 셀 오버레이를 활성화 / 비활성화 할 수 있습니다.</p>
   </div>
   <p> </p>
-  <p>As mentioned in the section on <strong>Editors</strong> above, there are are further tools available to edit tile sets and generate special <em>brushes </em>(combinations of tiles that can be painted into a room), <em>animated </em>tiles, and <em>auto tile</em> tiles
-    (which are special tiles that will connect up automatically when placed in a room). Each of these editors is explained in depth from the following pages:</p>
+  <p>위의 <strong>편집기</strong> 섹션에서 언급했듯이 타일 세트를 편집하고 특수 <em>브러시</em> (방에 칠할 수있는 타일의 조합), <em>애니메이션</em> 타일 ​​및 <em>자동 타일</em> 타일 ​​(특별 타일 인 특수 타일)을 생성하는 데 사용할 수있는 추가 도구가 있습니다 방에 배치하면 자동으로 연결됩니다). 이러한 각 편집기는 다음 페이지에서 자세히 설명합니다.</p>
   <ul class="colour">
-    <li><a href="Tile_Set_Editors/Brush_Builder.htm">The Brush Builder</a></li>
-    <li><a href="Tile_Set_Editors/Animated_Tiles.htm">Animated Tiles</a></li>
-    <li><a href="Tile_Set_Editors/Auto_Tiles.htm">Auto Tiles</a></li>
+    <li><a href="Tile_Set_Editors/Brush_Builder.htm">브러시 빌더</a></li>
+    <li><a href="Tile_Set_Editors/Animated_Tiles.htm">애니메이션 타일</a></li>
+    <li><a href="Tile_Set_Editors/Auto_Tiles.htm">자동 타일</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Tile_Sets.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Timelines.htm">Timelines</a></div>
+        <div style="float:left">뒤로: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
+        <div style="float:right">다음: <a href="Timelines.htm">타임 라인</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Tile Set Editor
@@ -183,4 +159,4 @@ Tile Sets
 tile_set_editor
 -->
 
-</body></html>
+</body></html> 

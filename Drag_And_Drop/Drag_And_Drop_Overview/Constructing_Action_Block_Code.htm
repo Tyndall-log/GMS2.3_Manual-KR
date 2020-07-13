@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Constructing Action Block Code">
-        <span>Constructing Action Block Code</span>
+        <span>액션 블록 코드 생성</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,89 +80,64 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Constructing Action Block Code</h1>
-  <p>To add behaviours to objects you can construct your code using <strong>Actions </strong>from the different libraries available to you from the <strong>Action Toolbox</strong>. To start with you&#39;ll need to make a <a href="../../Introduction/The_Start_Page.htm">new Drag and Drop project</a>    and then make a new <a href="../../The_Asset_Editors/Objects.htm">object</a> (you can assign a <a href="../../The_Asset_Editors/Sprites.htm">sprite</a> to the object too if required). In your new object you can start to add <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">events</a>,
-    and in the events add your DnD™ code actions.</p>
-  <p><img alt="DnD™ Create Event" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Create_Event.png"/>Note that when you add a new event, a &quot;code&quot; window is opened with a tab for the given event (see the image
-    above), and you can now drag any action you wish from the Toolbox on the right into the Action Block pane of the code window. Now, while it&#39;s true that you can add any action, that doesn&#39;t mean that they will all work or that the project will
-    compile with them. Some actions require at least one <a class="tooltip" title="A variable is a named value within a program which can be modified, stored and displayed whenever required. For example, if we have an integer variable with a name XYZ and it stores a value 10, we can then do things like A = XYZ + 10, which will set the value of the variable A to 20, since XYZ is 10 and we are adding 10 to it. You can also change variable values using operators, so doing XYZ = XYZ + 100 would modify the value of our XYZ variable to be equal to 110. Variables can also be used to store identifiers and references to different assets.">variable</a> to work, while others - like the <a href="../Drag_And_Drop_Reference/Drawing/Drawing_Actions.htm">Draw</a> actions - will only
-    work if used in a specific event. How do you know which ones to use? Well, generally, it&#39;s simply a question of using logic... if an action requires a variable and we haven&#39;t defined one yet, then we shouldn&#39;t be using it until we&#39;ve
-    added an action to create the variable.</p>
-  <p>When you drag an action from the Toolbox into the main Action Block workspace, it will expand to show you the available <a class="tooltip" title="An argument (also known as a parameter) is a value that is passed into a function. For example, the GameMaker Language function &#39;sqr(num)&#39; is a function that will give you the square of a number that you provide as the argument, eg: &#39;a = sqr(4);&#39; Here the argument is 4, and the function will return 16, which is stored in the variable &#39;a&#39;.">argument</a><span class="glossextra">s</span> (parameters) that you can fill
-    in and change to set the behaviour. In the image below, we have dragged an <a href="../Drag_And_Drop_Reference/Common/Assign_Variable.htm">Assign Variable</a> action from the Toolbox <a href="../Drag_And_Drop_Reference/Common/Common_Actions_Library.htm">Common library</a> into
-    the action block workspace:</p>
-  <p><img alt="DnD™ Assign Variable" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Add_Var.png"/>You can see that the new action is also shown on the left of the code window in a shorthand form. This list of actions,
-    called the action Overview, can be clicked on to quickly navigate to that action for editing. You can continue to add actions to the event should you need to, with each new action being &quot;chained&quot; to the previous one to show the flow of the
-    DnD™ code you are constructing. Note that the area where you can drop further actions is highlighted for you underneath the initial action, and, depending on the action you are using, different areas will highlight to show where in the chain you can
-    add it:</p>
-  <p><img alt="DnD™ Set Direction Variable" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Set_Dir.png"/>As you add actions to the workspace, they will be &quot;chained&quot; to the actions above so you can see how
-    the DnD™ code flows, with one action leading to another, and the overview pane shows them in shorthand form and in order of execution:</p>
-  <p><img alt="DnD™ chain of actions" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Scope_Other.png"/>Some actions will place code in a separate chain away from the main flow - things like <a href="../Drag_And_Drop_Reference/Common/If_Variable.htm">If Variable</a> will
-    create a <em>sub-chain</em> of actions that should occur if the correct conditions are met before continuing on with the main chain:</p>
-  <p><img alt="DnD™ side chain of actions" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_If_Variable.png"/>Note that when using actions that can have a side chain block like this, the action will have <em>two </em>areas
-    highlighted for dropping further actions:</p>
+  <h1>액션 블록 코드 생성</h1>
+  <p>객체에 비헤이비어를 추가하기 위해 <strong>Action Toolbox</strong> 에서 사용할 수있는 다른 라이브러리의 <strong>Action</strong> 을 사용하여 코드를 구성 할 수 있습니다. 먼저 <a href="../../Introduction/The_Start_Page.htm">드래그 앤 드롭 프로젝트를</a> 새로 만든 다음 새 <a href="../../The_Asset_Editors/Objects.htm">오브젝트</a> 를 만들어야 <a href="../../The_Asset_Editors/Objects.htm">합니다</a> (필요한 경우 오브젝트에도 <a href="../../The_Asset_Editors/Sprites.htm">스프라이트</a> 를 할당 할 수 있음). 새 객체에서는 추가 시작할 수 있습니다 <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">이벤트를</a> 하고 이벤트에 DnDâ &quot;¢ 코드 작업을 추가 할 수 있습니다.</p>
+  <p><img alt="DnD™ Create Event" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Create_Event.png"/>새 이벤트를 추가하면 지정된 이벤트에 대한 탭이있는 &quot;코드&quot;창이 열리고 (위 이미지 참조) 이제 오른쪽의 도구 상자에서 원하는 작업을 작업 블록 창으로 끌어 올 수 있습니다. 코드 창의 이제 어떤 동작도 추가 할 수 있지만 모든 동작이 작동하거나 프로젝트가 컴파일 될 것이라는 의미는 아닙니다. 일부 작업은 작동하기 위해 하나 이상의 <a class="tooltip" title="변수는 프로그램 내에서 명명 된 값으로, 필요할 때마다 수정, 저장 및 표시 할 수 있습니다. 예를 들어 이름이 XYZ 인 정수 변수가 있고 값 10을 저장하는 경우 A = XYZ + 10과 같은 작업을 수행 할 수 있습니다. 그러면 XYZ가 10이고 변수 A의 값이 20으로 설정됩니다. 그것에 10을 더하고 있습니다. 연산자를 사용하여 변수 값을 변경할 수도 있으므로 XYZ = XYZ + 100을 수행하면 XYZ 변수의 값이 110으로 수정됩니다. 변수는 식별자와 다른 자산에 대한 참조를 저장하는 데 사용될 수도 있습니다.">변수</a> 가 필요하지만 <a href="../Drag_And_Drop_Reference/Drawing/Drawing_Actions.htm">Draw</a> 작업과 같은 다른 작업은 특정 이벤트에서 사용되는 경우에만 작동합니다. 어떤 것을 사용해야하는지 어떻게 알 수 있습니까? 글쎄, 일반적으로 논리를 사용하는 것의 문제입니다. 액션에 변수가 필요하고 아직 정의하지 않은 경우 변수를 만들기 위해 액션을 추가 할 때까지는 사용하지 않아야합니다.</p>
+  <p>도구 상자에서 작업을 기본 작업 블록 작업 공간으로 드래그하면 작업을 채우고 변경할 수있는 사용 가능한 <a class="tooltip" title="인수 (파라미터라고도 함)는 함수에 전달되는 값입니다. 예를 들어, GameMaker 언어 함수 &#39;sqr (num)&#39;은 인수로 제공 한 숫자의 제곱을 제공하는 함수입니다. 예 : &#39;a = sqr (4);&#39; 여기서 인수는 4이고 함수는 변수 &#39;a&#39;에 저장된 16을 리턴합니다.">인수</a> (매개 변수)가 표시되도록 확장됩니다. 아래 이미지에서 Toolbox <a href="../Drag_And_Drop_Reference/Common/Common_Actions_Library.htm">공통 라이브러리</a> 에서 <a href="../Drag_And_Drop_Reference/Common/Assign_Variable.htm">변수 할당</a> 작업을 작업 블록 작업 공간으로 드래그했습니다.</p>
+  <p><img alt="DnD™ Assign Variable" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Add_Var.png"/>새 작업이 코드 창의 왼쪽에 축약 형으로 표시되어 있음을 알 수 있습니다. 조치 개요라고하는이 조치 목록을 클릭하여 편집 할 해당 조치로 빠르게 이동할 수 있습니다. 생성 할 DnD ™ 코드의 흐름을 표시하기 위해 각각의 새로운 동작을 이전 동작에 &quot;연쇄&quot;하여 필요한 경우 이벤트에 동작을 계속 추가 할 수 있습니다. 추가 조치를 놓을 수있는 영역은 초기 조치 아래에 강조 표시되며 사용중인 조치에 따라 체인에서 추가 할 수있는 위치를 표시하기 위해 다른 영역이 강조 표시됩니다.</p>
+  <p><img alt="DnD™ Set Direction Variable" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Set_Dir.png"/>작업 공간에 작업을 추가하면 위 작업에 &quot;연쇄&quot;되어 DnD ™ 코드가 흐르는 방식을 확인할 수 있습니다. 한 작업은 다른 작업으로 이어지고 개요 창에는 짧은 형식과 순서로 표시됩니다. 실행:</p>
+  <p><img alt="DnD™ chain of actions" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Scope_Other.png"/>일부 작업은 메인 플로우에서 멀리 떨어진 별도의 체인에 코드를 배치합니다. <a href="../Drag_And_Drop_Reference/Common/If_Variable.htm">If Variable</a> 과 같은 것들은 메인 체인을 계속하기 전에 올바른 조건이 충족되면 발생하는 <em>하위</em> 액션 <em>체인</em> 을 만듭니다.</p>
+  <p><img alt="DnD™ side chain of actions" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_If_Variable.png"/>이와 같이 사이드 체인 블록을 가질 수있는 동작을 사용하는 경우 동작에는 추가 동작을 삭제하기 위해 <em>두</em> 영역이 강조 표시됩니다.</p>
   <ul class="colour">
-    <li>One below the action as normal</li>
-    <li>One to the right of the action to show that you want to create a separate block of actions to run when the condition of the first action returns true</li>
+    <li>평소처럼 행동 아래</li>
+    <li>조치의 오른쪽에있는 첫 번째 조치의 조건이 true를 리턴 할 때 실행할 별도의 조치 블록을 작성하려고 함을 표시합니다.</li>
   </ul>
-  <p><img alt="DnD™ Side Chain Of Actions" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_If_Drop.png"/>You can change the position of actions within the chain by simply clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> and dragging them into the new position that you require, and if you do a click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> and
-    hold for a second then move the mouse, you can move the action within the workspace while maintaining its place within the action block chain.</p>
-  <p>It is also possible to add <strong>comments</strong> to Drag and Drop™ actions, so you can leave notes beside different blocks to explain what they do (which is especially useful when working in a team):</p>
-  <p><img alt="DnD™ Add Comment" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Add_Comment.gif"/>You can find out more about this feature from the page on the <a href="Right_Mouse_Button_Menu_Options.htm">Right Mouse Button Menu</a>.</p>
-  <p>That&#39;s the basics of using the Drag and Drop code editor, but there are further important details explained in the sections below:</p>
+  <p><img alt="DnD™ Side Chain Of Actions" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_If_Drop.png"/>간단히 클릭하여 체인 내에서 작업 위치를 변경할 수 있습니다 필요한 새 위치로 드래그하여 클릭하면 잠시 누르고 마우스를 움직이면 작업 블록 내에서 작업 공간을 유지하면서 작업 공간 내에서 작업을 이동할 수 있습니다.</p>
+  <p>당신이 그들이 (팀에서 작업 할 때 특히 유용하다) 무엇을 설명하기 위해 다른 블록 옆에 메모를 남길 수 있도록 조치 ¢ &quot;드래그 앤 Dropâ에 <strong>주석을</strong> 추가 할 수도 있습니다 :</p>
+  <p><img alt="DnD™ Add Comment" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Add_Comment.gif"/>이 기능에 대한 자세한 내용은 <a href="Right_Mouse_Button_Menu_Options.htm">마우스 오른쪽 버튼 메뉴</a> 페이지에서 확인할 수 있습니다.</p>
+  <p>이것이 드래그 앤 드롭 코드 편집기 사용의 기본 사항이지만 아래 섹션에서 추가로 중요한 세부 사항이 설명되어 있습니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Target Variables</span><span data-close-text="true">Target Variables</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">목표 변수</span> <span data-close-text="true">목표 변수</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">It is important to note that many actions offer a &quot;target&quot; variable, which can be flagged as &quot;Temporary&quot;, for example:</p>
-    <p class="dropspot"><img alt="Example Of Target" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Audio_Get_Audio_Volume.png"/>What this means is that you can supply a variable which is the target to hold the value returned by the
-      action. In the example action above, the action will return the volume of the audio resource that you select, so you supply a target variable to hold this value so you can reference it later.</p>
-    <p class="dropspot">Now, this target variable will need to have been declared previously either using <a href="../Drag_And_Drop_Reference/Common/Assign_Variable.htm">Assign Variable</a> (which creates an <strong>Instance Variable</strong>) or <a href="../Drag_And_Drop_Reference/Common/Declare_Temporary_Variable.htm">Declare Temporary Variable</a> (which
-      creates a <strong>Local Temporary Variable</strong>) If you check the &quot;Temp&quot; option, then you can simply add a variable name and the action will create that variable and set it to hold the return value for you (creating a temporary local
-      variable). Any actions used after this can now access the value in the temporary variable, <strong>but only within the same Event or Script</strong>. Temporary variables are only available within the scope that they were created. For more in depth
-      information on variables and variable scope, please see <a href="../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">here</a>.</p>
+    <p class="dropspot">많은 작업이 &quot;대상&quot;변수를 제공하며 &quot;임시&quot;로 플래그를 지정할 수 있습니다. 예를 들면 다음과 같습니다.</p>
+    <p class="dropspot"><img alt="Example Of Target" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Audio_Get_Audio_Volume.png"/>이것이 의미하는 것은 조치가 리턴 한 값을 보유 할 대상인 변수를 제공 할 수 있다는 것입니다. 위의 액션 예에서는 액션이 ​​선택한 오디오 리소스의 볼륨을 반환하므로 나중에 참조 할 수 있도록이 값을 보유 할 대상 변수를 제공합니다.</p>
+    <p class="dropspot">이제이 대상 변수는 변수 <a href="../Drag_And_Drop_Reference/Common/Assign_Variable.htm">할당</a> ( <strong>인스턴스 변수</strong> 생성) 또는 <a href="../Drag_And_Drop_Reference/Common/Declare_Temporary_Variable.htm">임시 변수 선언</a> ( <strong>현지 임시 변수</strong> 생성)을 사용하여 이전에 선언해야합니다. &quot;Temp&quot;옵션을 선택하면 간단히 변수 이름과 작업은 해당 변수를 만들고 반환 값을 보유하도록 설정합니다 (임시 로컬 변수 만들기). 이후에 사용 된 모든 조치는 이제 임시 변수의 값에 액세스 할 수 <strong>있지만 동일한 Event 또는 Script 내에서만 가능합니다</strong> . 임시 변수는 작성된 범위 내에서만 사용할 수 있습니다. 변수 및 변수 범위에 대한 자세한 내용은 <a href="../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">여기</a> 를 참조 <a href="../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">하십시오</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Action Scope</span><span data-close-text="true">Action Scope</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">활동 범위</span> <span data-close-text="true">활동 범위</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">Not only variables have scopes (see the <strong>Target Variables </strong>section, above), actions can have different scopes too. In fact, almost all actions can be given a different scope to work in, set from the drop down window opened in the action
-      itself as shown here:</p>
-    <p class="dropspot"><img alt="DnD™ Applies To" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Applies_To.png"/>You can also set the scope for all further actions using the special action <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">Apply to</a>.
-      For more information on this feature of the DnD™ actions, please see here:</p>
+    <p class="dropspot">변수에는 범위가있을뿐 아니라 (위의 <strong>대상 변수</strong> 섹션 참조) 작업의 범위도 다를 수 있습니다. 실제로, 거의 모든 작업에 다음과 같이 작업 자체에서 열린 드롭 다운 창에서 설정하여 작업 할 다른 범위를 지정할 수 있습니다.</p>
+    <p class="dropspot"><img alt="DnD™ Applies To" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Applies_To.png"/>특수 조치 <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">적용 대상을</a> 사용하여 모든 추가 조치의 범위를 설정할 수도 있습니다. DnD ™ 액션의이 기능에 대한 자세한 내용은 다음을 참조하십시오.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Applying_Actions_To_Other_Instances.htm">Applying Actions To Other Instances</a></li>
+      <li class="dropspot"><a href="Applying_Actions_To_Other_Instances.htm">다른 인스턴스에 작업 적용</a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Auto Complete</span><span data-close-text="true">Auto Complete</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">자동 완성</span> <span data-close-text="true">자동 완성</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">When working with Drag and Drop you will have to add variables and expressions into the different input fields of the actions. However, as you do this you will often get the <strong>Auto Complete</strong> window popping up to help you:</p>
-    <p class="dropspot"><img alt="Auto Complete" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Action_AutoComplete.png"/>This pop up window will list all the built in GML (GameMaker Language) variables, constants and functions, as
-      well as any resources that contain the initial letters of what you were typing. It can be used to quickly find the resource or variable that you are wanting for the action without having to type it all in yourself. For example, if all your rooms
-      are prefixed &quot;<span class="inline">rm_</span>&quot; then typing that and waiting a moment will show the auto complete window with all the assets beginning with &quot;<span class="inline">rm_</span>&quot;. Note that all the built in variables
-      that are shown in the auto complete window can be used anywhere where a variable or expression is expected in an action, as can most GML functions.</p>
+    <p class="dropspot">끌어서 놓기로 작업 할 때 변수와 표현식을 조치의 다른 입력 필드에 추가해야합니다. 그러나 이렇게하면 <strong>자동 완성</strong> 창이 나타나서 다음과 같은 도움이됩니다.</p>
+    <p class="dropspot"><img alt="Auto Complete" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Action_AutoComplete.png"/>이 팝업 창에는 내장 된 모든 GML (GameMaker Language) 변수, 상수 및 함수는 물론 입력 한 문자의 초기 문자가 포함 된 모든 리소스가 나열됩니다. 직접 입력하지 않고도 조치에 필요한 자원 또는 변수를 빠르게 찾을 수 있습니다. 예를 들어, 모든 객실에 &quot; <span class="inline">rm_</span> &quot;접두사가 붙은 경우 해당 객실을 입력하고 잠시 기다리면 모든 자산이 &quot; <span class="inline">rm_</span> &quot;로 시작하는 자동 완성 창이 표시됩니다. 자동 완성 창에 표시되는 모든 내장 변수는 대부분의 GML 함수와 마찬가지로 작업에서 변수 또는 표현식이 필요한 모든 위치에서 사용할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Action Expansion</span><span data-close-text="true">Action Expansion</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">액션 확장</span> <span data-close-text="true">액션 확장</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">Sometimes when using an action you will see a small plus icon <img alt="Expand Arguments Icon" src="../../assets/Images/Icons/Icon_Expand_Arguments.png"/> to the side. This means that you can expand the action to perform extra tasks or take further
-      arguments. For example, if you look at the <a href="../Drag_And_Drop_Reference/Common/Declare_Temporary_Variable.htm">Declare Temporary Variables</a> action, you can see that it has this  icon:</p>
-    <p class="dropspot"><img alt="Temp Variable Expansion" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Declare_Temp_Var.png"/>When you click the icon, the action will <em>expand </em>and permit you to declare more variables, making
-      it easier and faster to define multiple variables at the same time.</p>
-    <p class="dropspot"><img alt="Temp Variable Expansion Example" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Expansion_Example.png"/>The icon can also be used for those actions that require <strong>optional </strong>arguments,
-      like the <a href="../Drag_And_Drop_Reference/Random/Choose.htm">Choose</a> action, which permits you to add various different values to be returned:</p>
+    <p class="dropspot">Sometimes when using an action you will see a small plus icon <img alt="Expand Arguments Icon" src="../../assets/Images/Icons/Icon_Expand_Arguments.png"/>옆으로. 즉, 작업을 확장하여 추가 작업을 수행하거나 추가 인수를 취할 수 있습니다. 예를 들어, <a href="../Drag_And_Drop_Reference/Common/Declare_Temporary_Variable.htm">임시 변수 선언</a> 조치를 보면 다음 아이콘이 있음을 알 수 있습니다.</p>
+    <p class="dropspot"><img alt="Temp Variable Expansion" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Declare_Temp_Var.png"/>아이콘을 클릭하면 작업이 <em>확장</em> 되어 더 많은 변수를 선언 할 수있어 여러 변수를 동시에 더 쉽고 빠르게 정의 할 수 있습니다.</p>
+    <p class="dropspot"><img alt="Temp Variable Expansion Example" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Expansion_Example.png"/>이 아이콘은 <a href="../Drag_And_Drop_Reference/Random/Choose.htm">선택</a> 조치와 같이 <strong>선택적</strong> 인수가 필요한 조치에 사용될 수 있으며,이를 통해 다양한 다른 값을 추가하여 리턴 할 수 있습니다.</p>
     <p class="dropspot"><img alt="Choose Expansion Example" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Mathematics_Choose.png"/></p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Drag_And_Drop\Drag_And_Drop_Overview\Constructing_Action_Block_Code.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Applying_Actions_To_Other_Instances.htm">Applying Actions To Other Instances</a></div>
+        <div style="float:left">뒤로: <a href="../../Content.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="Applying_Actions_To_Other_Instances.htm">다른 인스턴스에 작업 적용</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Drag And Drop Construction
@@ -171,4 +146,4 @@ Drag And Drop Construction
 drag_and_drop_construction
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Rooms">
-        <span>Rooms</span>
+        <span>객실</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,174 +80,131 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Room Editor</h1>
+  <h1>룸 에디터</h1>
   <p><img class="center" src="../assets/Images/Asset_Editors/Editor_Room.png" style="cursor: nesw-resize;"/></p>
-  <p>The room editor is where you create your game <strong>rooms</strong>. Every game requires <em>at least one room to run</em>, and in the room you can place instances, sprites, tiles, paths and backgrounds. Each of these different assets can be placed
-    on their own unique <strong>layer </strong>which can then be ordered however you wish in the <strong>Layers Editor</strong>. Due to the complexity of the room editor, we&#39;ll give you first a brief overview of the most important features, and then
-    you can find more in-depth details from the section links listed below.</p>
-  <p>When you create a room resource, you can right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on it in the Asset Browser to open the context menu, which will permit you to create <strong>child rooms </strong>(see
-    the page on <a href="Room_Properties/Room_Inheritance.htm">Inheritance</a> for more information), open up the room for editing, add a new resource group to better organise the rooms, rename the room or delete it. Note that to change the room order
-    and/or inheritance you need to use the <a href="../Settings/The_Room_Manager.htm">Room Manager</a>, which you can open using the menu in the top right of the Asset Browser.</p>
-  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_Room_RoomManager.png"/>The room editor is itself a <a href="../Introduction/Workspaces.htm">workspace</a> and as such you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the tab and drag it off of the main window into a new window of its own - perhaps in another display, for example. You can also place it back into the main window by dragging the tab to the top of the IDE and releasing the mouse button.</p>
-  <p>The user interface for the room editor is simple to navigate and split in various discrete sections. Those parts of the editor that are docked - the <strong>room properties</strong> and the <strong>layer editor</strong> as well as the different layer
-    property sections - can also be removed from the dock by simply dragging them out into the workspace, and they can be added back into the docks again by dragging them to the sides or the bottom of the workspace.</p>
-  <p>Below is a brief overview of each of the Room Editor sections:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Rulers / Guides</span><span data-close-text="true">Rulers / Guides</span></a></p>
+  <p>방 편집기는 게임 <strong>방</strong> 을 만드는 곳입니다. 모든 게임에는 <em>최소한 한 개의 방이</em> 있어야 <em>하며</em> , 그 방에 인스턴스, 스프라이트, 타일, 경로 및 배경을 배치 할 수 있습니다. 이러한 서로 다른 자산은 각각 고유 한 <strong>레이어</strong> 에 배치 할 수 있지만 <strong>레이어 편집기</strong> 에서 원하는대로 주문할 수 있습니다. 회의실 편집기의 복잡성으로 인해 가장 중요한 기능에 대한 간략한 개요를 먼저 제공 한 다음 아래 나열된 섹션 링크에서보다 자세한 정보를 찾을 수 있습니다.</p>
+  <p>When you create a room resource, you can right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/>자산 브라우저에서 상황에 맞는 메뉴를 열면 <strong>하위 실</strong> 을 만들 수 <strong>있으며</strong> (자세한 내용은 <a href="Room_Properties/Room_Inheritance.htm">상속</a> 페이지 참조) 편집 할 실을 열고 새 자원 그룹을 추가하여 실을 더 잘 구성하고 이름을 바꿉니다. 방을 삭제하거나 삭제하십시오. 회의실 순서 및 / 또는 상속을 변경하려면 자산 관리자의 오른쪽 상단에있는 메뉴를 사용하여 열 수있는 <a href="../Settings/The_Room_Manager.htm">회의실 관리자</a> 를 사용해야합니다.</p>
+  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_Room_RoomManager.png"/>회의실 편집기 자체는 <a href="../Introduction/Workspaces.htm">작업 공간</a> 이므로 클릭 할 수 있습니다. 탭에서 기본 창에서 다른 창으로 끌어서 새 창으로 끌어 놓습니다. 탭을 IDE 상단으로 드래그하고 마우스 버튼을 놓아 주 창으로 다시 놓을 수도 있습니다.</p>
+  <p>회의실 편집기의 사용자 인터페이스는 다양한 개별 섹션으로 쉽게 탐색하고 분할 할 수 있습니다. 도킹 된 편집기의 부분 ( <strong>룸 속성</strong> 및 <strong>레이어 편집기</strong> 와 다른 레이어 속성 섹션)을 작업 공간으로 끌어서 독에서 제거 할 수 있으며 도크에 다시 추가 할 수 있습니다. 다시 작업 공간의 측면이나 하단으로 드래그하여.</p>
+  <p>아래는 각 룸 편집기 섹션에 대한 간략한 개요입니다.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">통치자 / 가이드</span> <span data-close-text="true">통치자 / 가이드</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The rulers along the edge of the canvas show you the position of the things that are placed within it, and are marked from (0, 0) which is the center of the canvas and the origin for the room. You can click and drag on the rulers to pull a horizontal
-      or vertical guide into the room, and this guide can then be used to accurately position the different assets that are being used, as moving an asset close to one will &quot;snap&quot; it to the guide. While positioning assets within the room, smart
-      guides will also be temporarily shown indicating the distance between assets, as well as the distance from the room boundary or center point.</p>
-    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" class="center" alt="Guides and Smart Guides in the Sequences Editor"/>The distance that assets &quot;snap&quot;
-      to guides, as well as other properties, can be set in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">Room Editor Preferences</a>.</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">캔버스의 가장자리를 따라있는 눈금자는 캔버스 안에 놓인 물건의 위치를 ​​보여 주며 캔버스의 중심이되는 (0, 0)과 방의 원점으로 표시됩니다. 눈금자를 클릭하고 드래그하여 가로 또는 세로 안내선을 실내로 끌어 올 수 있습니다. 그러면이 안내선을 사용하여 사용중인 여러 자산을 정확하게 배치 할 수 있습니다. 가이드. 방 안에 자산을 배치하는 동안, 실 경계 또는 중심점으로부터의 거리뿐만 아니라 자산 사이의 거리를 나타내는 스마트 안내 선도 일시적으로 표시됩니다.</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" class="center" alt="Guides and Smart Guides in the Sequences Editor"/>자산이 안내선에 &quot;스냅&quot;되는 거리와 다른 속성은 <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">룸 편집기 기본</a> 설정에서 설정할 수 있습니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Layer Editor</span><span data-close-text="true">Layer Editor</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">레이어 편집기</span> <span data-close-text="true">레이어 편집기</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The room editor places things onto layers within the room. Each layer is at a discrete &quot;depth&quot;, where those that appear at the bottom of the list in the layer window will be drawn under those that appear near the top.</p>
-    <p class="note"><strong>IMPORTANT!</strong> There is a minimum and maximum layer depth of -16000 to 16000. Anything placed on a layer outside that range will not be drawn although all events will still run as normal.</p>
-    <p class="dropspot">Layers are created by clicking  the appropriate button for the type of layer you want to create, which are:</p>
+    <p class="dropspot">방 편집기는 물건을 방 안의 레이어에 배치합니다. 각 레이어는 별개의 &quot;깊이&quot;에 있으며, 레이어 창의 목록 하단에 나타나는 레이어는 상단 근처에 나타나는 레이어 아래에 그려집니다.</p>
+    <p class="note"><strong>중대한!</strong> 최소 및 최대 레이어 깊이는 -16000 ~ 16000입니다.이 범위 밖의 레이어에 배치 된 항목은 모든 이벤트가 여전히 정상적으로 실행되지만 그려지지는 않습니다.</p>
+    <p class="dropspot">만들려는 레이어 유형에 해당하는 버튼을 클릭하여 레이어를 만듭니다.</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
-          <td class="icons"><img alt="Instance Layer Icon" src="../assets/Images/Icons/Icon_Instance.png" style="margin-left: 24px;"/></td>
-          <td class="icons"><strong>Instances</strong></td>
-          <td class="text">This layer is for all the <a href="../Quick_Start_Guide/Objects_And_Instances.htm">instances</a> that your game will use.</td>
+          <td class="icons"><img alt="인스턴스 레이어 아이콘" src="../assets/Images/Icons/Icon_Instance.png" style="margin-left: 24px;"/></td>
+          <td class="icons"><strong>인스턴스</strong></td>
+          <td class="text">이 레이어는 게임에서 사용할 모든 <a href="../Quick_Start_Guide/Objects_And_Instances.htm">인스턴스</a> 를위한 것입니다.</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Tile map Layer Icon" src="../assets/Images/Icons/Icon_Tilemap.png" style="margin-left: 24px;"/></td>
-          <td class="icons"><strong>Tile Maps</strong></td>
-          <td class="text">This layer is for placing tiles from <a href="../Quick_Start_Guide/Creating_Tile_Sets.htm">tile sets</a> as <a class="tooltip" title="The tile map is the name given to a collection of tiles taken from a tile set and used to create levels in a game.">tile map</a><span class="glossextra">s</span>.</td>
+          <td class="icons"><img alt="타일 ​​맵 레이어 아이콘" src="../assets/Images/Icons/Icon_Tilemap.png" style="margin-left: 24px;"/></td>
+          <td class="icons"><strong>타일 ​​맵</strong></td>
+          <td class="text">이 레이어에서 타일을 배치입니다 <a href="../Quick_Start_Guide/Creating_Tile_Sets.htm">타일 세트</a> 로 <a class="tooltip" title="타일 ​​맵은 타일 세트에서 가져와 게임에서 레벨을 만드는 데 사용되는 타일 모음에 부여 된 이름입니다.">타일 맵</a> <span class="glossextra">의.</span></td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Path Layer Icon" height="30" src="../assets/Images/Icons/Icon_Paths.png" style="margin-left: 24px;" width="30"/></td>
-          <td class="icons"><strong>Paths</strong></td>
-          <td class="text">This layer is for showing and adding <a href="Paths.htm">paths</a> in a room.</td>
+          <td class="icons"><img alt="경로 레이어 아이콘" height="30" src="../assets/Images/Icons/Icon_Paths.png" style="margin-left: 24px;" width="30"/></td>
+          <td class="icons"><strong>경로</strong></td>
+          <td class="text">이 레이어는 방에 <a href="Paths.htm">경로</a> 를 표시하고 추가하기위한 것입니다.</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Asset Layer Icon" src="../assets/Images/Icons/Icon_Assets.png" style="margin-left: 24px;"/></td>
-          <td class="icons"><strong>Assets</strong></td>
-          <td class="text">This layer is for visual assets to be added to the room, like <a href="../Quick_Start_Guide/Creating_Sprites.htm">sprites</a> and <a href="../Quick_Start_Guide/Sequences.htm">sequences</a>.</td>
+          <td class="icons"><img alt="자산 레이어 아이콘" src="../assets/Images/Icons/Icon_Assets.png" style="margin-left: 24px;"/></td>
+          <td class="icons"><strong>자산</strong></td>
+          <td class="text">이 레이어는 <a href="../Quick_Start_Guide/Creating_Sprites.htm">스프라이트</a> 및 <a href="../Quick_Start_Guide/Sequences.htm">시퀀스</a> 와 같이 시각적 자산을 룸에 추가하기위한 것입니다.</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Background Layer Icon" src="../assets/Images/Icons/Icon_Background.png" style="margin-left: 24px;"/></td>
-          <td class="icons"><strong>Background</strong></td>
-          <td class="text">This type of layer defines a background, which is essentially a single colour or sprite image that is drawn over the whole room.</td>
+          <td class="icons"><img alt="배경 레이어 아이콘" src="../assets/Images/Icons/Icon_Background.png" style="margin-left: 24px;"/></td>
+          <td class="icons"><strong>배경</strong></td>
+          <td class="text">이 유형의 레이어는 배경을 정의합니다. 배경은 전체 방에 그려진 단색 또는 스프라이트 이미지입니다.</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can also create a layer folder using the folder button <img alt="Folder Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Folder.png" width="24"/> where you can group selected layers together, as well as delete the selected layers
-      with the delete button <img alt="Delete Layer Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_DeleteLayer.png" width="24"/>. Each of these layer types are discussed <a href="Room_Properties/Layer_Properties.htm">here</a> in more
-      detail.
-    </p>
-    <p class="dropspot">Note that you can toggle <a href="Room_Properties/Room_Inheritance.htm">inheritance</a> for the layer editor which will affect layer order and visibility. The visibility itself can be set by clicking the eye icon <img alt="Eye Icon" class="icon" height="21" src="../assets/Images/Icons/Icon_Eye.png" width="21"/> beside each of the layers, or you can click the one at the very top to enable/disable all layers at once. You also have the possibility to &quot;lock&quot; a layer (or all of them) so that
-      they cannot be changed by clicking the padlock icon <img alt="Padlock Icon" class="icon" src="../assets/Images/Icons/Icon_Padlock.png"/>. Note that layers which are flagged as invisible will <strong>not</strong> be shown when the game is run.</p>
+    <p class="dropspot">You can also create a layer folder using the folder button <img alt="Folder Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Folder.png" width="24"/>선택한 레이어를 함께 그룹화하고 삭제 버튼으로 선택한 레이어를 삭제할 수 있습니다. . 이러한 각 레이어 유형에 대해서는 <a href="Room_Properties/Layer_Properties.htm">여기</a> 에서 자세히 설명합니다.</p>
+    <p class="dropspot">Note that you can toggle <a href="Room_Properties/Room_Inheritance.htm">inheritance</a> for the layer editor which will affect layer order and visibility. The visibility itself can be set by clicking the eye icon <img alt="Eye Icon" class="icon" height="21" src="../assets/Images/Icons/Icon_Eye.png" width="21"/>각 레이어 옆에 있거나 맨 위의 레이어를 클릭하여 모든 레이어를 한 번에 활성화 / 비활성화 할 수 있습니다. 자물쇠 아이콘을 클릭하여 레이어를 변경할 수 없도록 레이어 (또는 모든 레이어)를 &quot;잠글&quot;수 있습니다 . 게임이 실행되면 보이지 않는 것으로 표시된 레이어는 표시 <strong>되지 않습니다</strong> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Layer Properties</span><span data-close-text="true">Layer Properties</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">레이어 속성</span> <span data-close-text="true">레이어 속성</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The room layer properties window will change depending on the currently selected layer in the layer editor.<br/></p>
-    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Room_LayerProperties.png" src="../assets/Images/Asset_Editors/Editor_Room_LayerProperties.png" alt="Room Layer Properties In Full" class="center"/> Each window will have the different
-      properties and lists associated with the currently selected layer type, and you will be able to edit fundamental details for how the layer is displayed and what is actually on the layer. Please see <a href="Room_Properties/Layer_Properties.htm">here</a>      for more detail.<br/></p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">룸 레이어 속성 창은 레이어 편집기에서 현재 선택된 레이어에 따라 변경됩니다.</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Room_LayerProperties.png" src="../assets/Images/Asset_Editors/Editor_Room_LayerProperties.png" alt="Room Layer Properties In Full" class="center"/>각 창에는 현재 선택한 레이어 유형과 관련된 속성과 목록이 다르며 레이어가 표시되는 방법과 실제로 레이어에있는 내용에 대한 기본 세부 정보를 편집 할 수 있습니다. 자세한 내용은 <a href="Room_Properties/Layer_Properties.htm">여기</a> 를 참조 <a href="Room_Properties/Layer_Properties.htm">하십시오</a> .</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Room Properties</span><span data-close-text="true">Room Properties</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">객실 속성</span> <span data-close-text="true">객실 속성</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">This section of the room editor is where you can define all the base properties for the room, like it&#39;s size, whether it uses physics, or any cameras and viewports it requires. This section is dicussed in more detail <a href="Room_Properties/Room_Properties.htm">here</a>.<br/></p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">룸 편집기의이 섹션에서는 룸 크기, 물리 사용 여부, 필요한 카메라 및 뷰포트 등 룸의 모든 기본 속성을 정의 할 수 있습니다. 이 섹션은 <a href="Room_Properties/Room_Properties.htm">여기</a> 에서 더 자세히 설명 <a href="Room_Properties/Room_Properties.htm">합니다</a> .</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Layer Toolbox</span><span data-close-text="true">Layer Toolbox</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">레이어 도구 상자</span> <span data-close-text="true">레이어 도구 상자</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">Certain layer types will have additional tools added to the top of the IDE in the <strong>Layer Toolbox</strong> (for example, tile layers or path layers). The exact tools will change based on the layer type currently being edited, and so are explained
-      on the page explaining each layer, <a href="Room_Properties/Layer_Properties.htm">here</a>.</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">특정 레이어 유형에는 <strong>레이어 도구 상자</strong> 의 IDE 상단에 추가 <strong>도구</strong> (예 : 타일 레이어 또는 경로 레이어)가 추가됩니다. 정확한 도구는 현재 편집중인 레이어 유형에 따라 변경되므로 각 레이어를 설명하는 페이지에 설명되어 <a href="Room_Properties/Layer_Properties.htm">있습니다</a> .</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Room Toolbox</span><span data-close-text="true">Room Toolbox</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">방 도구 상자</span> <span data-close-text="true">방 도구 상자</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">At the top of the main Room Editor canvas you have a few controls to deal with how things are displayed. They are:</p>
+    <p class="dropspot">메인 룸 편집기 캔버스 상단에는 사물이 표시되는 방식을 다루는 몇 가지 컨트롤이 있습니다. 그들은:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img alt="Canvas Grid Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasGrid.png"/> <strong>Toggle Canvas Grid</strong>: This will toggle on/off the Room Editor canvas grid. This is a grid that GameMaker Studio 2 draws over the main canvas
-        to divide it into sections, and by default is set to 32x32px in size. However if you click the Grid Menu icon <img alt="Icon Grid Menu" class="icon" src="../assets/Images/Icons/Icon_CanvasOptions.png"/> you will open the grid options:<img alt="Room Grid Options" class="center" src="../assets/Images/Asset_Editors/Editor_RoomGridControls.png"/>These options permit you to set the grid colour and alpha, as well as the cell values for the grid along the X and Y axis. You also have an option to enable or disable
-        grid snapping here (enabled by default). You can use the keyboard shortcuts &quot;G&quot; and <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55"/> + &quot;G&quot; to toggle the grid visibility
-        and grid snapping respectively.</li>
-      <li class="dropspot"><img alt="Canvas Zoom Controls Icons" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasZoom.png" width="120"/> <strong>Canvas Zoom Controls</strong>: These buttons control the current canvas zoom level. You can zoom in or out and
-        clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png"/> button will reset the canvas to be 1:1 with the room being edited. You can also click the Window Fit button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png"/> to make the entire room canvas fit within the current editor workspace (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/>, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55"/> will set the room canvas to be 1:1 with the room settings.</li>
-      <li class="dropspot"><strong><img alt="Canvas View Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasViews.png"/> Show Views</strong>: Clicking this will enable or disable the view rectangle. When enabled you will see a highlighted area that signifies the different
-        views that are enabled for the room.</li>
-      <li class="dropspot"><strong><img alt="Play Room Icon" class="icon" src="../assets/Images/Icons/Icon_PlayRoom.png"/> Play Animations</strong>: When adding sprites, sequences or animated tiles, you may want to get an idea of how these will look within the room itself
-        without having to compile the whole project, and so you can click this to start all the different animations playing. Clicking it again will stop the animation.</li>
-      <li class="dropspot"><strong><img alt="Canvas Layer Select Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasSelect.png"/> Canvas Select From Any Layer</strong>: By default when you click on an element in the room canvas you will only be able to select those
-        assets that are on the layer currently being edited, however if you enable this option you can then click on any element and it will be selected, changing the target layer to the one that the element is on. You can use the keyboard shortcut &quot;
-        <span class="inline">P</span>&quot; to temporarily enable this (hold &quot;<span class="inline">P</span>&quot; to enable and release to disable)
-        <p class="dropspot"> </p>
-      </li>
+      <li class="dropspot"><strong>캔버스 그리드 토글</strong> : 룸 에디터 캔버스 그리드를 켜거나 끕니다. 이것은 GameMaker Studio 2가 메인 캔버스 위에 그려서 여러 섹션으로 나누는 그리드이며 기본적으로 32x32px 크기로 설정되어 있습니다. 그러나 그리드 메뉴 아이콘을 클릭하면 그리드 옵션을 엽니 다 : 이 옵션을 사용하면 X 및 Y 축을 따라 그리드의 셀 값뿐만 아니라 그리드 색상 및 알파를 설정할 수 있습니다. 그리드 스냅을 활성화하거나 비활성화하는 옵션도 있습니다 (기본적으로 활성화되어 있음). 바로 가기 키 &quot;G&quot;를 사용할 수 있습니다. + &quot;G&quot;는 그리드 가시성과 그리드 스냅을 각각 토글합니다.</li>
+      <li class="dropspot"><strong>캔버스 줌 컨트롤</strong> :이 버튼은 현재 캔버스 줌 레벨을 제어합니다. 확대 또는 축소하고 버튼을 누르면 룸이 편집되는 상태에서 캔버스가 1 : 1로 재설정됩니다. 창 맞춤 버튼을 클릭해도됩니다 전체 룸 캔버스를 현재 편집기 작업 공간에 맞추려면 (적합한 크기에 맞게 확대 / 축소) 을 사용하여 확대 및 축소 할 수도 있습니다. / 그리고 마우스 휠 을 누르고 / + 방 설정에서 방 캔버스를 1 : 1로 설정합니다.</li>
+      <li class="dropspot"><strong>보기 표시</strong> :이 옵션을 클릭하면보기 사각형이 활성화 또는 비활성화됩니다. 사용 설정하면 회의실에 사용 가능한 다른보기를 나타내는 강조 표시된 영역이 표시됩니다.</li>
+      <li class="dropspot"><strong>애니메이션 재생</strong> : 스프라이트, 시퀀스 또는 애니메이션 타일을 추가 할 때 전체 프로젝트를 컴파일하지 않고도 룸 내부에서 어떻게 보일지에 대한 아이디어를 원할 수 있으므로이 버튼을 클릭하면 다른 모든 애니메이션 재생을 시작할 수 있습니다. 다시 클릭하면 애니메이션이 중지됩니다.</li>
+      <li class="dropspot"><strong>캔버스 모든 레이어에서 선택</strong> : 기본적으로 룸 캔버스에서 요소를 클릭하면 현재 편집중인 레이어에있는 자산 만 선택할 수 있지만이 옵션을 사용하면 요소를 클릭하고 대상 레이어를 요소가있는 레이어로 변경하여 선택됩니다. 키보드 단축키 &quot; <span class="inline">P</span> &quot;를 사용하여이를 일시적으로 활성화 할 수 있습니다 ( &quot; <span class="inline">P</span> &quot;를 길게 눌러 활성화 및 해제)</li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Room Canvas</span><span data-close-text="true">Room Canvas</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">방 화포</span> <span data-close-text="true">방 화포</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
     <p class="dropspot">The center of the room editor window is taken up with the area where all the actual editing takes place. Here is where you&#39;ll be placing your instances and assets, drawing your tiles, or positioning your paths. You can zoom in and out using the
-      mouse wheel or the room controls at the top, and you can pan around by holding the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/> down and moving the mouse around or using <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> while moving.</p>
+      mouse wheel or the room controls at the top, and you can pan around by holding the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/>아래로 마우스를 움직이거나 + 움직이면서.</p>
     <p class="dropspot">When creating asset layers or instance layers, you can place the asset or instance by simply dragging it from the Asset Browser and then dropping it where you want it to be positioned. Alternatively you can select an asset or instance from the Asset
-      Browser and then press and hold <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55"/> to preview the resource &quot;in-situ&quot;, and if you additionally click the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> you can add the instance and even &quot;paint&quot; it into the room layer by maintaining the button pressed and dragging the mouse. Note that by default instances and sprites that are added
-      to a room in this way will be snapped to the defined room grid settings, but you can hold down <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> to have the instance follow the mouse precisely and not snap (releasing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> will permit snapping again).</p>
-    <p class="dropspot">For paths you can create a new path layer and path resource right from within the Room Editor- or create a new path resource and then drag it into the main editor window as you would for an instance - and then edit the path and its connections in
-      the editor window too. For tile sets, you can &quot;paint&quot; them in from the tile set editor.</p>
-    <p class="dropspot">Note that you can select and move or delete multiple assets from the same layer by holding down <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the ones you want, and most resources in the room editor will permit you to rotate and scale them (singly
-      or as a group) by clicking and holding <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> along the outside edges or corners and dragging the mouse. You can also double click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on any single asset (tiles, instances, sprites) to have the editor pan to it and open up the properties window for the asset selected.</p>
+      Browser and then press and hold <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55"/>&quot;현장&quot;리소스를 미리 보거나 마우스 왼쪽 버튼을 추가로 클릭하면 버튼을 누른 상태에서 마우스를 드래그하여 인스턴스를 추가하고 룸 레이어에 &quot;페인트&quot;할 수도 있습니다. 기본적으로 이러한 방식으로 룸에 추가 된 인스턴스 및 스프라이트는 정의 된 룸 그리드 설정에 스냅되지만 계속 누르고 있으면됩니다. / 인스턴스가 마우스를 정확하게 따르고 스냅되지 않도록하려면 / 다시 스냅을 허용합니다).</p>
+    <p class="dropspot">경로의 경우 룸 편집기 내에서 바로 새 경로 레이어 및 경로 리소스를 만들거나 새 경로 리소스를 만든 다음 인스턴스와 마찬가지로 주 편집기 창으로 끌어서 경로와 연결을 편집 할 수 있습니다 에디터 창도. 타일 ​​세트의 경우 타일 세트 편집기에서 &quot;페인트&quot;할 수 있습니다.</p>
+    <p class="dropspot">Note that you can select and move or delete multiple assets from the same layer by holding down <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/>/ + 룸 편집기의 대부분의 리소스를 사용하면 클릭하거나 길게 눌러 (단일 또는 그룹으로) 회전하고 크기를 조정할 수 있습니다 바깥 쪽 가장자리 나 모서리를 따라 마우스를 드래그합니다. 두 번 클릭해도됩니다 단일 자산 (타일, 인스턴스, 스프라이트)에서 편집기를 이동하여 선택한 자산의 속성 창을 엽니 다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Status Bar</span><span data-close-text="true">Status Bar</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">상태 표시 줄</span> <span data-close-text="true">상태 표시 줄</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">The status bar is used to show you context specific information. The status bar will always show you where in the room the mouse cursor is, but it will also show additional information based on the layer being edited, the tool being used and the state
-      of that tool.</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">상태 표시 줄은 상황에 맞는 정보를 표시하는 데 사용됩니다. 상태 표시 줄에는 항상 마우스 커서가있는 방의 위치가 표시되지만 편집중인 레이어, 사용중인 도구 및 해당 도구의 상태에 따라 추가 정보가 표시됩니다.</p>
+    <p class="dropspot"></p>
   </div>
   <p> </p>
-  <p>You can get more information about some of the above mentioned sections from the following pages:</p>
+  <p>다음 페이지에서 위에서 언급 한 일부 섹션에 대한 자세한 정보를 얻을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="Room_Properties/Layer_Properties.htm">Layer Types And Properties</a></li>
-    <li><a href="Room_Properties/Room_Properties.htm">Room Properties</a></li>
-    <li><a href="Room_Properties/Room_Inheritance.htm">Room Inheritance</a></li>
+    <li><a href="Room_Properties/Layer_Properties.htm">레이어 유형 및 속성</a></li>
+    <li><a href="Room_Properties/Room_Properties.htm">객실 속성</a></li>
+    <li><a href="Room_Properties/Room_Inheritance.htm">방 상속</a></li>
   </ul>
-  <p>Apart from the in-editor tools, you will also see a new drop down menu has been added to the top of the IDE.</p>
-  <p><img alt="Room Editor Menus" class="center" src="../assets/Images/Asset_Editors/Editor_RoomContextMenu.png"/>These menus are explained below:</p>
+  <p>편집기 내 도구 외에도 IDE 맨 위에 새로운 드롭 다운 메뉴가 추가 된 것을 볼 수 있습니다.</p>
+  <p><img alt="Room Editor Menus" class="center" src="../assets/Images/Asset_Editors/Editor_RoomContextMenu.png"/>이러한 메뉴는 아래에 설명되어 있습니다.</p>
   <ul class="colour">
-    <li><strong>Layer View</strong>: This will re-open the Layer Editor window should you have closed it at any time.</li>
-    <li><strong>Room Properties</strong>: This will re-open the Room Properties window should you have closed it at any time.</li>
-    <li><strong>Layer Properties</strong>: This will re-open the <a href="Room_Properties/Layer_Properties.htm">Layer Properties Window</a> should you have closed it at any time.</li>
-    <li><strong>Instance Creation Order</strong>: This will open the <strong>Instance Creation Order Window </strong>(which can also be opened by using the button in the <a href="Room_Properties/Room_Properties.htm">Room Properties</a><strong> </strong>window):<br/>
-      <img alt="Room Creation Order Window" class="center" src="../assets/Images/Asset_Editors/Editor_Room_CreationOrder.png"/>This window lists all the instances in the room in the order that they will be created (from top to bottom). Should you require
-      a specific instance to be created before any other, you can simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> and drag it to the position your require.</li>
-    <li><strong>Reset Windows On Current Desktop</strong>: This will reset the room editor window layout to its default values for the desktop workspace currently focused.</li>
+    <li><strong>Layer View</strong> : 언제라도 닫으면 Layer Editor 창이 다시 열립니다.</li>
+    <li><strong>Room Properties</strong> : 언제라도 닫을 경우 Room Properties 창을 다시 엽니 다.</li>
+    <li><strong>레이어 속성</strong> : 언제라도 닫으면 <a href="Room_Properties/Layer_Properties.htm">레이어 속성 창을</a> 다시 엽니 다.</li>
+    <li><strong>인스턴스 생성 순서</strong> : <strong>인스턴스 생성 순서 창을</strong> 엽니 다 ( <a href="Room_Properties/Room_Properties.htm">방 속성</a> 의 버튼을 사용하여 열 수도 있음). 창문): 이 창에는 룸의 모든 인스턴스가 생성되는 순서대로 (위에서 아래로) 나열됩니다. 다른 인스턴스보다 먼저 특정 인스턴스를 작성해야하는 경우 간단히 클릭하면됩니다. 원하는 위치로 드래그하십시오.</li>
+    <li><strong>현재 바탕 화면에서 Windows 재설정</strong> : 룸 편집기 창 레이아웃을 현재 포커스가있는 데스크탑 작업 공간의 기본값으로 재설정합니다.</li>
   </ul>
   <p> </p>
   <ul class="colour">
-    <li><strong>Tile Editing</strong>: When working with a tile layer, this option will be highlighted in the drop down menu. It has the following sub-menu:<br/>
-      <img alt="Room Tile Menu" class="center" src="../assets/Images/Asset_Editors/Editor_Room_TileMenu.png"/>When editing the tile layer you can select multiple tiles by clicking, holding down and dragging the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/>, or you can select and group individual tiles using <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/>, or remove individual tiles from the selection using <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/>. From this menu you can then clear the selection or invert it as well as cut, copy or paste the selection to another layer (or even the same layer but
-      in another position). The final option will re-open the tile set editor docked window should you have closed it.</li>
-    <li><strong>Convert Image To Tile Map</strong>: The Convert Image To Tile Map option is a powerful tool that can be used to import a single image and then extract the tiles used from the image and recreate it as a tile map layer in the room editor, creating
-      the required tile set and sprite as part of process. When you select this tool, you will be asked to supply an uncompressed image file (<span class="inline">PNG</span>, <span class="inline">GIF </span>or <span class="inline">BMP</span>) which will
-      then be loaded. On load you will be presented with the <strong>Image Import</strong> tool:<br/>
-      <img alt="Convert Image To Tilemap Tool" class="center" src="../assets/Images/Asset_Editors/Editor_Room_ConvertImage.png"/>Here you are given options on how to split up the tile when creating the tile set, and you can set the cell width and height
-      as well as any offsets required around the edges. You can also set the approximate width (in pixels) for the final sprite that is created. For example, if the tile set is made up of 64x64 tile cells and you set a width here of 200, the final sprite
-      that is created for use in the tile set will be 192 pixels wide (ie: 3 tile cells). If you leave it at the default value of 0, then GameMaker Studio 2 will attempt to make as &quot;square&quot; a sprite as possible with approximately the same number
-      of horizontal and vertical tile cells.<br/>
-      <br/> After setting the way the image is to be split, clicking the swatch beside the <strong>Remove Colour</strong> option will open the colour picker and permit you to select a colour that is to be removed from the final sprite. This is usually
-      a background colour that you want to remove and setting this swatch to anything other than 100% transparent (alpha 0) will remove the selected colour on import.<br/>
-      <br/> Finally, you have the option to name the sprite, tile set and tile map layer that will be created for you by this tool. When you finalise the import, a sprite with all the images laid out in a grid will be created, as well as a tile set from
-      this sprite. In the room, a new tile map layer will be created and the image reproduced using the generated tile set. Note that the tool will <em>not </em>duplicate tiles and will instead recognise when a cell has image data that coincides with
-      another cell (this includes rotated tiles). You can see this in the following image where only one flower tile has been created and one crate tile too, yet there are multiple instances of both, with some instances rotated in the base image:<br/>
-      <img alt="Convert Image To Tilemap Example Tileset" class="center" src="../assets/Images/Asset_Editors/Editor_Room_TileExample.png"/></li>
+    <li><strong>타일 ​​편집</strong> : 타일 레이어로 작업 할 때이 옵션은 드롭 다운 메뉴에서 강조 표시됩니다. 다음과 같은 하위 메뉴가 있습니다. 타일 ​​레이어를 편집 할 때 마우스 왼쪽 버튼을 클릭하고 누른 상태에서 드래그하여 여러 타일을 선택할 수 있습니다 를 사용하여 개별 타일을 선택하고 그룹화 할 수 있습니다. / + 를 사용하여 선택에서 개별 타일을 제거하거나 + . 이 메뉴에서 선택을 지우거나 반전시킬 수 있으며 선택을 다른 레이어 (또는 같은 레이어이지만 다른 위치에)로 잘라내거나 복사하거나 붙여 넣을 수 있습니다. 마지막 옵션은 타일 세트 편집기 고정 창을 다시 열었을 때 다시 열립니다.</li>
+    <li><strong>이미지를 타일 맵으로</strong> 변환 : <strong>이미지를 타일 맵으로</strong> 변환 옵션은 단일 이미지를 가져온 다음 이미지에서 사용 된 타일을 추출하여 룸 편집기에서 타일 맵 레이어로 다시 만드는 데 사용할 수있는 강력한 도구입니다. 프로세스의 일부로 필요한 타일 세트 및 스프라이트. 이 도구를 선택하면 압축되지 않은 이미지 파일 ( <span class="inline">PNG</span> , <span class="inline">GIF</span> 또는 <span class="inline">BMP</span> )을 제공하라는 메시지가 표시되고로드됩니다. 로드시 <strong>이미지 가져 오기</strong> 도구가 제공됩니다. 여기에는 타일 세트를 만들 때 타일을 분할하는 방법에 대한 옵션이 제공되며 셀 너비와 높이 및 가장자리 주위에 필요한 오프셋을 설정할 수 있습니다. 생성 된 최종 스프라이트의 대략적인 너비 (픽셀)를 설정할 수도 있습니다. 예를 들어, 타일 세트가 64x64 타일 셀로 구성되고 여기에 너비를 200으로 설정하면 타일 세트에 사용하기 위해 생성 된 최종 스프라이트의 너비는 192 픽셀입니다 (예 : 3 타일 셀). 기본값을 0으로두면 GameMaker Studio 2는 대략 같은 수의 가로 및 세로 타일 셀을 사용하여 가능한 한 스프라이트를 &quot;사각&quot;으로 만들려고 시도합니다. 이미지 분할 방식을 설정 한 후 <strong>색상 제거</strong> 옵션 옆의 견본을 클릭하면 색상 선택기가 열리고 최종 스프라이트에서 제거 할 색상을 선택할 수 있습니다. 이것은 일반적으로 제거하려는 배경색이며이 견본을 100 % 투명 (알파 0) 이외의 값으로 설정하면 선택한 색상을 가져올 때 제거됩니다. 마지막으로이 도구에서 생성 할 스프라이트, 타일 세트 및 타일 맵 레이어의 이름을 지정할 수 있습니다. 가져 오기를 완료하면 격자에 배치 된 모든 이미지가 포함 된 스프라이트와이 스프라이트에서 설정된 타일이 생성됩니다. 룸에서 새로운 타일 맵 레이어가 생성되고 생성 된 타일 세트를 사용하여 이미지가 재생됩니다. 이 도구는 타일을 복제 <em>하지</em> 않고 셀에 다른 셀과 일치하는 이미지 데이터가있을 때이를 인식합니다 (회전 된 타일 포함). 하나의 꽃 타일과 하나의 상자 타일도 만들어졌지만 기본 이미지에서 일부 인스턴스가 회전 된 여러 인스턴스가있는 다음 이미지에서이를 확인할 수 있습니다.</li>
   </ul>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Rooms.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Scripts.htm">Scripts</a></div>
+        <div style="float:left">뒤로: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
+        <div style="float:right">다음: <a href="Scripts.htm">스크립트</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Room Editor
@@ -259,4 +216,4 @@ Layer Properties
 room_editor
 -->
 
-</body></html>
+</body></html> 

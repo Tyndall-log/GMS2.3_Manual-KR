@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Creating Sound Effects">
-        <span>Creating Sound Effects</span>
+        <span>음향 효과 만들기</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,37 +81,29 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Creating Sound Effects</h1>
-  <p>All games have to have sound effects - and most also have music - which means that you need to be able to add them to your game in GameMaker Studio 2. This is done through the <a href="../The_Asset_Editors/Sounds.htm"><strong>Sound Editor</strong></a>,
-    which is opened whenever you create a new Sound asset in the Asset Browser:</p>
+  <h1>음향 효과 만들기</h1>
+  <p>모든 게임에는 사운드 효과가 있어야하며 대부분 음악도 있어야합니다. 즉, GameMaker Studio 2에서 게임에 게임을 추가 할 수 있어야합니다. 이는 새 사운드를 만들 때마다 열리는 <a href="../The_Asset_Editors/Sounds.htm"><strong>사운드 편집기를</strong></a> 통해 수행됩니다. 자산 브라우저의 자산 :</p>
   <p><img alt="The Sound Editor" class="center" src="../assets/Images/QS_Guide/QS_SoundEditor.png"/></p>
-  <p>Sounds in GameMaker Studio 2 can be <strong>uncompressed </strong>or <strong>compressed</strong>, with compressed sounds having additional options on how to deal with them at run time. Uncompressed sounds are those that have been saved as <span class="inline">WAV</span>    format files, while compressed sounds can be either <span class="inline">MP3</span> or <span class="inline">OGG</span> format. In general you&#39;ll want small sound effects to be <span class="inline">WAV</span> - like shooting sounds, or button sounds,
-    etc... - and larger effects or music to be <span class="inline">MP3</span> or <span class="inline">OGG</span>. As with the other different resources, it is recommended that you name your sounds using an appropriate prefix like &quot; <span class="inline">snd_</span>&quot;
-    so you can easily identify it later.</p>
-  <p class="note"><strong>NOTE</strong>: An uncompressed sound simply means that it has not had any type of compression <strong> <a class="tooltip" title="An algorithm is basically a set of instructions or rules designed to solve a definite problem. The problem can be simple like adding two numbers or a complex one, such as converting a video file from one format to another or compressing audio into a smaller file size..">algorithm</a></strong> applied to it. Applying <a class="tooltip" title="Compression is the use of mathematical algorithms to reduce the size of a file. This is used in particular for audio and image files, where formats like JPG (image) and MP3 (audio) are compressed formats. Compression usually results is much smaller file sizes, but with some data loss which may or may not be noticable depending on the type and strength of the compression used. Uncompressed formats would be BMP (image) or WAV (audio), which have larger file sizes, but no data loss.">compression</a> to a sound means that it will require less storage space, but will also mean that it needs to be decompressed before playing, and since small sound effects are generally used a lot and very quickly - and don&#39;t take up
-    much storage space - you don&#39;t want the extra CPU cost of decompressing it when it&#39;s being played. However, since things like music files can generally be very large files, you do want them to be compressed, as they will take up less storage
-    space that way, and the extra CPU cost of decompressing is negligible, since they are only generally being played one at a time.</p>
-  <p>Adding a sound is as simple as clicking the add sound button <img alt="Add Sound Icon" class="icon" src="../assets/Images/Icons/Icon_AddSound.png"/> and then browsing in the file explorer that opens to the file you want to use (you can also drag and
-    release sound files onto the GameMaker Studio 2 IDE and they will be added as a new sound asset). Once you have selected one and loaded it in, you can then preview it using the playback controls shown as well as change certain attributes for how the
-    file should be exported. If you aren&#39;t sure about this, then simply leave everything &quot;as-is&quot;, although if you are adding music or <span class="inline">MP3</span> / <span class="inline">OGG</span> format sounds you should probably change
-    to the <em>Compressed - Not Streamed</em> format.</p>
-  <p>You can find further information on the sound editor on the page linked below:</p>
+  <p>GameMaker Studio 2의 사운드는 런타임에 처리하는 방법에 대한 추가 옵션이있는 압축 사운드를 사용하여 압축 <strong>해제</strong> 또는 <strong>압축</strong> 할 수 있습니다. 압축되지 않은 사운드는 <span class="inline">WAV</span> 형식 파일로 저장된 사운드이며 압축 된 사운드는 <span class="inline">MP3</span> 또는 <span class="inline">OGG</span> 형식 일 수 있습니다. 일반적으로 작은 사운드 효과는 <span class="inline">WAV</span> 와 같은 촬영 사운드 또는 버튼 사운드 등이고 큰 효과 나 음악은 <span class="inline">MP3</span> 또는 <span class="inline">OGG</span> 입니다. 다른 리소스와 마찬가지로 &quot; <span class="inline">snd_</span> &quot;와 같은 적절한 접두사를 사용하여 사운드의 이름을 지정하여 나중에 쉽게 식별 할 수 있도록하는 것이 좋습니다.</p>
+  <p class="note"><strong>참고</strong> : 압축되지 않은 사운드는 단순히 어떤 유형의 압축 <strong><a class="tooltip" title="알고리즘은 기본적으로 명확한 문제를 해결하도록 설계된 일련의 명령 또는 규칙입니다. 비디오 파일을 한 형식에서 다른 형식으로 변환하거나 오디오를 작은 파일 크기로 압축하는 등 두 개의 숫자를 추가하거나 복잡한 숫자를 추가하는 등의 문제는 간단 할 수 있습니다.">알고리즘도</a></strong> 적용되지 않았 음을 의미합니다. 사운드에 <a class="tooltip" title="압축은 파일 크기를 줄이기 위해 수학적 알고리즘을 사용하는 것입니다. 특히 JPG (이미지) 및 MP3 (오디오)와 같은 형식이 압축 된 형식 인 오디오 및 이미지 파일에 사용됩니다. 압축은 일반적으로 파일 크기가 훨씬 작지만 사용 된 압축의 유형 및 강도에 따라 눈에 띄지 않을 수도있는 일부 데이터 손실이 있습니다. 압축되지 않은 형식은 파일 크기는 크지 만 데이터 손실은없는 BMP (이미지) 또는 WAV (오디오)입니다.">압축</a> 을 적용하면 저장 공간이 적게 필요하지만 재생하기 전에 압축을 풀어야하며 작은 사운드 효과가 일반적으로 매우 빠르게 사용되므로 저장 공간을 많이 차지하지 않기 때문에 압축을 풀어야합니다. -당신은 그것이 실행될 때 압축을 푸는 데 추가 CPU 비용을 원하지 않습니다. 그러나 음악 파일과 같은 것은 일반적으로 매우 큰 파일 일 수 있기 때문에 압축 된 파일을 원합니다. 저장 공간을 덜 차지하고 압축 해제에 필요한 추가 CPU 비용은 무시할 수 있습니다. 한번에 한.</p>
+  <p>Adding a sound is as simple as clicking the add sound button <img alt="Add Sound Icon" class="icon" src="../assets/Images/Icons/Icon_AddSound.png"/>사용하려는 파일을 여는 파일 탐색기를 탐색합니다 (사운드 파일을 GameMaker Studio 2 IDE로 드래그 앤 릴리스하면 새 사운드 자산으로 추가됩니다). 하나를 선택하여로드 한 후에는 표시된 재생 컨트롤을 사용하여 미리보고 파일을 내보내는 방법에 대한 특정 속성을 변경할 수 있습니다. 음악이나 <span class="inline">MP3</span> / <span class="inline">OGG</span> 형식 사운드를 추가하는 경우 <em>압축</em> 형식 <em>-스트리밍되지 않음</em> 형식으로 변경해야하지만,이 점에 대해 잘 모르면 모든 것을 &quot;있는 그대로&quot;그대로 두십시오.</p>
+  <p>아래 링크 된 페이지에서 사운드 편집기에 대한 자세한 정보를 찾을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Sounds.htm">Editors: The Sound Editor</a></li>
+    <li><a href="../The_Asset_Editors/Sounds.htm">편집자 : 사운드 편집자</a></li>
   </ul>
-  <p>Note that sounds take up a lot of space on disk, so you should be careful when creating them for your game projects. Do you really need a 48KHz sound effect that only plays for a fraction of a second? Probably not! So, think about reducing the <a class="tooltip" title="Sample rate is the number of samples of audio carried per second, measured in Hz or kHz (one kHz being 1000 Hz). The higher the sample rate, the more a sound will approximate the original analog waveform, but the larger the file size will be. In general sound effects are fine with a lower sample rate than music.">sample rate</a> here to 11025 or 22050 for effects, and for longer things like music or for looping effects think also about using a compressed format. Note too that if you plan on using 3D positional audio effects,
-    then the initial sound file must be <em>mono</em>.</p>
-  <p>You can close the sound editor now and we can move on to looking at <strong>Objects And Instances</strong>...</p>
+  <p>사운드는 디스크에서 많은 공간을 차지하므로 게임 프로젝트 용으로 사운드를 만들 때주의해야합니다. 1 분의 1 초 동안 만 재생되는 48KHz 사운드 효과가 정말로 필요합니까? 아마 아닙니다! 따라서 여기에서는 <a class="tooltip" title="샘플 속도는 Hz 또는 kHz (1kHz는 1000Hz)로 측정 된 초당 운반되는 오디오 샘플 수입니다. 샘플 속도가 높을수록 사운드는 원래 아날로그 파형에 더 가깝지만 파일 크기는 커집니다. 일반적으로 사운드 효과는 음악보다 샘플 속도가 낮습니다.">샘플 속도</a> 를 11025 또는 22050으로 줄여서 효과를, 음악이나 루핑 효과와 같은 더 긴 것들을 위해 압축 형식을 사용하는 것에 대해서도 생각하십시오. 3D 위치 오디오 효과를 사용하려는 경우 초기 사운드 파일은 <em>모노</em> 여야합니다.</p>
+  <p>사운드 에디터를 닫고 <strong>Objects and Instances</strong> 를 살펴볼 수 있습니다.</p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Quick_Start_Guide\Creating_Sound_Effects.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Objects_And_Instances.htm">Objects And Instances</a></div>
+        <div style="float:left">뒤로: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="Objects_And_Instances.htm">객체와 인스턴스</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Sound Effects
@@ -122,4 +114,4 @@ Quick Start: Sound Effects
 qs_sound_effects
 -->
 
-</body></html>
+</body></html> 

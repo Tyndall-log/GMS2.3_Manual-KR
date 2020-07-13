@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Sounds">
-        <span>Sounds</span>
+        <span>소리</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,81 +80,60 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Sound Editor</h1>
-  <p><img alt="Sound Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sound.png"/>The <strong>Sound Editor</strong> is where you can load sounds into a new audio resource as well as set its properties. To load a sound, press the <strong>Load Sound</strong>    button to the right of the sound name. A file selector dialogue pops up in which you can select the sound file. This be either a <span class="inline">WAV</span>, an <span class="inline">MP3 </span>file or an <span class="inline">OGG</span> file. In
-    general <span class="inline">*.wav</span> are used for the short sound effects as even though they are generally larger files they will play instantaneously due to the fact that they do not need any type of decoding for playing. <span class="inline">*.mp3</span>    or <span class="inline">*.ogg</span> format files should be used for background music or for sound effects that are longer or larger in size. These files are much smaller than a wave file would be but have a small CPU overhead as they have to be decoded
-    before being played.</p>
-  <p>Once you have loaded your file you can preview the sound by using the play button which will loop it continuously. This is very handy as it means you can make changes to the volume using the slider at the bottom of the window and hear what the effect
-    it will have on the sound. There is a stop button too, so you can stop the preview at any time.</p>
-  <p>The sound window also has other options which are explained below:</p>
+  <h1>사운드 에디터</h1>
+  <p><img alt="Sound Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sound.png"/><strong>사운드 편집기</strong> 는 사운드를 새로운 오디오 리소스에로드하고 속성을 설정할 수있는 곳입니다. 사운드를로드하려면 사운드 이름 오른쪽에있는 사운드 <strong>로드</strong> 버튼을 누릅니다. 사운드 파일을 선택할 수있는 파일 선택기 대화 상자가 나타납니다. <span class="inline">WAV</span> , <span class="inline">MP3</span> 파일 또는 <span class="inline">OGG</span> 파일입니다. 일반적으로 <span class="inline">* .wav</span> 는 짧은 사운드 효과에 일반적으로 사용되는 큰 파일이지만 재생을 위해 어떤 유형의 디코딩도 필요하지 않기 때문에 즉시 재생됩니다. <span class="inline">* .mp3</span> 또는 <span class="inline">* .ogg</span> 형식 파일은 배경 음악이나 크기가 길거나 큰 사운드 효과에 사용해야합니다. 이러한 파일은 웨이브 파일보다 훨씬 작지만 재생하기 전에 디코딩해야하므로 CPU 오버 헤드가 작습니다.</p>
+  <p>파일을로드 한 후에는 계속 재생되는 재생 버튼을 사용하여 사운드를 미리 볼 수 있습니다. 창 하단의 슬라이더를 사용하여 볼륨을 변경하고 사운드에 미치는 영향을들을 수 있으므로 매우 편리합니다. 중지 버튼도 있으므로 언제든지 미리보기를 중지 할 수 있습니다.</p>
+  <p>사운드 창에는 아래에 설명 된 다른 옵션도 있습니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Name And File</span><span data-close-text="true">Name And File</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">이름과 파일</span> <span data-close-text="true">이름과 파일</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you can click the <em>Open</em> button to open the file explorer and choose an audio file to load. You can also set the name of the new resource from the &quot;Name&quot; field on the left. Names can only be alpha-numeric and may only use the
-      underbar &quot;_&quot; symbol, and they cannot start with a number.</p>
+    <p class="dropspot">여기에서 <em>열기</em> 버튼을 클릭하여 파일 탐색기를 열고로드 할 오디오 파일을 선택할 수 있습니다. 왼쪽의 &quot;이름&quot;필드에서 새 리소스의 이름을 설정할 수도 있습니다. 이름은 영숫자 일 수 있으며 밑줄 &quot;_&quot;기호 만 사용할 수 있으며 숫자로 시작할 수 없습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Attributes</span><span data-close-text="true">Attributes</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">속성</span> <span data-close-text="true">속성</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This section is for setting the sound attributes. These are the attributes that will be set when you export your game and will affect how the sound is played back at run-time. For sound effects (<span class="inline">WAV </span>format) you will want
-      them to be <em>uncompressed </em>so that they play quickly and don&#39;t require decoding, however for <span class="inline">OGG</span> and <span class="inline">MP3</span> you&#39;d generally want one of the other three options available.</p>
-    <p class="dropspot"><em>Compressed </em>audio will force all your sound files (irrespective of whether they are <span class="inline">*.wav</span> or <span class="inline">*.mp3</span> or <span class="inline">*.ogg</span>) to be compressed down to Ogg Vorbis <span class="inline">*.ogg</span>      format files for <em>all </em>platforms. These sounds are smaller on disc, but will have a slight CPU overhead due to the need to be uncompressed and loaded into memory before being played, so you should keep that in mind if you wish to use <a class="tooltip" title="Compression is the use of mathematical algorithms to reduce the size of a file. This is used in particular for audio and image files, where formats like JPG (image) and MP3 (audio) are compressed formats. Compression usually results is much smaller file sizes, but with some data loss which may or may not be noticable depending on the type and strength of the compression used. Uncompressed formats would be BMP (image) or WAV (audio), which have larger file sizes, but no data loss.">compression</a> in an already CPU intensive game.</p>
-    <p class="dropspot">You can mitigate this CPU overhead somewhat by choosing to <em>uncompress on load</em>, which will place all the sounds into the device memory for faster playback, at the expense of increased memory use.</p>
-    <p class="dropspot">If you have chosen compressed audio, you can then also choose to have your sound <em>streamed from disk</em> too. A streamed sound will be one that is uncompressed and played in real time, streamed from the disc rather than loaded into memory. Streaming
-      is ideal for music as it reduces the one-off overhead of uncompressing the whole file - which may cause a pause in the game - but is not recommended for simple sound effects where the hit on the CPU is much less. If you select streamed audio, you
-      will <em>not</em> be able to assign the sound to an <a href="../Settings/Audio_Groups.htm">Audio Group</a> and this option will be disabled, as streamed sounds are not packaged in the same way as other sounds and you have full control over when
-      they are loaded, played and unloaded using code.</p>
-    <p class="dropspot">It is important to note that when targeting the HTML5 platform. streamed audio will not play on iOS when the play request does not directly originate from a user interaction (i.e: a touch event, etc.). However, since GameMaker Studio 2 queues up click
-      events and only handles them on the next frame, it is impossible to play streamed audio without the browser blocking it. To get around this, any HTML5 game run on an iOS browser will treat all streamed audio as unstreamed in the engine, with the
-      exception of streamed audio not being preloaded.</p>
-    <p class="dropspot">What this means is that if your game is running on an iOS browser, and - for example - you have 10 music tracks that are all set as streamed <span class="inline">mp3 </span>files. All 10 will be initialised like unstreamed audio would, but they won&#39;t
-      be decoded immediately before the game loads, unlike normal streamed audio which would get preloaded/decoded immediately during the load screen phase.</p>
-    <p class="dropspot">While this bypasses the iOS issue and prevents any huge increase in initial load times, it does mean that it may result in a state where your game has loaded, but certain streamed sounds may still be downloading or decoding. To deal with this you
-      can use the GML function <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_sound_is_playable.htm"><span class="inline">audio_sound_is_playable()</span></a>, which checks to see if a given sound can actually be played. On
-      HTML5 this will return <span class="inline">false </span>if the sound is not fully loaded or decoded yet, and <span class="inline">true </span>if it is and can be played (on all other platforms it will always return true).</p>
+    <p class="dropspot">이 섹션은 사운드 속성을 설정하기위한 것입니다. 게임을 내보낼 때 설정되는 속성으로, 런타임시 사운드가 재생되는 방식에 영향을줍니다. 사운드 효과 ( <span class="inline">WAV</span> 형식)의 경우 <em>압축을 해제</em> 하여 빠르게 재생하고 디코딩 할 필요가 없지만 <span class="inline">OGG</span> 및 <span class="inline">MP3</span> 의 경우 일반적으로 사용 가능한 다른 세 가지 옵션 중 하나를 원합니다.</p>
+    <p class="dropspot"><em>압축 된</em> 오디오는 모든 사운드 파일 ( <span class="inline">* .wav</span> 또는 <span class="inline">* .mp3</span> 또는 <span class="inline">* .ogg에</span> 관계없이)이 <em>모든</em> 플랫폼에 대해 Ogg Vorbis <span class="inline">* .ogg</span> 형식 파일로 압축되도록합니다. 이러한 사운드는 디스크에서 더 작지만 재생하기 전에 압축을 풀고 메모리에로드해야하기 때문에 약간의 CPU 오버 헤드가 발생하므로 이미 CPU를 많이 사용하는 게임에서 <a class="tooltip" title="압축은 파일 크기를 줄이기 위해 수학적 알고리즘을 사용하는 것입니다. 특히 JPG (이미지) 및 MP3 (오디오)와 같은 형식이 압축 된 형식 인 오디오 및 이미지 파일에 사용됩니다. 압축은 일반적으로 파일 크기가 훨씬 작지만 사용 된 압축의 유형 및 강도에 따라 눈에 띄지 않을 수도있는 일부 데이터 손실이 있습니다. 압축되지 않은 형식은 파일 크기는 크지 만 데이터 손실은없는 BMP (이미지) 또는 WAV (오디오)입니다.">압축</a> 을 사용하려면이 점을 명심해야합니다.</p>
+    <p class="dropspot"><em>로드시 압축 해제를</em> 선택하여이 CPU 오버 헤드를 어느 정도 완화 할 수 있습니다. 이렇게하면 메모리 사용이 증가함에 따라 모든 사운드가 장치 메모리에 배치되어 더 빠르게 재생됩니다.</p>
+    <p class="dropspot">압축 오디오를 선택한 경우 <em>디스크에서</em> 사운드를 <em>스트리밍</em> 하도록 선택할 수도 있습니다. 스트리밍 사운드는 압축되지 않고 실시간으로 재생되며 메모리에로드되지 않고 디스크에서 스트리밍됩니다. 스트리밍은 전체 파일을 압축 해제하는 일회성 오버 헤드를 줄임으로써 게임에 일시 중지 될 수 있으므로 음악에 이상적이지만 CPU의 적중률이 훨씬 적은 간단한 사운드 효과에는 권장되지 않습니다. 스트리밍 오디오를 선택하면 사운드를 <a href="../Settings/Audio_Groups.htm">오디오 그룹</a> 에 할당 할 수 <em>없으며</em> 스트리밍 사운드는 다른 사운드와 같은 방식으로 패키지되지 않으며로드 될 때를 완벽하게 제어 할 수 있으므로이 옵션은 비활성화됩니다. 코드를 사용하여 재생 및 언로드되었습니다.</p>
+    <p class="dropspot">HTML5 플랫폼을 타겟팅 할 때주의해야합니다. 재생 요청이 사용자 상호 작용 (예 : 터치 이벤트 등)에서 직접 발생하지 않으면 스트리밍 된 오디오가 iOS에서 재생되지 않습니다. 그러나 GameMaker Studio 2는 클릭 이벤트를 대기시키고 다음 프레임에서만 처리하기 때문에 브라우저가이를 차단하지 않고 스트리밍 된 오디오를 재생할 수 없습니다. 이 문제를 해결하기 위해 iOS 브라우저에서 실행되는 모든 HTML5 게임은 스트리밍 오디오가 미리로드되지 않는 것을 제외하고 모든 스트리밍 오디오를 엔진에서 스트리밍되지 않은 것으로 처리합니다.</p>
+    <p class="dropspot">즉, 게임이 iOS 브라우저에서 실행되고 있고 예를 들어 스트리밍 된 <span class="inline">mp3</span> 파일로 설정된 10 개의 음악 트랙이있는 경우입니다. 10 개 모두 스트리밍되지 않은 오디오처럼 초기화되지만로드 화면 단계에서 바로 사전로드 / 디코딩되는 일반 스트리밍 오디오와 달리 게임로드 직전에 디코딩되지 않습니다.</p>
+    <p class="dropspot">이는 iOS 문제를 우회하고 초기로드 시간이 크게 증가하는 것을 방지하지만, 게임이로드 된 상태가 될 수 있지만 특정 스트리밍 사운드는 여전히 다운로드 또는 디코딩 중일 수 있습니다. 이를 처리하기 위해 GML 함수 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_sound_is_playable.htm"><span class="inline">audio_sound_is_playable ()을</span></a> 사용하면 주어진 사운드를 실제로 재생할 수 있는지 확인합니다. HTML5에서는 사운드가 아직 완전히로드 또는 디코딩되지 않은 경우 <span class="inline">false</span> 를 반환하고, 사운드가 재생 가능하고 재생할 수 있으면 <span class="inline">true를</span> 반환합니다 (다른 모든 플랫폼에서는 항상 true를 반환 함).</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Volume</span><span data-close-text="true">Volume</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">볼륨</span> <span data-close-text="true">볼륨</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">Here you can set the playback volume for the given sound. This is value is simply the <em>default</em> value where if the slider is in the middle - for example - then volume for that sound when used in the game will be 0.5. However, this will be overridden
-      by any change to the gain using the audio functions in your project. Beside the volume controls you also have the Playback controls where you can preview the sound, set it to loop or rewind. You can also click the <img alt="Open Mixer Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_OpenMixer.png" width="24"/> Icon to open the sound in the <a href="../IDE_Tools/Sound_Mixer.htm">Sound Mixer</a>.</p>
+      by any change to the gain using the audio functions in your project. Beside the volume controls you also have the Playback controls where you can preview the sound, set it to loop or rewind. You can also click the <img alt="Open Mixer Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_OpenMixer.png" width="24"/><a href="../IDE_Tools/Sound_Mixer.htm">사운드 믹서</a> 에서 사운드를 여는 아이콘입니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Target Options</span><span data-close-text="true">Target Options</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">대상 옵션</span> <span data-close-text="true">대상 옵션</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The Target Options panel is where you set the conversion rates for your game. These settings will affect how the sound is exported for the target platform, and GameMaker Studio 2 will automatically convert your sound files for you - you simply control
-      the final quality of those sounds when converted. Generally the default settings of 16 bit quality (or <a class="tooltip" title="The bit depth refers to the number of bits in each sample of an audio file. Lower bit depth gives poorer quality sound but much smaller file size. Lower bit depths are usually used for small sound effects and patforms where memory may be an issue (like HTML5).">bit depth</a>), 44100kHz <a class="tooltip" title="Sample rate is the number of samples of audio carried per second, measured in Hz or kHz (one kHz being 1000 Hz). The higher the sample rate, the more a sound will approximate the original analog waveform, but the larger the file size will be. In general sound effects are fine with a lower sample rate than music.">sample rate</a> and
-      192kbps <a class="tooltip" title="Bit rate is measured in Kilobits-per-sec(kbps or k) and is the number of bits encoded per second or the number of bits transmitted or received per second. The higher the bit rate and sampling rate, the higher the audio quality but the more processing power and bandwidth it needs. Lower bit rates create a smaller file size and use less processing and bandwidth, but with a drop in audio quality. For good quality music usually a bit rate of 64–128kbps (96kbps+ recommended) is preferred.">bit rate</a> are perfectly adequate, but it may be that you wish sound effects (for example) to have a lower quality and music to have a higher quality, in which case these settings
-      can be changed.</p>
-    <p class="dropspot">You can also choose whether the conversion should be <strong>mono</strong>, <strong>stereo</strong> or <strong>3D</strong>. If you plan on using the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">audio emitter functions</a> to
-      create 3D sound effects, you should indicate this here, otherwise choose mono or stereo depending on the use that the sounds are going to be put to. If you choose to use the sound for 3D audio, <em>it will be exported as a mono sound</em>.</p>
-    <p class="note">NOTE: The higher the quality of the sound, the larger the file, and this should be taken into account when deciding what bitrate and sample rate to choose.</p>
+    <p class="dropspot">대상 옵션 패널에서 게임의 전환율을 설정할 수 있습니다. 이 설정은 대상 플랫폼에서 사운드를 내보내는 방법에 영향을 미치며 GameMaker Studio 2는 자동으로 사운드 파일을 변환합니다. 변환 할 때 해당 사운드의 최종 품질을 간단히 제어 할 수 있습니다. 일반적으로 16 비트 품질 (또는 <a class="tooltip" title="비트 심도는 오디오 파일의 각 샘플에서 비트 수를 나타냅니다. 비트 심도가 낮 으면 음질은 떨어지지 만 파일 크기는 훨씬 작아집니다. 낮은 비트 심도는 일반적으로 HTML5와 같이 메모리가 문제가 될 수있는 작은 사운드 효과 및 패턴에 사용됩니다.">비트 심도</a> ), 44100kHz <a class="tooltip" title="샘플 속도는 Hz 또는 kHz (1kHz는 1000Hz)로 측정 된 초당 운반되는 오디오 샘플 수입니다. 샘플 속도가 높을수록 사운드는 원래 아날로그 파형에 더 가깝지만 파일 크기는 커집니다. 일반적으로 사운드 효과는 음악보다 샘플 속도가 낮습니다.">샘플 레이트</a> 및 192kbps <a class="tooltip" title="비트 전송률은 초당 킬로 비트 (kbps 또는 k)로 측정되며 초당 인코딩 된 비트 수 또는 초당 전송 또는 수신 된 비트 수입니다. 비트 전송률과 샘플링 속도가 높을수록 오디오 품질은 높아지지만 필요한 처리 능력과 대역폭은 더 커집니다. 비트 전송률이 낮 으면 파일 크기가 작고 처리 및 대역폭이 적지 만 오디오 품질이 떨어집니다. 양질의 음악을 위해서는 보통 64 – 128kbps (96kbps + 권장)의 비트 전송률이 선호됩니다.">비트 레이트</a> 의 기본 설정이 완벽하게 적합하지만 사운드 효과 (예를 들어)의 품질과 음악의 품질을 높이고 싶을 수 있습니다. 이 경우 이러한 설정을 변경할 수 있습니다.</p>
+    <p class="dropspot">변환을 <strong>모노</strong> , <strong>스테레오</strong> 또는 <strong>3D</strong> 중 어느 것으로할지 선택할 수도 있습니다. <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">오디오 이미 터 기능</a> 을 사용하여 3D 사운드 효과를 만들 계획이라면 여기에 표시해야하며, 그렇지 않으면 사운드를 사용할 용도에 따라 모노 또는 스테레오를 선택하십시오. 3D 오디오에 사운드를 사용하도록 선택 <em>하면 모노 사운드로 내보내집니다</em> .</p>
+    <p class="note">참고 : 사운드 품질이 높을수록 파일 크기가 커지며 선택할 비트 전송률 및 샘플 속도를 결정할 때이 점을 고려해야합니다.</p>
     <p class="note"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Audio Group</span><span data-close-text="true">Audio Group</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">오디오 그룹</span> <span data-close-text="true">오디오 그룹</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">You can assign your audio file to a specific <strong>Audio Group</strong>. These are created from the <a href="../Settings/Audio_Groups.htm">Audio Groups</a> window and are used to group audio assets together for easier memory management and volume
-      control.
-    </p>
-    <p class="dropspot">Once an audio file has been assigned to a group you can then use the specific audio group functions to change them and lo load/unload them from memory. See the reference section on <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm">Audio Functions</a> for
-      further information.</p>
-    <p class="dropspot">If you have selected <em>streamed </em>audio then this option will be <strong>disabled</strong>, as streamed sounds are not packaged in the same way as other sounds and will be not be loaded into memory, but instead streamed directly from the storage
-      medium.
-    </p>
-    <p class="dropspot">Note that while the rest of the audio properties are configuration specific, the audio group setting is <em>not </em>and a sound will belong to the same group on <em>all configurations that you use</em>.</p>
+    <p class="dropspot">오디오 파일을 특정 <strong>오디오 그룹에</strong> 할당 할 수 있습니다. 이들은 <a href="../Settings/Audio_Groups.htm">오디오 그룹</a> 창에서 생성되며 더 쉬운 메모리 관리 및 볼륨 제어를 위해 오디오 자산을 그룹화하는 데 사용됩니다.</p>
+    <p class="dropspot">오디오 파일이 그룹에 할당되면 특정 오디오 그룹 기능을 사용하여 파일을 변경하고 메모리에서로드 / 언로드 할 수 있습니다. 자세한 내용은 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm">오디오 기능에</a> 대한 참조 섹션을 참조하십시오.</p>
+    <p class="dropspot"><em>스트리밍</em> 오디오를 선택한 경우이 옵션은 <strong>비활성화</strong> 됩니다. 스트리밍 사운드는 다른 사운드와 같은 방식으로 패키징되지 않고 메모리에로드되지 않고 대신 저장 매체에서 직접 스트리밍됩니다.</p>
+    <p class="dropspot">나머지 오디오 속성은 구성에 따라 다르지만 오디오 그룹 설정은 <em>아니고</em> 사운드는 <em>사용하는 모든 구성</em> 에서 동일한 그룹에 속합니다.</p>
     <p> </p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Sounds.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Sprites.htm">Sprites</a></div>
+        <div style="float:left">뒤로: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
+        <div style="float:right">다음: <a href="Sprites.htm">스프라이트</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Sound Editor
@@ -169,4 +148,4 @@ mp3
 sound_editor
 -->
 
-</body></html>
+</body></html> 

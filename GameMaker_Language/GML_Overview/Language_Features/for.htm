@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="for">
-        <span>for</span>
+        <span>...에 대한</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,54 +80,47 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>for</h1>
-  <p>One of the most used ways to iterate over a <a class="tooltip" title="In programming, a statement is a single line of code written legally in a programming language that expresses an action to be carried out. A statement might have internal components of its own, including expressions, operators and functions. An example of a statement is A = B + 5. A GameMaker Studio 2 program is nothing but a sequence of one or more statements that together perform a task (like move the player). ">statement</a> (or statements) multiple times is to use a <tt>for</tt> loop, which has this form:</p>
+  <h1>...에 대한</h1>
+  <p><a class="tooltip" title="프로그래밍에서 명령문은 수행 할 동작을 나타내는 프로그래밍 언어로 합법적으로 작성된 단일 코드 행입니다. 명령문은 표현식, 연산자 및 함수를 포함하여 자체의 내부 구성 요소를 가질 수 있습니다. 문장의 예는 A = B + 5입니다. GameMaker Studio 2 프로그램은 함께 플레이어를 움직이는 것과 같이 작업을 수행하는 하나 이상의 문장 시퀀스 일뿐입니다.">명령문</a> (또는 명령문)을 여러 번 반복하는 가장 많이 사용되는 방법 중 하나는 다음 형식의 <tt>for</tt> 루프를 사용하는 것 <tt>입니다</tt> .</p>
   <p class="code">for (&lt;assignment&gt;; &lt;expression&gt;; &lt;operation&gt;;)<br/>     {<br/>     &lt;statement&gt;;<br/>     &lt;statement&gt;;<br/>     ...<br/>     }</p>
-  <p>This works as follows - First the assignment is executed which assigns a value to a variable, then the <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a>  is evaluated and, if it is <tt>true</tt>, the statements in the curly brackets{}
-    are executed executed. Next the operation is performed on the assigned variable and then the expression is evaluated again. This loop will continue until the expression is found to be <tt>false</tt>.</p>
-  <p>Now, this may sound complicated when written like that, but you should interpret it as:</p>
+  <p>이것은 다음과 같이 작동합니다-먼저 변수에 값을 할당하는 대입이 실행 된 다음 <a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">표현식</a> 이 평가되고, <tt>true이면</tt> 중괄호 {}의 명령문이 실행됩니다. 다음으로 할당 된 변수에 대해 작업이 수행 된 다음 표현식이 다시 평가됩니다. 이 루프는 표현식이 <tt>false</tt> 가 될 때까지 계속됩니다.</p>
+  <p>이렇게 작성하면 복잡하게 들릴 수 있지만 다음과 같이 해석해야합니다.</p>
   <ol>
-    <li>The first assignment initializes the for-loop</li>
-    <li>The expression tests whether the loop should be ended</li>
-    <li>The statement is performed</li>
-    <li>The operation is performed</li>
-    <li>Go back to step 2 and perform the expression again and continue or exist the loop</li>
+    <li>첫 번째 할당은 for 루프를 초기화합니다</li>
+    <li>표현식은 루프를 종료해야하는지 여부를 테스트합니다.</li>
+    <li>진술이 수행됩니다</li>
+    <li>작업이 수행됩니다</li>
+    <li>2 단계로 돌아가서 표현식을 다시 수행하고 루프를 계속하거나 존재하십시오.</li>
   </ol>
-  <p>This is extremely useful for doing repetitive tasks that would involve multiple lines of code in any other way, and is commonly used as a counter for evaluating arrays, drawing things, setting incremental values, etc... The following code example illustrates
-    a typical use for this type of statement:</p>
+  <p>이것은 다른 방식으로 여러 줄의 코드가 필요한 반복적 인 작업을 수행하는 데 매우 유용하며 일반적으로 배열 평가, 사물 그리기, 증분 값 설정 등의 카운터로 사용됩니다. 다음 코드 예제는 일반적인 용도를 보여줍니다. 이 유형의 진술 :</p>
   <p class="code">for (var i = 0; i &lt; 10; i += 1)<br/>     {
     <br/>     draw_text(32, 32 + (i * 32), string(i) + &quot;. &quot;+ string(scr[i]));<br/>     }
   </p>
-  <p>The above code initialises a <span class="inline">for</span> loop, starting at 0 and counting up to (and including) 9, and then uses the loop value of <tt>i</tt> to draw the values stored in an array down the screen. Note how the <tt>for</tt> loop variable
-    <tt>i</tt> is used to not only loop through the array, but to draw a number as well as tell GameMaker Studio 2 where to draw the values to in the room. This flexibility is one of the main reasons why <tt>for</tt> loops are so important in programming.</p>
-  <p><strong>When should you use a <tt>for</tt> loop?</strong> Anytime you need to perform a fixed number of iterations over one or more statements while keeping track of the <a class="tooltip" title="An iteration is a single pass through a set of operations in your project code. One form of iteration in computer programming is via loops. A loop will repeat a certain segment of code until a condition is met and it can proceed further. Each time the computer runs a loop, it is known as an iteration. In simple terms, iteration is the process of repeating a particular snippet of code over and over again to perform a certain action.">iteration</a> that is
-    currently being run and using that iteration value.</p>
-  <p class="note"><b>NOTE</b>: You will see multiple examples when working with other people of the variables &quot;<tt>i</tt>&quot; and &quot;<tt>j</tt>&quot; being used for the loop counter variable. These are <b>not</b> obligatory variable names and you can use anything
-    like &quot;<tt>a</tt>&quot; or &quot;<tt>foo</tt>&quot; or whatever. The use of &quot;<tt>i</tt>&quot; and &quot;<tt>j</tt>&quot; is simply a standard convention in programming.</p>
-  <p>It is worth noting that you can use the special <span class="inline"><a href="break.htm">break</a></span> and <span class="inline"><a href="continue.htm">continue</a></span> statements within a <span class="inline">for</span> loop too. Using <span class="inline">break</span>    will immediately exit the loop and move on to any code that is in the event or function after the loop should have finished, eg:</p>
+  <p>위의 코드는 0부터 시작하여 9까지 카운트하고 <span class="inline">for</span> 루프를 초기화 한 다음 <tt>i</tt> 의 루프 값을 사용하여 화면에 배열에 저장된 값을 그립니다. <tt>for</tt> 루프 변수 <tt>i</tt> 가 배열을 반복 할뿐만 아니라 숫자를 그리는 데 사용되는 방법과 GameMaker Studio 2에 룸에서 값을 그릴 위치를 알려주는 방법에 유의하십시오. 이러한 유연성은 프로그래밍에서 <tt>for</tt> 루프가 중요한 이유 중 하나입니다.</p>
+  <p><strong>언제 <tt>for</tt> 루프를 사용해야합니까?</strong> 언제든지 현재 실행중인 <a class="tooltip" title="반복은 프로젝트 코드에서 일련의 작업을 통과하는 단일 단계입니다. 컴퓨터 프로그래밍에서 반복의 한 형태는 루프를 통하는 것입니다. 루프는 조건이 충족 될 때까지 특정 코드 세그먼트를 반복하여 계속 진행할 수 있습니다. 컴퓨터가 루프를 실행할 때마다 반복이라고합니다. 간단히 말해서 반복이란 특정 코드 조각을 반복해서 반복하여 특정 작업을 수행하는 프로세스입니다.">반복</a> 을 추적하고 해당 반복 값을 사용하는 동안 하나 이상의 명령문에 대해 고정 된 수의 반복을 수행해야합니다.</p>
+  <p class="note"><b>참고</b> : 루프 카운터 변수에 사용되는 변수 &quot; <tt>i</tt> &quot;및 &quot; <tt>j</tt> &quot;의 다른 사람들과 작업 할 때 여러 예제가 표시됩니다. 이것들은 필수 변수 이름이 <b>아니며</b> &quot; <tt>a</tt> &quot;또는 &quot; <tt>foo</tt> &quot;또는 무엇이든 사용할 수 있습니다. &quot; <tt>i</tt> &quot;및 &quot; <tt>j</tt> &quot;사용은 프로그래밍의 표준 규칙입니다.</p>
+  <p><span class="inline">for</span> 루프 내에서도 특별한 <span class="inline"><a href="break.htm">break</a></span> 및 <span class="inline"><a href="continue.htm">continue</a></span> 문을 사용할 수 있습니다. <span class="inline">break</span> 를 사용하면 루프를 즉시 종료하고 루프가 완료된 후 이벤트 나 함수에있는 코드로 이동합니다. 예 :</p>
   <p class="code">var _inst = noone;<br/> for (var i = 0; i &lt; 10; i += 1)<br/>     {
     <br/>     _inst = instance_find(obj_Enemy_Parent, i);<br/>     if instance_exists(_inst)<br/>         {<br/>         if _inst.object_index == obj_Enemy_Melee<br/>             {<br/>             break;<br/>             }<br/>         }<br/>     }<br/>    target = _inst;</p>
-  <p>The above code loops through the 10 neaerst instances of the given &quot;parent&quot; object, and if an instance is found it checks the instance object ID, and if it is an instance of <span class="inline">obj_Enemy_Melee</span> then the loop is ended
-    using <span class="inline">break</span> and the ID value assigned to a variable (if no instance is found, then the keyword <span class="inline"><a href="../Instance_Keywords.htm">noone</a></span> will be added to the variable).</p>
-  <p>An example of using <span class="inline">continue</span> in a <span class="inline">for</span> loop would be:</p>
+  <p>인스턴스가 발견되면 주어진 &quot;부모&quot;개체의 10 개 neaerst 인스턴스를 통해 상기 코드 루프하고, 인스턴스 오브젝트 ID를 검사하고 <span class="inline">obj_Enemy_Melee의</span> 인스턴스이면 루프는 <span class="inline">브레이크를</span> 사용 종료하고 ID 값이 할당 변수에 (인스턴스가 없으면 키워드 <span class="inline"><a href="../Instance_Keywords.htm">noone</a></span> 이 변수에 추가됩니다).</p>
+  <p><span class="inline">for</span> 루프에서 <span class="inline">continue</span> 를 사용하는 예는 다음과 같습니다.</p>
   <p class="code">var _val = 0;<br/> for (var i = 0; i &lt; 10; i += 1)<br/>     {
     <br/>     if (val_array[i] &lt;= 0)<br/>         {<br/>         continue;<br/>         }<br/>     _val += val_array[i];<br/>     }
     <br/> draw_text(32, 32, &quot;Positive Values Total = &quot; + string(_val));</p>
-  <p>This code will check the value stored in each array position of a 10 length 1D <a href="../Arrays.htm">array</a>, and if any are less than or equal to 0 it will <span class="inline">continue</span> the loop, meaning that the current iteration will end,
-    <span class="inline">i</span> will be incremented, and the next loop iteration will be started. If the value is greater than 0, then it is added to the local variable <span class="inline">_val</span>, and after the loop is finished the total value
-    is drawn to the screen.</p>
-  <p>For more examples of loop keywords please see the sections on <a href="repeat.htm"><tt>repeat</tt></a>, <a href="while.htm"><tt>while</tt></a>, and <a href="do___until.htm"><tt>do / until</tt></a>.</p>
+  <p>이 코드는 10 길이 1D <a href="../Arrays.htm">배열</a> 의 각 배열 위치에 저장된 값을 확인하고 0보다 작거나 같은 경우 루프를 <span class="inline">계속 진행</span> 하여 현재 반복이 종료되고 <span class="inline">i</span> 가 증가하고 다음을 의미합니다. 루프 반복이 시작됩니다. 값이 0보다 크면 로컬 변수 <span class="inline">_val에</span> 추가되고 루프가 완료된 후 총 값이 화면에 그려집니다.</p>
+  <p>루프 키워드에 대한 더 많은 예는 <a href="repeat.htm"><tt>반복</tt></a> , <a href="while.htm"><tt>while</tt></a> 및 <a href="do___until.htm"><tt>do / until</tt></a> 섹션을 참조하십시오.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Overview\Language_Features\for.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="switch.htm">switch</a></div>
+        <div style="float:left">뒤로: <a href="../Language_Features.htm">언어 특징</a></div>
+        <div style="float:right">다음: <a href="switch.htm">스위치</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 for
@@ -136,4 +129,4 @@ for
 for
 -->
 
-</body></html>
+</body></html> 

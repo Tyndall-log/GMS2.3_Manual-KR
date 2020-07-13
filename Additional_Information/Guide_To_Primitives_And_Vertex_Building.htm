@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Guide To Primitives And Vertex Building">
-        <span>Guide To Primitives And Vertex Building</span>
+        <span>프리미티브 및 버텍스 구축 가이드</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,119 +80,103 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Guide To Primitives And Vertex Building</h1>
-  <p>This guide briedfly covers how to build and use <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">primitives</a> using custom <strong>vertex formats</strong> and <strong>vertex buffers</strong>. </p>
-  <p>In general when you start working with 3D, special effects, complex drawing processes or shaders you don&#39;t need not worry too much about the vertex format being used, since GameMaker Studio 2 will automatically set up and pass through the
-    <a class="tooltip" title="A vertex is the name given to a single point of a polygon that contains various characteristics that define it&#39;s position, its colour and its texture. In computer graphics, this usually means a corner of a triangle that is used to create a primitive, and a combination of such primitives is what makes the graphics on the screen.">vertex</a> data for you. However, sometimes it is necessary to create your own vertex data and format it to suit, especially when you need to boost speed, or wish to pass in extra information.
-    For example the standard vertex format includes an x, y, z 3D position, colour (with alpha), and UV texture coordinates, which, if you were creating it yourself, would look something like:</p>
+  <h1>프리미티브 및 버텍스 구축 가이드</h1>
+  <p>이 가이드 briedfly는 커스텀 <strong>버텍스 형식</strong> 과 <strong>버텍스 버퍼를</strong> 사용하여 <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">프리미티브</a> 를 빌드하고 사용하는 방법을 다룹니다.</p>
+  <p>일반적으로 3D, 특수 효과, 복잡한 드로잉 프로세스 또는 쉐이더로 작업을 시작할 때 GameMaker Studio 2가 자동으로 <a class="tooltip" title="꼭짓점은 위치, 색상 및 질감을 정의하는 다양한 특성을 포함하는 다각형의 단일 지점에 부여 된 이름입니다. 컴퓨터 그래픽에서 이것은 일반적으로 기본 요소를 만드는 데 사용되는 삼각형의 모서리를 의미하며 이러한 기본 요소의 조합은 그래픽을 화면에 표시하는 것입니다.">정점</a> 데이터를 설정하고 통과하므로 사용되는 정점 형식에 대해 너무 걱정할 필요가 없습니다. 그러나 때로는 속도를 높이거나 추가 정보를 전달해야 할 때 고유 한 정점 데이터를 작성하고 형식을 지정해야하는 경우가 있습니다. 예를 들어 표준 정점 형식에는 x, y, z 3D 위치, 색상 (알파 포함) 및 UV 텍스처 좌표가 포함됩니다.이 좌표는 직접 만든 경우 다음과 같습니다.</p>
   <p class="code">vertex_format_begin();<br/> vertex_format_add_position_3d();
     <br/> vertex_format_add_colour();
     <br/> vertex_format_add_textcoord();
     <br/> my_format = vertex_format_end();</p>
-  <p>However, if you are only using (for example) a shader to manipulate the position of the vertex, then there would be no need to pass through colour or texture data. In this case you would create your own format as so:</p>
+  <p>그러나 정점 위치를 조작하기 위해 셰이더 만 사용하는 경우 (예를 들어) 색상 또는 질감 데이터를 통과 할 필요가 없습니다. 이 경우 다음과 같이 고유 한 형식을 만듭니다.</p>
   <p class="code">vertex_format_begin();<br/> vertex_format_add_position_3d();
     <br/> my_format = vertex_format_end();</p>
-  <p>In total there are five different vertex attributes that you can use when defining a vertex format:</p>
+  <p>정점 형식을 정의 할 때 사용할 수있는 정점 속성에는 총 5 가지가 있습니다.</p>
   <ul class="colour">
-    <li>Colour</li>
-    <li>Normal</li>
-    <li>Position</li>
-    <li>3D Position</li>
-    <li>Texture coordinate</li>
+    <li>색깔</li>
+    <li>표준</li>
+    <li>위치</li>
+    <li>3D 위치</li>
+    <li>텍스처 좌표</li>
   </ul>
-  <p>In general you must <em>always</em> provide position or 3D position as part of the format, but all the others are optional.</p>
-  <p>You should note that once you have created your vertex format, the order in which you have defined the vertex attributes <i>must be honoured</i> when building your <strong>primitives</strong>. So, if you have defined a vertex format as position, colour,
-    and texture coordinate, then <b>you <i>must</i> add these attributes to the primitive in the same order otherwise you will get an error</b>. Also note that like any other dynamic resource, a vertex format requires memory and therefore should be removed
-    when not needed using the function <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_delete.htm"><tt>vertex_format_delete()</tt></a>.</p>
-  <p>Any primitives that you build are held in a <b>vertex buffer</b>. This must be created beforehand and then referenced by the functions that are used to build your primitive. The vertex buffer can be re-used as many times as necessary to create different
-    primitives, or it can be &quot;frozen&quot; to maintain a specific primitive type for the duration of your game or level (which is the fastest approach, so if you know that a primitive you build will not change then you should always use this option).</p>
-  <p>An example of a single triangle primitive being built is shown in the following code:</p>
+  <p>일반적으로 <em>항상</em> 형식의 일부로 위치 또는 3D 위치를 제공해야하지만 나머지는 모두 선택 사항입니다.</p>
+  <p>꼭짓점 형식을 만든 후에는 <strong>기본 요소를</strong> 만들 때 꼭짓점 속성을 정의한 순서를 <i>따라야합니다</i> . 당신이 정점 위치, 색상 등의 형식 및 텍스처 좌표를 정의한다면, 그 후에 <b>당신은</b> <i>해야한다</i> 그렇지 않으면 오류가 발생합니다 같은 순서로 원시 이러한 속성을 추가 할 수 있습니다. 또한 다른 동적 리소스와 마찬가지로 정점 형식에는 메모리가 필요하므로 <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_delete.htm"><tt>vertex_format_delete ()</tt></a> 함수를 사용하여 필요하지 않은 경우 제거해야합니다.</p>
+  <p>빌드 한 모든 프리미티브는 <b>정점 버퍼에</b> 보관됩니다. 미리 작성하고 프리미티브를 빌드하는 데 사용되는 함수에서 참조해야합니다. 버텍스 버퍼는 다른 프리미티브를 만드는 데 필요한만큼 여러 번 재사용하거나 게임 또는 레벨 기간 동안 특정 프리미티브 유형을 유지하기 위해 &quot;동결&quot;될 수 있습니다. 빌드하는 프리미티브는 변경되지 않으므로 항상이 옵션을 사용해야합니다.</p>
+  <p>빌드중인 단일 삼각형 프리미티브의 예는 다음 코드에 표시되어 있습니다.</p>
   <p class="code">// CREATE EVENT<br/> v_buff = vertex_create_buffer();<br/> vertex_begin(v_buff, global.my_format);<br/> vertex_position(v_buff, 10, 10);<br/> vertex_colour(v_buff, c_white, 1);<br/> vertex_texcoord(v_buff, 0, 0);<br/> vertex_position(v_buff, 110, 10);<br/>    vertex_colour(v_buff, c_white, 1);<br/> vertex_texcoord(v_buff, 1, 0);<br/> vertex_position(v_buff, 110, 110);<br/> vertex_colour(v_buff, c_white, 1);<br/> vertex_texcoord(v_buff, 1, 1);<br/> vertex_end(v_buff);
     <br/>
     <br/> // DRAW EVENT<br/> var tex = sprite_get_texture(spr_Background, 0);<br/> shader_set(shd_shimmer);
     <br/> vertex_submit(v_buff, pr_trianglelist, tex);<br/> shader_reset();
   </p>
-  <p>Here we have first creat our vertex buffer in the Create Event of the instance, then we begin the definition of the different vertices that make up our triangle primitive, giving the position, the colour, and the texture UV coordinate for each of the
-    three points that we want to use. We then end the vertex definiition, and we know that the vertex buffer with this vertex data is stored in the variable &quot;v_buff&quot;.  </p>
-  <p class="note"><strong>NOTE</strong>: If the contents of the buffer are going to be updated constantly, the buffer would be created, given the vertex data, and then be destrroyed again - after it&#39;s been drawn - all in the same step.</p>
-  <p>We then draw the contents of the vertex buffer in the Draw Event using a shader. This is a very simple example, and is basically how GameMaker Studio 2 works internally, ie: When you draw a sprite, GameMaker creates a vertex buffer with four vertices
-    creating two triangles (which make a square, also called a &quot;quad&quot;), and textures these two triangles with the sprite image. When we draw this sprite, we are submitting the vertex buffer and its contents are drawn to the screen.</p>
-  <p>You&#39;ll notice when we submit the vertex buffer for drawing, we supply a primitive type. The type of primitive you use can be a point, a line list or strip, or a triangle list or strip, but you are <i>not</i> permitted triangle fans since most mobile
-    hardware will not accept that primitive type. Don&#39;t forget to format your vertex buffer correctly for the type of primitive that is going to be used to draw it. For example, drawing a two triangle primitive as a triangle list requires 6 points,
-    but as a triangle strip it only requires 4 points. Which type you use is up to you and will depend on what you are wanting to draw and the effect that you want to achieve.</p>
-  <p>One final important point to note when using your own vertex buffers in this way is how it affects the vertex batches that are sent to the GPU. When you create a vertex buffer you are creating the lowest level of graphics data, so when you draw all
-    that happens is that GameMaker Studio 2 sends your buffer directly to the graphics card. Because of this, if you want better batching, you must work it out yourself and store the things you want to batch inside the same buffer.</p>
-  <p>As we have already mentioned above, vertex formats are built up by using together the following 5 attribute types (added via the appropriate <tt>vertex_format_add_*</tt> function):</p>
+  <p>여기서 인스턴스의 Create Event에서 정점 버퍼를 먼저 만든 다음 삼각형 프리미티브를 구성하는 여러 정점의 정의를 시작하여 세 점 각각에 대한 위치, 색상 및 텍스처 UV 좌표를 제공합니다. 사용하고 싶습니다. 그런 다음 정점 정의를 종료하고이 정점 데이터가있는 정점 버퍼가 변수 &quot;v_buff&quot;에 저장되어 있음을 알고 있습니다.</p>
+  <p class="note"><strong>참고</strong> : 버퍼의 내용이 지속적으로 업데이트 될 경우, 버텍스 데이터가 주어지면 버퍼가 생성되고, 그려진 후에 다시 같은 단계로 다시 제거됩니다.</p>
+  <p>그런 다음 Draw Event에서 셰이더를 사용하여 정점 버퍼의 내용을 그립니다. 이것은 매우 간단한 예이며 기본적으로 GameMaker Studio 2가 내부적으로 작동하는 방식입니다. 즉, 스프라이트를 그릴 때 GameMaker는 4 개의 정점으로 정점 버퍼를 생성하여 2 개의 삼각형 ( &quot;사 분점&quot;이라고도 함)을 생성합니다. 스프라이트 이미지로이 두 삼각형을 텍스처링합니다. 이 스프라이트를 그리면 정점 버퍼를 제출하고 그 내용이 화면에 그려집니다.</p>
+  <p>그리기 위해 꼭짓점 버퍼를 제출하면 기본 유형이 제공됩니다. 사용하는 기본 유형은 포인트, 라인 목록 또는 스트립 또는 삼각형 목록 또는 스트립 일 수 있지만 대부분의 모바일 하드웨어는 해당 기본 유형을 허용 <i>하지 않으므로</i> 삼각형 팬이 허용되지 않습니다. 버텍스 버퍼를 그리는 데 사용될 프리미티브 유형에 맞게 정점 버퍼를 올바르게 포맷하는 것을 잊지 마십시오. 예를 들어, 삼각형리스트로 두 개의 삼각형 기본 요소를 그리려면 6 개의 점이 필요하지만 삼각형 스트립에는 4 개의 점만 필요합니다. 당신이 사용하는 유형은 당신에게 달려 있으며 당신이 그리 길 원하는 것과 달성하려는 효과에 달려 있습니다.</p>
+  <p>이러한 방식으로 자신의 정점 버퍼를 사용할 때주의해야 할 마지막 중요한 점은 이것이 GPU로 전송되는 정점 배치에 어떤 영향을 미치는지입니다. 정점 버퍼를 만들 때 가장 낮은 수준의 그래픽 데이터를 만들고 있으므로 모든 것을 그릴 때 GameMaker Studio 2는 버퍼를 그래픽 카드로 직접 보냅니다. 이 때문에 더 나은 배치를 원하면 직접 배치하고 동일한 버퍼에 배치하려는 것을 저장해야합니다.</p>
+  <p>위에서 이미 언급했듯이 정점 형식은 다음과 같은 5 가지 속성 유형 (적절한 <tt>vertex_format_add_ *</tt> 함수를 통해 추가됨)을 함께 사용하여 구성됩니다.</p>
   <ul class="colour">
-    <li>Colour</li>
-    <li>Normal</li>
-    <li>Position</li>
-    <li>3D Position</li>
-    <li>Texture coordinate</li>
+    <li>색깔</li>
+    <li>표준</li>
+    <li>위치</li>
+    <li>3D 위치</li>
+    <li>텍스처 좌표</li>
   </ul>
-  <p>Within the GLSL ES shader, these kinds are recognised using the following 4 attributes:</p>
+  <p>GLSL ES 셰이더 내에서 이러한 종류는 다음 4 가지 속성을 사용하여 인식됩니다.</p>
   <ul class="colour">
-    <li>Colour</li>
-    <li>Normal</li>
-    <li>Position</li>
-    <li>Texture coordinate</li>
+    <li>색깔</li>
+    <li>표준</li>
+    <li>위치</li>
+    <li>텍스처 좌표</li>
   </ul>
-  <p>Now, this might look odd as it seems that we can specify more attribute kinds in our vertex format than we can in the vertex shader. However, in the shader <i>Position</i> and <i>3D Position</i> are treated as the <em>same </em>attribute, except that
-    <i>Position</i> is expected to have only &quot;x&quot; and &quot;y&quot; coordinates whereas <i>3D Position</i> has “x”, “y” and “z” coordinates. So how do you map what&#39;s in your vertex format to how you define attributes in your shader? Let&#39;s
-    start by looking at a typical set of attributes from the default shader:</p>
+  <p>이제 정점 셰이더에서 할 수있는 것보다 더 많은 속성 종류를 정점 형식으로 지정할 수있는 것처럼 보일 수 있습니다. 그러나 셰이더에서 <i>위치</i> 와 <i>3D 위치</i> 는 <i>위치</i> 가 &quot;x&quot;및 &quot;y&quot;좌표 만 가질 것으로 예상되는 반면 <i>3D 위치</i> 는 &quot;x&quot;, &quot;y&quot;및 &quot;z&quot;를 제외하고는 <em>동일한</em> 특성으로 처리됩니다. 좌표. 그렇다면 정점 형식의 내용을 셰이더에서 속성을 정의하는 방법에 어떻게 매핑합니까? 기본 쉐이더에서 일반적인 속성 세트를 살펴 보자.</p>
   <p> </p>
   <p class="code">attribute vec3 in_Position;        // (x,y,z)<br/> //attribute vec3 in_Normal;        // (x,y,z) unused in this shader.<br/> attribute vec4 in_Colour;          // (r,g,b,a)<br/> attribute vec2 in_TextureCoord;    // (u,v)</p>
-  <p>And here&#39;s a chunk of code which sets up a vertex format compatible with this shader:</p>
+  <p>다음은이 쉐이더와 호환되는 버텍스 형식을 설정하는 코드입니다.</p>
   <p class="code">vertex_format_begin();<br/> vertex_format_add_position_3d();
     <br/> vertex_format_add_colour();
     <br/> vertex_format_add_textcoord();
     <br/> my_format = vertex_format_end();</p>
-  <p>Now, how does the shader attribute get matched to the vertex format kind? It&#39;s just based on naming convention:</p>
+  <p>자, 셰이더 속성은 어떻게 정점 형식 종류와 일치합니까? 명명 규칙을 기반으로합니다.</p>
   <ul class="colour">
-    <li>&quot;in_Position&quot; maps to <tt>vertex_format_add_position / _3d()</tt></li>
-    <li><tt>&quot;in_Colour&quot; maps to <tt>vertex_format_add_colour()</tt></tt>
-    </li>
-    <li><tt><tt>&quot;in_TextureCoord&quot; maps to <tt>vertex_format_add_textcoord()</tt></tt>
-      </tt>
-    </li>
+    <li>&quot;in_Position&quot;은 <tt>vertex_format_add_position / _3d ()에</tt> 매핑됩니다</li>
+    <li><tt>&quot;in_Colour&quot;는 <tt>vertex_format_add_colour ()에</tt> 매핑</tt></li>
+    <li><tt><tt>&quot;in_TextureCoord&quot;는 <tt>vertex_format_add_textcoord ()에</tt> 매핑</tt></tt></li>
   </ul>
-  <p><tt><tt><tt></tt></tt>
-    </tt>Now, things get trickier when you have multiple attributes of the same kind, but things are still based on the same naming convention. We&#39;ll look at supplying additional <b>colour</b> and <b>texture coordinates</b> now, as there can only be <b>one</b>    Position and <b>one</b> Normal attribute in the shader or vertex format, but there <em>can</em> be multiple colour or texture attributes.</p>
-  <p>When adding additional colour attributes to your shader, a number needs to be added to the end of the shader attribute to indicate which particular entry in the vertex format the attribute maps to. Here&#39;s an example - first the vertex format:</p>
+  <p>이제 같은 종류의 여러 속성이 있으면 상황이 더 까다로워 지지만 여전히 동일한 명명 규칙을 기반으로합니다. 셰이더 또는 정점 형식에는 <b>하나의</b> 위치 속성과 <b>하나의</b> 법선 속성 만있을 <em>수</em> 있지만 여러 색상 또는 질감 속성이있을 <em>수</em> 있으므로 추가 <b>색상</b> 및 <b>질감 좌표</b> 를 제공하는 방법을 살펴 보겠습니다.</p>
+  <p>셰이더에 추가 색상 속성을 추가 할 때 셰이더 속성 끝에 속성을 매핑 할 정점 형식의 특정 항목을 나타내는 숫자를 추가해야합니다. 다음은 예입니다. 먼저 정점 형식입니다.</p>
   <p class="code">vertex_format_begin();<br/> vertex_format_add_position_3d();
     <br/> vertex_format_add_colour();
     <br/> vertex_format_add_colour();
     <br/> vertex_format_add_textcoord();
     <br/> my_format = vertex_format_end();</p>
-  <p>And now the associated shader attributes:</p>
+  <p>그리고 이제 관련 셰이더 속성 :</p>
   <p class="code">attribute vec3 in_Position;      // (x,y,z)<br/> attribute vec4 in_Colour0;       // (r,g,b,a)<br/> attribute vec4 in_Colour1;       // (r,g,b,a)<br/> attribute vec2 in_TextureCoord;  // (u,v)</p>
-  <p>In this case <tt>in_Colour0</tt> maps to the first <tt>vertex_format_add_colour()</tt> and <tt>in_Colour1</tt> maps to the second.</p>
-  <p>Texture coordinates are handled slightly differently to colour. Basically, anything which isn&#39;t called <tt>in_Position</tt>, <tt>in_Normal</tt> or one of the <tt>in_Colour[0 ... ]</tt> attributes is treated as a texture coordinate. The order they
-    are defined in, in the list of attributes in the shader, is what denotes which attribute in the vertex format they map to. See the following GML example:</p>
+  <p>이 경우 <tt>in_Colour0</tt> 은 첫 번째 <tt>vertex_format_add_colour ()에</tt> 매핑되고 <tt>in_Colour1</tt> 은 두 번째에 매핑됩니다.</p>
+  <p>텍스처 좌표는 색상과 약간 다르게 처리됩니다. 기본적으로 <tt>in_Position</tt> , <tt>in_Normal</tt> 또는 <tt>in_Colour [0 ...]</tt> 속성 중 하나가 아닌 것은 텍스처 좌표로 처리됩니다. 셰이더의 속성 목록에서 정의 된 순서는 정점 형식으로 매핑되는 속성을 나타냅니다. 다음 GML 예를 참조하십시오.</p>
   <p class="code">vertex_format_begin();<br/> vertex_format_add_position_3d();
     <br/> vertex_format_add_colour();
     <br/> vertex_format_add_textcoord();
     <br/> vertex_format_add_textcoord();
     <br/> vertex_format_add_textcoord();
     <br/> my_format = vertex_format_end();</p>
-  <p>And the shader code would look something like this:</p>
+  <p>그리고 셰이더 코드는 다음과 같습니다.</p>
   <p class="code">attribute vec3 in_Position;      // (x,y,z)<br/> attribute vec4 in_Colour;        // (r,g,b,a)<br/> attribute vec2 in_myTexcoord;    // (u,v)<br/> attribute vec2 in_TextureCoord;  // (u,v)<br/> attribute vec2 in_Something;     // (u,v)</p>
-  <p>In this example, <tt>in_myTexcoord</tt>, <tt>in_TextureCoord</tt> and <tt>in_Something</tt> map to the three successive texture coordinate attributes defined in the vertex format.</p>
-  <p>You can find a full list of all the functions required to create vertex formats, vertex buffers and primitives from the following page:</p>
+  <p>이 예제에서 <tt>in_myTexcoord</tt> , <tt>in_TextureCoord</tt> 및 <tt>in_Something</tt> 은 정점 형식으로 정의 된 세 개의 연속 텍스처 좌표 속성에 매핑됩니다.</p>
+  <p>다음 페이지에서 정점 형식, 정점 버퍼 및 프리미티브를 작성하는 데 필요한 모든 기능의 전체 목록을 찾을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></li>
+    <li><a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">기본 요소와 정점 형식</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Additional_Information\Guide_To_Primitives_And_Vertex_Building.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="Error_Reporting.htm">Error Reporting</a></div>
+        <div style="float:left">뒤로: <a href="Additional_Information.htm">추가 정보</a></div>
+        <div style="float:right">다음: <a href="Error_Reporting.htm">오류보고</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Primitive Building
@@ -203,4 +187,4 @@ Vertex Buffers
 using_primitives_vertex_buffers
 -->
 
-</body></html>
+</body></html> 

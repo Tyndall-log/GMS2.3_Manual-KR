@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Making A Game Using GameMaker Studio">
-        <span>Making A Game Using GameMaker Studio</span>
+        <span>GameMaker Studio를 사용하여 게임 만들기</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,43 +81,33 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Quick Start Guide</h1>
-  <p>Welcome to the <strong>Quick Start Guide</strong>! This section of the manual is designed to familiarise you with the most important aspects of GameMaker Studio 2 and will show you the basics to get you making games as quick as possible. The guide covers
-    essential IDE functionality and also provides a brief introduction to programming, so you can make the most of the product as quick as possible, whether you use the GameMaker Language (GML) or the visual scripting language Drag and Drop™.</p>
-  <p>To illustrate the GameMaker Studio 2 workflow and get you straight into making something, we&#39;ve prepared the this guide to take you from the very basics of what is GameMaker Studio 2 and what is a program, through creating general assets and up
-    to how to code basic things like movement and score.</p>
-  <p>Making games with GameMaker Studio 2 is, conceptually, a fairly simple and straightforward affair, following these general steps:</p>
+  <h1>빠른 시작 가이드</h1>
+  <p><strong>빠른 시작 안내서에</strong> 오신 것을 환영합니다! 이 매뉴얼 섹션은 GameMaker Studio 2의 가장 중요한 측면을 익히기 위해 고안되었으며 가능한 빨리 게임을 만들 수있는 기본 사항을 보여줍니다. 이 가이드는 필수 IDE 기능을 다루고 프로그래밍에 대한 간단한 소개를 제공하므로 GameMaker Language (GML) 또는 시각적 스크립팅 언어 Drag and Drop ™을 사용하여 제품을 최대한 빨리 활용할 수 있습니다.</p>
+  <p>GameMaker Studio 2 워크 플로우를 설명하고 무언가를 직접 만들 수 있도록하기 위해, 본 가이드는 GameMaker Studio 2의 기본 사항과 프로그램의 기본 사항, 일반적인 자산 생성 및 움직임과 점수와 같은 기본 사항을 코딩하십시오.</p>
+  <p>GameMaker Studio 2로 게임을 만드는 것은 개념적으로 다음과 같은 일반적인 단계에 따라 매우 간단하고 간단합니다.</p>
   <ul class="colour">
-    <li>Create <strong>image </strong>assets ( <a class="tooltip" title="A sprite is a bitmap graphic that is designed to be part of a larger scene. It can either be a static image or an animated graphic.">sprites</a>, <a class="tooltip" title="A tile set is a collection of square or rectangular graphical assets laid out on a grid as a single image. Each item in the grid can then be placed multiple times in a room to create a larger scene called the &#39;tile map&#39;.">tile sets</a>, <a class="tooltip" title="A font is a collection of graphical glyphs used to represent text in a language. Fonts can be different weights, sizes, and styles and are used to display any written content in a project.">font</a><span class="glossextra">s</span>)
-      and add them to the Asset Browser.</li>
-    <li>Create <strong>object </strong>assets to represent the things you want to use in your game and assign them the required image assets.</li>
-    <li>Program these objects to do things in response to specific <strong>events</strong>.</li>
-    <li>Add <strong>instances </strong>of these objects into a <strong>room </strong>where they will perform their programs.</li>
+    <li><strong>이미지</strong> 자산 (생성 <a class="tooltip" title="스프라이트는 더 큰 장면의 일부로 디자인 된 비트 맵 그래픽입니다. 정적 이미지이거나 애니메이션 그래픽 일 수 있습니다.">스프라이트</a> , <a class="tooltip" title="타일 ​​세트는 그리드에 단일 이미지로 배치 된 정사각형 또는 직사각형 그래픽 자산의 모음입니다. 그런 다음 격자의 각 항목을 방에 여러 번 배치하여 &#39;타일 맵&#39;이라는 더 큰 장면을 만들 수 있습니다.">타일 세트</a> , <a class="tooltip" title="글꼴은 언어로 텍스트를 나타내는 데 사용되는 그래픽 글리프 모음입니다. 서체는 가중치, 크기 및 스타일이 다를 수 있으며 프로젝트에서 작성된 내용을 표시하는 데 사용됩니다.">폰트</a> <span class="glossextra">들)을하고는</span> 자산 브라우저에 추가 할 수 있습니다.</li>
+    <li>게임에서 사용하려는 것을 나타내는 <strong>객체</strong> 자산을 만들고 필요한 이미지 자산을 할당하십시오.</li>
+    <li>특정 <strong>이벤트</strong> 에 응답하여 작업을 수행하도록 이러한 개체를 프로그래밍하십시오.</li>
+    <li>프로그램을 수행 할 <strong>방</strong> 에 이러한 개체의 <strong>인스턴스</strong> 를 추가하십시오.</li>
   </ul>
-  <p>We&#39;ll go into the specifics of each of the above listed items in the following pages, but that&#39;s the general flow of actions required to make a game. The important thing to note here is that your main &quot;building blocks&quot; for the game
-    will always be sprites, objects and rooms, although there are a number of subsidiary assets that can also be used to add extra functionality or behaviours to these items (like <strong> <a class="tooltip" title="A shader is a collection of small programs that run directly on the GPU to create graphics and graphical effects. These are very fast to run and free up the CPU to do other things.">shaders</a></strong>,
-    or <strong> <a class="tooltip" title="A timeline in GameMaker Studio 2 is a linear collection of events that will be run in consecutive order. Each event can be given code or actions to perform a task and when the timeline is run, these tasks will be performed as each event in the tmeline is reached.">timelines</a></strong>).</p>
-  <p>Now, before we go on to explain each of these things in more detail, we&#39;ll quickly outline how GameMaker Studio 2 will turn the above building blocks into your game. Basically, everything happens in what is called the <strong>Game Loop</strong>,
-    which has a speed measured in <strong> Frames Per Second</strong>, and one &quot;frame&quot; is called a <strong>Step </strong>in GameMaker. The default frames per second (or <strong>FPS</strong>) is 60, meaning that for every second that passes GameMaker
-    Studio 2 will run the game loop 60 times, and each step (loop, frame) a number of events will occur and the game will progress.</p>
-  <p>To help understand this, let&#39;s imagine you have a character that you want to move around the game room. You would create a <em>sprite </em>for that character, then create an <em>object </em>and assign it the sprite, and in the object you&#39;d add
-    an <em>event </em>called the <strong>Step Event</strong>. In this event you would tell it to move right by 2 pixels. You would then place an <strong>instance </strong>of that object into the game room, and when you run the game, the instance will
-    start moving left by 2 pixels every step (the Step Event runs once every game step), so that in 1 second the instance has moved 120 pixels to the right.</p>
-  <p>In the above example, we talk about telling the object to move to the left, but how do we do that? Well, that&#39;s done using a <strong>program </strong>which we write using either <a href="../Drag_And_Drop/Drag_And_Drop_Index.htm"><strong>Drag and Drop™</strong></a>    (the visual scripting language) or <strong><a href="../GameMaker_Language/GameMaker_Language_Index.htm">GML</a> </strong>(the <strong>G</strong>ame <strong>M</strong>aker <strong>L</strong>anguage). Which one you use is up to you and the way you want
-    to work, but by using them you are <em>programming </em>your game. The next section deals with this in more detail, but before continuing, you might want to have a look at the following video tutorial which illustrates some of the things we&#39;ve
-    discussed above and prepares you for the following sections:</p>
+  <p>다음 페이지에서 위에 나열된 각 항목의 세부 사항을 살펴볼 것이지만 이것이 게임을 만드는 데 필요한 일반적인 작업 흐름입니다. 여기서주의해야 할 중요한 점은 게임의 주요 &quot;빌딩 블록&quot;이 항상 스프라이트, 오브젝트 및 룸이지만이 보조 아이템에 기능이나 행동을 추가하는 데 사용할 수있는 여러 보조 자산이 있다는 것입니다 (예 : <strong><a class="tooltip" title="셰이더는 GPU에서 직접 실행하여 그래픽 및 그래픽 효과를 만드는 작은 프로그램 모음입니다. 이것들은 다른 것들을하기 위해 CPU를 빠르게 실행하고 비울 수 있습니다.">쉐이더</a></strong> 또는 <strong><a class="tooltip" title="GameMaker Studio 2의 타임 라인은 연속적인 순서로 실행되는 선형 이벤트 모음입니다. 각 이벤트에는 작업을 수행하기위한 코드 또는 작업이 제공 될 수 있으며 타임 라인이 실행될 때 이러한 작업은 tmeline의 각 이벤트에 도달하면 수행됩니다.">타임 라인</a></strong> ).</p>
+  <p>이제 이러한 각 사항에 대해 자세히 설명하기 전에 GameMaker Studio 2가 위의 빌딩 블록을 게임으로 전환하는 방법에 대해 간략하게 설명하겠습니다. 기본적으로 모든 것은 <strong>Game Loop</strong> 라고하며, <strong>초당 프레임</strong> 수로 측정 된 속도를 가지며, 하나의 &quot;프레임&quot;은 GameMaker에서 <strong>Step</strong> 이라고합니다. 초당 기본 프레임 (또는 <strong>FPS</strong> )은 60입니다. 즉, GameMaker Studio 2를 통과하는 1 초마다 게임 루프를 60 회 실행하고 각 단계 (루프, 프레임)마다 많은 이벤트가 발생하고 게임이 진행됩니다.</p>
+  <p>이를 이해하기 위해 게임 룸에서 움직일 캐릭터가 있다고 상상해 봅시다. 해당 캐릭터에 대한 <em>스프라이트</em> 를 생성 한 다음 <em>객체</em> 를 생성하고 스프라이트를 할당하고 객체에 <strong>Step Event</strong> 라는 <em>이벤트를</em> 추가합니다. 이 경우 오른쪽으로 2 픽셀 씩 이동하도록 지시합니다. 그런 다음 해당 객체의 <strong>인스턴스</strong> 를 게임 룸에 배치하고 게임을 실행할 때 인스턴스는 1 단계마다 2 픽셀 씩 왼쪽으로 이동하기 시작합니다 (단계 이벤트는 게임 단계마다 한 번씩 실행 됨). 오른쪽으로 120 픽셀 이동했습니다.</p>
+  <p>위의 예에서 객체가 왼쪽으로 이동하도록하는 방법에 대해 이야기하지만 어떻게해야합니까? 글쎄, 그건 우리가 중 하나를 사용하여 쓰기 <strong>프로그램을</strong> 사용하여 이루어집니다 <a href="../Drag_And_Drop/Drag_And_Drop_Index.htm"><strong>끌어 Dropâ &quot;¢</strong></a> (시각 스크립트 언어) 또는 <strong><a href="../GameMaker_Language/GameMaker_Language_Index.htm">GML을</a></strong> 합니다 <strong>(G는</strong> <strong>M의</strong> 아 케르의 <strong>L의</strong> anguage을 AME). 어느 쪽을 사용 하느냐는 자신에게 달려 있고 원하는 방식이지만 자신을 사용하여 게임을 <em>프로그래밍하고</em> 있습니다. 다음 섹션에서는 이에 대해 자세히 설명하지만 계속하기 전에 위에서 논의한 내용 중 일부를 설명하고 다음 섹션을 준비하는 다음 비디오 자습서를 살펴볼 수 있습니다.</p>
   <p><iframe src="https://www.youtube.com/embed/ubvrKQlI_1A" allowfullscreen="" class="center"></iframe></p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Quick_Start_Guide\Quick_Start_Guide.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back:  <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="What_Is_Programming_.htm">What Is Programming?</a></div>
+        <div style="float:left">뒤로: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="What_Is_Programming_.htm">프로그래밍이란?</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Quick Start Guide
@@ -126,4 +116,4 @@ Quick Start Guide
 quick_start
 -->
 
-</body></html>
+</body></html> 

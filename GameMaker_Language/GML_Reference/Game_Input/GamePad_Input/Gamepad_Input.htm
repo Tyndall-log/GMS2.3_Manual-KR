@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Gamepad Input">
-        <span>Gamepad Input</span>
+        <span>게임 패드 입력</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,108 +80,102 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Gamepad Input</h1>
-  <p><b></b>GameMaker Studio 2 has a number of dedicated functions that can be used to detect both analogue and digital controls from multiple connected game pads. These functions work similar to the <a href="../Device_Input/Device_Input.htm">Device Inputs</a>,
-    in that you can detect up to four different XInput game pads that are connected (and up to 8 DirectInput gamepads) and deal with the input from each one using the same functions. Note that when a gamepad is plugged in to your device (or it is removed)
-    then an asynchronous <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">System Event</a> is triggered where you can deal with the situation using the appropriate functions.</p>
-  <p>The gamepad &quot;slots&quot; are indexed from 0 with slots 0 - 3 inclusive being <i>only for Xinput gamepads</i>, ie: Xbox360 controllers and compatibles. However you can also check slots 4 - 11 inclusive for <i>DirectInput</i> gamepads, which means
-    you can detect many other models of controller when connected through these slots. It is worth noting that when using DirectInput gamepads, the constants given below may not match exactly the buttons that you expect when they are pressed, due to the
-    fragmented and non-standardised way that the API is implemented by controller manufacturers. Because of this, it is recommend that you have some kind of gamepad setup screen in your games where people can redefine the gamepad buttons based on input
-    from any connected device to mitigate any issues (there are gamepad &quot;mapping&quot; functions that can help with this on Windows Desktop, Ubuntu, macOS, and Android targets, while on all others you would need to do this yourself using code).</p>
-  <p>When working with the gamepad functions, input can come from <strong>axis</strong>, <strong>buttons</strong> and/or <strong>hats</strong> and GameMaker Studio 2 will assign to some or all of the following built-in constants (note that &quot;hats&quot;
-    are generally only detected on non-standard controllers):</p>
+  <h1>게임 패드 입력</h1>
+  <p>GameMaker Studio 2에는 연결된 여러 게임 패드에서 아날로그 및 디지털 컨트롤을 모두 감지하는 데 사용할 수있는 수많은 전용 기능이 있습니다. 이 기능은 <a href="../Device_Input/Device_Input.htm">장치 입력</a> 과 유사하게 작동하며, 연결되어있는 최대 4 개의 서로 다른 XInput 게임 패드 (및 최대 8 개의 DirectInput 게임 패드)를 감지하고 동일한 기능을 사용하여 각 입력을 처리 할 수 ​​있습니다. 게임 패드가 장치에 연결되어 있거나 제거 된 경우 적절한 기능을 사용하여 상황을 처리 할 수있는 비동기 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">시스템 이벤트</a> 가 트리거됩니다.</p>
+  <p>게임 패드 &quot;슬롯&quot;은 <i>Xinput 게임 패드 전용 (</i> 예 : Xbox360 컨트롤러 및 호환) 슬롯 <i>0-3을</i> 포함하여 0에서 색인됩니다. 그러나 <i>DirectInput</i> 게임 패드 용 슬롯 4-11을 확인할 수도 있습니다. 즉,이 슬롯을 통해 연결된 다른 많은 컨트롤러 모델을 감지 할 수 있습니다. DirectInput 게임 패드를 사용할 때 컨트롤러 제조업체가 API를 구현하는 조각화되고 표준화되지 않은 방식으로 인해 아래 주어진 상수가 눌렀을 때 예상되는 버튼과 정확하게 일치하지 않을 수 있습니다. 이 때문에 게임에 사람들이 연결된 장치의 입력을 기반으로 게임 패드 버튼을 재정 의하여 문제를 완화 할 수있는 일종의 게임 패드 설정 화면을 사용하는 것이 좋습니다 (이 문제를 해결할 수있는 게임 패드 &quot;매핑&quot;기능이 있음) Windows 데스크톱, Ubuntu, macOS 및 Android 대상에서, 다른 모든 대상에서는 코드를 사용하여 직접 수행해야합니다.</p>
+  <p>게임 패드 기능으로 작업 할 때 입력은 <strong>axis</strong> , <strong>버튼</strong> 및 / 또는 <strong>모자</strong> 에서 올 수 있으며 GameMaker Studio 2는 다음 내장 상수 중 일부 또는 전부에 할당됩니다 ( &quot;모자&quot;는 일반적으로 비표준 컨트롤러에서만 감지됩니다) ) :</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td><tt>gp_face1</tt></td>
-        <td>Top button 1 (this maps to the <i>&quot;A&quot;</i> on an Xbox 360 controller and the <i>cross</i> on a PS controller)</td>
+        <td>상단 버튼 1 (Xbox 360 컨트롤러의 <i>&quot;A&quot;</i> 와 PS 컨트롤러의 <i>크로스</i> 에 매핑 됨)</td>
       </tr>
       <tr>
         <td><tt>gp_face2</tt></td>
-        <td>Top button 2 (this maps to the <i>&quot;B&quot;</i> on an Xbox 360 controller and the <i>circle</i> on a PS controller)</td>
+        <td>상단 단추 2 (Xbox 360 컨트롤러의 <i>&quot;B&quot;</i> 와 PS 컨트롤러의 <i>원</i> 에 매핑 됨)</td>
       </tr>
       <tr>
         <td><tt>gp_face3</tt></td>
-        <td>Top button 3 (this maps to the <i>&quot;X&quot;</i> on an Xbox 360 controller and the <i>square</i> on a PS controller)</td>
+        <td>상단 단추 3 (Xbox 360 컨트롤러의 <i>&quot;X&quot;</i> 와 PS 컨트롤러의 <i>사각형</i> 에 매핑 됨)</td>
       </tr>
       <tr>
         <td><tt>gp_face4</tt></td>
-        <td>Top button 4 (this maps to the <i>&quot;Y&quot;</i> on an Xbox 360 controller and the <i>triangle</i> on a PS controller)</td>
+        <td>상단 단추 4 (Xbox 360 컨트롤러의 <i>&quot;Y&quot;</i> 와 PS 컨트롤러의 <i>삼각형</i> 에 매핑 됨)</td>
       </tr>
       <tr>
         <td><tt>gp_shoulderl</tt></td>
-        <td>Left shoulder button</td>
+        <td>왼쪽 어깨 버튼</td>
       </tr>
       <tr>
         <td><tt>gp_shoulderlb</tt></td>
-        <td>Left shoulder trigger</td>
+        <td>왼쪽 어깨 방아쇠</td>
       </tr>
       <tr>
         <td><tt>gp_shoulderr</tt></td>
-        <td>Right shoulder button</td>
+        <td>오른쪽 어깨 버튼</td>
       </tr>
       <tr>
         <td><tt>gp_shoulderrb</tt></td>
-        <td>Right shoulder trigger</td>
+        <td>오른쪽 어깨 방아쇠</td>
       </tr>
       <tr>
         <td><tt>gp_select</tt></td>
-        <td>The select button (this is the <i>PS</i> button on a DS4 controller)</td>
+        <td>선택 버튼 (DS4 컨트롤러의 <i>PS</i> 버튼)</td>
       </tr>
       <tr>
         <td><tt>gp_start</tt></td>
-        <td>The start button (this is the &quot;options&quot; button on a PS4 controller)</td>
+        <td>시작 버튼 (PS4 컨트롤러의 &quot;옵션&quot;버튼)</td>
       </tr>
       <tr>
         <td><tt>gp_stickl</tt></td>
-        <td>The left stick pressed (as a button)</td>
+        <td>왼쪽 스틱을 눌렀습니다 (버튼으로)</td>
       </tr>
       <tr>
         <td><tt>gp_stickr</tt></td>
-        <td>The right stick pressed (as a button)</td>
+        <td>오른쪽 스틱을 눌렀습니다 (버튼으로)</td>
       </tr>
       <tr>
         <td><tt>gp_padu</tt></td>
-        <td>D-pad up</td>
+        <td>D 패드 업</td>
       </tr>
       <tr>
         <td><tt>gp_padd</tt></td>
-        <td>D-pad down</td>
+        <td>D 패드 다운</td>
       </tr>
       <tr>
         <td><tt>gp_padl</tt></td>
-        <td>D-pad left</td>
+        <td>왼쪽 D 패드</td>
       </tr>
       <tr>
         <td><tt>gp_padr</tt></td>
-        <td>D-pad right</td>
+        <td>오른쪽 D 패드</td>
       </tr>
       <tr>
         <td><tt>gp_axislh</tt></td>
-        <td>Left stick horizontal axis (analogue)</td>
+        <td>왼쪽 스틱 수평 축 (아날로그)</td>
       </tr>
       <tr>
         <td><tt>gp_axislv</tt></td>
-        <td>Left stick vertical axis (analogue)</td>
+        <td>왼쪽 스틱 세로 축 (아날로그)</td>
       </tr>
       <tr>
         <td><tt>gp_axisrh</tt></td>
-        <td>Right stick horizontal axis (analogue)</td>
+        <td>오른쪽 스틱 가로 축 (아날로그)</td>
       </tr>
       <tr>
         <td><tt>gp_axisrv</tt></td>
-        <td>Right stick vertical axis (analogue)</td>
+        <td>오른쪽 스틱 세로 축 (아날로그)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>To better understand exactly what part of the controller each constant represents, you can refer to the following image of a standard Xinput gamepad:</p>
-  <p><img alt="Xinput gamepad illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Game_Input/GamePad.png"/>Below you can find a list of all the gamepad functions:</p>
+  <p>각 상수가 나타내는 컨트롤러 부분을 정확히 이해하려면 표준 Xinput 게임 패드의 다음 이미지를 참조하십시오.</p>
+  <p><img alt="Xinput gamepad illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Game_Input/GamePad.png"/>아래에는 모든 게임 패드 기능 목록이 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="gamepad_is_supported.htm">gamepad_is_supported</a></li>
@@ -208,9 +202,7 @@
     <li><a href="gamepad_hat_value.htm">gamepad_hat_value</a></li>
   </ul>
   <p> </p>
-  <p>The following gamepad functions also exist and are used for remapping the built in constants to the direct physical inputs of a given gamepad. These functions are only for the Windows Desktop, Ubuntu, macOS, and Android target platforms and on Windows,
-    they will only be valid for Direct input devices. While GameMaker Studio 2 comes with mappings for a number of different gamepads based on <a href="https://github.com/gabomdq/SDL_GameControllerDB" target="_blank">SDL Gamepad Controller DB</a>,
-    however due to the huge number of controller types and brands out there, it is impossible to map the GML constants to the correct inputs for every make and model, so with these functions you have the possibility to create your own custom mappings.</p>
+  <p>다음 게임 패드 기능도 있으며 내장 된 상수를 지정된 게임 패드의 직접 물리적 입력으로 다시 매핑하는 데 사용됩니다. 이러한 기능은 Windows 데스크톱, Ubuntu, macOS 및 Android 대상 플랫폼에만 적용되며 Windows에서는 직접 입력 장치에만 유효합니다. GameMaker Studio 2에는 <a href="https://github.com/gabomdq/SDL_GameControllerDB" target="_blank">SDL Gamepad Controller DB를</a> 기반으로하는 다양한 게임 패드에 대한 매핑이 포함되어 있지만 수많은 컨트롤러 유형과 브랜드로 인해 GML 상수를 모든 제조업체 및 제조업체의 올바른 입력에 매핑하는 것은 불가능합니다 모델을 사용하면 이러한 기능을 사용하여 사용자 정의 매핑을 만들 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="gamepad_get_mapping.htm">gamepad_get_mapping</a></li>
@@ -218,30 +210,21 @@
     <li><a href="gamepad_remove_mapping.htm">gamepad_remove_mapping</a></li>
   </ul>
   <p> </p>
-  <p>It is worth noting that Direct Input gamepads are run in <i>cooperative mode</i> which means that your game only has access to them when it is the foreground application, which in turn will cause Direct Input controllers to be &quot;lost&quot; if the
-    game loses focus and then &quot;found&quot; again when it comes back into focus (this can be detected in the System Event and dealt with). Similarly, no input from gamepads will be detected while the game is not in focus, and we recommend that you
-    use the function <a href="../../OS_And_Compiler/os_is_paused.htm"><tt>os_is_paused()</tt></a> or <a href="../../Cameras_And_Display/The_Game_Window/window_has_focus.htm"><tt>window_has_focus()</tt></a> to detect this and pause the game or something
-    similar as any button being held down at the time the game loses focus will maintain the held down state until the game regains focus.</p>
+  <p>Direct Input 게임 패드는 <i>협동 모드</i> 에서 실행됩니다. 즉, 게임이 포 그라운드 응용 프로그램 인 경우에만 게임에 액세스 할 수 있으므로 게임에서 포커스를 잃으면 직접 입력 컨트롤러가 &quot;손실&quot;됩니다. 다시 초점을 맞추면 &quot;발견&quot;(시스템 이벤트에서 감지되어 처리 할 수 ​​있음). 마찬가지로 게임에 초점이 맞지 않는 동안 게임 패드에서 입력이 감지되지 않으므로 <a href="../../OS_And_Compiler/os_is_paused.htm"><tt>os_is_paused ()</tt></a> 또는 <a href="../../Cameras_And_Display/The_Game_Window/window_has_focus.htm"><tt>window_has_focus ()</tt></a> 함수를 사용하여이를 감지하고 게임 또는 게임이 포커스를 잃는 시간은 게임이 포커스를 다시 얻을 때까지 보류 상태를 유지합니다.</p>
   <p> </p>
-  <h2>Compatibility</h2>
-  <p>The following list shows current compatibility across the platforms (note that this will change with future updates):</p>
+  <h2>적합성</h2>
+  <p>다음 목록은 플랫폼 간의 현재 호환성을 보여줍니다 (향후 업데이트로 변경 될 수 있음).</p>
   <ul class="colour">
-    <li><strong>Windows </strong>is fully supported with up to a maximum of 12 connected devices permitted at once (numbered from 0 to 11, with 0 - 3 being XInput devices and 4 - 11 being DirectInput). Remapping of controller constants is also permitted.</li>
-    <li><strong>macOS </strong>is supported with up to a maximum of 4 connected devices permitted at once, and these devices can ONLY be of the type Playstation3 or Xbox 360. Please note that the &quot;Build for Mac AppStore&quot; option in Mac Game Options
-      needs to be OFF for pad support to work. Remapping of controller constants is also permitted.</li>
-    <li><strong>Ubuntu </strong>does also support Gamepad input, but you may need to install additional libraries from the Ubuntu repository. You can do this easily by opening a command line terminal and typing the following (this will install GUI support
-      for the joystick/gamepad as well as the joystick/gamepad API itself - remapping of controller constants is <i>not</i> permitted):
-      <p class="code">sudo apt-get install jstest-gtk<br/> sudo apt-get install joystick.</p>
-    </li>
-    <li><strong>HTML5 </strong>games using gamepads are supported by most major browsers, except <i>Safari</i>. Remapping of controller constants is <i>not</i> permitted.</li>
-    <li>Gamepad support also extends to <strong>iOS </strong>with the iCade cabinet. The left axis maps to the stick controller (although the input is digital, not analogue), the four &quot;face&quot; buttons map to the cabinet front buttons, and the four
-      shoulder buttons map to those at the back of the cabinet.</li>
-    <li><strong>Android </strong>(and <strong>Amazon Fire</strong>) export supports NYKO controllers and generic Bluetooth controllers, but only when they are enabled, meaning that you will have to tick the iCade/Bluetooth option in the <a href="../../../../Settings/Game_Options/Android.htm">General</a>      section of the Android Game Options. They require API level 12 for them to work fully and it should be noted that GameMaker Studio 2 will register as connected any Bluetooth devices that your device is paired with, whether or not it&#39;s
-      actually connected. Therefore this should be taken into account when assigning and checking &quot;slots&quot;. Note that the remapping of controller constants is also permitted.</li>
-    <li>On <strong>PS4</strong>, if you want to use the touch pad tracking you need to use the <a href="../Device_Input/Device_Input.htm"><tt>device_mouse_*</tt></a> buttons. Remapping of controller constants is <i>not</i> permitted.</li>
-    <li>On <strong>Windows </strong><strong>UWP</strong>, <strong>XBoxOne </strong>and <strong>Nintendo Switch</strong> targets, gamepads are fully supported, but remapping of controller constants is <i>not</i> permitted.</li>
+    <li><strong>Windows</strong> 는 한 번에 최대 12 개의 연결된 장치를 허용하여 완벽하게 지원됩니다 (0-11의 숫자, 0-3은 XInput 장치, 4-11은 DirectInput 임). 컨트롤러 상수를 다시 매핑하는 것도 허용됩니다.</li>
+    <li><strong>macOS</strong> 는 한 번에 최대 4 개의 연결된 장치를 지원하며, 이러한 장치는 Playstation3 또는 Xbox 360 유형일 수 있습니다. Mac 게임 옵션의 &quot;Mac AppStore 용 빌드&quot;옵션은 꺼져 있어야합니다. 패드 지원 작동합니다. 컨트롤러 상수를 다시 매핑하는 것도 허용됩니다.</li>
+    <li><strong>Ubuntu</strong> 는 게임 패드 입력도 지원하지만 Ubuntu 리포지토리에서 추가 라이브러리를 설치해야 할 수도 있습니다. 커맨드 라인 터미널을 열고 다음을 입력하면 쉽게 할 수 있습니다 (이것은 조이스틱 / 게임 패드뿐만 아니라 조이스틱 / 게임 패드 API 자체에 대한 GUI 지원을 설치합니다-컨트롤러 상수의 재 매핑은 허용 <i>되지 않습니다</i> ) : sudo apt-get install jstest-gtk sudo apt-get 설치 조이스틱.</li>
+    <li>게임 패드를 사용하는 <strong>HTML5</strong> 게임은 <i>Safari를</i> 제외한 대부분의 주요 브라우저에서 지원됩니다. 컨트롤러 상수를 다시 매핑하는 <i>것은</i> 허용 <i>되지 않습니다</i> .</li>
+    <li>게임 패드 지원은 iCade 캐비닛을 통해 <strong>iOS</strong> 로 확장됩니다. 왼쪽 축은 스틱 컨트롤러에 매핑됩니다 (입력은 아날로그가 아니라 디지털 임에도 불구하고). 4 개의 &quot;얼굴&quot;버튼은 캐비닛 전면 버튼에, 4 개의 어깨 버튼은 캐비닛 후면의 버튼에 매핑됩니다.</li>
+    <li><strong>Android</strong> (및 <strong>Amazon Fire</strong> ) 내보내기는 NYKO 컨트롤러 및 일반 Bluetooth 컨트롤러를 지원하지만 활성화 된 경우에만 지원되므로 Android 게임 옵션의 <a href="../../../../Settings/Game_Options/Android.htm">일반</a> 섹션에서 iCade / Bluetooth 옵션을 선택해야합니다. 완전히 작동하려면 API 레벨 12가 필요하며 GameMaker Studio 2는 실제로 연결되어 있는지 여부에 관계없이 장치가 연결된 Bluetooth 장치를 연결된 장치로 등록합니다. 따라서 &quot;슬롯&quot;을 할당하고 확인할 때이 점을 고려해야합니다. 컨트롤러 상수를 다시 매핑하는 것도 허용됩니다.</li>
+    <li><strong>PS4</strong> 에서 터치 패드 추적을 사용하려면 <a href="../Device_Input/Device_Input.htm"><tt>device_mouse_ *</tt></a> 버튼을 사용해야합니다. 컨트롤러 상수를 다시 매핑하는 <i>것은</i> 허용 <i>되지 않습니다</i> .</li>
+    <li><strong>Windows</strong> <strong>UWP</strong> , <strong>XBoxOne</strong> 및 <strong>Nintendo Switch</strong> 대상에서 게임 패드는 완전히 지원되지만 컨트롤러 상수를 다시 매핑하는 <i>것은</i> 허용 <i>되지 않습니다</i> .</li>
   </ul>
-  <p>Ideally, on <i>all</i> target platforms, you want to enumerate a list of available gamepad &quot;slots&quot; and then check them to see if any devices are detected, something like this:</p>
+  <p>이상적으로는 <i>모든</i> 대상 플랫폼에서 사용 가능한 게임 패드 &quot;슬롯&quot;목록을 열거 한 다음 장치가 감지되는지 확인하십시오.</p>
   <p class="code">var maxpads = gamepad_get_device_count();<br/> for (var i = 0; i &lt; maxpads; i++)<br/>     {
     <br/>     if (gamepad_is_connected(i))<br/>         {
     <br/>         // do stuff with pad &quot;i&quot;<br/>         }
@@ -249,15 +232,16 @@
   </p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Game_Input\GamePad_Input\Gamepad_Input.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
-        <div style="float:right">Next: <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Virtual Keys and Virtual Keyboards</a></div>
+        <div style="float:left">뒤로: <a href="../Game_Input.htm">게임 입력</a></div>
+        <div style="float:right">다음: <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">가상 키 및 가상 키보드</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Gamepad Input Functions
@@ -286,4 +270,4 @@ gp_axisrv
 gamepad_functions
 -->
 
-</body></html>
+</body></html> 

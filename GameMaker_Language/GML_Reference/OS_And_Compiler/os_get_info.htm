@@ -71,7 +71,7 @@
         <span>os_get_info</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,82 +81,80 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>os_get_info</h1>
-  <p>This function returns a <a href="../Data_Structures/DS_Maps/DS_Maps.htm"><tt>DS Map</tt></a> with detailed information about the OS that the game is running on. The exact information returned will depend on the OS and the device, so it is recommended
-    that you test this function on all platforms that you wish to target and output the returned values using a function like <span class="inline"><a href="../Debugging/show_debug_message.htm">show_debug_message()</a></span>. Note that the <tt>DS Map</tt>    is not automatically cleared from memory and you should use the <a href="../Data_Structures/DS_Maps/ds_map_destroy.htm"><tt>ds_map_destroy()</tt></a> function when you no longer need the data it contains.</p>
-  <p>Below you can find some details of extra information that will be made available to the DS map specific to the following platforms:</p>
+  <p>이 함수는 게임이 실행되는 OS에 대한 자세한 정보가 포함 된 <a href="../Data_Structures/DS_Maps/DS_Maps.htm"><tt>DS Map</tt></a> 을 반환합니다. 반환되는 정확한 정보는 OS와 장치에 따라 <span class="inline"><a href="../Debugging/show_debug_message.htm">다르므로 show_debug_message ()</a></span> 와 같은 함수를 사용하여 반환하려는 값을 대상으로하고 출력하려는 ​​모든 플랫폼에서이 함수를 테스트하는 것이 좋습니다. <tt>DS 맵</tt> 은 메모리에서 자동으로 지워지지 않으므로 더 이상 포함 된 데이터가 필요하지 않은 경우 <a href="../Data_Structures/DS_Maps/ds_map_destroy.htm"><tt>ds_map_destroy ()</tt></a> 함수를 사용해야합니다.</p>
+  <p>다음은 다음 플랫폼과 관련된 DS 맵에 제공되는 추가 정보에 대한 세부 정보입니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Windows / UWP</span><span data-close-text="true">Windows / UWP</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Windows / UWP</span> <span data-close-text="true">Windows / UWP</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">On Windows Desktop and Windows UWP, you will get some extra information from DX11 with the following keys available in the DS map (useful for extensions):</p>
+    <p class="dropspot">Windows Desktop 및 Windows UWP의 경우 DS map에서 다음 키를 사용할 수있는 DX11의 추가 정보를 얻을 수 있습니다 (확장에 유용).</p>
     <ul class="dropspotlist">
-      <li><strong>video_d3d11_device </strong>- pointer to the DX11 device</li>
-      <li><strong>video_d3d11_context </strong>- pointer to the DX11 context</li>
-      <li><strong>video_adapter_vendorid </strong>- string with the adapters vendor id</li>
-      <li><strong>video_adapter_deviceid </strong>- string with the adapter device id</li>
-      <li><strong>video_adapter_subsysid </strong>- string with the adapter sub system id</li>
-      <li><strong>video_adapter_revision </strong>- string with the adapter revision number</li>
-      <li><strong>video_adapter_dedicatedvideomemory </strong>- string with the size of the video memory</li>
-      <li><strong>video_adapter_dedicatedsystemmemory </strong>- string with the size of the system memory (used by DX11 adapter)</li>
+      <li><strong>video_d3d11_device</strong> -DX11 장치에 대한 포인터</li>
+      <li><strong>video_d3d11_context</strong> -DX11 컨텍스트에 대한 포인터</li>
+      <li><strong>video_adapter_vendorid-</strong> 어댑터 공급 업체 ID가있는 문자열</li>
+      <li><strong>video_adapter_deviceid-</strong> 어댑터 장치 ID가있는 문자열</li>
+      <li><strong>video_adapter_subsysid-</strong> 어댑터 서브 시스템 ID가있는 문자열</li>
+      <li><strong>video_adapter_revision-</strong> 어댑터 개정 번호가있는 문자열</li>
+      <li><strong>video_adapter_dedicatedvideomemory-</strong> 비디오 메모리 크기의 문자열</li>
+      <li><strong>video_adapter_dedicatedsystemmemory-</strong> 시스템 메모리 크기의 문자열 (DX11 어댑터에서 사용)</li>
     </ul>
-    <p><br/></p>
+    <p></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Android / Amazon Fire</span><span data-close-text="true">Android / Amazon Fire</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">안드로이드 / 아마존 파이어</span> <span data-close-text="true">안드로이드 / 아마존 파이어</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">On the <b>Android</b> platform you will get some extra information from various different APIs with the following keys available in the DS map:<br/></p>
+    <p class="dropspot"><b>Android</b> 플랫폼에서는 DS 맵에서 다음 키를 사용할 수있는 다양한 API에서 추가 정보를 얻을 수 있습니다.</p>
     <ul class="dropspotlist">
-      <li><tt>android_tv</tt> - this will return <tt>true</tt> if the device is detected as being an Android TV device (or if you are compiling for the Amazon Fire target), or <tt>false</tt> otherwise</li>
-      <li><tt>GL_VERSION</tt> - the version of OpenGL as reported by the driver</li>
-      <li><tt>GL_VENDOR</tt> - the vendor of OpenGL as reported by the driver</li>
-      <li><tt>GL_RENDERER</tt> - the renderer of OpenGL as reported by the driver</li>
-      <li><tt>GL_EXTENSIONS</tt> - the extensions of OpenGL that are available as reported by the driver</li>
-      <li><tt>GL_SHADING_LANGUAGE_VERSION</tt> - the version of the GLSL that is supported by this OpenGL driver</li>
-      <li><tt>GL_MAX_TEXTURE_SIZE</tt> - the maximum texture size supported by this OpenGL driver</li>
-      <li><tt>SDK_INT</tt> - value of android.os.Build.VERSION.SDK_INT see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build.VERSION" href="https://developer.android.com/reference/android/os/Build.VERSION" target="_blank">here</a>        for more information.</li>
-      <li><tt>RELEASE</tt> - value of android.os.Build.VERSION.RELEASE see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build.VERSION" href="https://developer.android.com/reference/android/os/Build.VERSION" target="_blank">here</a>        for more information.</li>
-      <li><tt>MODEL</tt> - value of android.os.Build.MODEL see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
-      <li><tt>DEVICE</tt> - value of android.os.Build.DEVICE see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
-      <li><tt>MANUFACTURER</tt> - value of android.os.Build.MANUFACTURER see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more
-        information.
-      </li>
-      <li><tt>CPU_ABI</tt> - value of android.os.Build.CPU_ABI see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
-      <li><tt>CPU_ABI2</tt> - value of android.os.Build.CPU_ABI2 see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
-      <li><tt>BOOTLOADER</tt> - value of android.os.Build.BOOTLOADER see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
-      <li><tt>BOARD</tt> - value of android.os.Build.BOARD see <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
-      <li><tt>VERSION</tt> - value of os.version from the Android <tt>System.getProperty</tt> method</li>
-      <li><tt>REGION</tt> - values of user.region from the Android <tt>System.getProperty</tt> method</li>
-      <li><tt>VERSION_NAME</tt> - value of this packages versionName - see <a data-cke-saved-href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" target="_blank">here</a> for more information.</li>
-      <li><tt>PHYSICAL_KEYBOARD</tt> - if we think a physical keyboard is available then the string &quot;TRUE&quot; otherwise &quot;FALSE&quot;</li>
+      <li><tt>android_tv</tt> - 장치 (또는 아마존 화재 타겟 용으로 컴파일 할 경우), 또는 그렇지 않은 <tt>경우는 false</tt> 안드로이드 TV 장치 인 것으로 감지되는 경우이 <tt>true를</tt> 돌려줍니다</li>
+      <li><tt>GL_VERSION-</tt> 드라이버가보고 한 OpenGL 버전</li>
+      <li><tt>GL_VENDOR-</tt> 운전자가보고 한 OpenGL 공급 업체</li>
+      <li><tt>GL_RENDERER-</tt> 드라이버에 의해보고 된 OpenGL의 렌더러</li>
+      <li><tt>GL_EXTENSIONS-</tt> 드라이버가보고 한대로 사용 가능한 OpenGL의 확장</li>
+      <li><tt>GL_SHADING_LANGUAGE_VERSION-</tt> 이 OpenGL 드라이버가 지원하는 GLSL 버전</li>
+      <li><tt>GL_MAX_TEXTURE_SIZE-</tt> 이 OpenGL 드라이버가 지원하는 최대 텍스처 크기</li>
+      <li><tt>SDK_INT</tt> -android.os.Build.VERSION.SDK_INT의 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build.VERSION" href="https://developer.android.com/reference/android/os/Build.VERSION" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>릴리스-android.os.Build.VERSION.RELEASE의</tt> 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build.VERSION" href="https://developer.android.com/reference/android/os/Build.VERSION" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>모델-android.os.Build.MODEL의</tt> 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>DEVICE</tt> -android.os.Build.DEVICE의 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>MANUFACTURER</tt> -android.os.Build.MANUFACTURER의 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>CPU_ABI</tt> -android.os.Build.CPU_ABI의 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>CPU_ABI2</tt> -android.os.Build.CPU_ABI2의 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>BOOTLOADER</tt> -android.os.Build.BOOTLOADER의 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>BOARD</tt> -android.os.Build.BOARD의 값 자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/os/Build" href="https://developer.android.com/reference/android/os/Build" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>VERSION</tt> -Android <tt>System.getProperty</tt> 메소드의 os.version 값</li>
+      <li><tt>REGION</tt> -Android <tt>System.getProperty</tt> 메소드의 user.region 값</li>
+      <li><tt>VERSION_NAME-</tt> 이 패키지의 값 versionName-자세한 내용은 <a data-cke-saved-href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" target="_blank">여기</a> 를 참조하십시오.</li>
+      <li><tt>PHYSICAL_KEYBOARD-</tt> 실제 키보드를 사용할 수 있다고 생각되면 문자열 &quot;TRUE&quot;, 그렇지 않으면 &quot;FALSE&quot;</li>
     </ul>
-    <p><br/></p>
+    <p></p>
   </div>
   <p> </p>
-  <p class="note"><b>NOTE: </b>This function only works on Android, iOS, Mac, Ubuntu and Windows (Desktop + UWP), on all other target platforms it will return -1 rather than a <tt>DS Map</tt>.</p>
+  <p class="note"><b>참고 :</b> 이 기능은 Android, iOS, Mac, Ubuntu 및 Windows (Desktop + UWP)에서만 작동하며 다른 모든 대상 플랫폼에서는 <tt>DS Map</tt> 대신 -1을 반환합니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">os_get_info()</p>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real (ds_map index)</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">os_map = os_get_info();<br/> if (os_map != -1)<br/>    {
     <br/>    var size = ds_map_size(os_map);<br/>    var key = ds_map_find_first(os_map);<br/>    for (var i = 0; i &lt; size - 1; i++;)<br/>       {
     <br/>       map_data[i] = ds_map_find_value(os_map, key);<br/>       key = ds_map_find_next(os_map, key);<br/>       }
     <br/>    ds_map_destroy(os_map);
     <br/>    }
   </p>
-  <p>The above code will check the OS information to see if a <tt>DS Map</tt> is returned. If it is, then the code will loop through the map and assign all the values to an array.</p>
+  <p>위 코드는 OS 정보를 확인하여 <tt>DS Map</tt> 이 반환되는지 확인합니다. 그렇다면 코드가 맵을 반복하고 모든 값을 배열에 할당합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\OS_And_Compiler\os_get_info.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="os_powersave_enable.htm">os_powersave_enable</a></div>
+        <div style="float:left">뒤로: <a href="OS_And_Compiler.htm">OS와 컴파일러</a></div>
+        <div style="float:right">다음: <a href="os_powersave_enable.htm">os_powersave_enable</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 os_get_info
@@ -165,4 +163,4 @@ os_get_info
 os_get_info
 -->
 
-</body></html>
+</body></html> 

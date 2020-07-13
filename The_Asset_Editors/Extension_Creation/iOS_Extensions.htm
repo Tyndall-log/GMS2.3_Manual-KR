@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="iOS Extensions">
-        <span>iOS Extensions</span>
+        <span>iOS 확장</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,47 +80,39 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>iOS Extensions</h1>
-  <p>To create an extension for iOS you have to do it in two parts. The first part would be to add the extension itself, along with the required files etc... and the second is to create the functions and macros/constants that the extension requires. The
-    functions and constants are added using <strong>placeholder </strong>files to group them together, so you&#39;d add a placeholder and then define the functions and macros as explained in the section above. To add the rest of the files though you need
-    to first tick the <em>iOS </em>check-box in the <strong>Additional Features</strong> section of the editor:</p>
+  <h1>iOS 확장</h1>
+  <p>iOS 용 확장을 만들려면 두 부분으로 확장해야합니다. 첫 번째 부분은 필요한 파일 등과 함께 확장명 자체를 추가하는 것이고, 두 번째 부분은 확장명에 필요한 함수와 매크로 / 상수를 만드는 것입니다. <strong>자리 표시 자</strong> 파일을 사용하여 함수와 상수가 추가되어 그룹화되므로 자리 표시자를 추가 한 다음 위 섹션에서 설명한대로 함수와 매크로를 정의합니다. 나머지 파일을 추가하려면 먼저 편집기의 <strong>추가 기능</strong> 섹션에서 <em>iOS</em> 확인란을 선택해야합니다.</p>
   <p class="dropspot"><img alt="iOS Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_iOS.png"/></p>
-  <p>Here you give the following details:</p>
+  <p>여기에 다음 세부 정보가 제공됩니다.</p>
   <ul class="colour">
-    <li class="dropspot"><strong>Linker Flags / Compiler Flags</strong>: Some frameworks and third party SDKs require the addition of extra linker flags and compiler flags to work which can be specified here (see the documentation that accompanies the SDK or framework in
-      question for details).</li>
-    <li class="dropspot"><strong>Class Name</strong>: Your extension can have multiple classes, with each class having its own functions and constants, so you should give it a name that reflects its purpose</li>
-    <li class="dropspot"><strong>App Delegate Class Name</strong>: The name of your custom app delegate class. Setting this allows the extension to override/extend core app functionality. To use this feature you need to do the following:
-      <ol>
-        <li>Ensure that the delegate source files have the same name as the delegate class (e.g. <span class="inline">@interface MyCustomAppDelegate</span> should be defined in &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot;)</li>
-        <li>Add the <span class="inline">${YYExtAppDelegateIncludes}</span> environment variable at the top of your app delegate header file. This will be replaced at compile-time with the relevant include files for the parent delegate class.</li>
-        <li>Use the <span class="inline">${YYExtAppDelegateBaseClass}</span> environment variable as the base class for your custom app delegate. This will be replaced at compile-time with the correct base delegate class.<br/>
-          <br/> To ensure your extension works with any other extensions that use custom app delegates, you should call any base class methods from overridden methods in your child class. Before calling the superclass method, you need to make sure it
-          is implemented in the class hierarchy to avoid errors, for e.g.:</li>
+    <li class="dropspot"><strong>링커 플래그 / 컴파일러 플래그</strong> : 일부 프레임 워크 및 타사 SDK에는 여기에 지정할 수있는 추가 링커 플래그 및 컴파일러 플래그를 추가해야합니다 (자세한 내용은 해당 SDK 또는 프레임 워크와 함께 제공되는 설명서 참조).</li>
+    <li class="dropspot"><strong>클래스 이름</strong> : 확장에는 여러 클래스가있을 수 있으며 각 클래스에는 고유 한 함수와 상수가 있으므로 목적을 반영하는 이름을 지정해야합니다.</li>
+    <li class="dropspot"><strong>앱 위임 클래스 이름</strong> : 사용자 지정 앱 위임 클래스의 이름입니다. 이를 설정하면 확장 프로그램이 핵심 앱 기능을 재정의 / 확장 할 수 있습니다. 이 기능을 사용하려면 다음을 수행해야합니다. 델리게이트 소스 파일의 이름이 델리게이트 클래스와 동일한 지 확인하십시오 (예 : <span class="inline">@interface MyCustomAppDelegate</span> 는 &quot; <span class="inline">MyCustomAppDelegate.h</span> &quot;에 정의되어야 함)</li>
+        <li>앱 대리자 헤더 파일 맨 위에 <span class="inline">$ {YYExtAppDelegateIncludes}</span> 환경 변수를 추가하십시오. 이것은 컴파일 타임에 부모 대리자 클래스의 관련 포함 파일로 대체됩니다.</li>
+        <li><span class="inline">$ {YYExtAppDelegateBaseClass}</span> 환경 변수를 사용자 정의 앱 델리게이트의 기본 클래스로 사용하십시오. 이것은 컴파일 타임에 올바른 기본 대리자 클래스로 대체됩니다. 확장이 사용자 지정 앱 대리자를 사용하는 다른 확장과 작동하도록하려면 자식 클래스의 재정의 된 메서드에서 기본 클래스 메서드를 호출해야합니다. 수퍼 클래스 메소드를 호출하기 전에 다음과 같이 오류를 피하기 위해 클래스 계층 구조로 구현되었는지 확인해야합니다.</li>
       </ol>
       <p class="code">- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions<br/> {
         <br/>     // Check if any superclasses implement this method and call it<br/>     if([[self superclass] instancesRespondToSelector:@selector(application:willFinishLaunchingWithOptions:)])<br/>       return [super application:application willFinishLaunchingWithOptions:launchOptions];<br/>            else<br/>         return TRUE;<br/> }
       </p>
     </li>
-    <li class="dropspot"><strong>System Frameworks</strong>: Here you can add in any iOS system <a class="tooltip" title="A framework is a base foundation of code that may be altered and/or built upon by the user. A framework might include different software libraries, APIs, compilers and much more. In simpler terms, a framework provides a favorable environment for a certain type and level of programming for a project. In GameMaker Studio 2 you can, for example, create your own framework projects (via Local Asset Packages) that contain scripts and objects for general controls, stat management, networking, or anything else you commonly use in your projects, and then import these into new projects right at the beginning to give you the basic grounding to conntinue without having to reprogram these systems every time.">framework</a><span class="glossextra">s</span> to your extension. These are added by clicking the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18"/> button which will add a placeholder framework, which you can then edit by slow clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> on it. You can find out more about available system frameworks <a href="https://developer.apple.com/documentation/">here</a>. To remove a system framework, simply select it and then click the <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png"/> button.</li>
-    <li class="dropspot"><strong>Inject to Info.plist</strong>: Here you can add any code to be a injected into the <span class="inline">info.plist</span> file.</li>
-    <li class="dropspot"><strong>3rd Party Frameworks and Bundles</strong>: This section is for adding third party and SDK bundles. As with system frame works you click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18"/> button to add them and then slow click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to edit, and selecting them then clicking <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png"/> will remove them (see the documentation that came with your chosen SDK for info on the framework name). If the framework/SDK bundle is on your development Mac then you need to add the path into &quot; <em>Enter framework path on Mac</em>&quot;
-      and click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18"/> button, or if the SDK or source code is on your PC use the <em>Add Source</em> button.</li>
+    <li class="dropspot"><strong>시스템 프레임 워크</strong> : 여기에 당신이 어떤 아이폰 OS 시스템에 추가 할 수있는 <a class="tooltip" title="프레임 워크는 사용자가 변경 및 / 또는 구축 할 수있는 기본 코드 기반입니다. 프레임 워크에는 다른 소프트웨어 라이브러리, API, 컴파일러 등이 포함될 수 있습니다. 간단히 말하면 프레임 워크는 프로젝트의 특정 유형 및 수준의 프로그래밍에 유리한 환경을 제공합니다. 예를 들어, GameMaker Studio 2에서는 일반 컨트롤, 통계 관리, 네트워킹 또는 프로젝트에서 일반적으로 사용하는 다른 것에 대한 스크립트와 객체를 포함하는 자체 프레임 워크 프로젝트 (로컬 자산 패키지를 통해)를 생성 한 다음 프로젝트로 가져올 수 있습니다 처음부터 새로운 프로젝트를 수행하여 매번 이러한 시스템을 다시 프로그래밍 할 필요없이 연결을위한 기본 접지를 제공합니다.">프레임 워크</a> <span class="glossextra">확장에이야.</span> 이들은를 클릭하여 추가됩니다 플레이스 홀더 프레임 워크를 추가하고 느린 클릭으로 편집 할 수있는 단추 그 위에. 사용 가능한 시스템 프레임 워크에 대한 자세한 내용은 <a href="https://developer.apple.com/documentation/">여기를 참조하십시오</a> . 시스템 프레임 워크를 제거하려면 해당 프레임 워크를 선택한 다음 단추.</li>
+    <li class="dropspot"><strong>Info.plist에 삽입</strong> : 여기서 <span class="inline">info.plist</span> 파일에 삽입 할 코드를 추가 할 수 있습니다.</li>
+    <li class="dropspot"><strong>타사 프레임 워크 및 번들</strong> :이 섹션은 타사 및 SDK 번들을 추가하기위한 것입니다. 시스템 프레임 작동과 마찬가지로 버튼을 추가하고 천천히 클릭하십시오. 편집하고 선택하고 클릭 프레임 워크 이름에 대한 정보는 선택한 SDK와 함께 제공된 설명서를 참조하십시오. framework / SDK 번들이 개발 Mac에있는 경우 &quot; <em>Mac의 프레임 워크 경로 입력</em> &quot;에 경로를 추가하고 버튼 또는 SDK 또는 소스 코드가 PC에있는 경우 <em>소스 추가</em> 버튼을 사용하십시오.</li>
   </ul>
-  <p>If your extension has had any System Frameworks or 3rd Party Frameworks added, these will now be listed in the <strong>Extension Properties </strong>window, with each one having a check-box beside it. If you mark the check-box, you are enabling weak
-    linking, which is useful should you need to &quot;over-ride&quot; any symbol from the included library with your own value, but it should be noted that doing so will slow linking down.</p>
-  <p>For more information on creating iOS extensions, please see the <a href="https://help.yoyogames.com/hc/en-us/articles/360012504971-iOS-and-Android-Creating-A-Simple-Extension">YoYo Games Knowledge Base</a>.</p>
+  <p>확장에 시스템 프레임 워크 또는 타사 프레임 워크가 추가 된 경우 <strong>확장 특성</strong> 창에 각각 옆에 확인란이 표시됩니다. 확인란을 표시하면 약한 연결을 사용하는 것입니다. 이는 포함 된 라이브러리의 심볼을 고유 한 값으로 &quot;오버라이드&quot;해야하는 경우에 유용하지만 연결 속도가 느려질 수 있습니다.</p>
+  <p>iOS 확장 생성에 대한 자세한 내용은 <a href="https://help.yoyogames.com/hc/en-us/articles/360012504971-iOS-and-Android-Creating-A-Simple-Extension">YoYo Games 기술 자료</a> 를 참조하십시오.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Extension_Creation\iOS_Extensions.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Extensions.htm">The Extension Editor</a></div>
-        <div style="float:right">Next: <a href="Creating_An_Extension.htm">Creating An Extension</a></div>
+        <div style="float:left">뒤로: <a href="../Extensions.htm">확장 편집기</a></div>
+        <div style="float:right">다음: <a href="Creating_An_Extension.htm">확장 만들기</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 iOS Extensions
@@ -129,4 +121,4 @@ iOS Extensions
 extensions_ios
 -->
 
-</body></html>
+</body></html> 

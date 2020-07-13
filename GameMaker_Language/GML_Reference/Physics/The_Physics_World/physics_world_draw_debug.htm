@@ -71,7 +71,7 @@
         <span>physics_world_draw_debug</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,88 +81,84 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_world_draw_debug</h1>
-  <p>This function will draw a representation of the physics world system of the room to help with debugging when you are having trouble getting the physics scene to work right. Sometimes the problem can be in the rendering part of your game, for example
-    a sprite may be drawn at the wrong position or rotation, giving the appearance of incorrect physics, or it may be that your calculations are not correct. Either way, this function will help you to find and resolve the problem by drawing what is going
-    on in your physics system. To do this, you need tell it which part of the system to draw, and this is done by passing a value created from the bits stored in various &quot;flag&quot; constants:</p>
+  <p>이 기능은 물리 장면이 올바르게 작동하는 데 어려움이있을 때 디버깅에 도움을주기 위해 방의 물리 세계 시스템을 나타냅니다. 때로는 게임의 렌더링 부분에 문제가있을 수 있습니다. 예를 들어 스프라이트가 잘못된 위치 나 회전에 그려져 잘못된 물리학 모양이 나타나거나 계산이 정확하지 않을 수 있습니다. 어느 쪽이든이 기능을 사용하면 물리 시스템에서 진행중인 작업을 그려 문제를 찾고 해결하는 데 도움이됩니다. 이렇게하려면 시스템의 어느 부분을 그릴 지 알려야하며, 다양한 &quot;플래그&quot;상수에 저장된 비트에서 생성 된 값을 전달하면됩니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>phy_debug_render_aabb</td>
-        <td>This shows the absolute bounding box of each fixture in relation to the room axis</td>
+        <td>이것은 룸 축과 관련하여 각 조명기의 절대 경계 상자를 보여줍니다</td>
       </tr>
       <tr>
         <td>phy_debug_render_collision_pairs</td>
-        <td>This will show any fixtures that are currently in collision</td>
+        <td>이것은 현재 충돌중인 조명기를 보여줍니다</td>
       </tr>
       <tr>
         <td>phy_debug_render_coms</td>
-        <td>This marks the center of mass of each fixture in the room</td>
+        <td>이것은 방에있는 각 조명기의 무게 중심을 표시합니다</td>
       </tr>
       <tr>
         <td>phy_debug_render_core_shapes</td>
-        <td>Shows the basic shapes that make up the fixtures in the room</td>
+        <td>방의 비품을 구성하는 기본 모양을 보여줍니다.</td>
       </tr>
       <tr>
         <td>phy_debug_render_joints</td>
-        <td>This will draw each of the joints of all fixtures in the room</td>
+        <td>이것은 방에있는 모든 비품의 각 관절을 그립니다.</td>
       </tr>
       <tr>
         <td>phy_debug_render_obb</td>
-        <td>This shows the relative bounding box for the fixtures in the room</td>
+        <td>이것은 방에있는 조명기의 상대적인 경계 상자를 보여줍니다</td>
       </tr>
       <tr>
         <td>phy_debug_render_shapes</td>
-        <td>This shows the actual shapes that make up fixtures within the room</td>
+        <td>이것은 실내의 비품을 구성하는 실제 모양을 보여줍니다</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>So, to draw any two of those options we would need to do a <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise &quot;or&quot;</a> (in GameMaker Studio 2 this is represented by | ) on the two of them and store the resulting
-    variable for the function to use. Here is an example of how you would set a variable to use with the function that will draw only the centers of mass and the joints of all fixtures in a room:</p>
+  <p>따라서 두 가지 옵션 중 하나를 그리려면 두 가지에 대해 <a href="../../../../Additional_Information/Bitwise_Operators.htm">비트 단위 &quot;또는&quot;</a> (GameMaker Studio 2에서 |로 표시됨)을 수행하고 함수에 사용할 결과 변수를 저장해야합니다. 다음은 룸에서 질량 중심과 모든 조명기의 조인트 만 그리는 함수에 사용할 변수를 설정하는 방법의 예입니다.</p>
   <p class="code">flag = phy_debug_render_coms | phy_debug_render_shapes;</p>
-  <p>Which would give you something like this:</p>
-  <p><img alt="Physics debug draw example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_draw_debug_image.png"/>As you can see with the above code, only the shapes and centers of mass are drawn on the screen
-    (as well as colours representing their states - for further information please check the Box 2D documentation on-line). In the same way you can display more, or even all, of the constants that you wish to debug... Just &quot;or&quot; them all together!
-    One further thing should be noted - this function should be called <i>only</i> in the draw event of an instance that has a depth lower than those you wish to debug or else you will not be able to see the debug information.</p>
+  <p>어느 것이 당신에게 이런 것을 줄 것입니다 :</p>
+  <p><img alt="Physics debug draw example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_draw_debug_image.png"/>위의 코드에서 볼 수 있듯이 화면에 모양과 질량 중심 만 그려집니다 (상태를 나타내는 색상-자세한 내용은 Box 2D 설명서를 온라인으로 확인하십시오). 같은 방법으로 디버그하고 싶은 상수의 전부 또는 전부를 표시 할 수 있습니다. 한 가지 더주의해야 할 점-이 함수는 디버그하려는 인스턴스보다 깊이가 낮은 인스턴스의 그리기 이벤트 <i>에서만</i> 호출해야합니다. 그렇지 않으면 디버그 정보를 볼 수 없습니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">physics_world_draw_debug(flag)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>flag</td>
-        <td>The flag value for showing different debug features</td>
+        <td>깃발</td>
+        <td>다른 디버그 기능을 표시하기위한 플래그 값</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">flag = phy_debug_render_aabb | phy_debug_render_collision_pairs | phy_debug_render_obb;<br/> physics_world_draw_debug(flag);
   </p>
-  <p>The code above will draw all of the absolute bounding boxes, the relative bounding boxes as well as the fixtures in collision within the current physics system.</p>
+  <p>위의 코드는 현재 물리 시스템 내에서 충돌하는 고정구뿐만 아니라 모든 절대 경계 상자, 상대 경계 상자를 그립니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Physics\The_Physics_World\physics_world_draw_debug.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Physics_World.htm">The Physics World</a></div>
-        <div style="float:right">Next: <a href="physics_draw_debug.htm">physics_draw_debug</a></div>
+        <div style="float:left">뒤로: <a href="The_Physics_World.htm">물리 세계</a></div>
+        <div style="float:right">다음: <a href="physics_draw_debug.htm">physics_draw_debug</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 physics_world_draw_debug
@@ -178,4 +174,4 @@ phy_debug_render_shapes
 physics_world_draw_debug
 -->
 
-</body></html>
+</body></html> 

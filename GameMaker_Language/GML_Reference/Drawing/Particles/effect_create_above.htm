@@ -71,7 +71,7 @@
         <span>effect_create_above</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,132 +81,131 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>effect_create_above</h1>
-  <p>With this function you can create a simple effect above all instances of your room (it is actually created at a depth of -100000). If the effect is anything other <tt>ef_rain</tt> or <tt>ef_snow</tt> then you can define an x/y position to create the
-    effect, and the size can be a value of 0, 1, or 2, where 0 is small, 1 is medium and 2 is large.</p>
-  <p>It is worth noting that these effects can have their drawing toggled on and off, as well as have their drawing paused, by using the functions <a href="Particle_Systems/part_system_automatic_draw.htm"><tt>part_system_automatic_draw()</tt></a> and
-    <a href="Particle_Systems/part_system_automatic_update.htm"><tt>part_system_automatic_update()</tt></a> with the appropriate value for the particle system index (where 0 is for effects below and 1 is for effects above).</p>
-  <p>The available constants for the different particle kinds are:</p>
+  <p>이 기능을 사용하면 방의 모든 인스턴스 위에 간단한 효과를 만들 수 있습니다 (실제로 -100000의 깊이에서 생성됨). 효과가 다른 <tt>ef_rain</tt> 또는 <tt>ef_snow 인</tt> 경우 x / y 위치를 정의하여 효과를 만들 수 있으며 크기는 0, 1 또는 2의 값일 수 있습니다. 여기서 0은 작고 1은 중간이고 2는 큰 .</p>
+  <p>파티클 시스템 인덱스에 적절한 값을 갖는 <a href="Particle_Systems/part_system_automatic_draw.htm"><tt>part_system_automatic_draw ()</tt></a> 및 <a href="Particle_Systems/part_system_automatic_update.htm"><tt>part_system_automatic_update ()</tt></a> 함수를 사용하여 이러한 효과를 사용하여 그리기를 켜거나 끌 수 있으며 그리기를 일시 중지 할 수 있습니다 (여기서 0은 효과에 대한 것임) 아래 및 1은 위의 효과를 나타냅니다.</p>
+  <p>다른 입자 종류에 사용 가능한 상수는 다음과 같습니다.</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Example</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>예</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>ef_cloud</td>
-        <td style="text-align: center"><img alt="cloud effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_cloud.png"/></td>
-        <td>An effect that creates random cloud particles of varying sizes</td>
+        <td style="text-align: center"><img alt="구름 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_cloud.png"/></td>
+        <td>다양한 크기의 임의의 구름 입자를 생성하는 효과</td>
       </tr>
       <tr>
         <td>ef_ellipse</td>
-        <td style="text-align: center"><img alt="ellipse effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_ellipse.png"/></td>
-        <td>An effect that creates expanding ellipses</td>
+        <td style="text-align: center"><img alt="타원 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_ellipse.png"/></td>
+        <td>확장 타원을 만드는 효과</td>
       </tr>
       <tr>
         <td>ef_explosion</td>
-        <td style="text-align: center"><img alt="explosion effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_explosion.png"/></td>
-        <td>An effect that creates expanding fading explosions</td>
+        <td style="text-align: center"><img alt="폭발 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_explosion.png"/></td>
+        <td>페이딩 폭발을 확장시키는 효과</td>
       </tr>
       <tr>
         <td>ef_firework</td>
-        <td style="text-align: center"><img alt="firework effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_firework.png"/></td>
-        <td>An effect that creates multiple small particles to generate a firework explosion</td>
+        <td style="text-align: center"><img alt="불꽃 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_firework.png"/></td>
+        <td>불꽃 폭발을 일으키기 위해 여러 개의 작은 입자를 만드는 효과</td>
       </tr>
       <tr>
         <td>ef_flare</td>
-        <td style="text-align: center"><img alt="flare effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_flare.png"/></td>
-        <td>An effect that generates a brilliant point that flares up and fades out</td>
+        <td style="text-align: center"><img alt="플레어 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_flare.png"/></td>
+        <td>눈부신 빛을 발하는 화려한 점을 만드는 효과</td>
       </tr>
       <tr>
         <td>ef_rain</td>
-        <td style="text-align: center"><img alt="rain effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_rain.png"/></td>
-        <td>An effect that generates rain particles coming down from the top of the screen</td>
+        <td style="text-align: center"><img alt="비 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_rain.png"/></td>
+        <td>화면 상단에서 비가 내리는 효과</td>
       </tr>
       <tr>
         <td>ef_ring</td>
-        <td style="text-align: center"><img alt="circle effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_ring.png"/></td>
-        <td>An effect that generates expanding and fading circles</td>
+        <td style="text-align: center"><img alt="원 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_ring.png"/></td>
+        <td>확장 및 페이딩 서클을 생성하는 효과</td>
       </tr>
       <tr>
         <td>ef_smoke</td>
-        <td style="text-align: center"><img alt="smoke effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_smoke.png"/></td>
-        <td>An effect that generates little puffs of smoke</td>
+        <td style="text-align: center"><img alt="연기 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_smoke.png"/></td>
+        <td>연기가 거의 나지 않는 효과</td>
       </tr>
       <tr>
         <td>ef_smokeup</td>
-        <td style="text-align: center"><img alt="rising smoke effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_smokeup.png"/></td>
-        <td>An effect that creates a smoke plume that rises up the screen</td>
+        <td style="text-align: center"><img alt="연기 효과 상승 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_smokeup.png"/></td>
+        <td>연기 연기를 생성하여 화면을 상승시키는 효과</td>
       </tr>
       <tr>
         <td>ef_snow</td>
-        <td style="text-align: center"><img alt="snow effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_snow.png"/></td>
-        <td>An effect that generates multiple snow particles falling down the screen</td>
+        <td style="text-align: center"><img alt="눈 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_snow.png"/></td>
+        <td>화면 아래로 떨어지는 여러 개의 눈 입자를 생성하는 효과</td>
       </tr>
       <tr>
         <td>ef_spark</td>
-        <td style="text-align: center"><img alt="spark effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_spark.png"/></td>
-        <td>An effect that generates a small spark</td>
+        <td style="text-align: center"><img alt="스파크 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_spark.png"/></td>
+        <td>작은 불꽃을 발생시키는 효과</td>
       </tr>
       <tr>
         <td>ef_star</td>
-        <td style="text-align: center"><img alt="star effect example" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_star.png"/></td>
-        <td>An effect that generates star particles</td>
+        <td style="text-align: center"><img alt="별 효과 예" class="icon" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/ef_star.png"/></td>
+        <td>별 입자를 생성하는 효과</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">effect_create_above(kind, x, y, size, colour);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>kind</td>
-        <td>The kind of effect (use one of the constants listed<span> above</span>).</td>
+        <td>종류</td>
+        <td>효과의 종류 ( <span>위에</span> 나열된 상수 중 하나 사용).</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x positioning of the effect if relevant.</td>
+        <td>엑스</td>
+        <td>해당되는 경우 효과의 x 위치.</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y positioning of the effect if relevant.</td>
+        <td>와이</td>
+        <td>해당되는 경우 효과의 y 위치.</td>
       </tr>
       <tr>
-        <td>size</td>
-        <td>The size of the effect.</td>
+        <td>크기</td>
+        <td>효과의 크기입니다.</td>
       </tr>
       <tr>
-        <td>colour</td>
-        <td>The colour of the effect.</td>
+        <td>색깔</td>
+        <td>효과의 색상입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">if health &lt;= 0<br/>     {
     <br/>     effect_create_above(ef_explosion, x, y, 1, c_yellow);<br/>     instance_destroy();
     <br/>     }
   </p>
-  <p>The above code will create a medium, yellow, explosion above the instance and destroy it should the &quot;health&quot; variable be less than or equal to 0.</p>
+  <p>위의 코드는 인스턴스 위에 중간, 노랑, 폭발을 일으켜 &quot;health&quot;변수가 0보다 작거나 같은 경우이를 파괴합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Drawing\Particles\effect_create_above.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particles.htm">Particles</a></div>
-        <div style="float:right">Next: <a href="effect_clear.htm">effect_clear</a></div>
+        <div style="float:left">뒤로: <a href="Particles.htm">입자</a></div>
+        <div style="float:right">다음: <a href="effect_clear.htm">effect_clear</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 effect_create_above
@@ -227,4 +226,4 @@ ef_star
 effect_create_above
 -->
 
-</body></html>
+</body></html> 

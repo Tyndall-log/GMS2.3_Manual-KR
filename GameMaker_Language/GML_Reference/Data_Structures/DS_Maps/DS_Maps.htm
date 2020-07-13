@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="DS Maps">
-        <span>DS Maps</span>
+        <span>DS 맵</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,17 +80,14 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>DS Maps</h1>
-  <p>The DS map data structure is an exceptionally useful one as it lets you store <b>key</b> and <b>value</b> pairs. For example, a character in your game can have a quantity of different items (<i>keys</i>) and for each individual item he can have a number
-    of them (<i>values</i>), like in an RPG where you can have 10 health potions, 5 mana potions and 100 gold. Maps maintain such pairs all together in the one place and you can add pairs to the map and search for the value corresponding to certain keys
-    as well using some simple functions. There are a couple of things you should know about maps before you use them, however! Maps are <i>not</i> sorted in any (recognisable) way, meaning that to find a certain key you may have to iterate through the
-    whole thing (which is <b>very</b> slow). There is also no way to hold two keys that are the same, nor can you assign one key two values.</p>
-  <p class="note"><b>NOTE:</b> As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
-  <p class="note"><b>NOTE:</b> if you need to check if a data structure exists, you can use the <span style="font-size:1px;"><a href="../ds_exists.htm"><tt style="font-size: 14px">ds_exists()</tt></a></span> function.</p>
-  <p>Apart from the specific functions listed below you can all use an <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a>    (called an <i>accessor</i>) to add or modify the contents of your DS map. This accessor looks similar to a 1D array with the following syntax:</p>
+  <h1>DS 맵</h1>
+  <p>DS 맵 데이터 구조는 <b>키</b> 와 <b>값</b> 쌍을 저장할 수 있으므로 매우 유용합니다. 예를 들어, 게임에서 캐릭터는 다른 항목 (의 양 가질 수 <i>키</i> ) 및 각 개별 항목에 대해 그는 그들 (의 수를 가질 수 <i>값을</i> 10 개 개의 건강의 묘약, 5 개 마나 물약을 할 수있는 롤 플레잉처럼) 100 골드 지도는 이러한 쌍을 모두 한 곳에 모으고지도에 쌍을 추가하고 일부 간단한 기능을 사용하여 특정 키에 해당하는 값을 검색 할 수 있습니다. 그러나지도를 사용하기 전에 알아야 할 몇 가지 사항이 있습니다! 지도는 (인식 할 수있는) 방식으로 정렬되어 <i>있지 않습니다</i> . 즉, 특정 키를 찾으려면 모든 것을 반복해야 할 수도 있습니다 ( <b>매우</b> 느립니다). 동일한 두 개의 키를 보유 할 방법도없고 하나의 키에 두 개의 값을 할당 할 수도 없습니다.</p>
+  <p class="note"><b>참고 :</b> 모든 동적 리소스와 마찬가지로 데이터 구조는 메모리를 차지하므로 더 이상 메모리 누수를 방지하기 위해 더 이상 필요하지 않을 때는 <b>항상</b> 파괴되어 게임 속도가 느려지고 게임이 중단됩니다.</p>
+  <p class="note"><b>참고 :</b> 데이터 구조가 있는지 확인해야하는 경우 <span style="font-size:1px;"><a href="../ds_exists.htm"><tt style="font-size: 14px">ds_exists ()</tt></a></span> 함수를 사용할 수 있습니다.</p>
+  <p>제외하고는 전혀 사용할 수 있습니다 아래에 나열된 특정 기능에서 <a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">식을</a> (AN라는 <i>접근</i> 추가하거나 DS의 내용이지도 수정을). 이 접근자는 다음 구문을 사용하여 1D 배열과 유사합니다.</p>
   <p class="code">map_index[? key]</p>
-  <p>You can find more information, plus examples, from from the GML Overview page on <a href="../../../GML_Overview/Accessors.htm">Accessors</a>.</p>
-  <p>The following functions exist that deal with DS maps.</p>
+  <p>당신의 GML 개요 페이지에서 더 많은 정보 플러스 예를 찾을 수 있습니다 <a href="../../../GML_Overview/Accessors.htm">접근 자</a> .</p>
+  <p>DS 맵을 처리하는 다음 기능이 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="ds_map_exists.htm">ds_map_exists</a></li>
@@ -114,8 +111,7 @@
     <li><a href="ds_map_destroy.htm">ds_map_destroy</a></li>
   </ul>
   <p> </p>
-  <p>There are four further functions available for saving and loading a <span class="misspell-word">DS</span> map. These functions will obfuscate the map and store it in a secure location on the target platform using a file format that means that the final
-    file is not able to be transfered between devices:</p>
+  <p><span class="misspell-word">DS</span> 맵을 저장하고로드하는 데 사용할 수있는 추가 기능이 4 가지 있습니다. 이러한 기능은 맵을 난독 처리하고 파일 형식을 사용하여 대상 플랫폼의 안전한 위치에 저장합니다. 즉, 최종 파일을 장치간에 전송할 수 없습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="ds_map_secure_save.htm">ds_map_secure_save</a></li>
@@ -124,7 +120,7 @@
     <li><a href="ds_map_secure_load_buffer.htm">ds_map_secure_load_buffer</a></li>
   </ul>
   <p> </p>
-  <p>One of the uses that DS maps have is when working with JSON, and so there are a few special functions that are specific to that:</p>
+  <p>DS 맵에서 사용하는 용도 중 하나는 JSON으로 작업 할 때 사용되므로 특정 기능이 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="ds_map_add_list.htm">ds_map_add_list</a></li>
@@ -134,18 +130,19 @@
     <li><a href="ds_map_is_list.htm">ds_map_is_list</a></li>
     <li><a href="ds_map_is_map.htm">ds_map_is_map</a></li>
   </ul>
-  <p class="note"><b>NOTE:</b> While these functions permit you to add lists and maps within a map, they are useless for anything other than JSON, and nested maps and lists will not be read correctly if written to disk or accessed in any other way.</p>
+  <p class="note"><b>참고 :</b> 이 함수를 사용하면 맵 내에 목록과 맵을 추가 할 수 있지만 JSON 이외의 다른 기능에는 사용할 수 없으며 디스크에 쓰거나 다른 방식으로 액세스하면 중첩 된 맵과 목록이 올바르게 읽히지 않습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Data_Structures\DS_Maps\DS_Maps.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Data_Structures.htm">Data Structures</a></div>
-        <div style="float:right">Next: <a href="../DS_Priority_Queues/DS_Priority_Queues.htm">DS Priority Queues</a></div>
+        <div style="float:left">뒤로: <a href="../Data_Structures.htm">데이터 구조</a></div>
+        <div style="float:right">다음: <a href="../DS_Priority_Queues/DS_Priority_Queues.htm">DS 우선 순위 큐</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 DS Maps
@@ -154,4 +151,4 @@ DS Maps
 ds_map_functions
 -->
 
-</body></html>
+</body></html> 

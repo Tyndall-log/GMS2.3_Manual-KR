@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Setting Up Git Plugin">
-        <span>Setting Up Git Plugin</span>
+        <span>힘내 플러그인 설정</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,44 +80,38 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Setting Up The GIT Plugin</h1>
-  <p>When starting to use the GIT plugin, we need to setup an identity for GIT to commit as, which means we need to go to the <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">Plugins - Source Control (Git)</a> section
-    of the <a href="../../Setting_Up_And_Version_Information/IDE_Preferences.htm">Preferences</a> and add your authentication details.</p>
-  <p><img alt="SCM Identity Preferences" class="center" src="../../assets/Images/IDE Tools/SCM_IdentityPrefs.png"/>This authentication identity will be used for all future projects, and GameMaker Studio 2 gives you two different ways that you can set it
-    up:</p>
+  <h1>GIT 플러그인 설정</h1>
+  <p>GIT 플러그인 사용을 시작할 때 GIT가 다음과 같이 커밋하도록 ID를 설정해야합니다. 즉, <a href="../../Setting_Up_And_Version_Information/IDE_Preferences.htm">환경 설정</a> 의 <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">플러그인-소스 제어 (Git)</a> 섹션으로 이동하여 인증 세부 사항을 추가해야합니다.</p>
+  <p><img alt="SCM Identity Preferences" class="center" src="../../assets/Images/IDE Tools/SCM_IdentityPrefs.png"/>이 인증 아이덴티티는 향후 모든 프로젝트에 사용될 것이며 GameMaker Studio 2는이를 설정할 수있는 두 가지 방법을 제공합니다.</p>
   <ul class="colour">
-    <li><strong>Username And Password</strong>: Clicking the &quot;<em>Add New User/Pass Authentication</em>&quot; button will present you with the following window where you can input the <strong>Repository URL</strong>, the <strong>Username</strong> and
-      the <strong>Password</strong>:<br/>
-      <img alt="SCM Username and Password" class="center" src="../../assets/Images/IDE Tools/SCM_UsernamePassword.png"/>If you want this to affect just a specific repository then place the URL for the repository in the top field. However, if it&#39;s
-      domain wide authentication you want (ie: &quot;<span class="inline">bitbucket.org</span>&quot; or &quot;<span class="inline">github.com</span>&quot; ) then just place the domain and nothing else. When something needs to check for authentication,
-      it will look for a specific repository match first, and then a domain match. This will allow you to have a default authentication for a domain, and override with specific details for certain repositories later.</li>
+    <li><strong>사용자 이름 및 비밀번호</strong> : &quot; <em>새 사용자 / 패스 인증 추가</em> &quot;버튼을 클릭하면 <strong>리포지토리 URL</strong> , <strong>사용자 이름</strong> 및 <strong>비밀번호를</strong> 입력 할 수있는 다음 창이 나타납니다. 이것이 특정 저장소에만 영향을 미치려면 저장소의 URL을 맨 위 필드에 두십시오. 그러나 도메인 전체 인증이 필요한 경우 (예 : &quot; <span class="inline">bitbucket.org</span> &quot;또는 &quot; <span class="inline">github.com</span> &quot;) 도메인을 배치하면됩니다. 인증을 확인해야 할 경우 먼저 특정 리포지토리 일치를 찾은 다음 도메인 일치를 찾습니다. 이를 통해 도메인에 대한 기본 인증을 보유하고 나중에 특정 리포지토리에 대한 특정 세부 정보로 재정의 할 수 있습니다.</li>
   </ul>
-  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em">NOTE: If you are using an external repository, then you should be using the username and password associated with the account set up for that repository, but if you are wanting to use a local repository then you can use any username and password.</p>
+  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em">참고 : 외부 리포지토리를 사용하는 경우 해당 리포지토리에 설정된 계정과 연결된 사용자 이름과 비밀번호를 사용해야하지만 로컬 리포지토리를 사용하려는 경우 모든 사용자 이름과 비밀번호를 사용할 수 있습니다.</p>
   <ul class="colour">
-    <li><strong>SSH Keypairs</strong>: Clicking the &quot;<em>Add New SSH Keypair Authentication</em>&quot; will present you with the following window where you can input the <strong>Repository URL</strong> and <strong>Password</strong> before giving the
-      paths to the <strong>Public Key</strong> and <strong>Private Key</strong> files required:<br/>
-      <img alt="SCM SSH Settings" class="center" src="../../assets/Images/IDE Tools/SCM_SSH.png"/>Like the Username/Password authentications, you can have domain and repository specific authentications when using SSH keypairs. If you already have an
-      SSH Keypair generated, you can set the paths up here, as well as any password required to access them. Note that should you need quick access to the public key, the copy button <img alt="Icon SCM Copy" class="icon" height="22" src="../../assets/Images/IDE Tools/SCM_Copy.png" width="22"/> will automatically copy the contents to the clipboard for you. If you don&#39;t already have an SSH Keypair, clicking on the <strong>Create KeyPair</strong> button will bring up a file dialog of where to place the private key, and
-      the public key will be created adjacent to it - this will fill out the paths to the public and private keys automatically for you.</li>
+    <li><strong>SSH 키 쌍</strong> : &quot; <em>새 SSH 키 쌍 인증 추가</em> &quot;를 클릭하면 필요한 <strong>공개 키</strong> 및 <strong>개인 키</strong> 파일에 경로를 제공하기 전에 <strong>리포지토리 URL</strong> 및 <strong>암호</strong> 를 입력 할 수있는 다음 창이 나타납니다. 사용자 이름 / 암호 인증과 마찬가지로 SSH 키 쌍을 사용할 때 도메인 및 저장소 별 인증을 가질 수 있습니다. SSH 키 쌍이 이미 생성 된 경우 여기에 경로와 여기에 액세스하는 데 필요한 비밀번호를 설정할 수 있습니다. 공개 키, 복사 버튼에 빠르게 액세스해야하는 경우 내용을 클립 보드에 자동으로 복사합니다. SSH 키 페어가없는 경우 <strong>Create KeyPair</strong> 버튼을 클릭하면 개인 키를 배치 할 위치에 대한 파일 대화 상자가 표시되고 그 옆에 공개 키가 생성됩니다. 공개 및 개인 키가 자동으로 제공됩니다.</li>
   </ul>
-  <p>These settings will now be used to communicate with the repository (IE: Git Hub, Bit Bucket, etc.. ) when handling clone, push and pull requests. However you still need to set up the per-project options which can be done by opening up the <a href="../../Settings/Game_Options.htm">Main Options</a>    and clicking the <strong>Enable Source Control</strong> option. This will activate SCM for the current project.</p>
-  <p><img alt="Enable Source Control" class="center" src="../../assets/Images/IDE Tools/SCM_EnableSourceControl.png"/>Once you have enabled source control (and applied it) a new context menu will appear at the top of the IDE with the following option (each
-    of which is explained in more detail in the rest of the sections of this tutorial):</p>
+  <p>이 설정은 이제 복제, 푸시 및 풀 요청을 처리 할 때 리포지토리 (IE : Git Hub, Bit Bucket 등)와 통신하는 데 사용됩니다. 그러나 여전히 <a href="../../Settings/Game_Options.htm">메인 옵션</a> 을 열고 <strong>소스 제어 사용</strong> <a href="../../Settings/Game_Options.htm">옵션</a> 을 클릭하여 수행 할 수있는 프로젝트 별 옵션을 설정해야합니다. 현재 프로젝트에 대한 SCM이 활성화됩니다.</p>
+  <p><img alt="Enable Source Control" class="center" src="../../assets/Images/IDE Tools/SCM_EnableSourceControl.png"/>소스 컨트롤을 활성화하고 적용하면 IDE의 맨 위에 다음과 같은 옵션으로 새 컨텍스트 메뉴가 나타납니다 (각각이 자습서의 나머지 섹션에서 자세히 설명합니다).</p>
   <p><img class="center" src="../../assets/Images/IDE Tools/SCM_ContextMenu.png"/></p>
-  <p class="note"><strong>NOTE</strong>: If you need to edit the authentication details again, just double click on the entry and the details window will open for you to edit, but you will not be able to rename the URL. If you need to change the URL then you will need
-    to delete the authentication details and re-add. To delete the authentication details, click on the close button on the left of the row in the main Preferences window.</p>
+  <p class="note"><strong>참고</strong> : 인증 세부 정보를 다시 편집해야하는 경우 항목을 두 번 클릭하면 세부 정보 창이 열리지 만 편집 할 수는 없지만 URL의 이름을 바꿀 수는 없습니다. URL을 변경해야하는 경우 인증 세부 사항을 삭제하고 다시 추가해야합니다. 인증 세부 사항을 삭제하려면 기본 환경 설정 창의 행 왼쪽에있는 닫기 단추를 클릭하십시오.</p>
   <p class="note"><img alt="Delete SSH Keypairs" class="center" src="../../assets/Images/IDE Tools/SCM_DeleteSSH.png"/></p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('IDE_Tools\Source_Control\Setting_Up_Git_Plugin.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
+        <div style="float:left">뒤로: <a href="../Source_Control.htm">소스 컨트롤</a></div>
+        <div style="float:right">다음: <a href="Repository_Options.htm">
+      <div class="clear">
         <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-        <div style="float:right">Next: <a href="Repository_Options.htm">Repository Options</a> </div>
+        <div style="float:right">Next: <a href="Repository_Options.htm">Repository Options</a> </div>iv class="clear">
+        <div style="float:left">Back: <a href="../Source_Control.htm">소스 컨트롤</a></div>
+        <div style="float:right">Next: <a href="Repository_Options.htm">리포지토리 옵션</a> </div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Setting Up GIT
@@ -127,4 +121,4 @@ GIT
 source_control_setup_git
 -->
 
-</body></html>
+</body></html> 

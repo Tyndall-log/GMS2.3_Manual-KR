@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Texture Groups">
-        <span>Texture Groups</span>
+        <span>텍스처 그룹</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,76 +81,53 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Texture Groups</h1>
-  <p><img alt="Texture Group Editor" class="center" src="../assets/Images/Settings/Texture_Groups.png"/>The <strong>Texture Group Manager</strong> is available from the <a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">Tools Menu</a> in the IDE. Here
-    you can <em>add</em>, <em>delete </em>and <em>rename </em><strong>Texture Groups</strong>. GameMaker Studio 2 permits you to assign each of the graphics assets (sprites, tilesets, and fonts) to different texture groups to try and optimise the number
-    of texture swaps that the hardware does at any given time in your game. For that to work, you need to define the necessary texture groups from this window, and then go through each of the appropriate asset types and select the group you wish it to
-    belong to from the drop down menu. Alternatively you can add assets to a texture group via the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> menu in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>.
-    You can select one or more assets (or an entire asset group folder) and then use the RMB menu to add the assets to any group, as shown below for tilesets:</p>
-  <p><img alt="Asset Browser RMB Menu For Tilesets" class="center" src="../assets/Images/Settings/QS_RMBMenu_Tilesets.png"/>it is important to realise that a single texture group can have multiple texture pages, and they are <strong>not </strong>equivalent.
-    If your game has a lot of unique graphics for each level, then you may define a single texture <em>group </em>for each of the levels, but the graphics require two or more texture <em>pages </em>per group.</p>
+  <h1>텍스처 그룹</h1>
+  <p><img alt="Texture Group Editor" class="center" src="../assets/Images/Settings/Texture_Groups.png"/><strong>텍스처 그룹 관리자</strong> 는 IDE의 <a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">도구 메뉴</a> 에서 사용할 수 있습니다. 여기에서 <strong>Texture Groups를</strong> <em>추가</em> , <em>삭제</em> 및 <em>이름 변경할</em> 수 <em>있습니다</em> . GameMaker Studio 2를 사용하면 각 그래픽 자산 (스프라이트, 타일셋 및 글꼴)을 다른 텍스처 그룹에 할당하여 게임에서 특정 시점에 하드웨어가 수행하는 텍스처 스왑 수를 최적화하고 시도 할 수 있습니다. 이를 위해서는이 창에서 필요한 텍스처 그룹을 정의한 다음 적절한 각 자산 유형을 살펴보고 드롭 다운 메뉴에서 소속 그룹을 선택해야합니다. 또는 마우스 오른쪽 버튼으로 텍스처 그룹에 자산을 추가 할 수 있습니다 <a href="../Introduction/The_Asset_Browser.htm">자산 브라우저의</a> 메뉴. 타일셋에 대해 아래와 같이 하나 이상의 자산 (또는 전체 자산 그룹 폴더)을 선택한 다음 RMB 메뉴를 사용하여 자산을 그룹에 추가 할 수 있습니다.</p>
+  <p><img alt="Asset Browser RMB Menu For Tilesets" class="center" src="../assets/Images/Settings/QS_RMBMenu_Tilesets.png"/>단일 텍스처 그룹은 여러 텍스처 페이지를 가질 수 있으며 동등 <strong>하지 않다는</strong> 것을 인식하는 것이 중요합니다. 게임에 각 레벨마다 고유 한 그래픽이 많은 경우 각 레벨에 대해 단일 텍스처 <em>그룹</em> 을 정의 할 수 있지만 그래픽에는 그룹당 두 개 이상의 텍스처 <em>페이지가</em> 필요합니다.</p>
   <p>By default all images in your game will be added to the &quot;Default&quot; texture group, which always exists. However you can click the <strong>Add New</strong> button to create a new texture group, and if you select the name of the group you can
     change it something appropriate. To start with the group will show &quot;<em>this group is empty</em>&quot; for each section of the group (Sprites, tilesets and fonts), and so you then need to go through your graphic assets and add them. You can add
     a resource using the <strong>Add Resource</strong> button at the bottom, or by selecting the texture group from the resource editor for the image, tile set, or font. Texture groups other than the &quot;Default&quot; one can also be deleted at any
-    time, which will move their contents into the &quot;Default&quot; group (note that if you delete a group by mistake you can use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">Z</span>&quot; to undo the action).</p>
+    time, which will move their contents into the &quot;Default&quot; group (note that if you delete a group by mistake you can use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/>/ + &quot; <span class="inline">Z</span> &quot;)를 실행 취소합니다.</p>
   <p>Once you have defined texture groups - and assigned graphic assets to them - you will see them listed on the left of the main Texture Group editor window, and clicking on any of the sprites in this list will show them in the image preview window on
     the right. This is particularly helpful when working on large projects and you need to be able to see which images have been assigned to which group. Note that if the images assigned to the group have multiple sub-images (ie: they are animated), then
-    <em>only the first sub-image is shown in the preview window</em>. You can also right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on a resource to open a small menu giving you the option
-    to move it to another texture group or open the editor for that asset.</p>
-  <p>It is worth noting that even though the assets are shown in the list as being separate, all sprites, tilesets and fonts will be added to the same texture page (or pages), and not get an individual page for each resource type. The only exception to this
-    rule is when a sprite asset has been flagged as being for a &quot;<strong>Seperate Texture Page</strong>&quot;, in which case it will be given it&#39;s own individual texture page (see the section on &quot;Texture Settings&quot; in the <a href="../The_Asset_Editors/Sprites.htm">Sprite Editor</a>    for more details).</p>
-  <p>For more information on texture pages and how they are generated, please see the following page:</p>
+    <em>only the first sub-image is shown in the preview window</em>. You can also right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/>리소스에서 작은 메뉴를 열면 다른 텍스처 그룹으로 이동하거나 해당 자산의 편집기를 열 수있는 옵션이 제공됩니다.</p>
+  <p>자산이 목록에 별도의 것으로 표시 되더라도 모든 스프라이트, 타일셋 및 글꼴이 동일한 텍스처 페이지에 추가되고 각 자원 유형에 대해 개별 페이지를 얻지 못한다는 점에 주목할 가치가 있습니다. 이 규칙에 대한 유일한 예외는 스프라이트 자산이 &quot; <strong>텍스처 분리 페이지</strong> &quot;용으로 플래그가 지정된 경우입니다.이 경우 자체 텍스처 페이지가 제공됩니다 (에 대한 <a href="../The_Asset_Editors/Sprites.htm">Sprite Editor의</a> &quot;텍스처 설정&quot;섹션 참조). 자세한 내용은).</p>
+  <p>텍스처 페이지 및 생성 방법에 대한 자세한 내용은 다음 페이지를 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="Texture_Information/Texture_Pages.htm">Texture Pages</a></li>
+    <li><a href="Texture_Information/Texture_Pages.htm">텍스처 페이지</a></li>
   </ul>
-  <p>The <strong>group settings</strong> in the Texture Group Editor are used to determine exactly how the texture pages for a given group should be created, with the following options available:</p>
+  <p>텍스처 그룹 편집기의 <strong>그룹 설정</strong> 은 다음 옵션을 사용하여 주어진 그룹에 대한 텍스처 페이지를 만드는 방법을 정확하게 결정하는 데 사용됩니다.</p>
   <ul class="colour">
-    <li><strong>Allow Scaling</strong> - Un-flagging this will force GameMaker Studio 2 to not scale the texture group under any circumstances. This can be useful, especially when dealing with universal apps, as it allows you to put specific resources like
-      fonts in a group of its own to be used when the app is run on a specific device. For example, fonts can look great on a retina display, but when they are scaled down to draw on a normal display they can look terrible so you can assign them to a
-      special non-scaling group - if developing for the iPhone, you may wish to have this checked, as apps have been rejected due to the images being blurred by texture scaling. This is flagged as <em>on </em>by default.</li>
-    <li><strong>Automatically Crop</strong> - When you add images into GameMaker Studio 2 , if they have any &quot;space&quot; around them (ie 100% transparency) this is automatically cropped when it is added into the texture page and &quot;Automatically
-      Crop&quot; is flagged. However, if, for example, you are using the image as a non-repeating texture for primitives or anything similar, this means that the UV coordinates for texture mapping are not going to be correctly represented. In these cases
-      you can un-flag this option and the sprite will be added to the texture page &quot;as is&quot;, maintaining any transparencies that it may have around the edges. This is flagged as <em>on </em>by default.</li>
-    <li><strong>Generate Mipmaps</strong> - Flagging this option (it is off by default) will tell GameMaker Studio 2 that the original texture page is to be scaled and filtered into multiple resolutions within the texture file. This is normally <em>off</em>,
-      but if you are using cameras to zoom in or out on large areas of the game room, or you are working with a 3D game, then you may want to enable this and then use the <a href="../GameMaker_Language/GML_Reference/Drawing/Mipmapping/Mipmapping.htm">Mipmapping Functions</a> to
-      adjust how the game deals with the different mipmap levels. When you flag this check box the &quot;Border Size&quot; value will be set to 8 (if it was set to less than 8 originally). This is because, when using mipmaps, you need larger borders between
-      images on the texture pages otherwise they start bleeding together at higher mip levels. The default value of 8 will allow the image to be reduced to about an eighth of its original size before the sub-images start bleeding together, but you can
-      change this to any value that is required to suit your needs. Note that if you are using the &quot;<strong>Separate Texture Page</strong>&quot; option for sprites, then you do not need to go through each texture here and flag it to generate mipmaps,
-      but instead you can go to the <a href="Game_Options.htm">General Game Options</a> and flag the option &quot;<strong>Generate mipmaps for separate texture pages</strong>&quot;.</li>
-    <li><strong>Border Size</strong> - The border size will change the overlap (or &quot;pixel doubling&quot;) amount around the edges of all assets on the pages generated for the texture group so that when the images are scaled, there are no gaps (or seams)
-      visible between them. The default is 2 pixels, but in extreme cases where you are zooming the view in or out a great deal then you may need to increase this value. Note that the <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor</a> has
-      an option to set the output border for tiles (and also provides an explanation of why this is necessary), and this is separate to the border setting here - basically, tiles are generated with an output border for each tile on a temporary texture,
-      and this is then added to the texture page with the border given here around the outside edge. Also note that enabling Mipmaps will automatically set the default border size for the texture page to 8 to help prevent &quot;bleeding&quot; between
-      textures at higher mip levels, but this can be changed.</li>
-    <li><strong>Parent Texture Group</strong> - Here you can choose any of the existing groups to be the &quot;parent&quot; group for the currently selected one. &quot;Child&quot; groups will inherit any changes made to the parent texture group and are primarily
-      for resource management when working with cross platform games. A texture group with a parent is still a texture group in its own right and will generate texture pages the same as any other group, but assigning them a parent allows you to exclude
-      large chunks for different platforms. For example, you can add a whole load of Android player sprites to a &quot;player&quot; group, and Android enemy sprites to an &quot;enemy&quot; group, then make them both use an &quot;android&quot; parent group.
-      If you then exclude the &quot;android&quot; parent group from the Windows or other platform build, the child groups will be excluded too.</li>
+    <li><strong>스케일링 허용</strong> -플래그를 해제하면 GameMaker Studio 2가 어떤 상황에서도 텍스처 그룹을 스케일하지 않습니다. 이 기능은 특히 유니버설 앱을 다룰 때 유용합니다. 글꼴과 같은 특정 리소스를 자체 그룹에 배치하여 앱을 특정 기기에서 실행할 때 사용할 수 있기 때문입니다. 예를 들어, 글꼴은 레티 나 디스플레이에서 멋지게 보일 수 있지만, 일반 디스플레이에서 그리도록 축소 될 때 끔찍해 보일 수 있으므로 특별한 비 스케일링 그룹에 할당 할 수 있습니다. iPhone 용으로 개발하는 경우 텍스처 스케일링으로 인해 이미지가 흐려져 앱이 거부되었으므로이 옵션을 선택해야합니다. 이는 <em>기본적으로</em> 같은 위치에 있었 네요.</li>
+    <li><strong>자동 자르기</strong> -이미지를 GameMaker Studio 2에 추가 할 때 이미지 주위에 &quot;공간&quot;이 있으면 (즉, 100 % 투명도) 텍스처 페이지에 추가되고 &quot;자동 자르기&quot;가 표시 될 때 자동으로 자릅니다. 그러나 예를 들어 프리미티브 또는 이와 유사한 것을 위해 반복되지 않는 텍스처로 이미지를 사용하는 경우 텍스처 매핑을위한 UV 좌표가 올바르게 표시되지 않습니다. 이 경우이 옵션의 플래그를 해제하면 스프라이트가 텍스처 페이지에 &quot;있는 그대로&quot;추가되어 가장자리 주위에 투명 필름이 유지됩니다. 이는 <em>기본적으로</em> 같은 위치에 있었 네요.</li>
+    <li><strong>밉맵 생성</strong> -이 옵션을 플래그하면 (기본적으로 해제되어 있음) GameMaker Studio 2에 원본 텍스처 페이지의 크기를 조정하고 텍스처 파일 내에서 여러 해상도로 필터링해야합니다. 이 기능은 일반적으로 <em>꺼져</em> 있지만 카메라를 사용하여 게임 룸의 넓은 영역을 확대 또는 축소하거나 3D 게임을 작업하는 경우이 <a href="../GameMaker_Language/GML_Reference/Drawing/Mipmapping/Mipmapping.htm">기능</a> 을 활성화 한 다음 <a href="../GameMaker_Language/GML_Reference/Drawing/Mipmapping/Mipmapping.htm">Mipmapping 기능</a> 을 사용하여 게임은 다양한 밉맵 레벨을 처리합니다. 이 확인란에 플래그를 지정하면 &quot;테두리 크기&quot;값이 8로 설정됩니다 (원래 8보다 작게 설정된 경우). 밉맵을 사용할 때 텍스처 페이지의 이미지 사이에 더 큰 경계선이 필요하기 때문에 더 높은 밉 레벨에서 함께 번지기 시작하기 때문입니다. 기본값 인 8을 사용하면 하위 이미지가 함께 번지기 전에 이미지를 원래 크기의 약 8 분의 1로 축소 할 수 있지만 필요에 따라 필요한 값으로 변경할 수 있습니다. 스프라이트에 &quot; <strong>별도 텍스처 페이지</strong> &quot;옵션을 사용하는 경우 여기에서 각 텍스처를 살펴보고 밉맵을 생성하기 위해 플래그를 지정할 필요는 없지만 대신 <a href="Game_Options.htm">일반 게임 옵션으로</a> 이동하여 &quot; <strong>생성</strong> &quot;옵션에 플래그를 지정할 수 있습니다. <strong>별도의 텍스처 페이지에 대한 밉맵</strong> &quot;.</li>
+    <li><strong>테두리 크기</strong> -테두리 크기는 텍스처 그룹에 대해 생성 된 페이지에서 모든 자산의 가장자리 주위의 겹침 (또는 &quot;픽셀 배가&quot;) 양을 변경하여 이미지 크기를 조정할 때 사이에 간격 (또는 이음새)이 보이지 않도록합니다. 그들. 기본값은 2 픽셀이지만보기를 크게 확대 또는 축소하는 극단적 인 경우이 값을 늘려야 할 수 있습니다. <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor (타일 세트 편집기)</a> 에는 <a href="../The_Asset_Editors/Tile_Sets.htm">타일</a> 의 출력 테두리를 설정하는 옵션이 있으며 (필요한 이유에 대한 설명도 제공함) 여기에서 테두리 설정과 별개입니다. 기본적으로 타일은 각 출력 테두리로 생성됩니다 임시 텍스처에 바둑판 식 배열을 한 다음 여기에 바깥 쪽 가장자리 주위에 테두리가있는 텍스처 페이지에 추가합니다. 또한 밉맵을 활성화하면 텍스처 페이지의 기본 테두리 크기가 자동으로 8로 설정되어 더 높은 밉 레벨에서 텍스처 간 &quot;번짐&quot;을 방지 할 수 있지만 변경할 수 있습니다.</li>
+    <li><strong>Parent Texture Group-</strong> 여기에서 기존 그룹 중 하나를 현재 선택된 그룹의 &quot;부모&quot;그룹으로 선택할 수 있습니다. &quot;자식&quot;그룹은 부모 텍스처 그룹에 대한 모든 변경 사항을 상속하며 주로 크로스 플랫폼 게임 작업시 리소스 관리를위한 것입니다. 부모가있는 텍스처 그룹은 여전히 ​​그 자체로 텍스처 그룹이며 다른 그룹과 동일한 텍스처 페이지를 생성하지만 부모를 할당하면 다른 플랫폼에서 큰 청크를 제외 할 수 있습니다. 예를 들어, Android 플레이어 스프라이트를 &quot;player&quot;그룹에 추가하고 Android 적 스프라이트를 &quot;enemy&quot;그룹에 추가 한 다음 둘 다 &quot;android&quot;상위 그룹을 사용할 수 있습니다. 그런 다음 Windows 또는 기타 플랫폼 빌드에서 &quot;android&quot;상위 그룹을 제외하면 하위 그룹도 제외됩니다.</li>
   </ul>
-  <p>Other than those settings you can also choose to export (or not) any given texture group to any given platform by simply checking or un-checking the appropriate boxes from the <strong>Use Group On...</strong> section of the window. Note though that
-    the <span class="inline">&lt;Default&gt;</span> texture group is <em>always exported to every platform</em>, and you can&#39;t check/un-check any of them (only custom texture groups permit this).</p>
-  <p>Texture Groups are also linked to the <a href="Configurations.htm">Configurations</a> settings. What this means is that you can define texture groups for each individual configuration of your game, and then set the sprite, tile set or font resource
-    assignments to these different groups and it will be &quot;remembered&quot; when you change to a different configuration. The same will happen to any export options that you have chosen in the Texture Group window, so you can set the texture groups
-    to export to specific platforms on a per-configuration basis.</p>
-  <p>One use for this is, for example, that you could make an iPad configuration and for that create 2048x2048px texture pages (setting this up via the <a href="Game_Options.htm">Game Options</a>). You would then assign all the graphics assets to the appropriate
-    texture group, and when finished, you would then change to a different configuration (for HTML5, for example) and from the Texture Group window, create new texture groups that are 512x512px, assigning the assets to these new groups. There is also
-    a button at the bottom of the page that permits you to copy texture group settings from one configuration to another.</p>
-  <p>Finally, texture groups are only relevant to <a class="tooltip" title="A bitmap is the term used to describe any static image that is comprised of coloured pixels that are stored as bits (unlike vector images which are stored using mathematical algorithms). PNG, JPG and BMP are example of bitmap images, while SWF would be an example of a vector image.">bitmap</a> images, and non-bitmap sprites will not be assigned to texture groups. Some of them will already have their own unique texture page (skeleton
-    animation sprites) while others just don&#39;t require textures as they are comprised of <a class="tooltip" title="A vector is a mathematical construct that has a size, called the magnitude, and a direction. In GameMaker, a vector is usually used to show the distance and direction something moved in. A vector can also be used to define images and certain image formats like SWF use vector maths to define the images they contain.">vector</a><span class="glossextra">s</span>. For more information please see the following section:</p>
+  <p>해당 설정 외에 창의 <strong>Use Group On ...</strong> 섹션에서 해당 상자를 선택하거나 선택 취소하여 주어진 텍스처 그룹을 특정 플랫폼으로 내보내거나 내 보내지 않도록 선택할 수도 있습니다. <span class="inline">&lt;Default&gt;</span> 텍스쳐 그룹은 <em>항상 모든 플랫폼으로 내보내</em> 지며, 체크 / 체크 해제 할 수 없습니다 (커스텀 텍스쳐 그룹 만 허용).</p>
+  <p>텍스처 그룹도 <a href="Configurations.htm">구성</a> 설정에 연결됩니다. 이것이 의미하는 바는 게임의 각 개별 구성에 대한 텍스처 그룹을 정의한 다음 스프라이트, 타일 세트 또는 글꼴 리소스 할당을 이러한 다른 그룹에 설정할 수 있으며 다른 구성으로 변경하면 &quot;기억&quot;됩니다. 텍스처 그룹 창에서 선택한 내보내기 옵션도 마찬가지이므로, 텍스처 그룹을 구성별로 특정 플랫폼으로 내보내도록 설정할 수 있습니다.</p>
+  <p>예를 들어, iPad 구성을하고 2048x2048px 텍스처 페이지 ( <a href="Game_Options.htm">게임 옵션을</a> 통해 설정)를 만들 수 있습니다. 그런 다음 모든 그래픽 자산을 적절한 텍스처 그룹에 할당하고 완료되면 다른 구성 (예 : HTML5의 경우)으로 변경하고 텍스처 그룹 창에서 512x512px 인 새 텍스처 그룹을 생성하여 이 새로운 그룹에 자산. 페이지 하단에는 텍스처 그룹 설정을 한 구성에서 다른 구성으로 복사 할 수있는 버튼이 있습니다.</p>
+  <p>마지막으로 텍스처 그룹은 <a class="tooltip" title="비트 맵은 수학 알고리즘을 사용하여 저장된 벡터 이미지와 달리 비트로 저장된 컬러 픽셀로 구성된 정적 이미지를 설명하는 데 사용되는 용어입니다. PNG, JPG 및 BMP는 비트 맵 이미지의 예이고 SWF는 벡터 이미지의 예입니다.">비트 맵</a> 이미지에만 관련되며 <a class="tooltip" title="비트 맵은 수학 알고리즘을 사용하여 저장된 벡터 이미지와 달리 비트로 저장된 컬러 픽셀로 구성된 정적 이미지를 설명하는 데 사용되는 용어입니다. PNG, JPG 및 BMP는 비트 맵 이미지의 예이고 SWF는 벡터 이미지의 예입니다.">비트 맵이</a> 아닌 스프라이트는 텍스처 그룹에 할당되지 않습니다. 그들 중 일부는 이미 고유 한 텍스처 페이지 (골격 애니메이션 스프라이트)를 가지고 있지만 다른 일부는 <a class="tooltip" title="벡터는 크기라고하는 크기와 방향을 가진 수학적 구성체입니다. GameMaker에서 벡터는 일반적으로 이동 한 거리와 방향을 표시하는 데 사용됩니다. 벡터를 사용하여 이미지를 정의 할 수 있으며 SWF와 같은 특정 이미지 형식은 벡터 수학을 사용하여 포함 된 이미지를 정의합니다.">vector</a> 로 구성되어 있으므로 텍스처가 필요하지 않습니다. 자세한 내용은 다음 섹션을 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="Texture_Information/Non-Bitmap_Sprites.htm">Non-Bitmap Sprites</a></li>
+    <li><a href="Texture_Information/Non-Bitmap_Sprites.htm">비트 맵이 아닌 스프라이트</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings\Texture_Groups.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
+        <div style="float:left">뒤로: <a href="Game_Settings.htm">게임 설정</a></div>
+        <div style="float:right">다음: <a href="Game_Options.htm">
+      <div class="clear">
         <div style="float:left">Back: <a href="Game_Settings.htm">Game Settings</a></div>
-        <div style="float:right">Next: <a href="Game_Options.htm">Game Options</a> </div>
+        <div style="float:right">Next: <a href="Game_Options.htm">Game Options</a> </div>iv class="clear">
+        <div style="float:left">Back: <a href="Game_Settings.htm">게임 설정</a></div>
+        <div style="float:right">Next: <a href="Game_Options.htm">게임 옵션</a> </div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Texture Groups
@@ -160,4 +137,4 @@ Texture Group Manager
 texture_groups
 -->
 
-</body></html>
+</body></html> 

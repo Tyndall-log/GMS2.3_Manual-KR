@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Objects">
-        <span>Objects</span>
+        <span>사물</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,92 +80,62 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Object Editor</h1>
-  <p><img alt="The Object Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Objects.png"/>Objects are the resource that we use to control aspects of a game and to do specific things. Most of the time they have a sprite associated with them
-    so that you see them in the game rooms, but sometimes they are used as a &quot;behind the scenes&quot; controller to do things related to the user or for timing, etc... They can be given behaviours and they can react to certain events as well as to
-    each other, and most of the things you see in a game are based on objects and their interactions. Now, we say &quot;based on&quot; because you don&#39;t actually place objects directly into the game rooms, but rather you place <strong>instances</strong>    of these objects which are basically copies (or clones if you prefer) of the object resource. This is a very important thing to remember as instances and objects <em>are not the same thing</em> and each have their own set of functions that can affect
-    them.</p>
-  <p>To clarify this, think of a game made with GameMaker Studio 2. All the characters, monsters, balls, walls, etc... are all objects you create in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>. You then drag the <em>object </em>into
-    a room in the <a href="Rooms.htm">Room Editor</a> to create an <em>instance </em>copied from the basic object template. The instance in the room can then be changed in the editor itself or through code, so that it can be scaled, or coloured, or have
-    other details modified from the &quot;base&quot; object. So when we talk about something affecting or changing an <strong>instance</strong>, we mean it affects that <em>one particular copy of an object in a room</em>. Only that single instance is
-    being affected while all the rest are not. But, when we talk about affecting or changing an <strong>object</strong>, we mean that we are modifying the object in the Asset Browser and anything we do to it will be reflected in all the instances created
-    from that point on too. So, the object is the template for the instance, and the instance is what we place in a room to make our game.</p>
-  <p>To create an object in your game, you can right click <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" style=""/> on the Asset Browser and click the <em>Create Object</em> option. This will open the window pictured at the
-    top of this page with the following sections:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Details</span><span data-close-text="true">Details</span></a></p>
+  <h1>객체 편집기</h1>
+  <p><img alt="The Object Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Objects.png"/>객체는 게임의 측면을 제어하고 특정 작업을 수행하는 데 사용하는 리소스입니다. 대부분의 경우 게임 룸에서 볼 수 있도록 스프라이트가 있지만 사용자와 관련된 작업이나 타이밍 등을 수행하기 위해 &quot;장면 뒤&quot;컨트롤러로 사용되는 경우가 있습니다. 행동에 영향을 줄 수 있고 특정 이벤트와 서로에 반응 할 수 있으며 게임에서 볼 수있는 대부분의 것은 사물과 그 상호 작용을 기반으로합니다. 이제 게임 기반에 직접 개체를 배치하지 않고 기본적으로 개체 리소스의 복제본 (또는 원하는 경우 복제) 인 이러한 개체의 <strong>인스턴스</strong> 를 배치하기 때문에 &quot;기반&quot;이라고 말합니다. 인스턴스와 객체 <em>가 같지 않고</em> 각각에 영향을 줄 수있는 고유 한 기능 세트가 있으므로 기억해야 할 것은 매우 중요합니다.</p>
+  <p>이를 명확히하기 위해 GameMaker Studio 2로 만든 게임을 생각해보십시오. 모든 캐릭터, 몬스터, 공, 벽 등은 <a href="../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 에서 생성 한 모든 객체입니다. 그런 다음 <a href="Rooms.htm">룸 편집기</a> 에서 <em>객체</em> 를 룸으로 끌어 기본 객체 템플릿에서 복사 한 <em>인스턴스</em> 를 만듭니다. 그런 다음 회의실의 인스턴스를 편집기 자체 또는 코드를 통해 변경하여 크기를 조정하거나 색상을 지정하거나 &quot;기본&quot;개체에서 다른 세부 정보를 수정할 수 있습니다. 따라서 <strong>인스턴스에</strong> 영향을 주거나 변경하는 것에 대해 이야기 할 때 <em>, 방에있는 객체의 특정 사본 하나에</em> 영향을 미칩니다. 나머지 하나는 영향을받지 않지만 해당 단일 인스턴스 만 영향을받습니다. 그러나 <strong>오브젝트</strong> 에 영향을 주거나 변경하는 것에 대해 이야기 할 때, 우리는 자산 브라우저에서 오브젝트를 수정하고 있고 그에 대한 모든 작업이 그 시점에서 생성 된 모든 인스턴스에도 반영됨을 의미합니다. 따라서 개체는 인스턴스의 템플릿이고 인스턴스는 게임을 만들기 위해 방에 배치하는 것입니다.</p>
+  <p>To create an object in your game, you can right click <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" style=""/>자산 브라우저에서 <em>오브젝트 생성</em> 옵션을 클릭하십시오. 그러면이 페이지 상단에 그림으로 표시된 창이 다음 섹션과 함께 열립니다.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">세부</span> <span data-close-text="true">사항</span> <span data-open-text="true">세부</span> <span data-close-text="true">사항</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you can give your object a name. This name should never contain spaces nor unauthorized characters (only alpha-numeric characters and the underbar &quot;_&quot; are allowed) and should be short but memorable so that you can easily identify resources
-      later when you may have many of them. For example many people use a prefix or a suffix to identify the differences between resources, like &quot;<span class="inline">obj_Ship</span>&quot; or &quot;<span class="inline">Ship_obj</span>&quot;.</p>
-    <p class="dropspot">Next you can choose the sprite for the object should you wish it to have one. Click with the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the sprite box and the <strong>Asset Explorer</strong>      will appear with a list of all the available sprites from the Asset Browser:</p>
-    <p class="dropspot"><img alt="The Asset Explorer" class="center" src="../assets/Images/Asset_Editors/Editor_Objects_AssetExplorer.png"/>You can then select the one you want to use for the object. With a sprite assigned to the object you can click the <em>Edit Sprite</em>      button <img alt="Edit Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_EditSprite.png"/> to change the <a href="Sprites.htm">sprite properties</a>, or - if you do not have a sprite for the object but wish to create one - you can click
-      the <em>Add Sprite</em> button <img alt="Add Sprite Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_NewSprite.png" width="24"/> to create a new sprite asset and assign that. You can also edit the sprite asset image that has been
-      assigned by clicking the <em>Edit Image</em> button <img alt="Edit Image Icon" class="icon" src="../assets/Images/Icons/Icon_EditImage.png"/> to open the <a href="Image_Editor.htm">Image Editor</a>.</p>
+    <p class="dropspot">여기에서 객체 이름을 지정할 수 있습니다. 이 이름은 공백이나 무단 문자를 포함해서는 안되며 (영숫자 문자 및 밑줄 &quot;_&quot;만 허용) 짧지 만 기억하기 쉬워 나중에 나중에 리소스를 많이 찾을 수있을 때 쉽게 리소스를 식별 할 수 있습니다. 예를 들어 많은 사람들이 접두사 또는 접미사를 사용하여 &quot; <span class="inline">obj_Ship</span> &quot;또는 &quot; <span class="inline">Ship_obj</span> &quot;와 같은 자원 간의 차이점을 식별합니다.</p>
+    <p class="dropspot">Next you can choose the sprite for the object should you wish it to have one. Click with the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/>스프라이트 상자에 <strong>애셋 탐색기</strong> 가 애셋 브라우저에서 사용 가능한 모든 스프라이트 목록과 함께 나타납니다.</p>
+    <p class="dropspot"><img alt="The Asset Explorer" class="center" src="../assets/Images/Asset_Editors/Editor_Objects_AssetExplorer.png"/>그런 다음 객체에 사용할 것을 선택할 수 있습니다. 스프라이트가 오브젝트에 할당 된 상태에서 스프라이트 <em>편집</em> 버튼을 클릭 할 수 있습니다 <a href="Sprites.htm">스프라이트 속성</a> 을 변경하거나, 오브젝트에 스프라이트가 없지만 하나를 생성하려는 경우 스프라이트 <em>추가</em> 버튼을 클릭하면됩니다. 새로운 스프라이트 자산을 생성하고 할당합니다. 이미지 <em>편집</em> 버튼을 클릭하여 할당 된 스프라이트 자산 이미지를 편집 할 수도 있습니다 <a href="Image_Editor.htm">이미지 편집기</a> 를 엽니 다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Collision Mask</span><span data-close-text="true">Collision Mask</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">충돌 마스크</span> <span data-close-text="true">충돌 마스크</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Beneath the sprite assignment area you have a button for choosing a specific <strong>Collision Mask</strong>. By default an object will generate collision properties based off of the sprite assigned to it, but there are cases whereby you may want
-      collisions to be based off a different shape from a different sprite. For example, you may have a top down game where the main sprite has a rectangular collision mask, but to make collisions smoother a circular mask may be better. In these cases
-      you can click the Collision Mask button and select another sprite resource, so now instances of the object will <em>draw </em>the assigned sprite, but base <em>collisions </em>off of the mask sprite. You can find out more information about collision
-      masks from the page on the <a href="Sprites.htm">Sprite Editor</a>.</p>
+    <p class="dropspot">스프라이트 할당 영역 아래에는 특정 <strong>콜리 전 마스크</strong> 를 선택할 수있는 버튼이 있습니다. 기본적으로 객체는 지정된 스프라이트를 기반으로 충돌 속성을 생성하지만 충돌이 다른 스프라이트와 다른 모양을 기반으로하는 경우가 있습니다. 예를 들어 메인 스프라이트에 직사각형 충돌 마스크가있는 하향식 게임이있을 수 있지만 충돌을보다 부드럽게하기 위해 원형 마스크가 더 좋습니다. 이러한 경우 Collision Mask (충돌 마스크) 버튼을 클릭하고 다른 스프라이트 리소스를 선택할 수 있으므로 이제 오브젝트의 인스턴스가 할당 된 스프라이트를 <em>그리지</em> 만 마스크 스프라이트에서 기본 <em>충돌이 발생</em> 합니다. <a href="Sprites.htm">Sprite Editor</a> 의 페이지에서 충돌 마스크에 대한 자세한 정보를 찾을 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Properties</span><span data-close-text="true">Properties</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">속성</span> <span data-close-text="true">속성</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">Here you are presented with the following options for your object:<strong></strong></p>
+    <p class="dropspot">여기에 객체에 대한 다음 옵션이 제공됩니다. <strong></strong></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Visible</strong>: Visible indicates whether instances of this object are visible when the room starts. Normally most instances are visible but sometimes it is useful to have invisible ones - for example, you can use them for way-points to
-        control a moving monster, or to keep track values and perform certain timed actions. Invisible objects will still react to events and if they have a sprite or a mask assigned to them, they will also react should other instances collide with them...
-        they just cannot be seen and do <em>not </em>perform their <strong>Draw Event</strong>. By default, the visible flag is checked.<strong></strong></li>
-      <li class="dropspot"><strong>Solid</strong>: When you flag an instance as being solid, you are telling GameMaker Studio 2 that it should try to resolve any collisions before triggering a <strong>Collision Event</strong>. This is a very basic functionality, and in reality
-        all it does is move the instance back to the position it was in the moment before a collision was detected before performing any code or DnD™ that is in the Collision Event itself, and as such is of limited use.</li>
-      <li class="dropspot"><strong>Persistent</strong>: A persistent object is one that does not go away when the room is changed, but rather it &quot;persists&quot; and is carried over into the new room. It will only disappear when you explicitly destroy it, either with
-        a destroy action or in code. This means that if you place a persistent object in one room, it will still be available in all subsequent rooms and will continue to perform any actions assigned to the events in its object properties, <em>except </em>the
-        <strong>Create Event</strong>, which is only fired <em>once </em>when it is created initially and not when you change to a new room. This is handy for when you have, for example, a main character that moves from room to room and you want to maintain
-        the variables within the instance the same, but you should take great care to create and destroy persistent objects correctly as you can easily get errors creeping into your project by mistake.</li>
+      <li class="dropspot"><strong>Visible</strong> : Visible은 룸이 시작될 때이 객체의 인스턴스가 표시되는지 여부를 나타냅니다. 일반적으로 대부분의 인스턴스가 표시되지만 때로는 보이지 않는 인스턴스를 만드는 것이 유용합니다. 예를 들어, 웨이 포인트로 이동 몬스터를 제어하거나 값을 추적하고 특정 시간 동작을 수행하는 데 사용할 수 있습니다. 보이지 않는 객체는 여전히 이벤트에 반응하며, 스프라이트 또는 마스크가 할당 된 경우 다른 인스턴스와 충돌하는 경우에도 반응합니다 ... 그냥 볼 수없고 <strong>Draw 이벤트를</strong> 수행하지 <em>않습니다</em> . 기본적으로 visible 플래그가 선택되어 있습니다.</li>
+      <li class="dropspot"><strong>솔리드</strong> : 인스턴스를 솔리드로 표시하면 <strong>충돌 이벤트</strong> 를 트리거하기 전에 GameMaker Studio 2에 충돌 해결을 시도해야합니다. 이것은 매우 기본적인 기능이며 실제로는 충돌 이벤트 자체에있는 코드 또는 DnD ™를 수행하기 전에 충돌이 감지되기 ​​전의 순간으로 인스턴스를 다시 이동시키는 것입니다. 사용이 제한되어 있습니다.</li>
+      <li class="dropspot"><strong>지속성</strong> : 지속성 개체는 방이 변경 될 때 사라지지 않고 오히려 &quot;지속&quot;되어 새 방으로 옮겨집니다. 파괴 행동이나 코드로 명시 적으로 파괴 할 때만 사라집니다. 당신이 한 방에 영속 객체를 배치하면, 아직도 이후의 모든 객실에서 사용할 <em>수과를 제외하고는</em> 개체 속성의 이벤트에 할당 된 작업을 수행 할 수 지속될 것으로이 방법 만 때를 <em>한 번</em> 해고 <strong>이벤트를 만듭니다</strong> 새 방으로 변경할 때가 아니라 처음에 생성됩니다. 예를 들어, 방에서 방으로 이동하는 메인 캐릭터가 있고 인스턴스 내에서 변수를 동일하게 유지하려고 할 때 편리하지만 지속 가능한 객체를 올바르게 작성하고 파괴하려면 쉽게주의를 기울여야합니다. 실수로 프로젝트에 오류가 발생합니다.</li>
     </ul>
-    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#" style="margin-left:88px"><span data-open-text="true">Persistence And Room Layers</span><span data-close-text="true">Persistence And Room Layers</span></a>  </p>
+    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#" style="margin-left:88px"><span data-open-text="true">지속성 및 룸 레이어</span> <span data-close-text="true">지속성 및 룸 레이어</span></a></p>
     <div class="droptext" data-targetname="drop-down7">
-      <p class="dropspot" style="margin-left: 132px">When you create an instance with persistence enabled in a room, it will be assigned a layer or a depth (depending on which function you used to create the instance of the object). When the room is changed, and if the following room does not have
-        a layer with the same name or depth as the one assigned, then<strong> a new layer will be created for the instance that is persisting across the rooms</strong>. If you gave a named layer when the instance was created, then the new layer will also
-        be named the same as original layer, while if you assigned a depth to the instance then the new layer will be named &quot;<span class="inline">_layer_XXX</span>&quot;, where &quot;<span class="inline">XXX</span>&quot; is a hex value used to give
-        the layer a unique name. These layers will be removed from the room on <strong>Room End</strong>.<br/>
-        <br/> Another thing to note about layers and persistent instances is that if you have assigned the instance a named layer on creation, and there is another layer in the following rooms with the same name, then the persisted instance will be assigned
-        to the layer with the same name regardless of the depth of the layer.<br/>
-        <br/> Finally, if a persisted instance moves to a room with a layer at the <em>same</em> depth as the instance was created on, it will <em>not </em>be assigned to this layer, but instead a new layer will be created at the same depth (following
-        the naming convention explained above).</p>
+      <p class="dropspot" style="margin-left: 132px">룸에서 퍼시스턴스가 활성화 된 인스턴스를 생성하면 객체의 인스턴스를 생성하는 데 사용한 기능에 따라 레이어 또는 깊이가 할당됩니다. 방이 변경 될 때 다음 방에 지정된 것과 같은 이름 또는 깊이를 <strong>가진 도면층이없는 경우 방 전체에서 지속되는 인스턴스에 대해 새 도면층이 작성됩니다</strong> . 인스턴스를 만들 때 명명 된 레이어를 지정한 경우 새 레이어의 이름도 원래 레이어와 동일하게 지정되고 인스턴스에 깊이를 할당하면 새 레이어의 이름이 &quot; <span class="inline">_layer_XXX</span> &quot;로 지정됩니다. 여기서 &quot; <span class="inline">XXX</span> &quot; 레이어에 고유 한 이름을 부여하는 데 사용되는 16 진수 값입니다. 이 층들은 <strong>방 끝</strong> 의 방에서 제거됩니다. 레이어와 퍼시 스턴트 인스턴스에 대해 알아 두어야 할 또 다른 사항은 생성시 인스턴스에 명명 된 레이어를 할당하고 다음 방에 같은 이름의 다른 레이어가있는 경우 지속 된 인스턴스가 동일한 레이어에 할당된다는 것입니다 레이어의 깊이에 관계없이 이름. 마지막으로, 지속 된 인스턴스가 인스턴스가 생성 된 <em>것과 같은</em> 깊이의 레이어가있는 방으로 이동하면이 레이어에 할당 <em>되지</em> 않고 대신 같은 이름의 깊이로 새 레이어가 생성됩니다 (네이밍 규칙에 따름) 위에서 설명한).</p>
     </div>
-    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#" style="margin-left: 88px"><span data-open-text="true">Persistence And Events</span><span data-close-text="true">Persistence And Events</span></a></p>
+    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#" style="margin-left: 88px"><span data-open-text="true">지 속성 및 이벤트 지</span> <span data-close-text="true">속성 및 이벤트</span></a></p>
     <div class="droptext" data-targetname="drop-down6">
-      <p class="dropspot" style="margin-left: 132px">As mentioned previously, a persistent object will only run its <strong>Create Event</strong> <em>once</em>, but it will also have its <strong>Game Start</strong>, <strong>Game End</strong>, <strong>Room Start</strong> and <strong>Room End</strong>        events triggered at the appropriate times. However if you restart the game (with, for example, the <span class="inline">game_restart()</span> function) <em>all persistent objects will be removed and only exist when created again by the game</em>.<br/>
-        <br/> Also note that if you <strong>deactivate </strong>a persistent object, it will no longer pass from one room to another unless re-activated before the <strong>Room End</strong> event is triggered. Re-activation <em>requires a full game step to occur</em>,
-        so using the actual <strong>Room End</strong> event for this does not work, as it doesn&#39;t give the game a full step to reactivate the object, so you need to keep this in mind when using deactivation along with persistent objects and plan your
-        code accordingly.</p>
+      <p class="dropspot" style="margin-left: 132px">앞에서 언급했듯이 영구 객체는 <strong>Create Event를</strong> <em>한 번만</em> 실행하지만 적절한 시간에 <strong>Game Start</strong> , <strong>Game End</strong> , <strong>Room Start</strong> 및 <strong>Room End</strong> 이벤트가 트리거됩니다. 그러나 <span class="inline">game_restart ()</span> 함수를 사용하여 게임을 다시 시작하면 <em>모든 영구 객체가 제거되고 game에 의해 다시 생성 될 때만 존재합니다</em> . 또한 영구 객체를 <strong>비활성화</strong> 하면 <strong>Room End</strong> 이벤트가 트리거되기 전에 다시 활성화되지 않는 한 더 이상 한 방에서 다른 방으로 전달되지 않습니다. 다시 활성화 <em>하려면 전체 게임 단계가 필요</em> 하므로 게임에 객체를 다시 활성화하기위한 전체 단계를 제공하지 않으므로 실제 <strong>Room End</strong> 이벤트를 사용하면 작동하지 않으므로 사용할 때이 점을 명심해야합니다. 영구 객체와 함께 비활성화하고 이에 따라 코드를 계획하십시오.</p>
     </div>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Uses Physics</strong>: When you check the Uses Physics box you are telling GameMaker Studio 2 that this object should be part of a physics world (as set in the <strong></strong><a href="Rooms.htm">Room Editor</a>. Checking this will also
-        open a further chained window where you can define the physical properties of all instances of this object. More information on this can be found in the section on <a href="Object_Properties/Physics_Objects.htm">Physics Objects</a>.</li>
+      <li class="dropspot"><strong>물리학은 사용</strong> : 당신은 물리학이 객체가 물리적 세계의 일부가되어야한다는 GameMaker 스튜디오 2를 말하고있다 상자 용도를 확인할 때합니다 (의 세트로 <a href="Rooms.htm">회의실 편집자</a> . 이를 확인하면이 객체의 모든 인스턴스에 대한 물리적 속성을 정의 할 수있는 체인 창이 추가로 열립니다. 이에 대한 자세한 정보는 <a href="Object_Properties/Physics_Objects.htm">Physics Objects</a> 섹션에서 찾을 수 있습니다.</li>
     </ul>
   </div>
   <p> </p>
-  <p>The last part of the Object Editor is taken up with the different object <strong>Options</strong>, each of which is discussed on its on page, linked below:</p>
+  <p>객체 편집기의 마지막 부분은 다른 객체 <strong>옵션</strong> 으로 구성되며, 각각은 페이지에 설명되어 있으며 아래 링크되어 있습니다.</p>
   <ul class="colour">
-    <li><a href="Object_Properties/Object_Events.htm">Object Events</a></li>
-    <li><a href="Object_Properties/Parent_Objects.htm">Parent Objects</a></li>
-    <li><a href="Object_Properties/Physics_Objects.htm">Physics Objects</a></li>
-    <li><a href="Object_Properties/Object_Variables.htm">Object Variables</a></li>
+    <li><a href="Object_Properties/Object_Events.htm">객체 이벤트</a></li>
+    <li><a href="Object_Properties/Parent_Objects.htm">부모 객체</a></li>
+    <li><a href="Object_Properties/Physics_Objects.htm">물리 객체</a></li>
+    <li><a href="Object_Properties/Object_Variables.htm">객체 변수</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Objects.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Paths.htm">Paths</a></div>
+        <div style="float:left">뒤로: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
+        <div style="float:right">다음: <a href="Paths.htm">경로</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Object Editor
@@ -175,4 +145,4 @@ Objects
 object_editor
 -->
 
-</body></html>
+</body></html> 

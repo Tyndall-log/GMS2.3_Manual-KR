@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Motion Planning">
-        <span>Motion Planning</span>
+        <span>모션 계획</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,17 +80,12 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Motion Planning</h1>
-  <p>In many games you want opponents, NPC&#39;s, enemies etc... to interact with the player and show certain intelligence when moving around ie: you want them to avoid obstacles, plan routes and generally not bump into everything in their path! To aid in
-    this GameMaker Studio 2 has a series of functions that deal with motion planning. Note that while these are designed for things like game enemies, they can be used for all sorts of things like creating a smooth way
-    to introduce text, or to create transitions etc... However, whatever you choose to use from the list below in your game, it should be noted that in many situations a single function set will not give you a perfect solution and that you will have to
-    &quot;mix and match&quot; the functions, using one or the other depending on the situation within your game.</p>
-  <p>Motion planning in GameMaker Studio 2 is dealt with by the <b>mp_</b> functions, which themselves are split into the following three groups:</p>
+  <h1>모션 계획</h1>
+  <p>많은 게임에서 상대, NPC, 적 등이 플레이어와 상호 작용하고 이동할 때 특정 정보를 보여주기를 원합니다. 즉, 장애물을 피하고 경로를 계획하며 일반적으로 경로의 모든 것에 부딪치지 않기를 원합니다! 이 GameMaker Studio 2에는 모션 계획을 다루는 일련의 기능이 있습니다. 이것들은 게임 적과 같은 것들을 위해 설계되었지만 텍스트를 부드럽게 도입하거나 전환을 만드는 등의 모든 종류의 것들에 사용될 수 있습니다. 그러나 아래 목록에서 사용하기로 선택한 모든 것은 많은 상황에서 단일 기능 세트가 완벽한 솔루션을 제공하지는 않으며 게임 내 상황에 따라 하나 또는 다른 기능을 사용하여 기능을 &quot;혼합 및 일치시켜야&quot;한다는 점에 유의해야합니다.</p>
+  <p>GameMaker Studio 2의 모션 계획은 <b>mp_</b> 함수에 의해 처리되며, 자체적으로 다음 세 그룹으로 나뉩니다.</p>
   <p> </p>
-  <h2><label for="one">Linear Functions</label></h2>
-  <p>This kind of function tries to compute a collision-free path for the instance. Once this path has been computed you can assign it to the instance to move towards the goal. The computation of the path will take some time but after that the execution
-    of the path will be fast. Of course this is only valid if the situation has not changed in the meantime. For example, if obstacles change you possibly will need to recompute the path. Again notice that these functions might fail and that no path may
-    be found for the instance.</p>
+  <h2><label for="one">선형 함수</label></h2>
+  <p>이러한 종류의 함수는 인스턴스의 충돌없는 경로를 계산하려고합니다. 이 경로가 계산되면 목표를 향해 이동하도록 인스턴스에 지정할 수 있습니다. 경로 계산에는 다소 시간이 걸리지 만 그 후에는 경로 실행이 빠릅니다. 물론 상황이 그 동안 바뀌지 않은 경우에만 유효합니다. 예를 들어 장애물이 바뀌면 경로를 다시 계산해야 할 수도 있습니다. 이러한 함수가 실패하고 인스턴스에 대한 경로를 찾을 수 없음을 다시 확인하십시오.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="mp_linear_step.htm">mp_linear_step</a></li>
@@ -99,10 +94,9 @@
     <li><a href="mp_linear_path_object.htm">mp_linear_path_object</a></li>
   </ul>
   <p> </p>
-  <h2><label for="three">Potential Functions</label></h2>
+  <h2><label for="three">잠재적 기능</label></h2>
   <p> </p>
-  <p>These are the basic avoidance functions and good for simple AI. They work by making an instance take a step towards a particular goal position while trying to go straight if possible but taking a different direction if required. These functions should
-    be used in the <b>Step Event</b> of an instance.</p>
+  <p>이것들은 기본적인 회피 기능이며 간단한 AI에 좋습니다. 가능한 경우 똑바로 가려고하지만 필요한 경우 다른 방향을 취하면서 인스턴스가 특정 목표 위치를 향한 발걸음을 내딛는 방식으로 작동합니다. 이 함수는 인스턴스의 <b>단계 이벤트</b> 에서 사용해야합니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="mp_potential_settings.htm">mp_potential_settings</a></li>
@@ -112,20 +106,12 @@
     <li><a href="mp_potential_path_object.htm">mp_potential_path_object</a></li>
   </ul>
   <p> </p>
-  <h2><label for="two">Grid Functions</label></h2>
+  <h2><label for="two">그리드 함수</label></h2>
   <p> </p>
-  <p>The final type of function use a much more complex mechanism based on a grid-based approach (sometimes called an A* algorithm). It will be much more successful in finding paths (although it still might fail) and will find the shortest paths possible
-    but it requires more work on your side to set it up.</p>
-  <p>The global idea is as follows - First of all we create a grid that covers the room (or the relevant part of it). You can choose to use a fine grid, which will be slower, or a coarse grid, but both of them should be based on the resolution of the room
-    so that the path-finding is as accurate as possible. For example, if you have a room that is 400x200 pixels, you can have a grid resolution of 40, or 20, or 10... it all depends on how accurate you need the path to be and how much processing you want
-    GameMaker to do to generate it.</p>
-  <p>Next, for all relevant objects that we want to avoid we need to determine the grid cells they overlap (based either on their bounding boxes or their precise sprite) and mark these cells as being forbidden. So a cell will be marked totally forbidden,
-    even if an obstacle is only partially overlapping.</p>
-  <p>Finally we specify a start position and a goal position, both of which <i>must</i> lie in free cells, and the function then computes the shortest path possible between these two positions. The path will run between the centers of all free cells, so
-    if the cells are large enough so that the instance placed at its center will lie completely inside it this will be successful. This path is then assigned to the instance to follow using the <a href="../../Asset_Management/Paths/Paths.htm"><tt>path_*</tt></a> functions.
-    You should realise how important cell size is for this as the cells must be large enough so that the moving object placed with its origin on the center of a cell will lie <i>completely</i> inside the cell. (Be careful about the position of the origin
-    of the object. Also realize that you can shift the path if the origin of the object is not in its center!) On the other hand, the smaller the cells the more possible paths exist. If you make cells too large, openings between obstacles may get closed
-    because all cells intersect an obstacle.</p>
+  <p>최종 유형의 함수는 그리드 기반 접근 방식 (때로는 A * 알고리즘이라고 함)을 기반으로 훨씬 더 복잡한 메커니즘을 사용합니다. 경로를 찾는 데 훨씬 성공적이며 (아직 실패 할 수는 있지만) 가능한 가장 짧은 경로를 찾을 수 있지만 설정하는 데 더 많은 작업이 필요합니다.</p>
+  <p>글로벌 아이디어는 다음과 같습니다.-우선 우리는 방 (또는 그 관련 부분)을 덮는 그리드를 만듭니다. 속도가 느리거나 거친 그리드를 사용하도록 선택할 수 있지만 둘 다 경로 찾기가 가능한 정확한 방의 해상도를 기반으로해야합니다. 예를 들어, 400x200 픽셀의 방이 있다면 그리드 해상도는 40 또는 20 또는 10입니다. 경로는 경로의 정확성과 GameMaker가 원하는 처리량에 따라 다릅니다. 그것을 생성하십시오.</p>
+  <p>다음으로, 우리가 피하고자하는 모든 관련 대상에 대해 (격자 박스 또는 정확한 스프라이트를 기준으로) 겹치는 그리드 셀을 결정하고 해당 셀을 금지 된 것으로 표시해야합니다. 따라서 장애물이 부분적으로 만 겹쳐져도 셀이 완전히 금지 된 것으로 표시됩니다.</p>
+  <p>마지막으로 시작 위치와 목표 위치를 지정합니다.이 위치는 모두 자유 셀에 <i>있어야</i> 하며 함수는이 두 위치 사이에서 가능한 최단 경로를 계산합니다. 경로는 모든 빈 셀의 중심 사이를 이동하므로 셀이 충분히 커서 중심에 배치 된 인스턴스가 그 안에 완전히 놓일 수 있으면 성공합니다. 이 경로는 <a href="../../Asset_Management/Paths/Paths.htm"><tt>path_ *</tt></a> 함수를 사용하여 인스턴스에 할당됩니다. 셀의 중심에 원점을 둔 이동 객체가 셀 내부에 <i>완전히</i> 놓일 수 있도록 셀이 충분히 커야하기 때문에 셀 크기가 얼마나 중요한지 알아야합니다. (객체의 원점 위치에주의하십시오. 또한 객체의 원점이 중심에 있지 않으면 경로를 이동할 수 있습니다!) 반면에 셀이 작을수록 가능한 경로가 더 많습니다. 셀을 너무 크게 만들면 모든 셀이 장애물과 교차하기 때문에 장애물 사이의 개구부가 닫힐 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="mp_grid_create.htm">mp_grid_create</a></li>
@@ -142,20 +128,19 @@
     <li><a href="mp_grid_draw.htm">mp_grid_draw</a></li>
   </ul>
   <p> </p>
-  <p>The grid-based approach is very powerful (and is used in many professional games) but it requires that you do some careful thinking as you must determine which area and cell size are good enough for solving the game. Also, you must determine which objects
-    must be avoided and whether precise checking is important. All these parameters strongly influence the efficiency of the approach. You must also decide whether it is actually necessary as maybe one of the less costly <span class="inline">mp_*</span> functions
-    can do the job just as well.</p>
+  <p>그리드 기반 접근 방식은 매우 강력하지만 (많은 프로 게임에서 사용됨) 게임을 해결하기에 충분한 영역과 셀 크기를 결정해야하기 때문에 신중하게 생각해야합니다. 또한 피해야 할 개체와 정확한 검사가 중요한지 여부를 결정해야합니다. 이러한 모든 매개 변수는 접근 방식의 효율성에 큰 영향을 미칩니다. 비용이 덜 드는 <span class="inline">mp_ *</span> 함수 중 하나가 작업을 수행 할 수 있으므로 실제로 필요한지 여부도 결정해야합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Movement_And_Collisions\Motion_Planning\Motion_Planning.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Movement_And_Collisions.htm">Movement And Collisions</a></div>
-        <div style="float:right">Next: <a href="../Collisions/Collisions.htm">Collisions</a></div>
+        <div style="float:left">뒤로: <a href="../Movement_And_Collisions.htm">운동과 충돌</a></div>
+        <div style="float:right">다음: <a href="../Collisions/Collisions.htm">충돌</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Motion Planning
@@ -166,4 +151,4 @@ Motion Planning Functions
 mp_functions
 -->
 
-</body></html>
+</body></html> 

@@ -71,7 +71,7 @@
         <span>steam_ugc_create_item</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,79 +81,77 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>steam_ugc_create_item</h1>
-  <p>This function is used to prepare the Workshop API and generate a published file ID for the item to be added. The function <i>must</i> be called before doing anything else with the item to be uploaded, as you will be required to use the unique published
-    ID value that it returns in the Steam Async Event for updating. To use this function, you need to supply the Steam App ID for your game, and the use one of the following constants for the <tt>file_type</tt> argument:</p>
+  <p>이 함수는 Workshop API를 준비하고 추가 할 항목에 대해 공개 된 파일 ID를 생성하는 데 사용됩니다. 업데이트를 위해 Steam 비동기 이벤트에 반환되는 고유 한 게시 된 ID 값을 사용해야하므로 업로드 할 항목으로 다른 작업을 수행하기 전에 함수 <i>를</i> 호출 <i>해야합니다</i> . 이 함수를 사용하려면 게임에 Steam 앱 ID를 제공하고 <tt>file_type</tt> 인수에 다음 상수 중 하나를 사용해야합니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>ugc_filetype_community</td>
-        <td>This is used to create files that will be uploaded and made available to anyone in the community.</td>
+        <td>이것은 업로드되어 커뮤니티의 모든 사람이 사용할 수있는 파일을 작성하는 데 사용됩니다.</td>
       </tr>
       <tr>
         <td>ugc_filetype_microtrans</td>
-        <td>This is used to describe files that are uploaded but intended only for the game to consider adding as official content.</td>
+        <td>업로드 된 파일을 설명하는 데 사용되지만 게임에서 공식 콘텐츠로 추가하는 것을 고려하기위한 것입니다.</td>
       </tr>
     </tbody>
   </table>
-  <p><br/> When using this function it will return an async ID value which can then be parsed when the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam Asynchronous</a> event is triggered to report the creation of the
-    item. The event will contain the following key/map values in the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> ds_map:</p>
+  <p>이 함수를 사용하면 항목의 생성을보고하기 위해 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam 비동기</a> 이벤트가 트리거 될 때 파싱 될 수있는 비동기 ID 값을 반환합니다. 이벤트는 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> ds_map에 다음 키 / 맵 값을 포함합니다.</p>
   <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - The async ID returned by the calling function</li>
-    <li>&quot;<b>result</b>&quot; - The result of the operation (a real value). This will either be the GML constant <tt>ugc_result_success</tt> or some other real number. So you should check for this constant to ensure that the call was successful, and if
-      otherwise somthing has not worked correctly. The rest of the possible values returned are shown as the result of the Steam &quot;EResult&quot; value and you should see <tt>steamclientpublic.h</tt> in the SDK headers for all 89 possible values.</li>
-    <li>&quot;<b>event_type</b>&quot; - This key will hold the value &quot;<b>ugc_create_item</b>&quot;</li>
-    <li>&quot;<b>legal_agreement_required</b>&quot; - Will be <tt>true</tt> or <tt>false</tt> (see the <a href="https://partner.steamgames.com/documentation/ugc#Legal" target="_blank">Steam docs</a> for more details)</li>
-    <li>&quot;<b>published_file_id</b>&quot; - This key holds the unique published ID for the item, which is an int64 (and you may need to cast it as such when using it in subsequent functions using the <a href="../../Variable_Functions/int64.htm"><tt>int64()</tt></a>      function)</li>
+    <li>&quot; <b>id</b> &quot;-호출 함수가 리턴 한 비동기 ID</li>
+    <li>&quot; <b>result</b> &quot;-작업 결과 (실제 값). 이것은 GML 상수 <tt>ugc_result_success</tt> 또는 다른 실수입니다. 따라서이 상수를 확인하여 호출이 성공했는지, 그렇지 않은 경우 정상적으로 작동하지 않았는지 확인해야합니다. 반환 된 나머지 가능한 값은 Steam &quot;EResult&quot;값의 결과로 표시되며 가능한 89 개의 모든 값에 대한 SDK 헤더에 <tt>steamclientpublic.h</tt> 가 표시됩니다.</li>
+    <li>&quot; <b>event_type</b> &quot;-이 키는 &quot; <b>ugc_create_item</b> &quot;</li>
+    <li>&quot; <b>legal_agreement_required</b> &quot;-합니다 (참조 <tt>참</tt> 또는 <tt>거짓이</tt> 될 것이다 <a href="https://partner.steamgames.com/documentation/ugc#Legal" target="_blank">스팀 문서</a> 자세한 내용을)</li>
+    <li>&quot; <b>published_file_id</b> &quot;-이 키는 항목에 대해 게시 된 고유 ID 인 int64를 보유합니다 ( <a href="../../Variable_Functions/int64.htm"><tt>int64 ()</tt></a> 함수를 사용하여 후속 함수에서 사용할 때와 같이 캐스트해야 할 수도 있음)</li>
   </ul>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">steam_ugc_create_item(consumer_app_id, file_type);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>consumer_app_id</td>
-        <td>The unique App ID for your game on Steam.</td>
+        <td>Steam 게임의 고유 한 앱 ID입니다.</td>
       </tr>
       <tr>
         <td>file_type</td>
-        <td>One of the available file type constants (listed below).</td>
+        <td>사용 가능한 파일 유형 상수 중 하나입니다 (아래에 나열 됨).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Async ID</p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>In this example we first call the function and store the async ID value in a variable:</p>
+  <h4>확장 된 예 :</h4>
+  <p>이 예제에서는 먼저 함수를 호출하고 비동기 ID 값을 변수에 저장합니다.</p>
   <p class="code">var app_id = steam_get_app_id();<br/> new_item = steam_ugc_create_item(app_id, ugc_filetype_community);</p>
-  <p>This would then send off a request to the Steam API to create the new Worksop item, generating an async event which we would deal with as follows:</p>
+  <p>그러면 Steam API에 요청을 보내 새로운 Worksop 항목을 생성하고 다음과 같이 처리 할 비동기 이벤트를 생성합니다.</p>
   <p class="code">var event_id = async_load[? &quot;id&quot;];<br/> if event_id == new_item<br/>     {
     <br/>     var type = async_load[? &quot;event_type&quot;];<br/>     if type == &quot;ugc_create_item&quot;<br/>         {
     <br/>         global.Publish_ID = async_load[? &quot;published_file_id&quot;];<br/>         }
     <br/>     }
   </p>
-  <p>The above code checks the event type and if it is &quot;ugc_create_item&quot; then it retrieves the published file ID and stores it in a global variable for future reference.</p>
+  <p>위의 코드는 이벤트 유형을 확인하고 &quot;ugc_create_item&quot;인 경우 게시 된 파일 ID를 검색하여 나중에 참조 할 수 있도록 전역 변수에 저장합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Steam\Steam_UGC\steam_ugc_create_item.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Steam_UGC.htm">UGC</a></div>
-        <div style="float:right">Next: <a href="steam_ugc_start_item_update.htm">steam_ugc_start_item_update</a></div>
+        <div style="float:left">뒤로: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">다음: <a href="steam_ugc_start_item_update.htm">steam_ugc_start_item_update</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 steam_ugc_create_item
@@ -164,4 +162,4 @@ ugc_filetype_microtrans
 steam_ugc_create_item
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Amazon Fire">
-        <span>Amazon Fire</span>
+        <span>아마존 파이어</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,120 +80,90 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Amazon Fire Game Options</h1>
-  <p>This section outlines the different options available to you that control how your Amazon Fire game projects will be compiled. The different sections are:</p>
+  <h1>아마존 파이어 게임 옵션</h1>
+  <p>이 섹션에서는 Amazon Fire 게임 프로젝트를 컴파일하는 방법을 제어 할 수있는 다양한 옵션에 대해 간략하게 설명합니다. 다른 섹션은 다음과 같습니다.</p>
   <p> </p>
-  <h2>General</h2>
-  <p><img alt="Amazon Fire General Options Part 1" class="center" src="../../assets/Images/Settings/AmazonFire_General1_Options.png"/>The first part of the <strong>General </strong>section is dedicated to the <strong>Product Information</strong> and the
-    <strong>Build Settings</strong>. You should fill in the Product information, which includes the projects <strong>Display Name</strong>, its Package information, which consists of a <strong>Domain</strong>, <strong>Company </strong>and <strong>Product</strong>.
-    The package information can only be made up of letters from A-Z and numbers 0-9, with no symbols or other special characters at all, nor should it have uppercase characters. These details will then be used to generate a Package ID with the format
-    &quot;<span class="inline">com.company.myappname</span>&quot;.</p>
-  <p class="note"><strong>NOTE</strong>: If you have already set up the <a href="Android.htm">Android</a> target Game Options, you can click the &quot;<strong>Sync from Android</strong>&quot; button at the top to transfer the relevant information from the Android target
-    to the Amazon Fire.</p>
-  <p>You then need to set the <strong>Build Tools</strong> as well as the <strong>Target</strong>, <strong>Minimum </strong>and <strong>Compile SDK</strong> versions.</p>
-  <p class="note"><strong>NOTE</strong>: There is also an option for the &quot;<strong>Support Library</strong>&quot; version to use. From GameMaker Studio v2.2.4 and above, this is no longer required and any values used here will be ignored. The setting is maintained
-    for use with legacy projects that require an earlier runtime than 2.2.4.</p>
-  <p>The Build Tools (and Support Library if required) are used when GameMaker Studio 2 builds your game for the Android/Amazon Fire target and should be set to appropriate values based on the tools you have installed using Android Studio.</p>
+  <h2>일반</h2>
+  <p><img alt="Amazon Fire General Options Part 1" class="center" src="../../assets/Images/Settings/AmazonFire_General1_Options.png"/><strong>일반</strong> 섹션의 첫 번째 부분은 <strong>제품 정보</strong> 및 <strong>빌드 설정</strong> 전용입니다. 당신은 프로젝트가 <strong>도메인,</strong> <strong>회사</strong> 및 <strong>제품</strong> 구성 <strong>이름,</strong> 패키지 정보를 <strong>표시</strong> 포함하는 제품의 정보를 입력해야합니다. 패키지 정보는 AZ 및 숫자 0-9의 문자로만 구성 될 수 있으며 기호 나 기타 특수 문자가 전혀없고 대문자도 없어야합니다. 그런 다음이 세부 사항을 사용하여 &quot; <span class="inline">com.company.myappname</span> &quot;형식의 패키지 ID를 생성하십시오.</p>
+  <p class="note"><strong>참고</strong> : 이미 <a href="Android.htm">Android</a> 대상 게임 옵션을 설정 한 경우 상단의 &quot; <strong>Android에서 동기화</strong> &quot;버튼을 클릭하여 관련 정보를 Android 대상에서 Amazon Fire로 전송할 수 있습니다.</p>
+  <p>그런 다음 <strong>Build</strong> , <strong>Target</strong> , <strong>Minimum</strong> 및 <strong>Compile SDK</strong> 버전을 설정해야합니다.</p>
+  <p class="note"><strong>참고</strong> : &quot; <strong>지원 라이브러리</strong> &quot;버전에 사용할 옵션도 있습니다. GameMaker Studio v2.2.4 이상에서는 더 이상 필요하지 않으며 여기에 사용 된 값은 무시됩니다. 이 설정은 2.2.4 이전의 런타임이 필요한 레거시 프로젝트에서 사용하도록 유지됩니다.</p>
+  <p>빌드 도구 (및 필요한 경우 지원 라이브러리)는 GameMaker Studio 2가 Android / Amazon Fire 대상 용 게임을 빌드 할 때 사용되며 Android Studio를 사용하여 설치 한 도구에 따라 적절한 값으로 설정해야합니다.</p>
   <ul class="colour">
-    <li>The <strong>Target SDK</strong> indicates that you have tested your app on (up to and including) the version you specify here. This is simply to give the Android OS an idea of how it should handle your app in terms of OS features. For all practical
-      purposes, most apps are going to want to set Target SDK to the latest released version of the API (as used by the Compile SDK setting). This will ensure your app looks as good as possible on the most recent Android devices. Note that from November
-      2019 Google has made API level 28 the required target.</li>
-    <li>The <strong>Minimum SDK</strong> version is the minimum API level that will run your project. From November 2019 Google has made API level 16 the absolute minimum required, but if you add extensions then they may require a higher minimum API level.</li>
-    <li>The <strong>Compile SDK</strong> version is the version of the API that the project is compiled against. This means you can use Android API features included in that version of the API. If you try and use API 16 features - for example - but set Compile
-      SDK 15, then you will get a compilation error. However, if you set the Compile SDK to 28 then you can still run the app on an API 26 device (as well as all other previous versions too).</li>
+    <li><strong>Target SDK</strong> 는 여기에 지정한 버전에서 앱을 테스트했음을 나타냅니다. 이는 단순히 OS 기능 측면에서 앱을 처리하는 방법에 대한 아이디어를 Android OS에 제공하기위한 것입니다. 실질적인 목적으로 대부분의 앱은 Compile SDK 설정에서 사용되는 최신 버전의 API로 Target SDK를 설정하려고합니다. 이렇게하면 최신 Android 기기에서 앱이 최대한 멋지게 보입니다. 2019 년 11 월부터 Google은 API 레벨 28을 필수 목표로 설정했습니다.</li>
+    <li><strong>최소 SDK</strong> 버전은 프로젝트를 실행할 최소 API 레벨입니다. 2019 년 11 월부터 Google은 API 수준 16을 필요한 최소 수준으로 만들었지 만 확장을 추가하면 더 높은 최소 API 수준이 필요할 수 있습니다.</li>
+    <li><strong>Compile SDK</strong> 버전은 프로젝트가 컴파일되는 API 버전입니다. 즉, 해당 버전의 API에 포함 된 Android API 기능을 사용할 수 있습니다. 예를 들어 API 16 기능을 사용하려고하지만 Compile SDK 15를 설정하면 컴파일 오류가 발생합니다. 그러나 Compile SDK를 28로 설정하면 API 26 장치 (및 다른 모든 이전 버전에서도)에서 앱을 계속 실행할 수 있습니다.</li>
   </ul>
-  <p>You can select from one of the predefined target settings by clicking on the <strong>Pre-populate SDK</strong> values to chosen API level button, which will open a list of different APIs to choose from. Selecting any one of them will populate all the
-    SDK files with appropriate values which you can then use or edit as required.</p>
-  <p class="note"><strong>NOTE</strong>: You must have installed the appropriate APIs in the Android SDK Manager or through Android Studio for your projects to compile correctly.</p>
-  <p><img alt="Amazon Fire General Options Part 2" class="center" src="../../assets/Images/Settings/AmazonFire_General2_Options.png"/>The second part of the General section covers the different <strong>Orientations </strong>that your game can be run on
-    for the best user experience. The available options are:</p>
+  <p><strong>SDK</strong> 값을 선택한 API 수준으로 <strong>미리 채우기</strong> 버튼을 클릭하여 사전 정의 된 대상 설정 중 하나를 선택할 수 있습니다.이 버튼을 클릭하면 선택할 수있는 다른 API 목록이 열립니다. 이들 중 하나를 선택하면 모든 SDK 파일이 적절한 값으로 채워져 필요에 따라 사용하거나 편집 할 수 있습니다.</p>
+  <p class="note"><strong>참고</strong> : 프로젝트가 올바르게 컴파일 되려면 Android SDK Manager 또는 Android Studio를 통해 적절한 API를 설치해야합니다.</p>
+  <p><img alt="Amazon Fire General Options Part 2" class="center" src="../../assets/Images/Settings/AmazonFire_General2_Options.png"/>일반 섹션의 두 번째 부분은 최고의 사용자 경험을 위해 게임을 실행할 수있는 다양한 <strong>방향</strong> 을 다룹니다. 사용 가능한 옵션은 다음과 같습니다.</p>
   <ul class="Disc">
-    <li>Portrait</li>
-    <li>Portrait-flipped</li>
-    <li>Landscape</li>
-    <li>Landscape-flipped</li>
+    <li>초상화</li>
+    <li>세로로 뒤집힌</li>
+    <li>경치</li>
+    <li>가로 채기</li>
   </ul>
-  <p>Finally you have the following miscellaneous options:</p>
+  <p>마지막으로 다음과 같은 기타 옵션이 있습니다.</p>
   <ul class="colour">
-    <li><strong>Enable Bluetooth/iCade support</strong>: This will add support for bluetooth or iCade gamepads to your game project. This is on by default.</li>
-    <li><strong>Run Lint Code Analysis</strong>: When this option is flagged, the build tools will run a lint code analysis on the project as it builds, giving a more in-depth error check and showing more information in the output window as the project compiles
-      (a LOG file will be created too, with the path to the file shown at the end of compiling in the <a href="../../Introduction/The_Output_Window.htm">Output Window</a>). Note that not everything flagged by lint analysis as an error is necessarily problematic
-      for your game, and having this enabled may mean that your game no longer compiles, even though when it is off, it will compile and run fine. Essentially this is only for debugging, and the option is off by default.</li>
-    <li><strong>Install Location</strong>: Here you can set the default Install Location for your game. This can either be set to <strong>Automatic</strong>, in which case the game will be installed to the location chosen by the user on their device, or it
-      can be set to <strong>Prefer External</strong> which will always try to install the game to the external storage of the device.</li>
+    <li><strong>Bluetooth / iCade 지원 활성화</strong> : 게임 프로젝트에 Bluetooth 또는 iCade 게임 패드에 대한 지원이 추가됩니다. 이것은 기본적으로 켜져 있습니다.</li>
+    <li><strong>Lint Code Analysis 실행</strong> :이 옵션이 플래그로 지정되면 빌드 도구는 빌드시 프로젝트에서 Lint 코드 분석을 실행하여 프로젝트가 컴파일 될 때 더 자세한 오류 확인을 제공하고 출력 창에 더 많은 정보를 표시합니다 (LOG 파일도 생성되며, <a href="../../Introduction/The_Output_Window.htm">출력 창</a> 에서 컴파일이 끝나면 파일 경로가 표시됩니다). 린트 분석에 의해 오류로 표시되는 모든 것이 반드시 게임에 문제가되는 것은 아니며,이 기능을 활성화하면 게임이 꺼져 있어도 더 이상 컴파일되지 않고 컴파일 및 실행됩니다. 기본적으로 이것은 디버깅 전용이며 옵션은 기본적으로 해제되어 있습니다.</li>
+    <li><strong>설치 위치</strong> : 여기서 게임의 기본 설치 위치를 설정할 수 있습니다. 이것은 하나이 경우 게임이 자신의 장치에서 사용자가 선택한 위치에 설치되며, <strong>자동으로</strong> 설정 될 수있다, 또는 항상 장치의 외부 저장 장치에 게임을 설치하려고 할 <strong>외부를 선호하도록</strong> 설정할 수 있습니다 .</li>
   </ul>
-  <p>You can also set the Amazon Fire <strong>Sleep Margin</strong> here. This option is related to reducing stuttering when running your game on specific systems. Basically, if your game is running faster than your room speed GameMaker Studio 2 will &quot;sleep&quot;
-    for the remaining time, but this sleep can be quite inaccurate and you can often end of sleeping for longer than necessary, causing your frame to take longer which causes stuttering. To get around this we can sleep for less time, then sit in a tight
-    loop for the remainder of the time to make it more accurate - although the problem with sitting in a loop is that it causes CPU usage to increase, which in turn can cause your CPU temperatures to rise and your device to use more battery. By default,
-    this value is set to 4, and in 99.99% of the cases you&#39;ll be fine with this, but for low end devices or for devices with a lot of background processes running this may not be an ideal solution and a value of 5 up to 10 may be required. Note though
-    that this is very much a device specific configuration and what works on your build device may not be appropriate for another user, and as such if in doubt leave it set to 4.</p>
+  <p>여기에서 Amazon Fire <strong>Sleep Margin을</strong> 설정할 수도 있습니다. 이 옵션은 특정 시스템에서 게임을 실행할 때 끊김을 줄이는 것과 관련이 있습니다. 기본적으로 게임이 룸 속도보다 빠르게 실행되는 경우 GameMaker Studio 2가 남은 시간 동안 &quot;절전&quot;상태가되지만이 절전 모드는 상당히 부정확 할 수 있으며 종종 필요 이상으로 절전 모드를 종료 할 수 있습니다. 말더듬을 유발합니다. 이 문제를 해결하려면 더 적은 시간 동안 잠을 자고 나머지 시간 동안 꽉 조여서 더 정확하게 만들 수 있습니다. 루프에 앉아있는 문제는 CPU 사용량이 증가한다는 것입니다. CPU 온도가 상승하고 장치가 더 많은 배터리를 사용하게합니다. 기본적으로이 값은 4로 설정되어 있으며 99.99 %의 경우에는 문제가 없지만 저급 장치 또는 백그라운드 프로세스가 많은 장치의 경우 이상적인 솔루션이 아니며 값이 아닐 수 있습니다 5 ~ 10이 필요할 수 있습니다. 이것은 매우 장치 별 구성이며 빌드 장치에서 작동하는 것은 다른 사용자에게 적합하지 않을 수 있으므로 의심스러운 경우 4로 설정하십시오.</p>
   <p> </p>
-  <h2>Graphics</h2>
-  <p><img alt="Amazon Fire Graphics Options" class="center" src="../../assets/Images/Settings/AmazonFire_Graphics_Options.png"/>Here you can change the following details related to how your game will be displayed, with the following options are available:</p>
+  <h2>제도법</h2>
+  <p><img alt="Amazon Fire Graphics Options" class="center" src="../../assets/Images/Settings/AmazonFire_Graphics_Options.png"/>다음 옵션을 사용하여 게임 표시 방법과 관련된 다음 세부 정보를 변경할 수 있습니다.</p>
   <ul class="colour">
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be
-      off, but if you have nice alpha blends and smoothed edged graphics it is better left on. This is on by default.</li>
-    <li><strong>Screen Colour Depth</strong>: This can be used to set the colour depth for rendering to either 16bit or 24bit. This will affect the compatibility with some older devices if it is set to 24bit, and will also increase the <em>ashmem </em>that
-      is needed (this is the shared memory on AmazonFire devices).</li>
-    <li><strong>Scaling</strong>: Here you can select to scale the draw canvas maintaining the aspect ratio within the device screen - adding &quot;padding&quot; around the edges to fit the screen - or you can select to have the draw canvas stretched to fit
-      the device screen.</li>
+    <li><strong>픽셀 간 색상 보간</strong> : 기본적으로 &quot;매끄러운&quot;픽셀 인 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간을</a> 켭니다. 선명한 픽셀 그래픽의 경우 꺼져 있어야하지만 멋진 알파 블렌드와 매끄러운 가장자리 그래픽이있는 경우 그대로 유지하는 것이 좋습니다. 이것은 기본적으로 켜져 있습니다.</li>
+    <li><strong>Screen Color Depth</strong> : 렌더링의 색 농도를 16 비트 또는 24 비트로 설정하는 데 사용할 수 있습니다. 이는 24 비트로 설정된 경우 일부 구형 디바이스와의 호환성에 영향을 미치며 필요한 <em>불확실성</em> 을 증가시킵니다 (이것은 AmazonFire 디바이스의 공유 메모리입니다).</li>
+    <li><strong>크기 조정</strong> : 여기에서 화면에 맞게 가장자리 주위에 &quot;패딩&quot;을 추가하여 장치 화면 내에서 가로 세로 비율을 유지하여 그리기 캔버스의 배율을 조정하거나 장치 화면에 맞게 그리기 캔버스를 확장하도록 선택할 수 있습니다.</li>
   </ul>
-  <p>Finally there is the option to set the size of the <a class="tooltip" title="A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There
-    is also a button marked <strong><strong>Preview </strong></strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are
-    structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
-  <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be with different browsers and devices.</p>
+  <p>마지막으로 <a class="tooltip" title="텍스처 페이지 (텍스처 아틀라스라고도 함)는 게임에서 가장 적은 텍스처 메모리를 차지하도록 최적의 방식으로 그룹화 된 이미지 모음 (스프라이트, 타일셋, 글꼴 문자 등)입니다. 실행됩니다.">텍스처 페이지</a> 의 크기를 설정하는 옵션이 있습니다. 기본 (가장 호환되는) 크기는 2048x2048이지만 256x256에서 최대 8192x8192 사이에서 선택할 수 있습니다. 또한이 플랫폼에 대한 텍스처 페이지를 생성 한 다음 창을 열어서 모양을 볼 수있는 <strong><strong>미리보기</strong></strong> 버튼이 있습니다. 텍스처 페이지가 어떻게 구성되어 있는지 확인하고 텍스처 페이지가 필요 이상으로 커지는 것을 방지하려는 경우 매우 유용 할 수 있습니다. 텍스처 페이지에 대한 자세한 내용은 <a href="../Texture_Information/Texture_Pages.htm">여기</a> 를 참조 <a href="../Texture_Information/Texture_Pages.htm">하십시오</a> .</p>
+  <p class="note"><strong>참고</strong> : 텍스처 페이지의 크기가 클수록 게임이 다른 브라우저 및 장치와 호환되지 않습니다.</p>
   <p> </p>
-  <h2>Icons</h2>
-  <p><img alt="Amazon Fire Icons Options" class="center" src="../../assets/Images/Settings/AmazonFire_Icons_Options.png"/>This section permits you to add the various <strong>Icon</strong> images that your project will need for the different store pages
-    and devices. All icon images should be created as 24bit <span class="inline">*.png</span> files of the appropriate sizes given.</p>
-  <p>It is worth noting that GameMaker Studio 2 has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game
-    is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require. The tool will generate Icons as well as Images (see the section below).</p>
+  <h2>아이콘</h2>
+  <p><img alt="Amazon Fire Icons Options" class="center" src="../../assets/Images/Settings/AmazonFire_Icons_Options.png"/>이 섹션에서는 프로젝트가 다른 상점 페이지 및 장치에 필요한 다양한 <strong>아이콘</strong> 이미지를 추가 할 수 있습니다. 모든 아이콘 이미지는 주어진 적절한 크기의 24 비트 <span class="inline">* .png</span> 파일로 생성되어야합니다.</p>
+  <p>GameMaker Studio 2에는 게임이 컴파일되는 모든 다른 대상 플랫폼에 필요한 모든 이미지를 자동으로 만드는 데 사용할 수있는 <a href="../../IDE_Tools/Project_Image_Generator.htm">프로젝트 이미지 생성기</a> 도구가 있습니다. 이 도구를 사용하는 경우 필요한 이미지가되도록 만들어진 이미지를 수정해야합니다. 이 도구는 이미지뿐만 아니라 아이콘도 생성합니다 (아래 섹션 참조).</p>
   <p> </p>
-  <h2>Images</h2>
-  <p><img alt="Amazon Fire Images Options" class="center" src="../../assets/Images/Settings/AmazonFire_Images_Options.png"/>Here you can set the <strong>Border Colour</strong> that will be used as the background for splash screens that are not set to fill
-    the full screen. You can also add <strong>Splash Screens</strong> to your final game file, for both <em>landscape </em>and <em>portrait </em>modes, which will be shown while the game loads on the device. This screen should be a 24bit <span class="inline">*.png</span> file,
-    and is recommended to be the same size as the first room (or view) of your game. If you require that the splash screen be shown for a specific time then you can also set it here from 0 to 10 seconds (the default time of 0 means that it will only show
-    for the duration of the asset loading). You can also set how the splash screen should be displayed from the following options:</p>
+  <h2>이미지</h2>
+  <p><img alt="Amazon Fire Images Options" class="center" src="../../assets/Images/Settings/AmazonFire_Images_Options.png"/>여기에서 전체 화면을 채우도록 설정되지 않은 스플래시 화면의 배경으로 사용될 <strong>테두리 색</strong> 을 설정할 수 있습니다. 게임이 장치에로드되는 동안 표시되는 <em>가로</em> 및 <em>세로</em> 모드 모두에 대해 최종 게임 파일에 <strong>스플래시 화면</strong> 을 추가 할 수도 있습니다. 이 화면은 24 비트 <span class="inline">* .png</span> 파일 <span class="inline">이어야</span> 하며 게임의 첫 번째 방 (또는보기)과 동일한 크기를 권장합니다. 특정 시간 동안 스플래시 화면을 표시해야하는 경우 여기에서 0-10 초 범위로 설정할 수도 있습니다 (기본 시간 0은 자산로드 기간 동안 만 표시됨을 의미 함). 다음 옵션에서 스플래시 화면을 표시하는 방법을 설정할 수도 있습니다.</p>
   <ul class="colour">
-    <li><strong>Keep Aspect Ratio</strong>: This will maintain the aspect ratio of the image compared to the device screen, adding &quot;padding&quot; around the edges where required.</li>
-    <li><strong>Crop To Fit</strong>: This will keep the image 1:1 with the device screen and crop (or pad) the edges as required.</li>
-    <li><strong>Stretch</strong>: This will stretch the image to fill the device screen (and may distort the image shown).</li>
+    <li><strong>가로 세로 비율</strong> 유지 : 장치 화면과 비교하여 이미지의 가로 세로 비율을 유지하여 필요한 경우 가장자리 주위에 &quot;패딩&quot;을 추가합니다.</li>
+    <li><strong>자르기 맞춤</strong> : 장치 화면에서 이미지를 1 : 1로 유지하고 필요에 따라 가장자리를 자르거나 채 웁니다.</li>
+    <li><strong>늘이기</strong> : 이미지를 늘려 장치 화면을 채 웁니다 (표시된 이미지가 왜곡 될 수 있음).</li>
   </ul>
-  <p>Finally you can set the <strong>Banner Image</strong>, which is also a 24bit <span class="inline">*.png</span>.</p>
+  <p>마지막으로 <strong>배너 이미지 (</strong> 24bit <span class="inline">* .png)를</span> 설정할 수 있습니다.</p>
   <p> </p>
-  <h2>Permissions</h2>
-  <p><img alt="Amazon Fire Permissions Options" class="center" src="../../assets/Images/Settings/AmazonFire_Permissions_Options.png"/>From this tab you can change some of the permissions that your game may request within the Amazon Fire Manifest. GameMaker
-    Studio 2 will allocate permissions automatically as required based on the functions the game uses, however you may find you require a permission for your game that hasn&#39;t been correctly assigned (for example, when you use custom extensions) in
-    which case tick the requisite permission box.</p>
-  <p>The list below outlines those permissions that are available:</p>
+  <h2>권한</h2>
+  <p><img alt="Amazon Fire Permissions Options" class="center" src="../../assets/Images/Settings/AmazonFire_Permissions_Options.png"/>이 탭에서 Amazon Fire Manifest 내에서 게임이 요청할 수있는 일부 권한을 변경할 수 있습니다. GameMaker Studio 2는 게임이 사용하는 기능에 따라 필요에 따라 권한을 자동으로 할당하지만, 사용자 지정 확장 프로그램을 사용할 때와 같이 올바르게 할당되지 않은 게임에 대한 권한이 필요한 경우 필요한 권한 상자.</p>
+  <p>아래 목록에는 사용 가능한 권한이 요약되어 있습니다.</p>
   <ul class="colour">
-    <li><span class="inline">WRITE_EXTERNAL_STORAGE</span>: Will permit your game to write to external storage.</li>
-    <li><span class="inline">READ_PHONE_STATE</span>: Allow read only access to the phone state.</li>
-    <li><span class="inline">ACCESS_NETWORK_STATE</span>: Permit your game to access information about networks.</li>
-    <li><span class="inline">INTERNET</span>: Permit your game to open network sockets.</li>
-    <li><span class="inline">BLUETOOTH</span>: Will permit your game to connect to paired Bluetooth devices.</li>
-    <li><span class="inline">RECORD_AUDIO</span>: Will permit your game to record audio input from the microphone.</li>
+    <li><span class="inline">WRITE_EXTERNAL_STORAGE</span> : 게임이 외부 저장소에 쓸 수 있도록합니다.</li>
+    <li><span class="inline">READ_PHONE_STATE</span> : 전화 상태에 대한 읽기 전용 액세스를 허용합니다.</li>
+    <li><span class="inline">ACCESS_NETWORK_STATE</span> : 게임이 네트워크에 대한 정보에 액세스하도록 허용합니다.</li>
+    <li><span class="inline">인터넷</span> : 게임이 네트워크 소켓을 열도록 허용합니다.</li>
+    <li><span class="inline">블루투스</span> : 게임이 페어링 된 블루투스 장치에 연결되도록합니다.</li>
+    <li><span class="inline">RECORD_AUDIO</span> : 게임에서 마이크의 오디오 입력을 녹음 할 수 있습니다.</li>
   </ul>
-  <p class="note"><strong>NOTE</strong>: If you are not sure that you need these, you should probably just leave them un-checked by default and let GameMaker Studio 2 deal with the permissions for your game.</p>
-  <p>The Amazon Fire Permissions secton also has an area where you can inject permissions into the <strong>Android Application Tags</strong> in the <span class="inline">Androidmanifest.xml</span>. You can find a full list of available tags from the Android
-    documentation here:</p>
+  <p class="note"><strong>참고</strong> : 이것들이 필요한지 확실하지 않다면, 기본적으로 체크하지 않은 상태로두고 GameMaker Studio 2가 게임 권한을 처리하도록해야합니다.</p>
+  <p>아마존 화재 권한 secton 또한 당신이 <span class="inline">AndroidManifest.xml에있는</span> <strong>안드로이드 응용 프로그램 태그에</strong> 권한을 주입 할 수있는 영역이있다. 사용 가능한 태그의 전체 목록은 다음 Android 설명서에서 찾을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="https://developer.android.com/guide/topics/manifest/application-element">Android Developer: Application Tags</a></li>
+    <li><a href="https://developer.android.com/guide/topics/manifest/application-element">안드로이드 개발자 : 애플리케이션 태그</a></li>
   </ul>
-  <p>It is worth noting that for target API 28 and above, you will no longer be permitted to use any external web calls using &quot;<span class="inline">http</span>&quot; - &quot;<span class="inline">https</span>&quot; is required instead - unless you add
-    the following tag:</p>
+  <p>대상 API 28 이상에서는 다음 태그를 추가하지 않는 한 &quot; <span class="inline">http</span> &quot;- &quot; <span class="inline">https</span> &quot;를 사용하는 외부 웹 호출을 더 이상 사용할 수 없습니다.</p>
   <p class="code">android:usesCleartextTraffic = &quot;true&quot;</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings\Game_Options\Amazon_Fire.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a href="Android.htm">Android</a></div>
+        <div style="float:left">뒤로: <a href="../Game_Options.htm">게임 옵션</a></div>
+        <div style="float:right">다음: <a href="Android.htm">기계적 인조 인간</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Amazon Fire Game Options
@@ -202,4 +172,4 @@ Amazon Fire Game Options
 amazon_options
 -->
 
-</body></html>
+</body></html> 

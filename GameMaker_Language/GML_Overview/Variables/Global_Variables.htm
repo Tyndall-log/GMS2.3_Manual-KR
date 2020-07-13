@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Global Variables">
-        <span>Global Variables</span>
+        <span>글로벌 변수</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,64 +80,55 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Global Variables</h1>
-  <p>A basic description of a <strong>global </strong>variable is one that, once declared, it belongs to no instance in particular and yet can be accessed by all. Just like <a href="Local_Variables.htm">local variables</a>, global variables must be declared
-    using an identifier, but unlike a local variable, a global variable remains in memory <em>until the end of the game</em>. So, you can create a global variable to keep track of (for example) the number of bullets that the player has and then just update
-    this variable at different points in the game, form any instance or function and at any time. Essentially, a global variable does not belong to any specific instance and can be accessed, changed and used by all instances, and any changes made to the
-    variable are &quot;global&quot;, in that all instances using the variable will be affected by the change. Let&#39;s have a look at an example:</p>
+  <h1>글로벌 변수</h1>
+  <p><strong>전역</strong> 변수에 대한 기본 설명은 일단 선언되면 특정 인스턴스에 속하지 않지만 모든 사람이 액세스 할 수있는 것입니다. <a href="Local_Variables.htm">로컬 변수</a> 와 마찬가지로 전역 변수는 식별자를 사용하여 선언해야하지만 로컬 변수와 달리 전역 변수는 <em>게임이 끝날 때까지</em> 메모리에 남아 있습니다. 따라서 플레이어가 가지고있는 총알 수를 추적하는 전역 변수를 만든 다음 게임의 다른 지점에서이 변수를 업데이트하여 인스턴스 또는 함수를 구성 할 수 있습니다. 기본적으로 전역 변수는 특정 인스턴스에 속하지 않으며 모든 인스턴스에서 액세스, 변경 및 사용할 수 있으며 변수에 대한 모든 변경 사항은 &quot;전역&quot;입니다. 변수를 사용하는 모든 인스턴스는 변경의 영향을받습니다. 예제를 보자.</p>
   <p class="code">global.food = 5;</p>
-  <p>We declare the &quot;<span class="inline">food</span>&quot; variable by first writing &quot;<span class="inline">global</span>&quot; and then a &quot;<span class="inline">.</span>&quot; to tell GameMaker Studio 2 that this variable is now global scope.
-    We will need to use this form from now on any time we are required to access or to change this variable in any way. So, we have created a new variable called &quot;<span class="inline">food</span>&quot; and we have declared it as global. Now, any
-    instance or function can use and change this variable in any way and all other instances will &quot;see&quot; this. For example we could have a different food object that the player collides with and in the collision event we have:</p>
+  <p>GameMaker Studio 2에이 변수가 이제 전역 범위라는 것을 알리기 위해 먼저 &quot; <span class="inline">global</span> &quot;과 &quot; <span class="inline">.</span> &quot;을 먼저 작성하여 &quot; <span class="inline">food</span> &quot;변수를 선언합니다. 어떤 식 으로든이 변수에 액세스하거나 변경해야 할 때 언제든지이 양식을 사용해야합니다. 그래서 우리는 &quot; <span class="inline">food</span> &quot;라는 새로운 변수를 만들었고 전역 변수로 선언했습니다. 이제 모든 인스턴스 또는 함수는 어떤 식 으로든이 변수를 사용하고 변경할 수 있으며 다른 모든 인스턴스는이 변수를 &quot;볼&quot;것입니다. 예를 들어 플레이어가 충돌하는 충돌 이벤트에서 다른 음식 개체를 가질 수 있습니다.</p>
   <p class="code">global.food +=1;</p>
-  <p>We also have another object that draws this value like this:</p>
+  <p>이 값을 그리는 또 다른 객체도 있습니다 :</p>
   <p class="code">draw_text(32, 32, &quot;food = &quot; + string(global.food));</p>
-  <p>With global variables we can change values and see those changes reflected in all instances of the objects that reference this variable. As with <i>local</i> variables you have to take care not to name your global variables the same as any instance
-    variables as that may cause you problems and make bugs creep into your games due to variable overlap, which can be a difficult issue to debug sometimes. In general you should have a single object that declares all your global variables at the very
-    start of the game (for example, in the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Room Start Event</a> of the first object instance placed in the first room of the game) or a single <a href="../Script_Functions.htm">script function</a>    that declares them all together, as this gives you a handy place to go back and reference everything at once should you need to check a variable name or edit a value.</p>
-  <p>GameMaker Studio 2 has a collection of &quot;built in&quot; global variables too, so you should be aware of them as you may name one of your instance variables the same or wish to have your own global variable with the same name and wonder why you are
-    getting errors! They are easy to spot, however, as they are shown in a different colour in the code editor and also come up in the auto-complete bar at the bottom. The majority of built in global variables are very specific and will only be used on
-    rare occasions - and are listed in the appropriate sections of the manual - but there is one important one that is used frequently and isn&#39;t listed elsewhere:</p>
+  <p>전역 변수를 사용하면 값을 변경하고이 변수를 참조하는 객체의 모든 인스턴스에 해당 변경 사항이 반영되는 것을 볼 수 있습니다. <i>로컬</i> 변수와 마찬가지로 전역 변수의 이름을 인스턴스 변수와 동일하게 지정하면 문제가 발생할 수 있으며 변수 겹침으로 인해 게임에 버그가 발생하여 디버그하기 어려운 문제가 발생할 수 있습니다. 일반적으로 게임을 시작할 때 (예 : 게임의 첫 번째 방에있는 첫 번째 객체 인스턴스의 <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">룸 시작 이벤트</a> 에서) 모든 전역 변수를 선언하는 단일 객체 또는 단일 <a href="../Script_Functions.htm">스크립트 함수가</a> 있어야합니다. 변수 이름을 확인하거나 값을 편집해야하는 경우 모든 것을 한 번에 참조하고 다시 참조 할 수있는 편리한 위치를 제공하므로 모두 함께 선언합니다.</p>
+  <p>GameMaker Studio 2에는 &quot;내장&quot;전역 변수 모음도 포함되어 있으므로 인스턴스 변수 중 하나의 이름을 동일하게 지정하거나 동일한 이름을 가진 고유 한 전역 변수를 갖고 싶어하는 이유를 알고 있어야합니다. 오류가 발생했습니다! 그러나 코드 편집기에서 다른 색상으로 표시되고 하단의 자동 완성 막대에도 표시되므로 쉽게 찾을 수 있습니다. 내장 전역 변수의 대부분은 매우 구체적이며 드문 경우에만 사용되며 매뉴얼의 해당 섹션에 나열되지만 자주 사용되며 다른 곳에 나열되지 않은 중요한 변수가 하나 있습니다.</p>
   <ul class="colour">
     <li><a href="Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a></li>
   </ul>
-  <p>There are also three <b>deprecated</b> built in global variables which you should be aware of (these variables are only designed to support legacy projects from previous versions of GameMaker and should <b><i>not be used in new projects</i></b>):</p>
+  <p>또한 세 가지 <b>더 이상 사용되지 않는</b> 내장 된 전역 변수가 있습니다 (이 변수는 이전 버전의 GameMaker의 레거시 프로젝트 만 지원하도록 설계 <i>되었으며 새 프로젝트에는 사용</i> 해서는 안 됨).</p>
   <ul class="colour">
-    <li><a href="Builtin_Global_Variables/score.htm"><tt>score</tt></a></li>
-    <li><a href="Builtin_Global_Variables/health.htm"><tt>health</tt></a></li>
-    <li><a href="Builtin_Global_Variables/lives.htm"><tt>lives</tt></a></li>
+    <li><a href="Builtin_Global_Variables/score.htm"><tt>점수</tt></a></li>
+    <li><a href="Builtin_Global_Variables/health.htm"><tt>건강</tt></a></li>
+    <li><a href="Builtin_Global_Variables/lives.htm"><tt>삶</tt></a></li>
   </ul>
-  <p>Finally, there are two variables that can be used for script functions and methods:</p>
+  <p>마지막으로 스크립트 함수 및 메소드에 사용할 수있는 두 가지 변수가 있습니다.</p>
   <ul class="colour">
-    <li><a href="Builtin_Global_Variables/argument.htm">argument</a></li>
+    <li><a href="Builtin_Global_Variables/argument.htm">논의</a></li>
     <li><a href="Builtin_Global_Variables/argument_count.htm">argument_count</a></li>
   </ul>
-  <p>The following form can also be used to declare global variables, but it is <i><b>only included for backwards compatibility</b></i>, and it is not recommended that you use this form for new projects as future versions of GameMaker may not support it.</p>
-  <p>The second form for creating global variables is to declare them as such using the <tt>globalvar</tt> declaration, much as you would a local variable using the <tt>var</tt> declaration.</p>
-  <p class="note"><b>IMPORTANT!</b> The <tt>globalvar</tt> declaration is <b>deprecated</b> and only supported for legacy purposes. You should <b>always</b> use the <tt>global.</tt> identifier to mark global variables.</p>
-  <p>This (deprecated) declaration would be used as follows:</p>
+  <p>다음 형식은 전역 변수를 선언하는 데에도 사용할 수 있지만 <b>이전 버전과의 호환성을 위해서만 포함</b> 되며 향후 버전의 GameMaker에서 지원하지 않을 수 있으므로 새 프로젝트에는이 형식을 사용하지 않는 것이 좋습니다.</p>
+  <p>전역 변수를 작성하는 두 번째 양식은 <tt>var</tt> 선언을 사용하는 로컬 변수와 마찬가지로 <tt>globalvar</tt> 선언을 사용하여 선언하는 것입니다.</p>
+  <p class="note"><b>중대한!</b> <tt>globalvar</tt> 선언은 <b>더 이상 사용되지 않으며</b> 레거시 목적으로 만 지원됩니다. <b>항상</b> <tt>전역을</tt> 사용해야합니다 <tt>.</tt> 글로벌 변수를 표시하는 식별자.</p>
+  <p>이 (더 이상 사용되지 않는) 선언은 다음과 같이 사용됩니다.</p>
   <p class="code">globalvar food;<br/> food = 5;</p>
-  <p>Once declared in this way that variable &quot;food&quot; is now considered global and requires no <tt>global.</tt> prefix - which also means that it&#39;s a lot harder to identify global variables in your code and it&#39;s also much easier to get variable
-    overlap as you use the same variable name in different objects or from extensions that you&#39;ve installed. Once declared in this way the global variable is accessed as follows:</p>
+  <p>이런 식으로 선언하면 변수 &quot;음식&quot;이 이제 전역으로 간주되며 전역이 필요하지 않습니다 <tt>.</tt> prefix-이것은 또한 코드에서 전역 변수를 식별하는 것이 훨씬 어렵고 다른 객체 또는 설치된 확장에서 동일한 변수 이름을 사용할 때 변수 겹치기가 훨씬 쉽다는 것을 의미합니다. 이러한 방식으로 선언되면 전역 변수는 다음과 같이 액세스됩니다.</p>
   <p class="code">food += 2;</p>
-  <p>or:</p>
+  <p>또는:</p>
   <p class="code">draw_text(32, 32, &quot;food = &quot; + string(food));</p>
-  <p>As you can see, with nothing to show that the variable is global in scope you are potentially setting yourself up for many subtle problems to arise in your game, which is why this declaration should be avoided.</p>
-  <p>There are a few functions designed to help you when dealing with global variables, which you can find on the following page:</p>
+  <p>보시다시피, 변수가 범위 내에서 전역 적이라는 것을 보여주지 않으면 서 게임에서 발생할 수있는 많은 미묘한 문제에 대해 잠재적으로 설정하고 있으므로이 선언을 피해야합니다.</p>
+  <p>전역 변수를 다룰 때 도움이되는 몇 가지 함수가 있습니다.이 함수는 다음 페이지에서 찾을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="../../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Functions</a></li>
+    <li><a href="../../GML_Reference/Variable_Functions/Variable_Functions.htm">변수 함수</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Overview\Variables\Global_Variables.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Variables_And_Variable_Scope.htm">Variables And Variables Scope</a></div>
-        <div style="float:right">Next: <a href="Constants.htm">Constants</a></div>
+        <div style="float:left">뒤로: <a href="../Variables_And_Variable_Scope.htm">변수와 변수 범위</a></div>
+        <div style="float:right">다음: <a href="Constants.htm">상수</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 global
@@ -148,4 +139,4 @@ global variables
 global_variables
 -->
 
-</body></html>
+</body></html> 

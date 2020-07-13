@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="If Collision Shape">
-        <span>If Collision Shape</span>
+        <span>충돌 모양 인 경우</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,90 +80,74 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If Collision Shape Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Shape.png" width="32"/> If Collision Shape</h1>
-  <p>This action is used to check and see if there is a collision with an instance of a given object within a given shaped area or along a line. You give the shape (rectangle, ellipse or line), the object to check for, and then supply the coordinates for
-    the upper-left and lower-right corners of the shape being used, or in the case of a line, the start and end positions. These can be absolute positions within the game room, or positions relative to the instance performing the action. You can see how
-    this works in the image below:</p>
-  <p><img alt="Example of different collision shapes" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/collision_shape_example.png"/>As you can see, the results will depend on the collision mask of the instance
-    being checked for, meaning the instance of the object you are looking for <i>must</i> have a sprite assigned to the <tt>sprite_index</tt>, or a sprite assigned to the <tt>mask_index</tt>. If it does not then it will not be detected by these functions,
-    regardless of whether it is drawing a sprite or not. It is worth noting that any instance that falls completely within the boundaries set for the ellipse or rectangle shape will also return a collision. The action will evaluate to <tt>true</tt> if
-    a collision is detected, or <tt>false</tt> otherwise, although you can also check the <b>Not</b> flag to check if there is <i>not</i> a collision with the given shaped area, and the action will then only evaluate as <tt>true</tt> if <i>no</i> collisions
-    are found, otherwise it will evaluate as <tt>false</tt>. You can also set the <b>Exclude Self</b> option to exclude the calling instance from the collision check.</p>
-  <p>Next you can check/uncheck the option to <b>Return List</b>. Checking this means the action will create and populate a <a href="../Data_Structures/Data_Structure_Actions.htm">list</a><span> </span>data structure with <i>all</i>instances in collision
-    with the shape and set the <b>Target</b> variable to the DS list ID. When unchecked, it will only set the <b>Target</b> variable to a value less than 0 when no collision is detected, or the unique ID value of <i>one</i> of the instances in the collision
-    (note that if multiple instances are in collision then you have no way of knowing which instance ID will be returned when not using a list).</p>
-  <p>If you have selected to return a list - and the Target variable is <i>not</i> set to <b>Temp</b> - then you can also select the <b>Free Target</b> option. When set to <tt>true</tt>, then the list contained in the target variable will be destroyed and
-    a new list created (and returned to the target variable) each time you call the action. In this way you can re-use the same variable without worrying about memory leaks, as, if you do <i>not</i> check <b>Free Target</b> option, you become responsible
-    for destroying the list before using the variable again in the action. Note that <i>regardless</i> of whether this option is checked or not, if you have set the action to <b>Return List</b>, then the target variable will <i>always contain a list ID</i>,
-    and as such, this will need to be freed when the instance is destroyed or the room ends (you can use the <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><b>Clean Up</b></a> event for this, for example, along with the <a href="../Data_Structures/Free_Data_Structure.htm">Free Data Structure</a><span> </span>action).
-    It is worth noting that you can set the <b>Free Target</b> option to use a pre-defined variable or an expression and so control when the list data structure is freed by setting the variable elsewhere (or having different outcomes for the expression)
-    as long as it evaluates to <tt>true</tt>/<tt>false</tt>.</p>
-  <p>Finally, you supply the <b>Target</b> variable that you want to hold the returned value or list ID. If you flag the Target variable to hold the returned value as being a <b>Temp</b> (local) variable, then the action will create this variable to hold
-    the return value <i>only</i> until the end of the event, in this case the Free Target option does nothing and you will be responsible for destroying the DS list if that option has been checked. If no target variable is supplied and the <b>Return List</b>    option is checked, no list will be created.</p>
-  <p class="note"><b>IMPORTANT!</b> Collisions will only register for those instances that have a valid collision mask, ie: they have a sprite assigned to the <tt>sprite_index</tt>, or a sprite assigned to the <tt>mask_index</tt>. If the instances of the object being
-    checked for in this action have no collision mask then the collision will not be detected, regardless of what the instance is drawing at the time.</p>
-  <p>Note that to add actions into an &quot;<span class="inline">if</span>&quot; block, they should be dropped to the <i>side</i> of the action, as shown in the image below:</p>
+  <h1>충돌 모양 인 경우</h1>
+  <p>이 동작은 주어진 모양 영역 내에서 또는 선을 따라 주어진 객체의 인스턴스와 충돌이 있는지 확인하고 확인하는 데 사용됩니다. 셰이프 (직사각형, 타원 또는 선), 확인할 객체를 제공 한 다음 사용중인 셰이프의 왼쪽 상단 및 오른쪽 하단 모서리에 대한 좌표를 제공하거나 라인의 경우 시작 및 시작 최종 위치. 이들은 게임 룸 내에서 절대 위치이거나 작업을 수행하는 인스턴스와 관련된 위치 일 수 있습니다. 아래 이미지에서 어떻게 작동하는지 확인할 수 있습니다.</p>
+  <p><img alt="Example of different collision shapes" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/collision_shape_example.png"/>당신이 볼 수 있듯이, 결과는 당신이 찾고있는 개체의 인스턴스 즉, 검사되는 인스턴스의 충돌 마스크에 따라 달라집니다 <i>해야한다</i> <tt>sprite_index에</tt> 할당 된 스프라이트, 또는 <tt>mask_index에</tt> 할당 된 스프라이트가 있습니다. 그렇지 않으면 스프라이트 그리기 여부에 관계없이 이러한 기능에 의해 감지되지 않습니다. 타원 또는 직사각형 모양에 대해 설정된 경계 내에 완전히 속하는 인스턴스도 충돌을 반환한다는 점은 주목할 가치가 있습니다. 충돌이 감지되면 작업이 <tt>true로</tt> 평가합니다, 또는 그렇지 않은 <tt>경우는 false,</tt> 당신은 또한 확인할 수 있지만 <b>하지</b> 가 있는지 확인하는 플래그를 <i>하지</i> 주어진 모양의 영역과 충돌하고, 작업이 만 <tt>참으로</tt> 평가하는 경우 <i>어떤</i> 충돌 그렇지 않으면 <tt>false로</tt> 평가됩니다. 충돌 검사에서 호출 인스턴스를 제외하도록 <b>자체 제외</b> 옵션을 설정할 수도 있습니다.</p>
+  <p>다음으로 <b>Return List</b> 옵션을 체크 / 체크 해제 할 수 있습니다. 이를 확인하면 조치가 <a href="../Data_Structures/Data_Structure_Actions.htm">목록을</a> 작성하고 채 웁니다. <i>모든</i> 인스턴스가 모양과 충돌하는 데이터 구조를 사용하고 <b>대상</b> 변수를 DS 목록 ID로 설정하십시오. 이 옵션을 선택하지 않으면 충돌이 감지되지 않거나 충돌에있는 인스턴스 <i>중 하나</i> 의 고유 ID 값만 <b>대상</b> 변수를 0보다 작은 값으로 설정합니다 (여러 인스턴스가 충돌하는 경우에는 목록을 사용하지 않을 때 어떤 인스턴스 ID가 반환되는지 알 수 있습니다.</p>
+  <p>목록을 반환하도록 선택하고 대상 변수가 <b>임시로</b> 설정 <i>되지 않은</i> 경우 <b>자유 대상</b> 옵션을 선택할 수도 있습니다. <tt>true로</tt> 설정되면, 대상 변수에 포함 된 목록이 삭제되고 조치를 호출 할 때마다 새 목록이 작성되고 대상 변수로 리턴됩니다. 이런 방식으로 메모리 누수에 대해 걱정하지 않고 동일한 변수를 재사용 할 수 있습니다. <b>자유 대상</b> 옵션을 선택하지 <i>않으면</i> 조치에서 변수를 다시 사용하기 전에 목록을 제거해야합니다. 이 옵션의 선택 여부에 <i>관계없이</i> 조치를 <b>Return List</b> 로 설정 한 경우 대상 변수는 <i>항상 목록 ID를 포함</i> 하므로 인스턴스가 손상되거나 인스턴스가 해제 될 때 해제되어야합니다. 룸 종료 (예 : <a href="../Data_Structures/Free_Data_Structure.htm">무료 데이터 구조</a> 와 함께 <b>클린업</b> 이벤트를 사용할 수 <a href="../Data_Structures/Free_Data_Structure.htm">있음)</a> 동작). 미리 정의 된 변수 또는 표현식을 사용하도록 <b>자유 대상</b> 옵션을 설정할 수 있으므로 변수를 다른 위치 (또는 표현식에 대해 다른 결과를 가짐)를 설정하여 목록 데이터 구조가 해제되는시기를 제어 할 수 있습니다. <tt>true</tt> / <tt>false로</tt> 평가됩니다.</p>
+  <p>마지막으로, 리턴 된 값 또는 목록 ID를 보유하려는 <b>대상</b> 변수를 제공하십시오. 당신이 인으로 반환 된 값 보유 할 대상 변수 플래그 경우 <b>온도</b> (로컬) 변수를, 다음 작업이 반환 값을 유지하기 위해이 변수를 만들 것입니다 <i>만</i> 이 경우에는 무료 대상 옵션은 아무것도하지 않고, 이벤트가 끝날 때까지 해당 옵션을 선택한 경우 DS 목록을 삭제해야합니다. 대상 변수가 제공되지 않고 <b>리턴 목록</b> 옵션이 선택된 경우 목록이 작성되지 않습니다.</p>
+  <p class="note"><b>중대한!</b> 충돌은 즉 유효한 충돌 마스크를 가지고 해당 인스턴스에 등록됩니다 그들은 <tt>sprite_index에</tt> 할당 된 스프라이트, 또는 <tt>mask_index에</tt> 할당 된 스프라이트가 있습니다. 이 작업에서 확인중인 객체의 인스턴스에 충돌 마스크가없는 경우 해당 시점에 인스턴스가 그린 내용에 관계없이 충돌이 감지되지 않습니다.</p>
+  <p>&quot; <span class="inline">if</span> &quot;블록에 액션을 추가하려면 아래 이미지와 같이 액션 <i>측면</i> 에 드롭해야합니다.</p>
   <p><img alt="If Collision Shape drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Shape.png"/></p>
   <p> </p>
-  <h4>Action Syntax:</h4>
+  <h4>동작 구문 :</h4>
   <p><img alt="If Collision Shape Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/a_Collision_Shape.png"/></p>
-  <h4>Arguments:</h4>
+  <h4>인수 :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>Shape</td>
-        <td>The shape to use</td>
+        <td>모양</td>
+        <td>사용할 모양</td>
       </tr>
       <tr>
-        <td>Object</td>
-        <td>The object to check for instances of</td>
+        <td>목적</td>
+        <td>인스턴스를 확인할 객체</td>
       </tr>
       <tr>
         <td>x1</td>
-        <td>The x position to start from</td>
+        <td>시작할 x 위치</td>
       </tr>
       <tr>
         <td>y1</td>
-        <td>The y position to start from</td>
+        <td>시작할 y 위치</td>
       </tr>
       <tr>
         <td>x2</td>
-        <td>The x position to end at</td>
+        <td>끝나는 x 위치</td>
       </tr>
       <tr>
         <td>y2</td>
-        <td>The y position to end at</td>
+        <td>끝나는 y 위치</td>
       </tr>
       <tr>
-        <td>Free Target</td>
-        <td>Can be set to a variable or expression, or set to <tt>true</tt>/<tt>false</tt> to control freeing of the list memory when re-using a list variable</td>
+        <td>무료 대상</td>
+        <td>목록 변수를 재사용 할 때 목록 메모리의 비우기를 제어하기 위해 변수 또는 표현식으로 설정하거나 <tt>true</tt> / <tt>false</tt> 로 설정할 수 있습니다.</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The variable to target for the return value of the action</td>
+        <td>표적</td>
+        <td>조치의 리턴 값을 대상으로하는 변수</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="If Collision Shape Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/e_Collision_Shape.png"/>The above action block code checks for a collision with any instances of the object &quot;
-    <span class="inline">obj_Enemy</span>&quot; within a 100px circle around the calling instances position. The action generates a list of all instances found to be in collision and stores the list ID in the Target variable. If the action evaluates to
-    <tt>true</tt> then the list is looped through and each instance with its ID stored in the list has its &quot;<span class="inline">hp</span>&quot; variable reduced by 1. The DS list is then freed.</p>
+  <h4>예:</h4>
+  <p><img alt="If Collision Shape Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/e_Collision_Shape.png"/>위의 액션 블록 코드는 호출 인스턴스 위치 주위의 100px 서클 내에서 &quot; <span class="inline">obj_Enemy</span> &quot;개체 인스턴스와의 충돌을 확인합니다. 이 작업은 충돌이 발생한 것으로 밝혀진 모든 인스턴스의 목록을 생성하고 목록 변수를 대상 변수에 저장합니다. 작업이 <tt>true</tt> 로 평가되면 목록이 반복되고 목록에 ID가 저장된 각 인스턴스의 &quot; <span class="inline">hp</span> &quot;변수가 1 씩 줄어 듭니다. 그런 다음 DS 목록이 해제됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Drag_And_Drop\Drag_And_Drop_Reference\Collisions\If_Collision_Shape.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collision_Actions.htm">Collision Actions</a></div>
-        <div style="float:right">Next: <a href="If_Collision_Point.htm">If Collision Point</a></div>
+        <div style="float:left">뒤로: <a href="Collision_Actions.htm">충돌 동작</a></div>
+        <div style="float:right">다음: <a href="If_Collision_Point.htm">충돌 지점 인 경우</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Action - If Collision Shape
@@ -172,4 +156,4 @@ Action - If Collision Shape
 action_if_collision_shape
 -->
 
-</body></html>
+</body></html> 

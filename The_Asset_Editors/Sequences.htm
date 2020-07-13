@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Sequences">
-        <span>Sequences</span>
+        <span>시퀀스</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,205 +80,157 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Sequences Editor</h1>
+  <h1>시퀀스 에디터</h1>
   <p><img alt="The Sequence Editor" src="../assets/Images/Asset_Editors/Editor_Sequences.png"/></p>
-  <p>A <strong>sequence </strong>is essentially a collection of assets that perform a dynamic animation over time. They can contain sprites, instances, sounds and other things, and each of these can be set to move or change colour, or start/stop animating
-    over time within the sequence itself. The assets you add are assigned to specific <strong>tracks </strong>within the sequence and these tracks can then have different attributes applied to them - called <strong>keyframes</strong> - which can be static
-    or change over time. All editing of a sequence takes place in the <strong>Sequence Editor</strong> which is essentially comprised of three areas:</p>
+  <p><strong>시퀀스</strong> 는 기본적으로 시간이 지남에 따라 동적 애니메이션을 수행하는 자산 모음입니다. 여기에는 스프라이트, 인스턴스, 사운드 및 기타 것들이 포함될 수 있으며, 각각은 색상 자체를 이동하거나 변경하거나 시퀀스 자체 내에서 시간이 지남에 따라 애니메이션을 시작 / 중지하도록 설정할 수 있습니다. 추가 한 에셋은 시퀀스 내의 특정 <strong>트랙에</strong> 할당되며 이러한 트랙에는 <strong>키 프레임</strong> 이라고하는 다른 속성이 적용되어 시간이 지남에 따라 정적이거나 변경 될 수 있습니다. 시퀀스의 모든 편집은 기본적으로 세 영역으로 구성된 <strong>시퀀스 편집기</strong> 에서 수행됩니다.</p>
   <ul class="colour">
-    <li>the <strong>Canvas </strong>- where you place the assets that make up the sequence</li>
-    <li>the <strong>Track Panel </strong>- where you add/remove <strong>asset tracks</strong> and <strong>parameter tracks</strong> to your sequence</li>
-    <li>the <strong>Dope Sheet</strong> - where you add/remove/edit the <strong>keyframes</strong> of the tracks and control how they behave over time.</li>
+    <li><strong>캔버스</strong> -시퀀스를 구성하는 자산을 배치하는 위치</li>
+    <li><strong>트랙 패널</strong> - <strong>자산 트랙</strong> 및 <strong>파라미터 트랙</strong> 을 시퀀스에 추가 / 제거하는 위치</li>
+    <li><strong>도프 시트</strong> -트랙의 <strong>키 프레임</strong> 을 추가 / 제거 / 편집하고 시간 경과에 따른 동작을 제어합니다.</li>
   </ul>
-  <p>Note too that you can have sequences within sequences to create complex animations and effects, and sequences can also be accessed and changed through code to give you as much control as possible over how they will be displayed and used in your game.
-    For more information on the coded aspect of sequences, please see the section on the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequences.htm">Sequences Functions</a>.</p>
-  <p>Before continuing to explain the details of the editor, we&#39;ll take a moment to explain how a sequence is created as well as some keywords that are used in the descriptions so you&#39;ll have a more thorough understanding of how the Sequences Editor
-    works. The general workflow for creating a sequence is as follows:</p>
+  <p>또한 복잡한 애니메이션과 효과를 만들기 위해 시퀀스 내에 시퀀스를 포함 할 수 있으며 코드를 통해 시퀀스에 액세스하고 변경하여 게임에서 표시 및 사용되는 방식을 가능한 한 많이 제어 할 수 있습니다. 시퀀스의 코딩 된 측면에 대한 자세한 내용은 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequences.htm">시퀀스 함수</a> 섹션을 참조하십시오.</p>
+  <p>편집기의 세부 사항을 계속 설명하기 전에 시퀀스 작성 방법 및 설명에 사용 된 일부 키워드를 설명하여 시퀀스 편집기의 작동 방식을보다 철저히 이해합니다. 시퀀스 생성을위한 일반적인 워크 플로우는 다음과 같습니다.</p>
   <ul class="colour">
-    <li>First you&#39;d create your sequence from the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>, which will open it the Sequences Editor.</li>
-    <li>Next you&#39;d drag an asset (sprite, object, sound or sequence) into the editor canvas.</li>
-    <li>This will create an <a class="tooltip" title="A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.">asset track</a> in the <strong>Track Panel</strong>, and add an <a class="tooltip" title="A position on the timeline in the dope sheet where an asset has been placed. An asset key can be made to last multiple frames.">asset key</a> to the <a class="tooltip" title="The Dope Sheet is the visual representation of the sequence timeline, and where you can add, remove and edit the different asset keys and parameter keys that affect how the different tracks in the sequence will behave over time.">Dope Sheet</a>. The asset track is simply the name of the track that contains the asset, while the asset key is a bar that is drawn to symbolise the number of frames that the asset will be animated over in the sequence.</li>
-    <li>At this point, you&#39;ll usually want to position the asset in the canvas at its initial position for the start of the sequence, and add in any initial transforms, like scale or rotation.</li>
-    <li>When you are happy with the initial settings, you will want to record the <strong>parameter keys</strong> (or <a class="tooltip" title="A keyframe (also called a parameter key) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">keyframe</a><span class="glossextra">s</span>) - which is simply the name given to
-      the values for scale, rotation and position that a specific asset key has at a any point in the dope sheet timeline.</li>
-    <li>Next you&#39;d change the position of the <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet, the Animation Curve editor or the Sprite editor. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> (the current play position in the dope sheet timeline) and then move or change the asset transforms and record another parameter key.</li>
-    <li>All parameter keys are stored in additional <a class="tooltip" title="A track that has been assigned to an asset track in the track panel and that changes a single parameter for the asset track it&#39;s linked to, like the position, or the image index.">parameter tracks</a> which are a subset of tracks under the main asset track in the Track Panel, and you can edit the parameter key data for
-      each parameter in the track editor.</li>
-    <li>Now you would repeat the above process for the length of the sequence, moving, rotating and scaling the asset as required, and then adding more assets as you need them.</li>
+    <li>먼저 <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> 에서 시퀀스를 생성하면 Sequences Editor가 열립니다.</li>
+    <li>다음으로 에셋 (스프라이트, 오브젝트, 사운드 또는 시퀀스)을 에디터 캔버스로 드래그합니다.</li>
+    <li>그러면 <strong>트랙 패널</strong> 에 <a class="tooltip" title="단일 트랙, 스프라이트, 사운드, 인스턴스 또는 시퀀스를 보유하는 시퀀스 트랙 패널의 트랙.">자산 트랙</a> 이 생성되고 <a class="tooltip" title="도프 시트는 시퀀스 타임 라인을 시각적으로 표현한 것으로 시퀀스의 다른 트랙이 시간이 지남에 따라 작동하는 방식에 영향을주는 다양한 자산 키 및 매개 변수 키를 추가, 제거 및 편집 할 수 있습니다.">Dope Sheet에</a> <a class="tooltip" title="자산이 배치 된 도프 시트에서 타임 라인의 위치입니다. 여러 키를 지속하기 위해 자산 키를 만들 수 있습니다.">자산 키</a> 가 추가됩니다. 자산 트랙은 단순히 자산을 포함하는 트랙의 이름이며 자산 키는 자산이 시퀀스에서 애니메이션 될 프레임 수를 상징하기 위해 그려진 막대입니다.</li>
+    <li>이 시점에서 일반적으로 시퀀스의 시작을 위해 캔버스에 자산을 초기 위치에 배치하고 스케일 또는 회전과 같은 초기 변환을 추가하려고합니다.</li>
+    <li>초기 설정에 만족하면 <strong>매개 변수 키</strong> (또는 <a class="tooltip" title="키 프레임 (파라미터 키라고도 함)은 도프 시트의 타임 라인에서 매개 변수 값의 변경이 정의 된 지점입니다.">키 프레임</a> <span class="glossextra">s</span> )를 기록하려고합니다. 이는 단순히 특정 자산 키의 특정 지점에있는 스케일, 회전 및 위치 값에 주어진 이름입니다. 도프 시트 타임 라인.</li>
+    <li>다음으로 <a class="tooltip" title="시퀀스 도프 시트, 애니메이션 커브 편집기 또는 스프라이트 편집기의 타임 라인 내 현재 &#39;재생&#39;위치. 시퀀스 (및 스프라이트)에서는 애니메이션을 미리 볼 때 이동하며 특정 프레임에 배치하여 해당 위치에서 키와 키 프레임을보고 편집 할 수 있습니다.">재생 헤드</a> 의 위치 (도프 시트 타임 라인의 현재 재생 위치)를 변경 한 다음 자산 변환을 이동 또는 변경하고 다른 매개 변수 키를 기록합니다.</li>
+    <li>모든 파라미터 키는 트랙 패널의 기본 자산 트랙 아래 트랙의 하위 세트 인 추가 <a class="tooltip" title="트랙 패널에서 자산 트랙에 할당되고 위치 또는 이미지 색인과 같이 링크 된 자산 트랙의 단일 매개 변수를 변경하는 트랙.">파라미터 트랙에</a> 저장되며 트랙 편집기에서 각 파라미터의 파라미터 키 데이터를 편집 할 수 있습니다.</li>
+    <li>이제 시퀀스 길이, 필요에 따라 자산을 이동, 회전 및 스케일링 한 다음 필요에 따라 더 많은 자산을 추가하기 위해 위의 과정을 반복합니다.</li>
   </ul>
-  <p>Below you can find an overview of each of the features of the sequence editor, and at the bottom of this page are links to pages that explain the three main features mentioned above in more depth:</p>
+  <p>아래에서 시퀀스 편집기의 각 기능에 대한 개요를 확인할 수 있으며이 페이지의 맨 아래에는 위에서 언급 한 세 가지 주요 기능을 자세히 설명하는 페이지에 대한 링크가 있습니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Rulers / Guides</span><span data-close-text="true">Rulers / Guides</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">통치자 / 가이드</span> <span data-close-text="true">통치자 / 가이드</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The rulers along the edge of the canvas show you the position of the things that are placed within it, and are marked from (0, 0) which is the center of the canvas and the default origin for the sequence. You can click and drag on the rulers to pull
-      a horizontal or vertical <strong>guide </strong>into the sequence, and this guide can then be used to accurately position the different assets that are being used, as moving an asset close to one will &quot;snap&quot; it to the guide. While positioning
-      assets within the sequence, <strong>smart guides</strong> will also be temporarily shown indicating the distance between assets, as well as the distance from the sequence boundary or center point.</p>
-    <p class="dropspot"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png"/>Note that the boundary of the sequence and the center point marker lines for the sequence are also considered
-      guides and will behave the same way as guides added from the rulers, with the exception that they cannot be edited.</p>
-    <p class="dropspot">The distance that assets &quot;snap&quot; to guides, as well as other properties, can be set in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">Sequences Preferences</a>.</p>
+    <p class="dropspot">캔버스의 가장자리를 따라있는 눈금자는 캔버스 안에 놓인 사물의 위치를 ​​보여 주며 캔버스의 중심이되는 (0, 0)과 시퀀스의 기본 원점으로 표시됩니다. 눈금자를 클릭하고 드래그하여 가로 또는 세로 <strong>안내선</strong> 을 시퀀스로 가져 오면이 안내선을 사용하여 사용중인 여러 자산을 정확하게 배치 할 수 있습니다. 가이드. 시퀀스 내에서 자산을 배치하는 동안 시퀀스 간 경계 또는 중심점으로부터의 거리뿐만 아니라 자산 간의 거리를 나타내는 <strong>스마트 안내 선도</strong> 일시적으로 표시됩니다.</p>
+    <p class="dropspot"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png"/>시퀀스의 경계와 시퀀스의 중심점 마커 선은 안내선으로 간주되며 편집 할 수 없다는 점을 제외하고 눈금자에서 추가 한 안내 선과 동일한 방식으로 작동합니다.</p>
+    <p class="dropspot">자산이 안내선에 &quot;스냅&quot;되는 거리와 다른 속성은 <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">시퀀스 환경</a> 설정에서 설정할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Canvas View</span><span data-close-text="true">Canvas View</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">캔버스보기</span> <span data-close-text="true">캔버스보기</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The canvas view is where you can see a preview of the sequence canvas, and is where you can edit and position the different assets that make up your sequence. You can add an asset to the sequence by simply dragging it from the asset browser and then
-      dropping it into the canvas, and this will create a new track in the Track Panel, and also add an asset key for the asset at the current timeline playhead position. The following assets can be dropped onto the canvas in this way:</p>
+    <p class="dropspot">캔버스보기는 시퀀스 캔버스의 미리보기를 볼 수있는 곳이며 시퀀스를 구성하는 다른 자산을 편집하고 배치 할 수있는 곳입니다. 자산 브라우저에서 자산을 드래그하여 캔버스에 놓기 만하면 시퀀스에 자산을 추가 할 수 있으며, 이렇게하면 트랙 패널에 새 트랙이 생성되고 현재 타임 라인 재생 헤드에서 자산의 자산 키가 추가됩니다 위치. 이런 식으로 다음 자산을 캔버스에 놓을 수 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot">Sprites</li>
-      <li class="dropspot">Objects</li>
-      <li class="dropspot">Sounds</li>
-      <li class="dropspot">Sequences</li>
+      <li class="dropspot">스프라이트</li>
+      <li class="dropspot">사물</li>
+      <li class="dropspot">소리</li>
+      <li class="dropspot">시퀀스</li>
     </ul>
-    <p class="dropspot">Each asset added to the canvas can be manipulated in multiple ways - rotated, transformed, or translated - based on how you interact with it, as each asset will have a <strong>bounding box</strong> and <strong>transform <a class="tooltip" title="Gizmo are directly manipulable, self contained, visual screen idioms - essentially anything that is visual and can be interacted with or manpulated by the user to generate an effect or a specific result. ">gizmos</a></strong>      as well as <strong>bounding box controls</strong>. All this is explained in more detail on the page about the <a href="Sequence_Properties/The_Sequence_Canvas.htm">Sequence Editor Canvas</a>.</p>
-    <p class="note"><strong>NOTE</strong>: Sound assets when added to a sequence are essentially sound <strong>emitters </strong>that play only the given sound resource.</p>
-    <p class="dropspot">To navigate around the canvas view, you can use the same basic controls as for general Workspaces, ie: Use the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/> and drag to pan the canvas (or alternatively
-      use the <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> combination), and you can scroll horizontally with the
-      mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/> or zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> key and the mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/>. You can also cut, copy and paste assets using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">X</span>&quot;, <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">C</span>&quot; and <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">V</span>&quot; key combinations.</p>
+    <p class="dropspot">캔버스에 추가 된 각 자산은 상호 작용 방식에 따라 회전, 변환 또는 변환과 같은 여러 가지 방식으로 조작 할 수 있습니다. 각 자산에는 <strong>경계 상자가</strong> 있고 <strong><a class="tooltip" title="기즈모는 직접 조작 가능하고 자체 포함 된 시각적 화면 관용구입니다. 본질적으로 시각적이며 사용자와 상호 작용하거나 조작하여 효과 또는 특정 결과를 생성 할 수있는 모든 것입니다.">기즈모</a></strong> 및 <strong>경계 상자 컨트롤이</strong> <strong>변환</strong> 되기 때문입니다. 이 모든 것이 <a href="Sequence_Properties/The_Sequence_Canvas.htm">Sequence Editor Canvas</a> 에 관한 페이지에서 더 자세히 설명됩니다.</p>
+    <p class="note"><strong>참고</strong> : 시퀀스에 추가 될 때 사운드 자산은 본질적으로 주어진 사운드 리소스 만 재생하는 사운드 <strong>이미 터</strong> 입니다.</p>
+    <p class="dropspot">To navigate around the canvas view, you can use the same basic controls as for general Workspaces, ie: Use the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/>드래그하여 캔버스를 이동 (또는 + 마우스 휠로 가로로 스크롤 할 수 있습니다. 또는를 사용하여 확대 및 축소 / 키와 마우스 휠 . 다음을 사용하여 자산을 잘라 내고 복사하여 붙여 넣을 수도 있습니다. / + &quot; <span class="inline">X</span> &quot;, / + &quot; <span class="inline">C</span> &quot;및 / + &quot; <span class="inline">V</span> &quot;키 조합.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Broadcast Message</span><span data-close-text="true">Broadcast Message</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">방송 메시지</span> <span data-close-text="true">방송 메시지</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">This button will add a <strong>broadcast message</strong> to the sequence timeline in the <strong>dope sheet</strong>, opening a dialog where you can add the message to be broadcast. The message will be added wherever the timeline playhead is in the
-      dope sheet and consists of a simple string that can be picked up in the <a href="Object_Properties/Async_Events.htm">Asynchronous System Event</a> when it is triggered and then acted on.</p>
-    <p class="dropspot"><img alt="Add A broadcast message to a sequence" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Broadcast.gif"/>Once added, the message will be shown in the Dope Sheet, and you can click the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on it to open a menu where you can delete the message or edit it. For more information on Broadcast Messages please see <a href="Sequence_Properties/Broadcast_Messages.htm">here</a>.</p>
+    <p class="dropspot">이 버튼은 <strong>도프 시트</strong> 의 시퀀스 타임 라인에 <strong>브로드 캐스트 메시지</strong> 를 추가하여 <strong>브로드 캐스트 할 메시지</strong> 를 추가 할 수있는 대화 상자를 엽니 다. 메시지는 타임 라인 재생 헤드가 도프 시트에있는 모든 위치에 추가되며 <a href="Object_Properties/Async_Events.htm">비동기 시스템 이벤트에서</a> 트리거 된 후 작동 될 때 선택할 수있는 간단한 문자열로 구성됩니다.</p>
+    <p class="dropspot"><img alt="Add A broadcast message to a sequence" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Broadcast.gif"/>추가되면 메시지가 Dope Sheet에 표시되며 마우스 오른쪽 버튼을 클릭 할 수 있습니다 메시지를 삭제하거나 편집 할 수있는 메뉴를 엽니 다. 브로드 캐스트 메시지에 대한 자세한 내용은 <a href="Sequence_Properties/Broadcast_Messages.htm">여기</a> 를 참조 <a href="Sequence_Properties/Broadcast_Messages.htm">하십시오</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Keyframe Control</span><span data-close-text="true">Keyframe Control</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">키 프레임 제어</span> <span data-close-text="true">키 프레임 제어</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The keyframe control buttons are one of the ways that you can add, remove or edit specific keys in the dope sheet. The buttons are as follows:</p>
+    <p class="dropspot">키 프레임 제어 버튼은 도프 시트에서 특정 키를 추가, 제거 또는 편집 할 수있는 방법 중 하나입니다. 버튼은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img alt="Split Keys Icon" src="../assets/Images/Icons/Icon_Seq_Split.png"/> - This is the &quot;Split selected keys&quot; button. When you have selected one or more parameter keys in the dope sheet, you can then click this button and they will
-        be split into two separate keys at the timeline playhead position:<br/>
-        <img alt="Split Asset and Parameter Keys" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Split.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
-      <li class="dropspot"><img alt="Delete Keys Icon" src="../assets/Images/Icons/Icon_Seq_Delete.png"/> - This is the &quot;Delete selected keys&quot; button. When you have selected one or more parameter keys in the dope sheet, you can then click this button and they will
-        be deleted:<br/>
-        <img alt="Delete Parameter Keys" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Delete.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
-      <li class="dropspot"><img alt="Add Keys Icon" src="../assets/Images/Icons/Icon_Seq_Add.png"/> - This is the &quot;Record a new key&quot; button. When you have selected an asset key in the dope sheet and press this button, new parameter keys will be added to the asset
-        track as parameter tracks, and the parameter keys will be added as points in the dope sheet timeline at the playhead position:<br/>
-        <img alt="Add Parameter Keys At Playhead Position" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Record.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
-      <li class="dropspot"><img alt="Record Keys Icon" src="../assets/Images/Icons/Icon_Seq_Record.png"/> - This is the &quot;Automatically Record Changes&quot; button. When this is enabled, any changes made to the asset within the canvas will be automatically recorded and
-        the appropriate parameter tracks and parameter keys added at the playhead position in the dope sheet. For example, if you move the playhead from frame 0 to frame 10 and then in the canvas move the asset 100 pixels to the right, a parameter track
-        will be added for position, and the parameter keys will be added at frame 0 (the initial position) and at frame 10 (the playhead position) and when you press &quot;Play&quot; on the sequence, the asset will move 100px to the right over ten frames.<br/>
-        <img alt="Automatically Record Parameter Keys" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Auto.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
+      <li class="dropspot">- &quot;선택 키 분리&quot;버튼입니다. 도프 시트에서 하나 이상의 매개 변수 키를 선택한 경우이 단추를 클릭하면 타임 라인 재생 헤드 위치에서 두 개의 개별 키로 분할됩니다.</li>
+      <li class="dropspot">- &quot;선택된 키 삭제&quot;버튼입니다. 도프 시트에서 하나 이상의 매개 변수 키를 선택한 경우이 단추를 클릭하면 해당 키가 삭제됩니다.</li>
+      <li class="dropspot">- &quot;새 키 기록&quot;버튼입니다. 도프 시트에서 자산 키를 선택하고이 버튼을 누르면, 새로운 파라미터 키가 자산 트랙에 파라미터 트랙으로 추가되고, 파라미터 키가 재생 헤드 위치에서 도프 시트 타임 라인의 포인트로 추가됩니다.</li>
+      <li class="dropspot">- &quot;자동으로 변경 사항 기록&quot;버튼입니다. 이 기능을 활성화하면 캔버스 내 자산에 대한 변경 사항이 자동으로 기록되고 해당 매개 변수 트랙 및 매개 변수 키가 도프 시트의 재생 헤드 위치에 추가됩니다. 예를 들어 재생 헤드를 프레임 0에서 프레임 10으로 이동 한 다음 캔버스에서 자산을 100 픽셀 오른쪽으로 이동하면 위치에 매개 변수 트랙이 추가되고 매개 변수 키가 프레임 0에 추가됩니다 (초기) 위치) 및 프레임 10 (재생 헤드 위치)에서 시퀀스에서 &quot;재생&quot;을 누르면 자산이 10 프레임 이상 오른쪽으로 100 픽셀 이동합니다.</li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Sequence Events</span><span data-close-text="true">Sequence Events</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">시퀀스 이벤트</span> <span data-close-text="true">시퀀스 이벤트</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">In a similar way to regular objects, sequences can have events that can run some code assigned to them. The code is assigned in the form of a <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">scripted function</a> which can take no
-      arguments and will be called when the event is triggered.</p>
-    <p class="dropspot">Events are added by clicking the <strong>Add Event</strong> button <img alt="Add Event Icon" src="../assets/Images/Icons/Icon_AddEvent.png"/> which will open the following window:</p>
+    <p class="dropspot">일반 객체와 비슷한 방식으로 시퀀스에는 할당 된 일부 코드를 실행할 수있는 이벤트가있을 수 있습니다. 코드는 <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">스크립트 함수</a> 형태로 지정되며 인수를 취할 수 없으며 이벤트가 트리거 될 때 호출됩니다.</p>
+    <p class="dropspot">Events are added by clicking the <strong>Add Event</strong> button <img alt="Add Event Icon" src="../assets/Images/Icons/Icon_AddEvent.png"/>다음 창이 열립니다.</p>
     <p class="dropspot"><img alt="Sequence Editor Add Event Window" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Events.png"/></p>
-    <p class="dropspot">The events listed here are as follows:</p>
+    <p class="dropspot">여기에 나열된 이벤트는 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Create </strong>- This event happens when an instance of the sequence is first created, and is the very first thing that happens within a sequence placed in the room through the room editor when a room is entered.</li>
-      <li class="dropspot"><strong>Destroy </strong>- This event is executed when an instance of the sequence is destroyed, and will be run before the Clean Up event (see below).</li>
-      <li class="dropspot"><strong>Clean Up</strong> - This event will be called after any event that removes an instance of the sequence from the room. So, it will be triggered if the sequence is destroyed, if the room ends, or if the game ends, and is designed to perform
-        any task that you need performed once when the sequence instance is removed from the game for any reason. If you have destroyed the sequence instance using, for example, layer_sequence_destroy(), then this event will be called after the Destroy
-        Event (see above).</li>
-      <li class="dropspot"><strong>Begin Step</strong> / <strong>Step </strong>/ <strong>End Step</strong> - The Step Event is an event that is checked every single step (frame) of the game while the sequence instance exists, and is split into three parts: begin, step and
-        end. For most things the standard step event will be fine to use, but sometimes you want a bit more control over what code runs and at what time, so for that you are provided with the Begin and End step events, and these events will always be
-        triggered in the same order every step (frame) of the game. <strong>Important!</strong> If the sequence is paused then these events will <em>not </em>be triggered, and when play resumes they will be triggered the <em>next frame after the sequence starts playing again</em>.
-        Also note that the order of events is not influenced by the playhead direction, and even if the sequence is playing backwards, the events will still be run as Begin, Step and End.</li>
-      <li class="dropspot"><strong>Async Event</strong>: This is the equivalent of the object <a href="Object_Properties/Async_Events.htm">Asynchronous System Event</a>. <strong>Important!</strong> If the sequence is paused then this event will <em>not </em>be triggered.</li>
+      <li class="dropspot"><strong>생성</strong> -이 이벤트는 시퀀스 인스턴스가 처음 생성 될 때 발생하며, 룸에 들어갈 때 룸 편집기를 통해 룸에 배치 된 시퀀스 내에서 가장 먼저 발생합니다.</li>
+      <li class="dropspot"><strong>Destroy-</strong> 이 이벤트는 시퀀스의 인스턴스가 파괴 될 때 실행되며 정리 이벤트 전에 실행됩니다 (아래 참조).</li>
+      <li class="dropspot"><strong>정리</strong> -이 이벤트는 회의실에서 시퀀스 인스턴스를 제거하는 모든 이벤트 후에 호출됩니다. 따라서 시퀀스가 ​​파괴되거나 방이 종료되거나 게임이 종료되면 트리거되며 시퀀스 인스턴스가 게임에서 제거 될 때 한 번 수행 해야하는 작업을 수행하도록 설계되었습니다. 예를 들어 layer_sequence_destroy ()를 사용하여 시퀀스 인스턴스를 삭제 한 경우이 이벤트는 Destroy Event (위 참조) 후에 호출됩니다.</li>
+      <li class="dropspot"><strong>Begin Step</strong> / <strong>Step</strong> / <strong>End Step-</strong> 단계 이벤트는 시퀀스 인스턴스가 존재하는 동안 게임의 모든 단계 (프레임)마다 확인되는 이벤트이며 시작, 단계 및 종료의 세 부분으로 나뉩니다. 대부분의 경우 표준 단계 이벤트를 사용하는 것이 좋지만 때로는 코드 실행 및 시간을 조금 더 제어하여 Begin 및 End 단계 이벤트가 제공되므로 이러한 이벤트는 항상 게임의 모든 단계 (프레임)마다 동일한 순서로 트리거됩니다. <strong>중대한!</strong> 시퀀스가 일시 정지되면이 이벤트는 트리거 <em>되지 않으며</em> <em>재생이 다시 시작되면 시퀀스가 ​​다시 재생을 시작한 후 다음 프레임</em> 이 트리거 <em>됩니다</em> . 또한 이벤트 순서는 재생 헤드 방향의 영향을받지 않으며 시퀀스가 ​​뒤로 재생 되더라도 이벤트는 여전히 시작, 단계 및 종료로 실행됩니다.</li>
+      <li class="dropspot"><strong>비동기 이벤트</strong> : 이것은 <a href="Object_Properties/Async_Events.htm">비동기 시스템 이벤트</a> 객체와 동일합니다. <strong>중대한!</strong> 시퀀스가 일시 중지되면이 이벤트는 트리거 <em>되지 않습니다</em> .</li>
     </ul>
-    <p class="dropspot">Each event can be assigned a single function which will be called when the event is triggered. You can assign the function using the input box for the vent, and clicking the arrow button  will open the script editor for the function to be edited.
-      You can also click the Create New button at the bottom to create a new script resource with &quot;boilerplate&quot; functions already defined and ready to be filled in. Note that you can change the function names to anything you require and do not
-      have to use the predefined names, and you can also remove any function definitions that you don&#39;t need. It is important note that functions used for sequence events cannot take any arguments.</p>
-    <p class="dropspot">Sequence events can also be added and edited using code. For more information please see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">here</a>.</p>
+    <p class="dropspot">각 이벤트에는 이벤트가 트리거 될 때 호출되는 단일 기능이 할당 될 수 있습니다. 통풍구의 입력 상자를 사용하여 기능을 할당 할 수 있으며 화살표 버튼을 클릭하면 편집 할 기능에 대한 스크립트 편집기가 열립니다. 하단에있는 새로 만들기 버튼을 클릭하여 &quot;boilerplate&quot;함수가 이미 정의되어 있고 채워질 준비가 된 새 스크립트 리소스를 만들 수 있습니다. 함수 이름을 필요에 따라 변경할 필요가 없습니다. 사전 정의 된 이름으로, 필요하지 않은 함수 정의를 제거 할 수도 있습니다. 시퀀스 이벤트에 사용되는 함수는 인수를 사용할 수 없습니다.</p>
+    <p class="dropspot">코드를 사용하여 시퀀스 이벤트를 추가하고 편집 할 수도 있습니다. 자세한 내용은 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">여기</a> 를 참조 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">하십시오</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Sequence Moments</span><span data-close-text="true">Sequence Moments</span></a> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">시퀀스 순간</span> <span data-close-text="true">시퀀스 순간</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">A sequence <strong>moment </strong>is a position on the timeline where the sequence can call a function. This is a <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">scripted function</a> that must have no parameters and when the moment
-      (frame) given on the timeline is reached, this function will be called. To set a moment, you simply move the playhead to the required position and then click the <strong>Add Moment</strong> button, and in the dialog that opens you give the name
-      of the function to call.</p>
-    <p class="dropspot"><img alt="Add A Moment To The Sequence" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_AddMoment.gif"/>When adding a moment function, you can click the <img alt="Go To Function Icon" class="icon" src="../assets/Images/Icons/Icon_GoTo_Function.png"/> button to go to the script with the specified function, or you can click the <img alt="New Moment Function Icon" class="icon" src="../assets/Images/Icons/Icon_NewMomentFunction.png"/> button to create a new script resource with an empty function
-      ready for editing. You can also remove moment and the function call it contains by clicking the <img alt="Remove Moment Icon" class="icon" src="../assets/Images/Icons/Icon_RemoveMoment.png"/> button.</p>
-    <p class="dropspot">Sequence moments can also be added and edited using code. For more information please see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">here</a>.</p>
+    <p class="dropspot">시퀀스 <strong>모멘트</strong> 는 시퀀스가 ​​함수를 호출 할 수있는 타임 라인의 위치입니다. 이것은 매개 변수가 없어야하는 <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">스크립트 함수</a> 이며 타임 라인에 지정된 모멘트 (프레임)에 도달하면이 함수가 호출됩니다. 순간을 설정하려면 재생 헤드를 필요한 위치로 이동 한 다음 <strong>순간 추가</strong> 단추를 클릭하고 열리는 대화 상자에서 호출 할 함수의 이름을 지정하십시오.</p>
+    <p class="dropspot"><img alt="Add A Moment To The Sequence" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_AddMoment.gif"/>모멘트 기능을 추가 할 때 버튼을 사용하여 지정된 기능이있는 스크립트로 이동하거나 버튼을 누르면 편집 할 수있는 빈 기능이있는 새 스크립트 리소스가 만들어집니다. 를 클릭하여 모멘트 및 함수 호출을 제거 할 수도 있습니다. 단추.</p>
+    <p class="dropspot">코드를 사용하여 시퀀스 모멘트를 추가하고 편집 할 수도 있습니다. 자세한 내용은 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">여기</a> 를 참조 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">하십시오</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Track Panel</span><span data-close-text="true">Track Panel</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">트랙 패널</span> <span data-close-text="true">트랙 패널</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The <strong>Track Panel</strong> is where each of the assets in your sequence is listed as a track, with each track having sub-tracks for any parameters that are being changed for the asset. You can click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> and drag on any asset track to change it&#39;s position above or below the other tracks (any assigned parameter tracks will move along with it), and you can use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> to select multiple tracks.</p>
-    <p class="dropspot">You can create a track by dragging an asset from the Asset Browser (either a sprite, an object, a sound or a sequence) into the sequence canvas, or you can click the <img alt="Add Track Icon" class="icon" src="../assets/Images/Icons/Icon_AddAsset.png"/> icon at the bottom to add a new track and select the asset to use from the Asset Explorer window that opens. The new track will be created and the asset added at the current playhead position within the dope sheet timeline:</p>
-    <p class="dropspot"><img alt="Add A New Asset Track" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_AddTrack.gif"/>The track editor has many other features that are discussed in full detail on the following page:</p>
+    <p class="dropspot">The <strong>Track Panel</strong> is where each of the assets in your sequence is listed as a track, with each track having sub-tracks for any parameters that are being changed for the asset. You can click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/>애셋 트랙을 드래그하여 다른 트랙의 위 또는 아래 위치를 변경하면 (할당 된 모든 매개 변수 트랙도 함께 이동) / + 여러 트랙을 선택합니다.</p>
+    <p class="dropspot">You can create a track by dragging an asset from the Asset Browser (either a sprite, an object, a sound or a sequence) into the sequence canvas, or you can click the <img alt="Add Track Icon" class="icon" src="../assets/Images/Icons/Icon_AddAsset.png"/>아이콘을 하단에 추가하여 새 트랙을 추가하고 열리는 자산 탐색기 창에서 사용할 자산을 선택하십시오. 새로운 트랙이 생성되고 자산이 도프 시트 타임 라인 내의 현재 재생 헤드 위치에 추가됩니다.</p>
+    <p class="dropspot"><img alt="Add A New Asset Track" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_AddTrack.gif"/>트랙 편집기에는 다음 페이지에서 자세히 설명하는 다른 많은 기능이 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Sequence_Properties/The_Track_Panel.htm">The Track Panel</a></li>
+      <li class="dropspot"><a href="Sequence_Properties/The_Track_Panel.htm">트랙 패널</a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Toolbox</span><span data-close-text="true">Toolbox</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">도구</span> <span data-close-text="true">상자</span> <span data-open-text="true">도구</span> <span data-close-text="true">상자</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">The Sequence Editor toolbox contains the different visualisation and setup options for the sequence being edited.</p>
+    <p class="dropspot">시퀀스 편집기 도구 상자에는 편집중인 시퀀스에 대한 다양한 시각화 및 설정 옵션이 포함되어 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Toggle Canvas Grid</strong> <img alt="Toggle Canvas Grid Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasGrid.png"/>: This will toggle on/off the Sequence Editor canvas grid. This is a grid that GameMaker Studio 2 draws over the
-        preview canvas to divide it into sections, and by default is set to 32x32px in size. However if you click the Grid Menu icon <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10"/> you
-        will open the grid options:<br/>
-        <img alt="Sequence Editor Grid Options" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_GridControls.png"/>These options permit you to set the grid colour and alpha, as well as the cell values for the grid along the X and
-        Y axis. You also have an option to enable or disable grid snapping here (disabled by default). You can use the keyboard shortcuts &quot;G&quot; and <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55"/> + &quot;G&quot; to toggle the grid visibility and grid snapping respectively.</li>
-      <li class="dropspot"><strong>Canvas Zoom Controls</strong> <img alt="Canvas Zoom Controls Icons" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasZoom.png" width="120"/>: These buttons control the current canvas zoom level. You can zoom in or out and
-        clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png"/> button will reset the canvas to be 1:1 with the sequence being edited. You can also click the Window Fit button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png"/> to make the entire sequence canvas fit within the current editor workspace (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out using the
-        <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/>, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55"/> will set the canvas to be 1:1 with the display.</li>
-      <li class="dropspot"><strong>Toggle Gizmos</strong> <img alt="Toggle Gizmos Icon" class="icon" src="../assets/Images/Icons/Icon_ToggleGizmos.png"/>: Clicking this will enable or disable the different <a class="tooltip" title="Gizmo are directly manipulable, self contained, visual screen idioms - essentially anything that is visual and can be interacted with or manpulated by the user to generate an effect or a specific result. ">gizmos</a>        visible in the canvas. When enabled you will see all the gizmos associated with the different assets and the canvas itself, and when disabled these will not be shown, giving a clearer view of how the sequence looks. Note that this is enabled by
-        default, and there is a menu available from the right options button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> where you can filter what is visible without having to disable all the different
-        widgets together. A complete list of these filter options and an explanation of what they do can be found <a href="Sequence_Properties/The_Sequence_Canvas.htm">here</a>.</li>
-      <li class="dropspot">T<strong>oggle Transform Gizmo Mode</strong> <img alt="Transform Gizmo Icon" class="icon" src="../assets/Images/Icons/Icon_TransformWidget.png"/>: Each asset added to a sequence has a transform gizmo at its origin:<br/>
-        <img alt="The transform widget for an asset" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_TransformWidget.gif"/>This gizmo can control how the asset is scaled or rotated, as well as control its position and the position
-        of the origin of the asset, however it only shows one of these options at a time. Clicking this button will switch between the different widget types or you can click on the options menu <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10"/> to directly select the type of control action you want the transform gizmo to perform.</li>
-      <li class="dropspot"><strong>Toggle Canvas Frame</strong> <img alt="Toggle Canvas Frame Icon" class="icon" src="../assets/Images/Icons/Icon_ToggleCanvas.png"/>: This button can be used to toggle the canvas frame on or off (it is on by default). The canvas frame is
-        simply a guide that is used to judge where elements are placed in sequence canvas and any elements outside of the frame will not be rendered. This button also has the following options menu <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10"/>:<br/>
-        <img alt="Sequence Editor Canvas Options" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_CanvasControls.png"/>Here you can set the canvas frame toggle as well as the size of the canvas. You also have the possibility of setting
-        a <strong>reference image</strong>, which is an image that you select from your computer (it is not imported into the project) to be used as a background reference for the sequence. This image is only visible in the Sequence Editor itself and
-        will not be rendered when the sequence is used in a project. If you add a reference image you can also set the opacity that it&#39;s drawn at and offset its position within the canvas frame.</li>
+      <li class="dropspot"><strong>캔버스 그리드 전환</strong> : 시퀀스 에디터 캔버스 그리드를 켜거나 끕니다. 이것은 GameMaker Studio 2가 미리보기 캔버스 위에 그려 그리드를 섹션으로 나누는 그리드이며 기본적으로 크기는 32x32px입니다. 그러나 그리드 메뉴 아이콘을 클릭하면 그리드 옵션을 엽니 다 : 이 옵션을 사용하면 X 및 Y 축을 따라 그리드의 셀 값뿐만 아니라 그리드 색상 및 알파를 설정할 수 있습니다. 그리드 스냅을 활성화 또는 비활성화하는 옵션도 있습니다 (기본적으로 비활성화되어 있음). 바로 가기 키 &quot;G&quot;를 사용할 수 있습니다. + &quot;G&quot;는 그리드 가시성과 그리드 스냅을 각각 토글합니다.</li>
+      <li class="dropspot"><strong>캔버스 줌 컨트롤</strong> :이 버튼은 현재 캔버스 줌 레벨을 제어합니다. 확대 또는 축소하고 버튼을 누르면 시퀀스가 ​​편집되는 캔버스가 1 : 1로 재설정됩니다. 창 맞춤 버튼을 클릭해도됩니다 전체 시퀀스 캔버스를 현재 편집기 작업 공간에 맞 춥니 다 (적절하게 확대 / 축소합니다). 을 사용하여 확대 및 축소 할 수도 있습니다. / 그리고 마우스 휠 을 누르고 / + 디스플레이에서 캔버스를 1 : 1로 설정합니다.</li>
+      <li class="dropspot"><strong>기즈모 전환</strong> :이 버튼을 클릭하면 캔버스에 보이는 다른 <a class="tooltip" title="기즈모는 직접 조작 가능하고 자체 포함 된 시각적 화면 관용구입니다. 본질적으로 시각적이며 사용자와 상호 작용하거나 조작하여 효과 또는 특정 결과를 생성 할 수있는 모든 것입니다.">기즈모</a> 가 활성화 또는 비활성화됩니다. 활성화하면 다른 자산 및 캔버스 자체와 관련된 모든 기즈모를 볼 수 있으며 비활성화하면 시퀀스가 ​​어떻게 보이는지 더 명확하게 볼 수 있습니다. 이 기능은 기본적으로 활성화되어 있으며 오른쪽 옵션 버튼에서 사용할 수있는 메뉴가 있습니다 다른 모든 위젯을 함께 비활성화하지 않고도 보이는 것을 필터링 할 수 있습니다. 이러한 필터 옵션의 전체 목록과 해당 기능에 대한 설명은 <a href="Sequence_Properties/The_Sequence_Canvas.htm">여기를 참조하십시오</a> .</li>
+      <li class="dropspot"><strong>Toggle 변형 기즈모 모드</strong> : 시퀀스에 추가 된 각 자산에는 원본에 변형 기즈모가 있습니다. 이 기즈모는 자산의 크기 및 회전 방법을 제어 할 수있을뿐만 아니라 자산의 위치 및 원점 위치를 제어 할 수 있지만 한 번에 이러한 옵션 중 하나만 표시합니다. 이 버튼을 클릭하면 다른 위젯 유형간에 전환되거나 옵션 메뉴를 클릭 할 수 있습니다 변환 기즈모가 수행 할 제어 작업 유형을 직접 선택합니다.</li>
+      <li class="dropspot"><strong>캔버스 프레임 토글</strong> :이 버튼을 사용하여 캔버스 프레임을 켜거나 끌 수 있습니다 (기본적으로 켜져 있음). 캔버스 프레임은 단순히 요소가 시퀀스 캔버스에 배치되는 위치를 판단하는 데 사용되는 안내서이며 프레임 외부의 요소는 렌더링되지 않습니다. 이 버튼에는 다음과 같은 옵션 메뉴도 있습니다. : 여기에서 캔버스 프레임 토글과 캔버스 크기를 설정할 수 있습니다. 컴퓨터에서 프로젝트로 가져 오지 않은 시퀀스에서 배경 참조로 사용하기 위해 <strong>참조 이미지</strong> 를 설정할 수도 있습니다. 이 이미지는 시퀀스 편집기 자체에서만 볼 수 있으며 프로젝트에서 시퀀스를 사용할 때는 렌더링되지 않습니다. 참조 이미지를 추가하면 이미지의 불투명도를 설정하고 캔버스 프레임 내에서 위치를 오프셋 할 수도 있습니다.</li>
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Sequence Controls</span><span data-close-text="true">Sequence Controls</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">시퀀스 컨트롤</span> <span data-close-text="true">시퀀스 컨트롤</span></a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">This bar has the various sequence playback controls:</p>
+    <p class="dropspot">이 바에는 다양한 시퀀스 재생 컨트롤이 있습니다.</p>
     <p class="dropspot"><img alt="Sequence Editor Playback Controls" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_PlaybackControls.png"/></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Playback Speed</strong>: this is the playback speed of the sequence in frames (steps) per second.</li>
-      <li class="dropspot"><strong>Playhead Position</strong>: this is the current playhead position, and can be shown in time (h:m:s) or frames (f).</li>
-      <li class="dropspot"><strong>Time Display Options</strong>: here you can set whether to display the sequence times in hours, minutes and seconds (h:m:s) or frames (f).</li>
-      <li class="dropspot"><strong>Broadcast Message</strong>: Clicking this permits you to add a <strong>broadcast message</strong> at the current playhead position (this is explained in more detail earlier on this page and you can find further information <a href="Sequence_Properties/Broadcast_Messages.htm">here</a>        too).</li>
-      <li class="dropspot"><strong>Add Moment</strong>: Clicking this permits you to add a sequence <strong>moment</strong> at the current playhead position (this is explained in more detail earlier on this page).</li>
-      <li class="dropspot"><strong>Playback Controls</strong>: with these buttons you can start and stop the sequence preview, as well as move the playhead to the start or the end. There is also a button to set whether the sequence should loop or not, and whether the sequence
-        should &quot;ping-pong&quot; or repeat when looping. Note that this setting <em>will</em> affect how the sequence is played when the project is compiled and run.</li>
-      <li class="dropspot"><strong>Sequence Length</strong>: this displays the total possible length of the sequence in frames (f) or in time (m:h:s). Note that the sequence may not run to this length if you have set the clip region to be smaller.</li>
+      <li class="dropspot"><strong>재생 속도</strong> : 초당 프레임 (단계)의 시퀀스 재생 속도입니다.</li>
+      <li class="dropspot"><strong>재생 헤드 위치</strong> : 현재 재생 헤드 위치이며 시간 (h : m : s) 또는 프레임 (f)으로 표시 할 수 있습니다.</li>
+      <li class="dropspot"><strong>시간 표시 옵션</strong> :시, 분, 초 (h : m : s) 또는 프레임 (f)으로 시퀀스 시간을 표시할지 여부를 설정할 수 있습니다.</li>
+      <li class="dropspot"><strong>브로드 캐스트 메시지</strong> :이 버튼을 클릭하면 현재 재생 헤드 위치에 <strong>브로드 캐스트 메시지</strong> 를 추가 할 수 있습니다 (이 페이지의 앞부분에 자세히 설명되어 있으며 <a href="Sequence_Properties/Broadcast_Messages.htm">여기</a> 에서도 추가 정보를 찾을 수 있습니다).</li>
+      <li class="dropspot"><strong>순간 추가</strong> :이 버튼을 클릭하면 현재 재생 헤드 위치에 시퀀스 <strong>모멘트</strong> 를 추가 할 수 있습니다 (이 페이지의 앞부분에 자세히 설명되어 있음).</li>
+      <li class="dropspot"><strong>재생 컨트롤</strong> :이 버튼으로 시퀀스 미리보기를 시작 및 중지 할 수있을뿐만 아니라 재생 헤드를 시작 또는 끝으로 이동할 수 있습니다. 시퀀스가 반복되어야하는지 여부와 반복 할 때 시퀀스가 ​​&quot;핑퐁&quot;또는 반복되어야하는지 여부를 설정하는 버튼도 있습니다. 이 설정 <em>은</em> 프로젝트를 컴파일하고 실행할 때 시퀀스가 ​​재생되는 방식에 영향을줍니다.</li>
+      <li class="dropspot"><strong>시퀀스 길이</strong> : <strong>시퀀스</strong> 의 총 가능한 길이를 프레임 (f) 또는 시간 (m : h : s)으로 표시합니다. 클립 영역을 더 작게 설정하면 시퀀스가이 길이로 실행되지 않을 수 있습니다.</li>
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Dope Sheet</span><span data-close-text="true">Dope Sheet</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">도프 시트</span> <span data-close-text="true">도프 시트</span></a></p>
   <div class="droptext" data-targetname="drop-down9">
     <p class="dropspot">The <strong>Dope Sheet</strong> is where all the <a class="tooltip" title="A position on the timeline in the dope sheet where an asset has been placed. An asset key can be made to last multiple frames.">asset key</a> and <a class="tooltip" title="A parameter key (also called a keyframe) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">parameter key</a><span class="glossextra">s</span> for each track
-      are shown. You can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> and drag keys left or right to position them within the dope sheet timeline, and you can also click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the right edge of an asset key to change its length. Note that for sprites and objects, setting the length to be longer than the animation will cause the animation
-      to loop over the extra frames. The dope sheet also has controls for setting the start and end of the clip region for the sequence, and you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> anywhere to set the playhead to that position. For more information on how to use the dope sheet, please see the following page:</p>
+      are shown. You can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/>키를 왼쪽이나 오른쪽으로 드래그하여 도프 시트 타임 라인 내에 위치 시키십시오. 자산 키의 오른쪽 가장자리에 길이를 변경하십시오. 스프라이트와 객체의 경우 애니메이션보다 길이를 길게 설정하면 애니메이션이 추가 프레임 위로 반복됩니다. 도프 시트에는 시퀀스의 클립 영역의 시작과 끝을 설정하는 컨트롤도 있으며, 클릭 할 수 있습니다 재생 헤드를 해당 위치로 설정하십시오. 도프 시트 사용 방법에 대한 자세한 내용은 다음 페이지를 참조하십시오.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">Using The Dope Sheet</a></li>
+      <li class="dropspot"><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">도프 시트 사용</a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
-  <p>Due to the initial complexity of the sequence editor, we have only given a brief overview of the features available here, but we have additional pages listed below that go into more depth about its features and how they can be used:</p>
+  <p>시퀀스 편집기의 초기 복잡성으로 인해 여기서 사용할 수있는 기능에 대한 간략한 개요 만 제공했지만 기능 및 사용 방법에 대해 자세히 설명하는 추가 페이지가 아래에 나열되어 있습니다.</p>
   <ul class="colour">
-    <li><a href="Sequence_Properties/The_Sequence_Canvas.htm">The Sequence Canvas</a></li>
-    <li><a href="Sequence_Properties/The_Track_Panel.htm">The Track Panel</a></li>
-    <li><a href="Sequence_Properties/Clipping_Masks.htm">Clipping Masks</a></li>
-    <li><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">Using The Dope Sheet</a></li>
-    <li><a href="Sequence_Properties/Using_Animation_Curves.htm">Using Animation Curves</a></li>
-    <li><a href="Sequence_Properties/Broadcast_Messages.htm">Broadcast Messages</a></li>
+    <li><a href="Sequence_Properties/The_Sequence_Canvas.htm">시퀀스 캔버스</a></li>
+    <li><a href="Sequence_Properties/The_Track_Panel.htm">트랙 패널</a></li>
+    <li><a href="Sequence_Properties/Clipping_Masks.htm">클리핑 마스크</a></li>
+    <li><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">도프 시트 사용</a></li>
+    <li><a href="Sequence_Properties/Using_Animation_Curves.htm">애니메이션 커브 사용</a></li>
+    <li><a href="Sequence_Properties/Broadcast_Messages.htm">방송 메시지</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Sequences.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Shaders.htm">Shaders</a></div>
+        <div style="float:left">뒤로: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
+        <div style="float:right">다음: <a href="Shaders.htm">셰이더</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Sequences Editor
@@ -291,4 +243,4 @@ Dope Sheet
 sequences_editor
 -->
 
-</body></html>
+</body></html> 

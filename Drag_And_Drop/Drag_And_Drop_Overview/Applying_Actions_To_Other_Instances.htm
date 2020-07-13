@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Applying Actions To Other Instances">
-        <span>Applying Actions To Other Instances</span>
+        <span>다른 인스턴스에 작업 적용</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,63 +80,51 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Applying Actions To Other Instances</h1>
-  <p>Most actions in the DnD™ libraries have an option to apply the action in different ways. This is called setting the <strong>action scope</strong> and it can be one of several things:</p>
-  <p><img alt="DnD™ Applies To" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Applies_To.png"/>Essentially what you are telling GameMaker Studio 2 is the which instance should run the action. The default action scope
-    is <span class="inline">self</span>, which means that once the object is created as an instance in the room, that instance will run the action code. However this isn&#39;t always what you want, and you may want some actions to affect other, or even
-    all, instances in the room. This is where changing the action scope comes in.</p>
-  <p>The different scopes for performing actions are listed below, but it should be noted that changing the scope on an action in this way will only apply the new scope to that action <em>and not to subsequent actions in the chain</em>. If you want to apply
-    a change of action scope to multiple chained actions, then use the <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">Apply to...</a> action first.</p>
+  <h1>다른 인스턴스에 작업 적용</h1>
+  <p>DnD ™ 라이브러리의 대부분의 작업에는 다른 방법으로 작업을 적용 할 수있는 옵션이 있습니다. 이를 <strong>조치 범위</strong> 설정이라고하며 다음 중 하나 일 수 있습니다.</p>
+  <p><img alt="DnD™ Applies To" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Applies_To.png"/>기본적으로 GameMaker Studio 2에 알리는 것은 어떤 인스턴스가 작업을 실행해야하는지입니다. 기본 작업 범위는 <span class="inline">self</span> 입니다. 즉, 객체가 실에서 인스턴스로 생성되면 해당 인스턴스가 작업 코드를 실행합니다. 그러나 이것이 항상 원하는 것은 아니며 일부 조치가 방의 다른 인스턴스 또는 모든 인스턴스에 영향을 줄 수 있습니다. 여기에서 활동 범위를 변경해야합니다.</p>
+  <p>조치 수행에 대한 다양한 범위가 아래에 나열되어 있지만, 이러한 방식으로 조치의 범위를 변경 <em>하면 체인의 후속 조치가 아니라</em> 해당 조치에만 새 범위가 적용됩니다. 조치 범위 변경을 여러 연쇄 조치에 <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">적용하려면</a> 먼저 <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">적용 대상 ...</a> 조치를 사용 <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">하십시오</a> .</p>
   <p> </p>
-  <p><img alt="Self Icon" class="icon" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Scope_Self.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Self</span><span data-close-text="true">Self</span></a></p>
+  <p><img alt="Self Icon" class="icon" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Scope_Self.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">자기</span> <span data-close-text="true">자기</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This is the default scope for an action and simply states that the action should only be called by the instance that is running the code.</p>
+    <p class="dropspot">이것은 작업의 기본 범위이며 코드를 실행하는 인스턴스에서만 작업을 호출해야한다고 간단히 나타냅니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Other Icon" class="icon" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Scope_Other.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Other</span><span data-close-text="true">Other</span></a></p>
+  <p><img alt="Other Icon" class="icon" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Scope_Other.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">기타</span> <span data-close-text="true">기타</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The <span class="inline">other</span> scope has two main functions, and the value it returns will depend on where and how you use it. In the <strong>Collision Event</strong>, <span class="inline">other</span> will return the unique instance ID value
-      (a unique value that is used to distinguish individual instances of every object), so you can, for example, create a &quot;bullet&quot; instance and have a collision event with a &quot;player&quot; instance and in that use the <span class="inline">other</span>      scope to remove hit points from the &quot;player&quot; object and then return to <span class="inline">self</span> scope to destroy the &quot;bullet&quot; instance.</p>
-    <p class="dropspot">Outside of the collision event the <span class="inline">other</span> setting will behave as if it was set to <span class="inline">noone</span> unless it is being called from within a scoped block of actions. What this means is that if you change the
-      scope of a group of actions to a specific object, then while those actions are being called, the <span class="inline">other</span> scope will return the instance ID of the instance that initially called the action group. For example, you could run
-      an <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">Apply to...</a> action and then in the next code block set the scope to <span class="inline">other</span> to perform an action on the instance running the whole event block, and not the
-      instance that is being scoped in the apply to code blocks. The image below gives an example:</p>
-    <p class="dropspot"><img alt="DnD™ Scope" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Scope_Other.png"/>In the image, we are checking for a mouse press in the instance, and if one is detected we change scope using the <strong>Apply To...</strong>      action. The next two action blocks are now being called from the &quot;obj_Player&quot; instance (if there is more than one then it will run for all of them) and so the object will change its sprite and then create an object at the other position,
-      ie: the position of the object that is running the event and detected the mouse press.</p>
+    <p class="dropspot"><span class="inline">다른</span> 범위에는 두 가지 주요 기능이 있으며 반환하는 값은 사용 위치 및 방법에 따라 다릅니다. <strong>Collision Event</strong> 에서 <span class="inline">other</span> 는 고유 인스턴스 ID 값 (모든 객체의 개별 인스턴스를 구별하는 데 사용되는 고유 값)을 반환하므로 예를 들어 &quot;bullet&quot;인스턴스를 생성하고 &quot; player &quot;인스턴스에서 <span class="inline">다른</span> 범위를 사용하여&quot;player &quot;개체에서 적중 지점을 제거한 다음 <span class="inline">자체</span> 범위로 돌아가&quot;bullet &quot;인스턴스를 파괴합니다.</p>
+    <p class="dropspot">충돌 이벤트 이외의 <span class="inline">다른</span> 설정은 범위가 지정된 동작 블록 내에서 호출되지 않는 한 <span class="inline">아무도</span> 설정되지 않은 것처럼 작동합니다. 이는 조치 그룹의 범위를 특정 오브젝트로 변경하면 해당 조치가 호출되는 동안 <span class="inline">다른</span> 범위는 처음에 조치 그룹을 호출 한 인스턴스의 인스턴스 ID를 리턴한다는 의미입니다. 예를 들어, <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">적용 대상 ...</a> 조치 <a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">를</a> 실행 한 후 다음 코드 블록에서 적용 범위에 속하는 인스턴스가 아닌 전체 이벤트 블록을 실행하는 인스턴스에 대한 조치를 수행하도록 범위를 <span class="inline">기타</span> 로 설정할 수 있습니다. 코드 블록. 아래 이미지는 예입니다.</p>
+    <p class="dropspot"><img alt="DnD™ Scope" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Scope_Other.png"/>이미지에서 인스턴스에서 마우스 누름을 확인하고 있으며, 감지 된 경우 <strong>적용 대상 ...</strong> 작업 <strong>을</strong> 사용하여 범위를 변경합니다. 다음 두 액션 블록은 이제 &quot;obj_Player&quot;인스턴스에서 호출되고 (둘 이상있는 경우 모두 실행 됨) 오브젝트가 스프라이트를 변경 한 다음 다른 위치에 오브젝트를 만듭니다. : 이벤트를 실행하고 마우스 누름을 감지 한 오브젝트의 위치입니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="All Icon" class="icon" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Scope_All.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">All</span><span data-close-text="true">All</span></a></p>
+  <p><img alt="All Icon" class="icon" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Scope_All.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">모든</span> <span data-close-text="true">모든</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">When you scope an action for all, you are telling GameMaker Studio 2 to run that block for <strong>every single active instance within the current room</strong>. For example creating a <a href="../Drag_And_Drop_Reference/Instance/Destroy_Object_Instance.htm">Destroy Object Instance</a> action
-      and setting its scope to <span class="inline">all</span> will cause every instance in the room to disappear, no matter what object they have been created from.</p>
+    <p class="dropspot">모두를위한 액션의 범위를 정할 때, GameMaker Studio 2에게 <strong>현재 룸 내 모든 활성 인스턴스마다</strong> 해당 블록을 실행하라고 지시 <strong>합니다</strong> . 예를 들어 <a href="../Drag_And_Drop_Reference/Instance/Destroy_Object_Instance.htm">객체 인스턴스 삭제</a> 작업을 만들고 범위를 <span class="inline">모두로</span> 설정하면 룸의 모든 인스턴스가 생성 된 객체에 관계없이 사라집니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Object Icon" class="icon" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Scope_Object.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Object</span><span data-close-text="true">Object</span></a></p>
+  <p><img alt="Object Icon" class="icon" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Scope_Object.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">객체</span> <span data-close-text="true">객체</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">An action can also be given an <strong>object</strong> as it&#39;s scope. What this means is that all instances of the given object will run that action at the same time it is called. So if you have 100 enemy instances in the room, for example, and
-      you want to set them all to point towards a specific point. You&#39;d call the <a href="../Drag_And_Drop_Reference/Movement/Set_Point_Direction.htm">Set Point Direction</a> and set the action scope to the object &quot;obj_Enemy&quot; and when it
-      is called, all instances of that object will change direction.</p>
+    <p class="dropspot">범위에 따라 <strong>개체에</strong> 작업을 제공 할 수도 있습니다. 이것이 의미하는 것은 주어진 객체의 모든 인스턴스가 호출되는 동시에 해당 액션을 실행한다는 것입니다. 예를 들어, 방에 100 개의 적 인스턴스가 있고 특정 지점을 향하도록 모두 설정하려는 경우. <a href="../Drag_And_Drop_Reference/Movement/Set_Point_Direction.htm">Set Point Direction을</a> 호출하고 작업 범위를 &quot;obj_Enemy&quot;개체로 설정하면 해당 개체의 모든 인스턴스가 방향을 변경합니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Expression</span><span data-close-text="true">Expression</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">표현</span> <span data-close-text="true">표현</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">The Expression input field is for you to input the ID of a specific instance that you want the action to work on. It can be the unique ID value assigned to an instance from the Room Editor or it can be the ID of an instance that you&#39;ve stored
-      in a variable (where the variable would be the input value) or it can even be an expression using code, as shown in the image below:</p>
-    <p class="dropspot"><img alt="DnD™ Target" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Scope_Target.png"/>In this case, an instance calls the <a href="../Drag_And_Drop_Reference/Instance/Set_Sprite.htm">Set Sprite</a> from
-      the instance created by the code given for the Expression. Note that in this case, the instance being created will run its Create Event first before the action is applied to it.</p>
+    <p class="dropspot">표현식 입력 필드는 조치를 수행하려는 특정 인스턴스의 ID를 입력하기위한 것입니다. 룸 편집기에서 인스턴스에 지정된 고유 ID 값이거나 변수에 저장된 인스턴스의 ID (변수가 입력 값이 될 수 있음)이거나 다음을 사용하는 표현식 일 수도 있습니다. 아래 이미지와 같이 코드 :</p>
+    <p class="dropspot"><img alt="DnD™ Target" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Scope_Target.png"/>이 경우 인스턴스는 Expression에 지정된 코드로 생성 된 인스턴스에서 <a href="../Drag_And_Drop_Reference/Instance/Set_Sprite.htm">Set Sprite</a> 를 호출합니다. 이 경우, 작성중인 인스턴스는 조치가 적용되기 전에 먼저 이벤트 작성을 실행합니다.</p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Drag_And_Drop\Drag_And_Drop_Overview\Applying_Actions_To_Other_Instances.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Action_Block_Functions.htm">Action Block Scripts</a></div>
+        <div style="float:left">뒤로: <a href="../../Content.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="Action_Block_Functions.htm">액션 블록 스크립트</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Drag And Drop Applying Actions
@@ -145,4 +133,4 @@ Drag And Drop Applying Actions
 drag_and_drop_applying
 -->
 
-</body></html>
+</body></html> 

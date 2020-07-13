@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Guide To Using Particles">
-        <span>Guide To Using Particles</span>
+        <span>입자 사용 안내서</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,71 +80,42 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Guide To Using Particles</h1>
-  <p>This guide is for those of you that want to understand how to use and create <strong>particles</strong>. This page will cover both the <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">GameMaker Language functions</a> and
-    <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Particle_Actions.htm">Drag and Drop™ actions</a> for particles, so if you&#39;ve never used particles before, we hope that this guide can get you started as they are very useful and quite
-    fun to make.</p>
-  <p>Before going any further, we should probably explain what a particle actually is... Basically, a particle is a graphic resource that has certain properties which are defined by a <strong>particle system</strong>. These properties cannot be manipulated
-    directly for <em>individual </em>particles, but are changed collectively through the code or actions that are used to define the system that it belongs to. They are very useful for creating beautiful and flashy effects - or subtle and discreet ones
-    - in a game without the CPU overhead that using instances has.</p>
-  <p>We have mentioned particle systems, so let&#39;s explain what that is before continuing. Think of a particle system like a container that you will use to hold your particles ready for use. You can use code or actions to define the visual aspect of the
-    particles, and then they are placed in the &quot;container&quot; (the particle system) so that you can take it out and use it whenever and wherever you need it later.</p>
-  <p>Before setting up a system and creating particles, it&#39;s important to know a few things... First is that most of a particle systems code is <strong>only ever called once in the game</strong>, usually in some type of controller object in the first
-    room or level - this is not always the case, but for the sake of simplicity, we&#39;ll be using this scenario for the following brief guide as it&#39;s the most common way to use particles. You do this because a particle system, once created, stays
-    in memory and is ready to be used at any time, so if you create it more than once it can quickly increase the memory usage and cause serious lag, and even has the potential of crashing the game. For the sake of simplicity in this guide, you will make
-    a <strong>global </strong>particle system that can be used by any instance in the game at any time.</p>
+  <h1>입자 사용 안내서</h1>
+  <p>이 안내서는 <strong>파티클</strong> 사용법 및 생성 방법을 이해하려는 사용자를위한 것입니다. 이 페이지는 <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">파티클에</a> 대한 <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">GameMaker 언어 기능</a> 과 <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Particle_Actions.htm">드래그 앤 드롭 작업</a> 을 모두 다루므로, 이전에 파티클을 사용해 본 적이 없다면이 가이드가 매우 유용하고 재미있어서 시작할 수 있기를 바랍니다.</p>
+  <p>더 나아 가기 전에, 우리는 아마도 입자가 실제로 무엇인지 설명해야 할 것입니다 ... 기본적으로, 입자는 <strong>입자 시스템에</strong> 의해 정의 된 특정 속성을 가진 그래픽 리소스입니다. 이러한 속성은 <em>개별</em> 입자에 대해 직접 조작 할 수 없지만 해당 시스템을 정의하는 데 사용되는 코드 또는 작업을 통해 집합 적으로 변경됩니다. 인스턴스를 사용하는 CPU 오버 헤드가없는 게임에서 아름답고 화려한 효과 또는 미묘하고 신중한 효과를 만드는 데 매우 유용합니다.</p>
+  <p>파티클 시스템에 대해 언급 했으므로 계속하기 전에 그 내용을 설명하겠습니다. 파티클 시스템은 파티클을 사용할 준비를하는 데 사용할 컨테이너처럼 생각하십시오. 코드 또는 동작을 사용하여 입자의 시각적 측면을 정의한 다음 &quot;컨테이너&quot;(입자 시스템)에 배치하여 나중에 필요할 때 언제 어디서나 사용할 수 있습니다.</p>
+  <p>시스템을 설정하고 파티클을 생성하기 전에 몇 가지를 아는 것이 중요합니다 ... 먼저 파티클 시스템 코드의 대부분은 <strong>게임에서 한 번만 호출</strong> 되며 일반적으로 첫 번째 방 또는 레벨의 일부 컨트롤러 객체에서 호출됩니다 -항상 그런 것은 아니지만 단순성을 위해 입자를 사용하는 가장 일반적인 방법이므로 다음과 같은 간단한 가이드에이 시나리오를 사용합니다. 파티클 시스템은 일단 생성되고 메모리에 남아 있고 언제든지 사용할 수 있으므로 파티클 시스템을 한 번 이상 만들면 메모리 사용량이 빠르게 증가하고 심각한 지연이 발생할 수 있으며 게임 충돌. 이 가이드의 편의를 위해 언제든지 게임의 모든 인스턴스에서 사용할 수있는 <strong>글로벌</strong> 파티클 시스템을 만들 것입니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Creating A Particle System</span><span data-close-text="true">Creating A Particle System</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">파티클 시스템</span> <span data-close-text="true">만들기</span> <span data-open-text="true">파티클 시스템</span> <span data-close-text="true">만들기</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">To start with you need to define the particle system and give it a name so that you can use it. As this is going to be a global system that any object can use you would do this in a controller object or an initialisation function run at the start
-      of the game. The GML would look like this:<br/>
-    </p>
+    <p class="dropspot">먼저 파티클 시스템을 정의하고 사용할 수 있도록 이름을 지정해야합니다. 이것은 모든 오브젝트가 사용할 수있는 글로벌 시스템이 될 것이기 때문에 컨트롤러 오브젝트 또는 게임 시작시 실행되는 초기화 기능에서이를 수행 할 수 있습니다. GML은 다음과 같습니다.</p>
     <p class="code">global.P_System = part_system_create_layer(&quot;Instance_Layer&quot;, false);</p>
-    <p class="dropspot">And using DnD™:</p>
-    <p class="dropspot"><img alt="Create Particle System" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CreateSystem.png"/>Note that the layer name supplied must be a valid layer in the room where the system will be used,
-      otherwise no particles will be visible. Also note that we set the &quot;persistent&quot; flag (both in code and in DnD™) to false. A persistent particle system is one that will &quot;persist&quot; across rooms without the need to destroy and re-create
-      it for each room. However, to keep things simple for this guide, we&#39;ll not be using persistence.</p>
-    <p class="dropspot">So that&#39;s the system created, but what about the particles? We have to define them too or the system is useless and does nothing.</p>
+    <p class="dropspot">그리고 DnD ™ 사용 :</p>
+    <p class="dropspot"><img alt="Create Particle System" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CreateSystem.png"/>제공된 레이어 이름은 시스템이 사용될 방에서 유효한 레이어 여야합니다. 그렇지 않으면 파티클이 보이지 않습니다. 또한 &quot;persistent&quot;플래그 (코드 및 DnD ™)를 모두 false로 설정했습니다. 지속적인 파티클 시스템은 각 룸마다 시스템을 파괴하고 다시 만들 필요없이 여러 방에 &quot;지속&quot;되는 시스템입니다. 그러나이 안내서의 내용을 단순하게 유지하기 위해 지속성을 사용하지 않습니다.</p>
+    <p class="dropspot">이것이 시스템이 만들어졌지만 입자는 어떻습니까? 우리도 그것들을 정의해야하거나 시스템이 쓸모없고 아무것도하지 않습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Defining A Particle Type</span><span data-close-text="true">Defining A Particle Type</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">입자 유형</span> <span data-close-text="true">정의</span> <span data-open-text="true">입자 유형</span> <span data-close-text="true">정의</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">To use a particle in a system you have to first define its general properties. These are like object properties, but they only apply in a <em>general </em>way to individual particles. What this means is that if you give the particles a minimum movement
-      speed of 1 and a maximum movement speed of 2, any particle created by the system will have a random speed between 1 and 2 pixels per step, and that overall they will have an average speed of 1.5. You should name and add your first particle to the
-      system using the following GML in the same object that you used to create the system:<br/>
-    </p>
+    <p class="dropspot">시스템에서 파티클을 사용하려면 먼저 일반 속성을 정의해야합니다. 이것들은 객체 속성과 비슷하지만 개별 입자에만 <em>일반적인</em> 방식으로 적용됩니다. 이것이 의미하는 것은 파티클에 최소 이동 속도 1과 최대 이동 속도 2를 부여하면 시스템에 의해 생성 된 모든 파티클은 단계 당 1과 2 픽셀 사이의 임의의 속도를 가지며 전체적으로는 평균 속도는 1.5입니다. 시스템을 만들 때 사용한 것과 동일한 객체에서 다음 GML을 사용하여 첫 번째 입자의 이름을 지정하고 시스템에 추가해야합니다.</p>
     <p class="code">global.Particle1 = part_type_create();</p>
-    <p class="dropspot">And for those of you that use DnD™:</p>
-    <p class="dropspot"><img alt="Create Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Type.png"/>Note that using DnD™ we also tick the <strong>blend </strong>option. This enables <strong>additive blending</strong>      for the particle, which we&#39;ll discuss a bit further down.</p>
-    <p class="dropspot">You now have a system and a particle to put in it, but you&#39;re not ready yet to create your outstanding effects! You still have to define the properties of the particle, ie: how it looks - its speed, its rotation, its alpha etc... There are a lot
-      of details that can be used to define a particle effect, so below is an overview of the most important settings and then a snippet of code and DnD™ that uses all of them:</p>
+    <p class="dropspot">그리고 DnD ™를 사용하는 사람들에게는 :</p>
+    <p class="dropspot"><img alt="Create Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Type.png"/>DnD ™를 사용하면 <strong>블렌드</strong> 옵션도 선택합니다. 이를 통해 입자에 <strong>첨가제 블렌딩</strong> 이 가능하며, 이에 대해서는 아래에서 조금 더 설명하겠습니다.</p>
+    <p class="dropspot">이제 시스템과 입자를 넣을 수 있지만 아직 뛰어난 효과를 만들 준비가되지 않았습니다! 입자의 속성, 즉 속도, 회전, 알파 등의 모양을 정의해야합니다. 입자 효과를 정의하는 데 사용할 수있는 세부 정보가 많이 있으므로 아래에 개요가 있습니다. 가장 중요한 설정과 코드 및 DnD ™ 스 니펫을 모두 사용하는 설정 :</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>shape</strong>: The shape of the particle is the built in sprite that it will use, with the default being the constant <span class="inline">pt_shape_pixel</span>. There is also a function to add a custom particle if required - <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/part_type_sprite.htm"><span class="inline">part_type_sprite()</span></a> -
-        or the action <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Sprite.htm">Set Particle Sprite</a>.</li>
-      <li class="dropspot"><strong>size</strong>: Sets the size parameters for the particle type. You specify the minimum starting size, the maximum starting size, and the size increase in each step (use a negative number for a decrease in size). This is a scalar value that
-        will modify the base image x/y scale equally.</li>
-      <li class="dropspot"><strong>colour</strong>: Sets the colour for the particle if a single colour is used. If two or three colours are supplied this will be the colour blend, blending from one to the other over its lifetime.</li>
-      <li class="dropspot"><strong>alpha</strong>: Sets the alpha value for the particle between a value of 0 and 1. If a single value is passed in this will be the alpha of the particle, if two or three values are passed in then the alpha will blend between these over the
-        lifetime of the particle.</li>
-      <li class="dropspot"><strong>speed</strong>: Sets the speed properties for the particle type. You specify a minimum and maximum speed and a random value between the given bounds is chosen when the particle is created. You can indicate a speed increase in each step,
-        and even use a negative numbers to slow the particle down (the speed will never become smaller than 0).</li>
-      <li class="dropspot"><strong>direction</strong>: Sets the direction properties for the particle type. Again you specify a range of directions (in counterclockwise degrees - 0 indicates a motion to the right, 90 indicates a motion upwards, etc...). For example, to let
-        the particle move in a random direction you&#39;d choose a minimum 0 and and a maximum of 360 as values. You can specify an increase in direction for each step too (can also be negative).</li>
-      <li class="dropspot"><strong>orientation</strong>: Sets the orientation angle properties for the particle type. You specify the minimum angle, the maximum angle, and the increase in each step. You can also indicate whether the given angle should be relative to the current
-        direction of motion or absolute, e.g: by setting all values to 0 but relative to true, the particle orientation will precisely follow the path of the particle.</li>
-      <li class="dropspot"><strong>blending</strong>: Sets whether to use <strong>additive </strong>blending or <strong>normal </strong>blending for the particle type. This is set in a function when using GML and as part of the particle initialisation when using DnD™. Additive
-        blending means that the particles will use the <span class="inline">bm_add</span> blend mode, giving them a &quot;glowing&quot; look where they overlap, and also blending them with anything drawn underneath (sprites, backgrounds, tiles, etc...)
-        - very useful for fire and magic effects (for example), but best left off for something like smoke. Experiment to see the differences! Note that enabling this will break the texture batching when particles are created, and so more batches will
-        be required per step to draw them - something to consider as it may affect performance, especially on mobile.</li>
-      <li class="dropspot"><strong>life</strong>: Sets the lifetime bounds, in steps (game frames) for the particle type. Like previous settings, this has a minimum and maximum value and particles will last a random number of steps within these values. So, a lifetime of 30
-        min and 30 max will have the particle existing for exactly 30 steps, but a lifetime of 20 min and 60 max will have each particle exists for a random number of steps between 20 and 60.</li>
+      <li class="dropspot"><strong>shape</strong> : 파티클의 모양은 사용할 스프라이트이며 기본적으로 상수 <span class="inline">pt_shape_pixel</span> 입니다. 필요한 경우 <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/part_type_sprite.htm"><span class="inline">part_type_sprite ()</span></a> 또는 <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Sprite.htm">Set Particle Sprite</a> 액션 커스텀 파티클을 추가하는 기능도 있습니다.</li>
+      <li class="dropspot"><strong>size</strong> : 입자 유형의 크기 매개 변수를 설정합니다. 최소 시작 크기, 최대 시작 크기 및 각 단계의 크기 증가를 지정합니다 (크기를 줄이려면 음수를 사용하십시오). 이것은 기본 이미지 x / y 스케일을 동일하게 수정하는 스칼라 값입니다.</li>
+      <li class="dropspot"><strong>color</strong> : 단일 색상을 사용하는 경우 입자의 색상을 설정합니다. 2 개 또는 3 개의 색상이 제공되는 경우 수명 기간 동안 색상 혼합이 이루어집니다.</li>
+      <li class="dropspot"><strong>alpha</strong> : 입자의 알파 값을 0과 1 사이의 값으로 설정합니다. 단일 값이 전달되면 입자의 알파가되고, 2 개 또는 3 개의 값이 전달되면 알파는 입자의 수명.</li>
+      <li class="dropspot"><strong>speed</strong> : 입자 유형의 속도 속성을 설정합니다. 최소 및 최대 속도를 지정하고 입자가 생성 될 때 지정된 경계 사이의 임의의 값이 선택됩니다. 각 단계에서 속도 증가를 표시하고 음수를 사용하여 파티클 속도를 늦출 수도 있습니다 (속도는 0보다 작지 않습니다).</li>
+      <li class="dropspot"><strong>direction</strong> : 입자 유형의 방향 속성을 설정합니다. 다시 방향 범위를 지정합니다 (시계 반대 방향으로-0은 오른쪽으로 움직임, 90은 위쪽으로 움직임 등). 예를 들어, 파티클이 임의의 방향으로 움직이게하려면 값으로 최소 0과 최대 360을 선택합니다. 각 단계의 방향 증가도 지정할 수 있습니다 (음수 일 수도 있음).</li>
+      <li class="dropspot"><strong>orientation</strong> : 입자 유형의 방향 각도 속성을 설정합니다. 각 단계에서 최소 각도, 최대 각도 및 증가를 지정합니다. 또한 주어진 각도가 현재 운동 방향에 대해 상대적인지 아니면 절대적이어야하는지 여부를 표시 할 수 있습니다.</li>
+      <li class="dropspot"><strong>blending</strong> : 입자 유형에 <strong>첨가제</strong> 혼합을 사용할지 아니면 <strong>일반</strong> 혼합을 사용할지 설정합니다. 이것은 GML을 사용할 때 기능으로, DnD ™를 사용할 때 입자 초기화의 일부로 설정됩니다. 첨가제 블렌딩은 파티클이 <span class="inline">bm_add</span> 블렌드 모드를 사용하여 겹치는 부분에 &quot;빛나는&quot;모양을 제공하며, 그 아래에 그려진 것 (스프라이트, 배경, 타일 등)과 블렌딩합니다. 마법 효과 (예 : 연기 효과)가 있지만 연기와 같은 항목에는 가장 적합하지 않습니다. 차이점을 실험 해보십시오! 이 기능을 활성화하면 파티클이 생성 될 때 텍스처 배치가 깨지므로 단계마다 더 많은 배치가 필요합니다. 특히 모바일에서 성능에 영향을 줄 수 있으므로 고려해야 할 사항입니다.</li>
+      <li class="dropspot"><strong>life</strong> : 입자 유형에 대한 수명 범위를 단계 (게임 프레임)로 설정합니다. 이전 설정과 마찬가지로이 값에는 최소값과 최대 값이 있으며 입자는이 값 내에서 임의의 단계를 거치게됩니다. 따라서 30 분과 최대 30의 수명은 정확히 30 단계 동안 입자가 존재하지만 20 분과 최대 60의 수명은 20과 60 사이의 임의의 수의 단계마다 각 입자가 존재합니다.</li>
     </ul>
-    <p class="dropspot">Now, before we present you the code for defining the particle, let&#39;s just talk about &quot;<strong>wiggle</strong>&quot; for a moment... Believe it or not, &quot;wiggle&quot; is a particle property and can be set for many of the above settings
-      individually. When you see &quot;wiggle&quot; as an argument for a particle function or action, it means that if you place a number between 1 and 20 the particle will &quot;wiggle&quot; or fluctuate between the min and max values for the property,
-      with 1 being a slow wiggle and 20 being very fast. So a particle speed minimum of 2 and maximum of 5 with a wiggle of 20 will oscillate very quickly between the min/max speeds for the lifetime of each particle created.</p>
-    <p class="note"><strong>NOTE</strong>: There are other minor particle properties too which we don&#39;t cover here, just to keep things as simple as possible to start with. See the appropriate pages for full details of particle properties.</p>
-    <p class="dropspot">Let&#39;s look at some code that defines a particle now:<br/>
-    </p>
+    <p class="dropspot">이제 입자 정의를위한 코드를 제시하기 전에 잠시 &quot; <strong>흔들기</strong> &quot;에 대해 이야기 해 봅시다. &quot;흔들기&quot;는 입자 속성이며 위의 여러 설정에 대해 개별적으로 설정할 수 있습니다. 입자 함수 또는 동작에 대한 인수로 &quot;흔들기&quot;를 볼 때, 1에서 20 사이의 숫자를 배치하면 입자가 속성의 최소값과 최대 값 사이에서 &quot;흔들 리거나&quot;변동합니다. 느린 흔들림과 20은 매우 빠릅니다. 따라서 흔들림이 20 인 최소 2와 최대 5의 입자 속도는 생성 된 각 입자의 수명 동안 최소 / 최대 속도 사이에서 매우 빠르게 진동합니다.</p>
+    <p class="note"><strong>참고</strong> : 여기에서 다루지 않는 다른 작은 입자 속성도 있습니다. 단지 가능한 한 간단하게 시작하기 위해서입니다. 입자 특성에 대한 자세한 내용은 해당 페이지를 참조하십시오.</p>
+    <p class="dropspot">이제 파티클을 정의하는 코드를 살펴 보겠습니다 :</p>
     <p class="code">//This defines the particles shape<br/> part_type_shape(global.Particle1,pt_shape_pixel);
       <br/> //This is for the size<br/> part_type_size(global.Particle1,1,1,0,2);
       <br/> //This sets its colour. There are three different codes for this<br/> part_type_color1(global.Particle1,c_white);
@@ -155,96 +126,69 @@
       <br/> //This is the blend mode, either additive or normal<br/> part_type_blend(global.Particle1,1);
       <br/> //this is its lifespan in steps<br/> part_type_life(global.Particle1,5,30);
     </p>
-    <p class="dropspot">To create this same particle definition in DnD™ we&#39;d need these actions:</p>
-    <p class="dropspot"><img alt="Define Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Define_Particle.png"/>So that&#39;s it! We have now defined our particles and they are ready to be used.</p>
+    <p class="dropspot">DnD ™에서 이와 동일한 입자 정의를 만들려면 다음 작업이 필요합니다.</p>
+    <p class="dropspot"><img alt="Define Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Define_Particle.png"/>그게 다야! 이제 입자를 정의했으며 사용할 준비가되었습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Creating Particles Directly In-Game</span><span data-close-text="true">Creating Particles Directly In-Game</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">게임 내에서</span> <span data-close-text="true">직접 입자 만들기</span> <span data-open-text="true">게임 내에서</span> <span data-close-text="true">직접 입자 만들기</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">There are a couple of ways to create particles, and each has its pros and cons. You can use <strong>emitters</strong> to <strong>burst </strong>or <strong>stream </strong>particles, or you can create particles <strong>directly </strong>at a point.
-      Which one you use really depends on what you are trying to achieve and the effect you are wanting to create, but we&#39;ll start with the easiest of the two, which is creating particles directly. In GML we&#39;d use the following function:<br/>
-    </p>
+    <p class="dropspot">파티클을 생성하는 방법은 두 가지가 있으며 각각 장단점이 있습니다. <strong>이미 터</strong> 를 사용하여 <strong>파티클</strong> 을 <strong>버스트</strong> 하거나 <strong>스트리밍</strong> 하거나 한 지점에서 <strong>직접</strong> 파티클을 만들 수 있습니다. 어떤 것을 사용하는지는 실제로 달성하려는 효과와 만들려는 효과에 따라 다르지만 입자를 직접 만드는 두 가지 중 가장 쉬운 것으로 시작합니다. GML에서는 다음 기능을 사용합니다.</p>
     <p class="code">part_particles_create(global.P_System, x, y, global.Particle1, 10);</p>
-    <p class="dropspot">and in DnD™ it&#39;d be:</p>
-    <p class="dropspot"><img alt="Create Particles At A Position" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Burst.png"/>That single code/action above will create 10 particles at the given x/y coordinates of type &quot;Particle1&quot;
-      from our global system. Simple! The great thing about that line of code/action is that it can be used anywhere without any fuss. For example if you place it in the <strong>Global Left Pressed</strong> event for the mouse in an object and change
-      x/y values for the mouse_x/y position, it will create particles at the mouse position every time you press the button. Or if you have a rocket, then you could place this in the step event and have smoke particles coming every step (although 1 or
-      2 would probably be better than 10!). You can even have it create particles over an area by changing the x/y coordinates randomly, for example:<br/>
-    </p>
+    <p class="dropspot">DnD ™에서는 다음과 같습니다.</p>
+    <p class="dropspot"><img alt="Create Particles At A Position" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Burst.png"/>위의 단일 코드 / 액션은 글로벌 시스템에서 &quot;Particle1&quot;유형의 지정된 x / y 좌표로 10 개의 파티클을 생성합니다. 단순한! 이 코드 / 액션 라인의 가장 큰 장점은 아무 소란없이 어디서나 사용할 수 있다는 것입니다. 예를 들어 마우스를 객체의 <strong>Global Left Pressed</strong> 이벤트에 배치하고 mouse_x / y 위치의 x / y 값을 변경하면 버튼을 누를 때마다 마우스 위치에 파티클이 생성됩니다. 또는 로켓이 있다면 이것을 단계 이벤트에 배치하고 매 단계마다 연기 입자가 나올 수 있습니다 (1 또는 2가 아마도 10보다 낫습니다!). 예를 들어 x / y 좌표를 임의로 변경하여 영역에 파티클을 만들 수도 있습니다.</p>
     <p class="code">repeat(50)<br/>     {<br/>     var xx = x + 20 - random(40);<br/>     var yy = y + 20 - random(40);<br/>     part_particles_create(global.P_System, xx, yy, global.Particle1, 1);<br/>     }</p>
-    <p class="dropspot"><img alt="Create Particles Over A Random Area" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Particles.png"/>The above code will create 50 particles at a random position within a 40px square
-      area.
-    </p>
+    <p class="dropspot"><img alt="Create Particles Over A Random Area" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Particles.png"/>위의 코드는 40px 사각형 영역 내에서 임의의 위치에 50 개의 입자를 만듭니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Creating Particles With Emitters</span><span data-close-text="true">Creating Particles With Emitters</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">이미 터로</span> <span data-close-text="true">입자 만들기</span> <span data-open-text="true">이미 터로</span> <span data-close-text="true">입자 만들기</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Since we&#39;ve explained the easy way to create particles, let&#39;s now go the slightly more complex way, which is to use <strong>emitters</strong>. Emitters are another part of the particle system that has to be defined before being used, so we&#39;ll
-      make a global emitter the same as we did for the system and the particles. We also have to decide whether to have a static (non-moving) emitter or not and whether we are going to <strong>burst </strong>or <strong>stream </strong>the particles, as
-      well as decide over what area and what kind of distribution we are going to have the emitter use.</p>
-    <p class="dropspot">What does all that mean? Well, a <strong>static </strong>emitter is one that you can define once and forget about as it will not be moving anywhere for the duration of the game, ie: think of a log fire - it doesn&#39;t move, it just emits flames and
-      so is static, but a fireball would require a <strong>dynamic</strong> emitter and will move across the screen. As for bursting or streaming, a burst is a one off explosion of particles, whereas a stream is just that - a constant stream of particles
-      every step. For area and distribution, with emitters you can define an area for emitting particles (which can be a rectangle, ellipse, diamond or line) as well as the distribution curve (gaussian, inverse gaussian, or linear).</p>
-    <p class="dropspot">The following images illustrate the different types of area shape available for emitters:</p>
+    <p class="dropspot">파티클을 만드는 쉬운 방법을 설명 했으므로 이제 <strong>이미 터</strong> 를 사용하는 좀 더 복잡한 방법을 살펴 보겠습니다. 이미 터는 사용하기 전에 정의해야하는 파티클 시스템의 또 다른 부분이므로 시스템 및 파티클에서와 동일한 방식으로 전역 이미 터를 만듭니다. 또한 정적 (이동하지 않는) 이미 터를 사용할지 여부와 파티클을 <strong>버스트</strong> 또는 <strong>스트리밍</strong> 할지 여부를 결정하고 이미 터가 어떤 영역과 어떤 종류의 분포를 사용할지 결정해야합니다. .</p>
+    <p class="dropspot">그게 무슨 뜻이야? <strong>정적</strong> 이미 터는 게임 기간 동안 아무데도 움직이지 않기 때문에 한 번만 정의하고 잊어 버릴 수있는 것입니다. 즉, 로그 화재를 생각하십시오-움직이지 않고 불꽃을 방출합니다. 정적이지만 파이어 볼에는 <strong>동적</strong> 이미 터가 필요하며 화면을 가로 질러 움직입니다. 버스트 또는 스트리밍의 경우 버스트는 파티클 폭발의 일회성이며, 스트림은 그저 매 단계마다 일정한 파티클 스트림입니다. 면적 및 분포의 경우 이미 터를 사용하여 분포 곡선 (가우시안, 역 가우시안 또는 선형)뿐만 아니라 입자 방출 영역 (사각형, 타원, 다이아몬드 또는 선일 수 있음)을 정의 할 수 있습니다.</p>
+    <p class="dropspot">다음 이미지는 이미 터에 사용할 수있는 다양한 유형의 영역 모양을 보여줍니다.</p>
     <p class="dropspot"> </p>
     <center><img alt="Rectangle Emitter" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Rectangular.gif"/> <img alt="Line Emitter" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Line.gif"/></center>
     <center><img alt="Ellipse Emitter" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Ellipse.gif"/> <img alt="Diamond Emitter" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Diamond.gif"/></center>
-    <p class="dropspot"><br/> And the distribution curves (linear, gaussian, and inverse gaussian) are illustrated here:</p>
+    <p class="dropspot">분포 곡선 (선형, 가우스 및 역 가우스)은 다음과 같습니다.</p>
     <p><img alt="Particle distribution" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Distribution.png"/></p>
-    <p class="dropspot">Below is an example of the code/actions required to define two emitters, which would normally go in the <strong>Create Event</strong> of a controller object, just after defining the particle system. One will be static and stream particles over the
-      area of the whole room, while the other will be dynamic and follow the mouse and burst every 30 steps from a small ellipse:</p>
+    <p class="dropspot">아래는 두 개의 이미 터를 정의하는 데 필요한 코드 / 액션의 예입니다. 파티클 시스템을 정의한 직후 컨트롤러 객체의 <strong>이벤트 생성</strong> 에서 일반적으로 사용됩니다. 하나는 정적이며 방 전체에 걸쳐 입자를 스트리밍하는 반면 다른 하나는 동적이며 마우스를 따라 작은 타원에서 30 단계마다 터질 것입니다.</p>
     <p> </p>
     <p class="code">global.Particle1_Emitter1 = part_emitter_create(global.P_System);<br/> global.Particle1_Emitter2 = part_emitter_create(global.P_System);<br/>
       <br/> //Set up the area that will emit particles<br/> part_emitter_region(global.P_System, global.Particle1_Emitter1, 0, room_width, 0, room_height, ps_shape_rectangle, ps_distr_linear);<br/> part_emitter_region(global.P_System, global.Particle1_Emitter2,
       mouse_x-10, mouse_x+10, mouse_y-10, mouse_y+10, ps_shape_ellipse, ps_distr_gaussian);<br/>
       <br/> //Set the first to stream 10 particles every step<br/> part_emitter_stream(global.P_System, global.Particle1_Emitter1, global.Particle1, 10);<br/>
       <br/> //This can now be forgotten as it will function until told to stop...<br/> //Set the alarm[0] event to burst the emitter2 particles...<br/> alarm[0] = 30;</p>
-    <p class="dropspot"><img alt="Define Particle Emitters" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Emitter.png"/>So, here we are creating two particle emitters that are assigned to the particle system we created
-      at the start. The functions/actions to create these emitters permit us to define an area in the room over which they will emit particles, as well as give the particle type to emit, and the shape and distribution to use within the defined area. The
-      functions/actions will return a numeric value, which is the emitter ID value, and we store this in a variable so that we can use further emitter functions to target those emitters.</p>
-    <p class="dropspot">Now we have code/DnD™ to stream particles (these particles will be emitted every game step without us having to anything else), but we also want to add an <strong>A</strong><strong>larm[0]</strong> <strong>Event</strong> to burst particles at specific
-      intervals:
-    </p>
+    <p class="dropspot"><img alt="Define Particle Emitters" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Emitter.png"/>자, 여기서 우리는 처음에 만든 파티클 시스템에 할당 된 두 개의 파티클 이미 터를 만듭니다. 이 에미 터를 생성하는 기능 / 액션을 통해 파티클이 방출 될 공간을 정의 할 수있을뿐만 아니라 정의 된 영역 내에서 사용할 입자 유형과 형태 및 분포를 지정할 수 있습니다. 함수 / 액션은 이미 터 ID 값인 숫자 값을 반환하며, 이미 터를 타겟팅하기 위해 추가 이미 터 함수를 사용할 수 있도록 변수에 저장합니다.</p>
+    <p class="dropspot">이제 파티클을 스트리밍하기위한 코드 / DnD ™가 있습니다 (이 파티클은 다른 게임 단계없이 모든 게임 단계에서 방출됩니다). 또한 특정 간격으로 파티클을 <strong>터뜨리기</strong> 위해 <strong>A</strong> <strong>larm [0]</strong> <strong>이벤트</strong> 를 추가하려고합니다.</p>
     <p class="code">part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x - 10, mouse_x + 10, mouse_y - 10, mouse_y + 10, ps_shape_ellipse, ps_distr_gaussian);<br/> part_emitter_burst(global.P_System, global.Particle1_Emitter2, global.Particle1, 30);<br/>      alarm[0] = 30;</p>
-    <p class="dropspot"><img alt="Burst Particles From Emitter" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Set_Emitter.png"/>A particle burst is simply a one-off explosion of particles from the emitter, rather than a constant
-      stream of them every game step.</p>
-    <p class="dropspot">But what if you want several objects to emit particles? A global emitter can only be in one place at a time, so you would need to create <em>local </em>emitters in each object. These emitters will still use the global particle system and any particles
-      that are within it, but they can be different shapes and sizes and move with the object, making them ideal for rockets or bullets or things. The code you would use is exactly the same as above, but without the &quot;global&quot; prefix before the
-      emitter names.</p>
-    <p class="dropspot">That&#39;s the creation of particles dealt with but there is one more thing that&#39;s very important... Cleaning up when you are finished with them.</p>
+    <p class="dropspot"><img alt="Burst Particles From Emitter" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Set_Emitter.png"/>파티클 버스트는 매 게임 단계마다 일정한 스트림 스트림이 아니라 이미 터에서 파티클이 일회 폭발하는 것입니다.</p>
+    <p class="dropspot">그러나 여러 물체가 입자를 방출하도록하려면 어떻게해야합니까? 전역 이미 터는 한 번에 한 곳에만있을 수 있으므로 각 객체에 <em>로컬</em> 이미 터를 만들어야합니다. 이 이미 터는 여전히 전역 입자 시스템과 그 안에있는 입자를 사용하지만, 모양과 크기가 다르고 물체와 함께 움직일 수 있으므로 로켓이나 총알 또는 사물에 이상적입니다. 사용할 코드는 위와 정확히 동일하지만 이미 터 이름 앞에 &quot;전역&quot;접두사가 없습니다.</p>
+    <p class="dropspot">그것이 처리 된 입자의 생성이지만 매우 중요한 것이 하나 더 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Cleaning Up</span><span data-close-text="true">Cleaning Up</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">정리</span> <span data-close-text="true">정리</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">As mentioned at the start, once created, a particle system (and its particles, emitters etc...) are stored in memory for instant use. Great, but what happens when you restart the game? Or if your player dies and starts the room again? Well, if you
-      don&#39;t manage the game right you get a <strong>memory leak</strong>. This is when something has been created and uses up memory, but has been &quot;de-referenced&quot; meaning that GameMaker no longer has access to it. This kind of thing will
-      slowly eat up memory and cause lag in your game or even block the computer causing your game to crash, and it is a pretty common problem with first time users of particle systems.</p>
-    <p class="dropspot">How do you avoid this? Well, GameMaker Studio 2 has GML and DnD™ to delete particle systems and their emitters and particles from memory when not in use and with a little bit of planning when using the following code/actions, you can easily prevent
-      this potential problem.</p>
-    <p class="dropspot">The first thing you have to do is decide where you are going to create the system and how you will use it. You could create a global system in the <strong>Game Start Event</strong> of an object that is in your first room (like a menu or title screen),
-      but this means that if you restart the game using the <a href="../GameMaker_Language/GML_Reference/General_Game_Control/game_restart.htm"><span class="inline">game_restart()</span></a> function, it will be recreated and cause a memory leak. Or you
-      could create a local system in an instance in any room, but again, if you leave the room then the system will be inaccessible and cause a memory leak. To avoid this you would need to have something like this in the <a href="../The_Asset_Editors/Object_Properties/Other_Events.htm"><strong>Game End Event</strong></a>      or the <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm"><strong>Clean Up Event</strong></a> of your object:</p>
+    <p class="dropspot">처음에 언급했듯이, 일단 생성되면 파티클 시스템 (및 그 파티클, 이미 터 등)은 즉시 사용하기 위해 메모리에 저장됩니다. 훌륭하지만 게임을 다시 시작하면 어떻게됩니까? 아니면 플레이어가 죽고 방을 다시 시작하면? 게임을 제대로 관리하지 않으면 <strong>메모리 누수가 발생</strong> 합니다. 이것은 무언가가 생성되어 메모리를 사용하지만 &quot;참조 해제&quot;된 경우이며 GameMaker는 더 이상 액세스 할 수 없습니다. 이런 종류의 일은 천천히 메모리를 소모하고 게임에서 지연을 발생 시키거나 심지어 게임을 중단시키는 컴퓨터를 차단하기도하며, 입자 시스템을 처음 사용하는 사람에게는 매우 일반적인 문제입니다.</p>
+    <p class="dropspot">이것을 피하는 방법은 무엇입니까? GameMaker Studio 2에는 GML과 DnD ™가있어 사용하지 않을 때 파티클 시스템과 이미 터와 파티클을 메모리에서 삭제하고 다음 코드 / 액션을 사용할 때 약간의 계획만으로도 이러한 잠재적 인 문제를 쉽게 예방할 수 있습니다.</p>
+    <p class="dropspot">가장 먼저해야 할 일은 시스템을 만들 위치와 사용 방법을 결정하는 것입니다. 메뉴 또는 타이틀 화면과 같이 첫 번째 방에있는 객체의 <strong>게임 시작 이벤트</strong> 에서 전역 시스템을 만들 수 있지만, 이는 <a href="../GameMaker_Language/GML_Reference/General_Game_Control/game_restart.htm"><span class="inline">game_restart ()</span></a> 함수를 사용하여 게임을 다시 시작하면 다시 생성되고 메모리 누수가 발생합니다. 또는 모든 방의 인스턴스에서 로컬 시스템을 생성 할 수 있지만, 방을 나가면 시스템에 액세스 할 수없고 메모리 누수가 발생할 수 있습니다. 이를 피하려면 <a href="../The_Asset_Editors/Object_Properties/Other_Events.htm"><strong>게임 종료 이벤트</strong></a> 또는 오브젝트 <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm"><strong>정리</strong></a> <a href="../The_Asset_Editors/Object_Properties/Other_Events.htm"><strong>이벤트</strong></a> 에 다음과 같은 것이 있어야합니다.</p>
     <p class="code">part_type_destroy(global.Particle1);<br/> part_emitter_destroy(global.P_System, global.Particle1_Emitter);<br/> part_emitter_destroy(global.P_System, global.Particle2_Emitter);<br/> part_system_destroy(global.P_System);
     </p>
-    <p class="dropspot"><img alt="Clean Up Particle System" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CleanUp.png"/>This will remove the defined particles, emitters, and then the system from memory ready for you to restart
-      the game or change room. Just remember that after thinking about where would be the most suitable place to create the system, think about where would be the most suitable place to destroy the system too!</p>
+    <p class="dropspot"><img alt="Clean Up Particle System" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CleanUp.png"/>이렇게하면 정의 된 파티클, 이미 터 및 시스템을 메모리에서 제거하여 게임을 다시 시작하거나 방을 바꿀 수 있습니다. 시스템을 만들기에 가장 적합한 장소가 어디인지 생각한 후에 시스템을 파괴하기에 가장 적합한 장소가 어디인지 생각하십시오!</p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
-  <p>Now you know the basics about particles, particle systems and emitters, so you can now add them into your game! But before rushing off and adding particle effects to everything, please note that while particles are less CPU hungry than instances, they
-    are not the solution to everything as they will cause lag if you have thousands of them at a time. The best thing to do is experiment and use them carefully to &quot;flesh out&quot; visually a game and give it a bit more eye-candy without over doing
-    it.</p>
+  <p>이제 파티클, 파티클 시스템 및 이미 터에 대한 기본 사항을 알았으므로 이제 게임에 추가 할 수 있습니다! 그러나 모든 것에 입자 효과를 추가하고 추가하기 전에, 입자는 인스턴스보다 CPU 배고프지 않지만, 한 번에 수천 개가 있으면 지연을 일으킬 수 있으므로 모든 것에 대한 해결책은 아닙니다. 가장 좋은 방법은 실험을 통해 신중하게 게임을 시각적으로 &quot;육체 화&quot;하여 과장하지 않고 조금 더 눈을 끄는 것입니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Additional_Information\Guide_To_Using_Particles.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="Guide_To_Using_Shaders.htm">Guide To Using Shaders</a></div>
+        <div style="float:left">뒤로: <a href="Additional_Information.htm">추가 정보</a></div>
+        <div style="float:right">다음: <a href="Guide_To_Using_Shaders.htm">셰이더 사용 안내서</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Vectors
@@ -254,4 +198,4 @@ Vector Maths
 vector_maths
 -->
 
-</body></html>
+</body></html> 

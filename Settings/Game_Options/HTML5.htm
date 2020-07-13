@@ -71,7 +71,7 @@
         <span>HTML5</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,84 +80,67 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>HTML5 Game Options</h1>
-  <p>This section outlines the different options available to you that control how your HTML5 game projects will be compiled. The different sections are:</p>
+  <h1>HTML5 게임 옵션</h1>
+  <p>이 섹션에서는 HTML5 게임 프로젝트를 컴파일하는 방법을 제어 할 수있는 다양한 옵션에 대해 간략하게 설명합니다. 다른 섹션은 다음과 같습니다.</p>
   <p> </p>
-  <h2>General</h2>
-  <p><img alt="HTML5 General Options" class="center" src="../../assets/Images/Settings/HTML5_General_Options.png"/>In this section you have fields to fill in the following information about your game:</p>
+  <h2>일반</h2>
+  <p><img alt="HTML5 General Options" class="center" src="../../assets/Images/Settings/HTML5_General_Options.png"/>이 섹션에는 게임에 대한 다음 정보를 입력 할 필드가 있습니다.</p>
   <ul class="colour">
-    <li><strong>Browser Title</strong>: Here you can give text to be used for the title bar of the tab for your game in the browser.</li>
-    <li><strong>Version</strong>: The version number for you project.</li>
-    <li><strong>Name of folder</strong>: The name for the folder where your HTML5 game files will be stored (default is &quot;<span class="inline">html5game</span>&quot;).</li>
-    <li><strong>Output Name</strong>: This is the output HTML file name and can be changed to something other than the default &quot;<span class="inline">index.html</span>&quot;.</li>
+    <li><strong>브라우저 제목</strong> : 여기서 브라우저에서 게임 탭의 제목 표시 줄에 사용될 텍스트를 제공 할 수 있습니다.</li>
+    <li><strong>버전</strong> : 프로젝트의 버전 번호입니다.</li>
+    <li><strong>폴더</strong> 이름 : HTML5 게임 파일이 저장 될 폴더의 이름입니다 (기본값은 &quot; <span class="inline">html5game</span> &quot;).</li>
+    <li><strong>출력 이름</strong> : 출력 HTML 파일 이름이며 기본 &quot; <span class="inline">index.html</span> &quot;이외의 다른 이름으로 변경할 수 있습니다.</li>
   </ul>
   <p> </p>
-  <p>Below the game information fields you have the following options too:</p>
+  <p>게임 정보 필드 아래에는 다음과 같은 옵션도 있습니다.</p>
   <ul class="colour">
-    <li><strong>Output Debug To Console</strong>: This will send all debug output to the JS console of your browser. This is off by default.</li>
-    <li><strong>Display Cursor</strong>: This will disable the mouse cursor when it is over the game canvas. This is on by default.</li>
-    <li><strong>Display &quot;Running Outside Server&quot; Alert</strong>: If you are testing a game locally (ie: clicking on the index file from your computer rather than a server - not recommended), then you normally get a warning informing you that things
-      won&#39;t work as you may expect due to browser security for local files. You can suppress this warning by un-checking this option. It is on by default.</li>
+    <li><strong>Output Debug To Console</strong> : 모든 디버그 출력을 브라우저의 JS 콘솔로 보냅니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>Display Cursor</strong> : 게임 캔버스 위에있을 때 마우스 커서를 비활성화합니다. 이것은 기본적으로 켜져 있습니다.</li>
+    <li><strong>&quot;외부 서버 실행&quot;경고 표시</strong> : 게임을 로컬에서 테스트하는 경우 (예 : 서버가 아닌 컴퓨터에서 색인 파일을 클릭하면 권장되지 않음) 일반적으로 다음과 같이 작동하지 않는다는 경고가 표시됩니다. 로컬 파일의 브라우저 보안으로 인해 예상 될 수 있습니다. 이 옵션을 선택 취소하여이 경고를 표시하지 않을 수 있습니다. 기본적으로 켜져 있습니다.</li>
   </ul>
-  <p>Below the general settings, you have the <strong>Advanced </strong>options, which are:</p>
+  <p>일반 설정 아래에는 다음과 같은 <strong>고급</strong> 옵션이 있습니다.</p>
   <ul class="colour">
-    <li><strong>Included file as index.html</strong>: This is for adding a custom &quot;index.html&quot; file to use instead of the pre-defined one that GameMaker Studio 2 generates by default. This can be very useful if you have a website design implemented
-      or want to include certain features in all your HTML5 builds. The file to use must be included as an <a href="../Included_Files.htm">Included File</a> in the game project.</li>
-    <li><strong>Loading Bar Extension</strong>: This will change the default loading bar for one that has been added to your GameMaker Studio 2 project as an <a href="../../The_Asset_Editors/Extensions.htm">Extension</a>.</li>
-    <li><strong>Prepend output .js</strong>: Here you can prepend the <span class="inline">*.js</span> output with any extra JavaScript necessary for your game. For example, a Chrome Store app may require that you add <span class="inline">window.localStorage = undefined;</span>      to the output JS, for which you would use this option.</li>
+    <li><strong>index.html로 포함 된 파일</strong> : GameMaker Studio 2가 기본적으로 생성하는 사전 정의 된 파일 대신 사용할 사용자 정의 &quot;index.html&quot;파일을 추가하기위한 것입니다. 웹 사이트 디자인을 구현했거나 모든 HTML5 빌드에 특정 기능을 포함하려는 경우 매우 유용합니다. 사용할 <a href="../Included_Files.htm">파일</a> 은 게임 프로젝트에 <a href="../Included_Files.htm">포함 파일</a> 로 포함되어야합니다.</li>
+    <li><strong>로딩 바 확장</strong> : GameMaker Studio 2 프로젝트에 <a href="../../The_Asset_Editors/Extensions.htm">확장</a> 으로 추가 된 기본 로딩 바를 변경합니다.</li>
+    <li><strong>Prepend output .js</strong> : 게임에 필요한 추가 JavaScript로 <span class="inline">* .js</span> 출력을 앞에 추가 할 수 있습니다. 예를 들어 Chrome 스토어 앱에서 <span class="inline">window.localStorage = undefined;</span> 이 옵션을 사용하는 출력 JS에.</li>
   </ul>
   <p> </p>
-  <h2>Analytics</h2>
-  <p><img alt="HTML5 Analytics Options" class="center" src="../../assets/Images/Settings/HTML5_Analytics_Options.png"/>This section permits you to add analytics to your game, permitting you to use certain third-party products to track your game and its
-    sales or plays. You can specify whether to use <a href="https://www.flurry.com/">Flurry Analytics</a> or <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a> to track your game. Due to the nature of these functions,
-    you can only have one active at a time, and once you have flagged the <strong>Enable Flurry Analytics</strong> or <strong>Enable Google Analytics</strong> you should also add the unique ID that you have been assigned into the appropriate area.</p>
-  <p>For information on the functions that you can use to send analytics data, please see <a href="../../GameMaker_Language/GML_Reference/Web_And_HTML5/Web_And_HTML5.htm">here</a>.</p>
+  <h2>해석학</h2>
+  <p><img alt="HTML5 Analytics Options" class="center" src="../../assets/Images/Settings/HTML5_Analytics_Options.png"/>이 섹션에서는 게임에 분석을 추가하여 특정 타사 제품을 사용하여 게임 및 판매 또는 플레이를 추적 할 수 있습니다. <a href="https://www.flurry.com/">Flurry Analytics</a> 또는 <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a> 를 사용하여 게임을 추적할지 여부를 지정할 수 있습니다. 이러한 기능의 특성으로 인해 한 번에 하나만 활성화 할 수 있으며 <strong>Flurry Analytics</strong> <strong>사용</strong> 또는 <strong>Google Analytics 사용으로</strong> 플래그를 지정한 후에는 해당 영역에 지정된 고유 ID를 추가해야합니다.</p>
+  <p>분석 데이터를 전송하는 데 사용할 수있는 기능에 대한 자세한 내용은 <a href="../../GameMaker_Language/GML_Reference/Web_And_HTML5/Web_And_HTML5.htm">여기</a> 를 참조 <a href="../../GameMaker_Language/GML_Reference/Web_And_HTML5/Web_And_HTML5.htm">하십시오</a> .</p>
   <p> </p>
-  <h2>Graphics</h2>
-  <p><img alt="HTML5 Graphics Options" class="center" src="../../assets/Images/Settings/HTML5_Graphics_Options.png"/>Here you can change the following details related to how your game will be displayed (note that not all browsers will display your game
-    in the same way, so test these options on as many browsers as possible to make sure that they have the desired effect):</p>
+  <h2>제도법</h2>
+  <p><img alt="HTML5 Graphics Options" class="center" src="../../assets/Images/Settings/HTML5_Graphics_Options.png"/>여기에서 게임 표시 방법과 관련된 다음 세부 정보를 변경할 수 있습니다 (일부 브라우저에서는 동일한 방식으로 게임이 표시되지 않으므로 가능한 많은 브라우저에서 이러한 옵션을 테스트하여 원하는 효과가 있는지 확인하십시오) :</p>
   <ul class="colour">
-    <li><strong>Allow switching to fullscreen</strong>: Checking this will allow the user to toggle the game from windowed to fullscreen mode using  <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" style="cursor: nwse-resize;" width="55"/> + &quot;<span class="inline">F</span>&quot; on Mac and <span class="inline">F10</span> on Windows. This is
-      on by default.</li>
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be
-      off, but if you have nice alpha blends and smoothed edged graphics it is better left on. This is on by default.</li>
-    <li><strong>Center the game in the browser</strong>: Checking this will automatically center the game screen within the browser running the game. This is off by default.</li>
-    <li><strong>Use Built In Particles</strong>: This option will export the sprites required for the built in particle system along with your game. These sprites are stored in individual texture pages, meaning that they are not the most efficient method
-      of generating particles for this platform, therefore it is recommended that (unless using WebGL) you un-check this option and use your own particle sprites which will be stored on the main texture pages all together for your game. This is on by
-      default.</li>
-    <li><strong>Use Built In Font</strong>: This option will export the GameMaker Studio 2 built in font along with the rest of the game files. This will slightly increase the size of the texture pages and require a small amount of extra memory and storage,
-      so if your game doesn&#39;t use the built in Arial font, this should be disabled. It is on by default.</li>
-    <li><strong>WebGL</strong>: Choose whether to switch off WebGL support, make it optional (auto-detect), or make it a requirement for your game. It should be noted that to test performance under all circumstances, you should have this as disabled, then
-      normally set it to auto-detect for publishing. Making it a requirement may reduce considerably the compatibility that your game has with different browser types. This is set to auto-detect by default.</li>
-    <li><strong>Scaling</strong>: Your game can be configured to scale the draw canvas automatically to <strong>maintain the aspect ratio </strong>within the browser, or you can select to have it run <strong>full scale</strong>. The full scale option will
-      not full screen the game in the browser, but rather stretch what is drawn to fit the canvas size, as defined by the first room of the game. This is set to keep aspect ratio by default.</li>
+    <li><strong>전체 화면 전환 허용</strong> :이 옵션을 선택하면 사용자가 게임을 창에서 전체 화면 모드로 전환 할 수 있습니다 / Mac에서는 + &quot; <span class="inline">F</span> &quot;, Windows에서는 <span class="inline">F10</span> 이것은 기본적으로 켜져 있습니다.</li>
+    <li><strong>픽셀 간 색상 보간</strong> : 기본적으로 &quot;매끄러운&quot;픽셀 인 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간을</a> 켭니다. 선명한 픽셀 그래픽의 경우 꺼져 있어야하지만 멋진 알파 블렌드와 매끄러운 가장자리 그래픽이있는 경우 그대로 유지하는 것이 좋습니다. 이것은 기본적으로 켜져 있습니다.</li>
+    <li><strong>브라우저</strong> 중앙에 게임 센터 : 체크하면 게임을 실행하는 브라우저 내에서 게임 화면이 자동으로 중앙에 위치합니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>내장 파티클 사용</strong> :이 옵션은 내장 파티클 시스템에 필요한 스프라이트를 게임과 함께 내 보냅니다. 이 스프라이트는 개별 텍스처 페이지에 저장되므로이 플랫폼에서 파티클을 생성하는 가장 효율적인 방법이 아니므로 (WebGL을 사용하지 않는 한)이 옵션을 선택 취소하고 나만의 파티클 스프라이트를 사용하는 것이 좋습니다. 게임의 메인 텍스처 페이지에 모두 저장됩니다. 이것은 기본적으로 켜져 있습니다.</li>
+    <li><strong>내장 글꼴 사용</strong> :이 옵션은 게임 파일의 나머지 부분과 함께 내장 글꼴로 GameMaker Studio 2를 내 보냅니다. 텍스처 페이지의 크기가 약간 증가하고 약간의 추가 메모리와 저장 공간이 필요하므로 게임에서 내장 Arial 글꼴을 사용하지 않는 경우 비활성화해야합니다. 기본적으로 켜져 있습니다.</li>
+    <li><strong>WebGL</strong> : WebGL 지원을 끄거나, 선택적으로 (자동 감지) 또는 게임 요구 사항으로 만들지 여부를 선택하십시오. 모든 상황에서 성능을 테스트하려면이 기능을 비활성화 한 다음 일반적으로 게시를 위해 자동 검색하도록 설정해야합니다. 요구 사항을 만들면 게임의 브라우저 유형과의 호환성이 상당히 떨어질 수 있습니다. 기본적으로 자동 감지로 설정되어 있습니다.</li>
+    <li><strong>스케일링</strong> : 브라우저 내에서 <strong>가로 세로 비율</strong> 을 <strong>유지</strong> 하도록 드로우 캔버스를 자동으로 스케일링하도록 게임을 구성하거나 <strong>풀 스케일로</strong> 실행하도록 선택할 수 있습니다. 풀 스케일 옵션은 브라우저에서 게임을 전체 화면으로 표시하지 않고 게임의 첫 번째 방에서 정의한대로 캔버스 크기에 맞게 그린 것을 늘립니다. 기본적으로 종횡비를 유지하도록 설정되어 있습니다.</li>
   </ul>
-  <p>Finally there is the option to set the size of the <a class="tooltip" title="A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There
-    is also a button marked <strong><strong>Preview </strong></strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are
-    structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
-  <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be with different browsers and devices.</p>
+  <p>마지막으로 <a class="tooltip" title="텍스처 페이지 (텍스처 아틀라스라고도 함)는 게임에서 가장 적은 텍스처 메모리를 차지하도록 최적의 방식으로 그룹화 된 이미지 모음 (스프라이트, 타일셋, 글꼴 문자 등)입니다. 실행됩니다.">텍스처 페이지</a> 의 크기를 설정하는 옵션이 있습니다. 기본 (가장 호환되는) 크기는 2048x2048이지만 256x256에서 최대 8192x8192 사이에서 선택할 수 있습니다. 또한이 플랫폼에 대한 텍스처 페이지를 생성 한 다음 창을 열어서 모양을 볼 수있는 <strong><strong>미리보기</strong></strong> 버튼이 있습니다. 텍스처 페이지가 어떻게 구성되어 있는지 확인하고 텍스처 페이지가 필요 이상으로 커지는 것을 방지하려는 경우 매우 유용 할 수 있습니다. 텍스처 페이지에 대한 자세한 내용은 <a href="../Texture_Information/Texture_Pages.htm">여기</a> 를 참조 <a href="../Texture_Information/Texture_Pages.htm">하십시오</a> .</p>
+  <p class="note"><strong>참고</strong> : 텍스처 페이지의 크기가 클수록 게임이 다른 브라우저 및 장치와 호환되지 않습니다.</p>
   <p> </p>
-  <h2>Images</h2>
-  <p><img alt="HTML5 Images Options" class="center" src="../../assets/Images/Settings/HTML5_Images_Options.png"/>This section is where you can define the <strong>Favicon</strong> and the <strong>Splash Screen</strong>. The icon should be authored as an
-    <span class="inline">*.ico</span> file and can be 16x16, 32x32, 48x48, or 64x64 pixels in size, and 8-bit, 24-bit, or 32-bit in colour depth. The splash screen should be the size of the canvas that is going to hold your game and will override any
-    loading bars if you tick the Use Splash Screen option (ie: you can have a loading bar, OR a splash screen, but not both). Smaller or larger images are permitted but will be scaled to fit. The splash screen should be a <span class="inline">*.png</span>    image.</p>
-  <p>It is worth noting that GameMaker Studio 2 has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game
-    is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require.</p>
+  <h2>이미지</h2>
+  <p><img alt="HTML5 Images Options" class="center" src="../../assets/Images/Settings/HTML5_Images_Options.png"/>이 섹션에서는 <strong>Favicon</strong> 및 <strong>스플래시 화면을</strong> 정의 할 수 있습니다. 아이콘은 <span class="inline">* .ico</span> 파일로 작성되어야하며 크기는 16x16, 32x32, 48x48 또는 64x64 픽셀이고 색상 깊이는 8 비트, 24 비트 또는 32 비트 일 수 있습니다. 스플래시 화면은 게임을 유지하려는 캔버스의 크기 여야하며 스플래시 화면 사용 옵션을 선택하면 로딩 막대를 재정의합니다 (예 : 로딩 막대 또는 스플래시 화면을 가질 수 있지만 둘다는 아님) . 더 작거나 큰 이미지는 허용되지만 크기가 맞도록 조정됩니다. 스플래시 화면은 <span class="inline">* .png</span> 이미지 여야합니다.</p>
+  <p>GameMaker Studio 2에는 게임이 컴파일되는 모든 다른 대상 플랫폼에 필요한 모든 이미지를 자동으로 만드는 데 사용할 수있는 <a href="../../IDE_Tools/Project_Image_Generator.htm">프로젝트 이미지 생성기</a> 도구가 있습니다. 이 도구를 사용하는 경우 필요한 이미지가되도록 만들어진 이미지를 수정해야합니다.</p>
   <p> </p>
-  <h2>Social</h2>
-  <p><img alt="HTML5 Social Options" class="center" src="../../assets/Images/Settings/HTML5_Social_Options.png"/>The social tab is used for setting up <strong>Facebook </strong>communication in your game. If you require the Facebook functions, you need
-    to click the &quot;Use Facebook&quot; checkbox and then supply the <strong>Facebook App ID</strong> and <strong>Facebook App Display Name</strong>. Note that all Facebook functionality is accessed via an extension, and when you first check the <strong>Use Facebook</strong>    box you will be prompted to download and install the Facebook extension from the <a href="../../Introduction/The_Marketplace.htm">Marketplace</a> (you may need to log into your <a href="https://help.yoyogames.com/hc/en-us/articles/216757288-Creating-a-YoYo-Account">YoYo Account</a>    before it can be downloaded).</p>
+  <h2>사회적인</h2>
+  <p><img alt="HTML5 Social Options" class="center" src="../../assets/Images/Settings/HTML5_Social_Options.png"/>소셜 탭은 게임에서 <strong>Facebook</strong> 통신을 설정하는 데 사용됩니다. Facebook 기능이 필요한 경우 &quot;Facebook 사용&quot;확인란을 클릭 한 다음 <strong>Facebook 앱 ID</strong> 및 <strong>Facebook 앱 표시 이름을 제공해야</strong> 합니다. 모든 Facebook 기능은 확장 프로그램을 통해 액세스되며, <strong>Facebook 사용</strong> 상자를 처음 선택하면 <a href="../../Introduction/The_Marketplace.htm">마켓 플레이스</a> 에서 Facebook 확장 프로그램을 다운로드하여 설치하라는 메시지가 표시됩니다 (다운로드하기 전에 <a href="https://help.yoyogames.com/hc/en-us/articles/216757288-Creating-a-YoYo-Account">YoYo 계정에 로그인</a> 해야 할 수도 있음) .</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings\Game_Options\HTML5.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a href="Android.htm">Android</a></div>
+        <div style="float:left">뒤로: <a href="../Game_Options.htm">게임 옵션</a></div>
+        <div style="float:right">다음: <a href="Android.htm">기계적 인조 인간</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 HTML5 Game Options
@@ -166,4 +149,4 @@ HTML5 Game Options
 html5_options
 -->
 
-</body></html>
+</body></html> 

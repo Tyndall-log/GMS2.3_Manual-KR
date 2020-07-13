@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Reverting Files">
-        <span>Reverting Files</span>
+        <span>파일 되돌리기</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,69 +80,64 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Reverting Files</h1>
-  <p>In the previous sections you&#39;ve seen how to <a href="Repository_Options.htm">create a repository</a> and <a href="Standard_Workflow.htm">commit things to it</a>, but what happens if you make a mistake and want to &quot;roll back&quot; to a previous
-    commit? Let&#39;s make a deliberate error and see how we can deal with it then...</p>
-  <p>First of all create a new resource - in this example we&#39;ll make a Script resource - and initially you&#39;ll see no status icon since as far as source control is concerned it doesn&#39;t exist exist yet. In the script resource add a simple line
-    of code, like:</p>
+  <h1>파일 되돌리기</h1>
+  <p>이전 섹션에서는 <a href="Repository_Options.htm">리포지토리</a> 를 <a href="Repository_Options.htm">생성</a> 하고 <a href="Standard_Workflow.htm">커밋</a> <a href="Repository_Options.htm">하는</a> 방법을 보았지만 실수를해서 이전 커밋으로 &quot;롤백&quot;하려는 경우 어떻게됩니까? 고의적 인 실수를 저지르고 어떻게 처리 할 수 ​​있는지 봅시다 ...</p>
+  <p>우선 새 리소스를 생성합니다 (이 예제에서는 스크립트 리소스를 생성 함). 소스 컨트롤에 관한 한 아직 존재하지 않는 상태 아이콘에는 상태 아이콘이 표시되지 않습니다. 스크립트 리소스에서 다음과 같은 간단한 코드 줄을 추가하십시오.</p>
   <p class="code">show_debug_message(&quot;Hello World&quot;);</p>
-  <p>If you now close the code editor, the script will save and the modified file icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/> will appear beside it in the <a href="../../Introduction/The_Asset_Browser.htm">Asset Browser</a>.
-    Now, open up the <strong>Commit </strong>window and you&#39;ll see there are four staged changes, as new resources automatically get added:</p>
-  <p><img alt="Source Control Staged Changes" class="center" src="../../assets/Images/IDE Tools/SCM_StagedChanges.png"/>The changes staged will be:</p>
+  <p>If you now close the code editor, the script will save and the modified file icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/><a href="../../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 에서 옆에 나타납니다. <strong>커밋</strong> 창을 열고 새로운 리소스가 자동으로 추가됨에 따라 4 가지 단계적 변경이 있음을 알 수 있습니다.</p>
+  <p><img alt="Source Control Staged Changes" class="center" src="../../assets/Images/IDE Tools/SCM_StagedChanges.png"/>준비된 변경 사항은 다음과 같습니다.</p>
   <ul class="colour">
-    <li>the <span class="inline">.yyp</span> project file</li>
-    <li>a view file</li>
-    <li>the GML script itself</li>
-    <li>the <span class="inline">.yy</span> file referencing it</li>
+    <li><span class="inline">.yyp</span> 프로젝트 파일</li>
+    <li>뷰 파일</li>
+    <li>GML 스크립트 자체</li>
+    <li>그것을 참조하는 <span class="inline">.yy</span> 파일</li>
   </ul>
-  <p>You should type in a commit message and then click the <strong>Commit </strong>button, just as we explained previously. Now, we go back to our script and change the line of code to (for example):</p>
+  <p>앞서 설명한 것처럼 커밋 메시지를 입력 한 다음 <strong>커밋</strong> 버튼을 클릭해야합니다. 이제 스크립트로 돌아가서 코드 줄을 다음과 같이 변경합니다 (예 :).</p>
   <p class="code">show_debug_message(&quot;Hello World, how are you?&quot;);</p>
-  <p>When we close the code editor, again a red icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/> will be shown beside the script, but we&#39;ve realised that we made a mistake with our code and we want to
-    roll back to a previous version to fix it (obviously, you could just open the script and fix it easily, since the example is so simple, but in large projects that&#39;s not normally a feasible approach). What we need to do is <strong>revert </strong>our
-    changes.</p>
-  <p>To revert a change we first need to open up the commit window again, so we go to <strong>Source Control</strong> &gt; <strong>Commit Changes</strong> once more. Our changed file will again be staged ready for committing, but this isn&#39;t what we want
-    so we click the button <strong>Unstage All</strong> to take it out of the staging area.</p>
-  <p>If we now right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/></strong> on the file we changed we&#39;ll get a context menu with an option to <strong>Revert Path</strong>:</p>
-  <p><img alt="Source Control Revert Path" class="center" src="../../assets/Images/IDE Tools/SCM_RevertPath.png"/>When you select this option, you will revert the files back to the previous state that they were in.</p>
-  <p class="note"><strong>IMPORTANT!</strong> When you revert you will get a message asking you to reload or save the current project due to the file checker detecting changes on disk:<br/>
-    <img alt="Source Control Warning" class="center" src="../../assets/Images/IDE Tools/SCM_Warning.png"/>You must hit Reload and not save, as saving will save what is memory rather than reloading the reverted files.</p>
-  <p>That&#39;s all great for when you edit something and want to change back without having already performed a commit, but what about when you have committed one or more changes and want to roll back to a <em>previous </em>commit? Well, let&#39;s edit
-    our script again to say:</p>
+  <p>When we close the code editor, again a red icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/>스크립트 옆에 표시되지만 코드에 실수가 있음을 깨달았으며 이전 버전으로 롤백하여 문제를 해결하려고합니다 (예를 들어 스크립트를 열고 쉽게 수정할 수 있음) 매우 간단하지만 일반적으로 실현 가능한 접근 방식이 아닌 대규모 프로젝트에서는). 우리가해야 할 일은 변경 사항을 <strong>되 돌리는</strong> 것입니다.</p>
+  <p>변경 사항을 되돌리려면 먼저 커밋 창을 다시 열어야하므로 <strong>소스 컨트롤</strong> &gt; <strong>커밋 변경으로</strong> 다시 한 번 이동합니다. 변경된 파일을 다시 커밋 할 준비가 되었으나 원하는 단계가 <strong>아니므로 모두</strong> 스테이지 해제 버튼을 클릭하여 준비 영역에서 가져옵니다.</p>
+  <p>If we now right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/>변경된 파일에서 <strong>경로 되돌리기</strong> 옵션이있는 컨텍스트 메뉴가 나타납니다.</p>
+  <p><img alt="Source Control Revert Path" class="center" src="../../assets/Images/IDE Tools/SCM_RevertPath.png"/>이 옵션을 선택하면 파일을 이전 상태로 되돌립니다.</p>
+  <p class="note"><strong>IMPORTANT!</strong> When you revert you will get a message asking you to reload or save the current project due to the file checker detecting changes on disk:<br/>저장하면 되 돌린 파일을 다시로드하는 대신 메모리가 저장되므로 다시로드를 누르고 저장하지 않아야합니다.</p>
+  <p>그것은 무엇인가를 편집하고 이미 커밋을 수행하지 않고 다시 변경하고 싶을 때 유용하지만, 하나 이상의 변경을 커밋하고 <em>이전</em> 커밋으로 롤백하려는 경우는 어떻습니까? 자, 스크립트를 다시 편집하여 다음과 같이 말하겠습니다.</p>
   <p class="code">show_debug_message(&quot;This is a bad idea&quot;);</p>
-  <p>Now we commit it as before to get it under source control. So, this was a bad idea and we want to roll back, which means to start with we need to open the <strong>Source Control</strong> &gt; <strong>View History</strong> window. Here we will see a
-    list of all previous commits now in this window, starting with the initial commit, the commit for the script, and then the commit for the script that we have edited as a &quot;bad idea&quot;:</p>
-  <p><img alt="Source Control Bad Idea History" class="center" src="../../assets/Images/IDE Tools/SCM_BadIdea.png"/>We now have two choices. We can revert an entire revision - which will revert all files that were changed to those of the chosen commit -
-    or we can choose to revert a path - which will simply revert a single file. Let&#39;s do the first option to start with:</p>
+  <p>이제 우리는 소스 제어하에 그것을 얻기 위해 이전과 같이 커밋합니다. 그래서 이것은 나쁜 생각이었고 우리는 롤백하기를 원합니다. 먼저 <strong>소스 제어</strong> &gt; <strong>히스토리보기</strong> 창을 열어야합니다. 여기서는 초기 커밋, 스크립트 커밋, &quot;나쁜 생각&quot;으로 편집 한 스크립트 커밋으로 시작하여이 창에있는 모든 이전 커밋 목록을 볼 수 있습니다.</p>
+  <p><img alt="Source Control Bad Idea History" class="center" src="../../assets/Images/IDE Tools/SCM_BadIdea.png"/>이제 두 가지 선택이 있습니다. 우리는 전체 수정본을 되돌릴 수 있습니다-선택된 커밋의 파일로 변경된 모든 파일을 되돌 리거나 경로를 되돌 리도록 선택하면 단일 파일을 되돌릴 수 있습니다. 첫 번째 옵션으로 시작해 봅시다 :</p>
   <ul class="colour">
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/></strong> our second commit in the <strong>Commit History</strong> pane (the &quot;Hello World&quot; commit).</li>
-    <li>Select <strong>Revert To This Revision</strong> and then choose <strong>ReLoad</strong> on the warning message.</li>
+    <li>마우스 오른쪽 버튼으로 클릭 <strong>커밋 히스토리</strong> 분할 창 ( &quot;Hello World&quot;커밋)의 두 번째 커밋.</li>
+    <li><strong>되돌리려면이 개정을</strong> 선택한 다음 경고 메시지에 <strong>다시로드를</strong> 선택합니다.</li>
   </ul>
-  <p>You should see that the script now has a red status icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/>, and if we open it up, we&#39;ll have the following:</p>
-  <p><img alt="Source Control Revert To Revision" class="center" src="../../assets/Images/IDE Tools/SCM_RevertToRevision.png"/>We can then do a commit on the project and we&#39;ll be back to where we were once again. However we can also undo that action
-    for the file and get our &quot;bad idea&quot; commit back by doing the following:</p>
+  <p>You should see that the script now has a red status icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/>을 열면 다음과 같은 결과가 나타납니다.</p>
+  <p><img alt="Source Control Revert To Revision" class="center" src="../../assets/Images/IDE Tools/SCM_RevertToRevision.png"/>그런 다음 프로젝트에 대한 커밋을 수행 할 수 있으며 다시 한 번 다시 돌아올 것입니다. 그러나 파일에 대한 해당 작업을 취소하고 다음을 수행하여 &quot;나쁜 생각&quot;을 다시 수행 할 수도 있습니다.</p>
   <ul class="colour">
-    <li>Open the <strong>Commit Changes</strong> window.</li>
-    <li>Unstage the script with the &quot;Hello World&quot; code in it.</li>
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/></strong> and <strong>Revert Path</strong>.</li>
+    <li><strong>커밋 변경</strong> 창을 엽니 다.</li>
+    <li>&quot;Hello World&quot;코드가 포함 된 스크립트를 준비 해제하십시오.</li>
+    <li>마우스 오른쪽 버튼으로 클릭 <strong>경로 되돌리기</strong> .</li>
   </ul>
-  <p>Now we are back to having the erroneous file in the project again! Well, we can take this opportunity to revert only that file path instead of reverting everything to a previous revision. For that we need to do the following:</p>
+  <p>이제 우리는 다시 프로젝트에 잘못된 파일을 가지고 있습니다! 글쎄, 우리는 모든 것을 이전 버전으로 되 돌리는 대신 파일 경로 만 되돌릴 수있는 기회를 가질 수 있습니다. 이를 위해 다음을 수행해야합니다.</p>
   <ul class="colour">
-    <li>Open the <strong>View History</strong> window.</li>
-    <li>Click on the second commit (the &quot;Hello World&quot; commit).</li>
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/></strong> on our script GML in the Files pane and select <strong>Revert Path</strong>.</li>
+    <li><strong>보기 히스토리</strong> 창을여십시오.</li>
+    <li>두 번째 커밋 ( &quot;Hello World&quot;커밋)을 클릭하십시오.</li>
+    <li>마우스 오른쪽 버튼으로 클릭 파일 창의 스크립트 GML에서 <strong>경로 되돌리기를</strong> 선택합니다.</li>
   </ul>
-  <p>We should be back to having our &quot;Hello World&quot; code and we can then do a fresh commit to update the source control again with the corrected file.</p>
+  <p>&quot;Hello World&quot;코드를 다시 가져 와서 수정 된 파일로 소스 컨트롤을 다시 업데이트하기 위해 새로 커밋 할 수 있습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('IDE_Tools\Source_Control\Reverting_Files.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
+        <div style="float:left">뒤로: <a href="../Source_Control.htm">소스 컨트롤</a></div>
+        <div style="float:right">다음: <a href="Cloning_A_Repository.htm">
+      <div class="clear">
         <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-        <div style="float:right">Next: <a href="Cloning_A_Repository.htm">Cloning A Repository</a> </div>
+        <div style="float:right">Next: <a href="Cloning_A_Repository.htm">Cloning A Repository</a> </div>iv class="clear">
+        <div style="float:left">Back: <a href="../Source_Control.htm">소스 컨트롤</a></div>
+        <div style="float:right">Next: <a href="Cloning_A_Repository.htm">리포지토리 복제</a> </div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Source Control Reverting Files
@@ -152,4 +147,4 @@ reverting files
 source_control_revert
 -->
 
-</body></html>
+</body></html> 

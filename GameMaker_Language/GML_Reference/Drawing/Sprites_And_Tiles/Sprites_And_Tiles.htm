@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Sprites And Tiles">
-        <span>Sprites And Tiles</span>
+        <span>스프라이트와 타일</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,17 +80,13 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Sprites And Tiles</h1>
-  <p>Even though you can set up backgrounds in the room editor and you can assign sprites to instances, often this is not flexible enough for the game you are making. For example, if you have an instance that has to draw a menu, you may want to display various
-    button sprites at a time, or if you have a game with scrolling parallax backgrounds you will need to be able to set them through code in a controller instance of some type. In these situations you should be using the following functions which can
-    draw sprite and background assets anywhere in the room with some of the functions also permitting you to manipulate the shape, size, colour and alpha of the sprite to achieve special effects.</p>
-  <p>You can assign a sprite to an instance and by default GameMaker Studio 2 will draw it with the properties given by the various <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">sprite variables</a>,
-    however if you add anything into the draw event, you are &quot;taking control&quot; and must tell GameMaker Studio 2 exactly what to draw. This means that if you must use the following functions to define exactly what it is the instance is
-    to draw and where about in the room it is to draw it:</p>
+  <h1>스프라이트와 타일</h1>
+  <p>룸 편집기에서 배경을 설정하고 인스턴스에 스프라이트를 할당 할 수 있지만, 종종 만드는 게임에 적합하지 않은 경우가 있습니다. 예를 들어 메뉴를 그려야하는 인스턴스가있는 경우 한 번에 다양한 버튼 스프라이트를 표시하거나 시차 배경이 스크롤되는 게임이있는 경우 코드를 통해이를 설정할 수 있어야합니다. 어떤 유형의 컨트롤러 인스턴스. 이러한 상황에서는 특수한 효과를 얻기 위해 스프라이트의 모양, 크기, 색상 및 알파를 조작 할 수있는 일부 기능을 사용하여 방의 어느 곳에 나 스프라이트 및 배경 자산을 그릴 수있는 다음 기능을 사용해야합니다.</p>
+  <p>인스턴스에 스프라이트를 할당 할 수 있으며 기본적으로 GameMaker Studio 2는 다양한 <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">스프라이트 변수가</a> 제공하는 속성을 사용하여 그 <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">스프라이트</a> 를 그립니다. 그러나 draw 이벤트에 무언가를 추가하면 &quot;제어&quot;중이며 GameMaker Studio 2에게 정확하게 알려야합니다 무엇을 그릴 지. 즉, 다음 함수를 사용하여 인스턴스가 무엇을 그리는지, 방에서 어디를 그리는지 정확하게 정의하려면 다음을 수행하십시오.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="draw_self.htm">draw_self</a></li>
-    <li><a href="draw_sprite.htm">draw_sprite</a></li>
+    <li><a href="draw_self.htm">무승부</a></li>
+    <li><a href="draw_sprite.htm">무승부</a></li>
     <li><a href="draw_sprite_ext.htm">draw_sprite_ext</a></li>
     <li><a href="draw_sprite_general.htm">draw_sprite_general</a></li>
     <li><a href="draw_sprite_part.htm">draw_sprite_part</a></li>
@@ -102,8 +98,7 @@
     <li><a href="draw_sprite_tiled_ext.htm">draw_sprite_tiled_ext</a></li>
   </ul>
   <p> </p>
-  <p>If you are using SWF format sprites, then there are also additional options for controlling the anti-aliasing used when drawing (see <a href="../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Importing Non-Bitmap Sprites</a> for
-    more information on these types of sprites). Note that these functions work on a <i>global</i> level and will set the AA on all vector SWF sprites drawn after they have been called.</p>
+  <p>SWF 형식 스프라이트를 사용하는 경우 그릴 때 사용되는 앤티 앨리어싱을 제어하기위한 추가 옵션도 있습니다 (이러한 스프라이트 유형에 대한 자세한 내용은 <a href="../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">비트 맵이 아닌 스프라이트 가져 오기</a> 참조). 이러한 함수는 <i>전역</i> 수준에서 작동하며 호출 된 후 그려진 모든 벡터 SWF 스프라이트에 AA를 설정합니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="draw_enable_swf_aa.htm">draw_enable_swf_aa</a></li>
@@ -111,8 +106,7 @@
     <li><a href="draw_get_swf_aa_level.htm">draw_get_swf_aa_level</a></li>
   </ul>
   <p> </p>
-  <p>Apart from those functions listed above, there are also two special functions designed for use with skeletal animations (see <a href="../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Importing Non-Bitmap Sprites</a> for
-    more information on these types of sprites, and the section <a href="../../Asset_Management/Sprites/Skeletal_Animation/Skeletal_Animation.htm">Skeletal Animations</a> for specific functions related to these types of sprites):</p>
+  <p>위에 나열된 함수 외에도 스켈 레탈 애니메이션과 함께 사용하도록 설계된 두 가지 특수 함수가 있습니다 (이 유형의 스프라이트에 대한 자세한 내용은 <a href="../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">비 비트 맵 스프라이트 가져 오기</a> 및 이러한 유형의 스프라이트와 관련된 특정 함수에 대한 <a href="../../Asset_Management/Sprites/Skeletal_Animation/Skeletal_Animation.htm">스켈 레탈 애니메이션</a> 섹션 참조). :</p>
   <p> </p>
   <ul class="colour">
     <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton.htm">draw_skeleton</a></li>
@@ -121,23 +115,24 @@
     <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton_time.htm">draw_skeleton_time</a></li>
   </ul>
   <p> </p>
-  <p>Tiles are drawn automatically based on the data that they contain, the tile set used and the tile map properties. However you <i>can</i> draw individual tiles or tile maps using the following functions:</p>
+  <p>타일은 포함 된 데이터, 사용 된 타일 세트 및 타일 맵 속성에 따라 자동으로 그려집니다. 그러나 다음 기능을 사용하여 개별 타일 또는 타일 맵을 그릴 수 <i>있습니다</i> .</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="draw_tile.htm">draw_tile</a></li>
+    <li><a href="draw_tile.htm">무승부</a></li>
     <li><a href="draw_tilemap.htm">draw_tilemap</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Drawing\Sprites_And_Tiles\Sprites_And_Tiles.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="../Text/Text.htm">Text</a></div>
+        <div style="float:left">뒤로: <a href="../Drawing.htm">그림</a></div>
+        <div style="float:right">다음: <a href="../Text/Text.htm">본문</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Sprites And Tiles
@@ -146,4 +141,4 @@ Sprites And Tiles
 sprite_tile_functions
 -->
 
-</body></html>
+</body></html> 

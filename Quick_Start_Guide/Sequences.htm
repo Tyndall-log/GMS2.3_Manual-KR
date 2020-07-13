@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Sequences">
-        <span>Sequences</span>
+        <span>시퀀스</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,37 +81,30 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Sequences</h1>
-  <p>The final asset we&#39;ll discuss in this guide before moving on to discuss how it all comes together in the <strong>Room Editor</strong>, is the  <strong>Sequences</strong> asset. A sequence is essentially a collection of other assets that are collected
-    in one place and then animated together. The final animation (sequence) can then be added to rooms in your game much like instances.</p>
-  <p>Sequences are created through the <a href="../The_Asset_Editors/Sequences.htm"><strong>Sequence Editor</strong></a> which is opened whenever you create a new sequence asset in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>:</p>
-  <p><img alt="The Sequences Editor" class="center" src="../assets/Images/QS_Guide/QS_Sequences_Editor.png"/>To create a basic sequence you add either a sound, a sprite or an instance into the sequence <em>canvas</em> and then position it to where you want
-    it to be at the start of the sequence. This creates an <strong><a class="tooltip" title="A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.">Asset Track</a></strong> in the <a class="tooltip" title="The area of the sequence editor that shows you all the different tracks in a sequence - asset tracks, parameter tracks, track groups and clip mask groups.">Track Panel</a> <em></em> and also
-    adds <strong></strong>a <strong><a class="tooltip" title="A keyframe (also called a parameter key) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">keyframe</a></strong> into the <a class="tooltip" title="The Dope Sheet is the visual representation of the sequence timeline, and where you can add, remove and edit the different asset keys and parameter keys that affect how the different tracks in the sequence will behave over time.">Dope Sheet</a> to show the duration that the asset will be visible for.</p>
-  <p>Time for the sequence is in frames (which is the same as steps for instances, ie: one frame is the same as one game step), and you can see what will happen at any given frame by moving the sequence <strong><a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet, the Animation Curve editor or the Sprite editor. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a></strong> in
-    the dope sheet. The playhead position is also used for adding in <strong>keyframes </strong>which are the frames where you want some state to change to begin or end. Parameter keys are stored on <strong><a class="tooltip" title="A track that has been assigned to an asset track in the track panel and that changes a single parameter for the asset track it&#39;s linked to, like the position, or the image index.">parameter tracks</a></strong> for
-    the given asset.</p>
-  <p>So, you would position the asset and set its scale and colour and other properties at frame 0 of the sequence. You would then record the parameter keys for the asset and move the playhead to the frame where you want to set the next asset state (position,
-    colour, etc....). On this frame you would again change the different parameters and record keys for them, then repeat this process as required for the length of the sequence. When you press play on the sequence, the asset will be animated, with the
-    sequence <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a> between the different parameter states, giving an end result something like this: </p>
-  <p><img alt="Sequence Example Image" class="center" src="../assets/Images/QS_Guide/QS_Sequence_Example.gif"/>We won&#39;t go into more details about how sequences work here, but suffice to say that they are an incredibly powerful tool for doing anything
-    from cut-scenes, to menus, to character states and much more.</p>
-  <p>The page linked below gives you all the details on how to use sequences in your games:</p>
+  <h1>시퀀스</h1>
+  <p>이 안내서에서 논의 할 마지막 자산은 <strong>Room Editor</strong> 에서 모두 어떻게 구성되는지 논의하기 위해 이동하기 전에 <strong>시퀀스</strong> 자산입니다. 시퀀스는 본질적으로 한 곳에서 수집 된 다음 함께 애니메이션되는 다른 자산의 모음입니다. 그런 다음 최종 애니메이션 (시퀀스)을 인스턴스와 매우 유사하게 게임의 방에 추가 할 수 있습니다.</p>
+  <p>시퀀스는 <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> 에서 새 시퀀스 자산을 생성 할 때마다 열리는 <a href="../The_Asset_Editors/Sequences.htm"><strong>Sequence Editor</strong></a> 를 통해 생성됩니다.</p>
+  <p><img alt="The Sequences Editor" class="center" src="../assets/Images/QS_Guide/QS_Sequences_Editor.png"/>기본 시퀀스를 만들려면 사운드, 스프라이트 또는 인스턴스를 시퀀스 <em>캔버스</em> 에 추가 한 다음 시퀀스 시작시 원하는 위치에 배치합니다. <a class="tooltip" title="자산 트랙, 파라미터 트랙, 트랙 그룹 및 클립 마스크 그룹과 같은 시퀀스의 모든 다른 트랙을 표시하는 시퀀스 편집기 영역입니다.">트랙 패널에</a> <strong><a class="tooltip" title="단일 트랙, 스프라이트, 사운드, 인스턴스 또는 시퀀스를 보유하는 시퀀스 트랙 패널의 트랙.">자산 트랙</a></strong> 이 생성됩니다 또한 추가 자산이 표시 될 기간을 표시하기 위해 <a class="tooltip" title="도프 시트는 시퀀스 타임 라인을 시각적으로 표현한 것으로 시퀀스의 다른 트랙이 시간이 지남에 따라 작동하는 방식에 영향을주는 다양한 자산 키 및 매개 변수 키를 추가, 제거 및 편집 할 수 있습니다.">Dope Sheet</a> 의 <strong><a class="tooltip" title="키 프레임 (파라미터 키라고도 함)은 도프 시트의 타임 라인에서 매개 변수 값의 변경이 정의 된 지점입니다.">키 프레임</a></strong></p>
+  <p>시퀀스 시간은 프레임 단위 (예 : 단계와 동일합니다. 즉, 한 프레임은 하나의 게임 단계와 동일)이며 도프 시트에서 시퀀스 <strong><a class="tooltip" title="시퀀스 도프 시트, 애니메이션 커브 편집기 또는 스프라이트 편집기의 타임 라인 내 현재 &#39;재생&#39;위치. 시퀀스 (및 스프라이트)에서는 애니메이션을 미리 볼 때 이동하며 특정 프레임에 배치하여 해당 위치에서 키와 키 프레임을보고 편집 할 수 있습니다.">재생 헤드</a></strong> 를 이동하여 주어진 프레임에서 어떤 일이 발생하는지 확인할 수 있습니다. . 재생 헤드 위치는 상태를 시작 또는 종료하려는 프레임 인 <strong>키 프레임</strong> 을 추가하는 데에도 사용됩니다. 파라미터 키는 주어진 자산의 <strong><a class="tooltip" title="트랙 패널에서 자산 트랙에 할당되고 위치 또는 이미지 색인과 같이 링크 된 자산 트랙의 단일 매개 변수를 변경하는 트랙.">파라미터 트랙</a></strong> 에 저장됩니다.</p>
+  <p>따라서 애셋을 배치하고 스케일과 색상 및 기타 속성을 시퀀스의 프레임 0에 설정합니다. 그런 다음 자산의 파라미터 키를 기록하고 다음 자산 상태 (위치, 색상 등)를 설정하려는 프레임으로 재생 헤드를 이동합니다. 이 프레임에서 다른 파라미터와 레코드 키를 다시 변경 한 다음 시퀀스 길이에 따라이 프로세스를 반복합니다. 시퀀스에서 재생을 누르면 서로 다른 매개 변수 상태 사이의 시퀀스 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간으로</a> 자산이 애니메이션화되어 다음과 같은 최종 결과가 나타납니다.</p>
+  <p><img alt="Sequence Example Image" class="center" src="../assets/Images/QS_Guide/QS_Sequence_Example.gif"/>여기서 시퀀스가 ​​작동하는 방법에 대한 자세한 내용은 다루지 않지만 컷 장면, 메뉴, 캐릭터 상태 등을 수행하는 데 매우 강력한 도구라고 말할 수 있습니다.</p>
+  <p>아래 링크 된 페이지는 게임에서 시퀀스를 사용하는 방법에 대한 모든 세부 사항을 제공합니다.</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Sequences.htm">The Sequences Editor</a></li>
+    <li><a href="../The_Asset_Editors/Sequences.htm">시퀀스 에디터</a></li>
   </ul>
-  <p>Now we can move on to talk about the  <strong>Room Editor</strong>, which is where all these parts of your game come together...</p>
+  <p>이제 게임의 모든 부분이 모여있는 <strong>Room Editor</strong> 에 대해 이야기 해 보겠습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Quick_Start_Guide\Sequences.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Rooms.htm">Rooms</a></div>
+        <div style="float:left">뒤로: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="Rooms.htm">객실</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Quick Start: Sequences
@@ -121,4 +114,4 @@ Sequences
 qs_sequences
 -->
 
-</body></html>
+</body></html> 

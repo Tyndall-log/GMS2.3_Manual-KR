@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Sprite Editor Preferences">
-        <span>Sprite Editor Preferences</span>
+        <span>스프라이트 에디터 환경 설정</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,45 +80,40 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Sprite Editor Preferences</h1>
+  <h1>스프라이트 에디터 환경 설정</h1>
   <p><img alt="Sprite Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Prefs.png"/></p>
-  <p>The <strong>Sprite Editor Preferences</strong> are used to define how the <a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a> looks and functions. The following options exist:</p>
+  <p><strong>Sprite Editor Preferences</strong> 는 <a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor의</a> 모양과 기능을 정의하는 데 사용됩니다. 다음과 같은 옵션이 있습니다.</p>
   <ul class="colour">
-    <li><strong>Default sprite origin</strong>: This option permits you to set the default origin position for any new sprite resources that you create. The default value is the Top Left.</li>
-    <li><strong>Default sprite collision mask kind</strong>: This option permits you to set the default kind of collision mask to use for new sprites. Choices are <em>rectangle</em>, <em>rotated rectangle</em>, <em>ellipse</em>, <em>diamond</em>, or <em>precise</em>      / <em>precise per frame.</em> The default is <em>rectangle</em>.</li>
-    <li><strong>Default sprite animation mode</strong>: This option permits you to set the default animation mode for sprites in the sprite editor. You can choose either &quot; <em>Frames per second</em>&quot; or &quot; <em>Frames per game frame</em>&quot;,
-      with the default setting being &quot; <em>Frames per second</em>&quot;.</li>
-    <li><strong>Default sprite animation speed</strong>: This option permits you to set the default animation speed value for when you create a new sprite asset. Note that this value is linked to the animation mode and - for example - 3 frames per second
-      is not the same as 30 frames per game frame, so be sure to set this value correctly in reference to the preferred mode. Default value is 30.</li>
-    <li><strong>Default sprite width</strong>: This option permits you to set the default width for all new sprites created. Default value is 64.</li>
-    <li><strong>Default sprite height</strong>: This option permits you to set the default height for all new sprites. Default value is 64.</li>
-    <li><strong>Apply resize and scale to sprite origin</strong>: When checked this option will change the origin of the sprite when the sprite is resized or scaled, with the new origin being moved/scaled to match the new values for the sprite. Note that
-      this is only applicable for custom sprite origins that are not locked in the sprite editor. If the origin is locked or the sprite uses one of the default positions - eg: &quot;Center&quot; or &quot;Top Left&quot;, etc... - then this option will
-      be grayed out and unavailable for changing. Default is enabled.</li>
+    <li><strong>기본 스프라이트 원산지</strong> :이 옵션을 사용하면 생성 한 새 스프라이트 리소스의 기본 원점 위치를 설정할 수 있습니다. 기본값은 왼쪽 위입니다.</li>
+    <li><strong>기본 스프라이트 충돌 마스크 종류</strong> :이 옵션을 사용하면 새 스프라이트에 사용할 기본 충돌 마스크 종류를 설정할 수 있습니다. <em>직사각형</em> , <em>회전 직사각형</em> , <em>타원</em> , <em>다이아몬드</em> 또는 <em>프레임 당</em> <em>정밀</em> / 정확도를 선택할 <em>수 있습니다.</em> 기본값은 <em>rectangle</em> 입니다.</li>
+    <li><strong>기본 스프라이트 애니메이션 모드</strong> :이 옵션을 사용하면 스프라이트 편집기에서 스프라이트의 기본 애니메이션 모드를 설정할 수 있습니다. &quot; <em>초당 프레임</em> &quot;또는 &quot; <em>게임 프레임 당 프레임</em> &quot;을 선택할 수 있으며 기본 설정은 &quot; <em>초당 프레임</em> &quot;입니다.</li>
+    <li><strong>기본 스프라이트 애니메이션 속도</strong> :이 옵션을 사용하면 새 스프라이트 자산을 만들 때의 기본 애니메이션 속도 값을 설정할 수 있습니다. 이 값은 애니메이션 모드에 연결되며, 예를 들어 초당 3 개의 프레임은 게임 프레임 당 30 개의 프레임과 동일하지 않으므로 선호하는 모드를 참조하여이 값을 올바르게 설정하십시오. 기본값은 30입니다.</li>
+    <li><strong>기본 스프라이트 너비</strong> :이 옵션을 사용하면 생성 된 모든 새 스프라이트의 기본 너비를 설정할 수 있습니다. 기본값은 64입니다.</li>
+    <li><strong>기본 스프라이트 높이</strong> :이 옵션을 사용하면 모든 새 스프라이트의 기본 높이를 설정할 수 있습니다. 기본값은 64입니다.</li>
+    <li><strong>스프라이트 원점에 크기 조정 및 크기 조정 적용</strong> :이 옵션을 선택하면 스프라이트의 크기를 조정하거나 크기를 조정할 때 스프라이트의 새 값에 맞게 새 원점이 이동 / 크기 조정될 때 스프라이트의 원점이 변경됩니다. 이는 스프라이트 편집기에서 잠기지 않은 사용자 지정 스프라이트 원점에만 적용됩니다. 원점이 잠겨 있거나 스프라이트가 기본 위치 중 하나 (예 : &quot;중앙&quot;또는 &quot;왼쪽 상단&quot;등)를 사용하는 경우이 옵션은 회색으로 표시되며 변경할 수 없습니다. 기본값은 활성화입니다.</li>
   </ul>
-  <p>The following sub-category also exists for the Sprite Editor:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Confirm Dialogs</span><span data-close-text="true">Confirm Dialogs</span></a></p>
+  <p>Sprite Editor에는 다음과 같은 하위 범주도 있습니다.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">대화 상자</span> <span data-close-text="true">확인 대화</span> <span data-open-text="true">상자</span> <span data-close-text="true">확인</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
     <p>
       <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Confirm_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Confirm_Prefs.png" class="center" alt="The Sprite Editor Confirm Dialog Preferences"/></p>
-    <p class="dropspot">The options available here control the messages that pop up when are required to confirm an action. You can change these setting to show the message always or dismiss it with a specific action (either Yes or No) :</p>
+    <p class="dropspot">여기에서 사용 가능한 옵션은 작업을 확인해야 할 때 표시되는 메시지를 제어합니다. 이 설정을 변경하여 항상 메시지를 표시하거나 특정 조치 (예 또는 아니오)로 메시지를 닫을 수 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot">Automatic response to file import: When you import a new image and one already exists, by default you will be prompted to continue importing and overwrite the existing image or cancel the operation. This option lets you suppress this message and
-        always either cancel the import by selecting &quot;No&quot;, or overwrite the current sprite by selecting &quot;Yes&quot;. Default value is &quot;Show Message&quot;.</li>
-      <li class="dropspot">Automatic response to image load failure: When you import a new image and and the import fails, by default you will be shown a warning message informing you that there has been a failure. This option lets you suppress this message by selecting &quot;Okay&quot;.
-        Default value is &quot;Show Message&quot;.</li>
+      <li class="dropspot">파일 가져 오기에 대한 자동 응답 : 새 이미지를 가져오고 이미 존재하는 경우 기본적으로 기존 이미지를 가져오고 덮어 쓰거나 작업을 취소하라는 메시지가 표시됩니다. 이 옵션을 사용하면이 메시지를 억제하고 항상 &quot;아니오&quot;를 선택하여 가져 오기를 취소하거나 &quot;예&quot;를 선택하여 현재 스프라이트를 덮어 씁니다. 기본값은 &quot;메시지 표시&quot;입니다.</li>
+      <li class="dropspot">이미지로드 실패에 대한 자동 응답 : 새 이미지를 가져오고 가져 오기에 실패하면 기본적으로 오류가 발생했음을 알리는 경고 메시지가 표시됩니다. 이 옵션을 사용하면 &quot;확인&quot;을 선택하여이 메시지를 표시하지 않을 수 있습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li>
     </ul>
   </div>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Setting_Up_And_Version_Information\IDE_Preferences\Sprite_Editor_Preferences.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Object_Editor_Preferences.htm">Object Editor Preferences</a></div>
+        <div style="float:left">뒤로: <a href="../IDE_Preferences.htm">IDE 환경 설정</a></div>
+        <div style="float:right">다음: <a href="Object_Editor_Preferences.htm">객체 편집기 환경 설정</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Preferences - Sprite Editor
@@ -127,4 +122,4 @@ Preferences - Sprite Editor
 prefs_sprite_editor
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Android">
-        <span>Android</span>
+        <span>기계적 인조 인간</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,56 +80,44 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Android Preferences</h1>
-  <p>The <strong>Android</strong> preferences are split into various sections listed below:</p>
-  <p><img alt="Android Preferences Packaging" class="center" src="../../assets/Images/Setup_And_Version/Platform_Preferences/Android_Prefs_1.png"/>At the top of the preferences you have the option to <strong>synchronise the settings from the Amazon Fire</strong>.
-    This is for those people that have the Mobile Licence and have already set up and used the Amazon Fire export, since Amazon Fire uses almost the exact same build tools as Android. Just click this to import all the appropriate settings from Amazon
-    Fire, then check through them to make sure that they are correct.</p>
-  <p>Under the Sync button you can set the maximum size of the <strong>JDK Memory Heap</strong> (default is 2GB). Next you have to set up the various different <strong>Paths </strong>so that GameMaker Studio 2 knows where to look for the various tools required
-    to build the final executable package and test your game. This is split into three sections for the <strong>Android SDK</strong>, <strong>Android NDK </strong>and <strong>Java JDK</strong>. These paths should have been filled in automatically for
-    you, but should you have any issues you can click the button to the right to open the file explorer and manually select the locations for each element. You can find details of what versions are required for each of the SDK elements <a href="https://help.yoyogames.com/hc/en-us/articles/227860547">here</a>.
-    Paths should be validated as you apply them and a message will show &quot;<em>Found</em>&quot; or tell you of any errors (in which case you should revise all the information to make sure it is correct).</p>
-  <p>Below that you have the different Packaging options which are:</p>
+  <h1>안드로이드 환경 설정</h1>
+  <p><strong>Android</strong> 환경 설정은 아래 나열된 여러 섹션으로 나뉩니다.</p>
+  <p><img alt="Android Preferences Packaging" class="center" src="../../assets/Images/Setup_And_Version/Platform_Preferences/Android_Prefs_1.png"/>기본 설정의 상단 <strong>에는 Amazon Fire의 설정</strong> 을 <strong>동기화하는</strong> 옵션이 <strong>있습니다</strong> . Amazon Fire는 Android와 거의 동일한 빌드 도구를 사용하기 때문에 모바일 라이센스가 있고 Amazon Fire 내보내기를 이미 설정하고 사용한 사람들을위한 것입니다. 이 버튼을 클릭하면 Amazon Fire에서 적절한 설정을 모두 가져온 다음 설정이 올바른지 확인하십시오.</p>
+  <p>동기화 버튼에서 <strong>JDK 메모리 힙</strong> 의 최대 크기를 설정할 수 있습니다 (기본값은 2GB). 다음으로 GameMaker Studio 2가 최종 실행 패키지를 빌드하고 게임을 테스트하는 데 필요한 다양한 도구를 찾을 위치를 알 수 있도록 다양한 <strong>경로</strong> 를 설정해야합니다. 이것은 <strong>Android SDK</strong> , <strong>Android NDK</strong> 및 <strong>Java JDK의</strong> 세 부분으로 나뉩니다. 이러한 경로는 자동으로 채워졌지만 문제가있는 경우 오른쪽의 버튼을 클릭하여 파일 탐색기를 열고 각 요소의 위치를 ​​수동으로 선택할 수 있습니다. 각 SDK 요소에 필요한 버전에 대한 자세한 내용은 <a href="https://help.yoyogames.com/hc/en-us/articles/227860547">여기를 참조하십시오</a> . 경로를 적용 할 때 경로를 확인해야하며 메시지에 &quot; <em>발견</em> &quot;이 표시되거나 오류가 표시됩니다 (이 경우 모든 정보를 수정하여 올바른지 확인해야 함).</p>
+  <p>아래에는 다양한 패키징 옵션이 있습니다.</p>
   <ul class="colour">
-    <li><strong>Always do full install of APK</strong>: Flagging this will make GameMaker Studio 2 remove any previous runners of your game from your device, as well as all associated files (for example, <span class="inline">*.ini</span> files) from your
-      test device before installing a new version of the game.</li>
-    <li><strong>Install on package</strong>: When this option is flagged, compiling a final executable <span class="inline">*.apk</span> package will also install it automatically on the currently selected target device.</li>
+    <li><strong>항상 APK 전체 설치</strong> : 플래그를 지정하면 GameMaker Studio 2가 새 버전을 설치하기 전에 테스트 장치에서 게임의 모든 이전 파일을 비롯하여 장치에서 모든 관련 파일 (예 : <span class="inline">* .ini</span> 파일)을 제거합니다. 게임.</li>
+    <li><strong>패키지에 설치</strong> :이 옵션이 표시되면 최종 실행 파일 <span class="inline">* .apk</span> 패키지를 컴파일하면 현재 선택된 대상 장치에 자동으로 설치됩니다.</li>
   </ul>
-  <p>Finally we come to the <strong>KeyStore</strong>. This is a file that will be used to &quot;sign&quot; all your Android apps so please fill in all the details correctly and keep in mind that this file will be required to create and update all your Android apps
-    in the future, meaning that after setting <em></em>it up<em><strong> it is advised to take a screenshot of the settings used and make a backup of the final file</strong></em>. If you lose this file you will <strong>not </strong>be able to update any
-    existing games that have been uploaded to the store.</p>
-  <p class="note"><strong>NOTE</strong>: The same keystore can be used for both the Android and Amazon Fire targets.</p>
-  <p>To create a new keystore file the following details are required:</p>
+  <p>마지막으로 <strong>KeyStore에</strong> 옵니다. 이 파일은 모든 Android 앱에 &quot;서명&quot;하는 데 사용되는 파일이므로 모든 세부 정보를 정확하게 입력하고 나중에 모든 Android 앱을 만들고 업데이트하는 데이 파일이 필요하다는 것을 명심하십시오. <em><strong>사용 된 설정의 스크린 샷을 찍고 최종 파일을 백업하는 것이 좋습니다</strong></em> . 이 파일을 잃어 버리면 상점에 업로드 된 기존 게임을 업데이트 할 수 <strong>없습니다</strong> .</p>
+  <p class="note"><strong>참고</strong> : 동일한 키 저장소를 Android 및 Amazon Fire 대상 모두에 사용할 수 있습니다.</p>
+  <p>새 키 저장소 파일을 작성하려면 다음 세부 사항이 필요합니다.</p>
   <p><img alt="Android Preferences Keystore" class="center" src="../../assets/Images/Setup_And_Version/Platform_Preferences/Android_Prefs_2.png"/></p>
   <ul class="colour">
-    <li><strong>Filename</strong>: This is the name of the KeyStore file.<br/>
-      <br/>
-      <strong>NOTE</strong>: <em>This is not your name or the company name, but the name of the file to be generated! If you already have a keystore file from previous projects then you can click the file browser button here and direct GameMaker Studio 2 to the previously created keystore file (or click the <strong>Import </strong>button). In this case, you must still fill out the rest of the required information (<strong>exactly as it was when you first generated the file</strong>) but you must <strong>not </strong>click the <strong>Generate Keystore </strong>button!. That will generate a new keystore file, overwriting the previous one.</em></li>
-    <li><strong>Common Name</strong>: This would normally be your name.</li>
-    <li><strong>Password</strong>: Your security password for the KeyStore file which must be at least six characters long.</li>
-    <li><strong>Alias</strong>: This is another name that can be used for the KeyStore file and should be different to the name entered above.</li>
-    <li><strong>Alias Password</strong>: Your alias security password for the KeyStore file which must be at least six characters long.</li>
-    <li><strong>Organisational Unit</strong>: The department within the company that you are a part of.</li>
-    <li><strong>Organisation</strong>: The name of your company.</li>
-    <li><strong>Location</strong>: The name of the town or city where you are based.</li>
-    <li><strong>Country</strong>: The standard <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">two letter code</a> for the country where you are based.</li>
+    <li><strong>Filename</strong> : KeyStore 파일의 이름입니다. <strong>참고</strong> : <em>이것은 귀하의 이름 또는 회사 이름이 아니라 생성 될 파일의 ​​이름입니다!</em> <em>이전 프로젝트의 키 스토어 파일이 이미 있다면 여기에서 파일 브라우저 버튼을 클릭하고 GameMaker Studio 2를 이전에 생성 된 키 스토어 파일로 보내거나 <strong>가져 오기</strong> 버튼을 클릭 할 수 있습니다.</em> <em>이 경우에도 필요한 정보 <strong>(당신이 먼저 파일을 생성 할 때 예전 그대로)의</strong> 나머지 부분을 작성해야하지만 당신은 <strong>생성 키 스토어 버튼을</strong> <strong>클릭하지</strong> 않아야합니다!</em> <em>그러면 새 키 저장소 파일이 생성되어 이전 파일을 덮어 씁니다.</em></li>
+    <li><strong>공통 이름</strong> : 일반적으로 귀하의 이름입니다.</li>
+    <li><strong>비밀번호</strong> : 키 저장소 파일의 보안 비밀번호 (6 자 이상이어야 함)</li>
+    <li><strong>별명</strong> : KeyStore 파일에 사용할 수있는 다른 이름이며 위에 입력 한 이름과 달라야합니다.</li>
+    <li><strong>Alias ​​Password</strong> : KeyStore 파일의 별칭 보안 암호는 6 자 이상이어야합니다.</li>
+    <li><strong>조직 구성 단위</strong> : 소속 된 회사 내 부서.</li>
+    <li><strong>조직</strong> : 회사 이름.</li>
+    <li><strong>위치</strong> : 거주하는 도시 또는 도시의 이름입니다.</li>
+    <li><strong>국가</strong> : <strong>거주 국가</strong> 의 표준 <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">두 문자 코드</a> 입니다.</li>
   </ul>
-  <p>Once this information is filled in and you are happy with it, press the button marked <strong>Generate Keystore</strong> for GameMaker Studio 2 to create the necessary KeyStore file. This may take a moment but once it is finished, it normally will not
-    need to be changed again. Note that you can click the <strong>Import </strong>button to import a previously created keystore file (see the <strong>Filename </strong>section, above) and you can also retrieve the keystore SHA1 hash by clicking the <strong>Generate Key Hash </strong>button.
-    Pressing this will generate two special security hash keys directly linked to your keystore file that some web sites require for correct functionality (for example, Facebook, or Google Play for the Sha1 hash). Should you need this, simply press the
-    button, then copy and paste the hash keys that are generated.</p>
-  <p>For further details on how to set up the required Amazon Fire SDKs, please see <a href="https://help.yoyogames.com/hc/en-us/articles/115001368727-Setting-Up-For-Android-or-Amazon-Fire">this article on the YoYo Games Knowledge Base</a>.</p>
+  <p>이 정보가 채워지고 만족 스러우면 GameMaker Studio 2 용 키 <strong>스토어 생성</strong> 버튼을 눌러 필요한 키 스토어 파일을 생성하십시오. 이 작업에는 다소 시간이 걸릴 수 있지만 완료되면 일반적으로 다시 변경할 필요가 없습니다. <strong>가져 오기</strong> 버튼을 클릭하여 이전에 생성 된 키 저장소 파일을 가져오고 (위의 <strong>파일 이름</strong> 섹션 참조) <strong>키 해시 생성</strong> 버튼을 클릭하여 키 저장소 SHA1 해시를 검색 할 수도 있습니다. 이 키를 누르면 일부 웹 사이트에서 올바른 기능 (예 : Facebook 또는 Sha1 해시 용 Google Play)에 필요한 키 스토어 파일에 직접 연결된 두 개의 특수 보안 해시 키가 생성됩니다. 필요한 경우 버튼을 누른 다음 생성 된 해시 키를 복사하여 붙여 넣으십시오.</p>
+  <p>필요한 Amazon Fire SDK를 설정하는 방법에 대한 자세한 내용 <a href="https://help.yoyogames.com/hc/en-us/articles/115001368727-Setting-Up-For-Android-or-Amazon-Fire">은 YoYo Games 기술 자료 문서</a> 를 참조하십시오.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Setting_Up_And_Version_Information\Platform_Preferences\Android.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Platform_Preferences.htm">Platform Preferences</a></div>
-        <div style="float:right">Next: <a href="HTML5.htm">HTML5</a></div>
+        <div style="float:left">뒤로: <a href="../Platform_Preferences.htm">플랫폼 환경 설정</a></div>
+        <div style="float:right">다음: <a href="HTML5.htm">HTML5</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Android Preferences
@@ -138,4 +126,4 @@ Android Preferences
 prefs_android
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Creating A Tutorial">
-        <span>Creating A Tutorial</span>
+        <span>튜토리얼 만들기</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,41 +80,31 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Creating A Marketplace Tutorial</h1>
+  <h1>마켓 플레이스 자습서 만들기</h1>
   <p>Creating a tutorial is similar to <a href="Creating_A_Marketplace_Asset.htm">creating a regular Marketplace asset package</a>, only now you have to add in specific included files as well as include an initial tutorial page (and an optional video page).
-    The Tutorial workspace will look something like this:<img alt="Marketplace Tutorial Package" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_CreateTutorial.png"/>As explained above for general Marketplace Assets, you need to
-    select a publisher and then give your tutorial a name and a unique ID (reverse URL format), and then in the &quot;type&quot; dropdown select Tutorial. This will then give you additional options to add a base HTML file to start the tutorial from as
-    well as an (optional) video file and URL. The video file should use the template supplied from the Marketplace - as should the rest of the tutorial - which you can get <a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">here</a>,
-    and when the user loads the tutorial, the video will be loaded into a separate frame within the IDE. Note that the pages you give for the start page and the video page are relative paths within the Included Files, and you can open an explorer to choose
-    something other than the default ones that GameMaker Studio 2 populates the fields with.</p>
+    The Tutorial workspace will look something like this:<img alt="Marketplace Tutorial Package" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_CreateTutorial.png"/>일반 Marketplace Assets에 대해 위에서 설명한대로 게시자를 선택한 다음 튜토리얼에 이름과 고유 ID (역 URL 형식)를 제공 한 다음 &quot;유형&quot;드롭 다운에서 튜토리얼을 선택해야합니다. 그러면 기본 HTML 파일을 추가하여 자습서를 시작할 수있는 추가 옵션과 비디오 파일 및 URL (옵션)이 제공됩니다. 비디오 파일은 <a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">여기</a> 에서 얻을 수있는 나머지 튜토리얼과 마찬가지로 마켓 플레이스에서 제공 한 템플릿을 사용해야하며, 사용자가 튜토리얼을로드하면 비디오는 IDE 내에서 별도의 프레임으로로드됩니다. 시작 페이지와 비디오 페이지에 제공 한 페이지는 포함 된 파일 내의 상대 경로이며, 탐색기를 열어 GameMaker Studio 2가 필드를 채우는 기본 페이지 이외의 다른 것을 선택할 수 있습니다.</p>
   <p>Actually creating your tutorial will require you to add <a href="../../Settings/Included_Files.htm">Included Files</a> into your tutorial project, and these have to be added in a very specific way for the IDE to properly detect which files are to be
     used for the tutorial. The basic folder structure is shown in the image below:<img alt="Marketplace Tutorial Files" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_TutorialFiles.png"/></p>
-  <p>So, we have two main folders:</p>
+  <p>따라서 두 개의 기본 폴더가 있습니다.</p>
   <ul class="colour">
-    <li class="dropspot"><strong>TutorialContent</strong>: All your tutorial <span class="inline">HTML</span> files, the <span class="inline">CSS</span> for styling them, and the images required for them (not the images required for resources, but the ones to be displayed
-      within the tutorial), as well as the video template if required, go here. You can have sub-folders as well if you wish to split the tutorial into chapters, for example, but you should have at least one base <span class="inline">HTML</span> file
-      to be used as the start page for the tutorial.</li>
-    <li class="dropspot"><strong>TutorialResources</strong>: This folder has a further two sub-folders in it for <strong>Images </strong>and <strong>Sound </strong>assets. If your tutorial requires the user to add a sprite (for example) and you want to include it in the tutorial
-      then you would place the image resource in the Images folder. These folders are imported into the tutorial project and when the user opens the sprite editor and goes to add an image, the default path for the explorer window will be to this location,
-      making it easier for the user to find the necessary assets.</li>
+    <li class="dropspot"><strong>TutorialContent</strong> : 모든 튜토리얼 <span class="inline">HTML</span> 파일, 스타일링을위한 <span class="inline">CSS</span> 및 필요한 이미지 (리소스에 필요한 이미지가 아니라 튜토리얼 내에 표시되는 이미지)와 필요한 경우 비디오 템플릿 . 예를 들어, 자습서를 장으로 분할하려는 경우 하위 폴더도있을 수 있지만 자습서의 시작 페이지로 사용할 기본 <span class="inline">HTML</span> 파일이 하나 이상 있어야합니다.</li>
+    <li class="dropspot"><strong>TutorialResources</strong> :이 폴더에는 <strong>이미지</strong> 및 <strong>사운드</strong> 자산 용 하위 폴더가 두 개 더 있습니다. 튜토리얼에서 사용자가 스프라이트를 추가해야하고 (예를 들어) 튜토리얼에 포함 시키려면 이미지 리소스를 이미지 폴더에 배치합니다. 이 폴더는 튜토리얼 프로젝트로 가져 와서 사용자가 스프라이트 편집기를 열고 이미지를 추가 할 때 탐색기 창의 기본 경로가이 위치로되어 필요한 자산을 쉽게 찾을 수 있습니다.</li>
   </ul>
-  <p>For your tutorial to work within the IDE <strong>you must have this folder structure</strong> as well as have a base <span class="inline">HTML</span> start page with a <span class="inline">CSS</span> file for styling. There are a number of special links
-    that can be used within your tutorial projects which will skip to parts of a video, or open the manual on a specific section or function, and these are all given in the official Tutorial templates from the Marketplace.</p>
-  <p class="note"><strong>IMPORTANT!</strong> We strongly suggest that you <a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">download the Tutorial Templates from the Marketplace</a> before attempting to create your own tutorials. They contain
-    examples of all the important parts of the HTML as well as CSS and images to recreate buttons and menus within the tutorial, leaving you free to worry about the content rather than how to display it.</p>
-  <p>Once you have set up the included files and supplied the required information you can click <em>Okay</em> and the tutorial will be uploaded to the Marketplace, opening a workspace on the asset listing when finished so you can edit it and add icons,
-    text, screenshots, etc... Once the tutorial asset has been published, users will be able to find it within the <strong>Tutorials </strong>section of the <a href="../The_Start_Page.htm">Start Page</a>, where it can be downloaded and installed.</p>
+  <p>튜토리얼이 IDE 내에서 작동 <strong>하려면이 폴더 구조</strong> 와 스타일링을위한 <span class="inline">CSS</span> 파일이있는 기본 <span class="inline">HTML</span> 시작 페이지가 있어야합니다. 튜토리얼 프로젝트 내에서 비디오의 일부로 건너 뛰거나 특정 섹션이나 기능에 대한 매뉴얼을 열 수있는 많은 특수 링크가 있으며,이 링크는 모두 마켓 플레이스의 공식 튜토리얼 템플릿에 있습니다.</p>
+  <p class="note"><strong>중대한!</strong> 고유 한 자습서를 만들기 전에 <a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">마켓 플레이스에서 자습서 템플릿</a> 을 <a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">다운로드</a> 하는 것이 좋습니다. 여기에는 튜토리얼에서 버튼과 메뉴를 다시 작성하기위한 CSS 및 이미지뿐만 아니라 HTML의 모든 중요한 부분에 대한 예제가 포함되어 있으므로 컨텐츠를 표시하는 방법보다는 걱정할 필요가 없습니다.</p>
+  <p>당신이 포함 된 파일을 설정하고 필요한 정보를 제공 한 후에는 편집 및 아이콘, 텍스트, 스크린 샷 등을 추가 할 수 있도록이 완료되면 목록 자산에 작업 공간을 열고, 당신은 <em>확인을</em> 클릭합니다 수 있으며, 튜토리얼은 마켓 플레이스에 업로드됩니다 ... 튜토리얼 자산이 게시되면 사용자는 <a href="../The_Start_Page.htm">시작 페이지</a> 의 <strong>튜토리얼</strong> 섹션에서 다운로드하여 설치할 수 있습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Introduction\Marketplace\Creating_A_Tutorial.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Marketplace.htm">The Marketplace</a></div>
-        <div style="float:right">Next: <a href="Listing_An_Asset.htm">Listing An Asset</a></div>
+        <div style="float:left">뒤로: <a href="../The_Marketplace.htm">마켓 플레이스</a></div>
+        <div style="float:right">다음: <a href="Listing_An_Asset.htm">자산 리스팅</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Marketplace - Creating A Tutorial
@@ -124,4 +114,4 @@ Creating Tutorials
 marketplace_tutorial
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="The Track Panel">
-        <span>The Track Panel</span>
+        <span>트랙 패널</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,222 +80,156 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Track Panel</h1>
-  <p><img alt="The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Panel.png"/>What your sequences do are governed by the assets and parameters that have been added to the <strong>Track Panel</strong>. You can add a track to the
-    editor by either:</p>
+  <h1>트랙 패널</h1>
+  <p><img alt="The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Panel.png"/>시퀀스 작업은 <strong>트랙 패널에</strong> 추가 된 자산 및 매개 변수에 의해 관리됩니다. 다음 중 한 가지 방법으로 편집기에 트랙을 추가 할 수 있습니다.</p>
   <ul class="colour">
-    <li>dragging an asset into the sequence <a href="The_Sequence_Canvas.htm">Canvas</a></li>
-    <li>dragging an asset into the Track Panel itself</li>
-    <li>by clicking the &quot;Add Asset&quot; <img alt="Add Track Icon" class="icon" src="../../assets/Images/Icons/Icon_AddAsset.png"/> button at the bottom of the Track Panel.</li>
+    <li>애셋을 시퀀스 <a href="The_Sequence_Canvas.htm">캔버스</a> 로 드래그</li>
+    <li>에셋을 트랙 패널 자체로 드래그</li>
+    <li>&quot;자산 추가&quot;를 클릭하여 트랙 패널 하단에있는</li>
   </ul>
-  <p>This last method will open the Asset Explorer for you where you can choose the asset to add.</p>
-  <p>Regardless of the method you choose, a new <a class="tooltip" title="A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.">asset track</a> will be made for the asset. This track is the main track for the asset in the sequence and will have a corresponding <a class="tooltip" title="A position on the timeline in the dope sheet where an asset has been placed. An asset key can be made to last multiple frames.">asset key</a> track created for the asset in the Dope Sheet at the <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet, the Animation Curve editor or the Sprite editor. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> position:</p>
-  <p><img alt="Add An Asset To The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Add_Asset.gif"/>Note that the colour of the Asset Key in the Dope Sheet can be set from the Track Panel by clicking the coloured bar at the
-    end. This will open up the <strong>Colour Picker</strong> where you can choose which colour to use for the key tracks in the Dope Sheet.</p>
-  <p>Each asset in the track editor can also have a set of <a class="tooltip" title="A track that has been assigned to an asset track in the track panel and that changes a single parameter for the asset track it&#39;s linked to, like the position, or the image index.">parameter tracks</a> added to it. These tracks are what control the various different properties (parameters) that can be modified
-    for the track over time. The different parameters available are covered in depth in the section on &quot;<strong>Adding Parameter Tracks</strong>&quot; further down this page, but to give you an idea of what&#39;s available here is a brief list:</p>
+  <p>이 마지막 방법은 추가 할 자산을 선택할 수있는 자산 탐색기를 엽니 다.</p>
+  <p>선택한 방법에 관계없이 <a class="tooltip" title="단일 트랙, 스프라이트, 사운드, 인스턴스 또는 시퀀스를 보유하는 시퀀스 트랙 패널의 트랙.">자산에</a> 대한 새로운 <a class="tooltip" title="단일 트랙, 스프라이트, 사운드, 인스턴스 또는 시퀀스를 보유하는 시퀀스 트랙 패널의 트랙.">자산 트랙</a> 이 만들어집니다. 이 트랙은 시퀀스에서 자산의 기본 트랙이며 <a class="tooltip" title="시퀀스 도프 시트, 애니메이션 커브 편집기 또는 스프라이트 편집기의 타임 라인 내 현재 &#39;재생&#39;위치. 시퀀스 (및 스프라이트)에서는 애니메이션을 미리 볼 때 이동하며 특정 프레임에 배치하여 해당 위치에서 키와 키 프레임을보고 편집 할 수 있습니다.">재생 헤드</a> 위치의 Dope Sheet에 자산에 대해 해당 <a class="tooltip" title="자산이 배치 된 도프 시트에서 타임 라인의 위치입니다. 여러 키를 지속하기 위해 자산 키를 만들 수 있습니다.">자산 키</a> 트랙이 생성됩니다.</p>
+  <p><img alt="Add An Asset To The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Add_Asset.gif"/>끝에있는 색상 막대를 클릭하여 추적 패널에서 자산 시트의 자산 키 색상을 설정할 수 있습니다. 그러면 도프 시트의 키 트랙에 사용할 색상을 선택할 수있는 <strong>색상 피커</strong> 가 열립니다.</p>
+  <p>트랙 편집기의 각 자산에는 <a class="tooltip" title="트랙 패널에서 자산 트랙에 할당되고 위치 또는 이미지 색인과 같이 링크 된 자산 트랙의 단일 매개 변수를 변경하는 트랙.">매개 변수 트랙</a> 세트가 추가 될 수도 있습니다. 이 트랙은 시간이 지남에 따라 트랙에 대해 수정 될 수있는 다양한 속성 (매개 변수)을 제어합니다. 이 페이지의 아래쪽에있는 &quot; <strong>매개 변수 트랙 추가</strong> &quot;섹션에서 사용 가능한 다양한 매개 변수에 대해 자세히 설명하지만 여기에 사용 가능한 항목에 대한 정보를 제공하는 간단한 목록이 있습니다.</p>
   <ul class="colour">
-    <li><strong>All Assets</strong>: <em>Position </em>and <em>rotation</em>.</li>
-    <li><strong>Sounds</strong>: <em>Pitch </em>and <em>Volume</em>.</li>
-    <li><strong>Sequences</strong>: <em>Origin </em>and <em>Scale</em>.</li>
-    <li><strong>Sprites and Objects</strong>: <em>Origin</em>, <em>Scale</em>, <em>Image Index</em>, <em>Image Speed</em>, and <em>Colour Blend</em>.</li>
+    <li><strong>모든 자산</strong> : <em>위치</em> 및 <em>회전</em> .</li>
+    <li><strong>소리</strong> : <em>피치</em> 및 <em>볼륨</em> .</li>
+    <li><strong>순서</strong> : <em>원점</em> 및 <em>척도</em> .</li>
+    <li><strong>스프라이트 및 객체</strong> : <em>원점</em> , <em>배율</em> , <em>이미지 인덱스</em> , <em>이미지 속도</em> 및 <em>색상 혼합</em> .</li>
   </ul>
-  <p>To add a parameter track in the editor you can enable &quot;<strong>Automatically Record Changes</strong>&quot; <img alt="Record Changes Icon" src="../../assets/Images/Icons/Icon_Seq_Record.png"/> in the Track Panel, which will then add parameter keys
-    for any changes you make to an asset in the Canvas at the current playhead position, as shown here:</p>
-  <p><img alt="Adding A Parameter Key To An Asset In The Canvas" class="center" src="../../assets/Images/Asset_Editors/Canvas_Add_Keys.gif"/>Alternatively, you can click the &quot;<strong>Add Parameter Track</strong>&quot; <img alt="Add Parameter Icon" src="../../assets/Images/Icons/Icon_Seq_Add.png"/> button, which will open up a menu showing you the different options available:</p>
-  <p><img alt="Adding A Parameter Track To An Asset In The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Add_Parameter.png"/>Selecting any option from this menu, or recording directly from the IDE, will create one or more
-    parameter tracks underneath the main asset track, and also add a <a class="tooltip" title="A parameter key (also called a keyframe) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">parameter key</a> to the Dope Sheet, coloured the same as the main asset track colour:</p>
-  <p><img alt="Parameter Tracks In The Track Panel And Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_ParameterTracks.png"/>Once you add a parameter track to your main asset track, the dope sheet will have a coloured bar
-    to show the length of the asset track in frames, and there will be <strong>parameter keys </strong>(keyframes) added at the points where you want a change in the parameter to occur. These keys can be seen in the above image as simple &quot;dots&quot;
-    on a frame. When a track has parameter keys like this, the parameter they refer to will be interpolated (using <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>) by default between each of the points shown.
-    For example, if you have a rotation parameter and at frame 0 it is set to 90° then at frame 30 it is 180°, then at frame 15 it will be 135°. You can actually see the change in values over time by selecting the parameter track and then &quot;scrubbing&quot;
-    the playhead in the dope sheet:</p>
+  <p>To add a parameter track in the editor you can enable &quot;<strong>Automatically Record Changes</strong>&quot; <img alt="Record Changes Icon" src="../../assets/Images/Icons/Icon_Seq_Record.png"/>트랙 패널에서 다음과 같이 현재 재생 헤드 위치에서 캔버스의 자산에 대한 변경 사항에 대한 매개 변수 키를 추가합니다.</p>
+  <p><img alt="Adding A Parameter Key To An Asset In The Canvas" class="center" src="../../assets/Images/Asset_Editors/Canvas_Add_Keys.gif"/>또는 &quot; <strong>Add Parameter Track</strong> &quot;을 클릭해도됩니다 버튼을 누르면 사용 가능한 다양한 옵션을 보여주는 메뉴가 열립니다.</p>
+  <p><img alt="Adding A Parameter Track To An Asset In The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Add_Parameter.png"/>이 메뉴에서 옵션을 선택하거나 IDE에서 직접 녹음하면 기본 자산 트랙 아래에 하나 이상의 매개 변수 트랙이 생성되고 기본 자산 트랙 색상과 동일한 색상의 <a class="tooltip" title="매개 변수 키 (키 프레임이라고도 함)는 도프 시트의 타임 라인에서 매개 변수 값의 변경이 정의 된 지점입니다.">매개 변수 키</a> 가 Dope Sheet에 추가됩니다.</p>
+  <p><img alt="Parameter Tracks In The Track Panel And Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_ParameterTracks.png"/>기본 자산 트랙에 매개 변수 트랙을 추가하면 도프 시트에 자산 트랙의 길이를 프레임으로 표시하는 색상 막대가 표시되며 변경하려는 지점에 <strong>매개 변수 키</strong> (키 프레임)가 추가됩니다. 발생할 매개 변수. 이 키는 위 이미지에서 프레임의 간단한 &quot;점&quot;으로 볼 수 있습니다. 트랙에 이와 같은 파라미터 키가있는 경우 트랙이 참조하는 파라미터는 기본적으로 표시된 각 포인트 사이에 보간됩니다 ( <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간 사용</a> ). 예를 들어, 회전 매개 변수가 있고 프레임 0에서 90 °로 설정되면 프레임 30에서 180 °가되고 프레임 15에서 135 °가됩니다. 매개 변수 트랙을 선택한 다음 도프 시트에서 재생 헤드를 &quot;스크러빙&quot;하여 시간이 지남에 따라 값의 변화를 실제로 확인할 수 있습니다.</p>
   <p><img alt="Interpolating Between Parameter Keys" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Changing_Parameter.gif"/></p>
-  <p>Note that for all parameter tracks you can disable the default linear interpretation between different keys from the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> menu on the parameter track, which
-    means that transitions between parameter values will occur <em>instantly </em>on the given frame rather than gradually over time:</p>
-  <p><img alt="Disable Linear Interpolation On Parameter Track" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_RMB_Menu_Params.png"/>Apart from being able to choose the transition type for parameter tracks, the RMB menu also offers you
-    the following options:</p>
+  <p>Note that for all parameter tracks you can disable the default linear interpretation between different keys from the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/>매개 변수 트랙의 메뉴를 통해 매개 변수 값 사이의 전환이 시간이 지남에 따라 점차적으로 주어진 프레임에서 <em>즉시</em> 발생 함을 의미합니다.</p>
+  <p><img alt="Disable Linear Interpolation On Parameter Track" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_RMB_Menu_Params.png"/>RMB 메뉴는 파라미터 트랙의 전환 유형을 선택할 수있는 것 외에도 다음과 같은 옵션을 제공합니다.</p>
   <ul class="colour">
-    <li><strong>Cut</strong>, <strong>Copy</strong>, and <strong>Paste</strong>: These options permit you to cut/copy/paste asset or parameter tracks.</li>
-    <li><strong>Duplicate Track(s)</strong>: This will create a duplicate of the currently selected track(s). If this is an</li>
-    <li><strong>Delete Track(s)</strong>: This will delete the selected track or tracks. If you delete an asset track, then the parameter tracks associated with it will also be removed, however you can delete parameter tracks individually.</li>
-    <li><strong>Group</strong>: Using this option on an empty space in the Track Panel will create a group folder which you can then use to help keep your assets in a more orderly format. You can add an asset to a group by simply clicking on it and dragging
-      it onto the folder. If you have already selected a track or tracks, then using this option will not only create a group folder, but it will add the track(s) to it.</li>
-    <li><strong>Rename</strong>: You can use this option to rename any asset track or group folder.</li>
+    <li><strong>잘라</strong> 내기, <strong>복사</strong> 및 <strong>붙여 넣기</strong> :이 옵션을 사용하면 자산 또는 매개 변수 트랙을 잘라내거나 복사 / 붙여 넣기 할 수 있습니다.</li>
+    <li><strong>중복 트랙</strong> : 현재 선택된 트랙의 복제본을 생성합니다. 이것이</li>
+    <li><strong>트랙 삭제</strong> : 선택한 트랙을 삭제합니다. 자산 트랙을 삭제하면 관련된 자산 트랙도 제거되지만 매개 변수 트랙을 개별적으로 삭제할 수 있습니다.</li>
+    <li><strong>그룹</strong> : 트랙 패널의 빈 공간에이 옵션을 사용하면 자산을보다 질서있는 형식으로 유지하는 데 사용할 수있는 그룹 폴더가 생성됩니다. 자산을 클릭하고 폴더로 드래그하여 자산을 그룹에 추가 할 수 있습니다. 트랙을 이미 선택한 경우이 옵션을 사용하면 그룹 폴더가 생성 될뿐만 아니라 트랙이 추가됩니다.</li>
+    <li><strong>이름 바꾸기</strong> :이 옵션을 사용하여 자산 트랙 또는 그룹 폴더의 이름을 바꿀 수 있습니다.</li>
   </ul>
   <p>An important feature of asset and parameter tracks is the ability to <strong>parent </strong>tracks and groups. If you drag an asset track onto another one in the track panel, the first asset becomes a <strong>child </strong>of the asset it was dropped
     on, which in turn becomes the <strong>parent</strong>. All parameter tracks assigned to the parent asset track will then automatically be applied to the child asset tracks, so you can have multiple sprites (for example) all using a single position
-    asset track to move:<img alt="Parent And Child Sprites Share Parameters" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Parenting.gif"/>The same can be done using groups. You can create a group folder by clicking the button at
-    the bottom of the track panel and then drag and drop the asset tracks you want to be grouped together on the group folder. These assets will still retain their own parameter tracks, but you can then give additional parameter tracks to the group and
-    all the assets in the group will be affected by these parameter tracks as well as their own individual parameter tracks.</p>
-  <p>When working with the track panel the usual keyboard shortcuts can be used too, ie: <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> and the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to select one or more tracks in any order, <img alt="Shift Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Shift.png" width="55"/> and the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to select consecutive tracks, and you can also cut, copy and paste them using the <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> +&quot;<span class="inline">X</span>&quot;,  <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">C</span>&quot; and  <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">V</span>&quot; key combinations.</p>
-  <p>That&#39;s the basics of using the track editor, but below we go into a bit more detail on what each of the different sections are for and how to use them:</p>
+    asset track to move:<img alt="Parent And Child Sprites Share Parameters" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Parenting.gif"/>그룹을 사용하여 동일한 작업을 수행 할 수 있습니다. 트랙 패널 하단의 버튼을 클릭하여 그룹 폴더를 생성 한 다음 그룹 폴더에서 그룹화 할 자산 트랙을 끌어서 놓을 수 있습니다. 이러한 자산은 여전히 ​​고유 한 파라미터 트랙을 유지하지만 그룹에 추가 파라미터 트랙을 제공 할 수 있으며 그룹의 모든 자산은 이러한 파라미터 트랙과 개별 파라미터 트랙의 영향을받습니다.</p>
+  <p>When working with the track panel the usual keyboard shortcuts can be used too, ie: <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/>/ 마우스 왼쪽 버튼 순서에 상관없이 하나 이상의 트랙을 선택하려면 마우스 왼쪽 버튼 연속 트랙을 선택하고을 사용하여 잘라 내기, 복사 및 붙여 넣기를 할 수도 있습니다. / + &quot; <span class="inline">X</span> &quot;, / + &quot; <span class="inline">C</span> &quot;및 / + &quot; <span class="inline">V</span> &quot;키 조합.</p>
+  <p>이것이 트랙 편집기 사용의 기본 사항이지만, 아래에서는 각기 다른 섹션의 용도와 사용법에 대해 좀 더 자세히 설명합니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Sequence Name</span><span data-close-text="true">Sequence Name</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">시퀀스 이름</span> <span data-close-text="true">시퀀스 이름</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This tab simply shows the name of the sequence that is currently being edited. you can perform a slow double click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on the tab to change the name
-      if required. All sequence names must use alpha-numeric values only, along with the under-bar &quot;_&quot; symbol, and cannot start with a number.</p>
+    <p class="dropspot">This tab simply shows the name of the sequence that is currently being edited. you can perform a slow double click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/>필요한 경우 탭에서 이름을 변경하십시오. 모든 시퀀스 이름은 밑줄 &quot;_&quot;기호와 함께 영숫자 값만 사용해야하며 숫자로 시작할 수 없습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Track Search</span><span data-close-text="true">Track Search</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">트랙 검색</span> <span data-close-text="true">트랙 검색</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This search box permits you to quickly search through the various tracks of the sequence to find the one you wish to edit. Typing any text here will tell you how many asset tracks have been found with that string in them, and also highlight the arrows
-      to the side of the search box. Clicking these arrows will skip to the first and consecutive assets that fulfill the search criteria.</p>
+    <p class="dropspot">이 검색 상자를 사용하면 시퀀스의 다양한 트랙을 빠르게 검색하여 편집하려는 트랙을 찾을 수 있습니다. 여기에 텍스트를 입력하면 해당 문자열에서 찾은 자산 트랙 수와 검색 상자 측면의 화살표가 강조 표시됩니다. 이 화살표를 클릭하면 검색 기준을 충족하는 첫 번째 및 연속 자산으로 건너 뜁니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Asset Tracks</span><span data-close-text="true">Asset Tracks</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">자산 트랙</span> <span data-close-text="true">자산 트랙</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">Each asset that is added to a sequence will be given its own track, and these are listed here. If the asset track has any parameters set for it, then these will also be shown underneath as parameter tracks. You can expand or contract the parameter
-      tracks by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on the arrow icon to the left of the track name, and you can edit the track name by using a slow double click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on the track and then giving it the name of your choice. Note that there are no restrictions on the name you give and you can use spaces, non alpha-numeric characters
-      and start them with a number if you wish.</p>
-    <p class="dropspot">The different types of parameter tracks available are explained in more detail in the section on &quot;<strong>Adding Parameter Tracks</strong>&quot; further down this page.</p>
+      tracks by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/>트랙 이름 왼쪽에있는 화살표 아이콘에서 두 번 클릭하여 트랙 이름을 편집 할 수 있습니다. 트랙에서 원하는 이름을 지정하십시오. 지정한 이름에는 제한이 없으며 영숫자가 아닌 문자를 공백으로 사용하고 원하는 경우 숫자로 시작할 수 있습니다.</p>
+    <p class="dropspot">사용 가능한 여러 유형의 파라미터 트랙에 대해서는이 페이지의 아래에있는 &quot; <strong>파라미터 트랙 추가</strong> &quot;섹션에 자세히 설명되어 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Key Controls</span><span data-close-text="true">Key Controls</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">키 컨트롤</span> <span data-close-text="true">키 컨트롤</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Once you have added a parameter track, you can add and remove parameter keys to specific frames to set the value for that parameter. This can be done using the &quot;<strong>Record Key</strong>&quot; <img alt="Add Keys Icon" class="icon" src="../../assets/Images/Icons/Icon_Seq_Add.png"/> or &quot;<strong>Delete key</strong>&quot; <strong><img alt="Delete Keys Icon" class="icon" src="../../assets/Images/Icons/Icon_Seq_Delete.png"/> </strong>button (see the section on &quot;<strong>Track Key Controls</strong>&quot; for more information),
-      or you can do it using the <strong>Key Controls</strong> on the parameter itself. To use these controls, you need to position the playhead in the Dope Sheet to the frame you want to edit, and then you can click the circular &quot;key&quot; icon
-      on the left of the parameter track. If the frame has no key assigned to it the circle will be &quot;empty&quot; and clicking it will add a new key and allow you to edit the parameter value. If the frame has a key already, then the circle will be
-      &quot;filled&quot; and clicking it will instead remove the key from the frame:</p>
-    <p class="dropspot"><img alt="Adding And Removing Parameter Keys Using The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Add_Param_Key.gif"/>You&#39;ll notice too that in the image above you can use the arrow buttons on either side
-      of the parameter key marker to quickly skip between key frames in the dope sheet too, without having to position the playhead manually.</p>
+    <p class="dropspot">Once you have added a parameter track, you can add and remove parameter keys to specific frames to set the value for that parameter. This can be done using the &quot;<strong>Record Key</strong>&quot; <img alt="Add Keys Icon" class="icon" src="../../assets/Images/Icons/Icon_Seq_Add.png"/>또는 &quot; <strong>삭제 키</strong> &quot; 버튼 (자세한 내용은 &quot; <strong>트랙 키 컨트롤</strong> &quot;섹션 참조) 또는 파라미터 자체의 <strong>키 컨트롤</strong> 을 사용하여 수행 할 수 있습니다. 이러한 컨트롤을 사용하려면 Dope Sheet의 재생 헤드를 편집하려는 프레임에 배치 한 다음 매개 변수 트랙 왼쪽의 원형 &quot;키&quot;아이콘을 클릭하십시오. 프레임에 할당 된 키가없는 경우 원은 &quot;비어 있으며&quot;클릭하면 새 키가 추가되고 매개 변수 값을 편집 할 수 있습니다. 프레임에 키가 이미 있으면 원이 &quot;채워지고&quot;클릭하면 프레임에서 키가 제거됩니다.</p>
+    <p class="dropspot"><img alt="Adding And Removing Parameter Keys Using The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Add_Param_Key.gif"/>위 이미지에서 매개 변수 키 마커의 양쪽에있는 화살표 버튼을 사용하여 재생 헤드를 수동으로 배치하지 않고도 도프 시트의 키 프레임 사이를 빠르게 건너 뛸 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Parameter Values</span><span data-close-text="true">Parameter Values</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">매개 변수 값</span> <span data-close-text="true">매개 변수 값</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">When a parameter track has been added, you can edit the values for some of them by simply setting the playhead in the Dope Sheet to the frame with the key you want to change and then use the different canvas widgets to edit the position, rotation,
-      scale or origin of the asset. These changes will be reflected in the key value for that frame. However not all parameters can be edited this way, or it may not be precise enough for your needs, and in those cases you can edit the parameter value
-      directly by clicking on it in the track and setting it to the required value for the parameter type.</p>
-    <p class="dropspot">Note that some parameter tracks may have a &quot;link&quot; icon <img alt="Track Link Icon" height="14" src="../../assets/Images/Icons/Icon_Track_Link.png" width="14"/> next to their values, which means they can be linked together. This is done by
-      clicking the icon to enable/disable linking, and when enabled, editing one value will also set the other.</p>
+    <p class="dropspot">매개 변수 트랙이 추가되면 변경하려는 키가있는 Dope Sheet의 재생 헤드를 프레임으로 설정 한 다음 다른 캔버스 위젯을 사용하여 위치, 회전, 자산의 규모 또는 원산지. 이러한 변경 사항은 해당 프레임의 키 값에 반영됩니다. 그러나 모든 매개 변수를 이러한 방식으로 편집 할 수있는 것은 아니거나 사용자의 요구에 맞게 정확하지 않을 수도 있습니다. 이러한 경우 트랙에서 매개 변수 값을 클릭하고 매개 변수 유형에 필요한 값으로 설정하여 매개 변수 값을 직접 편집 할 수 있습니다 .</p>
+    <p class="dropspot">Note that some parameter tracks may have a &quot;link&quot; icon <img alt="Track Link Icon" height="14" src="../../assets/Images/Icons/Icon_Track_Link.png" width="14"/>값 옆에 있습니다. 즉, 서로 연결할 수 있습니다. 링크를 활성화 / 비활성화하기 위해 아이콘을 클릭하면 가능하며 활성화 된 경우 한 값을 편집하면 다른 값도 설정됩니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Events</span><span data-close-text="true">Events</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">이벤트</span> <span data-close-text="true">이벤트</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">In a similar way to regular objects, sequences can have events that can run some code assigned to them. The code is assigned in the form of a <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">scripted function</a> which can take
-      no arguments and will be called when the event is triggered.</p>
-    <p class="dropspot">Events are added by clicking the <strong>Add Event</strong> button <img alt="Add Event Icon" src="../../assets/Images/Icons/Icon_AddEvent.png"/> which will open the following window:</p>
+    <p class="dropspot">일반 객체와 비슷한 방식으로 시퀀스에는 할당 된 일부 코드를 실행할 수있는 이벤트가있을 수 있습니다. 코드는 <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">스크립트 함수</a> 형태로 지정되며 인수를 취할 수 없으며 이벤트가 트리거 될 때 호출됩니다.</p>
+    <p class="dropspot">Events are added by clicking the <strong>Add Event</strong> button <img alt="Add Event Icon" src="../../assets/Images/Icons/Icon_AddEvent.png"/>다음 창이 열립니다.</p>
     <p class="dropspot"><img alt="Sequence Editor Add Event Window" class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Events.png"/></p>
-    <p class="dropspot">The events listed here are as follows:</p>
+    <p class="dropspot">여기에 나열된 이벤트는 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Create </strong>- This event happens when an instance of the sequence is first created, and is the very first thing that happens within a sequence placed in the room through the room editor when a room is entered.</li>
-      <li class="dropspot"><strong>Destroy </strong>- This event is executed when an instance of the sequence is destroyed, and will be run before the Clean Up event (see below).</li>
-      <li class="dropspot"><strong>Clean Up</strong> - This event will be called after any event that removes an instance of the sequence from the room. So, it will be triggered if the sequence is destroyed, if the room ends, or if the game ends, and is designed to perform
-        any task that you need performed once when the sequence instance is removed from the game for any reason. If you have destroyed the sequence instance using, for example, layer_sequence_destroy(), then this event will be called after the Destroy
-        Event (see above).</li>
-      <li class="dropspot"><strong>Begin Step</strong> / <strong>Step </strong>/ <strong>End Step</strong> - The Step Event is an event that is checked every single step (frame) of the game while the sequence instance exists, and is split into three parts: begin, step and
-        end. For most things the standard step event will be fine to use, but sometimes you want a bit more control over what code runs and at what time, so for that you are provided with the Begin and End step events, and these events will always be
-        triggered in the same order every step (frame) of the game. <strong>Important!</strong> If the sequence is paused then these events will <em>not </em>be triggered, and when play resumes they will be triggered the <em>next frame after the sequence starts playing again</em>.
-        Also note that the order of events is not influenced by the playhead direction, and even if the sequence is playing backwards, the events will still be run as Begin, Step and End.</li>
-      <li class="dropspot"><strong>Async Event</strong>: This is the equivalent of the object <a href="../Object_Properties/Async_Events.htm">Asynchronous System Event</a>. <strong>Important!</strong> If the sequence is paused then this event will <em>not </em>be triggered.</li>
+      <li class="dropspot"><strong>생성</strong> -이 이벤트는 시퀀스 인스턴스가 처음 생성 될 때 발생하며, 룸에 들어갈 때 룸 편집기를 통해 룸에 배치 된 시퀀스 내에서 가장 먼저 발생합니다.</li>
+      <li class="dropspot"><strong>Destroy-</strong> 이 이벤트는 시퀀스의 인스턴스가 파괴 될 때 실행되며 정리 이벤트 전에 실행됩니다 (아래 참조).</li>
+      <li class="dropspot"><strong>정리</strong> -이 이벤트는 회의실에서 시퀀스 인스턴스를 제거하는 모든 이벤트 후에 호출됩니다. 따라서 시퀀스가 ​​파괴되거나 방이 종료되거나 게임이 종료되면 트리거되며 시퀀스 인스턴스가 게임에서 제거 될 때 한 번 수행 해야하는 작업을 수행하도록 설계되었습니다. 예를 들어 layer_sequence_destroy ()를 사용하여 시퀀스 인스턴스를 삭제 한 경우이 이벤트는 Destroy Event (위 참조) 후에 호출됩니다.</li>
+      <li class="dropspot"><strong>Begin Step</strong> / <strong>Step</strong> / <strong>End Step-</strong> 단계 이벤트는 시퀀스 인스턴스가 존재하는 동안 게임의 모든 단계 (프레임)마다 확인되는 이벤트이며 시작, 단계 및 종료의 세 부분으로 나뉩니다. 대부분의 경우 표준 단계 이벤트를 사용하는 것이 좋지만 때로는 코드 실행 및 시간을 조금 더 제어하여 Begin 및 End 단계 이벤트가 제공되므로 이러한 이벤트는 항상 게임의 모든 단계 (프레임)마다 동일한 순서로 트리거됩니다. <strong>중대한!</strong> 시퀀스가 일시 정지되면이 이벤트는 트리거 <em>되지 않으며</em> <em>재생이 다시 시작되면 시퀀스가 ​​다시 재생을 시작한 후 다음 프레임</em> 이 트리거 <em>됩니다</em> . 또한 이벤트 순서는 재생 헤드 방향의 영향을받지 않으며 시퀀스가 ​​뒤로 재생 되더라도 이벤트는 여전히 시작, 단계 및 종료로 실행됩니다.</li>
+      <li class="dropspot"><strong>비동기 이벤트</strong> : 이것은 <a href="../Object_Properties/Async_Events.htm">비동기 시스템 이벤트</a> 객체와 동일합니다. <strong>중대한!</strong> 시퀀스가 일시 중지되면이 이벤트는 트리거 <em>되지 않습니다</em> .</li>
     </ul>
-    <p class="dropspot">Each event can be assigned a single function which will be called when the event is triggered. You can assign the function using the input box for the vent, and clicking the arrow button  will open the script editor for the function to be edited.
-      You can also click the Create New button at the bottom to create a new script resource with &quot;boilerplate&quot; functions already defined and ready to be filled in. Note that you can change the function names to anything you require and do not
-      have to use the predefined names, and you can also remove any function definitions that you don&#39;t need. It is important note that functions used for sequence events cannot take any arguments.</p>
-    <p class="dropspot">Sequence events can also be added and edited using code. For more information please see <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">here</a>.</p>
+    <p class="dropspot">각 이벤트에는 이벤트가 트리거 될 때 호출되는 단일 기능이 할당 될 수 있습니다. 통풍구의 입력 상자를 사용하여 기능을 할당 할 수 있으며 화살표 버튼을 클릭하면 편집 할 기능에 대한 스크립트 편집기가 열립니다. 하단에있는 새로 만들기 버튼을 클릭하여 &quot;boilerplate&quot;함수가 이미 정의되어 있고 채워질 준비가 된 새 스크립트 리소스를 만들 수 있습니다. 함수 이름을 필요에 따라 변경할 필요가 없습니다. 사전 정의 된 이름으로, 필요하지 않은 함수 정의를 제거 할 수도 있습니다. 시퀀스 이벤트에 사용되는 함수는 인수를 사용할 수 없습니다.</p>
+    <p class="dropspot">코드를 사용하여 시퀀스 이벤트를 추가하고 편집 할 수도 있습니다. 자세한 내용은 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">여기</a> 를 참조 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">하십시오</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Keyframe Controls</span><span data-close-text="true">Keyframe Controls</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">키 프레임 컨트롤</span> <span data-close-text="true">키 프레임 컨트롤</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The keyframe control buttons are one of the ways that you can add, remove or edit specific keys in the dope sheet. The buttons are as follows:</p>
+    <p class="dropspot">키 프레임 제어 버튼은 도프 시트에서 특정 키를 추가, 제거 또는 편집 할 수있는 방법 중 하나입니다. 버튼은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img alt="Split Keys Icon" src="../../assets/Images/Icons/Icon_Seq_Split.png"/> - This is the &quot;Split selected keys&quot; button. When you have selected one or more parameter keys in the dope sheet, you can then click this button and they will
-        be split into two separate keys at the timeline playhead position:<br/>
-        <img alt="Split Asset and Parameter Keys" class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Split.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
-      <li class="dropspot"><img alt="Delete Keys Icon" src="../../assets/Images/Icons/Icon_Seq_Delete.png"/> - This is the &quot;Delete selected keys&quot; button. When you have selected one or more parameter keys in the dope sheet, you can then click this button and they
-        will be deleted:<br/>
-        <img alt="Delete Parameter Keys" class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Delete.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
-      <li class="dropspot"><img alt="Add Keys Icon" src="../../assets/Images/Icons/Icon_Seq_Add.png"/> - This is the &quot;Record a new key&quot; button. When you have selected an asset key in the dope sheet and press this button, new parameter keys will be added to the
-        asset track as parameter tracks, and the parameter keys will be added as points in the dope sheet timeline at the playhead position:<br/>
-        <img alt="Add Parameter Keys At Playhead Position" class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Record.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
-      <li class="dropspot"><img alt="Record Keys Icon" src="../../assets/Images/Icons/Icon_Seq_Record.png"/> - This is the &quot;Automatically Record Changes&quot; button. When this is enabled, any changes made to the asset within the canvas will be automatically recorded
-        and the appropriate parameter tracks and parameter keys added at the playhead position in the dope sheet. For example, if you move the playhead from frame 0 to frame 10 and then in the canvas move the asset 100 pixels to the right, a parameter
-        track will be added for position, and the parameter keys will be added at frame 0 (the initial position) and at frame 10 (the playhead position) and when you press &quot;Play&quot; on the sequence, the asset will move 100px to the right over ten
-        frames.<br/>
-        <img alt="Automatically Record Parameter Keys" class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Auto.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
+      <li class="dropspot">- &quot;선택 키 분리&quot;버튼입니다. 도프 시트에서 하나 이상의 매개 변수 키를 선택한 경우이 단추를 클릭하면 타임 라인 재생 헤드 위치에서 두 개의 개별 키로 분할됩니다.</li>
+      <li class="dropspot">- &quot;선택된 키 삭제&quot;버튼입니다. 도프 시트에서 하나 이상의 매개 변수 키를 선택한 경우이 단추를 클릭하면 해당 키가 삭제됩니다.</li>
+      <li class="dropspot">- &quot;새 키 기록&quot;버튼입니다. 도프 시트에서 자산 키를 선택하고이 버튼을 누르면, 새로운 파라미터 키가 자산 트랙에 파라미터 트랙으로 추가되고, 파라미터 키가 재생 헤드 위치에서 도프 시트 타임 라인의 포인트로 추가됩니다.</li>
+      <li class="dropspot">- &quot;자동으로 변경 사항 기록&quot;버튼입니다. 이 기능을 활성화하면 캔버스 내 자산에 대한 변경 사항이 자동으로 기록되고 해당 매개 변수 트랙 및 매개 변수 키가 도프 시트의 재생 헤드 위치에 추가됩니다. 예를 들어 재생 헤드를 프레임 0에서 프레임 10으로 이동 한 다음 캔버스에서 자산을 100 픽셀 오른쪽으로 이동하면 위치에 매개 변수 트랙이 추가되고 매개 변수 키가 프레임 0에 추가됩니다 (초기) 위치) 및 프레임 10 (재생 헤드 위치)에서 시퀀스에서 &quot;재생&quot;을 누르면 자산이 10 프레임 이상 오른쪽으로 100 픽셀 이동합니다.</li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Visible / Lock Toggles</span><span data-close-text="true">Visible / Lock Toggles</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">표시 / 잠금 토글</span> <span data-close-text="true">표시 / 잠금 토글</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">Both asset tracks and parameter tracks have a button to toggle track visibility <img alt="Track Visibility Icon" src="../../assets/Images/Icons/Icon_Track_Visible.png"/> and to lock the track <img alt="Track Lock Icon" src="../../assets/Images/Icons/Icon_Track_Lock.png"/>. If you disable the visibility of the track, then it will not be shown when the sequence is run in a room, nor will it be shown in the sequence canvas while testing, and toggling the visibility of an asset track will also toggle the visibility
-      of its parameter tracks. Locking a track simply means that this track will no longer be able to be edited in any way. Note that tracks that are invisible will be drawn faded on the dope sheet, while tracks that are locked will be drawn with an overlay,
-      so you can immediately see what state each track is in:</p>
-    <p class="dropspot"><img alt="Locked And Invisible Tracks In The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Locked_And_Visible.png"/>It is worth noting that while locking an asset track will lock the parameter tracks associated with
-      it, you can then unlock the individual parameters as required, and parameters themselves can be locked/unlocked without affecting the status of the main asset track.</p>
+    <p class="dropspot">Both asset tracks and parameter tracks have a button to toggle track visibility <img alt="Track Visibility Icon" src="../../assets/Images/Icons/Icon_Track_Visible.png"/>트랙을 잠그기 위해 . 트랙의 가시성을 비활성화하면 시퀀스가 ​​룸에서 실행될 때 표시되지 않으며 테스트 중에 시퀀스 캔버스에 표시되지 않으며 자산 트랙의 가시성을 전환하면 가시성이 토글됩니다. 파라미터 추적. 트랙을 잠그면이 트랙을 더 이상 편집 할 수 없게됩니다. 보이지 않는 트랙은 도프 시트에 희미하게 그려지고 잠긴 트랙은 오버레이로 그려 지므로 각 트랙의 상태를 즉시 확인할 수 있습니다.</p>
+    <p class="dropspot"><img alt="Locked And Invisible Tracks In The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Locked_And_Visible.png"/>자산 트랙을 잠그는 동안 관련된 트랙을 잠그면 필요에 따라 개별 매개 변수의 잠금을 해제 할 수 있으며 기본 자산 트랙의 상태에 영향을주지 않고 매개 변수 자체를 잠 그거나 잠금 해제 할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Track Colour</span><span data-close-text="true">Track Colour</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">트랙 색상</span> <span data-close-text="true">트랙 색상</span></a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">Each asset track you create will be assigned a random colour by the IDE to make it easier to identify on the Dope Sheet. This colour can be changed at any time by simply clicking the colour bar for the track and then selecting the colour you want
-      to use from the Colour Picker window that opens. Any colour selected for an asset track will automatically be applied to all the parameter tracks associated, however you can then edit the colour of each parameter track individually so it is different
-      if required. Note that if you then change the asset track colour again, this will override any changes made to the parameter tracks.</p>
+    <p class="dropspot">생성 한 각 자산 트랙에는 IDE에서 색상이 무작위로 지정되어 Dope 시트에서 쉽게 식별 할 수 있습니다. 이 색상은 트랙의 색상 막대를 클릭 한 다음 열리는 색상 선택기 창에서 사용하려는 색상을 선택하여 언제든지 변경할 수 있습니다. 자산 트랙에 대해 선택된 모든 색상은 연관된 모든 매개 변수 트랙에 자동으로 적용되지만 필요한 경우 각 매개 변수 트랙의 색상을 개별적으로 편집 할 수 있습니다. 그런 다음 자산 트랙 색상을 다시 변경하면 매개 변수 트랙에 대한 변경 사항이 무시됩니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Adding Parameter Tracks</span><span data-close-text="true">Adding Parameter Tracks</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">파라미터 트랙 추가 파라미터 트랙</span> <span data-close-text="true">추가</span></a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot">The Add Parameter <img alt="Add Parameter Track Icon" height="15" src="../../assets/Images/Icons/Icon_Add_Param.png" width="15"/> button can be used to add a single parameter track to the selected asset track. As mentioned earlier on this page, parameter
-      tracks can be of various different types depending on the asset that it is related to. Below is a list of all the different parameter tracks available and what they refer to, as well as the assets that they can be applied to:</p>
+    <p class="dropspot">The Add Parameter <img alt="Add Parameter Track Icon" height="15" src="../../assets/Images/Icons/Icon_Add_Param.png" width="15"/>버튼을 사용하여 선택한 자산 트랙에 단일 파라미터 트랙을 추가 할 수 있습니다. 이 페이지의 앞부분에서 언급했듯이 매개 변수 트랙은 관련된 자산에 따라 다양한 유형이 될 수 있습니다. 아래는 사용 가능한 모든 매개 변수 트랙과 이들이 참조하는 항목 및 적용 할 수있는 자산의 목록입니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Position</strong>: This parameter track can be added to any of the four sequence asset types (<em>sprites</em>, <em>objects</em>, <em>sounds </em>or <em>sequences</em>) and is used to set the spacial position within the sequence for the
-        asset. It takes an X and a Y value.</li>
-      <li class="dropspot"><strong>Rotation</strong>: Like the position parameter, the rotation parameter is available for <em>all </em>sequence assets and can be used to set the rotation in degrees for the asset. Keep in mind that GameMaker Studio 2 calculates rotation <em>anti-clockwise</em>,
-        starting with 0° on the right, so 90° is up, 180° is left and 270° is down.</li>
-      <li class="dropspot"><strong>Origin</strong>: The origin parameter is available for <em>sprite</em>, <em>object </em>and <em>sequence </em>assets and can be used to set the X and Y position of the origin of the asset. Changing the origin will affect how the asset is
-        positioned, rotated and scaled.</li>
-      <li class="dropspot"><strong>Scale</strong>: The scale parameter is available for <em>sprite</em>, <em>object </em>and <em>sequence </em>assets and is used to set the horizontal and vertical scale of the asset. This will affect how the asset is rendered in the IDE and
-        at runtime, and is calculated as a scalar value, where 100% is the default asset size, 50% would be half size, and 200% would be double the size. Note that you have the possibility of linking the horizontal and vertical scale values by clicking
-        the &quot;link&quot; <img alt="Track Link Icon" height="14" src="../../assets/Images/Icons/Icon_Track_Link.png" width="14"/> button. This means that changing one value will automatically change the other too.</li>
-      <li class="dropspot"><strong>Image Index</strong> and <strong>Image Speed</strong>: These parameters are only available for <em>sprite </em>and <em>object </em>assets and can be used to change the current animation frame (see the page on the <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm">image_index</a> for
-        more information) as well as the current animation speed, which is set using FPS and works the same way as the value you set for the sprite being used in the sprite editor.</li>
-      <li class="dropspot"><strong>Colour Multiply</strong>: This parameter is only available for <em>sprite </em>and <em>object </em>assets and can be used to change the current blend colour for the sprite being drawn. This is the equivalent of setting the <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_blend.htm">image_blend</a> value
-        and any colours set here will be &quot;multiplied&quot; (ie, blended) with the colour of the sprite, and a value of white (#ffffffff) indicates that no blending should take place. Note that when working with this type of track, you can set the
-        colour by manually typing in the hex value, or you can click the colour swatch to open the GameMaker Studio 2 Colour Picker. Note that colours are given in <a class="tooltip" title="This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). ">ARGB</a> format, so you can set a value
-        for alpha using this kind of parameter track (the Colour Picker also permits you to set the alpha value). This would be the equivalent of setting the <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_alpha.htm">image_alpha</a> for
-        the sprite.</li>
-      <li class="dropspot"><strong>Volume</strong>: The volume parameter only applies to <em>sound </em>asset tracks and can be used to set the gain of the sound (the actual sound asset gain won&#39;t be changed, as it&#39;s essentially an emitter that is used for the asset
-        track in sequences). The volume value is calculated as a percentage, where 0% is no volume and 100% is full volume.</li>
-      <li class="dropspot"><strong>Pitch</strong>: The pitch parameter only applies to <em>sound </em>asset tracks and can be used to set the pitch of the sound (as with volume, the actual sound asset gain won&#39;t be changed, as it&#39;s essentially an emitter that is used
-        for the asset track in sequences). The pitch value is calculated as a percentage, 100% is the &quot;natural&quot; pitch of the sound, and less than 100% will lower it while greater than 100% will raise it.</li>
-      <li class="dropspot"><strong>Falloff</strong>: The falloff parameter only applies to <em>sound </em>asset tracks and is currently not implemented.</li>
+      <li class="dropspot"><strong>위치</strong> :이 파라미터 트랙은 4 개의 시퀀스 자산 유형 ( <em>스프라이트</em> , <em>오브젝트</em> , <em>사운드</em> 또는 <em>시퀀스</em> ) 중 하나에 추가 할 수 있으며 자산의 시퀀스 내 공간 위치를 설정하는 데 사용됩니다. X와 Y 값이 필요합니다.</li>
+      <li class="dropspot"><strong>회전</strong> : 위치 매개 변수와 마찬가지로 회전 매개 변수는 <em>모든</em> 시퀀스 자산에 사용할 수 있으며 자산의 회전 각도를 설정하는 데 사용할 수 있습니다. GameMaker Studio 2는 오른쪽에서 0 °부터 시작하여 <em>시계 반대 방향으로</em> 회전을 계산하므로 90 °는 위쪽, 180 °는 왼쪽, 270 °는 아래쪽에 있습니다.</li>
+      <li class="dropspot"><strong>Origin</strong> : origin 매개 변수는 <em>스프라이트</em> , <em>객체</em> 및 <em>시퀀스</em> 자산에 사용할 수 있으며 자산 원점의 X 및 Y 위치를 설정하는 데 사용할 수 있습니다. 원점을 변경하면 자산의 위치, 회전 및 크기 조정 방법에 영향을줍니다.</li>
+      <li class="dropspot"><strong>Scale</strong> : scale 매개 변수는 <em>스프라이트</em> , <em>객체</em> 및 <em>시퀀스</em> 자산에 사용할 수 있으며 자산의 가로 및 세로 스케일을 설정하는 데 사용됩니다. 이는 자산이 IDE 및 런타임에 렌더링되는 방식에 영향을 미치며 스칼라 값으로 계산됩니다. 여기서 100 %는 기본 자산 크기이고 50 %는 절반 크기이며 200 %는 크기의 두 배입니다. &quot;링크&quot;를 클릭하여 가로 및 세로 스케일 값을 연결할 수 있습니다 단추. 즉, 한 값을 변경하면 다른 값도 자동으로 변경됩니다.</li>
+      <li class="dropspot"><strong>이미지 인덱스</strong> 및 <strong>이미지 속도</strong> :이 매개 변수는 <em>스프라이트</em> 및 <em>오브젝트</em> 자산에만 사용할 수 있으며 현재 애니메이션 프레임 (자세한 내용은 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm">image_index</a> 페이지 참조)과 FPS를 사용하여 설정 한 현재 애니메이션 속도를 변경하는 데 사용할 수 있습니다 스프라이트 에디터에서 사용되는 스프라이트에 설정 한 값과 같은 방식으로 작동합니다.</li>
+      <li class="dropspot"><strong>Color Multiply</strong> :이 매개 변수는 <em>스프라이트</em> 및 <em>오브젝트</em> 자산에만 사용할 수 있으며 그려지는 스프라이트의 현재 블렌드 색상을 변경하는 데 사용할 수 있습니다. 이것은 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_blend.htm">image_blend</a> 값을 설정하는 것과 동일하며 여기에서 설정 한 색상은 스프라이트의 색상과 &quot;곱셈&quot;(즉, 혼합)되며 흰색 값 (#ffffffff)은 혼합이 발생하지 않아야 함을 나타냅니다. 이 유형의 트랙으로 작업 할 때는 16 진수 값을 수동으로 입력하여 색상을 설정하거나 색상 견본을 클릭하여 GameMaker Studio 2 색상 피커를 열 수 있습니다. 색상은 <a class="tooltip" title="이것은 Alpha, Red, Green, Blue의 약어이며 16 진수 값으로 지정된 색상 구성 요소를 나타내는 데 사용됩니다 (예 : # FF53E270). 여기서 두 자리 숫자 각각은 단일 구성 요소를 나타냅니다. 위의 ARGB 예제를 분류하면 Alpha (FF), Red (53), Green (E2) 및 Blue (70)의 구성 요소 값이 제공됩니다.">ARGB</a> 형식으로 제공되므로 이러한 종류의 매개 변수 트랙을 사용하여 알파 값을 설정할 수 있습니다 (색상 선택 도구를 사용하면 알파 값을 설정할 수도 있습니다). 이것은 스프라이트에 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_alpha.htm">image_alpha</a> 를 설정하는 것과 같습니다.</li>
+      <li class="dropspot"><strong>Volume</strong> : volume 매개 변수는 <em>사운드</em> 자산 트랙에만 적용되며 <em>사운드</em> 게인을 설정하는 데 사용할 수 있습니다 (실제 사운드 자산 게인은 자산 트랙에 순서대로 사용되는 이미 터이므로 변경되지 않습니다). 볼륨 값은 백분율로 계산되며 0 %는 볼륨이없고 100 %는 전체 볼륨입니다.</li>
+      <li class="dropspot"><strong>피치</strong> : 피치 파라미터는 <em>사운드</em> 자산 트랙에만 적용되며 <em>사운드</em> 의 피치를 설정하는 데 사용할 수 있습니다 (볼륨과 마찬가지로 실제 사운드 자산 게인은 자산 트랙에 사용되는 이미 터이므로 변경되지 않습니다) 순서대로). 피치 값은 백분율로 계산되며 100 %는 사운드의 &quot;자연&quot;피치이며 100 %보다 작 으면 100 %보다 작 으면 음이 낮아집니다.</li>
+      <li class="dropspot"><strong>폴 오프는</strong> : 폴 오프 매개 변수는 자산 트랙 <em>사운드에</em> 적용하고 현재 구현되지 않았다.</li>
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">Track Actions</span><span data-close-text="true">Track Actions</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">액션 추적 액션</span> <span data-close-text="true">추적</span></a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot">The buttons at the bottom of the track editor are the different track actions and can be used for the following purposes:</p>
+    <p class="dropspot">트랙 편집기 하단의 버튼은 다른 트랙 동작이며 다음과 같은 용도로 사용할 수 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img alt="Add Track Icon" src="../../assets/Images/Icons/Icon_AddAsset.png"/> - This button will open the Asset Explorer for you to pick an asset to use as a new track. Once selected the asset track will be created and frames added into the Dope
-        Sheet at the current playhead position.</li>
-      <li class="dropspot"><img alt="Duplicate Asset Icon" src="../../assets/Images/Icons/Icon_DuplicateAsset.png"/> - When you have selected one or more asset tracks in the track editor, clicking this button will duplicate them (along with any parameter tracks they may
-        contain).</li>
-      <li class="dropspot"><img alt="Clip Mask Icon" src="../../assets/Images/Icons/Icon_AddClipMask.png"/> - Clicking this will create a special <strong>clipping mask group</strong> where you can give sprites to use as masks and sprites to be masked. See <a href="Clipping_Masks.htm">here</a>        for more information.</li>
-      <li class="dropspot"><img alt="Group Folder Icon" height="18" src="../../assets/Images/Icons/Icon_AddGroup.png" width="25"/> - Clicking this will add a new group folder to the track editor, which can then be used to better organise tracks. You can add a track t a group
-        by dragging the track onto the group folder and you can remove it again by dragging it out of the folder. Note that any asset that is added to a group folder will automatically be assigned the folder colour, although you can then edit the track
-        colour for individual tracks so that it is different if required.</li>
-      <li class="dropspot"><img alt="Track Delete Icon" src="../../assets/Images/Icons/Icon_DeleteTrack.png"/> - As you might expect, clicking this will delete the selected track(s). If this is an asset track, then all parameter tracks it contains will also be deleted, although
-        you can use it on selected parameter tracks to delete them on their own without removing the asset tracks they are associated with. If you use this on an empty group folder then the folder will be deleted, however if there are any tracks in the
-        folder you will be shown a warning, as deleting a folder will remove all tracks that are inside of it too.</li>
+      <li class="dropspot">-이 버튼을 누르면 자산 탐색기가 열리고 새 트랙으로 사용할 자산을 선택할 수 있습니다. 선택하면 자산 트랙이 생성되고 프레임이 현재 재생 헤드 위치에서 Dope Sheet에 추가됩니다.</li>
+      <li class="dropspot">-트랙 편집기에서 하나 이상의 자산 트랙을 선택한 경우이 버튼을 클릭하면 포함 할 수있는 모든 파라미터 트랙과 함께 해당 트랙이 복제됩니다.</li>
+      <li class="dropspot">-클릭하면 <strong>마스크</strong> 로 사용할 스프라이트와 마스크로 사용할 스프라이트를 제공 할 수있는 특수 <strong>클리핑 마스크 그룹</strong> 이 생성됩니다. 자세한 내용은 <a href="Clipping_Masks.htm">여기</a> 를 참조하십시오.</li>
+      <li class="dropspot">-클릭하면 새로운 그룹 폴더가 트랙 편집기에 추가되어 트랙을보다 잘 구성 할 수 있습니다. 트랙을 그룹 폴더로 끌어서 트랙 그룹을 추가 할 수 있으며 폴더 밖으로 끌어서 다시 제거 할 수 있습니다. 그룹 폴더에 추가 된 자산에는 폴더 색상이 자동으로 할당되지만 필요한 경우 개별 트랙의 트랙 색상을 편집하여 개별 트랙의 트랙 색상을 편집 할 수 있습니다.</li>
+      <li class="dropspot">-예상대로 클릭하면 선택한 트랙이 삭제됩니다. 자산 트랙 인 경우 자산 트랙이 포함 된 모든 매개 변수 트랙도 삭제됩니다. 선택한 매개 변수 트랙에서 해당 트랙을 사용하여 연결된 자산 트랙을 제거하지 않고 자체적으로 삭제할 수 있습니다. 빈 그룹 폴더에서이 폴더를 사용하면 폴더가 삭제되지만 폴더에 트랙이 있으면 폴더를 삭제하면 폴더 안에있는 모든 트랙도 제거되므로 경고가 표시됩니다.</li>
     </ul>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
-  <p>There are two further pages with information relating to tracks and parameters that are also of interest, the first is about using <a href="../Animation_Curves.htm">Animation Curve</a> assets to generate parameter tracks, and the second outlines how
-    to create <strong>Clipping Masks</strong>:</p>
+  <p>관심있는 트랙 및 매개 변수와 관련된 정보가있는 두 개의 추가 페이지가 있습니다. 첫 번째 페이지는 <a href="../Animation_Curves.htm">애니메이션 커브</a> 자산을 사용하여 매개 변수 트랙을 생성하는 방법에 관한 것이고, 두 번째는 <strong>클리핑 마스크</strong> 를 만드는 방법에 대한 개요입니다.</p>
   <ul class="colour">
-    <li><a href="Using_Animation_Curves.htm">Using Animation Curves</a></li>
-    <li><a href="Clipping_Masks.htm">Clipping Masks</a></li>
+    <li><a href="Using_Animation_Curves.htm">애니메이션 커브 사용</a></li>
+    <li><a href="Clipping_Masks.htm">클리핑 마스크</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Sequence_Properties\The_Track_Panel.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="Clipping_Masks.htm">Clipping Masks</a></div>
+        <div style="float:left">뒤로: <a href="../Sequences.htm">시퀀스</a></div>
+        <div style="float:right">다음: <a href="Clipping_Masks.htm">클리핑 마스크</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Sequences - The Track Panel
@@ -305,4 +239,4 @@ Track Panel
 sequences_track_panel
 -->
 
-</body></html>
+</body></html> 

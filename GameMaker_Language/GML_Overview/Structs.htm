@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Structs">
-        <span>Structs</span>
+        <span>구조</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,106 +80,95 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Structs</h1>
-  <p>A <strong>struct </strong>is - to put it simply - a variable that holds a collection other variables. The variables that a struct holds can be of any <a href="Data_Types.htm">data type</a> previously mentioned and these variables can be read from and
-    written to after the initial struct declaration, and you can also add more variables to a struct after it has been declared. The variables used in a struct should follow conventional naming schemes, ie: they cannot start with a number and should only
-    be made up of alphanumeric characters and the underscore &quot;_&quot; character, and also note that the contents of a struct are <em>independent of the instance or function that created it</em>, and as such you can - if you wish - use the built-in
-    variable names like <tt>image_index</tt> or <tt>x</tt> and <tt>y</tt>.</p>
-  <p>After the initial creation, structs have no processing overhead while they exist, although they <i>will</i> take up space in memory. The struct syntax is as follows:</p>
+  <h1>구조</h1>
+  <p><strong>구조체</strong> 는 간단히 말해서 다른 변수 컬렉션을 보유하는 변수입니다. 구조체가 보유한 변수는 이전에 언급 한 모든 <a href="Data_Types.htm">데이터 유형일</a> 수 있으며 이러한 변수는 초기 구조체 선언 후 읽고 쓸 수 있으며 선언 된 후에 구조체에 변수를 더 추가 할 수도 있습니다. 그들은 숫자로 시작할 수 없으며, 영숫자와 밑줄 &quot;_&quot;문자로 구성되어야하며, 또한 <em>구조체의</em> 내용이 <em>독립적</em> 참고 : 구조체에 사용 된 변수, 즉 기존의 명명 체계를 따라야합니다 <em>인스턴스 또는 함수를 생성</em> <tt>했으므로</tt> 원하는 경우 <tt>image_index</tt> 또는 <tt>x</tt> 및 <tt>y</tt> 와 같은 내장 변수 이름을 사용할 수 있습니다.</p>
+  <p>그들이 존재하는 동안 그들이 비록 초기 생성 후, 구조체는 더 프로세싱 오버 헤드가없는 <i>것이다</i> 메모리 공간을 차지한다. 구조체 구문은 다음과 같습니다.</p>
   <p class="code"><i>&lt;variable&gt;</i> = {<br/>
     <i>&lt;variable&gt;</i> : <i>&lt;value&gt;</i>,<br/>
     <i>&lt;variable&gt;</i> : <i>&lt;value&gt;</i>,<br/>     etc...
     <br/>     };
   </p>
-  <p>So, an example of this in practice would be:</p>
+  <p>따라서 실제로 이러한 예는 다음과 같습니다.</p>
   <p class="code">mystruct = {<br/>     a : 20,<br/>     b : &quot;Hello World&quot;<br/>     };
   </p>
-  <p>The above code creates an instance scope struct in the variable &quot;mystruct&quot; and populates it with some values (structs can be created at local, instance and global scope, just like any other variable - see the section on <a href="Variables_And_Variable_Scope.htm">Variables and Variable Scope</a>    for more information). Note that you don&#39;t have to populate the contents of a struct when it is created initially and you can create an empty struct by simply doing this:</p>
+  <p>위의 코드는 &quot;mystruct&quot;변수에 인스턴스 범위 구조체를 생성하고 일부 값으로 채 웁니다 (구조는 다른 변수와 마찬가지로 로컬, 인스턴스 및 글로벌 범위에서 생성 할 수 있음-자세한 내용은 <a href="Variables_And_Variable_Scope.htm">변수 및 변수 범위</a> 섹션 참조). ). 구조체를 처음 만들 때 구조체의 내용을 채울 필요는 없으며 간단히 다음을 수행하여 빈 구조체를 만들 수 있습니다.</p>
   <p class="code">mystruct = {};</p>
-  <p>This struct can then be added to at a later point in the game code. Here is an example of a struct with various variables and data types:</p>
+  <p>이 구조체는 나중에 게임 코드에서 추가 될 수 있습니다. 다음은 다양한 변수와 데이터 유형을 가진 구조체의 예입니다.</p>
   <p class="code">var _xx = 100;<br/> mystruct = {<br/>     a : 10,<br/>     b : &quot;Hello World&quot;,<br/>     c : int64(5),<br/>     d : _xx + 50,<br/>     e : function(a, b)<br/>         {
     <br/>         return a + b;<br/>         },
     <br/>     f : [ 10, 20, 30, 40, 50 ],<br/>     g : image_index<br/>     };
   </p>
-  <p>You&#39;ll notice in the above code that you can also define methods and use runtime functions in structs, and you can also use local variables and instance variables within the struct.</p>
-  <p>You&#39;ll notice in the above example that the struct variable &quot;g&quot; is being set to <span class="inline">image_index</span>, which is an instance variable. You might think that you&#39;d need to use the <a href="Instance_Keywords.htm">keyword</a>    <span class="inline">other</span> in this case to get the instance variable, but this is not necessary. Essentially, when you define struct<strong>, all member variables on the left-hand side of the colon &quot;:&quot; are the <em>struct</em> variables, and the values and variables on the right-hand side are from the scope of whatever it is <em>that is doing the defining</em></strong>.</p>
-  <p>Let&#39;s look at a simple example to illustrate this. Say you want to define a struct with the variables &quot;x&quot; and &quot;y&quot; and you want to set them to the &quot;x&quot; and &quot;y&quot; of the instance defining the struct. In practice
-    the code would look like this:</p>
+  <p>위 코드에서 구조체에서 메소드를 정의하고 런타임 함수를 사용할 수 있으며 구조체 내에서 로컬 변수 및 인스턴스 변수를 사용할 수도 있습니다.</p>
+  <p>위 예제에서 struct 변수 &quot;g&quot;가 인스턴스 변수 인 <span class="inline">image_index</span> 로 설정되어 <span class="inline">있음</span> 을 <span class="inline">알</span> 수 있습니다. 이 경우 인스턴스 변수를 얻기 위해 <span class="inline">다른</span> <a href="Instance_Keywords.htm">키워드</a> 를 사용해야한다고 생각할 수도 있지만, 반드시 필요한 것은 아닙니다. 본질적으로 struct를 정의 할 때 <strong>콜론 &quot;:&quot;의 왼쪽에있는 모든 멤버 변수는 <em>struct</em> 변수이고 오른쪽의 값과 변수 <em>는 수행하는</em> 모든 범위에서 나옵니다 <em>. 정의</em></strong> .</p>
+  <p>이를 설명하기위한 간단한 예를 살펴 보겠습니다. 변수 &quot;x&quot;및 &quot;y&quot;를 사용하여 구조체를 정의하고 구조체를 정의하는 인스턴스의 &quot;x&quot;및 &quot;y&quot;로 설정하려고한다고 가정합니다. 실제로 코드는 다음과 같습니다.</p>
   <p class="code">mystruct = {<br/>     x : x,<br/>     y : y<br/>     };
   </p>
-  <p>In the above code the struct member variables &quot;x&quot; and &quot;y&quot; are being set to the values held in the instance variables &quot;x&quot; and &quot;y&quot;, since the right-hand of the colon &quot;:&quot; refers to the instance that is
-    defining the struct. It is worth noting that this means you c<em>annot</em> use struct member variables as part of the definition of other variables within the struct when it is being created. For example, the following would give you an error:</p>
+  <p>위의 코드에서 구조체 멤버 변수 &quot;x&quot;및 &quot;y&quot;는 콜론 &quot;:&quot;의 오른쪽이 인스턴스를 참조하기 때문에 인스턴스 변수 &quot;x&quot;및 &quot;y&quot;에있는 값으로 설정됩니다. 구조체를 정의하고 있습니다. 이 구조체 내의 다른 변수의 정의의 일부로서 <em>ANNOT 사용</em> 구조체 멤버 변수 C이 방법 당신이이 생성 될 때 있음을 주목할 필요가있다. 예를 들어, 다음과 같은 경우 오류가 발생합니다.</p>
   <p class="code">mystruct = {<br/>     a : 10,<br/>     b : 10,<br/>     c : a + b<br/>     }</p>
-  <p>The error occurs because the variables &quot;a&quot; and &quot;b&quot; are actually being evaluated at the scope of whatever is defining the struct (they are on the right of the colon &quot;:&quot;), and are <em>not</em> the ones being defined within
-    the struct itself. </p>
-  <p>Once a struct has been defined, you can access the data within using the &quot;point&quot; notation, like this:</p>
+  <p>한 사람이 구조체 내에서 정의되고 <em>있지</em> : 변수가 &quot;A&quot;와 &quot;B&quot;는 실제로 어떠한 구조체를 ( &quot;&quot;가 콜론의 오른쪽에있는) 형성되는 범위에서 평가되기 때문에 오류가 발생 그 자체.</p>
+  <p>구조체가 정의되면 다음과 같이 &quot;포인트&quot;표기법을 사용하여 데이터에 액세스 할 수 있습니다.</p>
   <p class="code">mystruct = {<br/>     a : 20,<br/>     b : &quot;Hello World&quot;<br/>     }
     <br/> mystring = mystruct.b + string(mystruct.a);</p>
-  <p>You can also perform operations on the variables within a structure or use them in functions, just as you would any other variable. For example:</p>
+  <p>다른 변수와 마찬가지로 구조 내 변수에 대한 작업을 수행하거나 함수에 사용할 수도 있습니다. 예를 들면 다음과 같습니다.</p>
   <p class="code">mystruct.a += 1;<br/> mystruct.b = mystruct.a + 20;<br/> mydir = point_direction(mouse_x, mouse_y, mystruct.xx, mystruct.yy);</p>
-  <p>Finally, structs can have other structs nested inside of them, like this:</p>
+  <p>마지막으로 구조체에는 다음과 같이 다른 구조체가 중첩 될 수 있습니다.</p>
   <p class="code">mystruct = {<br/>     a : {<br/>         aa : &quot;This is an example&quot;<br/>         },
     <br/>     b : {<br/>         bb : &quot;And another one&quot;<br/>         },
     <br/>     };
   </p>
-  <p>To access such nested structs you would still use the point notation, like this:</p>
+  <p>이러한 중첩 구조체에 액세스하려면 다음과 같이 여전히 포인트 표기법을 사용합니다.</p>
   <p class="code">var _str = mystuct.a.aa + &quot; &quot; + mystruct.b.bb;<br/> show_debug_message(_str);
   </p>
-  <p>When a struct is no longer required it can be removed from memory using the <a href="Language_Features/delete.htm"><tt>delete</tt></a> operator, which flags the struct as being able to be garbage collected. This is not strictly required as the <a class="tooltip" title="The garbage collector is an automated tool that is part of the game code and is used to remove certain things (like arrays and structs) from memory when they are no longer referenced in your code, without the need for you to explicitly remove them.">garbage collector</a> may do this automatically in the following game steps if the struct is no longer referenced in your code, but it is good practice to do so and we recommend it (for example, call <tt>delete</tt>    in the <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up event</a> of an instance to explicitly tell the garbage collector that an instance scope struct is to be deleted).</p>
-  <p>Also note that structs can be created using <a href="Script_Functions.htm">script functions</a> and <a href="Method_Variables.htm">methods</a>, which requires the use of the <a href="Language_Features/new.htm"><tt>new</tt></a> operator and the keyword
-    <tt>constructor</tt>, as shown in the following example:</p>
+  <p>구조체가 더 이상 필요하지 않으면 <a href="Language_Features/delete.htm"><tt>delete</tt></a> 연산자를 사용하여 메모리에서 제거 할 수 있습니다.이 연산자는 구조체를 가비지 수집 할 수있는 것으로 플래그합니다. 이 엄격히로 필요하지 않습니다 <a class="tooltip" title="가비지 수집기는 게임 코드의 일부인 자동화 된 도구로, 명시 적으로 제거 할 필요없이 코드에서 더 이상 참조되지 않을 때 메모리에서 특정 항목 (예 : 배열 및 구조체)을 제거하는 데 사용됩니다.">가비지 컬렉터</a> 구조체가 더 이상 코드에서 참조되는 경우 다음 게임 단계에서 자동으로이 작업을 수행하지 않을 수 있지만, 그렇게하는 것이 좋습니다 우리는 예를 들어,에서 <tt>삭제</tt> 전화 (추천 <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">청소</a> 가비지 수집기에게 인스턴스 범위 구조체를 삭제할 것을 명시 적으로 알리기위한 인스턴스 <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">이벤트</a> .</p>
+  <p>또한 <a href="Script_Functions.htm">스크립트 함수</a> 및 <a href="Method_Variables.htm">메소드를</a> 사용하여 구조체를 작성할 수 있으며 다음 예제와 같이 <a href="Language_Features/new.htm"><tt>new</tt></a> 연산자 및 키워드 <tt>생성자를</tt> 사용해야합니다.</p>
   <p class="code">Vector2 = function(_x, _y) constructor<br/>     {
     <br/>     x = _x;<br/>     y = _y;<br/>     static Add = function( _other )<br/>         {
     <br/>         x += _other.x;<br/>         y += _other.y;<br/>         }
     <br/>     }
   </p>
-  <p>Here we are creating the function <tt>Vector2</tt> and telling GameMaker Studio 2 that this is a function for making a struct by adding the <tt>constructor</tt> keyword after the definition. You can then call this function like this:</p>
+  <p>여기서는 <tt>Vector2</tt> 함수를 만들고 GameMaker Studio 2에 정의 뒤에 <tt>생성자</tt> 키워드를 추가하여 구조체를 만드는 함수라고 알려줍니다. 그런 다음이 함수를 다음과 같이 호출 할 수 있습니다.</p>
   <p class="code">v1 = new Vector2(10, 10);</p>
-  <p>Now the variable <tt>v1</tt> will reference a struct with the variables <tt>x</tt> and <tt>y</tt> and the <a href="Method_Variables.htm">method variable</a> <tt>Add</tt>. Structs created this way will also support single level <b>inheritance</b>, ie:
-    you can create a struct using a function that inherits the data from another constructor function. For example, we created a <tt>Vector2</tt> function above, so we can then use that as the &quot;parent&quot; for another function <tt>Vector3</tt>:</p>
+  <p>이제 변수 <tt>v1</tt> 은 변수 <tt>x</tt> 와 <tt>y</tt> 와 <a href="Method_Variables.htm">메소드 변수</a> <tt>Add를</tt> 가진 구조체를 참조 할 것입니다. 이 방법으로 생성 된 Structs는 단일 레벨 <b>상속</b> 도 지원합니다. 즉, 다른 생성자 함수에서 데이터를 상속하는 함수를 사용하여 구조체를 만들 수 있습니다. 예를 들어, 위에서 <tt>Vector2</tt> 함수를 만들었으므로이를 다른 함수 <tt>Vector3</tt> 의 &quot;부모&quot;로 사용할 수 있습니다.</p>
   <p class="code">function Vector3(_x, _y, _z) : Vector2(_x, _y) constructor<br/>     {
     <br/>     z = _z;<br/>     static Add = function( _other )<br/>         {
     <br/>         x += _other.x;<br/>         y += _other.y;<br/>         z += _other.z;<br/>         }
     <br/>     }
   </p>
-  <p>As you can see, when defining the function we use a colon &quot;:&quot; to separate the new function from the &quot;parent&quot; function to be inherited from, and we can now do things like this:</p>
+  <p>보시다시피, 함수를 정의 할 때 콜론 &quot;:&quot;을 사용하여 상속 할 &quot;부모&quot;함수와 새 함수를 구분하고 이제 다음과 같은 작업을 수행 할 수 있습니다.</p>
   <p class="code">var v1 = new Vector3(10, 10, 20);<br/> var v2 = new Vector3(100, 100, 200);<br/> v1.Add(v2);
     <br/> show_debug_message(v1);
   </p>
-  <p>The output shown for the above code would be:</p>
+  <p>위 코드에 대해 표시된 출력은 다음과 같습니다.</p>
   <p class="code">{ 110, 110, 220 }</p>
-  <p>For more details on the <tt>new</tt> and <tt>delete</tt> operators, please see the following pages:</p>
+  <p><tt>new</tt> 및 <tt>delete</tt> 연산자에 대한 자세한 내용은 다음 페이지를 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="Language_Features/new.htm"><tt>new</tt></a></li>
-    <li><tt><a href="Language_Features/delete.htm"><tt>delete</tt></a>
-      </tt>
-    </li>
+    <li><a href="Language_Features/new.htm"><tt>새로운</tt></a></li>
+    <li><tt><a href="Language_Features/delete.htm"><tt>지우다</tt></a></tt></li>
   </ul>
-  <p>One final thing to mention about structs is that you can change what is output to the console from them for debugging. By default, calling the function <a href="../GML_Reference/Debugging/show_debug_overlay.htm"><span class="inline">show_debug_message()</span></a> on
-    a struct will output the contents of the struct (as shown above). However, it&#39;s possible to customise this message by adding a specifically named method to the struct called <span class="inline">toString</span>:</p>
+  <p>구조체에 대해 언급해야 할 마지막 사항은 디버깅을 위해 콘솔에서 출력되는 것을 변경할 수 있다는 것입니다. 기본적으로 구조체에서 <a href="../GML_Reference/Debugging/show_debug_overlay.htm"><span class="inline">show_debug_message ()</span></a> 함수를 호출하면 구조체의 내용이 출력됩니다 (위 그림 참조). 그러나 <span class="inline">toString</span> 이라는 구조체에 특별히 명명 된 메서드를 추가하여이 메시지를 사용자 정의 할 수 있습니다.</p>
   <p class="code">mystruct = {<br/>     a : 20,<br/>     b : &quot;Hello World&quot;,<br/>     toString: function()<br/>         {<br/>         return &quot;This stuct says &quot; + b + &quot;, &quot; + string(a) + &quot; times!!!&quot;;<br/>         }<br/>     }
     <br/> show_debug_message(mystruct);
   </p>
-  <p>Now when the <span class="inline">show_debug_message()</span> function is called, the <span class="inline">toString</span> method will be used to generate the output and - with the above example - you&#39;ll get:</p>
+  <p>이제 <span class="inline">show_debug_message ()</span> 함수가 호출되면 <span class="inline">toString</span> 메소드가 출력을 생성하는 데 사용되며 위의 예에서는 다음과 같은 결과가 나타납니다.</p>
   <p class="code">This struct says Hello World, 20 times!!!</p>
-  <p>Note that you can also call the <a href="../GML_Reference/Strings/Strings.htm"><span class="inline">string()</span></a> function on a struct reference and use that to display the contents - or the <span class="inline">toString</span> method - to the
-    screen, or save it to a file, or whatever, eg:</p>
+  <p>구조체 참조에서 <a href="../GML_Reference/Strings/Strings.htm"><span class="inline">string ()</span></a> 함수를 호출하여이를 사용하여 내용 또는 <span class="inline">toString</span> 메서드를 화면에 표시하거나 파일에 저장하는 등의 작업을 수행 할 수 있습니다.</p>
   <p class="code">var _str = string(mystruct);<br/> draw_text(32, 32, _str);</p>
-  <p>Finally, there are a number of runtime functions that you can use on structs to get the variables they contain as well as a few other things. You can find them in the following section:</p>
+  <p>마지막으로 구조체에 포함 된 변수와 몇 가지 다른 것을 얻기 위해 사용할 수있는 많은 런타임 함수가 있습니다. 다음 섹션에서 찾을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Functions</a></li>
+    <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">변수 함수</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Overview\Structs.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a href="Language_Features.htm">Language Features</a></div>
+        <div style="float:left">뒤로: <a href="GML_Overview.htm">GML 개요</a></div>
+        <div style="float:right">다음: <a href="Language_Features.htm">언어 특징</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Structs
@@ -189,4 +178,4 @@ struct
 structs
 -->
 
-</body></html>
+</body></html> 

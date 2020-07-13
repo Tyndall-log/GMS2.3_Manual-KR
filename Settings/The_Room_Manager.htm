@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="The Room Manager">
-        <span>The Room Manager</span>
+        <span>방 관리자</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,37 +80,28 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Room Manager</h1>
-  <p><img alt="The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager.png" style="cursor: nesw-resize;"/>When using the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>, you can create your rooms and move them between
-    the different folder groups to organise the project in a way that best suits you. However, games in GameMaker Studio 2 generally have rooms that follow a certain order, and at the very least must have a specific <strong>start room</strong> (after
-    the game starts in this room you can use code or actions to go to any room in the game if you wish), which is where the <strong>Room Manager</strong> comes into play.</p>
-  <p>You can open the room manager by clicking the &quot;Extras&quot; button <img alt="Extras Menu Icon" class="icon" src="../assets/Images/Icons/Icon_AssetMenu.png"/> at the top of the Asset Browser and selecting it from the menu that opens, or you can
-    simply click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> the icon to the left of a room in the asset browser:</p>
-  <p><img alt="Opening The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Open.gif"/>Once open, the Room Manager presents you with two different tabs, one for <strong>Room Order</strong> and one for <strong>Room Inheritance</strong>.
-    The room order defines the order in which rooms will be accessed if you are traversing the game literally, using the function <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto_next.htm"><span class="inline">room_goto_next()</span></a> at
-    the end of each room, and the very top room listed will always be flagged by the &quot;home&quot; icon <img alt="Room Manager Home Room Icon" src="../assets/Images/Icons/icon_RoomManager_Home.png"/>, which shows you that this room is the designated
-    <em>start </em>room for the game. This icon will also be shown in the Asset browser so you can see clearly which room it is, regardless of the how you have filtered or set up your assets.</p>
-  <p>You can change the order of rooms by simply clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> and dragging the room you want to move up or down the list, and you can use <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55"/> and/or <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> to select multiple rooms then click and drag them to move them altogether:</p>
-  <p><img alt="Moving Rooms Within The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Move.gif"/>The <strong>Room Inheritance</strong> tab is for setting up &quot;child&quot; rooms. A child room is one that has been copied from
-    a &quot;parent&quot; room and set to inherit all it&#39;s properties. If you do nothing to this room, then this room will indeed be a copy of the original room, but you can then go into the <a href="../The_Asset_Editors/Rooms.htm">Room Editor</a>    and toggle inheritance on or off for specific things like layer, or instances, as well as add new layers, instances and properties to the room.</p>
-  <p><img alt="The Room Inheritance Tab" class="center" src="../assets/Images/Settings/Room_Manager_Inheritance.png"/>As with the Room Order tab, you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> and drag to reorder the rooms, but note that selecting a child room and moving it to a different parent will break the room inheritance with the original parent and it will instead inherit the properties of the new room. Note too that you can convert
-    a child into a &quot;full&quot; room with no inheritance by dragging it to the left of the list (the list border will become highlighted), at which point it will simply become a room in its own right.</p>
-  <p>Rooms can have multiple children, and each child can also be a parent and have their own children, for example:</p>
-  <p><img alt="Example Of Room Inheritance With Multiple Children" class="center" src="../assets/Images/Settings/Room_Manager_Inheritance_Example.png"/>Here we have a parent room, &quot;<span class="inline">rm_Level1_Day</span>&quot;, which has two children
-    &quot;<span class="inline">rm_Level1_Day_AfterBattle</span>&quot; and &quot;<span class="inline">rm_Level1_Night</span>&quot;. We have also assigned another child room to &quot;<span class="inline">rm_Level1_Night</span>&quot; called &quot;<span class="inline">rm_Level1_Night_AfterBattle</span>&quot;.
-    In this way you can re-use resources and level design from one parent room, and then only change what is required to make it slightly different in the child room or rooms.</p>
-  <p>For more information on room inheritance, please see <a href="../The_Asset_Editors/Room_Properties/Room_Inheritance.htm">here</a>.</p>
+  <h1>방 관리자</h1>
+  <p><img alt="The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager.png" style="cursor: nesw-resize;"/><a href="../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 를 사용할 때 회의실을 생성하고 다른 폴더 그룹간에 이동하여 가장 적합한 방식으로 프로젝트를 구성 할 수 있습니다. 그러나 GameMaker Studio 2의 게임에는 일반적으로 특정 순서를 따르는 룸이 있으며 최소한 특정 <strong>시작 룸</strong> 이 있어야합니다 (게임이이 룸에서 시작된 후 코드 또는 작업을 사용하여 게임의 모든 룸으로 이동할 수 있음) <strong>방 관리자</strong> 가 시작되는 곳입니다.</p>
+  <p>You can open the room manager by clicking the &quot;Extras&quot; button <img alt="Extras Menu Icon" class="icon" src="../assets/Images/Icons/Icon_AssetMenu.png"/>애셋 브라우저 상단에있는 메뉴에서 메뉴를 선택하거나 자산 브라우저에서 회의실 왼쪽의 아이콘 :</p>
+  <p><img alt="Opening The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Open.gif"/>룸 관리자가 열리면 <strong>Room Order</strong> 와 <strong>Room Inheritance</strong> 를위한 두 개의 다른 탭이 표시됩니다. 방 순서는 각 방의 끝에서 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto_next.htm"><span class="inline">room_goto_next ()</span></a> 함수를 사용하여 문자 그대로 게임을 통과하는 경우 방에 액세스하는 순서를 정의하며, 맨 위 방은 항상 &quot;홈&quot;아이콘으로 표시됩니다. 이 방이 게임의 지정된 <em>시작</em> 방임을 보여줍니다. 이 아이콘은 자산 브라우저에도 표시되므로 자산을 필터링하거나 설정 한 방법에 관계없이 어느 방이 있는지 명확하게 볼 수 있습니다.</p>
+  <p>You can change the order of rooms by simply clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/>목록을 위 또는 아래로 이동하려는 방을 드래그하면 그리고 / 또는 / 여러 개의 방을 선택한 다음 클릭하고 끌어서 완전히 이동하십시오.</p>
+  <p><img alt="Moving Rooms Within The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Move.gif"/><strong>방 상속</strong> 탭은 &quot;자식&quot;방을 설정하기위한 것입니다. 자식 방은 &quot;부모&quot;방에서 복사되어 모든 방을 상속하도록 설정되어있는 방입니다. 이 방에 아무것도하지 않으면이 방은 실제로 원래 방의 사본이되지만 <a href="../The_Asset_Editors/Rooms.htm">방 편집기</a> 로 이동하여 레이어 또는 인스턴스와 같은 특정 항목에 대한 상속을 켜거나 끌 수 있으며 새 항목을 추가 할 수 있습니다 방에 층, 인스턴스 및 속성.</p>
+  <p><img alt="The Room Inheritance Tab" class="center" src="../assets/Images/Settings/Room_Manager_Inheritance.png"/>회의실 주문 탭과 마찬가지로 끌어서 방을 다시 정렬하지만 자식 방을 선택하고 다른 부모로 이동하면 원래 부모와 함께 방 상속이 중단되고 대신 새 방의 속성이 상속됩니다. 자식을 목록의 왼쪽으로 드래그하여 (목록 경계가 강조 표시됨) 상속하지 않고 &quot;전체&quot;방으로 변환 할 수 있으며,이 시점에서 단순히 자신의 방이됩니다.</p>
+  <p>방에는 여러 명의 자녀가있을 수 있으며 각 자녀는 부모가 될 수 있으며 자신의 자녀가있을 수 있습니다. 예를 들면 다음과 같습니다.</p>
+  <p><img alt="Example Of Room Inheritance With Multiple Children" class="center" src="../assets/Images/Settings/Room_Manager_Inheritance_Example.png"/>여기에는 &quot; <span class="inline">rm_Level1_Day_AfterBattle</span> &quot;및 &quot; <span class="inline">rm_Level1_Night</span> &quot;라는 두 자녀가있는 &quot; <span class="inline">rm_Level1_Day</span> &quot;라는 부모 방이 있습니다. 또한 &quot; <span class="inline">rm_Level1_Night_AfterBattle</span> &quot;이라는 &quot; <span class="inline">rm_Level1_Night</span> &quot;에 다른 자식 방을 할당했습니다. 이런 식으로 하나의 부모 방에서 리소스와 레벨 디자인을 재사용 한 다음 자식 방에서 약간 다르게 만드는 데 필요한 항목 만 변경할 수 있습니다.</p>
+  <p>방 상속에 대한 자세한 내용은 <a href="../The_Asset_Editors/Room_Properties/Room_Inheritance.htm">여기</a> 를 참조 <a href="../The_Asset_Editors/Room_Properties/Room_Inheritance.htm">하십시오</a> .</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings\The_Room_Manager.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Game_Settings.htm">Game Settings</a></div>
-        <div style="float:right">Next: <a href="Included_Files.htm">Included Files</a></div>
+        <div style="float:left">뒤로: <a href="Game_Settings.htm">게임 설정</a></div>
+        <div style="float:right">다음: <a href="Included_Files.htm">포함 된 파일</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Room Manager
@@ -121,4 +112,4 @@ Child Rooms
 room_manager
 -->
 
-</body></html>
+</body></html> 

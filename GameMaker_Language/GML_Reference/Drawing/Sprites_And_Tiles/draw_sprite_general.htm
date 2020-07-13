@@ -71,7 +71,7 @@
         <span>draw_sprite_general</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,106 +81,103 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_sprite_general</h1>
-  <p>This function combines the function <a href="draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a> with the function <a href="draw_sprite_part.htm"><tt>draw_sprite_part()</tt></a>, adding in some additional blending options so that each corner of the
-    final sprite part can be blended with an individual colour.</p>
-  <p class="note"><b>NOTE</b>: Colour blending is only recommended for the HTML5 target when WebGL is enabled, although you can still set the blending colour if it is not enabled and it will blend the sprite as normal. However all blending in this way creates a duplicate
-    sprite which is then stored in the cache and used when required. This is far from optimal and if you use multiple colour changes it will slow down your games performance unless you activate WebGL. if you do not wish to use WebGL, then you can set
-    the font cache size to try and limit this should it be necessary using the function <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><tt style="font-size: 14px">sprite_set_cache_size()</tt></a></span>.</p>
-  <p class="note"><b>NOTE</b>: This function may not work as expected when using skeleton animation sprites, and you may find that the function only draws the first frame of the default pose. You should be using the <tt>draw_skeleton_*</tt> functions instead.</p>
+  <p>이 함수는 함수 결합 <a href="draw_sprite_ext.htm"><tt>draw_sprite_ext ()</tt></a> 함수와 <a href="draw_sprite_part.htm"><tt>draw_sprite_part ()를</tt></a> 최종 스프라이트 부의 각 코너는 개별 색 배합 될 수 있도록 추가적인 블렌딩 옵션에 추가.</p>
+  <p class="note"><b>참고</b> : 색상 혼합은 WebGL이 활성화 된 경우 HTML5 대상에만 권장되지만 혼합 색상이 활성화되어 있지 않으면 여전히 색상을 설정하여 스프라이트를 정상적으로 혼합합니다. 그러나 이러한 방식으로 모든 블렌딩을 수행하면 복제 스프라이트가 생성되어 캐시에 저장되고 필요할 때 사용됩니다. 이것은 최적의 상태와는 거리가 멀고 여러 색상 변경을 사용하면 WebGL을 활성화하지 않으면 게임 성능이 저하됩니다. WebGL을 사용하지 않으려는 경우 <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><tt style="font-size: 14px">sprite_set_cache_size ()</tt></a></span> 함수를 사용하여 필요한 경우 글꼴 캐시 크기를 설정하여이를 제한 할 수 있습니다.</p>
+  <p class="note"><b>참고</b> :이 기능은 스켈레톤 애니메이션 스프라이트를 사용할 때 예상대로 작동하지 않을 수 있으며이 기능은 기본 포즈의 첫 번째 프레임 만 그립니다. 대신 <tt>draw_skeleton_ *</tt> 함수를 사용해야합니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">draw_sprite_general(sprite, subimg, left, top, width, height, x, y, xscale, yscale, rot, c1, c2, c3, c4, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>sprite</td>
-        <td>The index of the sprite to draw.</td>
+        <td>스프라이트</td>
+        <td>그릴 스프라이트의 인덱스입니다.</td>
       </tr>
       <tr>
-        <td>subimg</td>
-        <td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td>
+        <td>Subimg</td>
+        <td>그릴 스프라이트의 하위 이미지 (프레임)입니다 (image_index 또는 -1은 객체의 현재 애니메이션 프레임과 상관이 있습니다).</td>
       </tr>
       <tr>
-        <td>left</td>
-        <td>The x position on the sprite of the top left corner of the area to draw.</td>
+        <td>왼쪽</td>
+        <td>그릴 영역의 왼쪽 상단 모서리에있는 스프라이트의 x 위치입니다.</td>
       </tr>
       <tr>
-        <td>top</td>
-        <td>The y position on the sprite of the top left corner of the area to draw.</td>
+        <td>상단</td>
+        <td>그릴 영역의 왼쪽 상단 모서리에있는 스프라이트의 y 위치입니다.</td>
       </tr>
       <tr>
-        <td>width</td>
-        <td>The width of the area to draw.</td>
+        <td>폭</td>
+        <td>그릴 영역의 너비입니다.</td>
       </tr>
       <tr>
-        <td>height</td>
-        <td>The height of the area to draw.</td>
+        <td>신장</td>
+        <td>그릴 영역의 높이입니다.</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x coordinate of where to draw the sprite.</td>
+        <td>엑스</td>
+        <td>스프라이트를 그릴 위치의 x 좌표입니다.</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y coordinate of where to draw the sprite.</td>
+        <td>와이</td>
+        <td>스프라이트를 그릴 위치의 y 좌표입니다.</td>
       </tr>
       <tr>
         <td>xscale</td>
-        <td>The horizontal scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</td>
+        <td>승수로서 스프라이트의 수평 스케일링 : 1 = 일반 스케일링, 0.5는 절반 등 ...</td>
       </tr>
       <tr>
         <td>yscale</td>
-        <td>The vertical scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</td>
+        <td>승수와 같은 스프라이트의 수직 스케일링 : 1 = 일반 스케일링, 0.5는 절반 등 ...</td>
       </tr>
       <tr>
-        <td>rot</td>
-        <td>The rotation of the sprite. 0=normal, 90=turned 90 degrees counter-clockwise etc.</td>
+        <td>썩음</td>
+        <td>스프라이트의 회전입니다. 0 = 정상, 90 = 시계 반대 방향으로 90도 회전</td>
       </tr>
       <tr>
         <td>c1</td>
-        <td>The colour with which to blend the top left area of the sprite.</td>
+        <td>스프라이트의 왼쪽 상단 영역을 혼합 할 색상입니다.</td>
       </tr>
       <tr>
         <td>c2</td>
-        <td>The colour with which to blend the top right area of the sprite.</td>
+        <td>스프라이트의 오른쪽 상단 영역을 혼합 할 색상입니다.</td>
       </tr>
       <tr>
         <td>c3</td>
-        <td>The colour with which to blend the bottom right area of the sprite.</td>
+        <td>스프라이트의 오른쪽 하단 영역을 혼합 할 색상입니다.</td>
       </tr>
       <tr>
         <td>c4</td>
-        <td>The colour with which to blend the bottom left area of the sprite.</td>
+        <td>스프라이트의 왼쪽 하단 영역을 혼합 할 색상입니다.</td>
       </tr>
       <tr>
-        <td>alpha</td>
-        <td>The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</td>
+        <td>알파</td>
+        <td>스프라이트의 알파 (0에서 1까지 0, 1은 불투명)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">draw_sprite_general(sprite_index, image_index, 8, 8, sprite_width-16, sprite_height-16, x, y, 2, 0.5, 180, c_white, c_white, c_black, c_black, 1);</p>
-  <p>This will draw the instances assigned sprite (sprite_index) and its current frame of animation (image_index), however it will shave an 8px margin off all four sides of the sprite. It will be stretched to double its usual width but half its usual height.
-    It will be opaque, and upside down. The top area of the sprite will be blended white and hence normal, but the bottom area will be black, meaning the sprite will go from normal to a silhouette downwards in a smooth gradient.</p>
+  <p>그러면 스프라이트 (sprite_index)에 할당 된 인스턴스와 현재 애니메이션 프레임 (image_index)이 그려 지지만 스프라이트의 4면에서 8px의 여백이 줄어 듭니다. 평소 너비를 두 배로 늘리지 만 평소 높이는 반으로 늘립니다. 불투명하고 거꾸로됩니다. 스프라이트의 상단 영역은 흰색으로 혼합되어 정상이지만, 하단 영역은 검은 색으로 표시됩니다. 즉, 스프라이트는 부드러운 그라데이션으로 아래쪽에서 실루엣으로 아래쪽으로 이동합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Drawing\Sprites_And_Tiles\draw_sprite_general.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprites_And_Tiles.htm">Sprites And Tiles</a></div>
-        <div style="float:right">Next: <a href="draw_sprite_part.htm">draw_sprite_part</a></div>
+        <div style="float:left">뒤로: <a href="Sprites_And_Tiles.htm">스프라이트와 타일</a></div>
+        <div style="float:right">다음: <a href="draw_sprite_part.htm">draw_sprite_part</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_general
@@ -189,4 +186,4 @@ draw_sprite_general
 draw_sprite_general
 -->
 
-</body></html>
+</body></html> 

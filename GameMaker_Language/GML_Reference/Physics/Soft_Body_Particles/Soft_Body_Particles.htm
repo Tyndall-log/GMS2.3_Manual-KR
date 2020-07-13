@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Soft Body Particles">
-        <span>Soft Body Particles</span>
+        <span>연체 입자</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -84,21 +84,17 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Soft Body Particles</h1>
-  <p>GameMaker Studio 2 uses the Box2D rigid body physics library, and as such does not permit soft body physics. However the <a href="https://google.github.io/liquidfun/"><b>Liquid Fun</b></a> extension adds <i>particles</i> to
-    the physics system, which permit the creation of simulated soft-bodies using rigid body physics. Basically, you can create a <i>shape</i> of particles that maintain cohesion and so simulate a full body, which, due to the
-    interaction of the particles, gives the impression of a soft body. You can also use the physics particles to simulate liquids and other particle based physics systems.</p>
-  <p>Before you start to create your physics particles you will need to set the basic physics properties for them, as you would a <i>fixture</i> in the regular physics. Note though that setting these properties will affect <i>all particles created previously</i> as
-    well as any new particles that you create, so you would normally only use these functions at the start of the game or level. However there are specific functions available to set the particle <i>flags</i> for individual particles
-    (and groups of particles) which will change their properties like &quot;bounciness&quot; or &quot;viscosity&quot;, enabling you to create different types of particle within the ranges of these global settings.</p>
-  <p>The following functions are available for setting and getting global particle system data:</p>
+  <h1>연체 입자</h1>
+  <p>GameMaker Studio 2는 Box2D 강체 물리 라이브러리를 사용하므로 연체 물리를 허용하지 않습니다. 그러나 <b>Liquid Fun</b> 익스텐션은 물리 시스템에 <i>파티클</i> 을 추가하여 강체 물리를 사용하여 시뮬레이션 된 소프트 바디를 생성 할 수 있습니다. 기본적으로 응집력을 유지하는 입자 <i>모양</i> 을 만들어 입자를 상호 작용하여 연체의 느낌을주는 전신을 시뮬레이션 할 수 있습니다. 물리 입자를 사용하여 액체 및 기타 입자 기반 물리 시스템을 시뮬레이션 할 수도 있습니다.</p>
+  <p>물리 파티클 생성을 시작하기 전에 일반 물리학의 <i>비품</i> 처럼 기본 물리 속성을 설정해야합니다. 이 속성을 설정하면 <i>이전에 생성 된 모든 파티클과 새로 만든 파티클에</i> 영향을 미치므로 일반적으로 게임이나 레벨 시작시에만이 기능을 사용합니다. 그러나 개별 입자 (및 입자 그룹)에 대한 입자 <i>플래그</i> 를 설정하여 &quot;바운스 니스&quot;또는 &quot;점도&quot;와 같은 속성을 변경하여 특정 전역 설정 범위 내에서 다양한 유형의 입자를 생성 할 수있는 특정 기능이 있습니다.</p>
+  <p>전역 입자 시스템 데이터를 설정하고 얻는 데 다음 기능을 사용할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_particle_count.htm">physics_particle_count</a></li>
     <li><a href="physics_particle_group_count.htm">physics_particle_group_count</a></li>
     <li><a href="physics_particle_set_max_count.htm">physics_particle_set_max_count</a></li>
     <li><a href="physics_particle_set_radius.htm">physics_particle_set_radius</a></li>
-    <li><a href="physics_particle_set_density.htm">physics_particle_set_density</a></li>
+    <li><a href="physics_particle_set_density.htm">물리 _ 입자 _ 설정 _ 밀도</a></li>
     <li><a href="physics_particle_set_damping.htm">physics_particle_set_damping</a></li>
     <li><a href="physics_particle_set_gravity_scale.htm">physics_particle_set_gravity_scale</a></li>
     <li><a href="physics_particle_get_max_count.htm">physics_particle_get_max_count</a></li>
@@ -108,7 +104,7 @@
     <li><a href="physics_particle_get_gravity_scale.htm">physics_particle_get_gravity_scale</a></li>
   </ul>
   <p> </p>
-  <p>You also have the following functions available for setting <i>flags</i> on individual particles (or groups of particles), as well as for getting information, like position or colour, from a single particle or a single group:</p>
+  <p>개별 입자 (또는 입자 그룹)에 <i>플래그</i> 를 설정하고 단일 입자 또는 단일 그룹에서 위치 또는 색상과 같은 정보를 얻는 데 사용할 수있는 다음 기능도 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_particle_set_flags.htm">physics_particle_set_flags</a></li>
@@ -129,23 +125,22 @@
     <li><a href="physics_particle_group_get_data.htm">physics_particle_group_get_data</a></li>
   </ul>
   <p> </p>
-  <p>You can create particles in two ways - individually or in groups. Individual particles will behave exactly as defined by the global settings and the flags that were set when they were created, but groups of particles can exhibit different behaviours
-    depending on their <i>group flags</i>. These <i>group flags</i> can be set to different values to give the group different properties, like penetration and rigidity.</p>
-  <p>The following functions are available for creating particles:</p>
+  <p>개별적으로 또는 그룹으로 두 가지 방법으로 입자를 만들 수 있습니다. 개별 파티클은 전역 설정과 생성시 설정 한 플래그에 의해 정의 된대로 정확하게 작동하지만 파티클 그룹은 <i>그룹 플래그</i> 에 따라 다른 동작을 보일 수 있습니다. 이 <i>그룹 플래그</i> 는 다른 값으로 설정하여 그룹에 침투 및 강성과 같은 다른 속성을 부여 할 수 있습니다.</p>
+  <p>입자를 만드는 데 다음 기능을 사용할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_particle_create.htm">physics_particle_create</a></li>
-    <li><a href="physics_particle_group_begin.htm">physics_particle_group_begin</a></li>
-    <li><a href="physics_particle_group_circle.htm">physics_particle_group_circle</a></li>
+    <li><a href="physics_particle_group_begin.htm">물리 _ 입자 _ 그룹 _ 시작</a></li>
+    <li><a href="physics_particle_group_circle.htm">물리 _ 입자 _ 그룹 _ 원</a></li>
     <li><a href="physics_particle_group_box.htm">physics_particle_group_box</a></li>
-    <li><a href="physics_particle_group_polygon.htm">physics_particle_group_polygon</a></li>
+    <li><a href="physics_particle_group_polygon.htm">물리 _ 입자 _ 그룹 _ 폴리곤</a></li>
     <li><a href="physics_particle_group_add_point.htm">physics_particle_group_add_point</a></li>
     <li><a href="physics_particle_group_end.htm">physics_particle_group_end</a></li>
     <li><a href="physics_particle_group_join.htm">physics_particle_group_join</a></li>
     <li><a href="physics_particle_group_delete.htm">physics_particle_group_delete</a></li>
   </ul>
   <p> </p>
-  <p>Not only can you create particles, but you can delete them too, either individually or in a region. The following functions are available for deleting particles from the system:</p>
+  <p>파티클을 만들 수있을뿐만 아니라 개별적으로 또는 영역에서 파티클을 삭제할 수도 있습니다. 시스템에서 입자를 삭제하는 데 다음 기능을 사용할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_particle_delete.htm">physics_particle_delete</a></li>
@@ -154,9 +149,7 @@
     <li><a href="physics_particle_delete_region_poly.htm">physics_particle_delete_region_poly</a></li>
   </ul>
   <p> </p>
-  <p>Unless you have activated the debug drawing using <a href="../The_Physics_World/physics_draw_debug.htm"><tt>physics_draw_debug()</tt></a>, you won&#39;t see any particles on the screen when you create them. Therefore to actually see the
-    particles, you need to draw them to the screen in the <b>Draw Event</b> of an instance using the following functions (note that you can also draw them using the regular <tt>draw_sprite</tt> functions
-    if you get the data for each particle using the function <a href="physics_particle_get_data.htm"><tt>physics_particle_get_data()</tt></a>):</p>
+  <p><a href="../The_Physics_World/physics_draw_debug.htm"><tt>physics_draw_debug ()를</tt></a> 사용하여 디버그 드로잉을 활성화하지 않은 경우 생성시 화면에 파티클이 표시되지 않습니다. 따라서 실제로 파티클을 보려면 다음 함수를 사용하여 인스턴스의 <b>Draw 이벤트</b> 에서 화면에 파티클을 그려야합니다 (함수를 사용하여 각 파티클에 대한 데이터를 얻는 경우 일반 <tt>draw_sprite</tt> 함수를 사용하여 파티클을 그릴 수도 있음에 유의하십시오) <a href="physics_particle_get_data.htm"><tt>physics_particle_get_data ()</tt></a> ) :</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_particle_draw.htm">physics_particle_draw</a></li>
@@ -164,15 +157,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Physics\Soft_Body_Particles\Soft_Body_Particles.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Physics.htm">Physics</a></div>
-        <div style="float:right">Next: <a href="../Physics_Variables/Physics_Variables.htm">Physics Variables</a></div>
+        <div style="float:left">뒤로: <a href="../Physics.htm">물리학</a></div>
+        <div style="float:right">다음: <a href="../Physics_Variables/Physics_Variables.htm">물리 변수</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Soft Body Particles
@@ -181,4 +175,4 @@ Soft Body Particles
 physics_soft_body_functions
 -->
 
-</body></html>
+</body></html> 

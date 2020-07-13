@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Standard Workflow">
-        <span>Standard Workflow</span>
+        <span>표준 워크 플로우</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,48 +81,48 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Standard Workflow</h1>
-  <p>As you work on your project, you will naturally create sprites, edit scripts, delete timelines, and whatever else is required as your project develops over time. These are all actions which you may want to keep track of and get back should something
-    go wrong. This is the main reason to use Source Control - so that any accidents can be reverted - and we will quickly take you through the basic workflow from start so you understand how this works.</p>
+  <h1>표준 워크 플로우</h1>
+  <p>프로젝트를 진행하면서 자연스럽게 스프라이트 생성, 스크립트 편집, 타임 라인 삭제 등 시간이 지남에 따라 프로젝트가 개발하는 데 필요한 모든 것을 얻을 수 있습니다. 이것들은 당신이 추적하고 무언가 잘못되었을 때 되돌아 갈 수있는 모든 행동입니다. 이것이 사고를 되돌릴 수 있도록 소스 제어를 사용하는 주된 이유이며, 처음부터 기본 워크 플로를 신속하게 안내하여 이것이 어떻게 작동하는지 이해할 것입니다.</p>
   <p>Starting from the beginning, create a new GML project and then activate source control through the <a href="../../Settings/Game_Options.htm">main options</a>. This gives us access to the Source Control menu on the top, so we&#39;ll immediately go and
-    select <strong>Create Project Repository</strong>. If you look at the room resources, you can see that the default room has gained a red exclamation <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/>, meaning
-    that it has been <strong>modified </strong>from it&#39;s last state. If we had other resources in the project, you&#39;d see that they all have the same icon as shown in the image below:</p>
-  <p><img alt="Source Control Modified Assets" class="center" src="../../assets/Images/IDE Tools/SCM_ModifiedState.png"/>We now have the option of either committing the blank project as it is, or getting it to a base state. For now, we&#39;ll do our first
-    commit so click <strong>Source Control</strong> &gt; <strong>Commit Changes</strong>. We&#39;ll now get a new window opened which is split into three areas:</p>
+    select <strong>Create Project Repository</strong>. If you look at the room resources, you can see that the default room has gained a red exclamation <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/>, 마지막 상태에서 <strong>수정</strong> 되었음을 의미합니다. 프로젝트에 다른 리소스가있는 경우 아래 이미지와 같이 모두 동일한 아이콘이 표시됩니다.</p>
+  <p><img alt="Source Control Modified Assets" class="center" src="../../assets/Images/IDE Tools/SCM_ModifiedState.png"/>이제 빈 프로젝트를 그대로 커밋하거나 기본 상태로 만드는 옵션이 있습니다. 지금은 첫 번째 커밋을 수행 할 것이므로 <strong>소스 제어</strong> &gt; <strong>커밋 변경을</strong> 클릭하십시오. 이제 세 개의 영역으로 분할 된 새 창이 열립니다.</p>
   <p><img alt="Source Control Commit Window" class="center" src="../../assets/Images/IDE Tools/SCM_CommitWindow.png"/></p>
   <ul class="colour">
-    <li><strong>Staged Changes</strong>: This represent the changes which will be committed to source. This will likely be blank, but it may show a Main Options change, which is fine.</li>
-    <li><strong>Unstaged Changes</strong>: This shows the files that have changed, but that we haven&#39;t told Git that we want to commit them - they&#39;re &quot;pending&quot; changes.</li>
-    <li><strong>Commit Message</strong>: This is a note that we can add to explain what the changes are.</li>
+    <li><strong>단계적 변경</strong> : 소스에 적용 할 변경을 나타냅니다. 이것은 비어있을 수 있지만 주 옵션 변경이 표시 될 수 있습니다.</li>
+    <li><strong>Unstaged Changes</strong> : <strong>변경</strong> 된 파일을 보여 주지만 Git에 커밋하고 싶다고 말하지 않았으며 변경 사항이 &quot;보류 중&quot;입니다.</li>
+    <li><strong>커밋 메시지</strong> : 변경 사항을 설명하기 위해 추가 할 수 있습니다.</li>
   </ul>
-  <p>For now, click the <strong>Stage All</strong> button, as we want to commit all the changes, and type something like &quot;First Commit!&quot; into the Commit Message and click <strong>Commit</strong>. All our resources should now have a green tick<img alt="SCM Committed Icon" class="icon" src="../../assets/Images/Icons/SCM_Committed.png"/> , meaning there&#39;s no modifications found.</p>
-  <p>It is worth noting that as you work within this window, the various <strong>Staged </strong>and <strong>Unstaged </strong>messages will be prefixed by a symbol. The symbol being used will vary depending on the operation and file, with the following
-    being used:</p>
+  <p>For now, click the <strong>Stage All</strong> button, as we want to commit all the changes, and type something like &quot;First Commit!&quot; into the Commit Message and click <strong>Commit</strong>. All our resources should now have a green tick<img alt="SCM Committed Icon" class="icon" src="../../assets/Images/Icons/SCM_Committed.png"/>수정 사항이 없음을 의미합니다.</p>
+  <p>그것은 당신이 창 내에서 작업 할 때, 다양한 <strong>단계적와</strong> <strong>Unstaged</strong> 메시지가 상징 접두어됩니다 주목할 가치가있다. 사용되는 기호는 작업 및 파일에 따라 달라지며 다음과 같이 사용됩니다.</p>
   <ul class="colour">
-    <li><span class="inline">[...]</span> - Staged Change (was previously [A])</li>
-    <li><span class="inline">[+]</span> - Newly Added</li>
-    <li><span class="inline">[-&gt;]</span> - Renamed/Moved</li>
-    <li><span class="inline">[-]</span> - Removed</li>
-    <li><span class="inline">[M]</span> - Unstaged Changes</li>
-    <li><span class="inline">[?]</span> - Untracked File</li>
-    <li><span class="inline">[!]</span> - Missing File</li>
+    <li><span class="inline">[...]</span> -단계적 변경 (이전 [A])</li>
+    <li><span class="inline">[+]</span> -새로 추가</li>
+    <li><span class="inline">[-&gt;]</span> -이름 변경 / 이동</li>
+    <li><span class="inline">[-]</span> -제거</li>
+    <li><span class="inline">[M]</span> -비 단계적 변경</li>
+    <li><span class="inline">[?]</span> -추적되지 않은 파일</li>
+    <li><span class="inline">[!]</span> -누락 된 파일</li>
   </ul>
-  <p>Our work process can now begin, and we can start to build our project and save and commit changes, just as we&#39;ve done in the paragraphs above.</p>
-  <p>After working for a while, you may want to check and see what you&#39;ve committed at any given time, and so for that you&#39;ll want to open the <strong>Commit History</strong>. To open the history window you simply go to <strong>Source Control</strong>    &gt; <strong>View History</strong> which opens another window with three panes:</p>
-  <p><img alt="Source Control History Window" class="center" src="../../assets/Images/IDE Tools/SCM_HistoryWindow.png"/>The top pane describes the commits, the middle pane describes the comment given to the selected commit, and the bottom pane describes
-    the files that have been modified in this commit. Note that if you have set up a <a href="External_Merge_Diff_Tools.htm">Diff Tool</a>, then double-clicking on any file in this window will open the diff tool and you&#39;ll be able to see the changes
-    between the files.</p>
+  <p>이제 우리의 작업 프로세스가 시작될 수 있으며 위의 단락에서했던 것처럼 프로젝트를 빌드하고 변경 사항을 저장하고 커밋 할 수 있습니다.</p>
+  <p>얼마 동안 일한 후에는 언제든지 커밋 한 내용을 확인하고 확인하여 <strong>커밋 기록</strong> 을 열 수 있습니다. 히스토리 창을 열려면 <strong>소스 제어</strong> &gt; <strong>히스토리보기</strong> 로 이동하여 세 개의 창이있는 다른 창을여십시오.</p>
+  <p><img alt="Source Control History Window" class="center" src="../../assets/Images/IDE Tools/SCM_HistoryWindow.png"/>맨 위 분할 창은 확약을 설명하고 중간 분할 창은 선택된 확약에 지정된 주석을 설명하고 아래쪽 분할 창은이 확약에서 수정 된 파일을 설명합니다. <a href="External_Merge_Diff_Tools.htm">Diff Tool</a> 을 설정 한 경우이 창에서 파일을 두 번 클릭하면 diff 도구가 열리고 파일 간 변경 사항을 볼 수 있습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('IDE_Tools\Source_Control\Standard_Workflow.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
+        <div style="float:left">뒤로: <a href="../Source_Control.htm">소스 컨트롤</a></div>
+        <div style="float:right">다음: <a href="Reverting_Files.htm">
+      <div class="clear">
         <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-        <div style="float:right">Next: <a href="Reverting_Files.htm">Reverting Files</a> </div>
+        <div style="float:right">Next: <a href="Reverting_Files.htm">Reverting Files</a> </div>iv class="clear">
+        <div style="float:left">Back: <a href="../Source_Control.htm">소스 컨트롤</a></div>
+        <div style="float:right">Next: <a href="Reverting_Files.htm">파일 되돌리기</a> </div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Source Control Workflow
@@ -131,4 +131,4 @@ Source Control Workflow
 source_control_workflow
 -->
 
-</body></html>
+</body></html> 

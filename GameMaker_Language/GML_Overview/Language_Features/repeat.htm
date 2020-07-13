@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="repeat">
-        <span>repeat</span>
+        <span>반복</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,43 +80,39 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>repeat</h1>
-  <p>The GameMaker Language has a number of ways that you can perform <i>loops</i>, ie: have a statement or statements iterate over itself a certain number of times. The simplest of these is the <tt>repeat</tt> statement, which has the form:</p>
+  <h1>반복</h1>
+  <p>GameMaker Language에는 <i>루프</i> 를 수행 할 수있는 여러 가지 방법이 있습니다. 즉, 특정 횟수만큼 반복되는 문장이나 문장이 있습니다. 이들의 가장 간단한 형태를 가지고 <tt>반복 문이다</tt> :</p>
   <p class="code">repeat (&lt;expression&gt;)<br/>     {<br/>     &lt;statement&gt;;<br/>     &lt;statement&gt;;<br/>     ...<br/>     }</p>
-  <p>With <tt>repeat</tt> the given <a class="tooltip" title="In programming, a statement is a single line of code written legally in a programming language that expresses an action to be carried out. A statement might have internal components of its own, including expressions, operators and functions. An example of a statement is A = B + 5. A GameMaker Studio 2 program is nothing but a sequence of one or more statements that together perform a task (like move the player). ">statement</a> is repeated the number of times indicated by the rounded value of the <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a>. For
-    example, the following creates five balls at random positions:</p>
+  <p><tt>반복</tt> 하면 주어진 <a class="tooltip" title="프로그래밍에서 명령문은 수행 할 동작을 나타내는 프로그래밍 언어로 합법적으로 작성된 단일 코드 행입니다. 명령문은 표현식, 연산자 및 함수를 포함하여 자체의 내부 구성 요소를 가질 수 있습니다. 문장의 예는 A = B + 5입니다. GameMaker Studio 2 프로그램은 함께 플레이어를 움직이는 것과 같이 작업을 수행하는 하나 이상의 문장 시퀀스 일뿐입니다.">명령문</a> 이 <a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">표현식</a> 의 반올림 값으로 표시된 횟수만큼 반복됩니다. 예를 들어, 다음은 임의의 위치에 5 개의 공을 만듭니다.</p>
   <p class="code">repeat (5)<br/>     {
     <br/>     instance_create_layer(random(400), random(400), &quot;Instances&quot;, obj_ball);<br/>     }
   </p>
-  <p>This can be very useful to avoid typing out the same code multiple times, or for using arrays, or for counting through a number of operations etc... You are not limited to using a single statement either, and can repeat multiple statements by enclosing
-    them within curly brackets <tt>{}</tt>. For example:</p>
+  <p>이것은 같은 코드를 여러 번 입력하거나 배열을 사용하거나 여러 연산을 계산하는 것을 피하는 데 매우 유용 할 수 있습니다. 단일 명령문을 사용하는 것에 만 국한되지 않고 여러 개의 명령문을 묶어 반복 할 수 있습니다. 중괄호 <tt>{}</tt> 안에 있습니다. 예를 들면 다음과 같습니다.</p>
   <p class="code">var _x = 32;<br/> repeat (global.p_lives)<br/>     {<br/>     draw_sprite(spr_heart, 0, _x, 32);<br/>     _x += sprite_get_width(spr_heart);<br/>     }</p>
-  <p>The above example repeats the statements in the curly brackets for however many <a class="tooltip" title="An iteration is a single pass through a set of operations in your project code. One form of iteration in computer programming is via loops. A loop will repeat a certain segment of code until a condition is met and it can proceed further. Each time the computer runs a loop, it is known as an iteration. In simple terms, iteration is the process of repeating a particular snippet of code over and over again to perform a certain action.">iteration</a><span class="glossextra">s</span> the &quot;lives&quot; global variable has, and each iteration draws
-    the heart sprite at the <span class="inline">_x</span> position, then moves the position along a bit based on the heart sprite width.</p>
-  <p><strong>When should you use a <span class="inline">repeat</span> loop?</strong> Anytime that you want to repeat over one or more statements a fixed number of times without any specific need to maintain a count of the iterations.</p>
-  <p>It is worth noting that you can use the special <span class="inline"><a href="break.htm">break</a></span> and <span class="inline"><a href="continue.htm">continue</a></span> statements within a
-    <font face="Lucida Console"><span style="font-size: 16px;"><b>repeat</b></span></font> loop too. Using <span class="inline">break</span> will immediately exit the loop and move on to any code that is in the event or function after the loop should have finished, eg:</p>
+  <p>위의 예제는 &quot;lives&quot;전역 변수의 <a class="tooltip" title="반복은 프로젝트 코드에서 일련의 작업을 통과하는 단일 단계입니다. 컴퓨터 프로그래밍에서 반복의 한 형태는 루프를 통하는 것입니다. 루프는 조건이 충족 될 때까지 특정 코드 세그먼트를 반복하여 계속 진행할 수 있습니다. 컴퓨터가 루프를 실행할 때마다 반복이라고합니다. 간단히 말해서 반복이란 특정 코드 조각을 반복해서 반복하여 특정 작업을 수행하는 프로세스입니다.">반복</a> 이 많을 때 중괄호로 문장을 <a class="tooltip" title="반복은 프로젝트 코드에서 일련의 작업을 통과하는 단일 단계입니다. 컴퓨터 프로그래밍에서 반복의 한 형태는 루프를 통하는 것입니다. 루프는 조건이 충족 될 때까지 특정 코드 세그먼트를 반복하여 계속 진행할 수 있습니다. 컴퓨터가 루프를 실행할 때마다 반복이라고합니다. 간단히 말해서 반복이란 특정 코드 조각을 반복해서 반복하여 특정 작업을 수행하는 프로세스입니다.">반복</a> 하고 각 반복은 <span class="inline">_x</span> 위치에서 하트 스프라이트를 그린 다음 하트 스프라이트 너비에 따라 비트를 따라 위치를 이동합니다.</p>
+  <p><strong>언제 <span class="inline">반복</span> 루프를 사용해야합니까?</strong> 반복 횟수를 유지할 필요없이 하나 이상의 명령문에 대해 고정 된 횟수만큼 반복하려는 경우</p>
+  <p><font face="Lucida Console"><span style="font-size: 16px;"><b>반복</b></span></font> 루프 내에서 특별한 <span class="inline"><a href="break.htm">break</a></span> 및 <span class="inline"><a href="continue.htm">continue</a></span> 문을 사용할 수 있다는 점은 주목할 가치가 있습니다. <span class="inline">break</span> 를 사용하면 루프를 즉시 종료하고 루프가 완료된 후 이벤트 나 함수에있는 코드로 이동합니다. 예 :</p>
   <p class="code">var i = 0;<br/> var temp = 0;<br/> repeat (10)<br/>     {<br/>     temp += array[i];<br/>     if (temp &gt; max_total)<br/>         {<br/>         break;<br/>         }<br/>     else<br/>         {<br/>         i += 1;<br/>         }<br/>     }</p>
-  <p>The above code loops through 10 <a href="../Arrays.htm">array</a> values and adds them to a local variable. If the total of the local variable is greater than the given value for <span class="inline">max_total</span>, then the loop is terminated using
-    break, otherwise the loop will continue. </p>
-  <p>An example of using <span class="inline">continue</span> in a <span class="inline">repeat</span> loop would be:</p>
+  <p>위의 코드는 10 개의 <a href="../Arrays.htm">배열</a> 값을 반복하여 지역 변수에 추가합니다. 로컬 변수의 총계가 <span class="inline">max_total</span> 의 지정된 값보다 큰 경우 루프를 break를 사용하여 종료합니다. 그렇지 않으면 루프가 계속됩니다.</p>
+  <p><span class="inline">반복</span> 루프에서 <span class="inline">continue</span> 를 사용하는 예는 다음과 같습니다.</p>
   <p class="code">repeat(10)<br/>     {   <br/>     var _x = random(room_width);<br/>     var _y = random(room_height);<br/>     if (instance_position(_x, y, obj_Enemy)<br/>         {
     <br/>         continue;
     <br/>         }
     <br/>     instance_create_layer(_x, _y, &quot;Instances&quot;, obj_Enemy);<br/>     }</p>
-  <p>This code will repeat 10 times, generating a random room position then checking if an instance of the object <span class="inline">obj_Enemy</span> exists at that position. If it does, the current loop iteration is terminated using <span class="inline">continue</span>    and a new iteration is started, and if it doesn&#39;t then an instance of the object <span class="inline">obj_Enemy</span> is created at the random position.</p>
-  <p>For more examples of loop functions please see the sections on <a href="while.htm"><tt>while</tt></a>, <a href="do___until.htm"><tt>do... until</tt></a>, and <a href="for.htm"><tt>for</tt></a>.</p>
+  <p>이 코드는 10 번 반복되어 임의의 룸 위치를 생성 한 다음 해당 위치에 <span class="inline">obj_Enemy</span> 객체의 인스턴스가 있는지 확인합니다. 그렇다면 현재 루프 반복이 <span class="inline">계속을</span> 사용하여 종료되고 새로운 반복이 시작되고, 그렇지 않으면 <span class="inline">obj_Enemy</span> 객체의 인스턴스가 임의의 위치에 작성됩니다.</p>
+  <p>루프 함수에 대한 자세한 예는 <a href="while.htm"><tt>while</tt></a> , <a href="do___until.htm"><tt>do ... until</tt></a> 및 <a href="for.htm"><tt>for</tt></a> 섹션을 참조하십시오.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Overview\Language_Features\repeat.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="while.htm">while</a></div>
+        <div style="float:left">뒤로: <a href="../Language_Features.htm">언어 특징</a></div>
+        <div style="float:right">다음: <a href="while.htm">동안</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 repeat
@@ -125,4 +121,4 @@ repeat
 repeat
 -->
 
-</body></html>
+</body></html> 

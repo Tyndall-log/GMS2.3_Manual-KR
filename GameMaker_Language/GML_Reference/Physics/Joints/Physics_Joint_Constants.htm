@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Physics Joint Constants">
-        <span>Physics Joint Constants</span>
+        <span>물리 조인트 상수</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,250 +80,246 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Physics Joint Constants</h1>
-  <p>There are a great number of constants included within the GameMaker Studio 2 GML that are specific to <i>joints</i> between fixtures in the physics world. These can be used in conjunction with
-    many of the different joint functions to set or get information from them in real time while the physics simulation is running. You should be aware, however, that complex calculations are done when you call these, so they should be used with care
-    and only when necessary and note that <i>many are unique to a specific type of joint</i>. Also note that while you can get all these values with the appropriate function, you can only set those that are marked as not being read-only.</p>
-  <p>In general these constants would be used in conjunction with the following functions:</p>
+  <h1>물리 조인트 상수</h1>
+  <p>GameMaker Studio 2 GML에는 물리 세계의 픽스쳐 사이의 <i>조인트에</i> 특정한 상수가 많이 있습니다. 물리 시뮬레이션이 실행되는 동안 실시간으로 정보를 설정하거나 얻기 위해 여러 가지 다른 조인트 함수와 함께 사용할 수 있습니다. 그러나 복잡한 계산은이를 호출 할 때 수행되므로주의해서 사용하고 필요할 때만 사용해야하며 <i>많은 유형이 특정 관절 유형에 고유</i> 하다는 점에 유의하십시오. 또한 적절한 기능으로 이러한 모든 값을 얻을 수 있지만 읽기 전용이 아닌 것으로 표시된 값만 설정할 수 있습니다.</p>
+  <p>일반적으로 이러한 상수는 다음 기능과 함께 사용됩니다.</p>
   <ul class="colour">
     <li><a href="physics_joint_get_value.htm">physics_joint_get_value</a></li>
     <li><a href="physics_joint_set_value.htm">physics_joint_set_value</a></li>
   </ul>
   <p> </p>
-  <h2><label for="one">General</label></h2>
+  <h2><label for="one">일반</label></h2>
   
-    <p>The following constants can be applied to any of the available joint types:</p>
+    <p>사용 가능한 모든 관절 유형에 다음 상수를 적용 할 수 있습니다.</p>
     <table>
       <tbody>
         <tr>
-          <th>Constant</th>
-          <th>Description</th>
-          <th>Read Only</th>
+          <th>일정한</th>
+          <th>기술</th>
+          <th>읽기 전용</th>
         </tr>
         <tr>
           <td>phy_joint_anchor_1_x</td>
-          <td>The x coordinate of the first anchor point of the joint <i>in the room</i></td>
-          <td>Yes</td>
+          <td><i>방</i> 에있는 조인트의 첫 번째 앵커 포인트의 x 좌표</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_anchor_1_y</td>
-          <td>The y coordinate of the first anchor point of the joint <i>in the room</i></td>
-          <td>Yes</td>
+          <td><i>방</i> 에있는 조인트의 첫 번째 앵커 포인트의 y 좌표</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_anchor_2_x</td>
-          <td>The x coordinate of the second anchor point of the joint <i>in the room</i></td>
-          <td>Yes</td>
+          <td><i>방</i> 에있는 조인트의 두 번째 앵커 포인트의 x 좌표</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_anchor_2_y</td>
-          <td>The y coordinate of the second anchor point of the joint <i>in the room</i></td>
-          <td>Yes</td>
+          <td><i>방</i> 에있는 조인트의 두 번째 앵커 포인트의 y 좌표</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_reaction_force_x</td>
-          <td>This is the reaction force being applied to the second instance in a joint at the x anchor position</td>
-          <td>Yes</td>
+          <td>이것은 x 앵커 위치에서 조인트에서 두 번째 인스턴스에 적용되는 반력입니다.</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_reaction_force_y</td>
-          <td>This is the reaction force being applied to the second instance in a joint at the y anchor position</td>
-          <td>Yes</td>
+          <td>이것은 y 앵커 위치에서 조인트에서 두 번째 인스턴스에 적용되는 반력입니다.</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_reaction_torque</td>
-          <td>This is the torque being applied to the second instance in a joint at the anchor position</td>
-          <td>Yes</td>
+          <td>이것은 앵커 위치에서 조인트에서 두 번째 인스턴스에 적용되는 토크입니다.</td>
+          <td>예</td>
         </tr>
       </tbody>
     </table>
   
-  <h2><br/>
-    <label for="two">Motors</label></h2>
+  <h2><label for="two">모터</label></h2>
   
-    <p>These constants are for those joints that have a <i>motor</i> attached to them (revolute, prismatic, wheel):</p>
+    <p>이 상수는 <i>모터가</i> 연결된 조인트 (회전, 프리즘, 휠)에 사용됩니다.</p>
     <table>
       <tbody>
         <tr>
-          <th>Constant</th>
-          <th>Description</th>
-          <th>Read Only</th>
+          <th>일정한</th>
+          <th>기술</th>
+          <th>읽기 전용</th>
         </tr>
         <tr>
           <td>phy_joint_max_motor_force</td>
-          <td>The value specified when the joint was created for the maximum motor force</td>
-          <td>No</td>
+          <td>최대 모터 힘을 위해 조인트가 생성 될 때 지정된 값</td>
+          <td>아니</td>
         </tr>
         <tr>
           <td>phy_joint_max_motor_torque</td>
-          <td>The value specified when the joint was created for the maximum motor torque</td>
-          <td>No</td>
+          <td>최대 모터 토크에 대해 조인트가 생성 될 때 지정된 값</td>
+          <td>아니</td>
         </tr>
         <tr>
           <td>phy_joint_motor_force</td>
-          <td>The current motor force</td>
-          <td>Yes</td>
+          <td>현재 모터 힘</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_motor_speed</td>
-          <td>The current motor speed</td>
-          <td>No</td>
+          <td>현재 모터 속도</td>
+          <td>아니</td>
         </tr>
         <tr>
           <td>phy_joint_motor_torque</td>
-          <td>The current motor torque</td>
-          <td>Yes</td>
+          <td>현재 모터 토크</td>
+          <td>예</td>
         </tr>
       </tbody>
     </table>
   
-  <h2><br/>
-    <label for="three">Revolute Joints</label></h2>
+  <h2><label for="three">리볼 루트 조인트</label></h2>
   
-    <p>For a revolute joint you can use the following constant (as well as the <i>motor</i> constants if one has been added):</p>
+    <p>회전 조인트의 경우 다음 상수를 사용할 수 있습니다 ( <i>모터</i> 상수도 추가 된 경우).</p>
     <table>
       <tbody>
         <tr>
-          <th>Constant</th>
-          <th>Description</th>
-          <th>Read Only</th>
+          <th>일정한</th>
+          <th>기술</th>
+          <th>읽기 전용</th>
         </tr>
         <tr>
           <td>phy_joint_angle</td>
-          <td>The angle that a line between the two anchor points of the joint makes. This is calculated using the <i>physics world</i> coordinates<br/> ( <b>not</b> the GameMaker Studio 2 room
-            coordinates) in radians.</td>
-          <td>Yes</td>
+          <td>조인트의 두 앵커 포인트 사이의 선이 만드는 각도입니다. 이것은 <i>물리 세계</i> 좌표 (GameMaker Studio 2 룸 좌표가 <b>아닌</b> )를 라디안으로 계산합니다.</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_angle_limits</td>
-          <td>Enable or disable angle limiting for the joint. Set the value to <tt>true</tt> to enable or <tt>false</tt> to disable.</td>
-          <td>No</td>
+          <td>조인트의 각도 제한을 활성화 또는 비활성화합니다. 활성화하려면 값을 <tt>true</tt> 로 설정하고 비활성화하려면 <tt>false</tt> 로 설정하십시오.</td>
+          <td>아니</td>
         </tr>
         <tr>
           <td>phy_joint_upper_angle_limit</td>
-          <td>The upper angle limit for the joint in degrees.</td>
-          <td>No</td>
+          <td>조인트의 각도 상한 (도)입니다.</td>
+          <td>아니</td>
         </tr>
         <tr>
           <td>phy_joint_lower_angle_limit</td>
-          <td>The lower angle limit for the joint in degrees.</td>
-          <td>No</td>
+          <td>조인트의 각도 하한값 (도)입니다.</td>
+          <td>아니</td>
         </tr>
       </tbody>
     </table>
   
-  <h2><br/>
-    <label for="four">Prismatic Joints</label></h2>
+  <h2><label for="four">프리즘 조인트</label></h2>
   
-    <p>For a prismatic joint you can use the following constant:</p>
+    <p>프리즘 조인트의 경우 다음 상수를 사용할 수 있습니다.</p>
     <table>
       <tbody>
         <tr>
-          <th>Constant</th>
-          <th>Description</th>
-          <th>Read Only</th>
+          <th>일정한</th>
+          <th>기술</th>
+          <th>읽기 전용</th>
         </tr>
         <tr>
           <td>phy_joint_translation</td>
-          <td>Gets the distance between the anchor x/y coordinates and the local x/y coordinates.</td>
-          <td>Yes</td>
+          <td>앵커 x / y 좌표와 로컬 x / y 좌표 사이의 거리를 가져옵니다.</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_speed</td>
-          <td>The current joint movement speed.</td>
-          <td>Yes</td>
+          <td>현재 관절 이동 속도.</td>
+          <td>예</td>
         </tr>
       </tbody>
     </table>
   
-  <h2><br/>
-    <label for="six">Distance Joints, Weld Joints and Wheel Joints</label></h2>
+  <h2><label for="six">거리 조인트, 용접 조인트 및 휠 조인트</label></h2>
   
-    <p>For a distance, weld, and wheel joints you can use the following constants (as well as those for pulley joints):</p>
+    <p>거리, 용접 및 휠 조인트의 경우 다음 상수 (풀리 조인트의 상수 및 상수)를 사용할 수 있습니다.</p>
     <table>
       <tbody>
         <tr>
-          <th>Constant</th>
-          <th>Description</th>
-          <th>Read Only</th>
+          <th>일정한</th>
+          <th>기술</th>
+          <th>읽기 전용</th>
         </tr>
         <tr>
           <td>phy_joint_damping_ratio</td>
-          <td>The damping ratio is non-dimensional and defines the &quot;springiness&quot; of the joint. The value for this constant is typically between 0 and 1, but can be larger, and at 1, the damping is critical meaning that all oscillations should vanish.</td>
-          <td>No</td>
+          <td>댐핑 비율은 비차 원적이며 조인트의 &quot;스프링&quot;을 정의합니다. 이 상수의 값은 일반적으로 0과 1 사이이지만 더 클 수 있으며 1에서 감쇠는 모든 진동이 사라져야한다는 의미입니다.</td>
+          <td>아니</td>
         </tr>
         <tr>
           <td>phy_joint_frequency</td>
-          <td>This will return (or set) the oscillation frequency for the joint, in hertz, and typically the frequency should be less than a half the frequency of the time step, as set by the function <a href="../The_Physics_World/physics_world_update_speed.htm"><tt>physics_world_update_speed()</tt></a>.</td>
-          <td>No</td>
+          <td>이것은 조인트의 진동 주파수를 헤르츠 단위로 반환 (또는 설정)하며, 일반적으로 주파수는 함수 <a href="../The_Physics_World/physics_world_update_speed.htm"><tt>physics_world_update_speed ()에</tt></a> 의해 설정된 시간 간격 주파수의 절반보다 작아야합니다.</td>
+          <td>아니</td>
         </tr>
         <tr>
           <td>phy_joint_length_1</td>
-          <td>This will return the length of the joint from the first local x/y coordinates to the first anchor x/y coordinates (Distance joints only, can only be read from)</td>
-          <td>Yes</td>
+          <td>이것은 첫 번째 로컬 x / y 좌표에서 첫 번째 앵커 x / y 좌표로 관절의 길이를 반환합니다 (거리 관절 만 읽을 수 있음)</td>
+          <td>예</td>
         </tr>
         <tr>
           <td>phy_joint_length_2</td>
-          <td>This will return the length of the joint from the second local x/y coordinates to the second anchor x/y coordinates (Distance joints only, can only be written to)</td>
-          <td>No</td>
+          <td>이것은 두 번째 로컬 x / y 좌표에서 두 번째 앵커 x / y 좌표로 관절의 길이를 반환합니다 (거리 관절 만 쓸 수 있음)</td>
+          <td>아니</td>
         </tr>
       </tbody>
     </table>
   
-  <h2><br/>
-    <label for="seven">Friction Joints</label></h2>
+  <h2><label for="seven">마찰 조인트</label></h2>
   
-    <p>For a friction joint you can use the following constants:</p>
+    <p>마찰 조인트의 경우 다음 상수를 사용할 수 있습니다.</p>
     <table>
       <tbody>
         <tr>
-          <th>Constant</th>
-          <th>Description</th>
-          <th>Read Only</th>
+          <th>일정한</th>
+          <th>기술</th>
+          <th>읽기 전용</th>
         </tr>
         <tr>
           <td>phy_joint_max_torque</td>
-          <td>The maximum torque value for the joint.</td>
-          <td>No</td>
+          <td>조인트의 최대 토크 값입니다.</td>
+          <td>아니</td>
         </tr>
         <tr>
           <td>phy_joint_max_force</td>
-          <td>The maximum force value for the joint.</td>
-          <td>No</td>
+          <td>조인트의 최대 힘 값.</td>
+          <td>아니</td>
         </tr>
       </tbody>
     </table>
   
-  <h2><br/>
-    <label for="eight">Rope Joints</label></h2>
+  <h2><label for="eight">로프 조인트</label></h2>
   
-    <p>For a rope joint you can use the following constant:</p>
+    <p>로프 조인트의 경우 다음 상수를 사용할 수 있습니다.</p>
     <table>
       <tbody>
         <tr>
-          <th>Constant</th>
-          <th>Description</th>
-          <th>Read Only</th>
+          <th>일정한</th>
+          <th>기술</th>
+          <th>읽기 전용</th>
         </tr>
         <tr>
           <td>phy_joint_max_length</td>
-          <td>The maximum extension for the connection between the two anchor points.</td>
-          <td>No</td>
+          <td>두 앵커 포인트 사이의 연결에 대한 최대 확장입니다.</td>
+          <td>아니</td>
         </tr>
       </tbody>
     </table>
   
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Physics\Joints\Physics_Joint_Constants.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
+        <div style="float:left">뒤로: <a href="Joints.htm">관절</a></div>
+        <div style="float:right">다음: 
+      <div class="clear">
+<div style="float:left"> 뒤 : <a href="Joints.htm">관절</a></a></div>
+        <div style="float:right"> </div>
         <div style="float:right"> </div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Joints
@@ -357,4 +353,4 @@ phy_joint_max_length
 physics_joint_functions
 -->
 
-</body></html>
+</body></html> 

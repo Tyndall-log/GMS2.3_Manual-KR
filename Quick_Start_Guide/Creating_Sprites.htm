@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Creating Sprites">
-        <span>Creating Sprites</span>
+        <span>스프라이트 만들기</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,62 +81,46 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Creating Sprites</h1>
-  <p>Now that you <a href="What_Is_Programming_.htm">know what a program is</a>, it&#39;s time to look at some of the different <strong>assets </strong>that can be used in GameMaker Studio 2 to make your game. To start with, we&#39;ll look at <strong>sprites</strong>,
-    which are generally one of the first things you&#39;ll need when making any project. As explained in the section on <a href="../Introduction/The_Asset_Browser.htm">The Asset Browser</a>, a sprite is an image that can be animated (although it doesn&#39;t
-    have to be) and then drawn to the screen. In general a sprite will be associated with an object, but you can draw sprites on their own, either from code or in the room editor <strong>Asset Layer</strong> (we&#39;ll talk about this in more detail later,
-    in the section on <a href="Rooms.htm">rooms</a>). You can also create a sprite to be used as a <a class="tooltip" title="A tile set is a collection of square or rectangular graphical assets laid out on a grid as a single image. Each item in the grid can then be placed multiple times in a room to create a larger scene called the &#39;tile map&#39;.">tile sets</a>, but we&#39;ll explore that option in a later section too.</p>
-  <p>When you create a new project from the <a href="../Introduction/The_Start_Page.htm">Start Page</a>, the asset browser will only contain empty folders for the resources you may need, so you need to right-click <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> on the sprite asset folder and then select the option <strong>Create</strong> (if you don&#39;t have a sprite asset folder you can make one from the right-click menu and then create the sprite, or you can simply right-click anywhere in the asset
-    browser and create it). This will create a new sprite asset and open the <a href="../The_Asset_Editors/Sprites.htm"><strong>sprite editor</strong></a> for you (if the sprite editor does not open, simply double-click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the new asset):</p>
-  <p><img alt="The Sprite Editor" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteEditor.png"/>As you can see, the top left of the window has a field for the <strong>Name </strong>of the sprite. All sprites (and all other assets) must have
-    a name given to them so that you (and GameMaker Studio 2) can identify them easily, although you should note that this name is really just a <strong> <a class="tooltip" title="A variable is a named value within a program which can be modified, stored and displayed whenever required. For example, if we have an integer variable with a name XYZ and it stores a value 10, we can then do things like A = XYZ + 10, which will set the value of the variable A to 20, since XYZ is 10 and we are adding 10 to it. You can also change variable values using operators, so doing XYZ = XYZ + 100 would modify the value of our XYZ variable to be equal to 110. Variables can also be used to store identifiers and references to different assets.">variable</a></strong> which holds an ID value
-    that &quot;points&quot; to the resource, in this case a sprite. It&#39;s best to give each sprite a descriptive name so that you can identify at a glance whether a particular asset is a sprite or an object or something else, and many people do this
-    by prefixing or suffixing the resource with the letters &quot; <span class="inline">spr</span>&quot; - for example, &quot; <span class="inline">spr_Ball</span>&quot;. Note that resource names are limited to using only letters, digits and the underscore
-    symbol &quot;_&quot;, and the name of all assets must start with a letter, not a number.</p>
-  <p>The other features of the sprite editor we&#39;ll discuss at the end of this section, but first we need to explain how to draw a sprite. This is done in the <a href="../The_Asset_Editors/Image_Editor.htm"><strong>Image Editor</strong></a>. The image
-    editor is a very powerful tool for creating the graphics in your game and is opened by clicking the <em>Edit Image </em>button.</p>
+  <h1>스프라이트 만들기</h1>
+  <p><a href="What_Is_Programming_.htm">프로그램이 무엇인지 알았</a> 으므로 이제 GameMaker Studio 2에서 게임을 만들기 위해 사용할 수있는 여러 가지 <strong>자산</strong> 을 살펴볼 차례입니다. 우선 <strong>스프라이트를</strong> 살펴 보겠습니다. <strong>스프라이트</strong> 는 일반적으로 프로젝트를 만들 때 가장 먼저 필요한 것 중 하나입니다. <a href="../Introduction/The_Asset_Browser.htm">에셋 브라우저</a> 섹션에서 설명한 것처럼 스프라이트는 애니메이션을 적용한 후 (필요하지 않아도) 화면에 그릴 수있는 이미지입니다. 일반적으로 스프라이트는 객체와 연결되지만 코드 또는 룸 편집기 <strong>자산 레이어</strong> 에서 스프라이트를 자체적으로 그릴 수 있습니다 (자세한 내용은 나중에 <a href="Rooms.htm">룸</a> 섹션에서 설명 <a href="Rooms.htm">합니다</a> ). <a class="tooltip" title="타일 ​​세트는 그리드에 단일 이미지로 배치 된 정사각형 또는 직사각형 그래픽 자산의 모음입니다. 그런 다음 격자의 각 항목을 방에 여러 번 배치하여 &#39;타일 맵&#39;이라는 더 큰 장면을 만들 수 있습니다.">타일 ​​세트</a> 로 사용할 스프라이트를 만들 수도 있지만 이후 섹션에서도 해당 옵션을 살펴 보겠습니다.</p>
+  <p>When you create a new project from the <a href="../Introduction/The_Start_Page.htm">Start Page</a>, the asset browser will only contain empty folders for the resources you may need, so you need to right-click <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/>스프라이트 자산 폴더에서 <strong>생성</strong> 옵션을 선택합니다 (스프라이트 자산 폴더가없는 경우 마우스 오른쪽 버튼 메뉴에서 폴더를 만든 다음 스프라이트를 만들거나 자산 브라우저의 아무 곳이나 마우스 오른쪽 버튼으로 클릭하면됩니다) 그것을 만듭니다). 이것은 새로운 스프라이트 자산을 만들고 열립니다 <a href="../The_Asset_Editors/Sprites.htm"><strong>스프라이트 편집기를</strong></a> (당신을 위해 스프라이트 편집기를 열 수 없습니다, 단순히 더블 클릭을 수행하는 경우 새 자산) :</p>
+  <p><img alt="The Sprite Editor" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteEditor.png"/>보시다시피, 창의 왼쪽 상단에는 스프라이트 <strong>이름</strong> 필드가 있습니다. 모든 스프라이트 (및 기타 모든 자산)에는 사용자 (및 GameMaker Studio 2)가 쉽게 식별 할 수 있도록 이름이 있어야합니다.이 이름은 실제로 &quot;지시하는&quot;ID 값을 보유하는 <strong><a class="tooltip" title="변수는 프로그램 내에서 명명 된 값으로, 필요할 때마다 수정, 저장 및 표시 할 수 있습니다. 예를 들어 이름이 XYZ 인 정수 변수가 있고 값 10을 저장하는 경우 A = XYZ + 10과 같은 작업을 수행 할 수 있습니다. 그러면 XYZ가 10이고 변수 A의 값이 20으로 설정됩니다. 그것에 10을 더하고 있습니다. 연산자를 사용하여 변수 값을 변경할 수도 있으므로 XYZ = XYZ + 100을 수행하면 XYZ 변수의 값이 110으로 수정됩니다. 변수는 식별자와 다른 자산에 대한 참조를 저장하는 데 사용될 수도 있습니다.">변수</a></strong> 일뿐입니다. 리소스에이 경우 스프라이트입니다. 각 스프라이트에 설명적인 이름을 지정하는 것이 가장 좋습니다. 특정 자산이 스프라이트인지 또는 오브젝트인지를 한눈에 파악할 수 있으며 많은 사람들이 &quot; <span class="inline">spr</span> &quot;문자로 접두어를 붙이거나 접미사를 붙여이를 수행합니다. 예 : &quot; <span class="inline">spr_Ball</span> &quot; 리소스 이름은 문자, 숫자 및 밑줄 기호 &quot;_&quot;만 사용하도록 제한되며 모든 자산의 이름은 숫자가 아닌 문자로 시작해야합니다.</p>
+  <p>이 섹션의 끝에서 설명 할 스프라이트 편집기의 다른 기능이지만 먼저 스프라이트를 그리는 방법을 설명해야합니다. 이것은 <a href="../The_Asset_Editors/Image_Editor.htm"><strong>이미지 편집기</strong></a> 에서 수행됩니다. 이미지 편집기는 게임에서 그래픽을 작성하기위한 매우 강력한 도구이며 <em>이미지 편집</em> 버튼을 클릭하면 열립니다.</p>
   <p><img alt="The Image Editor" class="center" src="../assets/Images/QS_Guide/QS_Sprites_ImageEditor.png"/></p>
-  <p>We won&#39;t go into too much depth about the tools available here - for that we have the Image Editor section of the manual - but briefly you have:</p>
+  <p>우리는 여기에 사용 가능한 도구에 대해 너무 깊이 들어 가지 않을 것입니다. 매뉴얼의 이미지 편집기 섹션이 있기 때문입니다.</p>
   <ul class="colour">
-    <li>At the top left, the <strong>frame view</strong> - this shows the frame(s) of your sprite and can be resized using the magnifying glass icons.</li>
-    <li>In the centre we have the drawing <strong>canvas</strong> - this shows the currently selected frame ready for drawing and you can use the middle mouse button <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21"/> to pan around and the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21"/> to zoom in and out.</li>
-    <li>At the top right we have the basic <strong>brushes</strong> - here you can pick the brush for drawing, and any custom brushes will also be added here.</li>
-    <li>At the middle right we have the <strong>colour picker</strong> - here we can choose the colour to use for the left and/or right mouse button, since you can draw on the canvas with one or the other buttons at the same time.</li>
-    <li>Just below the colour picker we have our <strong>tools </strong>- these are the different drawing tools, including the brush, flood fill, masking and shape tools. Note that some of the tools are split diagonally and will draw either outlined or filled
-      shapes depending on which side of the line you click on to select them.</li>
-    <li>At the bottom right we have the <strong>layers view</strong> - like many other drawing tools out there, you can create different layers to draw onto, permitting you to experiment with position and colour etc... without having to worry about destroying
-      what&#39;s underneath.</li>
+    <li>왼쪽 상단의 <strong>프레임보기</strong> -스프라이트의 프레임이 표시되며 돋보기 아이콘을 사용하여 크기를 조정할 수 있습니다.</li>
+    <li>중앙에는 그리기 <strong>캔버스가 있습니다</strong> -현재 선택된 프레임을 그릴 준비가되었으며 마우스 가운데 버튼을 사용할 수 있습니다 이동하고 마우스 휠 확대 및 축소합니다.</li>
+    <li>오른쪽 상단에는 기본 <strong>브러시</strong> 가 있습니다. 여기에서 그리기 브러시를 선택할 수 있으며 여기에는 모든 사용자 정의 브러시가 추가됩니다.</li>
+    <li>오른쪽 가운데에는 <strong>색상 선택기</strong> 가 있습니다. 여기에서 왼쪽 또는 오른쪽 마우스 버튼에 사용할 색상을 선택할 수 있습니다. 동시에 하나 또는 다른 버튼으로 캔버스에 그릴 수 있기 때문입니다.</li>
+    <li>그냥 우리가 우리의 <strong>도구를</strong> 가지고 색상 선택기 아래 - 이러한 브러쉬, 홍수 채우기, 마스킹 및 모양 도구를 포함하여 다양한 그리기 도구가 있습니다. 일부 도구는 대각선으로 나뉘며 클릭하여 선의 어느 쪽을 선택 하느냐에 따라 윤곽선 또는 채워진 모양을 그립니다.</li>
+    <li>오른쪽 하단에는 <strong>레이어보기</strong> 가 있습니다. 다른 많은 그리기 도구와 마찬가지로 다른 레이어를 만들어 그릴 수 있으므로 아래 내용을 파괴 할 염려없이 위치와 색상 등을 실험 할 수 있습니다.</li>
   </ul>
-  <p>Draw something into the image editor and take some time to play with the options, then when you are ready close the image editor workspace (which will save the image) to take you back to the main workspace with the sprite editor in it. We&#39;ll discuss
-    a few other features of the sprite editor that are important to know when just getting started...</p>
-  <p>The first thing you need know is how to set the <strong>origin </strong>for the sprite. The origin is simply the point that will be used to &quot;anchor&quot; our sprite within the room, and in this case we want to set it to the centre.</p>
-  <p>So we click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the from down menu for setting the origin and select &quot;middle centre&quot;:</p>
+  <p>이미지 편집기에 무언가를 그려서 옵션으로 재생하는 데 시간이 걸리면 준비가되면 이미지 편집기 작업 영역을 닫고 (이미지를 저장함) 스프라이트 편집기가있는 기본 작업 영역으로 돌아갑니다. 방금 시작할 때 알아야 할 스프라이트 편집기의 몇 가지 다른 기능에 대해 살펴 보겠습니다.</p>
+  <p>가장 먼저 알아야 할 것은 스프라이트의 <strong>원점</strong> 을 설정하는 방법입니다. 원점은 단순히 방 안에서 스프라이트를 &quot;고정&quot;하는 데 사용될 지점이며,이 경우 중앙에 설정하려고합니다.</p>
+  <p>So we click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/>출발지 설정을 위해 아래에서 메뉴에서 &quot;중간 중심&quot;을 선택하십시오.</p>
   <p><img alt="Example Showing The Sprite Origin" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteOrigin.png"/></p>
-  <p>You&#39;ll see the blue origin marker in the preview image move to the center of the sprite. Note that you can place the origin anywhere you wish by simply clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the
-    preview image, and you can also manually input the origin position by adding values into the x/y fields at the top.</p>
-  <p>Another important thing to do know is how to set the <strong>collision mask</strong> for the sprite. The collision mask is the area that GameMaker Studio 2 will check to see if there has been a collision with any other instance of an object in the game,
-    and by default this is set to rectangle (which is also the fastest to resolve). Note that you can set the detection mode for the <strong> <a class="tooltip" title="For sprites, the bounding-box is the name given to the edges of the area that collisions will initially be detected in, and it doesn&#39;t have to be the same size as the sprite it&#39;s being applied to. For sequences, the bounding box is the outer edge of the total space that one or more assets occupy in the canvas.">bounding box</a></strong> to be either automatic
-    (the default value) or manual. If you choose manual you will be able to set the bounding box values left, right, top and bottom.</p>
+  <p>You&#39;ll see the blue origin marker in the preview image move to the center of the sprite. Note that you can place the origin anywhere you wish by simply clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/>미리보기 이미지에서 상단의 x / y 필드에 값을 추가하여 원점 위치를 수동으로 입력 할 수도 있습니다.</p>
+  <p>알아야 할 또 다른 중요한 사항은 스프라이트에 대한 <strong>충돌 마스크</strong> 를 설정하는 방법입니다. 충돌 마스크는 GameMaker Studio 2가 게임에서 개체의 다른 인스턴스와 충돌이 있는지 확인하기 위해 확인하는 영역이며, 기본적으로 사각형으로 설정되어 있습니다 (이는 가장 빠른 해결 방법 임). <strong><a class="tooltip" title="스프라이트의 경우 경계 상자는 충돌이 처음 감지되는 영역의 가장자리에 지정된 이름이며 적용되는 스프라이트와 크기가 같지 않아도됩니다. 시퀀스의 경우 경계 상자는 하나 이상의 자산이 캔버스에서 차지하는 전체 공간의 바깥 쪽 가장자리입니다.">경계 상자</a></strong> 의 감지 모드를 자동 (기본값) 또는 수동으로 설정할 수 있습니다. 수동을 선택하면 경계 상자 값을 왼쪽, 오른쪽, 위쪽 및 아래쪽으로 설정할 수 있습니다.</p>
   <p><img alt="Example Showing The Sprite Mask" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteMask.png"/></p>
-  <p>Any type of collision mask other than rectangle will be slower to resolve, but when making a small, simple game it&#39;s not usually an issue. Note that you can also import sprites made in other software by clicking the <em>Import </em>button in the
-    sprite editor, and you can also drag image files onto the GameMaker Studio 2 IDE to add them as sprites to the Asset Browser. You can also drag sprites from the Asset Browser to add them to things directly, in which case the IDE will highlight the
-    places you can add the sprite to:</p>
-  <p><img alt="Where To Drop A Sprite On An Object" class="center" src="../assets/Images/QS_Guide/QS_DropSprite.png"/>If you&#39;d like more detailed information on the Sprite Editor and the Image Editor, please see the following sections of the manual:</p>
+  <p>사각형 이외의 모든 유형의 충돌 마스크는 해결 속도가 느리지 만 작고 간단한 게임을 만들 때는 일반적으로 문제가되지 않습니다. 스프라이트 편집기에서 <em>가져 오기</em> 버튼을 클릭하여 다른 소프트웨어로 만든 스프라이트를 가져올 수도 있고, 이미지 파일을 GameMaker Studio 2 IDE로 드래그하여 스프라이트로 자산 브라우저에 추가 할 수도 있습니다. 자산 브라우저에서 스프라이트를 드래그하여 사물에 직접 추가 할 수도 있습니다.이 경우 IDE는 스프라이트를 추가 할 수있는 위치를 강조 표시합니다.</p>
+  <p><img alt="Where To Drop A Sprite On An Object" class="center" src="../assets/Images/QS_Guide/QS_DropSprite.png"/>Sprite Editor 및 Image Editor에 대한 자세한 내용을 보려면 다음 매뉴얼 섹션을 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Sprites.htm">Editors: The Sprite Editor</a></li>
-    <li><a href="../The_Asset_Editors/Image_Editor.htm">Editors: The Image Editor</a></li>
+    <li><a href="../The_Asset_Editors/Sprites.htm">에디터 : 스프라이트 에디터</a></li>
+    <li><a href="../The_Asset_Editors/Image_Editor.htm">편집자 : 이미지 편집기</a></li>
   </ul>
-  <p>You can close the sprite editor now as we are going to move on to discuss <strong> Tile Sets</strong>.</p>
+  <p><strong>타일 ​​세트</strong> 에 대해 논의하기 위해 스프라이트 편집기를 닫을 수 있습니다.</p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Quick_Start_Guide\Creating_Sprites.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Creating_Tile_Sets.htm">Creating Tilesets</a></div>
+        <div style="float:left">뒤로: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="Creating_Tile_Sets.htm">타일셋 만들기</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Creating Sprites
@@ -146,4 +130,4 @@ Quick Start: Creating Sprites
 qs_sprites
 -->
 
-</body></html>
+</body></html> 

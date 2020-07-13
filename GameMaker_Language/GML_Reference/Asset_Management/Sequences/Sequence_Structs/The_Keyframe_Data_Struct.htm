@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="The Keyframe Data Struct">
-        <span>The Keyframe Data Struct</span>
+        <span>키 프레임 데이터 구조</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,62 +80,55 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Keyframe Data Struct</h1>
-  <p>When you define a <a href="The_Keyframe_Struct.htm">keyframe struct</a> for a track, you need to also define the data that will be associated with it. This is comprised of different <i>channels</i>, and each channel can be given a specific
-    type of data depending on what type of track you are setting the keyframe data for. These properties are:</p>
+  <h1>키 프레임 데이터 구조</h1>
+  <p>트랙에 대한 <a href="The_Keyframe_Struct.htm">키 프레임 구조</a> 를 정의 할 때 해당 트랙과 관련된 데이터도 정의해야합니다. 이것은 서로 다른 <i>채널</i> 로 구성되며, 키 프레임 데이터를 설정하는 트랙 유형에 따라 각 채널에 특정 유형의 데이터가 제공 될 수 있습니다. 이러한 속성은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><tt>channel</tt>: This is the channel that the keyframe data should be applied to. It is a positive integer value starting at 0, and it&#39;s worth noting that when creating parameter tracks for &quot;position&quot; or &quot;scale&quot; keyframes,
-      then you need to use very specific channel values. These are: channel 0 is the X position or the X scale, channel 1 is the Y position or Y scale.</li>
-    <li><tt>spriteIndex</tt>: The index of the sprite asset to use for the track. This property is only available for tracks of the type <tt>seqtracktype_graphic</tt> and you can get or set it.</li>
-    <li><tt>soundIndex</tt>: The index of the audio asset to use for the track. This property is only available for tracks of the type <tt>seqtracktype_audio</tt> and you can get or set it.</li>
-    <li><tt>playbackMode</tt>: The playback mode for the sound. This property is only available for tracks of the type <tt>seqtracktype_audio</tt> and you can get or set it. The property should be one of the following constants:</li>
+    <li><tt>channel</tt> : 키 프레임 데이터를 적용 할 채널입니다. 0부터 시작하는 양의 정수 값이며 &quot;position&quot;또는 &quot;scale&quot;키 프레임에 대한 매개 변수 트랙을 만들 때 매우 특정한 채널 값을 사용해야한다는 점에 주목할 가치가 있습니다. 채널 0은 X 위치 또는 X 스케일이고 채널 1은 Y 위치 또는 Y 스케일입니다.</li>
+    <li><tt>spriteIndex</tt> : 트랙에 사용할 스프라이트 자산의 인덱스입니다. 이 속성은 <tt>seqtracktype_graphic</tt> 유형의 트랙에만 사용할 수 있으며 가져 오거나 설정할 수 있습니다.</li>
+    <li><tt>soundIndex</tt> : 트랙에 사용할 오디오 자산의 인덱스입니다. 이 속성은 <tt>seqtracktype_audio</tt> 유형의 트랙에만 사용할 수 있으며 가져 오거나 설정할 수 있습니다.</li>
+    <li><tt>playbackMode</tt> : 사운드의 재생 모드. 이 속성은 <tt>seqtracktype_audio</tt> 유형의 트랙에만 사용할 수 있으며 가져 오거나 설정할 수 있습니다. 특성은 다음 상수 중 하나 여야합니다.</li>
   </ul>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>일정한</th>
+        <th>기술</th>
+        <th>값</th>
       </tr>
       <tr>
         <td>seqaudiokey_loop</td>
-        <td>The sound will loop when played.</td>
+        <td>재생하면 소리가 반복됩니다.</td>
         <td>0</td>
       </tr>
       <tr>
         <td>seqaudiokey_oneshot</td>
-        <td>The sound will only play once then stop.</td>
+        <td>소리는 한 번만 재생 된 다음 정지됩니다.</td>
         <td>1</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <ul class="colour">
-    <li><tt>curve</tt>: This property requires an animation curve struct (see <a href="../../Animation_Curves/animcurve_channel_new.htm">here</a> for more information) and is only available for tracks of the type <tt>seqtracktype_real</tt>. If no curve struct
-      is used then the value for this property will be -1.</li>
-    <li><tt>value</tt>: This property is simply a value that is associated with the keyframe data channel, and is only available for tracks of the type <tt>seqtracktype_real</tt> when no <tt>curve</tt> struct
-      is supplied.<tt></tt></li>
-    <li><tt>colour</tt>: This property returns (or requires, if being set) an <a href="../../../../GML_Overview/Arrays.htm">array</a> for the colour value of the keyframe with the format [A, R, G, B]. This is only available for tracks of the type <tt>seqtracktype_colour</tt>.
-      Note that the values for each component should be expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX value #FF (0 - 255 as shown in the colour picker for colour tracks in the Sequences Editor).</li>
-    <li><tt>sequence</tt>: This property will return (or requires, if being set) a <a href="The_Sequence_Object_Struct.htm">sequence object struct</a> and is only available for tracks of the type <tt>seqtracktype_sequence</tt>.</li>
-    <li><tt>objectIndex</tt>: This property will return (or requires, if being set) an object index and is only available for tracks of the type <tt>seqtracktype_instance</tt>.</li>
-    <li><tt>events</tt>: This property allows access to the <b>events</b> and <b>broadcast messages</b> associated with the keyframe data struct. You can get or set this property, and when getting it an
-      array of strings is returned, and when setting it an array of strings should be specified. For more information on events, please see the section <a href="../Sequence_Events_Moments_Broadcast.htm">Sequence Events And Moments</a>. This
-      property is only available for tracks of the type <tt>seqtracktype_message</tt>.</li>
-    <li><tt>event</tt>: This property will return (or can be set to) the <a href="../../../Variable_Functions/method.htm">method</a> associated with the keyframe data struct. If no method has been specified or you wish to remove
-      the method, then the property should be -1. This property is only available for tracks of the type <tt>seqtracktype_moment</tt>.</li>
+    <li><tt>curve</tt> :이 프로퍼티는 애니메이션 커브 구조체가 필요하며 (자세한 내용은 <a href="../../Animation_Curves/animcurve_channel_new.htm">여기</a> 를 참조하십시오) <tt>seqtracktype_real</tt> 유형의 트랙에만 사용할 수 있습니다. 곡선 구조체를 사용하지 않으면이 속성의 값은 -1이됩니다.</li>
+    <li><tt>value</tt> :이 속성은 단순히 키 프레임 데이터 채널과 관련된 값이며 <tt>곡선</tt> 구조체가 제공되지 않은 경우 <tt>seqtracktype_real</tt> 유형의 트랙에만 사용할 수 있습니다. <tt></tt></li>
+    <li><tt>color</tt> :이 속성은 [A, R, G, B] 형식으로 키 프레임의 색상 값에 대한 <a href="../../../../GML_Overview/Arrays.htm">배열</a> 을 반환합니다 (설정된 경우 필요). 이것은 <tt>seqtracktype_colour</tt> 유형의 트랙에만 사용할 수 있습니다. 각 구성 요소의 값은 0과 1 사이로 표현해야합니다. 여기서 0은 HEX 값 # 00에 해당하고 1은 HEX 값 #FF에 해당합니다 (시퀀스의 색상 트랙에 대한 색상 선택기에 표시되는 0-255). 편집자).</li>
+    <li><tt>sequence</tt> :이 속성은 <a href="The_Sequence_Object_Struct.htm">시퀀스 객체 구조체</a> 를 반환하거나 설정해야하며 <tt>seqtracktype_sequence</tt> 유형의 트랙에만 사용할 수 있습니다.</li>
+    <li><tt>objectIndex</tt> :이 속성은 객체 인덱스를 반환하거나 설정되어 있으면 <tt>seqtracktype_instance</tt> 유형의 트랙에만 사용할 수 있습니다.</li>
+    <li><tt>events</tt> :이 속성을 사용하면 키 프레임 데이터 구조와 관련된 <b>이벤트</b> 및 <b>브로드 캐스트 메시지에</b> 액세스 할 수 있습니다. 이 속성을 가져 오거나 설정할 수 있으며, 가져 오면 문자열 배열이 반환되고 설정시 문자열 배열을 지정해야합니다. 이벤트에 대한 자세한 내용은 <a href="../Sequence_Events_Moments_Broadcast.htm">시퀀스 이벤트 및 순간</a> 섹션을 참조하십시오. 이 특성은 <tt>seqtracktype_message</tt> 유형의 트랙에만 사용 가능합니다.</li>
+    <li><tt>event</tt> :이 속성은 키 프레임 데이터 구조체와 관련된 <a href="../../../Variable_Functions/method.htm">메서드</a> 를 반환하거나 설정할 수 있습니다. 메소드를 지정하지 않았거나 메소드를 제거하려는 경우 특성은 -1이어야합니다. 이 속성은 <tt>seqtracktype_moment</tt> 유형의 트랙에만 사용할 수 있습니다.</li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Asset_Management\Sequences\Sequence_Structs\The_Keyframe_Data_Struct.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="The_Sequence_Object_Struct.htm">The Sequence Object Struct</a></div>
+        <div style="float:left">뒤로: <a href="../Sequences.htm">시퀀스</a></div>
+        <div style="float:right">다음: <a href="The_Sequence_Object_Struct.htm">시퀀스 객체 구조</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Keyframe Data Struct
@@ -144,4 +137,4 @@ The Keyframe Data Struct
 sequence_keyframe_data
 -->
 
-</body></html>
+</body></html> 

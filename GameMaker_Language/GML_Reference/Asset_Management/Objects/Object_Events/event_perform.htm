@@ -71,7 +71,7 @@
         <span>event_perform</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,403 +81,400 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>event_perform</h1>
-  <p>This function will perform the specified event, with the designated argument, for the instance running the code. There are many options here which allow complete simulation of all possible events, but note that this literally just performs all the code
-    in the event and the game will not modify anything to make it trigger itself manually, for example if you choose to perform a keyboard press event, the event will be triggered but relevant key will not be recognised as having been pressed. Or if you
-    perform an alarm event, the alarm counter will not be set to -1 but rather continue to count down.</p>
-  <p>The table below outlines all the constants that are included in GameMaker Studio 2 for referencing event types, as well as their number value. The events themselves are marked in <b>bold text</b> and are the same as the return values of the
-    <a href="event_type.htm"><tt>event_type</tt></a> variable, while their number values are marked with <i>italic text</i> and these are the same as the return values for the <a href="event_number.htm"><tt>event_number</tt></a> variable:</p>
+  <p>이 함수는 코드를 실행하는 인스턴스에 대해 지정된 인수와 함께 지정된 이벤트를 수행합니다. 여기에는 가능한 모든 이벤트를 완벽하게 시뮬레이션 할 수있는 많은 옵션이 있지만 이것은 문자 그대로 이벤트의 모든 코드를 수행하며 게임은 키보드를 수행하도록 선택한 경우와 같이 수동으로 트리거되도록 아무것도 수정하지 않습니다. 프레스 이벤트의 경우 이벤트가 트리거되지만 관련 키가 눌려진 것으로 인식되지 않습니다. 또는 알람 이벤트를 수행하면 알람 카운터가 -1로 설정되지 않고 계속 카운트 다운됩니다.</p>
+  <p>아래 표는 이벤트 유형을 참조하기 위해 GameMaker Studio 2에 포함 된 모든 상수와 숫자 값을 요약 한 것입니다. 이벤트 자체는 <b>굵은 글씨</b> 로 표시되며 <a href="event_type.htm"><tt>event_type</tt></a> 변수의 반환 값과 동일하지만 숫자 값은 <i>이탤릭 텍스트</i> 로 표시되며 이들은 <a href="event_number.htm"><tt>event_number</tt></a> 변수의 반환 값과 동일합니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th width="40%">Name</th>
-        <th>Description</th>
+        <th width="40%">이름</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td><b>ev_create</b></td>
-        <td>Create event.</td>
+        <td>이벤트를 만듭니다.</td>
       </tr>
       <tr>
         <td><b>ev_destroy</b></td>
-        <td>Destroy event</td>
+        <td>이벤트 파괴</td>
       </tr>
       <tr>
         <td><b>ev_cleanup</b></td>
-        <td>Clean Up Event</td>
+        <td>정리 이벤트</td>
       </tr>
       <tr>
         <td><b>ev_step</b></td>
-        <td>Step event</td>
+        <td>스텝 이벤트</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_step_normal</i></td>
-        <td>Step</td>
+        <td><i>---- ev_step_normal</i></td>
+        <td>단계</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_step_begin</i></td>
-        <td>Begin Step</td>
+        <td><i>---- ev_step_begin</i></td>
+        <td>단계 시작</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_step_end</i></td>
-        <td>End Step</td>
+        <td><i>---- ev_step_end</i></td>
+        <td>끝 단계</td>
       </tr>
       <tr>
         <td><b>ev_alarm</b></td>
-        <td>Alarm event</td>
+        <td>알람 이벤트</td>
       </tr>
       <tr>
-        <td><i>   ---- 0 ... 11</i></td>
-        <td>The number relevant to which of the 12 alarms you wish to trigger the event of</td>
+        <td><i>---- 0 ... 11</i></td>
+        <td>이벤트를 트리거하려는 12 개 알람 중 관련 알람 수</td>
       </tr>
       <tr>
         <td><b>ev_keyboard, ev_keypress, ev_keyrelease</b></td>
-        <td>Keyboard/Keyboard Pressed/Keyboard Released</td>
+        <td>키보드 / 키보드 눌림 / 키보드 출시</td>
       </tr>
       <tr>
-        <td><i>   ---- any key code</i></td>
-        <td>vk_space or ord(&quot;W&quot;) for example.</td>
+        <td><i>---- 모든 키 코드</i></td>
+        <td>예를 들어 vk_space 또는 ord ( &quot;W&quot;)입니다.</td>
       </tr>
       <tr>
         <td><b>ev_mouse</b></td>
-        <td>Mouse event</td>
+        <td>마우스 이벤트</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_left_button</i></td>
-        <td>Left button held down on object</td>
+        <td><i>---- ev_left_button</i></td>
+        <td>객체에서 왼쪽 버튼을 누른 상태</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_right_button</i></td>
-        <td>Right button held down on object</td>
+        <td><i>---- ev_right_button</i></td>
+        <td>오른쪽 버튼을 누른 상태</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_middle_button</i></td>
-        <td>Middle button (or clickable wheel) held down on object</td>
+        <td><i>---- ev_middle_button</i></td>
+        <td>객체를 누른 상태에서 가운데 ​​버튼 (또는 클릭 가능한 휠)</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_no_button</i></td>
-        <td>No buttons held down</td>
+        <td><i>---- ev_no_button</i></td>
+        <td>누른 버튼이 없습니다</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_left_press</i></td>
-        <td>Left button just pressed on object</td>
+        <td><i>---- ev_left_press</i></td>
+        <td>객체에서 방금 누른 왼쪽 버튼</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_right_press</i></td>
-        <td>Right button just pressed on object</td>
+        <td><i>---- ev_right_press</i></td>
+        <td>객체에서 오른쪽 버튼을 눌렀습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_middle_press</i></td>
-        <td>Middle button (or clickable wheel) just pressed on object</td>
+        <td><i>---- ev_middle_press</i></td>
+        <td>객체에서 가운데 ​​버튼 (또는 클릭 가능한 휠)을 눌렀습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_left_release</i></td>
-        <td>Left button just released on object</td>
+        <td><i>---- ev_left_release</i></td>
+        <td>방금 객체에서 왼쪽 버튼을 놓음</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_right_release</i></td>
-        <td>Right button just released on object</td>
+        <td><i>---- ev_right_release</i></td>
+        <td>객체에서 방금 오른 버튼</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_middle_release</i></td>
-        <td>Middle button just released on object</td>
+        <td><i>---- ev_middle_release</i></td>
+        <td>중간 버튼이 객체에서 방금 해제 됨</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_mouse_enter</i></td>
-        <td>Mouse just entered object&#39;s bounding box</td>
+        <td><i>---- ev_mouse_enter</i></td>
+        <td>마우스가 개체의 경계 상자에 입력되었습니다</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_mouse_leave</i></td>
-        <td>Mouse just left object&#39;s bounding box</td>
+        <td><i>---- ev_mouse_leave</i></td>
+        <td>마우스 왼쪽 개체의 경계 상자</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_mouse_wheel_up</i></td>
-        <td>Mouse wheel scrolled upwards</td>
+        <td><i>---- ev_mouse_wheel_up</i></td>
+        <td>마우스 휠이 위로 스크롤 됨</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_mouse_wheel_down</i></td>
-        <td>Mouse wheel scrolled downwards</td>
+        <td><i>---- ev_mouse_wheel_down</i></td>
+        <td>마우스 휠이 아래쪽으로 스크롤</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_left_button</i></td>
-        <td>Left button held down anywhere</td>
+        <td><i>---- ev_global_left_button</i></td>
+        <td>왼쪽 버튼을 누른 상태</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_right_button</i></td>
-        <td>Right button held down anywhere</td>
+        <td><i>---- ev_global_right_button</i></td>
+        <td>오른쪽 버튼을 누른 상태</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_middle_button</i></td>
-        <td>Middle button (or clickable wheel) held down anywhere</td>
+        <td><i>---- ev_global_middle_button</i></td>
+        <td>어디에서나 누른 가운데 버튼 (또는 클릭 가능한 휠)</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_left_press</i></td>
-        <td>Left button just pressed anywhere</td>
+        <td><i>---- ev_global_left_press</i></td>
+        <td>아무 데나 왼쪽 버튼을 눌렀습니다</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_right_press</i></td>
-        <td>Right button just pressed anywhere</td>
+        <td><i>---- ev_global_right_press</i></td>
+        <td>아무 데나 오른쪽 버튼을 누르면</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_middle_press</i></td>
-        <td>Middle button (or clickable wheel) just pressed anywhere</td>
+        <td><i>---- ev_global_middle_press</i></td>
+        <td>중간 버튼 또는 클릭 가능한 휠</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_left_release</i></td>
-        <td>Left button just released anywhere</td>
+        <td><i>---- ev_global_left_release</i></td>
+        <td>왼쪽 버튼은 어디에서나 해제</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_right_release</i></td>
-        <td>Right button just released anywhere</td>
+        <td><i>---- ev_global_right_release</i></td>
+        <td>오른쪽 버튼은 어디서나 해제</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_middle_release</i></td>
-        <td>Middle button just released anywhere</td>
+        <td><i>---- ev_global_middle_release</i></td>
+        <td>중간 버튼이 방금 어디서나 릴리스</td>
       </tr>
       <tr>
         <td><b>ev_gesture</b></td>
-        <td>A gesture event (Tap, Drag, Flick, Pinch or Rotate)</td>
+        <td>제스처 이벤트 (탭, 드래그, 긋기, 핀치 또는 회전)</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_tap</i></td>
-        <td>A single click/touch and release has been detected for an <i>instance</i></td>
+        <td><i>---- ev_gesture_tap</i></td>
+        <td><i>인스턴스에</i> 대한 단일 클릭 / 터치 및 릴리스가 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_double_tap</i></td>
-        <td>Two quick touches/clicks and releases have been detected for an <i>instance</i></td>
+        <td><i>---- ev_gesture_double_tap</i></td>
+        <td><i>인스턴스에</i> 대한 두 개의 빠른 터치 / 클릭 및 릴리스가 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_drag_start</i></td>
-        <td>The beginning of a drag gesture has been detected for an <i>instance</i></td>
+        <td><i>---- ev_gesture_drag_start</i></td>
+        <td><i>인스턴스</i> 에서 드래그 동작의 시작이 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_dragging</i></td>
-        <td>A touch/click has been held and moved for an <i>instance</i></td>
+        <td><i>---- ev_gesture_dragging</i></td>
+        <td><i>인스턴스에</i> 대한 터치 / 클릭이 보류 및 이동되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_drag_end</i></td>
-        <td>The release of the touch/click from a drag has been detected for an <i>instance</i></td>
+        <td><i>---- ev_gesture_drag_end</i></td>
+        <td>드래그에서 터치 / 클릭 해제가 <i>인스턴스에</i> 대해 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_flick</i></td>
-        <td>The release of a touch/click from a drag had enough movement for a flick event to be detected for the <i>instance</i></td>
+        <td><i>---- ev_gesture_flick</i></td>
+        <td>드래그에서 터치 / 클릭을 해제하면 <i>인스턴스</i> 에서 튕기기 이벤트가 감지 될만큼 충분한 움직임이있었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_pinch_start</i></td>
-        <td>Two touches and a straight movement have been detected for an <i>instance</i></td>
+        <td><i>---- ev_gesture_pinch_start</i></td>
+        <td><i>인스턴스에서</i> 두 번의 터치와 직선 움직임이 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_pinch_in</i></td>
-        <td>The movement between two touches for an <i>instance</i> has been detected as inwards</td>
+        <td><i>---- ev_gesture_pinch_in</i></td>
+        <td><i>인스턴스의</i> 두 터치 간 이동이 안쪽으로 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_pinch_out</i></td>
-        <td>The movement between two touches for an <i>instance</i> has been detected as outwards</td>
+        <td><i>---- ev_gesture_pinch_out</i></td>
+        <td><i>인스턴스의</i> 두 터치 간 이동이 바깥쪽으로 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_pinch_end</i></td>
-        <td>The release of one (or both) touches for a pinch has been detected for an <i>instance</i></td>
+        <td><i>---- ev_gesture_pinch_end</i></td>
+        <td>핀치에 대한 하나 또는 둘 다의 터치 해제가 <i>인스턴스에</i> 대해 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_rotate_start</i></td>
-        <td>The movement between two touches for an <i>instance</i> has been detected as a rotation</td>
+        <td><i>---- ev_gesture_rotate_start</i></td>
+        <td><i>인스턴스의</i> 두 터치 간 이동이 회전으로 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_rotating</i></td>
-        <td>The movement between two touches for an <i>instance</i> has been detected as rotating</td>
+        <td><i>---- ev_gesture_rotating</i></td>
+        <td><i>인스턴스에</i> 대한 두 터치 간의 이동이 회전으로 감지되었습니다</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_rotate_end</i></td>
-        <td>The release of one (or both) touches for a rotation has been detected for an <i>instance</i></td>
+        <td><i>---- ev_gesture_rotate_end</i></td>
+        <td>회전에 대한 하나 또는 둘 다의 터치 해제가 <i>인스턴스에</i> 대해 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_tap</i></td>
-        <td>A single click/touch and release has been detected <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_tap</i></td>
+        <td>방 <i>어디에서나</i> 단일 클릭 / 터치 및 릴리스가 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_double_tap</i></td>
-        <td>Two quick touches/clicks and releases have been detected <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_double_tap</i></td>
+        <td>방 <i>어디에서나</i> 두 번의 빠른 터치 / 클릭 및 릴리스가 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_drag_start</i></td>
-        <td>The beginning of a drag gesture has been detected <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_drag_start</i></td>
+        <td>방의 <i>어느 곳에서나</i> 드래그 동작의 시작이 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_dragging</i></td>
-        <td>A touch/click has been held and moved <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_dragging</i></td>
+        <td>터치 / 클릭이 방의 <i>어느 곳에서나</i> 움직였습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_drag_end</i></td>
-        <td>The release of the touch/click from a drag has been detected <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_drag_end</i></td>
+        <td>드래그로 인한 터치 / 클릭 해제가 실내 <i>어디에서나</i> 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_flick</i></td>
-        <td>The release of a touch/click from a drag had enough movement for a flick event to be detected <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_flick</i></td>
+        <td>드래그로 인해 터치 / 클릭이 해제되면 플릭 이벤트가 실내 <i>어디에서나</i> 감지 될 수있을만큼 충분한 움직임이있었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_pinch_start</i></td>
-        <td>Two touches and a straight movement have been detected <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_pinch_start</i></td>
+        <td>방 <i>어디에서나</i> 두 번의 터치와 직선 운동이 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_pinch_in</i></td>
-        <td>The movement between two touches <i>anywhere</i> in the room has been detected as inwards</td>
+        <td><i>---- ev_global_gesture_pinch_in</i></td>
+        <td>실내 <i>어디에서나</i> 두 터치 사이의 움직임이 안쪽으로 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_pinch_out</i></td>
-        <td>The movement between two touches <i>anywhere</i> in the room has been detected as outwards</td>
+        <td><i>---- ev_global_gesture_pinch_out</i></td>
+        <td>방 <i>어디에서나</i> 두 터치 사이의 움직임이 바깥쪽으로 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_pinch_end</i></td>
-        <td>The release of one (or both) touches for a pinch has been detected <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_pinch_end</i></td>
+        <td>핀치에 대한 하나 (또는 ​​둘 다) 터치의 해제가 방의 <i>어느 곳에서나</i> 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_rotate_start</i></td>
-        <td>The movement between two touches <i>anywhere</i> in the room has been detected as a rotation</td>
+        <td><i>---- ev_global_gesture_rotate_start</i></td>
+        <td>방 <i>어디에서나</i> 두 터치 사이의 움직임이 회전으로 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_rotating</i></td>
-        <td>The movement between two touches <i>anywhere</i> in the room has been detected as rotating</td>
+        <td><i>---- ev_global_gesture_rotating</i></td>
+        <td>실내 <i>어디에서나</i> 두 터치 사이의 움직임이 회전하는 것으로 감지되었습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_rotate_end</i></td>
-        <td>The release of one (or both) touches for a rotation has been detected <i>anywhere</i> in the room</td>
+        <td><i>---- ev_global_gesture_rotate_end</i></td>
+        <td>회전을위한 원터치 (또는 둘 다)의 릴리즈가 실내 <i>어디에서나</i> 감지되었습니다.</td>
       </tr>
       <tr>
         <td><b>ev_collision</b></td>
-        <td>Collision with an object</td>
+        <td>객체와의 충돌</td>
       </tr>
       <tr>
-        <td><i>   ---- The index of the object to check.</i></td>
-        <td>object1 for example.</td>
+        <td><i>---- 확인할 객체의 인덱스입니다.</i></td>
+        <td>예를 들어 object1입니다.</td>
       </tr>
       <tr>
         <td><b>ev_other</b></td>
-        <td>One of the actions listed under &#39;Other&#39;</td>
+        <td>&#39;기타&#39;아래에 나열된 조치 중 하나</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_outside</i></td>
-        <td>Whether the instance is outside of the room</td>
+        <td><i>---- ev_outside</i></td>
+        <td>인스턴스가 방 밖에 있는지 여부</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_boundary</i></td>
-        <td>Whether the instance is intersecting the boundary</td>
+        <td><i>---- ev_boundary</i></td>
+        <td>인스턴스가 경계를 교차하는지 여부</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_game_start</i></td>
-        <td>Only triggered at the start of the game</td>
+        <td><i>---- ev_game_start</i></td>
+        <td>게임 시작시에만 트리거</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_game_end</i></td>
-        <td>Only triggered at the end of the game</td>
+        <td><i>---- ev_game_end</i></td>
+        <td>게임 종료시에만 트리거</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_room_start</i></td>
-        <td>Only triggered at the start of a room</td>
+        <td><i>---- ev_room_start</i></td>
+        <td>방이 시작될 때만 트리거</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_room_end</i></td>
-        <td>Only triggered at the end of a room</td>
+        <td><i>---- ev_room_end</i></td>
+        <td>방 끝에서만 트리거</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_no_more_lives</i></td>
-        <td>If all lives are depleted (if lives==0)</td>
+        <td><i>---- ev_no_more_lives</i></td>
+        <td>모든 생명이 고갈 된 경우 (생명 == 0 인 경우)</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_no_more_health</i></td>
-        <td>If all health is depleted (if health==0)</td>
+        <td><i>---- ev_no_more_health</i></td>
+        <td>모든 건강이 고갈 된 경우 (health == 0 인 경우)</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_animation_end</i></td>
-        <td>If the object&#39;s sprite has reached the end of its animation</td>
+        <td><i>---- ev_animation_end</i></td>
+        <td>오브젝트의 스프라이트가 애니메이션의 끝에 도달 한 경우</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_end_of_path</i></td>
-        <td>If the object has reached the end of a path it is following</td>
+        <td><i>---- ev_end_of_path</i></td>
+        <td>객체가 경로의 끝에 도달하면 다음과 같습니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_close_button</i></td>
-        <td>If the window&#39;s Close button has been pushed</td>
+        <td><i>---- ev_close_button</i></td>
+        <td>창의 닫기 버튼을 눌렀을 경우</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_user0... ev_user15</i></td>
-        <td>One of the 16 available user events.</td>
+        <td><i>---- ev_user0 ... ev_user15</i></td>
+        <td>16 개의 사용 가능한 사용자 이벤트 중 하나입니다.</td>
       </tr>
       <tr>
         <td><b>ev_draw</b></td>
-        <td>Draw event. <i><b>NOTE: </b>This event cannot be forced outside of a draw event and the constants and the constants are only for identifying the event when performed in these cases.</i></td>
+        <td>이벤트를 그립니다. <b>참고 :</b> 이 이벤트는 드로우 이벤트 외부로 강요 될 수 없으며 상수 및 상수는 이러한 경우 수행 될 때 이벤트를 식별하기위한 것입니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_draw_begin</i></td>
-        <td>The draw begin event.</td>
+        <td><i>---- ev_draw_begin</i></td>
+        <td>추첨 시작 이벤트.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_draw_end</i></td>
-        <td>The draw end event.</td>
+        <td><i>---- ev_draw_end</i></td>
+        <td>추첨 이벤트.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_draw_pre</i></td>
-        <td>The pre draw event.</td>
+        <td><i>---- ev_draw_pre</i></td>
+        <td>프리 드로우 이벤트.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_draw_post</i></td>
-        <td>The post draw event.</td>
+        <td><i>---- ev_draw_post</i></td>
+        <td>포스트 드로우 이벤트.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gui</i></td>
-        <td>The draw gui event.</td>
+        <td><i>---- ev_gui</i></td>
+        <td>GUI 이벤트를 그립니다.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gui_begin</i></td>
-        <td>The draw gui begin event.</td>
+        <td><i>---- ev_gui_begin</i></td>
+        <td>드로우 GUI 시작 이벤트.</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gui_end</i></td>
-        <td>The draw gui end event.</td>
+        <td><i>---- ev_gui_end</i></td>
+        <td>드로우 GUI 종료 이벤트입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">event_perform(type, numb);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>type</td>
-        <td>The type of event to perform. See below.</td>
+        <td>유형</td>
+        <td>수행 할 이벤트 유형입니다. 아래를 참조하십시오.</td>
       </tr>
       <tr>
-        <td>numb</td>
-        <td>The specific event constant or value, if one is necessary (otherwise, just use 0).</td>
+        <td>무감각</td>
+        <td>필요한 경우 특정 이벤트 상수 또는 값입니다 (그렇지 않으면 0 만 사용하십시오).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Extended Example</h4>
-  <p><br/> To help understand how this function can be use, please look at the following few examples:</p>
+  <h4>확장 된 예</h4>
+  <p>이 기능을 사용하는 방법을 이해하려면 다음 몇 가지 예를보십시오.</p>
   <p class="code">event_perform(ev_keypress, ord(&quot;W&quot;));</p>
-  <p>This would perform the event associated with Keyboard Check Pressed &quot;W&quot; key (without actually generating a keyboard press).</p>
+  <p>키보드 확인을 누른 상태에서 &quot;W&quot;키 (실제로 키보드를 누르지 않은 상태)와 관련된 이벤트를 수행합니다.</p>
   <p class="code">event_perform(ev_step, ev_step_begin);</p>
-  <p>This would perform the <i>Begin Step</i> event (if called from any of the step events it would cause the begin step event code to be run twice).</p>
+  <p>이는 <i>단계 시작</i> 이벤트를 수행합니다 ( <i>단계</i> 이벤트 중 하나에서 호출되면 시작 단계 이벤트 코드가 두 번 실행 됨).</p>
   <p class="code">event_perform(ev_create, 0);</p>
-  <p>This would perform the <i>Create<i> event of the instance.</i></i>
-  </p>
+  <p><i>인스턴스</i> 의 <i>Create</i> <i>이벤트</i> 가 수행 <i>됩니다.</i></p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Asset_Management\Objects\Object_Events\event_perform.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Generating_Object_Events.htm">Generating Object Events</a></div>
-        <div style="float:right">Next: <a href="event_perform_object.htm">event_perform_object</a></div>
+        <div style="float:left">뒤로: <a href="Generating_Object_Events.htm">객체 이벤트 생성</a></div>
+        <div style="float:right">다음: <a href="event_perform_object.htm">event_perform_object</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 event_perform
@@ -586,4 +583,4 @@ ev_global_gesture_rotate_end
 event_perform
 -->
 
-</body></html>
+</body></html> 

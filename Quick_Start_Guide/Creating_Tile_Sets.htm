@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Creating Tile Sets">
-        <span>Creating Tile Sets</span>
+        <span>타일 ​​세트 생성</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,43 +81,32 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Creating Tile Sets</h1>
-  <p><strong>Tile Sets</strong> are created from sprites, but they are also classified as a separate asset type since the way that GameMaker Studio 2 handles them is a bit different to both sprites and objects. So, a tile set is a collection of tiles created
-    together in one sprite, and a tile is simply a graphical resource that gets added to a GameMaker Studio 2 room as part of a <strong> <a class="tooltip" title="The tile map is the name given to a collection of tiles taken from a tile set and used to create levels in a game.">tile map</a></strong>. These tile maps are then drawn to the
-    screen with very little CPU/GPU processing, making them ideal for designing any static items in levels.</p>
-  <p>To make processing tiles so fast, they do have certain restrictions, with the most basic one being that they can <strong>only be rectangular or square</strong> (if you want anything other than a this, then you&#39;ll need to create a regular sprite
-    and use the <em>Asset Layer</em> in the room editor, but we&#39;ll discuss that in the later section on <a href="Rooms.htm">rooms</a>). Other restrictions include the fact that they can only be rotated by 90°, or mirrored or flipped, and they can
-    only be animated with frames that number a <strong>power of 2</strong> (ie: 2, 4, 8, 16, etc...).</p>
-  <p>Let&#39;s take a look at a simple example of a tile set - some square wall tiles for a top down game:</p>
+  <h1>타일 ​​세트 생성</h1>
+  <p><strong>타일 ​​세트</strong> 는 스프라이트로 만들어 지지만 GameMaker Studio 2가 처리하는 방식이 스프라이트와 오브젝트와 약간 다르기 때문에 별도의 자산 유형으로 분류됩니다. 따라서 타일 세트는 하나의 스프라이트로 함께 생성 된 타일 모음이며, 타일은 단순히 <strong><a class="tooltip" title="타일 ​​맵은 타일 세트에서 가져와 게임에서 레벨을 만드는 데 사용되는 타일 모음에 부여 된 이름입니다.">타일 ​​맵의</a></strong> 일부로 GameMaker Studio 2 룸에 추가되는 그래픽 리소스입니다. 그런 다음 이러한 타일 맵은 CPU / GPU 처리가 거의없이 화면에 그려 지므로 레벨의 정적 항목을 설계하는 데 이상적입니다.</p>
+  <p>타일을 너무 빨리 처리하려면 특정 제한이 있으며 가장 기본적인 <strong>것은 직사각형 또는 정사각형 일 수 있습니다</strong> (이 이외의 것을 원하면 일반 스프라이트를 만들고 <em>자산</em> 방 편집기에서 <em>레이어,</em> 그러나 우리의 뒷부분에서 그 논의 할 것이다 <a href="Rooms.htm">객실</a> ). 다른 제한 사항은 90 ° 만 회전하거나 미러링하거나 뒤집을 수 있으며 <strong>2</strong> 의 <strong>거듭 제곱</strong> (예 : 2, 4, 8, 16 등)의 프레임으로 만 애니메이션 할 수 있다는 사실입니다. .</p>
+  <p>하향식 게임을위한 몇 가지 사각형 벽 타일-타일 세트의 간단한 예를 살펴 보겠습니다.</p>
   <p><img alt="Example Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_ExampleTileset.png"/></p>
-  <p>To start with, we need to make this into a tile set <strong>sprite</strong>, which would be done in the <a href="../The_Asset_Editors/Sprites.htm">Sprite Editor</a>/<a href="../The_Asset_Editors/Image_Editor.htm">Image Editor</a> (or an external image
-    editor and then imported as a sprite). The final sprite should look something like this:</p>
-  <p><img alt="Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Sprite.png"/> <strong>Notice that the very first tile is blank in that image</strong>. The way that the tile map for the room is stored in GameMaker Studio 2 means
-    that first tile will always need to be blank as it&#39;s essentially the &quot;delete&quot; tile or the &quot;empty space&quot; tile (this &quot;blank&quot; tile will have an <strong>index </strong>value of 0 - tiles are indexed with a value that
-    starts at 0 and counts up from left to right, top to bottom). So, when creating your tile sets, the top left corner tile will always need to be empty in this way. Also note that while the image above shows a full wall tile set with 47 tiles, you may
-    not need so many as you can rotate and flip tiles when placing them in the room editor later.</p>
-  <p>With the sprite created, we can go ahead and define the tile set itself, which means you have to first create a new tile set resource by right clicking <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> the Tile Set asset
-    folder and selecting <em>Create</em>. This will open the <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor</a> where you can then add the sprite and set its properties:</p>
+  <p>우선 타일 세트 <strong>스프라이트</strong> 로 만들어야합니다. <a href="../The_Asset_Editors/Sprites.htm">스프라이트 에디터</a> / <a href="../The_Asset_Editors/Image_Editor.htm">이미지 에디터</a> (또는 외부 이미지 에디터에서 스프라이트로 임포트)에서 수행됩니다. 최종 스프라이트는 다음과 같아야합니다.</p>
+  <p><img alt="Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Sprite.png"/><strong>해당 이미지에서 첫 번째 타일은 비어</strong> 있습니다. 방의 타일 맵이 GameMaker Studio 2에 저장되는 방식은 첫 번째 타일은 기본적으로 &quot;삭제&quot;타일 또는 &quot;빈 공간&quot;타일이므로이 타일은 항상 비어 있어야합니다 (이 &quot;빈&quot;타일에는 <strong>색인이 있음)</strong> 값 0-타일은 0에서 시작하여 왼쪽에서 오른쪽으로, 위에서 아래로 계산되는 값으로 색인됩니다. 따라서 타일 세트를 만들 때 항상 왼쪽 상단 타일이 비어 있어야합니다. 또한 위의 이미지에는 47 개의 타일로 구성된 전체 벽 타일이 표시되지만 나중에 룸 편집기에 타일을 배치 할 때 타일을 회전하고 뒤집을 수있는 개수만큼 필요하지 않을 수도 있습니다.</p>
+  <p>With the sprite created, we can go ahead and define the tile set itself, which means you have to first create a new tile set resource by right clicking <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/>타일 ​​세트 자산 폴더에서 <em>Create를</em> 선택 <em>하십시오</em> . 그러면 Sprite를 추가하고 속성을 설정할 수있는 <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor</a> 가 열립니다.</p>
   <p><img alt="Tile set Editor" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Editor.png"/></p>
-  <p>We have set the tile set size to 64px, and we have left the rest of the options at their default values, since we have no need for offsets or anything like that (the offset values are useful for any tile set sprite that has spaces around each of the
-    tiles). You&#39;ll want to name the tile set asset using an appropriate prefix like &quot; <span class="inline">ts_</span>&quot; so you can easily identify it later, and note that the same restrictions apply as for sprites, ie: the name cannot start
-    with a number, and can only use the underscore &quot;_&quot; symbol and alpha-numeric characters.</p>
-  <p>You can now close the tile set editor, as you can use the tile set &quot;as is&quot; to create tile map layers in the room editor, however if you want to know more about the advanced functions of the Tile Set Editor, then see the following section of
-    the manual:</p>
+  <p>타일 ​​세트 크기를 64px로 설정했으며 오프셋이나 그와 비슷한 것을 필요로하지 않기 때문에 나머지 옵션을 기본값으로 남겨 두었습니다 (오프셋 값은 공백이있는 타일 세트 스프라이트에 유용합니다) 각 타일). &quot; <span class="inline">ts_</span> &quot;와 같은 적절한 접두사를 사용하여 타일 세트 자산의 이름을 지정하고 나중에 쉽게 식별 할 수 있으며 스프라이트와 동일한 제한 사항이 적용됩니다. 즉, 이름은 숫자로 시작할 수 없으며 숫자 만 가능합니다. 밑줄 &quot;_&quot;기호 및 영숫자 문자를 사용하십시오.</p>
+  <p>타일 ​​세트 &quot;있는 그대로&quot;를 사용하여 룸 편집기에서 타일 맵 레이어를 만들 수 있으므로 타일 세트 편집기를 닫을 수 있습니다. 그러나 타일 세트 편집기의 고급 기능에 대한 자세한 내용을 보려면 매뉴얼의 다음 섹션 :</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Tile_Sets.htm">Editors: The Tile Set Editor</a></li>
+    <li><a href="../The_Asset_Editors/Tile_Sets.htm">편집자 : 타일 세트 편집기</a></li>
   </ul>
-  <p>Now to move on to talk about adding <strong>sound effects</strong> to your project...</p>
+  <p>이제 프로젝트에 <strong>사운드 효과</strong> 를 추가하는 방법에 대해 이야기하겠습니다.</p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Quick_Start_Guide\Creating_Tile_Sets.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Creating_Sound_Effects.htm">Creating Sound Effects</a></div>
+        <div style="float:left">뒤로: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="Creating_Sound_Effects.htm">음향 효과 만들기</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Creating Tilesets
@@ -127,4 +116,4 @@ Quick Start: Creating Tilesets
 qs_tilesets
 -->
 
-</body></html>
+</body></html> 

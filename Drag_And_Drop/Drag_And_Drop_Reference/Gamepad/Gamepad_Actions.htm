@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Gamepad Actions">
-        <span>Gamepad Actions</span>
+        <span>게임 패드 동작</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,137 +80,134 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>GamepadAction Library</h1>
-  <p><img alt="Gamepad Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/Lib_GamePad.png"/>GameMaker Studio 2 has a number of dedicated actions that can be used to detect both analogue and digital
-    controls from multiple connected game pads. These actions require you to specify a gamepad <i>index</i> value, which is a number (counting from 0) that represents the gamepad being selected. Note that when a gamepad is plugged in to your device (or
-    it is removed) then an asynchronous <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">System Event</a> is triggered (however to deal with this you may need to use code).</p>
-  <p>The gamepad &quot;slots&quot; are indexed from 0 with slots 0 - 3 inclusive being <i>only for <strong>Xinput</strong> gamepads</i>, ie: Xbox360 controllers and compatibles. However you can also check slots 4 - 11 inclusive for <strong>DirectInput</strong>    gamepads, which means you can detect many other models of controller when connected through these slots.</p>
-  <p>When working with the gamepad actions, input can come from <b>axis</b>, <b>buttons</b> and/or <b>Triggers</b>, which GameMaker Studio 2 will assign to some or all of the following built-in constants (note that &quot;hats&quot; are generally only detected
-    on non-standard controllers):</p>
+  <h1>GamepadAction 라이브러리</h1>
+  <p><img alt="Gamepad Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/Lib_GamePad.png"/>GameMaker Studio 2에는 연결된 여러 게임 패드에서 아날로그 및 디지털 컨트롤을 모두 감지하는 데 사용할 수있는 여러 가지 전용 작업이 있습니다. 이러한 액션을 위해서는 게임 패드 <i>인덱스</i> 값을 지정해야합니다.이 값은 선택되는 게임 패드를 나타내는 숫자 (0부터 계산)입니다. 게임 패드가 장치에 연결되어 있거나 제거 된 경우 비동기 <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">시스템 이벤트</a> 가 트리거됩니다 (그러나이를 처리하려면 코드를 사용해야 할 수도 있음).</p>
+  <p>게임 패드 &quot;슬롯&quot;은 <i><strong>Xinput</strong> 게임 패드 전용 (</i> 예 : Xbox360 컨트롤러 및 호환) 슬롯 <i><strong>0-3을</strong></i> 포함하여 0부터 색인됩니다. 그러나 <strong>DirectInput</strong> 게임 패드 용 슬롯 4-11을 확인할 수도 있습니다. 즉,이 슬롯을 통해 연결된 다른 많은 컨트롤러 모델을 감지 할 수 있습니다.</p>
+  <p>게임 패드 액션으로 작업 할 때, GameMaker Studio 2가 다음 내장 상수 중 일부 또는 전부에 할당 할 <b>axis</b> , <b>버튼</b> 및 / 또는 <b>트리거</b> 에서 입력을 가져올 수 있습니다 (일반적으로 &quot;모자&quot;는 비표준에서만 감지됩니다) 컨트롤러) :</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>gp_face1</td>
-        <td>Top button 1 (this maps to the <i>&quot;A&quot;</i> on an Xbox 360 controller and the <i>cross</i> on a PS controller)</td>
+        <td>상단 버튼 1 (Xbox 360 컨트롤러의 <i>&quot;A&quot;</i> 와 PS 컨트롤러의 <i>크로스</i> 에 매핑 됨)</td>
       </tr>
       <tr>
         <td>gp_face2</td>
-        <td>Top button 2 (this maps to the <i>&quot;B&quot;</i> on an Xbox 360 controller and the <i>circle</i> on a PS controller)</td>
+        <td>상단 단추 2 (Xbox 360 컨트롤러의 <i>&quot;B&quot;</i> 와 PS 컨트롤러의 <i>원</i> 에 매핑 됨)</td>
       </tr>
       <tr>
         <td>gp_face3</td>
-        <td>Top button 3 (this maps to the <i>&quot;X&quot;</i> on an Xbox 360 controller and the <i>square</i> on a PS controller)</td>
+        <td>상단 단추 3 (Xbox 360 컨트롤러의 <i>&quot;X&quot;</i> 와 PS 컨트롤러의 <i>사각형</i> 에 매핑 됨)</td>
       </tr>
       <tr>
         <td>gp_face4</td>
-        <td>Top button 4 (this maps to the <i>&quot;Y&quot;</i> on an Xbox 360 controller and the <i>triangle</i> on a PS controller)</td>
+        <td>상단 단추 4 (Xbox 360 컨트롤러의 <i>&quot;Y&quot;</i> 와 PS 컨트롤러의 <i>삼각형</i> 에 매핑 됨)</td>
       </tr>
       <tr>
         <td>gp_shoulderl</td>
-        <td>Left shoulder button</td>
+        <td>왼쪽 어깨 버튼</td>
       </tr>
       <tr>
         <td>gp_shoulderlb</td>
-        <td>Left shoulder trigger</td>
+        <td>왼쪽 어깨 방아쇠</td>
       </tr>
       <tr>
         <td>gp_shoulderr</td>
-        <td>Right shoulder button</td>
+        <td>오른쪽 어깨 버튼</td>
       </tr>
       <tr>
         <td>gp_shoulderrb</td>
-        <td>Right shoulder trigger</td>
+        <td>오른쪽 어깨 방아쇠</td>
       </tr>
       <tr>
         <td>gp_select</td>
-        <td>The select button (this is the <i>PS</i> button on a DS4 controller)</td>
+        <td>선택 버튼 (DS4 컨트롤러의 <i>PS</i> 버튼)</td>
       </tr>
       <tr>
         <td>gp_start</td>
-        <td>The start button (this is the &quot;options&quot; button on a PS4 controller)</td>
+        <td>시작 버튼 (PS4 컨트롤러의 &quot;옵션&quot;버튼)</td>
       </tr>
       <tr>
         <td>gp_stickl</td>
-        <td>The left stick pressed (as a button)</td>
+        <td>왼쪽 스틱을 눌렀습니다 (버튼으로)</td>
       </tr>
       <tr>
         <td>gp_stickr</td>
-        <td>The right stick pressed (as a button)</td>
+        <td>오른쪽 스틱을 눌렀습니다 (버튼으로)</td>
       </tr>
       <tr>
         <td>gp_padu</td>
-        <td>D-pad up</td>
+        <td>D 패드 업</td>
       </tr>
       <tr>
         <td>gp_padd</td>
-        <td>D-pad down</td>
+        <td>D 패드 다운</td>
       </tr>
       <tr>
         <td>gp_padl</td>
-        <td>D-pad left</td>
+        <td>왼쪽 D 패드</td>
       </tr>
       <tr>
         <td>gp_padr</td>
-        <td>D-pad right</td>
+        <td>오른쪽 D 패드</td>
       </tr>
       <tr>
         <td>gp_axislh</td>
-        <td>Left stick horizontal axis (analogue)</td>
+        <td>왼쪽 스틱 수평 축 (아날로그)</td>
       </tr>
       <tr>
         <td>gp_axislv</td>
-        <td>Left stick vertical axis (analogue)</td>
+        <td>왼쪽 스틱 세로 축 (아날로그)</td>
       </tr>
       <tr>
         <td>gp_axisrh</td>
-        <td>Right stick horizontal axis (analogue)</td>
+        <td>오른쪽 스틱 가로 축 (아날로그)</td>
       </tr>
       <tr>
         <td>gp_axisrv</td>
-        <td>Right stick vertical axis (analogue)</td>
+        <td>오른쪽 스틱 세로 축 (아날로그)</td>
       </tr>
     </tbody>
   </table>
-  <p><br/> To better understand exactly what part of the controller each constant represents, you can refer to the following image of a standard Xinput gamepad:</p>
-  <p><img alt="XInput Gamepad Configuration" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/GamePad.png"/>The available gamepad actions are all listed below:</p>
+  <p>각 상수가 나타내는 컨트롤러 부분을 정확히 이해하려면 표준 Xinput 게임 패드의 다음 이미지를 참조하십시오.</p>
+  <p><img alt="XInput Gamepad Configuration" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/GamePad.png"/>사용 가능한 게임 패드 동작은 다음과 같습니다.</p>
   <table class="dnd" style="text-align: left;margin-left:">
     <tbody>
       <tr style="height: 1px;">
-        <td class="icons" style="margin-left: 16px;"><img alt="Gamepad Get Axis Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Get_Axis.png" width="32"/></td>
-        <td class="dnd" style=""><a href="Get_Gamepad_Axis.htm">Gamepad Get Axis</a></td>
+        <td class="icons" style="margin-left: 16px;"><img alt="게임 패드 Get Axis 아이콘" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Get_Axis.png" width="32"/></td>
+        <td class="dnd" style=""><a href="Get_Gamepad_Axis.htm">게임 패드 Get Axis</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Gamepad Get Trigger Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Get_Trigger.png"/></td>
-        <td class="dnd" style=""><a href="Get_Gamepad_Trigger.htm">Gamepad Get Trigger</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="게임 패드 Get Trigger 아이콘" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Get_Trigger.png"/></td>
+        <td class="dnd" style=""><a href="Get_Gamepad_Trigger.htm">게임 패드 Get Trigger</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Gamepad Get Count Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Get_Count.png"/></td>
-        <td class="dnd" style=""><a href="Get_Gamepad_Count.htm">Gamepad Get Count</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="게임 패드 Get Count 아이콘" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Get_Count.png"/></td>
+        <td class="dnd" style=""><a href="Get_Gamepad_Count.htm">게임 패드 가져 오기</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Gamepad Get Connected Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Get_Connected.png" style="cursor: nesw-resize;" width="32"/></td>
-        <td class="dnd" style=""><a href="Get_Gamepad_Connected.htm">Gamepad Get Connected</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="게임 패드 연결 아이콘" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Get_Connected.png" style="cursor: nesw-resize;" width="32"/></td>
+        <td class="dnd" style=""><a href="Get_Gamepad_Connected.htm">게임 패드 연결하기</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Gamepad Set Axis Deadzone Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Set_Axis_Deadzone.png"/></td>
-        <td class="dnd" style=""><a href="Set_Gamepad_Axis_Deadzone.htm">Gamepad Set Axis Deadzone</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="게임 패드 설정 축 Deadzone 아이콘" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Set_Axis_Deadzone.png"/></td>
+        <td class="dnd" style=""><a href="Set_Gamepad_Axis_Deadzone.htm">게임 패드 세트 축 데드 존</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If Gamepad Button Pressed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Pressed.png"/></td>
-        <td class="dnd" style=""><a href="If_Gamepad_Button_Pressed.htm">If Gamepad Button Pressed</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="게임 패드 버튼을 누르면 아이콘" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Pressed.png"/></td>
+        <td class="dnd" style=""><a href="If_Gamepad_Button_Pressed.htm">게임 패드 버튼을 누른 경우</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If Gamepad Button Down Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Down.png"/></td>
-        <td class="dnd" style=""><a href="If_Gamepad_Button_Down.htm">If Gamepad Button Down</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="게임 패드 버튼 다운 아이콘" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Down.png"/></td>
+        <td class="dnd" style=""><a href="If_Gamepad_Button_Down.htm">게임 패드 버튼이 아래로</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If Gamepad Button Released Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Released.png" width="32"/></td>
-        <td class="dnd" style=""><a href="If_Gamepad_Button_Released.htm">If Gamepad Button Released</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="게임 패드 버튼에서 아이콘이 해제 된 경우" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Released.png" width="32"/></td>
+        <td class="dnd" style=""><a href="If_Gamepad_Button_Released.htm">게임 패드 버튼을 놓은 경우</a></td>
       </tr>
     </tbody>
   </table>
@@ -225,36 +222,31 @@
   <p> </p>
   <p> </p>
   <p> </p>
-  <p>The following list shows current compatibility across the platforms (note that this will change with future updates):</p>
+  <p>다음 목록은 플랫폼 간의 현재 호환성을 보여줍니다 (향후 업데이트로 변경 될 수 있음).</p>
   <ul class="colour">
-    <li><strong>Windows</strong> is fully supported with up to a maximum of 11 connected devices permitted at once. Note that on Windows, the first 4 gamepad slots (0 - 3) are handled using the XInput dll, meaning that only XBox controllers may be 100% compatible
-      and that for other controller types you should check the rest of the gamepad slots (4 - 11).</li>
-    <li><strong>macOS </strong>is supported with up to a maximum of 4 connected devices permitted at once, and these devices can ONLY be of the type Playstation3 or Xbox 360. Please note that the &quot;<b>Build for Mac AppStore</b>&quot; option in Mac Game
-      Options needs to be OFF for pad support to work.</li>
-    <li><strong>Ubuntu </strong>does also support GamePad input, but you may need to install additional libraries from the Ubuntu repository. You can do this easily by opening a command line terminal and typing the following, which will install GUI support
-      for the joystick as well as the joystick itself:</li>
+    <li><strong>Windows</strong> 는 한 번에 최대 11 개의 연결된 장치를 허용하여 완벽하게 지원됩니다. Windows에서 처음 4 개의 게임 패드 슬롯 (0-3)은 XInput dll을 사용하여 처리되므로 XBox 컨트롤러 만 100 % 호환 될 수 있으며 다른 컨트롤러 유형의 경우 나머지 게임 패드 슬롯 (4- 11).</li>
+    <li><strong>macOS</strong> 는 한 번에 최대 4 개의 연결된 장치를 지원하며,이 장치는 Playstation3 또는 Xbox 360 유형 만 가능합니다. Mac 게임 옵션에서 &quot; <b>Mac AppStore 용 빌드</b> &quot;옵션은 꺼져 있어야합니다. 패드 지원 작동합니다.</li>
+    <li><strong>Ubuntu</strong> 는 GamePad 입력도 지원하지만 Ubuntu 리포지토리에서 추가 라이브러리를 설치해야 할 수도 있습니다. 명령 행 터미널을 열고 다음을 입력하면 조이스틱뿐만 아니라 조이스틱에 대한 GUI 지원 기능이 설치됩니다.</li>
   </ul>
   <p class="code">sudo apt-get install jstest-gtk<br/> sudo apt-get install joystick.</p>
   <ul class="colour">
-    <li><strong>HTML5 </strong>games support gamepads on most major browsers, except <i>Safari</i>.</li>
-    <li>Gamepad support also extends to <strong>iOS </strong>with the <b>iCade</b> cabinet. The left axis maps to the stick controller (although the input is digital, not analogue), the four &quot;face&quot; buttons map to the cabinet front buttons, and the
-      four shoulder buttons map to those at the back of the cabinet.</li>
-    <li><strong>Android </strong>export supports NYKO controllers and generic Bluetooth controllers (including the OUYA), but only when they are enabled, meaning that you will have to tick the iCade/Bluetooth option in the <a href="../../../Settings/Game_Options/Android.htm">General</a>      section of the <b>Android Game Options</b>. They require API level 12 for them to work fully and it should be noted that GameMaker Studio 2 will register as connected any Bluetooth devices that your device is paired with, whether or not it&#39;s
-      actually connected. Therefore this should be taken into account when assigning and checking &quot;slots&quot;.</li>
-    <li>On <strong>PS4</strong>, if you want to use the touch pad tracking you need to use the functions for the <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/Device_Input.htm"><tt>device_mouse_*</tt></a><span> </span>buttons
-      (there are no DnD™ actions for this).</li>
+    <li><strong>HTML5</strong> 게임은 <i>Safari를</i> 제외한 대부분의 주요 브라우저에서 게임 패드를 지원 <i>합니다</i> .</li>
+    <li>게임 패드 지원은 <b>iCade</b> 캐비닛을 통해 <strong>iOS</strong> 로 확장됩니다. 왼쪽 축은 스틱 컨트롤러에 매핑됩니다 (입력은 아날로그가 아니라 디지털 임에도 불구하고). 4 개의 &quot;얼굴&quot;버튼은 캐비닛 전면 버튼에, 4 개의 어깨 버튼은 캐비닛 후면의 버튼에 매핑됩니다.</li>
+    <li><strong>Android</strong> 내보내기는 NYKO 컨트롤러 및 일반 Bluetooth 컨트롤러 (OUYA 포함)를 지원하지만 활성화 된 경우에만 가능합니다. 즉, <b>Android 게임 옵션</b> 의 <a href="../../../Settings/Game_Options/Android.htm">일반</a> 섹션에서 iCade / Bluetooth 옵션을 <b>선택해야</b> 합니다. 완전히 작동하려면 API 레벨 12가 필요하며 GameMaker Studio 2는 실제로 연결되어 있는지 여부에 관계없이 장치가 연결된 Bluetooth 장치를 연결된 장치로 등록합니다. 따라서 &quot;슬롯&quot;을 할당하고 확인할 때이 점을 고려해야합니다.</li>
+    <li><strong>PS4</strong> 에서 터치 패드 추적을 사용하려면 <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/Device_Input.htm"><tt>device_mouse_ *</tt></a> 의 기능을 사용해야합니다. 버튼 (이 작업에는 DnD ™ 작업이 없습니다).</li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Drag_And_Drop\Drag_And_Drop_Reference\Gamepad\Gamepad_Actions.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../DnD_Reference.htm">Index</a></div>
-        <div style="float:right">Next: <a href="../Movement/Movement_Actions.htm">Movement Actions</a></div>
+        <div style="float:left">뒤로: <a href="../DnD_Reference.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="../Movement/Movement_Actions.htm">운동 동작</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Drag And Drop Gamepad Actions
@@ -264,4 +256,4 @@ Gamepad Actions
 dnd_gamepads
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Shaders">
-        <span>Shaders</span>
+        <span>셰이더</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,61 +80,53 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Shaders</h1>
-  <p>Shaders are an incredibly powerful tool for manipulating what and how things are <a class="tooltip" title="When something is rendered in GameMaker Studio 2, it generally means that it has simply been &#39;drawn to the display buffer&#39; or &#39;drawn to a surface&#39;.  Rendering can also refer to the process of turning some kind of vector source (like a font) into a bitmap image,.">rendered</a> to the screen by the graphics card. Since these tiny programs are actually run on the graphics card
-    itself, this means that they are extremely fast to process, freeing up valuable CPU cycles for more game logic.</p>
-  <p>To create a shader you will need to have written both a <b>Vertex Shader</b> and a <b>Fragment Shader</b> (also know as a <b>Pixel Shader</b>) using the <a href="../../../../The_Asset_Editors/Shaders.htm">Shader Editor</a>, and even if (for example)
-    you only wish to change the vertex positions for an instance being drawn, or if you only want to change the colour values for the pixels, you will still need <b>both</b> programs for a complete shader to work.</p>
-  <p class="note"><b>NOTE</b>: Shaders do <b>not</b> permit you to change the value of any variables that you pass into them, and so these will be called <b>shader constants</b> in all the documentation that refers to them.</p>
-  <p>For a complete overview of the available GLSL ES functions and variables that you can use to program the shaders themselves, please refer to the <a href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/es_cm_spec_2.0.pdf" target="_blank">OpenGL ES Shading Language (GLSL ES) Reference Pages</a>.
-    The following link is also useful as it contains some quick reference cards for the OpenGL ES Api (note that only the last two cards shown are applicable to GameMaker Studio 2): <a href="https://www.khronos.org/opengles/sdk/docs/reference_cards/OpenGL-ES-2_0-Reference-card.pdf">OpenGL ES Reference Cards</a>.</p>
-  <p>Using a shader in your projects is very simple, and only requires a couple of lines of code to get the most basic of use from it:</p>
+  <h1>셰이더</h1>
+  <p>셰이더는 그래픽 카드에 의해 화면에 <a class="tooltip" title="GameMaker Studio 2에서 무언가가 렌더링 될 때, 이는 일반적으로 단순히 &#39;디스플레이 버퍼에 그려 지거나&#39;표면에 그려 졌음을 의미합니다. 렌더링은 어떤 종류의 벡터 소스 (글꼴과 같은)를 비트 맵 이미지로 변환하는 프로세스를 가리킬 수도 있습니다.">렌더링</a> 되는 내용과 방법을 조작 할 수있는 매우 강력한 도구입니다. 이 작은 프로그램은 실제로 그래픽 카드 자체에서 실행되기 때문에 처리 속도가 매우 빠르기 때문에 더 많은 게임 로직을 위해 귀중한 CPU 사이클을 확보 할 수 있습니다.</p>
+  <p>셰이더를 만들려면 <a href="../../../../The_Asset_Editors/Shaders.htm">셰이더 편집기를</a> 사용하여 <b>정점 셰이더</b> 와 <b>조각 셰이더</b> ( <b>픽셀 셰이더</b> 라고도 함)를 모두 작성해야하며, 예를 들어 인스턴스의 정점 위치 만 변경하려는 경우 그려 지거나 픽셀의 색상 값만 변경하려는 경우 완전한 쉐이더가 작동하려면 <b>두</b> 프로그램이 <b>모두</b> 필요 <b>합니다</b> .</p>
+  <p class="note"><b>참고</b> : 셰이더를 사용하면 전달 된 변수의 값을 변경할 수 <b>없으므로</b> 이를 참조하는 모든 설명서에서 <b>셰이더 상수</b> 라고합니다.</p>
+  <p>셰이더 자체를 프로그래밍하는 데 사용할 수있는 사용 가능한 GLSL ES 함수 및 변수에 대한 전체 개요는 <a href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/es_cm_spec_2.0.pdf" target="_blank">OpenGL ES Shading Language (GLSL ES) 참조 페이지를 참조하십시오</a> . 다음 링크는 OpenGL ES Api에 대한 빠른 참조 카드가 포함되어 있으므로 유용합니다 (표시된 마지막 두 카드 만 GameMaker Studio 2에 적용됨) : <a href="https://www.khronos.org/opengles/sdk/docs/reference_cards/OpenGL-ES-2_0-Reference-card.pdf">OpenGL ES 참조 카드</a> .</p>
+  <p>프로젝트에서 셰이더를 사용하는 것은 매우 간단하며 가장 기본적인 사용법을 얻기 위해 몇 줄의 코드 만 필요합니다.</p>
   <p class="code">shader_set(myShader);<br/> draw_self();
     <br/> shader_reset();
   </p>
-  <p>As you can see, they are used in a similar manner to blend modes and surfaces, where you first select (set) the shader, draw what you want using it, then reset the draw target again afterwards. If you wish to render the full screen through a shader,
-    and not just a single sprite or background, you will need to set up a surface to catch the current view, and then pass that through to the shader (see <a href="../../Drawing/Surfaces/Surfaces.htm">Surfaces</a> for more information).</p>
-  <p class="note"><b>NOTE</b>: Shaders, like anything related to drawing, can <b>only be used in the draw event</b>. It is also worth noting that if you are trying to use a colour value in a shader and the object has no texture, the results will turn out black.</p>
-  <p>If the shader you are using has input values, these are set using the <i>uniform</i> functions. You would first get the uniform <i>handle</i> (which is essentially an ID value for the uniform to be set) using the function <a href="shader_get_uniform.htm"><tt>shader_get_uniform()</tt></a> in
-    the <b>Create Event</b> of the instance using the shader, and then store these handles in variables, something like this:</p>
+  <p>보시다시피, 비슷한 방식으로 모드와 서피스를 블렌딩하여 셰이더를 먼저 선택 (설정)하고 사용하여 원하는 것을 그린 다음 그 후에 그리기 대상을 다시 재설정합니다. 단일 스프라이트 또는 배경이 아닌 셰이더를 통해 전체 화면을 렌더링하려면 현재 뷰를 잡도록 표면을 설정 한 다음 해당 셰이더로 전달해야합니다 (자세한 내용은 <a href="../../Drawing/Surfaces/Surfaces.htm">표면</a> 참조). .</p>
+  <p class="note"><b>참고</b> : 그리기와 관련된 셰이더 <b>는 그리기 이벤트에서만 사용할</b> 수 있습니다. 또한 셰이더에 색상 값을 사용하려고하지만 개체에 텍스처가 없으면 결과가 검은 색으로 표시됩니다.</p>
+  <p>사용중인 셰이더에 입력 값이있는 경우 <i>균일 한</i> 기능을 사용하여 설정됩니다. 먼저 셰이더를 사용하여 인스턴스의 <b>이벤트 생성</b> 에서 <a href="shader_get_uniform.htm"><tt>shader_get_uniform ()</tt></a> 함수를 사용하여 유니폼 <i>핸들</i> (기본적으로 유니폼을 설정하기위한 ID 값임)을 얻은 다음 이러한 핸들을 변수에 다음과 같이 저장합니다.</p>
   <p class="code">colour_to_find = shader_get_uniform(sShaderDemo5, &quot;f_Colour1&quot;);<br/> colour_to_set = shader_get_uniform(sShaderDemo5, &quot;f_Colour2&quot;);</p>
-  <p>Once you have the uniform handles, they can then be set in the shader code for the <b>Draw Event</b> like this:</p>
+  <p>균일 한 핸들이 있으면 <b>Draw Event</b> 의 셰이더 코드에서 다음과 같이 설정할 수 있습니다.</p>
   <p class="code">shader_set(sShaderDemo5);<br/> shader_set_uniform_f(colour_to_find, 1,1,1 );<br/> shader_set_uniform_f(colour_to_set, 1,0,0 );<br/> draw_sprite(sprite_index,image_index,x+24, y);<br/> shader_reset();
   </p>
-  <p>One final thing to note is that although shaders are accepted across all platforms, they are still device specific and if the hardware or software of the device cannot use shaders then you will get an error. Therefore you are recommended to check that
-    the shader has been compiled before setting uniforms or using the shader itself, like this:</p>
+  <p>마지막으로 유의해야 할 점은 모든 플랫폼에서 쉐이더를 사용할 수 있지만 여전히 장치마다 다르며 장치의 하드웨어 또는 소프트웨어에서 쉐이더를 사용할 수없는 경우 오류가 발생한다는 것입니다. 따라서 유니폼을 설정하거나 셰이더 자체를 사용하기 전에 셰이더가 컴파일되었는지 확인하는 것이 좋습니다.</p>
   <p class="code">if (shader_is_compiled(myShader))<br/>     {
     <br/>     shader_set(myShader);
     <br/>     draw_self();
     <br/>     shader_reset();
     <br/>     }
     <br/> else show_debug_message(&quot;Shader failed&quot;);</p>
-  <p>As an extra check you can also call the function <a href="shaders_are_supported.htm"><tt>shaders_are_supported()</tt></a> to see if the hardware even supports shaders. In general you&#39;d do these checks on game start and store the results as a
-    <a href="../../../GML_Overview/Variables/Global_Variables.htm">global variable</a> to then check later.</p>
-  <p>It is important to note that GameMaker Studio 2 also supports some conditional compile <b>Macros</b> which can be used within GLSL ES shaders so they can perform alternative code on specific supported platforms. The macros and the platforms they
-    will be generated on are shown in the table below:</p>
+  <p>추가 검사로 <a href="shaders_are_supported.htm"><tt>shaders_are_supported ()</tt></a> 함수를 호출하여 하드웨어가 셰이더도 지원하는지 확인할 수 있습니다. 일반적으로 게임 시작시 이러한 확인을 수행하고 결과를 <a href="../../../GML_Overview/Variables/Global_Variables.htm">전역 변수</a> 로 저장 한 다음 나중에 확인합니다.</p>
+  <p>GameMaker Studio 2는 GLSL ES 셰이더 내에서 사용할 수있는 일부 조건부 컴파일 <b>매크로</b> 도 지원하므로 특정 지원 플랫폼에서 대체 코드를 수행 할 수 있습니다. 매크로와 이들이 생성 될 플랫폼은 아래 표에 나와 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Shader Macro</th>
-        <th>Value</th>
-        <th>Target Platform</th>
+        <th>셰이더 매크로</th>
+        <th>값</th>
+        <th>대상 플랫폼</th>
       </tr>
       <tr>
         <td>_YY_GLSLES_</td>
         <td>1</td>
-        <td>All target platforms</td>
+        <td>모든 대상 플랫폼</td>
       </tr>
       <tr>
         <td>_YY_GLSL_</td>
         <td>2</td>
-        <td>Mac and Ubuntu (Linux)</td>
+        <td>맥과 우분투 (Linux)</td>
       </tr>
       <tr>
         <td>_YY_HLSL11_</td>
-        <td>3</td>
-        <td>Windows, UWP, XboxOne</td>
+        <td>삼</td>
+        <td>윈도우, UWP, XboxOne</td>
       </tr>
       <tr>
         <td>_YY_PSSL_</td>
@@ -144,40 +136,40 @@
     </tbody>
   </table>
   <p> </p>
-  <p>When you compile your GameMaker Studio 2 project on any one of the listed platforms using a GLSL ES format shader, <i>one</i> of the above macros will be generated which can then be used checked in the shader code like this:</p>
+  <p>GLSL ES 형식 셰이더를 사용하여 나열된 플랫폼 중 하나에서 GameMaker Studio 2 프로젝트를 컴파일하면 위의 매크로 <i>중 하나</i> 가 생성되어 다음과 같이 셰이더 코드에서 확인할 수 있습니다.</p>
   <p class="code">#ifdef _YY_HLSL11_<br/> // HLSL shader code here<br/> #else
     <br/> // GLSL shader code here<br/> #endif
   </p>
-  <p>If you are new to shaders or want a more complete guide to creating and use them using GameMaker Studio 2, then please see the following page of the manual:</p>
+  <p>셰이더를 처음 사용하거나 GameMaker Studio 2를 사용하여 셰이더를 만들고 사용하는 데 대한보다 완벽한 가이드를 원하면 다음 매뉴얼 페이지를 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="../../../../Additional_Information/Guide_To_Using_Shaders.htm">Guide To Using Shaders</a></li>
+    <li><a href="../../../../Additional_Information/Guide_To_Using_Shaders.htm">셰이더 사용 안내서</a></li>
   </ul>
   <p> </p>
-  <p>The following functions are available for drawing and setting shaders:</p>
+  <p>쉐이더 그리기 및 설정에 사용할 수있는 기능은 다음과 같습니다.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="shader_get_name.htm">shader_get_name</a></li>
+    <li><a href="shader_get_name.htm">셰이더 _get_name</a></li>
     <li><a href="shader_get_uniform.htm">shader_get_uniform</a></li>
     <li><a href="shader_get_sampler_index.htm">shader_get_sampler_index</a></li>
-    <li><a href="shader_set.htm">shader_set</a></li>
+    <li><a href="shader_set.htm">셰이더 _ 세트</a></li>
     <li><a href="shader_set_uniform_f.htm">shader_set_uniform_f</a></li>
     <li><a href="shader_set_uniform_f_array.htm">shader_set_uniform_f_array</a></li>
     <li><a href="shader_set_uniform_i.htm">shader_set_uniform_i</a></li>
     <li><a href="shader_set_uniform_i_array.htm">shader_set_uniform_i_array</a></li>
     <li><a href="shader_set_uniform_matrix.htm">shader_set_uniform_matrix</a></li>
     <li><a href="shader_set_uniform_matrix_array.htm">shader_set_uniform_matrix_array</a></li>
-    <li><a href="shader_reset.htm">shader_reset</a></li>
+    <li><a href="shader_reset.htm">셰이더 _ 재설정</a></li>
     <li><a href="shader_is_compiled.htm">shader_is_compiled</a></li>
     <li><a href="shaders_are_supported.htm">shaders_are_supported</a></li>
-    <li><a href="shader_current.htm">shader_current</a></li>
+    <li><a href="shader_current.htm">셰이더 _ 현재</a></li>
   </ul>
   <p> </p>
-  <p>We also have a special function which defines a global state for all shaders:</p>
+  <p>또한 모든 셰이더의 전역 상태를 정의하는 특수 함수가 있습니다.</p>
   <ul>
     <li><a href="shader_enable_corner_id.htm">shader_enable_corner_id</a></li>
   </ul>
   <p> </p>
-  <p>When working with texture samplers in shaders you will need information about the texture being used, in which case you can use the following functions:</p>
+  <p>셰이더에서 텍스쳐 샘플러로 작업 할 때 사용중인 텍스쳐에 대한 정보가 필요합니다.이 경우 다음 함수를 사용할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="../Sprites/Sprite_Information/sprite_get_texture.htm">sprite_get_texture</a></li>
@@ -193,28 +185,27 @@
     <li><a href="../../Drawing/GPU_Control/gpu_set_texrepeat.htm">gpu_set_texrepeat</a></li>
   </ul>
   <p> </p>
-  <p>While this manual will <b>not</b> cover any of the Open GL shader functions and variables, it does contain a list of the ones that are unique to GameMaker Studio 2. These constants are not part of the Open GL specification for shaders and are
-    supplied to simplify the integration of shaders within your projects.</p>
+  <p>이 매뉴얼은되지만 <b>되지</b> 오픈 GL 쉐이더 함수와 변수 중 하나를 포함, 그것은 이러한 상수는 쉐이더 오픈 GL 사양의 일부가 아니며를 단순화하기 위해 제공됩니다 GameMaker 스튜디오 2로 고유 한 것들의 목록을 포함하지 프로젝트 내에서 셰이더 통합</p>
   <ul class="colour">
-    <li><a href="Shader_Constants.htm">Shader Constants</a></li>
+    <li><a href="Shader_Constants.htm">셰이더 상수</a></li>
   </ul>
   <p> </p>
-  <p>Finally, GameMaker Studio 2 permits you to define your own <b>Vertex Formats</b> from which you can create your own custom primitives. This can greatly speed up shader operations or can be used to extend their capabilities and create surprising
-    effects. You can find information on this in the following sections:</p>
+  <p>마지막으로 GameMaker Studio 2를 사용하면 고유 한 사용자 정의 기본 요소를 만들 수있는 고유 한 <b>정점 형식</b> 을 정의 할 수 있습니다. 이는 셰이더 작업 속도를 크게 높이거나 기능을 확장하고 놀라운 효과를 만드는 데 사용될 수 있습니다. 다음 섹션에서 이에 대한 정보를 찾을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">Primitives Vnd Vertex Formats</a></li>
+    <li><a href="../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">프리미티브 Vnd 정점 형식</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Asset_Management\Shaders\Shaders.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asset_Management.htm">Asset Management</a></div>
-        <div style="float:right">Next: <a href="../Sequences/Sequences.htm">Sequences</a></div>
+        <div style="float:left">뒤로: <a href="../Asset_Management.htm">자산 관리</a></div>
+        <div style="float:right">다음: <a href="../Sequences/Sequences.htm">시퀀스</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Shaders
@@ -227,4 +218,4 @@ _YY_PSSL_
 shader_functions
 -->
 
-</body></html>
+</body></html> 

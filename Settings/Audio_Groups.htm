@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Audio Groups">
-        <span>Audio Groups</span>
+        <span>오디오 그룹</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,39 +80,27 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Audio Groups</h1>
-  <p><img alt="Audio Group Editor" class="center" src="../assets/Images/Settings/Audio_Groups.png"/>The <strong>Audio Group Manager</strong> is available from the <a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">Tools Menu</a> in the IDE. Here you can
-    <em>add</em>, <em>delete </em>and <em>rename </em><strong>Audio Groups</strong>, as well as set their platform export options. GameMaker Studio 2 permits you to assign each of the audio resources (sound effects and music) to different audio groups
-    to try and optimise the number of sounds that are being played at any one time, as well as give you further control over what platforms they are exported to.</p>
-  <p>To define an audio group you need to click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the <strong>Add New</strong> button which will create new group that you can then name. To change group,
-    click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the drop-down menu and select the one you wish to edit.</p>
-  <p class="note"><strong>NOTE</strong>: If you select streamed audio for a sound in the <a href="../The_Asset_Editors/Sounds.htm">Sound Editor</a>, you will not be able to assign the sound to an Audio Group as streamed sounds are not packaged in the same way as other
-    sounds and you have full control over when they are loaded, played and unloaded using code.</p>
+  <h1>오디오 그룹</h1>
+  <p><img alt="Audio Group Editor" class="center" src="../assets/Images/Settings/Audio_Groups.png"/><strong>오디오 그룹 관리자</strong> 는 IDE의 <a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">도구 메뉴</a> 에서 사용할 수 있습니다. 여기에서 <strong>오디오 그룹을</strong> <em>추가</em> , <em>삭제</em> 및 <em>이름 변경</em> 하고 플랫폼 내보내기 옵션을 설정할 수 있습니다. GameMaker Studio 2를 사용하면 각 오디오 리소스 (사운드 효과 및 음악)를 서로 다른 오디오 그룹에 할당하여 한 번에 재생되는 사운드 수를 최적화하고, 어떤 플랫폼을보다 효과적으로 제어 할 수 있습니다 에 내보내집니다.</p>
+  <p>To define an audio group you need to click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/><strong>새로 추가</strong> 버튼을 클릭하면 이름을 지정할 수있는 새 그룹이 생성됩니다. 그룹을 변경하려면 클릭 드롭 다운 메뉴에서 편집 할 메뉴를 선택하십시오.</p>
+  <p class="note"><strong>참고</strong> : <a href="../The_Asset_Editors/Sounds.htm">사운드 편집기</a> 에서 사운드에 대해 스트리밍 오디오를 선택하면 스트리밍 사운드가 다른 사운드와 같은 방식으로 패키지되지 않고 사운드가 완전히 제어 될 수 있으므로 오디오 그룹에 사운드를 할당 할 수 없습니다. 코드를 사용하여로드, 재생 및 언로드됩니다.</p>
   <p>To add a sound to an audio group, you need to open the <a href="../The_Asset_Editors/Sounds.htm">Sound Editor</a> for that sound and then select the group from the option you will find there, or alternatively you can add assets to an audio group via
-    the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> menu in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>. You can select one or more sound assets (or
-    an entire asset group folder) and then use the RMB menu to add the sounds to any group. You can also click the <strong>Add Resource</strong> button at the bottom of the Audio Group Editor to add assets that way.</p>
-  <p>Once you have a sound added to a custom audio group then you can use this window to selectively choose which platform to export that sound to. It may be that by default you have all your sounds at the highest quality, but that for HTML5 (for example)
-    you want to use a lower quality sound file set to use less memory. In that case you add the lower quality files to GameMaker Studio 2 and then assign them to a new audio group. You would then select that audio group from the drop down menu and set
-    it to export <em>only </em>to HTML5, and remove the HTML5 export from the higher quality audio group export options. It is important to note that you cannot change the export options for the &quot;default&quot; audio group and that it will always
-    be exported to all available platforms when you build a final game package.</p>
-  <p>Once you have defined audio groups and assigned sounds to them you can see them in the list on the left when you select the group. There will always be a &quot;default&quot; audio group available and all the sounds that are within this group will always
-    be included in the game package for all platforms and they will all be loaded into memory on start-up (unless flagged as &quot;streamed&quot; in the Sound Editor properties), but when you create a custom audio group, the files that are added to it
-    <em>will not be loaded into memory</em> until you call the function <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_load.htm"><span class="inline">audio_group_load()</span></a>. In this way you can control
-    what audio is resident in memory at any time. Note too that for all the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm">audio group functions</a>, you will need to supply the audio group ID value.
-    This is simply the name that you have given the audio group.</p>
-  <p>Audio Groups are also linked to the <a href="Configurations.htm">Configurations</a> settings. When you select a configuration, you can then open the Audio Groups window and select the export targets from the right hand side for that configuration, and
-    then changing configurations will change these output targets. Note that you cannot set sound resources to different groups on a per-configuration basis, only the export target for the given group.</p>
+    the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/><a href="../Introduction/The_Asset_Browser.htm">자산 브라우저의</a> 메뉴. 하나 이상의 사운드 자산 (또는 전체 자산 그룹 폴더)을 선택한 다음 RMB 메뉴를 사용하여 그룹에 사운드를 추가 할 수 있습니다. 오디오 그룹 편집기 하단에있는 <strong>리소스 추가</strong> 버튼을 클릭하여 자산을 그런 식으로 추가 할 수도 있습니다.</p>
+  <p>사용자 정의 오디오 그룹에 사운드가 추가되면이 창을 사용하여 해당 사운드를 내보낼 플랫폼을 선택적으로 선택할 수 있습니다. 기본적으로 모든 사운드의 품질은 최고이지만 HTML5의 경우 (예를 들어) 더 적은 메모리를 사용하도록 낮은 품질의 사운드 파일을 사용하려고합니다. 이 경우 품질이 낮은 파일을 GameMaker Studio 2에 추가 한 다음 새 오디오 그룹에 할당하십시오. 그런 다음 드롭 다운 메뉴에서 해당 오디오 그룹을 선택하고 HTML5 <em>로만</em> 내보내도록 설정하고 고품질 오디오 그룹 내보내기 옵션에서 HTML5 내보내기를 제거합니다. &quot;기본&quot;오디오 그룹의 내보내기 옵션을 변경할 수 없으며 최종 게임 패키지를 빌드 할 때 항상 사용 가능한 모든 플랫폼으로 내보내집니다.</p>
+  <p>오디오 그룹을 정의하고 해당 그룹에 사운드를 할당하면 그룹을 선택할 때 왼쪽 목록에서 해당 그룹을 볼 수 있습니다. 항상 &quot;기본&quot;오디오 그룹을 사용할 수 있으며이 그룹 내에있는 모든 사운드는 항상 모든 플랫폼의 게임 패키지에 포함되며 시작시 메모리에 모두로드됩니다 ( &quot;스트리밍 됨&quot;으로 표시되지 않은 경우) (사운드 편집기 속성)에서 사용자 정의 오디오 그룹을 만들 때 추가 된 파일은 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_load.htm"><span class="inline">audio_group_load ()</span></a> 함수를 호출 할 때까지 <em>메모리에로드되지 않습니다</em> . 이 방법으로 언제든지 메모리에있는 오디오를 제어 할 수 있습니다. 모든 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm">오디오 그룹 기능</a> 에 대해 오디오 그룹 ID 값을 제공해야합니다. 이것은 단순히 오디오 그룹에 지정한 이름입니다.</p>
+  <p>오디오 그룹도 <a href="Configurations.htm">구성</a> 설정에 연결됩니다. 구성을 선택할 때 오디오 그룹 창을 열고 해당 구성의 오른쪽에서 내보내기 대상을 선택한 다음 구성을 변경하면 이러한 출력 대상이 변경됩니다. 구성별로 사운드 리소스를 다른 그룹으로 설정할 수 없으며 지정된 그룹의 내보내기 대상 만 설정할 수 있습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings\Audio_Groups.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Game_Settings.htm">Game Settings</a></div>
-        <div style="float:right">Next: <a href="Texture_Groups.htm">Texture Groups</a></div>
+        <div style="float:left">뒤로: <a href="Game_Settings.htm">게임 설정</a></div>
+        <div style="float:right">다음: <a href="Texture_Groups.htm">텍스처 그룹</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Audio Groups
@@ -121,4 +109,4 @@ Audio Groups
 audio_groups
 -->
 
-</body></html>
+</body></html> 

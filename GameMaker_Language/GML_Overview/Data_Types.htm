@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Data Types">
-        <span>Data Types</span>
+        <span>데이터 타입</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,131 +80,122 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Data Types</h1>
-  <p>In previous sections we have covered <a href="Variables_And_Variable_Scope.htm">variables and their scoping rules</a> but little has been said about the different <b>data types</b> that a variable can store. Therefore this section explains the different
-    types and what they can be used for.</p>
-  <p>Before continuing, let&#39;s just briefly explain what we mean by &quot;data types&quot;. When you create a variable it can be used to hold information, and when you call a function, it can also stored returned information. However this information
-    can come in various &quot;flavours&quot; - for example, it can be a <em>real number</em> or it can be a <em>string</em>. These different types of values being used are called <b>data types</b> and when using <i>the </i>GameMaker Language they can
-    be any of the following:</p>
+  <h1>데이터 타입</h1>
+  <p>이전 섹션에서는 <a href="Variables_And_Variable_Scope.htm">변수와 범위 지정 규칙에</a> 대해 다루었지만 변수가 저장할 수있는 다른 <b>데이터 유형</b> 에 대해서는 거의 언급하지 않았습니다. 따라서이 섹션에서는 다양한 유형과 해당 유형에 대해 설명합니다.</p>
+  <p>계속하기 전에 &quot;데이터 유형&quot;의 의미를 간단히 설명하겠습니다. 변수를 작성할 때 정보를 보유하는 데 사용될 수 있으며 함수를 호출 할 때 리턴 된 정보를 저장할 수도 있습니다. 그러나이 정보는 다양한 &quot;향미&quot;로 제공 될 수 있습니다. 예를 들어, <em>실제 숫자</em> 이거나 <em>문자열</em> 일 수 있습니다. 사용되는 이러한 다른 유형의 값을 <b>데이터 유형</b> 이라고 <i>하며</i> GameMaker 언어를 사용 <i>하는</i> 경우 다음 중 하나 일 수 있습니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Strings</span><span data-close-text="true">Strings</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">문자열</span> <span data-close-text="true">문자열</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><label for="one">A string is simply any text that has been placed in quotation marks &quot;...&quot;. You can perform certain operations on strings, like add two strings together to create a longer string (concatenation) and you can also change the string properties and even extract real numbers from it. For more information on strings and the string functions see: <a href="../GML_Reference/Strings/Strings.htm">GML Reference - Strings</a>.</label></p>
+    <p class="dropspot"><label for="one">문자열은 단순히 인용 부호 &quot;...&quot;에있는 텍스트입니다.</label> <label for="one">더 긴 문자열 (연결)을 만들기 위해 두 문자열을 함께 추가하는 등 문자열에서 특정 작업을 수행 할 수 있으며 문자열 속성을 변경하고 실제 숫자를 추출 할 수도 있습니다.</label> <label for="one">문자열 및 문자열 함수에 대한 자세한 내용은 <a href="../GML_Reference/Strings/Strings.htm">GML 참조-문자열을 참조</a> 하십시오.</label></p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Real Numbers</span><span data-close-text="true">Real Numbers</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">실수</span> <span data-close-text="true">실수</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Real numbers are any value that is not a string, nor any of the other possible data types. So, 124, 45639.566546456, 0, -45.5 etc... are all examples of real numbers. All real numbers are stored as double-precision floating point values or integer
-      values (either 32 bit integers - <span class="inline">int32</span> - or 64 bit integers - <span class="inline">int64</span>), and the compiler will optimise where possible (for example, 0.0 will be optimised to the integer value of 0). When dealing
-      with any value that is not an integer, you may experience slight rounding errors due to the nature of floating point maths. For more information on this and other number related functions, please see: <a href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML Reference - Number Functions</a>.</p>
-    <p class="note"><b>NOTE</b>: On the <b>HTML5</b> target, all real numbers are doubles.</p>
-    <p class="dropspot">Note that while created variables in GameMaker Studio 2 are all stored as double-precision floating point numbers or integers, you can still use other formats when dealing with extensions. These can be passed into GameMaker Studio 2 from an extension
-      and then checked using the appropriate <tt>is_*()</tt> function, a list of which can be found <a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">here</a>.</p>
+    <p class="dropspot">실수는 문자열이 아닌 모든 값이나 다른 가능한 데이터 유형입니다. 따라서 124, 45639.566546456, 0, -45.5 등은 모두 실수의 예입니다. 모든 실수는 배정 밀도 부동 소수점 값 또는 정수 값 (32 비트 정수 <span class="inline">-int32-</span> 또는 64 비트 정수 <span class="inline">-int64</span> )으로 저장되며 컴파일러는 가능한 경우 최적화합니다 (예 : 0.0은 정수 값에 최적화 됨) 0). 정수가 아닌 값을 처리 할 때 부동 소수점 수학의 특성으로 인해 약간의 반올림 오류가 발생할 수 있습니다. 이 기능 및 기타 숫자 관련 기능에 대한 자세한 내용은 <a href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML 참조-숫자 기능을 참조</a> 하십시오.</p>
+    <p class="note"><b>참고</b> : <b>HTML5</b> 대상에서 모든 실수는 두 배입니다.</p>
+    <p class="dropspot">GameMaker Studio 2에서 생성 된 변수는 모두 배정 밀도 부동 소수점 숫자 또는 정수로 저장되지만 확장을 처리 할 때 다른 형식을 계속 사용할 수 있습니다. 확장 프로그램에서 GameMaker Studio 2로 전달 된 다음 적절한 <tt>is _ * ()</tt> 함수를 사용하여 확인할 수 있습니다 (이 목록은 <a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">here 참조)</a> .</p>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Arrays</span><span data-close-text="true">Arrays</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">배열</span> <span data-close-text="true">배열</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><label for="three">An array is a special data type that can be used to hold multiple values. You assign the array to a variable, and then &quot;fill in&quot; different indices of the array with values. This array can then be passed through to scripts and functions on a pass-by-reference basis, however should you modify the passed array, it will then become a copy of the original array and so will need to be returned back to the original variable for the array to be updated. For more information on arrays, please see: <a href="Arrays.htm">GML Overview - Arrays</a>.</label></p>
+    <p class="dropspot"><label for="three">배열은 여러 값을 보유하는 데 사용할 수있는 특수 데이터 유형입니다.</label> <label for="three">배열을 변수에 할당 한 다음 배열의 다른 인덱스를 값으로 &quot;채 웁니다&quot;.</label> <label for="three">이 배열은 참조별로 스크립트와 함수에 전달 될 수 있지만 전달 된 배열을 수정하면 원래 배열의 사본이되므로 원래 변수로 다시 리턴해야합니다. 어레이가 업데이트됩니다.</label> <label for="three">배열에 대한 자세한 내용은 <a href="Arrays.htm">GML 개요-배열을</a> 참조하십시오.</label></p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Structs</span><span data-close-text="true">Structs</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Structs</span> <span data-close-text="true">Structs</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><label for="eleven">A struct (sometimes called a &quot;lightweight object&quot;) is a raw data structure that acts as a container for variables of all data types. You assign a struct to a variable and in the struct you can then define further variables and these can then be read from or written to as required. For more detailed information on structs, please see the section <a href="Structs.htm">GML Overview - Structs</a>.</label></p>
+    <p class="dropspot"><label for="eleven">구조체 (때로는 &quot;경량 객체&quot;라고 함)는 모든 데이터 유형의 변수에 대한 컨테이너 역할을하는 원시 데이터 구조입니다.</label> <label for="eleven">구조체를 변수에 할당하면 구조체에서 추가 변수를 정의 할 수 있으며 필요에 따라 변수를 읽거나 쓸 수 있습니다.</label> <label for="eleven">구조체에 대한 자세한 내용은 <a href="Structs.htm">GML 개요-구조체</a> 섹션을 참조하십시오.</label></p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Method Variables</span><span data-close-text="true">Method Variables</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">분석법 변수</span> <span data-close-text="true">분석법 변수</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot"><label for="twelve">A method variable is a variable that has been assigned a function and it can be used exactly the same as you would use a GML runtime function. For more detailed information, please see the section <a href="Method_Variables.htm">Method Variables</a>.</label></p>
+    <p class="dropspot"><label for="twelve">메소드 변수는 함수에 지정된 변수이며 GML 런타임 함수를 사용할 때와 정확히 동일하게 사용할 수 있습니다.</label> <label for="twelve">자세한 정보는 <a href="Method_Variables.htm">메소드 변수</a> 섹션을 참조하십시오.</label></p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Hexadecimal Values</span><span data-close-text="true">Hexadecimal Values</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">16 진 값</span> <span data-close-text="true">16 진 값</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">GameMaker Studio 2 will can accept <b>hexadecimal literals</b> as legitimate values. Hexadecimal values are especially common when working with colours, but can be used anywhere a positive integer value is required. Note that hexadecimal values can
-      be formatted in either of the following two ways, where <span class="inline">&lt;<em>abcd</em>&gt;</span> would be the actual hex value:</p>
+    <p class="dropspot">GameMaker Studio 2는 <b>16 진 리터럴</b> 을 합법적 인 값으로 받아 들일 수 있습니다. 16 진수 값은 특히 색상으로 작업 할 때 일반적이지만 양의 정수 값이 필요한 모든 곳에서 사용할 수 있습니다. 16 진 값은 다음 두 가지 방법 중 하나로 형식화 될 수 있습니다. 여기서 <span class="inline">&lt; <em>abcd</em> &gt;</span> 는 실제 16 진 값입니다.</p>
     <p class="code"><span style="background-color: transparent;">$&lt;<em>abcd</em>&gt;</span><span style="background-color: transparent;"></span><br/> 0x&lt;
       <em>abcd</em>&gt;</p>
-    <p class="dropspot">For example, the following values can be expressed as hexadecimal as shown:</p>
+    <p class="dropspot">예를 들어 다음 값은 표시된대로 16 진수로 표현할 수 있습니다.</p>
     <p class="code">11406 = $2c8e = 0x2c8e<br/> 16777215 = $ffffff = 0xffffff</p>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Boolean</span><span data-close-text="true">Boolean</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">부울</span> <span data-close-text="true">부울</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">A boolean is simply a value that can either be <tt>true</tt> or <tt>false</tt>. Note that currently GameMaker Studio 2 will interpret a real number equal to or below 0.5 as a <tt>false</tt> value, and any real number greater than 0.5 as being <tt>true</tt>.
-      This does <i>not</i> mean however that you should be checking 1 and 0 (or any other real number) for true and false, as you are also provided with the <b>constants</b> <tt>true</tt> and <tt>false</tt> which should always be used in your code to
-      prevent any issues should real boolean data types be added in a future update.</p>
-    <p class="dropspot">You can convert any real number into an implicitly boolean value using the following function:</p>
+    <p class="dropspot">부울은 단순히 <tt>true</tt> 또는 <tt>false 일</tt> 수있는 값입니다. 현재 GameMaker Studio 2는 0.5 이하의 실수를 <tt>false</tt> 값으로, 0.5보다 큰 실수를 <tt>true</tt> 로 해석 <tt>합니다</tt> . 그러나 <b>상수</b> 1과 0 (또는 다른 실수)에서 참과 거짓을 확인해야한다는 것을 의미하지는 <i>않습니다</i> . <b>상수</b> <tt>참</tt> 과 <tt>거짓</tt> 도 함께 제공되므로 코드에서 항상 문제가 발생하지 않도록 반드시 사용해야합니다. 부울 데이터 형식은 향후 업데이트에 추가됩니다.</p>
+    <p class="dropspot">다음 함수를 사용하여 실수를 내재적으로 부울 값으로 변환 할 수 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/bool.htm">bool</a></li>
+      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/bool.htm">부울</a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Pointer</span><span data-close-text="true">Pointer</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">포인터</span> <span data-close-text="true">포인터</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">A pointer is a data type that &quot;points&quot; to a memory location. You cannot do operations on a pointer and it is used only for some very specific functions, like getting a texture or buffer address from memory for another function. For examples
-      of functions that return a pointer you can see <a href="../GML_Reference/Buffers/buffer_get_address.htm"><tt>buffer_get_address()</tt></a> or <a href="../GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><tt>sprite_get_texture()</tt></a>.</p>
-    <p class="dropspot">There is also a function to check if a value is a pointer (see &quot;<b>Checking Data Types</b>&quot;, below) and a function to convert a value into a pointer:</p>
+    <p class="dropspot">포인터는 메모리 위치를 가리키는 &quot;데이터 유형&quot;입니다. 포인터에 대한 작업을 수행 할 수 없으며 다른 함수의 메모리에서 텍스처 또는 버퍼 주소를 얻는 것과 같은 매우 특정한 함수에만 사용됩니다. 포인터를 반환하는 함수의 예는 <a href="../GML_Reference/Buffers/buffer_get_address.htm"><tt>buffer_get_address ()</tt></a> 또는 <a href="../GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><tt>sprite_get_texture ()를</tt></a> 참조하십시오.</p>
+    <p class="dropspot">값이 포인터인지 확인하는 기능 (아래 &quot; <b>데이터 유형 확인</b> &quot;참조)과 값을 포인터로 변환하는 기능도 있습니다.</p>
     <ul class="dropspotlist">
       <li class="dropspot"><a href="../GML_Reference/Variable_Functions/ptr.htm" style="background-color: transparent;">ptr</a></li>
     </ul>
-    <p class="dropspot">You may also use (and get returned) the following built in constants when using pointers:</p>
+    <p class="dropspot">포인터를 사용할 때 다음과 같은 내장 상수를 사용하고 반환 할 수도 있습니다.</p>
     <p class="dropspot"> </p>
     <table>
       <tbody>
         <tr>
-          <th>Constant</th>
-          <th>Description</th>
+          <th>일정한</th>
+          <th>기술</th>
         </tr>
         <tr>
           <td><span class="inline">pointer_null</span></td>
-          <td>This constant indicates that the pointer is not pointing to anything meaningful (the same as <tt>NULL</tt> in C++ or null in C#)</td>
+          <td>이 상수는 포인터가 의미있는 것을 가리 키지 않음을 나타냅니다 (C ++의 <tt>NULL</tt> 또는 C #의 null과 동일)</td>
         </tr>
         <tr>
           <td><span class="inline">pointer_invalid</span></td>
-          <td>This constant simply means that the value is not a valid pointer</td>
+          <td>이 상수는 단순히 값이 유효한 포인터가 아님을 의미합니다.</td>
         </tr>
       </tbody>
     </table>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Enum</span><span data-close-text="true">Enum</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">열거 형</span> <span data-close-text="true">열거 형</span></a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">An enum is an &quot;enumerator&quot;, and it essentially permits you to create your own limited data type with a list of constant values. Enums are explained in depth on the page for <a href="Variables/Constants.htm">Constants</a>.</p>
+    <p class="dropspot">열거 형은 &quot;열거 기&quot;이며 기본적으로 상수 값 목록을 사용하여 고유 한 제한된 데이터 형식을 만들 수 있습니다. 열거 형은 <a href="Variables/Constants.htm">상수</a> 페이지에서 자세히 설명합니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Undefined</span><span data-close-text="true">Undefined</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">미정의</span> <span data-close-text="true">미정</span></a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot"><label for="seven">An undefined value (also known as a &quot;null&quot; value) is one where an expression doesn&#39;t have a correct value, although it is syntactically correct, and so must return <i>something</i>. For example, say you have a <a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> and use the function <a href="../GML_Reference/Data_Structures/DS_Maps/ds_map_find_value.htm"><tt>ds_map_find_value()</tt></a>. Now, what happens when the map does not have the value being looked for? Well, since the function is correctly formatted, and the issue is that the no such value exists, then it would return the <b>constant</b> <tt>undefined</tt>, and you can check for this constant as you would check for <tt>true</tt> or any other value.</label></p>
+    <p class="dropspot"><label for="seven">정의되지 않은 값 ( &quot;널&quot;값이라고도 함)은 구문 적으로 정확하지만 식에 올바른 값이없는 값이므로 <i>무언가</i> 를 반환해야합니다.</label> <label for="seven">예를 들어 <a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS 맵이</a> 있고 <a href="../GML_Reference/Data_Structures/DS_Maps/ds_map_find_value.htm"><tt>ds_map_find_value ()</tt></a> 함수를 사용 <a href="../GML_Reference/Data_Structures/DS_Maps/ds_map_find_value.htm"><tt>한다고 가정하십시오</tt></a> .</label> <label for="seven">이제지도에 값이없는 경우 어떻게됩니까?</label> <label for="seven">글쎄, 함수가 올바르게 포맷되어 있고 문제는 그러한 값이 존재하지 않기 때문에 <b>상수</b> <tt>undefined를</tt> 반환하고 <tt>true</tt> 또는 다른 값을 확인할 때이 상수를 확인할 수 있습니다.</label></p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">NaN</span><span data-close-text="true">NaN</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">NaN</span> <span data-close-text="true">NaN</span></a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot"><label for="nine"><tt>NaN</tt> stands for &quot;not a number&quot;, and is a constant that can be returned when the compiler cannot evaluate the results of an operation as a number. For example, 0/0 cannot be defined as a real number, and is therefore represented by <tt>NaN</tt>, or the square root of a negative number - which is considered an &quot;imaginary&quot; number - cannot be represented as a real number, and so is represented by <tt>NaN</tt>.</label></p>
+    <p class="dropspot"><label for="nine"><tt>NaN</tt> 은 &quot;숫자가 아님&quot;을 나타내며, 컴파일러가 연산 결과를 숫자로 평가할 수 없을 때 반환 될 수있는 상수입니다.</label> <label for="nine">예를 들어, 0/0은 실수로 정의 될 수 없으므로 <tt>NaN</tt> 으로 표시되거나 &quot;가상&quot;숫자로 간주되는 음수의 제곱근은 실수로 표시 될 수 없습니다. <tt>NaN으로</tt> 표시됩니다.</label></p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#"><span data-open-text="true">Infinity</span><span data-close-text="true">Infinity</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#"><span data-open-text="true">무한대</span> <span data-close-text="true">무한대</span></a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">The constant <tt>infinity</tt> refers to a number that is considered infinite, such as the result you would get when dividing any floating point value by zero, eg: 1.0/0.</p>
+    <p class="dropspot">상수 <tt>무한대</tt> 는 부동 소수점 값을 0으로 나눌 때 얻게되는 결과와 같이 무한한 것으로 간주되는 숫자를 나타냅니다 (예 : 1.0 / 0).</p>
   </div>
   <p> </p>
-  <p>You can check the data type of any variable using the functions listed on the following the page:</p>
+  <p>다음 페이지에 나열된 기능을 사용하여 변수의 데이터 유형을 확인할 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Functons</a></li>
+    <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">가변 펑턴</a></li>
   </ul>
-  <p>You can also find arithmetic type tables that show the results of different operations using mixed variable data types here:</p>
+  <p>혼합 변수 데이터 유형을 사용하여 여러 연산의 결과를 표시하는 산술 유형 테이블을 찾을 수도 있습니다.</p>
   <ul class="colour">
-    <li><a href="../../Additional_Information/Type_Tables.htm">Type Tables</a></li>
+    <li><a href="../../Additional_Information/Type_Tables.htm">타입 테이블</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Overview\Data_Types.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a href="Instance_Keywords.htm">Instance Keywords</a></div>
+        <div style="float:left">뒤로: <a href="GML_Overview.htm">GML 개요</a></div>
+        <div style="float:right">다음: <a href="Instance_Keywords.htm">인스턴스 키워드</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Data Type - Real
@@ -252,4 +243,4 @@ pointer_null
 pointer_invalid
 -->
 
-</body></html>
+</body></html> 

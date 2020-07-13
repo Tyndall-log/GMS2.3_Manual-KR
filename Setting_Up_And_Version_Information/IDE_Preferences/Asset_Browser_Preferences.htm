@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Asset Browser Preferences">
-        <span>Asset Browser Preferences</span>
+        <span>자산 브라우저 환경 설정</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,73 +80,53 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Asset Browser Preferences</h1>
-  <p><img alt="The Asset Browser Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/AssetBrowser_Prefs.png"/>The <strong>Asset Browser Preferences</strong> are used to define certain properties for how the <a href="../../Introduction/The_Asset_Browser.htm">Asset Browser</a> and
-    its elements function. The main options are:</p>
+  <h1>자산 브라우저 환경 설정</h1>
+  <p><img alt="The Asset Browser Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/AssetBrowser_Prefs.png"/><strong>자산 브라우저 기본 설정</strong> 은 <a href="../../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 및 해당 요소의 작동 방식에 대한 특정 속성을 정의하는 데 사용됩니다. 주요 옵션은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><strong>Show Quick Access</strong>: When enabled, this option will show the &quot;Quick Access&quot; section at the top of the Asset Browser. This option is enabled by default.</li>
-    <li><strong>Create default folders in new project</strong>: When enabled, this option will have all new projects start with the default asset folders already created, and when disabled, only a room folder will be created with the default room required
-      by all projects. This option is enabled by default.</li>
-    <li><strong>Maximum number of assets to open simultaneously without warning</strong>: You can select multiple assets for opening at a time by using <img alt="Icon Control" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="Icon Cmd" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> +  <img alt="Icon LMB" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to select them and then right clicking <img alt="Icon RMB" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> and choosing open all. If you have selected more than the number specified in this option, then you will be shown a warning, since having too many assets open at one time can cause issues
-      with performance on lower end machines. The default value is 10.</li>
-    <li><strong>Maximum recently edited items</strong>: This setting governs the number of assets listed in the &quot;Recent&quot; section of the Asset Browser. The default value is 10.</li>
-    <li><strong>Colour Palette Size</strong>: Here you can set the number of colours available to you in the asset browser palette for asset groups. The default value is 16, with a minimum value of 16 and a maximum value of 100.</li>
-    <li><strong>Apply asset colours in Quick Access</strong>: When checked, this option will use the colours set for any given asset type to colour the asset in the Quick Access section of the browser. Unchecking this option will not use the asset colour.
-      This is enabled by default.</li>
-    <li><strong>Group colours override child colours</strong>: When checked, this will use the top level group colour to colour any assets within the group, ignoring any colour that was set for the individual asset. This is disabled by default.</li>
-    <li><strong>Create asset dialogue style</strong>: When you click the &quot;Add Asset&quot; button in the Asset Browser, you will be presented with a window showing you the different assets that can be added to your project. This window can be presented
-      in a list view or a grid view, and this setting governs which is shown by default. Default value is grid.</li>
-    <li><strong>Default sort order</strong>: This can be used to set the default sort order for assets in the browser, either alphabetical oder from A to Z or from Z to A. Default is from A to Z.</li>
-    <li><strong>Default sort folders first</strong>: When this is enabled, the asset browser will sort folders first, then any &quot;loose&quot; assets second, while if this is disabled then all assets and folders will be sorted together. This is enabled
-      by default.</li>
-    <li><strong>Sprite double click opens image editor</strong>: By default double clicking <img alt="Icon LMB" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> on any asset will open that asset for editing, but often when dealing with sprites,
-      after the initial setup when you create the new asset, you open it to edit the image rather than the sprite properties. Selecting this option will open the image editor for the sprite asset instead of the sprite asset itself. You can still open
-      the sprite editor by right clicking <img alt="Icon RMB" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> and selecting <em>Edit</em>. This option is off by default.</li>
-    <li><strong>Object double click opens all object events</strong>: By default double clicking <img alt="Icon LMB" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> on any asset will open that asset for editing, but often when dealing with objects,
-      after the initial setup when you create the new asset, you open it to edit the events only rather than the object properties. Selecting this option will open the different object events in a new workspace, with each event being given its own tab
-      within the new workspace. You can still open the object editor by right clicking <img alt="Icon RMB" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> and selecting Edit. This option is off by default.</li>
-    <li><strong>Default zoom (%)</strong>: This sets the default zoom percentage for the Asset Browser when you start a new project. The default value is 100%.</li>
-    <li><strong>Minimum zoom (%)</strong>: This sets the minimum zoom value permitted for the Asset Browser. Default is 50%.</li>
-    <li><strong>Maximum zoom (%)</strong>: This sets the maximum zoom value permitted for the Asset Browser. Default is 250%.</li>
-    <li><strong>Show tree lines</strong>: Here you can enable/disable the tree lines that are shown to the side of assets in the Asset Browser. This is checked by default to show the tree lines.</li>
+    <li><strong>빠른 액세스 표시</strong> :이 옵션을 활성화하면 자산 브라우저 상단에 &quot;빠른 액세스&quot;섹션이 표시됩니다. 이 옵션은 기본적으로 활성화되어 있습니다.</li>
+    <li><strong>새 프로젝트에서 기본 폴더 생성</strong> :이 옵션을 활성화하면 모든 새 프로젝트가 이미 생성 된 기본 자산 폴더로 시작하고 비활성화되면 모든 프로젝트에 필요한 기본 룸으로 룸 폴더 만 생성됩니다. 이 옵션은 기본적으로 활성화되어 있습니다.</li>
+    <li><strong>경고없이 동시에 열 수있는 최대 자산</strong> 수 : 한 번에 여러 자산을 선택 <strong>하여 열</strong> 수 있습니다. / + 그들을 선택하고 마우스 오른쪽 버튼을 클릭 모두 열기를 선택합니다. 이 옵션에 지정된 수보다 많은 수를 선택한 경우 한 번에 너무 많은 자산을 열면 하한 시스템의 성능에 문제가 발생할 수 있으므로 경고가 표시됩니다. 기본값은 10입니다.</li>
+    <li><strong>최근에 편집 한 최대 항목 수</strong> :이 설정은 자산 브라우저의 &quot;최근&quot;섹션에 나열된 자산 수를 제어합니다. 기본값은 10입니다.</li>
+    <li><strong>색상 팔레트 크기</strong> : 자산 그룹에 대한 자산 브라우저 팔레트에서 사용 가능한 색상 수를 설정할 수 있습니다. 기본값은 16이며 최소값은 16이고 최대 값은 100입니다.</li>
+    <li><strong>빠른 액세스에 자산 색상 적용</strong> :이 옵션을 선택하면 주어진 자산 유형에 설정된 색상을 사용하여 브라우저의 빠른 액세스 섹션에서 자산에 색상을 지정합니다. 이 옵션을 선택 취소하면 자산 색상이 사용되지 않습니다. 기본적으로 활성화되어 있습니다.</li>
+    <li><strong>그룹 색상은 하위 색상을 재정의합니다</strong> .이 옵션을 선택하면 최상위 레벨 그룹 색상을 사용하여 그룹 내의 모든 자산에 색상을 지정하고 개별 자산에 설정된 색상은 무시합니다. 기본적으로 비활성화되어 있습니다.</li>
+    <li><strong>자산 대화 스타일 생성</strong> : 자산 브라우저에서 &quot;자산 추가&quot;버튼을 클릭하면 프로젝트에 추가 할 수있는 다양한 자산을 보여주는 창이 나타납니다. 이 창은 목록보기 또는 격자보기로 표시 될 수 있으며이 설정은 기본적으로 표시되는 것을 제어합니다. 기본값은 그리드입니다.</li>
+    <li><strong>기본 정렬 순서</strong> : 브라우저에서 자산의 기본 정렬 순서를 알파벳 순서로 (A에서 Z 또는 Z에서 A로) 설정할 수 있습니다. 기본값은 A에서 Z입니다.</li>
+    <li><strong>기본 정렬 폴더 우선</strong> :이 옵션을 활성화하면 자산 브라우저가 먼저 폴더를 정렬 한 다음 &quot;느슨한&quot;자산을 두 번째로 정렬합니다.이 옵션을 사용하지 않으면 모든 자산과 폴더가 함께 정렬됩니다. 기본적으로 활성화되어 있습니다.</li>
+    <li><strong>스프라이트 더블 클릭</strong> 하면 <strong>이미지 편집기가 열립니다</strong> : 기본적으로 더블 클릭 모든 자산에서 편집 할 자산이 열리지 만 스프라이트를 다룰 때 새 자산을 만들 때 초기 설정 후 스프라이트 속성 대신 이미지를 편집하기 위해 자산을 엽니 다. 이 옵션을 선택하면 스프라이트 자산 자체 대신 스프라이트 자산의 이미지 편집기가 열립니다. 마우스 오른쪽 버튼을 클릭하여 스프라이트 편집기를 계속 열 수 있습니다 <em>편집을</em> 선택합니다. 이 옵션은 기본적으로 해제되어 있습니다.</li>
+    <li><strong>객체 더블 클릭은 모든 객체 이벤트를 엽니 다</strong> . 기본적으로 더블 클릭 모든 자산에서 편집을 위해 해당 자산을 열지 만, 종종 오브젝트를 처리 할 때 새 자산을 만들 때 초기 설정 후 자산 속성이 아닌 이벤트 만 편집하기 위해 자산을 엽니 다. 이 옵션을 선택하면 새 작업 공간에서 다른 오브젝트 이벤트가 열리고 각 이벤트에는 새 작업 공간 내에서 고유 한 탭이 ​​제공됩니다. 마우스 오른쪽 버튼을 클릭하여 개체 편집기를 열 수 있습니다 편집을 선택합니다. 이 옵션은 기본적으로 해제되어 있습니다.</li>
+    <li><strong>기본 확대 / 축소 (%)</strong> : 새 프로젝트를 시작할 때 자산 브라우저의 기본 확대 / 축소 비율을 설정합니다. 기본값은 100 %입니다.</li>
+    <li><strong>최소 줌 (%)</strong> : 자산 브라우저에 허용되는 최소 줌 값을 설정합니다. 기본값은 50 %입니다.</li>
+    <li><strong>최대 줌 (%)</strong> : 자산 브라우저에 허용되는 최대 줌 값을 설정합니다. 기본값은 250 %입니다.</li>
+    <li><strong>트리 라인 표시</strong> : 자산 브라우저에서 자산 측면에 표시되는 트리 라인을 활성화 / 비활성화 할 수 있습니다. 트리 선을 표시하기 위해 기본적으로 선택되어 있습니다.</li>
   </ul>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Confirm Dialogs</span><span data-close-text="true">Confirm Dialogs</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">대화 상자</span> <span data-close-text="true">확인 대화</span> <span data-open-text="true">상자</span> <span data-close-text="true">확인</span></a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/AssetBrowser_Confirm_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/AssetBrowser_Confirm_Prefs.png" class="center" alt="The Asset Browser Confirm Dialog Preferences"/>Here you can select the behaviour of the confirmation dialogs when working with an asset from the Asset Browser. The available options are:</p>
+      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/AssetBrowser_Confirm_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/AssetBrowser_Confirm_Prefs.png" class="center" alt="The Asset Browser Confirm Dialog Preferences"/>여기에서 자산 브라우저에서 자산으로 작업 할 때 확인 대화 상자의 동작을 선택할 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li>
-        <strong>Automatic response to asset deletion</strong>: When you delete an asset from the Asset Browser you normally get a warning asking if you are sure you want to proceed. By setting this option to &quot;OK&quot; the message will be suppressed
-        as if you had clicked the &quot;OK&quot; button to proceed. The default value is &quot;Show Message&quot;.</li>
-      <li>
-        <strong>Automatic response to opening multiple assets</strong>: As mentioned above in the general Asset Browser preferences, when you open multiple assets at once from the Asset Browser, you can get a warning if the number exceeds the number specified.
-        By setting this option to &quot;OK&quot; the warning will be suppressed as if you had clicked the &quot;OK&quot; button to proceed. The default value is &quot;Show Message&quot;.</li>
-      <li>
-        <strong>Automatic response to DnD™ conversion to GameMaker Language</strong>: When you select the option to convert a DnD™ node to GML, you will be prompted to confirm the change as this cannot be undone. By setting this option to &quot;OK&quot;
-        the warning will be suppressed as if you had clicked the &quot;OK&quot; button to proceed. The default value is &quot;Show Message&quot;.</li>
-      <li>
-        <strong>Automatic response to duplicate group name error</strong>: When you create a group folder for organising your assets and name it the same as another folder in the browser, you will be shown a message asking if you wish to continue and
-        have two folders with the same name. By setting this option to &quot;OK&quot; the warning will be suppressed as if you had clicked the &quot;OK&quot; button to proceed. The default value is &quot;Show Message&quot;.</li>
-      <li>
-        <strong>Automatic response to setting a room parent via node drag</strong>: When you drag a room over another room in the Room Manager and then release it, you will be shown a message asking if you wish to make the room a &quot;child&quot; of
-        the room being dropped on. By setting this option to &quot;OK&quot; the warning will be suppressed as if you had clicked the &quot;OK&quot; button to proceed. The default value is &quot;Show Message&quot;</li>
+      <li><strong>자산 삭제에 대한 자동 응답</strong> : 자산 브라우저에서 자산을 삭제하면 일반적으로 진행할 것인지 묻는 경고가 표시됩니다. 이 옵션을 &quot;확인&quot;으로 설정하면 &quot;확인&quot;버튼을 클릭 한 것처럼 메시지가 표시되지 않습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li>
+      <li><strong>여러 자산 열기에 대한 자동 응답</strong> : 일반 자산 브라우저 환경 설정에서 위에서 언급 한 것처럼 자산 브라우저에서 여러 자산을 한 번에 열면 숫자가 지정된 수를 초과하면 경고가 표시 될 수 있습니다. 이 옵션을 &quot;확인&quot;으로 설정하면 &quot;확인&quot;버튼을 클릭 한 것처럼 경고가 표시되지 않습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li>
+      <li><strong>DnD ™ GameMaker 언어로의 변환에 대한 자동 응답</strong> : DnD ™ 노드를 GML로 변환하는 옵션을 선택하면 취소 할 수 없으므로 변경을 확인하라는 메시지가 표시됩니다. 이 옵션을 &quot;확인&quot;으로 설정하면 &quot;확인&quot;버튼을 클릭 한 것처럼 경고가 표시되지 않습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li>
+      <li><strong>중복 그룹 이름 오류에 대한 자동 응답</strong> : 자산을 구성하기 위해 그룹 폴더를 생성하고 브라우저의 다른 폴더와 동일하게 이름을 지정할 때 계속하고 이름이 같은 두 개의 폴더가 있는지 묻는 메시지가 표시됩니다 . 이 옵션을 &quot;확인&quot;으로 설정하면 &quot;확인&quot;버튼을 클릭 한 것처럼 경고가 표시되지 않습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li>
+      <li><strong>노드 끌기를 통해 회의실 상위 설정에 대한 자동 응답</strong> : 회의실 관리자에서 다른 회의실 위로 회의실을 끌어다 놓으면 회의실을 회의실의 &quot;자식&quot;으로 만들 것인지 묻는 메시지가 표시됩니다. 떨어졌다. 이 옵션을 &quot;확인&quot;으로 설정하면 &quot;확인&quot;버튼을 클릭 한 것처럼 경고가 표시되지 않습니다. 기본값은 &quot;메시지 표시&quot;입니다.</li>
     </ul>
-    <p>
-      <br/><br/></p>
+    <p></p>
   </div>
   <p> </p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Setting_Up_And_Version_Information\IDE_Preferences\Asset_Browser_Preferences.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Sequences_Preferences.htm">Sequences Preferences</a></div>
+        <div style="float:left">뒤로: <a href="../IDE_Preferences.htm">IDE 환경 설정</a></div>
+        <div style="float:right">다음: <a href="Sequences_Preferences.htm">시퀀스 환경 설정</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Preferences - Asset Browser
@@ -155,4 +135,4 @@ Preferences - Asset Browser
 prefs_asset_browser
 -->
 
-</body></html>
+</body></html> 

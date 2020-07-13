@@ -71,7 +71,7 @@
         <span>sequence_track_new</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,132 +81,133 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sequence_track_new</h1>
-  <p>With this function you can create a new sequence track <a href="../../../GML_Overview/Structs.htm">struct</a>, supplying the type of track that you wish to make which will be one of the following constants:</p>
+  <p>이 기능을 사용하면 다음과 같은 상수 중 하나가 될 트랙 유형을 제공하여 새로운 시퀀스 트랙 <a href="../../../GML_Overview/Structs.htm">구조체</a> 를 만들 수 있습니다.</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>일정한</th>
+        <th>기술</th>
+        <th>값</th>
       </tr>
       <tr>
         <td>seqtracktype_graphic</td>
-        <td>This is a graphics (sprite) asset track.</td>
+        <td>그래픽 (스프라이트) 자산 트랙입니다.</td>
         <td>1</td>
       </tr>
       <tr>
         <td>seqtracktype_audio</td>
-        <td>This is an audio asset track.</td>
+        <td>이것은 오디오 자산 트랙입니다.</td>
         <td>2</td>
       </tr>
       <tr>
         <td>seqtracktype_instance</td>
-        <td>This is an instance asset track.</td>
+        <td>이것은 인스턴스 자산 트랙입니다.</td>
         <td>14</td>
       </tr>
       <tr>
         <td>seqtracktype_sequence</td>
-        <td>This is a sequence asset track.</td>
+        <td>시퀀스 자산 트랙입니다.</td>
         <td>7</td>
       </tr>
       <tr>
         <td>seqtracktype_clipmask</td>
-        <td>This is a clip mask group asset track.</td>
+        <td>클립 마스크 그룹 자산 트랙입니다.</td>
         <td>8</td>
       </tr>
       <tr>
         <td>seqtracktype_clipmask_mask</td>
-        <td>This is a clip mask sprite asset track used for generating the clip mask.</td>
+        <td>클립 마스크 생성에 사용되는 클립 마스크 스프라이트 자산 트랙입니다.</td>
         <td>9</td>
       </tr>
       <tr>
         <td>seqtracktype_clipmask_subject</td>
-        <td>This is a clip mask sprite asset track that is being masked.</td>
+        <td>이것은 마스크되고있는 클립 마스크 스프라이트 자산 트랙입니다.</td>
         <td>10</td>
       </tr>
       <tr>
         <td>seqtracktype_group</td>
-        <td>This group folder asset track.</td>
+        <td>이 그룹 폴더 자산 추적</td>
         <td>11</td>
       </tr>
       <tr>
         <td>seqtracktype_colour</td>
-        <td>This is a colour data parameter track.</td>
+        <td>이것은 컬러 데이터 파라미터 트랙입니다.</td>
         <td>4</td>
       </tr>
       <tr>
         <td>seqtracktype_real</td>
-        <td>This is a real number value parameter track.</td>
-        <td>3</td>
+        <td>이것은 실수 값 파라미터 트랙입니다.</td>
+        <td>삼</td>
       </tr>
       <tr>
         <td>seqtracktype_message</td>
-        <td>This is a broadcast message track.</td>
+        <td>방송 메시지 트랙입니다.</td>
         <td>15</td>
       </tr>
       <tr>
         <td>seqtracktype_moment</td>
-        <td>This is an event/moment track.</td>
+        <td>이벤트 / 모멘트 트랙입니다.</td>
         <td>16</td>
       </tr>
       <tr>
         <td>seqtracktype_bool</td>
-        <td>Not used currently.</td>
+        <td>현재 사용되지 않습니다.</td>
         <td>5</td>
       </tr>
       <tr>
         <td>seqtracktype_string</td>
-        <td>Not used currently.</td>
+        <td>현재 사용되지 않습니다.</td>
         <td>6</td>
       </tr>
       <tr>
         <td>seqtracktype_spriteframes</td>
-        <td>Not used currently.</td>
+        <td>현재 사용되지 않습니다.</td>
         <td>13</td>
       </tr>
       <tr>
         <td>seqtracktype_empty</td>
-        <td>Not used currently.</td>
+        <td>현재 사용되지 않습니다.</td>
         <td>12</td>
       </tr>
     </tbody>
   </table>
-  <p>The function will return a sequence <a href="Sequence_Structs/The_Track_Struct.htm">track struct</a> which can then have data added to it before being assigned to a <a href="Sequence_Structs/The_Sequence_Object_Struct.htm">sequence object</a>.</p>
+  <p>이 함수는 시퀀스 <a href="Sequence_Structs/The_Track_Struct.htm">트랙 구조체</a> 를 반환하여 <a href="Sequence_Structs/The_Sequence_Object_Struct.htm">시퀀스 객체</a> 에 할당되기 전에 데이터를 추가 할 수 있습니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">sequence_track_new(type);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>type</td>
-        <td>The type of track to create, a constant, listed above.</td>
+        <td>유형</td>
+        <td>만들 트랙의 유형으로, 위에 나열된 상수입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Struct</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">myseq = sequence_create();<br/> var mytracks = array_create(1);<br/> mytracks[0] = sequence_track_new(seqtracktype_graphic);<br/> var graphickeys = array_create(1);<br/> graphickeys[0] = sequence_keyframe_new(seqtracktype_graphic);<br/> graphickeys[0].frame
     = 0;<br/> graphickeys[0].length = 1;<br/> graphickeys[0].stretch = true;<br/> graphickeys[0].disabled = false;<br/> var graphickeydata = array_create(1);<br/> graphickeydata[0] = sequence_keyframedata_new(seqtracktype_graphic);<br/> graphickeydata[0].spriteIndex
     = spr_Platform;<br/> graphickeydata[0].channel = 0;<br/> graphickeys[0].channels = graphickeydata;<br/> mytracks[0].name = &quot;TestGraphicTrack&quot;;<br/> mytracks[0].keyframes = graphickeys;<br/> myseq.tracks = mytracks;</p>
-  <p>The above code creates a new sequence and then creates a graphic asset track and sets some keyframe data on the track. This track is then assigned to the instance.</p>
+  <p>위의 코드는 새로운 시퀀스를 생성 한 다음 그래픽 자산 트랙을 생성하고 트랙에 일부 키 프레임 데이터를 설정합니다. 그런 다음이 트랙이 인스턴스에 할당됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Asset_Management\Sequences\sequence_track_new.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="sequence_keyframe_new.htm">sequence_keyframe_new</a></div>
+        <div style="float:left">뒤로: <a href="Sequences.htm">시퀀스</a></div>
+        <div style="float:right">다음: <a href="sequence_keyframe_new.htm">sequence_keyframe_new</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 sequence_track_new
@@ -231,4 +232,4 @@ seqtracktype_empty
 sequence_track_new
 -->
 
-</body></html>
+</body></html> 

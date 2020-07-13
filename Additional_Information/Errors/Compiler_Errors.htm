@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Compiler Errors">
-        <span>Compiler Errors</span>
+        <span>컴파일러 오류</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,453 +80,414 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Compile Errors</h1>
-  <p>The second type of error that can be reported for your game is the <strong>compiler error</strong>. A compiler error happens when your game encounters some type of error that the syntax checker may not have been able to detect - it&#39;s very easy to
-    forget to declare a variable or mis-type a string as a real, for example - or when an error is related to how you have set up the compile tools from the <a href="../../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a>    for the target platform. These errors will be caught by GameMaker Studio 2 as the game is being compiled and this information will also be shown in the <a href="../../Introduction/The_Output_Window.htm">Compiler Error Output</a>, as shown below:</p>
+  <h1>컴파일 오류</h1>
+  <p>게임에 대해보고 될 수있는 두 번째 유형의 오류는 <strong>컴파일러 오류</strong> 입니다. 컴파일러 오류는 게임에서 구문 검사기가 감지 할 수없는 일부 유형의 오류가 발생했을 때 발생합니다. 예를 들어 변수를 선언하거나 문자열을 실수로 실수로 입력하는 것을 잊어 버리는 것은 매우 쉽습니다. 대상 플랫폼에 대한 <a href="../../Setting_Up_And_Version_Information/Platform_Preferences.htm">플랫폼 환경 설정</a> 에서 컴파일 도구를 설정 한 방법과 관련이 있습니다. 이러한 오류는 게임이 컴파일 될 때 GameMaker Studio 2에 의해 포착되며이 정보는 아래와 같이 <a href="../../Introduction/The_Output_Window.htm">컴파일러 오류 출력</a> 에도 표시됩니다.</p>
   <p><img alt="Compile Errors" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Errors_Compile_Output.png"/></p>
-  <p class="note"><strong>NOTE</strong>: These errors don&#39;t usually pop up a window and will simply show &quot;<span class="inline" style="font-size: 14px">Build Failed</span>&quot; in the compiler output. If a window pops up it&#39;s usually a Runner Error, which
-    is explained <a href="Runner_Errors.htm">here</a>.</p>
-  <p>The compiler error messages will all follow the same format:</p>
+  <p class="note"><strong>참고</strong> : 이러한 오류는 일반적으로 창을 표시하지 않으며 컴파일러 출력에 &quot; <span class="inline" style="font-size: 14px">빌드 실패</span> &quot;를 표시합니다. 창이 팝업되면 일반적으로 러너 오류이며 여기에 설명되어 <a href="Runner_Errors.htm">있습니다</a> .</p>
+  <p>컴파일러 오류 메시지는 모두 동일한 형식을 따릅니다.</p>
   <p class="code">[object] - [event] - [Line Number]: [error string]</p>
-  <p>If the error is found in a script then it will simply be:</p>
+  <p>스크립트에서 오류가 발견되면 간단히 다음과 같습니다.</p>
   <p class="code">[script] - [Line Number]: [error string]</p>
-  <p>You can then double-click <img alt="Icon LMB" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on any of the compiler error entries to open the given asset at the position flagged as giving the error, and then you
-    can use the information contained within the message to pinpoint exactly where in the object or script the error has occurred. However, sometimes these errors can seem a bit cryptic, so below you can find a complete list of all errors and a brief
-    explanation of what they mean:</p>
+  <p>You can then double-click <img alt="Icon LMB" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/>컴파일러 오류 항목 중 하나에서 오류가 발생한 것으로 표시된 위치에서 지정된 자산을 열고 메시지에 포함 된 정보를 사용하여 오류가 발생한 오브젝트 또는 스크립트의 정확한 위치를 정확하게 지정할 수 있습니다. 그러나 때때로 이러한 오류는 다소 비밀스러워 보일 수 있으므로 아래에서 모든 오류의 전체 목록과 그 의미에 대한 간단한 설명을 찾을 수 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Error</th>
-        <th>Description</th>
+        <th>오류</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Miscellaneous</strong></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <strong>여러 가지 잡다한</strong> </p></td>
       </tr>
       <tr>
-        <td>No program to compile</td>
-        <td>A previous compile error has caused the compiler parse tree to not be created and thus the compiler has no program data to compile</td>
+        <td>컴파일 할 프로그램이 없습니다</td>
+        <td>이전 컴파일 오류로 인해 컴파일러 구문 분석 트리가 작성되지 않아 컴파일러에 컴파일 할 프로그램 데이터가 없습니다.</td>
       </tr>
       <tr>
-        <td>Fatal Error while compiling <i>[name]</i> - bailing details below</td>
-        <td>This message simply means that some error has been discovered but the compiler cannot place what or where (if this happens consistently you may wish to contact <a href="http://help.yoyogames.com/hc/en-us/requests/new" target="_blank">YoYo Games Support</a>          and supply the details that the compiler output window shows)</td>
+        <td><i>[이름]</i> 을 컴파일하는 동안 치명적인 오류가 발생했습니다-아래의 세부 정보</td>
+        <td>이 메시지는 단순히 오류가 발견되었지만 컴파일러가 무엇을 어디에 배치 할 수 없는지를 나타냅니다 (일관되게 발생하는 경우 <a href="http://help.yoyogames.com/hc/en-us/requests/new" target="_blank">YoYo Games Support</a> 에 문의하여 컴파일러 출력 창에 표시되는 세부 정보를 제공 할 수 있음).</td>
       </tr>
       <tr>
-        <td>Recursive macro expansion is not supported</td>
-        <td>You have used recursive macros that refer to each other and constantly expand</td>
+        <td>재귀 매크로 확장은 지원되지 않습니다</td>
+        <td>서로 참조하고 지속적으로 확장하는 재귀 매크로를 사용했습니다.</td>
       </tr>
       <tr>
-        <td>Unable to find TextureGroup <span class="inline">[group]</span></td>
-        <td>This error is usually only found from trying to run a malformed project file (if this happens consistently you may wish to contact <a href="http://help.yoyogames.com/hc/en-us/requests/new" target="_blank">YoYo Games Support</a> and supply the
-          details that the compiler output window shows)</td>
+        <td>TextureGroup <span class="inline">[그룹]</span> 을 찾을 수 없습니다</td>
+        <td>이 오류는 일반적으로 잘못된 프로젝트 파일을 실행하려고 할 때만 발생합니다 (일관되게 발생하는 경우 <a href="http://help.yoyogames.com/hc/en-us/requests/new" target="_blank">YoYo Games Support</a> 에 문의하여 컴파일러 출력 창에 표시되는 세부 정보를 제공 할 수 있음).</td>
       </tr>
       <tr>
-        <td>Wrong to convert <span class="inline">[value]</span> to number</td>
-        <td>You have tried to convert the given value, for example a string, into a number</td>
+        <td><span class="inline">[값]</span> 을 숫자로 변환하지 못했습니다.</td>
+        <td>주어진 값 (예 : 문자열)을 숫자로 변환하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Division by 0</td>
-        <td>You have tried to divide a value by 0</td>
+        <td>0으로 나누기</td>
+        <td>값을 0으로 나누려고했습니다.</td>
       </tr>
       <tr>
-        <td>Invalid object id <span class="inline">[object ID]</span> used</td>
-        <td>You have tried to access an object using an ID value that is incorrect</td>
+        <td>잘못된 개체 ID <span class="inline">[개체 ID]가</span> 사용되었습니다.</td>
+        <td>잘못된 ID 값을 사용하여 오브젝트에 액세스하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Unclosed comment (<span class="inline">/*</span>) at end of script</td>
-        <td>You have created a script comment using<br/>
-          <span class="inline">/* [comment] */</span><br/> but have not supplied the closing comment tag</td>
+        <td>스크립트 끝에서 닫히지 않은 주석 ( <span class="inline">/ *</span> )</td>
+        <td><span class="inline">/ * [comment] * /를</span> 사용하여 스크립트 주석을 작성했지만 닫기 주석 태그를 제공하지 않았습니다.</td>
       </tr>
       <tr>
-        <td>Invalid token</td>
-        <td>You have an invalid character in your game code, which can happen with foreign language characters or Unicode</td>
+        <td>잘못된 토큰</td>
+        <td>게임 코드에 유효하지 않은 문자가 있습니다. 외국어 문자 또는 유니 코드로 발생할 수 있습니다</td>
       </tr>
       <tr>
-        <td>Number <span class="inline">[num]</span> in incorrect format</td>
-        <td>The given number - shown in the error - is not the correct format for the function or operation being performed, for example you supply an integer when a pointer is required</td>
+        <td>잘못된 형식의 숫자 <span class="inline">[num]</span></td>
+        <td>주어진 숫자 (오류로 표시됨)는 수행중인 함수 또는 작업에 올바른 형식이 아닙니다. 예를 들어 포인터가 필요할 때 정수를 제공합니다</td>
       </tr>
       <tr>
-        <td>Unexpected EOF encountered</td>
-        <td>You have reached the end of file unexpectedly while using the File Functions</td>
+        <td>예기치 않은 EOF 발생</td>
+        <td>파일 기능을 사용하는 동안 예기치 않게 파일의 끝에 도달했습니다</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Strings</strong></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <strong>현</strong> </p></td>
       </tr>
       <tr>
-        <td>Unable to Not a string</td>
-        <td>You have tried to use &quot;<span class="inline">!</span>&quot; (not) on a string</td>
+        <td>문자열이 될 수 없습니다</td>
+        <td>문자열에 &quot; <span class="inline">!</span> &quot;(not)를 사용하려고했습니다 <span class="inline">.</span></td>
       </tr>
       <tr>
-        <td>Unable to Negate a string</td>
-        <td>You have tried to negate a string, for example<br/>
-          <span class="inline">string = -string</span></td>
+        <td>문자열을 무효화 할 수 없습니다</td>
+        <td>문자열을 무효화하려고했습니다 (예 : <span class="inline">string = -string</span></td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Scripts, </strong><strong>Functions </strong><strong>and Arguments</strong></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <strong>스크립트,</strong> <strong>함수</strong> <strong>및 인수</strong> </p></td>
       </tr>
       <tr>
-        <td>Wrong number of arguments for function <span class="inline">[function]</span></td>
-        <td>You have supplied too many or too few arguments for the given function</td>
+        <td>함수 <span class="inline">[function]에</span> 대한 인수 수가 잘못되었습니다</td>
+        <td>주어진 함수에 대해 너무 많거나 적은 인수를 제공했습니다</td>
       </tr>
       <tr>
-        <td>Failed to parse action_execute_script() - incorrect number of arguments received</td>
-        <td>The DnD™ action Execute Script has too many or too few arguments for the given script being called</td>
+        <td>action_execute_script () 구문 분석에 실패했습니다. 잘못된 수의 인수가 수신되었습니다.</td>
+        <td>DnD ™ 액션 실행 스크립트에 지정된 스크립트에 대한 인수가 너무 많거나 너무 적습니다.</td>
       </tr>
       <tr>
-        <td>Unknown function <span class="inline">[function]</span> check to see if script is empty</td>
-        <td>A script or function has been called that the compiler does not recognise (this error is usually thrown by empty script asset references since the compiler will strip out these assets on compile)</td>
+        <td>알 수없는 함수 <span class="inline">[function]</span> 스크립트가 비어 있는지 확인</td>
+        <td>컴파일러가 인식하지 못하는 스크립트 또는 함수가 호출되었습니다 (이 오류는 일반적으로 컴파일러가 컴파일 할 때 이러한 자산을 제거하므로 빈 스크립트 자산 참조에 의해 발생 함)</td>
       </tr>
       <tr>
-        <td>Function <span class="inline">[function]</span> expects <span class="inline">n</span> arguments, <span class="inline">a</span> provided</td>
-        <td><span>A function has been given the wrong number of arguments (<span class="inline">n</span>) when a certain number were expected (<span class="inline">a</span>)</span>
-        </td>
+        <td>함수 <span class="inline">[기능]이</span> 기대 <span class="inline">N</span> <span class="inline">인수는 제공된</span></td>
+        <td><span>특정 수를 예상 할 때 함수에 잘못된 수의 인수 ( <span class="inline">n</span> )가 제공되었습니다 ( <span class="inline">a</span> )</span></td>
       </tr>
       <tr>
-        <td>Assignment of an empty value (function does not return anything?)</td>
-        <td>You have tried to assign a return value from a function when that function returns nothing</td>
+        <td>빈 값 할당 (함수는 아무것도 반환하지 않습니까?)</td>
+        <td>해당 함수가 아무것도 리턴하지 않을 때 함수에서 리턴 값을 지정하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Unable to find function <span class="inline">[function]</span>    </td>
-        <td>You have called an unknown function</td>
+        <td>기능을 찾을 수 없습니다 <span class="inline">[function]</span></td>
+        <td>알 수없는 함수를 호출했습니다</td>
       </tr>
       <tr>
-        <td>Calling a function that needs an instance and no instance is available</td>
-        <td><span>The function or script being called is for acting on an instance, but at the time of running no instances exist</span></td>
+        <td>인스턴스가 필요하고 인스턴스가없는 함수 호출</td>
+        <td><span>호출되는 함수 또는 스크립트는 인스턴스에서 작동하기위한 것이지만 실행시 인스턴스가 없습니다.</span></td>
       </tr>
       <tr>
-        <td>Calling a function that needs an other and no other is available</td>
-        <td>You have used the keyword <span class="inline">other</span> outside of the Collision Event or outside of a <span class="inline">with</span> statement</td>
+        <td>다른 것이 필요하고 다른 것이 필요없는 함수 호출</td>
+        <td>당신은 <span class="inline">문으로의</span> 키워드 <span class="inline">다른</span> 충돌 이벤트의 외부 또는 외부 사용했다</td>
       </tr>
       <tr>
-        <td>Argument naming error, <span class="inline">n</span> arguments but no reference found to<span class="inline"> a</span></td>
-        <td>You have given a number of arguments to a script, but fail to reference one of them in the script, for example, your script takes three arguments but you only use arguments <span class="inline">n </span>and <span class="inline">a</span></td>
+        <td>인수 이름 지정 오류, <span class="inline">n 개의</span> 인수이지만 a에 대한 참조가 없습니다 <span class="inline">.</span></td>
+        <td>스크립트에 여러 가지 인수를 주었지만 스크립트에서 그 중 하나를 참조하지 않습니다. 예를 들어 스크립트는 세 개의 인수를 사용하지만 인수 <span class="inline">n</span> 과 <span class="inline">a</span> 만 사용 <span class="inline">합니다.</span></td>
       </tr>
       <tr>
-        <td>Cannot compare arguments</td>
-        <td>You have tried to compare two different argument types, like a string and a real number</td>
+        <td>인수를 비교할 수 없습니다</td>
+        <td>문자열과 실수와 같은 두 가지 다른 인수 유형을 비교하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Unknown function or script <span class="inline">[functions/script]</span> </td>
-        <td>The compiler does not recognise the function or script being called</td>
+        <td>알 수없는 기능 또는 스크립트 <span class="inline">[기능 / 스크립트]</span></td>
+        <td>컴파일러가 호출되는 함수 또는 스크립트를 인식하지 못합니다</td>
       </tr>
       <tr>
-        <td>Cannot use resource name <span class="inline">[resource] </span>as it is not being exported</td>
-        <td>You have tried to access a resource that has not been flagged as part of the project for the platform being compiled to</td>
+        <td>자원 이름 <span class="inline">[자원]</span> 을 내 보내지 않으므로 사용할 수 없습니다.</td>
+        <td>컴파일 할 플랫폼에 대한 프로젝트의 일부로 플래그가 지정되지 않은 자원에 액세스하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Cannot use function/script name for a variable, using <span class="inline">[functions/script]</span></td>
-        <td>You have tried to use either a function name or a script name as a variable, for example:<br/>
-          <span class="inline">string = &quot;Hello World&quot;</span></td>
+        <td><span class="inline">[functions / script]를</span> 사용하여 변수에 대한 함수 / 스크립트 이름을 사용할 수 없습니다</td>
+        <td>함수 이름 또는 스크립트 이름을 변수로 사용하려고했습니다 (예 : <span class="inline">string = &quot;Hello World&quot;</span></td>
       </tr>
       <tr>
-        <td>Cannot use an argument outside a script </td>
-        <td>The built in argument variables can only be used inside a script but you have tried to use them elsewhere</td>
+        <td>스크립트 외부에서 인수를 사용할 수 없습니다</td>
+        <td>내장 인수 변수는 스크립트 내에서만 사용할 수 있지만 다른 곳에서 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td>No references to <span class="inline">argument[num]</span> but references <span class="inline">argument[num]</span></td>
-        <td>You are using a reference to an argument that does not exist but that could map to another argument</td>
+        <td><span class="inline">argument [num]에</span> 대한 참조는 없지만 <span class="inline">argument [num]에</span> 대한 참조</td>
+        <td>존재하지 않지만 다른 인수에 맵핑 될 수있는 인수에 대한 참조를 사용하고 있습니다.</td>
       </tr>
       <tr>
-        <td>Incorrect number of arguments for accessor</td>
-        <td>You have supplied the wrong number of arguments when using an accessor</td>
+        <td>접근 자에 대한 잘못된 인수 수</td>
+        <td>접근자를 사용할 때 잘못된 수의 인수를 제공했습니다</td>
       </tr>
       <tr>
-        <td>Wrong type of arguments for (one of the below):<br/> /, div, mod, +, -, &amp;&amp;, ||, &amp;, |, ^, &lt;&lt;, &gt;&gt;</td>
-        <td>You have supplied the wrong type of argument for the expression being evaluated</td>
+        <td>잘못된 유형의 인수 (아래 중 하나) : /, div, mod, +,-, &amp;&amp;, ||, &amp;, |, ^, &lt;&lt;, &gt;&gt;</td>
+        <td>평가중인 표현식에 잘못된 유형의 인수를 제공했습니다.</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Variables</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>변수</b> </p></td>
       </tr>
       <tr>
-        <td>Using uninitialized variable <i>[var]</i></td>
-        <td>You have tried to use the named variable before it has been initialised</td>
+        <td>초기화되지 않은 변수 사용하기 <i>[var]</i></td>
+        <td>명명 된 변수가 초기화되기 전에 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Variable <i>[var]</i> is read-only</td>
-        <td>You have tried to change the named variable when it cannot be changed</td>
+        <td>변수 <i>[var]</i> 은 읽기 전용입니다</td>
+        <td>명명 된 변수를 변경할 수 없을 때 변경하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Unable to find variable named <i>[var]</i></td>
-        <td>The named variable cannot be found in the current compile</td>
+        <td>이름이 <i>[var] 인</i> 변수를 찾을 수 없습니다</td>
+        <td>현재 컴파일에서 명명 된 변수를 찾을 수 없습니다</td>
       </tr>
       <tr>
-        <td>Malformed variable reference</td>
-        <td>You have tried to reference a variable in the wrong way</td>
+        <td>잘못된 변수 참조</td>
+        <td>변수를 잘못된 방식으로 참조하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Trying to set a read only variable <i>[var]</i></td>
-        <td>You have tried to set a variable that is read only</td>
+        <td>읽기 전용 변수 설정 <i>[var]</i></td>
+        <td>읽기 전용 인 변수를 설정하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Cannot re-declare a built in variable</td>
-        <td>You have tried to declare a local variable using the same name as one of the built in variables</td>
+        <td>내장 변수를 다시 선언 할 수 없습니다</td>
+        <td>내장 변수 중 하나와 동일한 이름을 사용하여 지역 변수를 선언하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Cannot use resource name for a variable</td>
-        <td>You have use the same name as a resource from the resource tree as a local variable</td>
+        <td>변수에 리소스 이름을 사용할 수 없습니다</td>
+        <td>자원 트리의 자원과 동일한 이름을 로컬 변수로 사용했습니다.</td>
       </tr>
       <tr>
-        <td><i>[Variable]</i> is read-only</td>
-        <td>You have tried to use a variable that has been flagged as read only</td>
+        <td><i>[가변]</i> 은 읽기 전용입니다</td>
+        <td>읽기 전용으로 표시된 변수를 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Constants</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>상수</b> </p></td>
       </tr>
       <tr>
-        <td>Cannot set a constant [constant] to a value</td>
-        <td>You have tried to set a constant to a different value</td>
+        <td>상수 [일정]을 값으로 설정할 수 없습니다</td>
+        <td>상수를 다른 값으로 설정하려고했습니다</td>
       </tr>
       <tr>
-        <td>Constant is invalid here</td>
-        <td>You have tried to use a constant somewhere that is not valid for the code being run</td>
+        <td>여기에 상수가 유효하지 않습니다</td>
+        <td>실행중인 코드에 유효하지 않은 상수를 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Cannot assign to [var] - it&#39;s a constant</td>
-        <td>You have tried to assign a new value to the named constant</td>
+        <td>[var]에 할당 할 수 없습니다-상수입니다</td>
+        <td>명명 된 상수에 새 값을 할당하려고했습니다</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Arrays</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>배열</b> </p></td>
       </tr>
       <tr>
-        <td>Array index should not be negative</td>
-        <td>You have tried to access, create, or set an array value using a negative array index</td>
+        <td>배열 인덱스는 음수가 아니어야합니다</td>
+        <td>음의 배열 색인을 사용하여 배열 값에 액세스, 작성 또는 설정하려고했습니다.</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Malformed...</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>흉하게 생긴...</b> </p></td>
       </tr>
       <tr>
-        <td>Malformed Conditional operator</td>
-        <td>You have used an erroneous conditional (ternary) operator or if statement, and not the format:<br/>
-          <span class="inline">[condition] ? [expression1] : [expression2];</span></td>
+        <td>잘못된 조건부 연산자</td>
+        <td><span class="inline">[condition]?</span> 형식이 아닌 잘못된 조건부 (삼항) 연산자 또는 if 문을 사용했습니다 <span class="inline">.</span> <span class="inline">[발현 1] : [발현 2];</span></td>
       </tr>
       <tr>
-        <td>If requires a then statement</td>
-        <td>You have written an if statement and expression to evaluate, but not given any then part to run</td>
+        <td>then 문이 필요한 경우</td>
+        <td>평가할 if 문과 표현식을 작성했지만 실행할 부분이 없습니다.</td>
       </tr>
       <tr>
-        <td>malformed assignment statement</td>
-        <td>In the code you are using an assignment operator wrong</td>
+        <td>잘못된 과제 진술</td>
+        <td>코드에서 할당 연산자를 잘못 사용하고 있습니다.</td>
       </tr>
       <tr>
-        <td>Malformed<br/> if / repeat / while / do / for / with / switch / break / continue / exit<br/> statement
-        </td>
-        <td>The structure of the given statement is incorrect.</td>
+        <td>/ 반복 / while / 수행 / for / with / switch / break / continue / exit 문이 잘못된 경우</td>
+        <td>주어진 문장의 구조가 잘못되었습니다.</td>
       </tr>
       <tr>
-        <td>Malformed post inc or dec statement</td>
-        <td>You have tried to use <span class="inline">[var]++</span> or <span class="inline">[var]--</span> in an illegal way</td>
+        <td>잘못된 게시물 inc 또는 dec 문</td>
+        <td><span class="inline">[var] ++</span> 또는 <span class="inline">[var]-</span> 를 잘못된 방식으로 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Malformed pre inc or dec statement</td>
-        <td>You have tried to use <span class="inline">++[var]</span> or <span class="inline">--[var]</span> in an illegal way</td>
+        <td>부정확 한 사전 또는 12 월 진술</td>
+        <td><span class="inline">++ [var]</span> 또는 <span class="inline">-[var]</span> 를 불법적으로 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Malformed global gml_pragma</td>
-        <td>You have created a wrong global string when using <span class="inline">gml_pragma</span></td>
+        <td>잘못된 글로벌 gml_pragma</td>
+        <td><span class="inline">gml_pragma를</span> 사용할 때 잘못된 전역 문자열을 만들었습니다</td>
       </tr>
       <tr>
-        <td>Malformed PNGCrush gml_pragma</td>
-        <td>You have created a wrong string command for PNGCrush when using <span class="inline">gml_pragma</span></td>
+        <td>잘못된 PNGCrush gml_pragma</td>
+        <td>gml_pragma를 사용할 때 <span class="inline">PNGCrush에</span> 대해 잘못된 문자열 명령을 만들었 <span class="inline">습니다</span></td>
       </tr>
       <tr>
-        <td>Malformed Texgroup.Scale gml_pragma</td>
-        <td>You have create a wrong global string when using <span class="inline">gml_pragma</span></td>
+        <td>잘못된 Texgroup.Scale gml_pragma</td>
+        <td><span class="inline">gml_pragma를</span> 사용할 때 잘못된 전역 문자열을 <span class="inline">만들었습니다</span></td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Switch / Case</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>스위치 / 케이스</b> </p></td>
       </tr>
       <tr>
-        <td>Default cannot be used multiple times in a switch</td>
-        <td>In your switch statement you have defined default: more than once</td>
+        <td>스위치에서 기본값을 여러 번 사용할 수 없습니다</td>
+        <td>switch 문에서 기본값을 두 번 이상 정의했습니다.</td>
       </tr>
       <tr>
-        <td>Clause expression type mismatch (clause expressions should all be the same type)</td>
-        <td>In your switch you are checking for two different constant case types, for example a string in one case and an integer in another</td>
+        <td>조항 표현식 유형이 일치하지 않습니다 (절 표현식은 모두 동일한 유형이어야합니다)</td>
+        <td>스위치에서 두 가지 상수 사례 유형 (예 : 문자열은 다른 경우 정수)을 확인하고 있습니다.</td>
       </tr>
       <tr>
-        <td>Case argument should be a constant</td>
-        <td>You have tried to use a value that does not evaluate to a constant within one of your switch cases</td>
+        <td>대소 문자는 상수 여야합니다</td>
+        <td>스위치 케이스 중 하나에서 상수로 평가되지 않는 값을 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Statement in a switch MUST appear after case or default</td>
-        <td>You have added a statement to a switch outside of either a <span class="inline">case:</span> or <span class="inline">default:</span> call</td>
+        <td>스위치의 문장은 반드시 대소 문자 또는 기본값 뒤에 나타나야합니다</td>
+        <td>또는 <span class="inline">기본 <span class="inline">:</span></span> 당신은 스위치의 <span class="inline">경우</span> 하나의 외부에 문을 추가 한 전화를</td>
       </tr>
       <tr>
-        <td>Duplicate case statement found / original here</td>
-        <td>You have used the same case constant in two different places within a switch (note that the &quot;original here&quot; comment will be on another line and can be clicked to show the original case)</td>
+        <td>중복 된 사례 진술이 발견되었습니다 / 원본</td>
+        <td>스위치 내 두 곳에서 동일한 대소 문자를 사용했습니다 ( &quot;원본 여기&quot;주석은 다른 줄에 있으며 클릭하여 원래 대소 문자를 표시 할 수 있습니다)</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Expressions</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>표현</b> </p></td>
       </tr>
       <tr>
-        <td>No return value from expression (does expression have a return value?)</td>
-        <td>You have tried to assign a return value from an expression to a variable when the expression returns nothing</td>
+        <td>표현식에서 리턴 값이 없습니다. 표현식에 리턴 값이 있습니까?</td>
+        <td>표현식이 아무것도 리턴하지 않을 때 표현식에서 변수로 리턴 값을 지정하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Expecting expression after the &#39;.&#39;</td>
-        <td>You have used the point &quot;<span class="inline">.</span>&quot; notation erroneously and not added an expression afterwords correctly</td>
+        <td>&#39;.&#39;다음에 예상되는 표현식</td>
+        <td>&quot; <span class="inline">.</span> &quot;표기법을 잘못 사용했으며 식 뒤에 단어를 올바르게 추가하지 않았습니다 <span class="inline">.</span></td>
       </tr>
       <tr>
-        <td>Unexpected symbol [symbol] in expression</td>
-        <td>The expression uses a symbol that is not part of the accepted expression symbol set - the symbol in question will be shown</td>
+        <td>식에서 예기치 않은 기호 [기호]</td>
+        <td>이 표현식은 허용되는 표현식 심볼 세트의 일부가 아닌 심볼을 사용합니다. 해당 심볼이 표시됩니다.</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Unknown Operators</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>알 수없는 연산자</b> </p></td>
       </tr>
       <tr>
-        <td>Unknown Pre operator</td>
-        <td>You have tried to use a symbol as a pre-operator when that symbol is not permitted, for example <span class="inline">**[var]</span> or <span class="inline">&gt;&gt;[var]</span> - only <span class="inline">++</span> and <span class="inline">--</span>          are acceptable</td>
+        <td>알 수없는 사전 연산자</td>
+        <td><span class="inline">** [var]</span> 또는 <span class="inline">&gt;&gt; [var]</span> 과 같이 해당 기호가 허용되지 않는 경우 기호를 사전 연산자로 사용하려고했습니다 ( <span class="inline">++</span> 및 <span class="inline">-</span> 만 허용).</td>
       </tr>
       <tr>
-        <td>Unknown Post operator</td>
-        <td>You have tried to use a symbol as a post-operator when that symbol is not permitted, for example <span class="inline">[var]**</span> or <span class="inline">[var]&gt;&gt;</span> - only <span class="inline">++</span> and <span class="inline">--</span>          are acceptable</td>
+        <td>알 수없는 포스트 연산자</td>
+        <td><span class="inline">[var] **</span> 또는 <span class="inline">[var] &gt;&gt;</span> 와 <span class="inline">같이</span> 해당 기호가 허용되지 않는 경우 기호를 사후 연산자로 사용하려고했습니다 ( <span class="inline">++</span> 및 <span class="inline">-</span> 만 허용).</td>
       </tr>
       <tr>
-        <td>Unknown pragma [gml_pragma string]</td>
-        <td>You have used a pragma string that is unknown to the compiler</td>
+        <td>알 수없는 pragma [gml_pragma 문자열]</td>
+        <td>컴파일러에 알려지지 않은 pragma 문자열을 사용했습니다</td>
       </tr>
       <tr>
-        <td>Unknown unary operator</td>
-        <td>You have tried to use an unknown symbol as a unary operator</td>
+        <td>알 수없는 단항 연산자</td>
+        <td>알 수없는 기호를 단항 연산자로 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Unknown binary operator</td>
-        <td>You have tried to use an unknown symbol as a binary operator</td>
+        <td>알 수없는 이진 연산자</td>
+        <td>알 수없는 기호를 이진 연산자로 사용하려고했습니다.</td>
       </tr>
       <tr>
-        <td>Unknown operator [operator]</td>
-        <td>You have tried to use an unknown symbol as an operator (the symbol will be shown in the error)</td>
+        <td>알 수없는 운영자 [운영자]</td>
+        <td>알 수없는 기호를 연산자로 사용하려고했습니다 (기호가 오류에 표시됨)</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Break / Continue</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>휴식 / 계속</b> </p></td>
       </tr>
       <tr>
-        <td>Break used without context</td>
-        <td>You have not used break within a switch or a loop or any other permitted structure</td>
+        <td>문맥없이 사용 된 휴식</td>
+        <td>스위치 나 루프 또는 기타 허용 된 구조 내에서 중단을 사용하지 않았습니다</td>
       </tr>
       <tr>
-        <td>Continue used without context</td>
-        <td>You have not used continue within the correct context</td>
+        <td>문맥없이 계속 사용</td>
+        <td>올바른 컨텍스트 내에서 계속 사용하지 않았습니다</td>
       </tr>
       <tr>
-        <td>continue statement is not allowed at this point</td>
-        <td>You have used continue within a apart of your code where it is not permitted</td>
+        <td>이 시점에서 continue 문은 허용되지 않습니다</td>
+        <td>코드 외부에서 코드가 허용되지 않는 곳에서 계속 사용했습니다.</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Enums</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>열거 형</b> </p></td>
       </tr>
       <tr>
-        <td>enum num is invalid</td>
-        <td>The enum number is invalid for the enum</td>
+        <td>열거 형 숫자가 잘못되었습니다</td>
+        <td>열거 형 번호가 열거 형에 유효하지 않습니다.</td>
       </tr>
       <tr>
-        <td>malformed enum</td>
-        <td>You have not created the enum correctly</td>
+        <td>잘못된 열거 형</td>
+        <td>열거 형을 올바르게 만들지 않았습니다.</td>
       </tr>
       <tr>
-        <td>enum [enum] has already been defined</td>
-        <td>You have tried to define an enum using the same name as another previously defined</td>
+        <td>enum [enum]은 이미 정의되었습니다</td>
+        <td>이전에 정의 된 다른 이름과 동일한 이름을 사용하여 열거 형을 정의하려고했습니다.</td>
       </tr>
       <tr>
-        <td>malformed enum entry</td>
-        <td>The enum has an invalid entry</td>
+        <td>잘못된 열거 형 항목</td>
+        <td>열거 형에 유효하지 않은 항목이 있습니다.</td>
       </tr>
       <tr>
-        <td>enum expression must be an integer constant</td>
-        <td>The enum entry does not evaluate as an integer constant</td>
+        <td>열거 식은 정수 상수 여야합니다</td>
+        <td>열거 형 항목이 정수 상수로 평가되지 않습니다</td>
       </tr>
       <tr>
-        <td>enum reference [key] does not exist in [enum]</td>
-        <td>You have tried to reference an enum entry using a key that has not previously been defined for that enum</td>
+        <td>열거 형 참조 [key]가 [enum]에 없습니다</td>
+        <td>해당 열거 형에 대해 이전에 정의되지 않은 키를 사용하여 열거 형 항목을 참조하려고했습니다.</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Expected Symbols / Values</strong></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <strong>예상되는 기호 / 값</strong> </p></td>
       </tr>
       <tr>
-        <td>Symbol ( expected<br/> Symbol ) expected<br/> Symbol , or ) expected<br/> Symbol { expected<br/> Symbol } expected<br/> Symbol , or } expected<br/> Symbol : expected<br/> Symbol ; expected<br/> Symbol [ expected<br/> symbol ] expected<br/> Symbol
-          , or ] expected</td>
-        <td>You have not used a required symbol when writing your code</td>
+        <td>Symbol (예상 된 Symbol) 예상 된 Symbol 또는) 예상 된 Symbol {예상 된 Symbol} 예상 된 Symbol 또는} 예상 된 Symbol : 예상 된 Symbol; 예상 기호 [예상 기호] 예상 기호 또는] 예상</td>
+        <td>코드를 작성할 때 필수 기호를 사용하지 않았습니다</td>
       </tr>
       <tr>
-        <td>Expected id or string</td>
-        <td>You have used a value that is not either a layer ID or a layer name - as a string - in one of the Layer functions</td>
+        <td>예상되는 ID 또는 문자열</td>
+        <td>레이어 함수 중 하나에서 레이어 ID 또는 레이어 이름이 아닌 값을 문자열로 사용했습니다.</td>
       </tr>
       <tr>
-        <td>keyword Until expected</td>
-        <td>You have created a do... until loop but neglected to supply an until expression</td>
+        <td>키워드까지 예상</td>
+        <td>do ... until 루프를 작성했지만 until 표현식을 제공하지 않았습니다.</td>
       </tr>
       <tr>
-        <td>Function name expected</td>
-        <td>You have used something other than a function name in your code where a function should go</td>
+        <td>예상되는 기능 이름</td>
+        <td>코드에서 함수가 아닌 다른 함수 이름을 사용했습니다.</td>
       </tr>
       <tr>
-        <td>variable name expected</td>
-        <td>You have supplied a name that is not a variable name where one is expected</td>
+        <td>예상되는 변수 이름</td>
+        <td>예상되는 변수 이름이 아닌 이름을 제공했습니다.</td>
       </tr>
       <tr>
-        <td>Assignment operator expected</td>
-        <td>You have created an assignment which expects an operator but none has been supplied</td>
+        <td>할당 연산자 예상</td>
+        <td>운영자가 필요하지만 제공되지 않은 지정을 작성했습니다.</td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Android Exclusive</b></p>
-        </td>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><p> <b>안드로이드 독점</b> </p></td>
       </tr>
       <tr>
-        <td>Android ARM ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the ARM toolchain is incorrect and does not exist.</td>
+        <td>Android ARM ToolChain 디렉토리 [dir]이 없습니다</td>
+        <td>ARM 툴체인에 대한 Android 환경 설정에 제공된 링크가 올바르지 않으며 존재하지 않습니다.</td>
       </tr>
       <tr>
-        <td>Android MIPS ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the MIPS toolchain is incorrect and does not exist.</td>
+        <td>Android MIPS ToolChain 디렉토리 [dir]이 존재하지 않습니다</td>
+        <td>MIPS 툴체인의 Android 환경 설정에 제공된 링크가 올바르지 않으며 존재하지 않습니다.</td>
       </tr>
       <tr>
-        <td>Android x86 ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the x86 toolchain is incorrect and does not exist.</td>
+        <td>Android x86 ToolChain 디렉토리 [dir]이 존재하지 않습니다</td>
+        <td>x86 툴체인에 대한 Android 환경 설정에 제공된 링크가 올바르지 않으며 존재하지 않습니다.</td>
       </tr>
       <tr>
-        <td>Android NDK directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the Android NDK is incorrect and does not exist.</td>
+        <td>Android NDK 디렉토리 [dir]이 존재하지 않습니다</td>
+        <td>Android NDK에 대한 Android 환경 설정에 제공된 링크가 올바르지 않으며 존재하지 않습니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Additional_Information\Errors\Compiler_Errors.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Error_Reporting.htm">Error Reporting</a></div>
-        <div style="float:right">Next: <a href="Runner_Errors.htm">Runner Errors</a></div>
+        <div style="float:left">뒤로: <a href="../Error_Reporting.htm">오류보고</a></div>
+        <div style="float:right">다음: <a href="Runner_Errors.htm">러너 오류</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Compiler Errors
@@ -535,4 +496,4 @@ Compiler Errors
 compiler_errors
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Game Options">
-        <span>Game Options</span>
+        <span>게임 옵션</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,64 +80,53 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Game Options</h1>
-  <p>The Game Options are split into two sections, Main Options and the Platform Settings. The main options start with the <strong>General</strong> options, which is where you can set certain things that will affect the game regardless of the platform that
-    it is being designed to run on.</p>
-  <p><img alt="General Game Options" class="center" src="../assets/Images/Settings/Game_Options/General_Options.png"/>The window has the following sections:</p>
+  <h1>게임 옵션</h1>
+  <p>게임 옵션은 메인 옵션과 플랫폼 설정의 두 섹션으로 나뉩니다. 기본 옵션은 <strong>일반</strong> 옵션으로 시작합니다. <strong>일반</strong> 옵션은 실행하도록 설계된 플랫폼에 관계없이 게임에 영향을 줄 특정 사항을 설정할 수 있습니다.</p>
+  <p><img alt="General Game Options" class="center" src="../assets/Images/Settings/Game_Options/General_Options.png"/>이 창에는 다음과 같은 섹션이 있습니다.</p>
   <ul class="colour">
-    <li><strong>Use DnD™ As default Script Type</strong>: When this option is ticked, all new scripts and object events will be open using the DnD™ editor rather than the code editor.</li>
-    <li><strong>Game Frames Per Second</strong>: This value sets the limit on the number of frames per-second that GameMaker Studio 2 should try to maintain your games when running. This value represents the number of times that the game loop will run in
-      one second (a single game loop is considered a single &quot;frame&quot;) and is set to a default value of 60, although 30 is often used too. There are many arguments about which room speed is the ideal, but the actual answer depends on what type
-      of game you are making, the size of the room, the number of instances and how intensive the code is. For example, if you have a large room and a room speed of 30, the game may appear &quot;choppy&quot; as the larger the area you are looking at,
-      the easier it is for the eye to perceive low room speeds, but if the game is intensive then setting the room speed to 120 may cause the game to &quot;lag&quot; as the fps drops due to the amount of processing being done. So take care with this value
-      and try to always adjust it to what your game needs.</li>
-    <li><strong>Default Draw Colour</strong>: The default colour for drawing text or forums (and other things) when no colour has been set using code.</li>
-    <li><strong>Default Draw Colour Outside the room region</strong>: The default colour that will be used to clear the background of any area outside of the game room.</li>
-    <li><strong>Generate Project Images</strong>: Clicking this will open the Project Image Generator tool.</li>
-    <li><strong>Project Start Date</strong>: The date that the project was initiated.</li>
-    <li><strong>Project Use Time</strong>: The length of time that has passed since you initiated the project.</li>
-    <li><strong>Project GUID</strong>: This is the unique identifier that is created for each project within GameMaker Studio 2. If you wish to change this you can click the Create New GUID button to generate a new one.</li>
-    <li><strong>Generate mipmaps for separate texture pages</strong>: This option will have GameMaker Studio 2 create mipmaps for those sprites that have flagged the Seperate Texture Page option in the Texture settings of the Sprite Editor. Enabling mipmapping
-      means that the original texture page for the sprite is to be scaled and filtered into multiple resolutions within the texture file. This is normally off, but if you are using views to zoom in or out on large areas of the game room, or you are working
-      with a 3D game, then you may want to enable this and then use the Mipmapping Functions to adjust how the game deals with the different mipmap levels. Note that if you are not flagging sprites as using individual texture pages, you can still enable
-      mipmapping on a per-texture group basis from the Texture Group Manager. This option is off by default.</li>
-    <li><strong>Steam ID</strong>: If you are creating a game that is to be distributed through Steam, then you need to supply the Steam App ID here. Make sure you have added the path to the Steamworks SDK in the Platform Preferences when using this option,
-      and ensure that you have everything set up correctly on the Steamworks dashboard.</li>
-    <li><strong>Enable Source Control</strong>: If you wish the project to be under SCM (Source Control Management) then you need to check this. It is off by default (see here for more information on source control).</li>
-    <li><strong>Author</strong>: The name of the game author (or publisher or studio).</li>
-    <li><strong>Project Last Changed</strong>: This section simply shows the date/time stamp for the last time that the project was changed (this is not editable).</li>
-    <li><strong>Accept Spine Licence</strong>: Here you can check the box to be shown the Spine Runtime Licence and accept it. This will permit you to use Spine sprites in your game (this licence will also be shown the first time you try to add a Spine sprite
-      to your project and haven&#39;t checked the licence here beforehand).</li>
+    <li><strong>DnD ™를 기본 스크립트 유형으로 사용</strong> :이 옵션을 선택하면 모든 새 스크립트 및 개체 이벤트가 코드 편집기가 아닌 DnD ™ 편집기를 사용하여 열립니다.</li>
+    <li><strong>초당 게임 프레임</strong> :이 값은 GameMaker Studio 2가 실행 중 게임을 유지하려고하는 초당 프레임 수의 제한을 설정합니다. 이 값은 게임 루프가 1 초 안에 실행되는 횟수 (단일 게임 루프는 단일 &quot;프레임&quot;으로 간주 됨)를 나타내며 기본값은 60으로 설정되지만 30도 자주 사용됩니다. 어떤 룸 속도가 이상적인 지에 대한 많은 논증이 있지만 실제 답변은 제작중인 게임 유형, 룸 크기, 인스턴스 수 및 코드 강도에 따라 다릅니다. 예를 들어, 넓은 방과 30의 방 속도가있는 경우,보고있는 영역이 클수록 게임이 &quot;고르지 않은&quot;것처럼 보일 수 있지만, 눈이 낮은 방 속도를 더 쉽게 인식 할 수 있지만 게임이 처리량이 많은 경우 실내 속도를 120으로 설정하면 fps가 떨어질 때 게임이 &quot;지연&quot;될 수 있습니다. 따라서이 값에주의를 기울이고 항상 게임에 필요한 값으로 조정하십시오.</li>
+    <li><strong>기본 그리기 색상</strong> : 코드를 사용하여 색상을 설정하지 않은 경우 텍스트 또는 포럼 (및 기타 항목)을 그리기위한 기본 색상입니다.</li>
+    <li><strong>룸 영역 외부의 기본 그리기 색상</strong> : 게임 룸 외부 영역의 배경을 지우는 데 사용되는 기본 색상입니다.</li>
+    <li><strong>프로젝트 이미지 생성</strong> : 클릭하면 프로젝트 이미지 생성기 도구가 열립니다.</li>
+    <li><strong>프로젝트 시작 날짜</strong> : 프로젝트가 시작된 날짜입니다.</li>
+    <li><strong>프로젝트 사용 시간</strong> : 프로젝트를 시작한 후 경과 한 시간입니다.</li>
+    <li><strong>프로젝트 GUID</strong> : GameMaker Studio 2 내의 각 프로젝트에 대해 생성 된 고유 식별자입니다.이를 변경하려면 Create New GUID 버튼을 클릭하여 새 GUID를 생성 할 수 있습니다.</li>
+    <li><strong>별도의 텍스처 페이지를위한 밉맵 생성</strong> :이 옵션은 GameMaker Studio 2가 스프라이트 에디터의 텍스처 설정에서 텍스처 페이지 분리 옵션을 표시 한 스프라이트에 대한 밉맵을 생성하게합니다. 밉 매핑을 활성화하면 스프라이트에 대한 원본 텍스처 페이지의 크기가 조정되고 텍스처 파일 내에서 여러 해상도로 필터링됩니다. 이것은 일반적으로 꺼져 있지만 뷰를 사용하여 게임 룸의 넓은 영역을 확대 또는 축소하거나 3D 게임으로 작업하는 경우이를 활성화 한 다음 Mipmapping 기능을 사용하여 게임은 다양한 밉맵 레벨을 처리합니다. 스프라이트에 개별 텍스처 페이지를 사용하는 것으로 플래그를 지정하지 않은 경우에도 텍스처 그룹 관리자에서 텍스처 그룹별로 밉 매핑을 활성화 할 수 있습니다. 이 옵션은 기본적으로 해제되어 있습니다.</li>
+    <li><strong>Steam ID</strong> : <strong>Steam을</strong> 통해 배포 할 게임을 만들려면 여기에 Steam 앱 ID를 제공해야합니다. 이 옵션을 사용할 때 플랫폼 환경 설정에서 Steamworks SDK에 대한 경로를 추가했는지 확인하고 Steamworks 대시 보드에 모든 것이 올바르게 설정되어 있는지 확인하십시오.</li>
+    <li><strong>소스 제어 사용</strong> : 프로젝트를 SCM (소스 제어 관리)하에 두려면이를 확인해야합니다. 기본적으로 꺼져 있습니다 (소스 제어에 대한 자세한 내용은 여기 참조).</li>
+    <li><strong>Author</strong> : 게임 저자 (또는 퍼블리셔 또는 스튜디오)의 이름입니다.</li>
+    <li><strong>Project Last Changed</strong> :이 섹션에는 <strong>프로젝트가 마지막으로 변경된</strong> 시간 / 날짜 스탬프가 표시됩니다 (편집 할 수 없음).</li>
+    <li><strong>Spine 라이센스 수락</strong> : 여기에서 Spine 런타임 라이센스가 표시되도록 확인란을 선택하고 동의 할 수 있습니다. 이를 통해 게임에서 스파인 스프라이트를 사용할 수 있습니다 (이 라이센스는 프로젝트에 스파인 스프라이트를 처음 추가하려고 할 때 표시되며 사전에 라이센스를 확인하지 않은 상태입니다).</li>
   </ul>
-  <p>GameMaker Studio 2 may also require certain add-ons to be installed as extensions for your project if you wish to use extended features like leaderboards or in-app-purchases on specific platforms. This is handled from the <strong>Add-ons</strong> section:</p>
-  <p><img alt="Add-on Game Options" class="center" src="../assets/Images/Settings/Game_Options/General_Addons.png"/>Clicking the &quot;<strong>Download</strong>&quot; button will download the extension and install it in the current project for you, ready
-    to use, and you can click on the Delete button <img alt="Delete Add-on Icon" class="icon" src="../assets/Images/Icons/Icon_DeleteChannel.png"/> to remove the add-on extension from the project if required.</p>
-  <p>The <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> will also have other Game Options available to you depending on the target platforms that are available for the <a href="../Setting_Up_And_Version_Information/GMS2_Version_Information.htm">licence</a>    that you have and not all of them may be available or visible.</p>
-  <p>The following platform specific game options exist:</p>
+  <p>또한 특정 플랫폼에서 리더 보드 또는 인앱 구매와 같은 확장 된 기능을 사용하려면 GameMaker Studio 2에서 특정 애드온을 프로젝트의 확장으로 설치해야 할 수도 있습니다. 이것은 <strong>애드온</strong> 섹션에서 처리됩니다.</p>
+  <p><img alt="Add-on Game Options" class="center" src="../assets/Images/Settings/Game_Options/General_Addons.png"/>&quot; <strong>다운로드</strong> &quot;버튼을 클릭하면 확장 프로그램이 다운로드되어 현재 프로젝트에 설치되어 바로 사용할 수 있으며 삭제 버튼을 클릭 할 수 있습니다 필요한 경우 프로젝트에서 추가 기능 확장을 제거합니다.</p>
+  <p>또한 <a href="../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 에는 보유하고있는 <a href="../Setting_Up_And_Version_Information/GMS2_Version_Information.htm">라이센스에</a> 사용 가능한 대상 플랫폼에 따라 다른 게임 옵션을 사용할 수 있으며 모든 게임 옵션을 사용할 수있는 것은 아닙니다.</p>
+  <p>다음과 같은 플랫폼 별 게임 옵션이 있습니다.</p>
   <ul class="colour">
-    <li><a href="Game_Options/Windows.htm">Windows</a></li>
-    <li><a href="Game_Options/macOS.htm">macOS</a></li>
-    <li><a href="Game_Options/Ubuntu.htm">Ubuntu</a></li>
+    <li><a href="Game_Options/Windows.htm">윈도우</a></li>
+    <li><a href="Game_Options/macOS.htm">맥 OS</a></li>
+    <li><a href="Game_Options/Ubuntu.htm">우분투</a></li>
     <li><a href="Game_Options/Windows_UWP.htm">Windows UWP</a></li>
     <li><a href="Game_Options/HTML5.htm">HTML5</a></li>
-    <li><a href="Game_Options/Amazon_Fire.htm">Amazon Fire</a></li>
-    <li><a href="Game_Options/Android.htm">Android</a></li>
+    <li><a href="Game_Options/Amazon_Fire.htm">아마존 파이어</a></li>
+    <li><a href="Game_Options/Android.htm">기계적 인조 인간</a></li>
     <li><a href="Game_Options/iOS.htm">iOS</a></li>
     <li><a href="Game_Options/tvOS.htm">tvOS</a></li>
   </ul>
-  <p class="note"><strong>NOTE</strong>: The various <strong>Console Game Options</strong> are not listed here due to the different legal restrictions maintained by the different companies. If you have a Console Licence, then you can get this information form the
-    <a href="https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support">YoYo Games Helpdesk</a>, but you must first contact YoYo Games with your console ID email and request permission to view the different sections.</p>
+  <p class="note"><strong>참고</strong> : 회사마다 다른 법적 제한 사항으로 인해 다양한 <strong>콘솔 게임 옵션</strong> 이 여기에 표시되지 않습니다. 콘솔 라이센스가있는 경우이 정보를 <a href="https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support">YoYo Games Helpdesk</a> 에서 얻을 수 있지만 먼저 콘솔 ID 이메일로 YoYo Games에 문의하여 다른 섹션을 볼 수있는 권한을 요청해야합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings\Game_Options.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Game_Settings.htm">Game Settings</a></div>
-        <div style="float:right">Next: <a href="Configurations.htm">Configurations</a></div>
+        <div style="float:left">뒤로: <a href="Game_Settings.htm">게임 설정</a></div>
+        <div style="float:right">다음: <a href="Configurations.htm">구성</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Game Settings
@@ -146,4 +135,4 @@ Game Settings
 game_settings
 -->
 
-</body></html>
+</body></html> 

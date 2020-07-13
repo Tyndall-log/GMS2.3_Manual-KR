@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="The Sequence Object Struct">
-        <span>The Sequence Object Struct</span>
+        <span>시퀀스 객체 구조</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,91 +80,83 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Sequence Object Struct</h1>
-  <p>A sequence object is the name given to the struct retrieved from the sequence asset as defined in the asset browser for your game. This <a href="../../../../GML_Overview/Structs.htm">struct</a> will have the following properties that can be changed:</p>
+  <h1>시퀀스 객체 구조</h1>
+  <p>시퀀스 오브젝트는 게임의 자산 브라우저에 정의 된 시퀀스 자산에서 검색된 구조체에 부여 된 이름입니다. 이 <a href="../../../../GML_Overview/Structs.htm">구조체</a> 에는 다음과 같은 속성을 변경할 수 있습니다.</p>
   <ul class="colour">
-    <li><tt>name</tt>: This is the name of the sequence as a string and you can get or set this value as required. Note that sequences created using the function <a href="../sequence_create.htm"><tt>sequence_create()</tt></a> will
-      not have a name and this will simply be an empty string &quot;&quot;.<tt></tt></li>
-    <li><tt>loopmode</tt>: This is the playback mode of the sequence object and can be get or set. It will return (or can be set to) the following constants:</li>
+    <li><tt>name</tt> : 문자열의 시퀀스 이름이며 필요에 따라이 값을 가져 오거나 설정할 수 있습니다. <a href="../sequence_create.htm"><tt>sequence_create ()</tt></a> 함수를 사용하여 생성 된 <a href="../sequence_create.htm"><tt>시퀀스</tt></a> 는 이름을 갖지 않으며 단순히 빈 문자열 &quot;&quot;이됩니다.</li>
+    <li><tt>loopmode</tt> : 시퀀스 객체의 재생 모드이며 가져 오거나 설정할 수 있습니다. 다음 상수를 반환하거나 설정할 수 있습니다.</li>
   </ul>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>일정한</th>
+        <th>기술</th>
+        <th>값</th>
       </tr>
       <tr>
         <td><tt>seqplay_oneshot</tt></td>
-        <td>The sequence will play once then stop when finished.</td>
+        <td>시퀀스는 한 번 재생 된 후 완료되면 중지됩니다.</td>
         <td>0</td>
       </tr>
       <tr>
         <td><tt>seqplay_loop</tt></td>
-        <td>The sequence will loop, with the playhead going back to the start when it reaches the end of the playback region.</td>
+        <td>재생 영역의 끝에 도달하면 재생 헤드가 시작 부분으로 돌아 가면서 시퀀스가 ​​반복됩니다.</td>
         <td>1</td>
       </tr>
       <tr>
         <td><tt>seqplay_pingpong</tt></td>
-        <td>The sequence will loop, with the playhead reversing direction when it reaches the end of the playback region.</td>
+        <td>재생 영역 끝에 도달하면 재생 헤드가 방향을 바꾸면서 시퀀스가 ​​반복됩니다.</td>
         <td>2</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <ul class="colour">
-    <li><tt>playbackSpeed</tt>: This specifies the playback speed of the sequence, which is interpreted as either frames-per-second or frames-per-game-frame depending on the <tt>playbackSpeedType</tt> (see below). You can get or
-      set this value.</li>
-    <li><tt>playbackSpeedType</tt>: This specifies how the <tt>playbackSpeed</tt> should be interpreted and you can get or set this value. You can use one of the following constants to set the value (or one of these constants will
-      be returned if checking the property):</li>
+    <li><tt>playbackSpeed</tt> : 시퀀스의 재생 속도를 지정 <tt>합니다</tt> . 이는 PlaybackSpeedType에 따라 초당 프레임 또는 게임당 프레임으로 해석 <tt>됩니다</tt> (아래 참조). 이 값을 얻거나 설정할 수 있습니다.</li>
+    <li><tt>playbackSpeedType</tt> : <tt>playbackSpeed의</tt> 해석 방법을 지정하고이 값을 얻거나 설정할 수 있습니다. 다음 상수 중 하나를 사용하여 값을 설정할 수 있습니다 (또는 속성을 확인하면 이러한 상수 중 하나가 반환 됨).</li>
   </ul>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>일정한</th>
+        <th>기술</th>
+        <th>값</th>
       </tr>
       <tr>
         <td><tt>spritespeed_framespersecond</tt></td>
-        <td>Specifies that <tt>playbackSpeed</tt> should be interpreted as frames-per-second</td>
+        <td><tt>playbackSpeed</tt> 가 초당 프레임으로 해석되도록 지정합니다</td>
         <td>0</td>
       </tr>
       <tr>
         <td><tt>spritespeed_framespergameframe</tt></td>
-        <td>Specifies that <tt>playbackSpeed</tt> should be interpreted as frames-per-game-frame.</td>
+        <td><tt>playbackSpeed</tt> 가 게임당 프레임으로 해석되도록 지정합니다.</td>
         <td>1</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <ul class="colour">
-    <li><tt>length</tt>: The length of the sequence in frames. You can get or set this value, but note that making a sequence shorter may cause issues if a sequence instance referencing this sequence has its playhead set to past the new length.</li>
-    <li><tt>volume</tt>: This is a scalar value from 0 to 1 that is used to scale the volume of all audio tracks in the sequence. You can get or set this value and it will modify the global audio output for all tracks - for example, if you have an audio track
-      with a volume of 0.8 and then set the sequence <tt>volume</tt> property to 0.5, the audio track will have a final volume of 0.4.</li>
-    <li><tt>xorigin</tt>: This is the origin of the sequence along the X axis. You can get or set this value.</li>
-    <li><tt>yorigin</tt>: This is the origin of the sequence along the Y axis. You can get or set this value.</li>
-    <li><tt>messageEventKeyframes</tt>: This allows access to the message event keyframes for the sequence. You can get or set these message events, and when getting this property an array of keyframe structs is returned, and for setting the property you
-      should supply an array of keyframe structs. For more information, please see the page on <a href="../Sequence_Events_Moments_Broadcast.htm">Sequence Events and Moments</a>.</li>
-    <li><tt>momentKeyframes</tt>: This allows access to the moment event keyframes for the sequence. You can get or set these moment events, and when getting this property an array of keyframe structs is returned, and for setting the property you should supply
-      an array of keyframe structs. For more information, please see the page on <a href="../Sequence_Events_Moments_Broadcast.htm">Sequence Events and Moments</a>.</li>
-    <li><tt>tracks</tt>: This allows access to the list of <b>asset tracks</b> on the top level of the sequence. You can get or set this property, and when getting this property an array of track structs is returned, and for setting
-      the property you should supply an array of track structs. For more information, please see the section below on <b>Track Structs</b>.</li>
+    <li><tt>length</tt> : 시퀀스의 길이 (프레임). 이 값을 가져 오거나 설정할 수 있지만이 시퀀스를 참조하는 시퀀스 인스턴스에 재생 헤드가 새 길이를지나도록 설정된 경우 시퀀스를 짧게 만들면 문제가 발생할 수 있습니다.</li>
+    <li><tt>volume</tt> : 시퀀스의 모든 오디오 트랙의 음량을 조절하는 데 사용되는 0에서 1까지의 스칼라 값입니다. 이 값을 가져 오거나 설정할 수 있으며 모든 트랙의 글로벌 오디오 출력을 수정합니다. 예를 들어, 볼륨이 0.8 인 오디오 트랙이 있고 시퀀스 <tt>볼륨</tt> 속성을 0.5로 설정하면 오디오 트랙이 최종 0.4의 부피.</li>
+    <li><tt>xorigin</tt> : 이것은 X 축을 따른 시퀀스의 원점입니다. 이 값을 얻거나 설정할 수 있습니다.</li>
+    <li><tt>yorigin</tt> : Y 축을 따른 시퀀스의 원점입니다. 이 값을 얻거나 설정할 수 있습니다.</li>
+    <li><tt>messageEventKeyframes</tt> : 시퀀스의 메시지 이벤트 키 프레임에 액세스 할 수 있습니다. 이러한 메시지 이벤트를 가져 오거나 설정할 수 있으며이 속성을 가져올 때 키 프레임 구조체 배열이 반환되며 속성을 설정하려면 키 프레임 구조체 배열을 제공해야합니다. 자세한 내용은 <a href="../Sequence_Events_Moments_Broadcast.htm">시퀀스 이벤트 및 모멘트</a> 페이지를 참조하십시오.</li>
+    <li><tt>momentKeyframes</tt> : 시퀀스의 모멘트 이벤트 키 프레임에 액세스 할 수 있습니다. 이러한 모멘트 이벤트를 가져 오거나 설정할 수 있으며이 속성을 가져올 때 키 프레임 구조체 배열이 반환되고 속성을 설정하려면 키 프레임 구조체 배열을 제공해야합니다. 자세한 내용은 <a href="../Sequence_Events_Moments_Broadcast.htm">시퀀스 이벤트 및 모멘트</a> 페이지를 참조하십시오.</li>
+    <li><tt>tracks</tt> : 시퀀스의 최상위 레벨에있는 <b>자산 트랙</b> 목록에 액세스 할 수 있습니다. 이 속성을 가져 오거나 설정할 수 있으며이 속성을 가져올 때 트랙 구조체 배열이 반환되며 속성을 설정하려면 트랙 구조체 배열을 제공해야합니다. 자세한 내용은 아래의 <b>트랙 구조</b> 섹션을 참조하십시오.</li>
   </ul>
-  <p>Note that if you want to access the properties of a sequence that has been created in the asset browser, you must first call the function <a href="../sequence_get.htm"><tt>sequence_get()</tt></a> on the asset index to retrieve
-    the sequence object struct. Also note that any changes made to this sequence struct will mean that all further instances of this sequence asset will also have thse changes, and they will be maintained as long as the game is running, even if you call
-    the <span class="inline">game_restart()</span> function.</p>
+  <p>자산 브라우저에서 생성 된 시퀀스의 속성에 액세스하려면 먼저 자산 인덱스에서 <a href="../sequence_get.htm"><tt>sequence_get ()</tt></a> 함수를 호출하여 시퀀스 객체 구조체를 검색해야합니다. 또한이 시퀀스 구조를 변경하면이 시퀀스 자산의 모든 추가 인스턴스에도 변경 사항이 적용되며 <span class="inline">game_restart ()</span> 함수를 호출하더라도 게임이 실행되는 동안 유지됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Asset_Management\Sequences\Sequence_Structs\The_Sequence_Object_Struct.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="The_Sequence_Instance_Struct.htm">The Sequence Instance Struct</a></div>
+        <div style="float:left">뒤로: <a href="../Sequences.htm">시퀀스</a></div>
+        <div style="float:right">다음: <a href="The_Sequence_Instance_Struct.htm">시퀀스 인스턴스 구조</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Sequence Object Struct
@@ -189,4 +181,4 @@ tracks
 sequence_object
 -->
 
-</body></html>
+</body></html> 

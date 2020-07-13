@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Set View Variable">
-        <span>Set View Variable</span>
+        <span>뷰 변수 설정</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,93 +80,84 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set View Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/i_Cameras_Set_View_Variable.png"/> Set View Variable</h1>
-  <p>This action permits you to set certain built in variables related to how the <b>view port</b> will display camera views of the room. You select the view port variable to edit, then give the view port to target (from 0 to 7) and finally the new value
-    for the variable. The view port is the area of the screen that will be used to draw a given camera view (as set up in the room editor), and the different variables that you are able to set in this way are outlined in the table below:</p>
+  <h1>뷰 변수 설정</h1>
+  <p>이 조치를 통해 <b>뷰 포트</b> 가 방의 카메라 뷰를 표시하는 방법과 관련된 특정 내장 변수를 설정할 수 있습니다. 편집 할 뷰 포트 변수를 선택한 다음 뷰 포트를 대상 (0 ~ 7)에 제공하고 마지막으로 변수의 새 값을 지정하십시오. 뷰 포트는 룸 편집기에서 설정 한대로 주어진 카메라 뷰를 그리는 데 사용되는 화면 영역이며,이 방법으로 설정할 수있는 다양한 변수는 아래 표에 요약되어 있습니다.</p>
   <table>
     <tbody>
       <tr>
-        <th>Variable</th>
-        <th>Description</th>
+        <th>변하기 쉬운</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td><span class="inline">Camera</span></td>
-        <td>This is for setting the viewport to show a different Camera View. You need to supply the unique ID value of the camera to change to (see <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">here</a> for
-          more information).</td>
+        <td><span class="inline">카메라</span></td>
+        <td>다른 카메라 뷰를 표시하도록 뷰포트를 설정하기위한 것입니다. 로 변경하려면 카메라의 고유 ID 값을 제공해야합니다 (자세한 내용은 <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">여기</a> 참조).</td>
       </tr>
       <tr>
-        <td><span class="inline">Visibility</span></td>
-        <td>This is the visibility toggle for the view port and expects a value of <tt>true</tt> or <tt>false</tt> where setting it to <tt>true</tt> will make the view port visible (ie: it will draw to the screen), and a value of <tt>false</tt> will not draw
-          anything to the screen.</td>
+        <td><span class="inline">시계</span></td>
+        <td>이 뷰 포트에 대한 가시성 전환하고 <tt>true로</tt> 설정하면 뷰 포트가 보이게됩니다 <tt>true</tt> 또는 <tt>false</tt> 값 예상 (예 :가 화면에 그리는 것), <tt>거짓의</tt> 값은 아무것도 그리지 않습니다 화면.</td>
       </tr>
       <tr>
-        <td><span class="inline">View Port X Coordinate</span></td>
-        <td>This is the X position of the view port within the game window. Note though that is is only really required when more than one view port is active - for example to create a split screen effect - and if used when only one port is active you get
-          unexpected results.</td>
+        <td><span class="inline">포트 X 좌표보기</span></td>
+        <td>게임 창 내에서 뷰 포트의 X 위치입니다. 분할 화면 효과 만들기와 같이 둘 이상의 뷰 포트가 활성화 된 경우에만 필요하며 포트가 하나만 활성화 된 경우 사용하면 예기치 않은 결과가 발생합니다.</td>
       </tr>
       <tr>
-        <td><span class="inline">View Port Y Coordinate</span></td>
-        <td>This is the Y position of the view port within the game window. Note though that is is only really required when more than one view port is active - for example to create a split screen effect - and if used when only one port is active you get
-          unexpected results.</td>
+        <td><span class="inline">포트 Y 좌표보기</span></td>
+        <td>게임 창 내에서 뷰 포트의 Y 위치입니다. 분할 화면 효과 만들기와 같이 둘 이상의 뷰 포트가 활성화 된 경우에만 필요하며 포트가 하나만 활성화 된 경우 사용하면 예기치 않은 결과가 발생합니다.</td>
       </tr>
       <tr>
-        <td><span class="inline">View Port Width</span></td>
-        <td>This is the width (in pixels) of the view port. The width of the view port (or combined view ports if more than one are active) define the width of the game window or background canvas at the start of the game, so changing this value after the
-          game has started <i>will have no visible effect on the game window size</i> unless called along with the GML function <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_set_size.htm"><tt>window_set_size()</tt></a>.
-          Also note that if you have a larger or smaller port size than that assigned to the camera, then the camera view will be scaled down - or up - to fit.</td>
+        <td><span class="inline">포트 너비보기</span></td>
+        <td>뷰 포트의 너비 (픽셀)입니다. 뷰 포트의 너비 (또는 둘 이상의 활성화 된 경우 결합 된 뷰 포트)는 게임 시작시 게임 창 또는 배경 캔버스의 너비를 정의하므로 게임이 시작된 후이 값을 변경해 <i>도 아무런 영향을 미치지 않습니다.</i> GML 함수 <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_set_size.htm"><tt>window_set_size ()</tt></a> 와 함께 호출되지 않는 한 <i>게임 창 크기</i> 또한 카메라에 할당 된 것보다 크거나 작은 포트 크기가 있으면 카메라보기의 크기가 축소 또는 확대됩니다.</td>
       </tr>
       <tr>
-        <td><span class="inline">View Port Height</span></td>
-        <td>This is the height (in pixels) of the view port. The height of the view port (or combined view ports if more than one are active) define the height of the game window or background canvas at the start of the game, so changing this value after
-          the game has started <i>will have no visible effect on the game window size</i> unless called along with the GML function <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_set_size.htm"><tt>window_set_size()</tt></a>.
-          Also note that if you have a larger or smaller port size than that assigned to the camera view, then the camera view will be scaled down - or up - to fit.</td>
+        <td><span class="inline">포트 높이보기</span></td>
+        <td>뷰 포트의 높이 (픽셀)입니다. 뷰 포트의 높이 (또는 둘 이상의 활성화 된 경우 결합 된 뷰 포트)는 게임 시작시 게임 창 또는 배경 캔버스의 높이를 정의하므로 게임이 시작된 후이 값을 변경해 <i>도 아무런 영향을 미치지 않습니다.</i> GML 함수 <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_set_size.htm"><tt>window_set_size ()</tt></a> 와 함께 호출되지 않는 한 <i>게임 창 크기</i> 또한 카메라보기에 할당 된 것보다 크거나 작은 포트 크기가 있으면 카메라보기의 크기가 축소 또는 확대됩니다.</td>
       </tr>
       <tr>
-        <td><span class="inline">View Port Surface ID</span></td>
-        <td>With this variable you can set the contents of a given view port to draw to a surface, with the value you supply being that of the surface to use for drawing the view port to. For more information please see <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm">here</a>.</td>
+        <td><span class="inline">포트 표면 ID보기</span></td>
+        <td>이 변수를 사용하면 지정된 뷰 포트의 내용을 표면에 그리도록 설정할 수 있으며, 제공 한 값은 뷰 포트를 그리는 데 사용할 표면의 값입니다. 자세한 내용은 <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm">여기</a> 를 참조 <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm">하십시오</a> .</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Action Syntax:</h4>
+  <h4>동작 구문 :</h4>
   <p><img alt="Set View Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/a_Cameras_Set_View_Variable.png"/></p>
-  <h4>Arguments:</h4>
+  <h4>인수 :</h4>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The built in view variable to set</td>
+        <td>변하기 쉬운</td>
+        <td>설정할 내장 변수</td>
       </tr>
       <tr>
-        <td>View</td>
-        <td>The view port to target (from 0 - 7)</td>
+        <td>전망</td>
+        <td>타겟팅 할 뷰 포트 (0-7)</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The new value for the built in variable</td>
+        <td>값</td>
+        <td>내장 변수의 새로운 값</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set View Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/e_Cameras_Set_View_Variable.png"/>The above action block code will check for a key press and if one is detected it will
-    make the view port [0] visible, otherwise it will make it invisible.</p>
+  <h4>예:</h4>
+  <p><img alt="Set View Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/e_Cameras_Set_View_Variable.png"/>위의 액션 블록 코드는 키 누름을 확인하고 하나가 감지되면 뷰 포트 [0]이 보이게하고 그렇지 않으면 보이지 않게됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Drag_And_Drop\Drag_And_Drop_Reference\Cameras\Set_View_Variable.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Camera_Actions.htm">Camera Actions</a></div>
-        <div style="float:right">Next: <a href="Get_View_Variable.htm">Get View Variable</a></div>
+        <div style="float:left">뒤로: <a href="Camera_Actions.htm">카메라 액션</a></div>
+        <div style="float:right">다음: <a href="Get_View_Variable.htm">뷰 변수 가져 오기</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Action - Set View Variable
@@ -175,4 +166,4 @@ Action - Set View Variable
 action_set_view_var
 -->
 
-</body></html>
+</body></html> 

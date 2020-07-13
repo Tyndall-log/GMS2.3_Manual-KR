@@ -71,7 +71,7 @@
         <span>achievement_send_challenge</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,97 +81,95 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>achievement_send_challenge</h1>
-  <p>This function will send a challenge across the network to the chosen player. You can get the <i>playerid</i> using the <a href="achievement_load_friends.htm"><tt>achievement_load_friends()</tt></a> or the <a href="achievement_load_leaderboard.htm"><tt>achievement_load_leaderboard()</tt></a>    functions and you must also supply the <i>challengeid</i> which is the unique value given the challenge when you created it on your iTunes Connect or Google Play dashboard. You must also supply a score, and a short text message as well as set the
-    challenge <i>type</i>. This can be one of the following <b>constants</b>:</p>
+  <p>이 기능은 네트워크를 통해 선택한 플레이어에게 챌린지를 보냅니다. <a href="achievement_load_friends.htm"><tt>achievement_load_friends ()</tt></a> 또는 <a href="achievement_load_leaderboard.htm"><tt>achievement_load_leaderboard ()</tt></a> 함수를 사용하여 <i>플레이어 ID</i> 를 얻을 수 있으며 iTunes Connect 또는 Google Play 대시 보드에서 도전 과제를 만들 때 주어진 도전 과제 인 고유 값인 <i>challengeid</i> 도 제공해야합니다. 또한 챌린지 <i>유형</i> 을 설정하고 점수와 짧은 문자 메시지를 제공해야 <i>합니다</i> . 이것은 다음 <b>상수</b> 중 하나 일 수 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>achievement_type_score_challenge </td>
-        <td>A challenge based on the score value.</td>
+        <td>achievement_type_score_challenge</td>
+        <td>점수 값에 따른 챌린지.</td>
       </tr>
       <tr>
-        <td>achievement_type_achievement_challenge </td>
-        <td>A challenge based on an achievement.</td>
+        <td>achievement_type_achievement_challenge</td>
+        <td>업적에 따른 도전.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>This function will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> for the player that is to receive the challenge, and in this event you will have a ds_map referenced
-    in the variable <tt>async_load</tt>. The <i>id</i> key of this <tt>DS Map</tt> is used to identify the correct callback (there can be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b> <tt>achievement_challenge_received</tt>    as well as a number of other key/value pairs for each player. The exact contents of the map are shown below:</p>
-  <p class="note"><b>NOTE</b>: that the user can also receive toast notifications for challenges received, but this will depend on the values you have chosen using the function <span style="font-size:1px;"><a href="achievement_show_challenge_notifications.htm"><tt style="font-size: 14px">achievement_show_challenge_notifications()</tt></a></span>.</p>
+  <p>이 함수는 챌린지를받을 플레이어의 콜백 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">소셜 비동기 이벤트</a> 를 트리거하며,이 경우 변수 <tt>async_load</tt> 에서 ds_map을 참조하게됩니다. 이 <tt>DS 맵</tt> 의 <i>id</i> 키는 올바른 콜백을 식별하는 데 사용되며 (어떤 주어진 비동기 이벤트에 대해 두 개 이상의 트리거 기능이있을 수 있음) <b>상수</b> <tt>업적</tt> _challenge_received 및 각 플레이어. 지도의 정확한 내용은 다음과 같습니다.</p>
+  <p class="note"><b>참고</b> : 사용자는 수신 된 챌린지에 대한 토스트 알림을받을 수도 있지만, <span style="font-size:1px;"><a href="achievement_show_challenge_notifications.htm"><tt style="font-size: 14px">achievement_show_challenge_notifications ()</tt></a></span> 함수를 사용하여 선택한 값에 따라 달라집니다.</p>
   <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - For this function it should be <tt>achievement_leaderboard_info</tt></li>
-    <li>&quot;<b>playerid</b>&quot; - The player ID for the challenge.</li>
-    <li>&quot;<b>issuerid</b>&quot; - The issuer ID for the challenge.</li>
-    <li>&quot;<b>state</b>&quot; - The state of the challenge, which will have a value of 0 - 3 (as a string) for <i>invalid</i>, <i>pending</i>, <i>completed</i> or <i>declined</i>.</li>
-    <li>&quot;<b>message</b>&quot; - The text message for challenge.</li>
-    <li>&quot;<b>completeddate</b>&quot; - The completion date for challenge.</li>
-    <li>&quot;<b>issueddate</b>&quot; - The issue date for challenge.</li>
-    <li>&quot;<b>type</b>&quot; - The type of challenge given. Can be one of the two constants listed above</li>
-    <li>&quot;<b>identifier</b>&quot; - The identifying string for the challenge, as set on the provider dashboard</li>
-    <li>&quot;<b>score</b>&quot; - The score tied in with the challenge (if applicable).</li>
+    <li>&quot; <b>id</b> &quot;-이 함수의 경우 <tt>achievement_leaderboard_info</tt></li>
+    <li>&quot; <b>playerid</b> &quot;-챌린지의 플레이어 ID입니다.</li>
+    <li>&quot; <b>issuerid</b> &quot;-챌린지의 발급자 ID.</li>
+    <li>&quot; <b>state</b> &quot;- <i>유효하지 않은</i> , <i>보류 중</i> , <i>완료</i> 또는 <i>거부 된</i> 경우 <i>0-3 (</i> 문자열) 값을 갖는 챌린지 상태입니다.</li>
+    <li>&quot; <b>message</b> &quot;-챌린지에 대한 문자 메시지.</li>
+    <li>&quot; <b>completedate</b> &quot;-챌린지 완료 날짜입니다.</li>
+    <li>&quot; <b>발행일</b> &quot;-이의 제기 발행일.</li>
+    <li>&quot; <b>type</b> &quot;-주어진 챌린지 유형. 위에 나열된 두 상수 중 하나 일 수 있습니다.</li>
+    <li>&quot; <b>identifier</b> &quot;-제공자 대시 보드에 설정된 챌린지의 식별 문자열</li>
+    <li>&quot; <b>score</b> &quot;-챌린지와 관련된 점수입니다 (해당되는 경우).</li>
   </ul>
   <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h4><b>통사론:</b></h4>
   <p class="code">achievement_send_challenge(playerid, challengeid, score, type, message)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>playerid</td>
-        <td>The unique ID of the player to challenge.</td>
+        <td>도전 할 플레이어의 고유 ID입니다.</td>
       </tr>
       <tr>
         <td>challengeid</td>
-        <td>The unique challenge ID (as found on the provider dashboard).</td>
+        <td>제공자 챌린지에있는 고유 한 챌린지 ID.</td>
       </tr>
       <tr>
-        <td>score</td>
-        <td>The score to beat.</td>
+        <td>점수</td>
+        <td>이길 점수.</td>
       </tr>
       <tr>
-        <td>type</td>
-        <td>the type of challenge to be issued - one of two <b>constants</b> given below.</td>
+        <td>유형</td>
+        <td>발행 할 챌린지 유형-아래에 주어진 두 <b>상수</b> 중 하나.</td>
       </tr>
       <tr>
-        <td>message</td>
-        <td>The message to attach to the challenge.</td>
+        <td>메시지</td>
+        <td>챌린지에 첨부 할 메시지입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>To send a challenge over the network you would have this code:</p>
+  <h4>확장 된 예 :</h4>
+  <p>네트워크를 통해 챌린지를 보내려면 다음 코드가 필요합니다.</p>
   <p class="code">achievement_send_challenge(global.playerid[0], global.challengeid[0], score, achievement_type_score_challenge, &quot;Beat that sucker!&quot;);</p>
-  <p>This request will then trigger the <b>Social Event</b> in your game for the player that the challenge was directed at, and this can be dealt with in the following way:</p>
+  <p>이 요청은 챌린지가 지시 된 플레이어의 게임에서 <b>소셜 이벤트</b> 를 트리거하며 다음과 같은 방식으로 처리 될 수 있습니다.</p>
   <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_challenge_received<br/>     {
     <br/>     player_id = ds_map_find_value(async_load, &quot;playerid&quot;);<br/>     issuer_id = ds_map_find_value(async_load, &quot;issuerid&quot;);<br/>     state = ds_map_find_value(async_load, &quot;state&quot;);<br/>     message = ds_map_find_value(async_load,
     &quot;message&quot;);<br/>     date_completed = ds_map_find_value(async_load, &quot;completeddate&quot;);<br/>     date_issued = ds_map_find_value(async_load, &quot;issueddate&quot;);<br/>     ach_type = ds_map_find_value(async_load, &quot;type&quot;);<br/>        ach_ident = ds_map_find_value(async_load, &quot;identifier&quot;);<br/>     ach_score = ds_map_find_value(async_load, &quot;score&quot;);<br/>     }
   </p>
-  <p>The above code checks the returned <tt>DS Map</tt> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then extracts the relevant values for each of the keys in the map and stores them in variables
-    for future use.</p>
+  <p>위의 코드는 <b>소셜 비동기 이벤트</b> 에서 리턴 된 <tt>DS 맵</tt> 을 확인하고 &quot;id&quot;가 점검중인 상수와 일치하는 경우 맵의 각 키에 대한 관련 값을 추출하여 나중에 사용할 수 있도록 변수에 저장합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Asynchronous_Functions\Achievements_And_Leaderboards\achievement_send_challenge.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Achievements_And_Leaderboards.htm">Achievements And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="achievement_reset.htm">achievement_reset</a></div>
+        <div style="float:left">뒤로: <a href="Achievements_And_Leaderboards.htm">업적과 순위표</a></div>
+        <div style="float:right">다음: <a href="achievement_reset.htm">achievement_reset</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 achievement_send_challenge
@@ -183,4 +181,4 @@ achievement_leaderboard_info
 achievement_send_challenge
 -->
 
-</body></html>
+</body></html> 

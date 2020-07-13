@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Fixtures">
-        <span>Fixtures</span>
+        <span>비품</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -84,26 +84,18 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Fixtures</h1>
-  <p>Before an instance in GameMaker Studio 2 can have physical properties it must have a fixture assigned to it. A fixture binds a shape or form to the instance and this adds material properties such as density, friction,
-    and restitution. Fixtures can be boxes, circles, polygons or any other simple shape you wish as GameMaker Studio 2 provides functions that enable you to define your own shape point by point, and then once you have
-    your shape you can go ahead and define its physical properties too. These properties are what govern the way the instance with the fixture assigned to it will react with other instance in the physics world and are listed below:</p>
+  <h1>비품</h1>
+  <p>GameMaker Studio 2의 인스턴스는 물리적 속성을 갖기 전에 지정된 조명기가 있어야합니다. 고정구는 인스턴스에 모양 또는 형태를 바인딩하며 밀도, 마찰 및 복원과 같은 재료 특성을 추가합니다. GameMaker Studio 2는 원하는 모양을 점 단위로 정의 할 수있는 기능을 제공하므로 모양, 상자, 원, 다각형 또는 기타 간단한 모양 일 수 있습니다. . 이러한 속성은 조명기가 지정된 인스턴스가 물리 세계의 다른 인스턴스와 반응하는 방식을 결정하며 아래에 나열되어 있습니다.</p>
   <ul class="colour">
-    <li><b>Density:</b> A material&#39;s density is defined as its mass per unit volume. It is, essentially, a measurement of how tightly matter is crammed together. If you wish your fixture to be <i>static</i> (ie:
-      immovable) then the density should be set to 0, essentially making it infinitely dense. <i>Kinematic</i> objects that move with constant velocity and are not physically affected by collisions are also defined using a density
-      of 0.</li>
-    <li><b>Friction:</b> Friction is the force resisting the relative motion of solid surfaces, fluid layers, and material elements sliding against each other.</li>
-    <li><b>Linear Damping:</b> This is the generalised force that causes a moving object to lose momentum. In the &quot;real world&quot; things don&#39;t generally happen forever. For example, A paper airplane will fly for a short while but eventually
-      it will fall due to the air friction that acts upon it causing it to slow down. In the physics world that we create such things are difficult to model and so each fixture is given its own linear damping to simulate this type of &quot;generalised
-      friction&quot;.</li>
-    <li><b>Angular Damping:</b> As above, this is a generalised force that is applied to an object to stop it spinning eternally.</li>
-    <li><b>Restitution:</b> In physics, restitution is defined as &quot;the return of an object or system to its original state after elastic deformation&quot;, but as the fixtures in the GameMaker Studio 2 are
-      really rigid bodies and cannot be deformed, think of this as basically how &quot;bouncy&quot; the fixture is.</li>
+    <li><b>밀도 :</b> 재료의 밀도는 단위 부피당 질량으로 정의됩니다. 그것은 본질적으로 얼마나 단단히 물질이 결합되어 있는지를 측정 한 것입니다. 픽스쳐를 <i>정적</i> (즉, 움직일 수없는) 상태로하려면 밀도를 0으로 설정해야합니다. 일정한 속도로 움직이고 충돌의 물리적 영향을받지 않는 <i>운동 학적</i> 객체도 밀도 0을 사용하여 정의됩니다.</li>
+    <li><b>마찰 :</b> 마찰은 고체 표면, 유체 층 및 재료 요소가 서로 미끄러지는 상대 운동에 저항하는 힘입니다.</li>
+    <li><b>선형 댐핑 :</b> 이것은 움직이는 물체가 운동량을 잃게하는 일반화 된 힘입니다. &quot;실제 세계&quot;에서는 일이 일반적으로 영원히 일어나지 않습니다. 예를 들어, 종이 비행기는 잠시 비행하지만 결국 공기 마찰로 인해 비행기가 느려지면서 속도가 떨어집니다. 물리 세계에서 우리가 그러한 것들을 만드는 것은 모델링하기 어렵 기 때문에 각 조명기에는 이러한 유형의 &quot;일반 마찰&quot;을 시뮬레이션하기 위해 자체 선형 감쇠가 부여됩니다.</li>
+    <li><b>앵귤러 댐핑 :</b> 위와 같이, 이것은 물체가 영원히 회전하는 것을 멈추기 위해 적용되는 일반화 된 힘입니다.</li>
+    <li><b>회복 :</b> 물리에서 회복은 &quot;탄성 변형 후 물체 또는 시스템을 원래 상태로 되 돌리는&quot;것으로 정의되지만, GameMaker Studio 2의 고정물은 실제로 강체이며 변형 될 수 없으므로 이것을 기본적으로 어떻게 생각하십시오 &quot;탄력성&quot;비품입니다.</li>
   </ul>
-  <p>So as you can see, with just a few simple functions, GameMaker Studio 2 can help you to create complex systems and interactions which will give your games an unprecedented sense of realism.</p>
-  <p class="note"><b>NOTE: </b>You can define one fixture and have it bound to multiple instances (think of a pool table, where all the balls have the same physical properties, yet each one is a discreet entity). You can also bind multiple fixtures to a
-    single instance and combine the physical properties (for example, using two triangular polygon fixtures to create a star)</p>
-  <p>The following functions are for creating, binding, setting collisions and then deleting fixtures:</p>
+  <p>보시다시피 GameMaker Studio 2는 몇 가지 간단한 기능만으로 복잡한 시스템과 상호 작용을 만들어 게임에 전례없는 사실감을 줄 수 있습니다.</p>
+  <p class="note"><b>참고 :</b> 하나의 조명기를 정의하고 여러 인스턴스에 바인딩 할 수 있습니다 (풀 테이블은 모든 볼이 동일한 물리적 속성을 갖지만 각각은 신중한 엔티티입니다). 또한 여러 개의 조명기를 단일 인스턴스에 바인딩하고 물리적 속성을 결합 할 수 있습니다 (예 : 두 개의 삼각형 다각형 조명기를 사용하여 별 만들기)</p>
+  <p>다음 함수는 픽스쳐 생성, 바인딩, 설정 및 삭제를위한 것입니다 :</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_fixture_create.htm">physics_fixture_create</a></li>
@@ -114,7 +106,7 @@
     <li><a href="physics_remove_fixture.htm">physics_remove_fixture</a></li>
   </ul>
   <p> </p>
-  <p>A fixture must be given a shape or else it will not be detected by the physics world, and this shape can be defined by the following functions:</p>
+  <p>픽스쳐에는 모양이 주어져야합니다. 그렇지 않으면 물리 세계에서 감지되지 않을 것이며,이 모양은 다음 함수에 의해 정의 될 수 있습니다 :</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_fixture_set_box_shape.htm">physics_fixture_set_box_shape</a></li>
@@ -125,8 +117,7 @@
     <li><a href="physics_fixture_add_point.htm">physics_fixture_add_point</a></li>
   </ul>
   <p> </p>
-  <p>In order for your physics enabled instance to react properly to the world around it, the fixtures you use must have specific properties defined that will give the fixture bounce, friction, mass etc... The following functions are used to set these properties
-    of the fixture:</p>
+  <p>물리가 활성화 된 인스턴스가 주위의 세계에 올바르게 반응하려면 사용하는 픽스쳐에 픽스 바운스, 마찰, 질량 등을 제공하는 특정 속성이 정의되어 있어야합니다. 다음 함수는 이러한 속성을 설정하는 데 사용됩니다. 고정물:</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_fixture_set_density.htm">physics_fixture_set_density</a></li>
@@ -139,8 +130,7 @@
     <li><a href="physics_fixture_set_awake.htm">physics_fixture_set_awake</a></li>
   </ul>
   <p> </p>
-  <p>You can also set certain properties of the fixture <i>after</i> it has been bound to an instance. When binding the &quot;base&quot; fixture, you can choose to store the unique index for the bound physical properties in a variable.
-    This can then be used in the following functions to change certain properties, or to get the current values for them:</p>
+  <p>또한 고정의 특정 속성을 설정할 수 있습니다 <i>후</i> 이 인스턴스에 바인딩되었습니다. &quot;기본&quot;고정구를 바인딩 할 때 바인딩 된 물리적 속성에 대한 고유 인덱스를 변수에 저장하도록 선택할 수 있습니다. 그런 다음 다음 함수에서 특정 속성을 변경하거나 현재 속성 값을 가져 오는 데 사용할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_get_friction.htm">physics_get_friction</a></li>
@@ -153,15 +143,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Physics\Fixtures\Fixtures.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Physics.htm">Physics</a></div>
-        <div style="float:right">Next: <a href="../Joints/Joints.htm">Joints</a></div>
+        <div style="float:left">뒤로: <a href="../Physics.htm">물리학</a></div>
+        <div style="float:right">다음: <a href="../Joints/Joints.htm">관절</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Fixtures
@@ -170,4 +161,4 @@ Fixtures
 physics_fixture_functions
 -->
 
-</body></html>
+</body></html> 

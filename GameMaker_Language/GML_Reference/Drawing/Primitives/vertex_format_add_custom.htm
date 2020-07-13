@@ -71,7 +71,7 @@
         <span>vertex_format_add_custom</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,103 +81,99 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>vertex_format_add_custom</h1>
-  <p>This function permits you to use a custom data type for specific vertex format attributes as part of the new vertex format being created. The available values to use are defined by the data type constant that you choose, listed below:</p>
+  <p>이 기능을 사용하면 작성중인 새 정점 형식의 일부로 특정 정점 형식 속성에 대한 사용자 정의 데이터 유형을 사용할 수 있습니다. 사용 가능한 값은 아래에 나열된 선택한 데이터 유형 상수로 정의됩니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>vertex_type_float1</td>
-        <td>A single floating point value</td>
+        <td>단일 부동 소수점 값</td>
       </tr>
       <tr>
         <td>vertex_type_float2</td>
-        <td>Two floating point values</td>
+        <td>두 개의 부동 소수점 값</td>
       </tr>
       <tr>
         <td>vertex_type_float3</td>
-        <td>Three floating point values</td>
+        <td>3 개의 부동 소수점 값</td>
       </tr>
       <tr>
         <td>vertex_type_float4</td>
-        <td>Four floating point values</td>
+        <td>4 개의 부동 소수점 값</td>
       </tr>
       <tr>
         <td>vertex_type_colour</td>
-        <td>Four component values (r, g, b, a)</td>
+        <td>4 가지 성분 값 (r, g, b, a)</td>
       </tr>
       <tr>
         <td>vertex_type_ubyte4</td>
-        <td>Four component unsigned byte values (from 0 to 255)</td>
+        <td>4 개의 구성 요소 부호없는 바이트 값 (0 ~ 255)</td>
       </tr>
     </tbody>
   </table>
-  <p><br/> The use that these constants will be put too also needs to be defined so that the values can be &quot;bound&quot; properly within the shader being created. This is necessary due to the fact that DX and OpenGL have different requirements so if
-    you don&#39;t bind them properly, they won&#39;t come through right in the shader. The available usage constants that you can choose are listed below and those you use will depend on the specifics of the shader being created:</p>
+  <p>이러한 상수를 사용하는 경우에도 생성중인 셰이더 내에서 값을 올바르게 &quot;바인딩&quot;할 수 있도록 정의해야합니다. 이것은 DX와 OpenGL이 다른 요구 사항을 가지고 있기 때문에 필요하기 때문에 제대로 바인딩하지 않으면 셰이더에서 제대로 전달되지 않습니다. 선택할 수있는 사용 가능한 상수는 다음과 같으며 사용하는 사용 상수는 생성되는 셰이더의 특성에 따라 다릅니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>vertex_usage_position</td>
-        <td>position values (x, y, z)</td>
+        <td>위치 값 (x, y, z)</td>
       </tr>
       <tr>
         <td>vertex_usage_colour</td>
-        <td>colour values (r, g, b, a)</td>
+        <td>색상 값 (r, g, b, a)</td>
       </tr>
       <tr>
         <td>vertex_usage_normal</td>
-        <td>vertex normal values (nx, ny, nz)</td>
+        <td>정점 법선 값 (nx, ny, nz)</td>
       </tr>
       <tr>
         <td>vertex_usage_textcoord</td>
-        <td>UV coordinates (u, v)</td>
+        <td>UV 좌표 (u, v)</td>
       </tr>
       <tr>
         <td>vertex_usage_blendweight</td>
-        <td>the blendweight of the input matrix (for skeletal animation, for example)</td>
+        <td>입력 행렬의 블렌드 웨이트 (예 : 스켈 레탈 애니메이션)</td>
       </tr>
       <tr>
-        <td>vertex_usage_blendindices</td>
-        <td>the indices of the matrices to use (for skeletal animation, for example)</td>
+        <td>꼭짓점 _ 블렌드</td>
+        <td>사용할 행렬의 인덱스 (예 : 골격 애니메이션)</td>
       </tr>
       <tr>
         <td>vertex_usage_depth</td>
-        <td>vertex depth buffer value</td>
+        <td>정점 깊이 버퍼 값</td>
       </tr>
       <tr>
         <td>vertex_usage_tangent</td>
-        <td>tangent values</td>
+        <td>탄젠트 값</td>
       </tr>
       <tr>
         <td>vertex_usage_binormal</td>
-        <td>binormal values</td>
+        <td>비정규 값</td>
       </tr>
       <tr>
-        <td>vertex_usage_fog</td>
-        <td>fog values</td>
+        <td>꼭짓점 _usage_fog</td>
+        <td>안개 값</td>
       </tr>
       <tr>
         <td>vertex_usage_sample</td>
-        <td>sampler index</td>
+        <td>샘플러 인덱스</td>
       </tr>
     </tbody>
   </table>
-  <p><br/> There are some important things to note when using custom formats like these:</p>
+  <p>다음과 같은 사용자 정의 형식을 사용할 때주의해야 할 사항이 있습니다.</p>
   <ul class="colour">
-    <li>The <tt>vertex_format_add_custom()</tt> function only supports <tt>vertex_usage_position</tt>, <tt>vertex_usage_colour</tt>, <tt>vertex_usage_normal</tt> and <tt>vertex_usage_textcoord</tt> when using GLSL shaders. These will map to the shader attributes
-      <tt>in_Position</tt>, <tt>in_Colour[0 - ...]</tt>, <tt>in_Normal</tt> respectively (anything that is not one of these three attributes - eg: texture coordinates - can be mapped to any attribute you define).</li>
-    <li>In general you should use <tt>vertex_usage_textcoord</tt> for all extra parameters where possible, as types like <tt>vertex_usage_blendweight</tt> and <tt>vertex_usage_tangent</tt> are close to deprecated in most shader languages, and probably won&#39;t
-      convert properly. Instead use <tt>vec</tt>, <tt>vec2</tt>, <tt>vec3</tt> or <tt>vec4</tt> types <tt>vertex_usage_textcoord</tt> and everything should work fine.</li>
-    <li>GLSL ES does <i>not</i> support integer attributes, so passing in <tt>ivec4</tt>&#39;s does not work (this type is usually used when passing in <tt>vertex_usage_blendindices</tt>). What you need to do is pass in texture coordinates and then in the
-      shader, convert them to <tt>ivec4</tt> like this:</li>
+    <li><tt>vertex_format_add_custom ()</tt> 함수는 GLSL 셰이더를 사용할 때 <tt>vertex_usage_position</tt> , <tt>vertex_usage_colour</tt> , <tt>vertex_usage_normal</tt> 및 <tt>vertex_usage_textcoord</tt> 만 지원합니다. 이것들은 각각 <tt>in_Position</tt> , <tt>in_Colour [0-...]</tt> , <tt>in_Normal</tt> 셰이더 속성에 매핑됩니다 (예 : 텍스처 좌표-정의한 속성에 세 가지 속성 중 하나가 아닌 모든 속성을 매핑 할 수 있음).</li>
+    <li>일반적으로 <tt>vertex_usage_blendweight</tt> 및 <tt>vertex_usage_tangent</tt> 와 같은 유형은 대부분의 셰이더 언어에서 더 이상 사용되지 않으며 올바르게 변환되지 않으므로 가능한 경우 모든 추가 매개 변수에 <tt>vertex_usage_textcoord</tt> 를 사용해야합니다. 대신 <tt>vec</tt> , <tt>vec2</tt> , <tt>vec3</tt> 또는 <tt>vec4</tt> 유형 <tt>vertex_usage_textcoord</tt> 를 사용하면 모든 것이 잘 작동합니다.</li>
+    <li>GLSL ES는 정수 속성을 지원하지 <i>않으므로</i> <tt>ivec4를 전달해도</tt> 작동하지 않습니다 (이 유형은 일반적으로 <tt>vertex_usage_blendindices를</tt> 전달할 때 <tt>사용됨</tt> ). 텍스처 좌표를 전달한 다음 셰이더에서 다음과 같이 <tt>ivec4</tt> 로 변환하면됩니다.</li>
   </ul>
   <p> </p>
   <p class="code">attribute vec3 in_Position;<br/> attribute vec4 in_BlendIndices;<br/> attribute vec4 in_BlendWeights;<br/>
@@ -186,47 +182,47 @@
     <br/>     gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * vec4( in_Position.xyz, 1.0);<br/>     v_vColour = in_BlendWeights;<br/>      ivec4 t = ivec4(in_BlendIndices);<br/>      v_mat = gm_Matrices[ t.x ];<br/> }
   </p>
   <ul class="colour">
-    <li>Blend weights are usually stored in an array and then accessed using blend indices, but you can see here that instead of defining <tt>in_BlendIndices</tt> as an <tt>ivec4</tt> attribute, it&#39;s a <tt>vec4</tt>, then cast to an <tt>ivec4</tt> in
-      the code. This is then used to index the array created using the <tt>gm_Matrix</tt> (you can only access an array using an <tt>INT</tt> value - not a float).</li>
+    <li>블렌드 가중치는 일반적으로 배열에 저장되고 블렌드 인덱스를 사용하여 액세스되지만 여기서는 <tt>in_BlendIndices</tt> 를 <tt>ivec4</tt> 속성으로 정의하는 대신 <tt>vec4</tt> 이며 코드에서 <tt>ivec4</tt> 로 캐스팅됩니다. 그런 다음 <tt>gm_Matrix</tt> 를 사용하여 생성 된 배열을 인덱싱하는 데 사용됩니다 (float가 아닌 <tt>INT</tt> 값을 사용하여 배열에만 액세스 할 수 있음).</li>
     <br/>
   </ul>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">vertex_format_add_custom(type, usage);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>type</td>
-        <td>The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed below).</td>
+        <td>유형</td>
+        <td>이 사용자 정의 정점 데이터가 보유 할 데이터 유형입니다 (아래에 나열된 <i>유형 상수</i> 참조).</td>
       </tr>
       <tr>
-        <td>usage</td>
-        <td>The use that the data will get(see the <b><i>usage constants</i></b> listed below).</td>
+        <td>용법</td>
+        <td>데이터가 <i>사용</i> 되는 <i>용도</i> (아래에 나열된 <i>사용 상수</i> 참조).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">vertex_format_begin();<br/> vertex_format_add_textcoord();
     <br/> vertex_format_add_custom(vertex_type_float3, vertex_usage_position);<br/> my_format = vertex_format_end();</p>
-  <p>The above code will create a new vertex format with just texture and 3 custom floating point values for position. It is then stores the format id in the variable &quot;my_format&quot;.</p>
+  <p>위의 코드는 텍스처와 위치에 대한 3 개의 사용자 정의 부동 소수점 값으로 새로운 정점 형식을 만듭니다. 그런 다음 형식 ID를 변수 &quot;my_format&quot;에 저장합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Drawing\Primitives\vertex_format_add_custom.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
-        <div style="float:right">Next: <a href="vertex_format_end.htm">vertex_format_end</a></div>
+        <div style="float:left">뒤로: <a href="Primitives_And_Vertex_Formats.htm">기본 요소와 정점 형식</a></div>
+        <div style="float:right">다음: <a href="vertex_format_end.htm">vertex_format_end</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 vertex_format_add_custom
@@ -252,4 +248,4 @@ vertex_usage_sample
 vertex_format_add_custom
 -->
 
-</body></html>
+</body></html> 

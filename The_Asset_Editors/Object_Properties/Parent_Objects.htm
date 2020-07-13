@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Parent Objects">
-        <span>Parent Objects</span>
+        <span>부모 객체</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,58 +80,32 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Parent Objects</h1>
-  <p>When working with objects in the GameMaker Studio 2 IDE, you can set up <strong>Parent </strong>/ Child hierarchies. This is done by clicking the &quot;Parent&quot; button in the object editor and then choosing another object from the Asset Browser
-    to be the &quot;parent&quot; of the one being edited:</p>
-  <p><img alt="Adding A Parent" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Parent.png"/>So, every object in your game project can have a parent object, but what does this mean? Well, when an object has a parent assigned it can
-    share code, actions and events with that parent. This sharing is called &quot;inheritance&quot; and an object that has a parent is called a &quot;child&quot; object. Not only can a child share code with its parent, but you can do checks and run code
-    on parent objects and it will automatically include the child objects too, which saves a lot of time and energy.</p>
-  <p>If that sounds complicated, then another way to look at a parent object is as a way to &quot;group&quot; objects together under the same umbrella and have them share certain things without losing their own unique identity. Maybe that still doesn&#39;t
-    clarify things too much, so let&#39;s give some examples...</p>
-  <p>Say you have a &quot;player&quot; object and four different &quot;enemy&quot; objects. Now, you want the player to die if he touches any of these four objects and this would normally entail four different collision events with four different sets of
-    actions or code, one for each of the enemy objects. BUT if we make a parent object for all the enemies, then we can create one collision event with the parent object only and it will trigger no matter which one of the four &quot;child&quot; enemy
-    objects touch the player. Handy stuff! In the actual GameMaker Studio 2 object you would see something like this:</p>
-  <p><img alt="Parenting For Collisions" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_ParentCollision.png"/>On the left we have four separate collision events and on the right we have a single collision event, as we have created a
-    &quot;parent&quot; object and assigned all the enemy objects to it. Note that a parent object doesn&#39;t have to have any events or code in it...</p>
-  <p>Another example of parenting would be if you have a game where you want to create 10 different looking objects and have them all behave in the same way. For that you would create one parent object and in that have all your behaviour actions or code
-    in the required events, and then you would create your ten objects with no actions or code, but different sprites, and assign them your parent object. Now, when you place these instances in a room they will all behave the same, but look different,
-    since they will &quot;inherit&quot; the events of the parent.</p>
-  <p>Finally you can use parenting to &quot;mix and match&quot; events and behaviours. We&#39;ll illustrate this with one final example... Say you want two monsters: one that moves up and down, while another that moves left and right, but you also want the
-    two of them to have the same health, shoot at the player and hurt the player if they collide with them. In this case you can see that almost all events should have the same actions except for one or two that govern movement. So, again, we can make
-    one object the parent of the other, but in this case we also define certain events for the child object. These events &quot;override&quot; the parent events, meaning that whenever an event for the child object contains actions, these are executed
-    instead of the actions contained in the event of the parent. If you also want to execute the parent event you can call the so-called &quot;inherited&quot; event using the function <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a>,
-    or the DnD™ action <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Call_Parent_Event.htm">Call Parent Event</a>.</p>
-  <p><img alt="Inheriting Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_InheritEvents.png"/>On the left above is the parent object with 5 events in it, and on the right you can see the &quot;child&quot; object. The child object
-    also has 5 events in it, but two of them override the inherited events from the parent (the <strong>Step </strong>and <strong>Draw </strong>events) and the other three are greyed out as they are the events inherited from the parent. Inherited events
-    will also have the &quot;parent override&quot; icon beside them in the Event Editor:</p>
-  <p><img alt="Parent Override" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_ParentOverride.png"/>When you click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> on an event that has been inherited,
-    it will open the code editor to show the inherited parent code, but you will not be able to edit this code as you can only edit it in the parent object itself. You can click the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> on any of the parent events to open the following menu of options:</p>
-  <p><img alt="Parent Event RMB Menu" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_Parent_Menu.png"/>Here you can choose two <strong>Open </strong>the parent event to inspect the code, or you can choose to <strong>Inherit </strong>the
-    event or <strong>Override </strong>the event. If you choose <strong>Inherit </strong>then the code editor will open with the function <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a> already
-    added to it (or the <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Call_Parent_Event.htm">Call Parent Event</a> action if using DnD™). Any further code you place in this event will now be run as well as the code that the parent object
-    has. If you choose to <strong>Override </strong>the event, then the code window will also open, only now the <span class="inline">event_inherited()</span> function won&#39;t be called, so anything you add here will be run <em>instead </em>of the code
-    in the parent object.</p>
-  <p class="note"><strong>NOTE</strong>: From the code editor you can quickly navigate to the parent object by clicking the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> and selecting <strong>Go To Object</strong>    from the pop-up menu, or (if the event has been overridden) you can select <strong>Open Inherited Event</strong> to go directly to a code editor with the parent event code in it.</p>
-  <p>Whenever you target a parent object in code, the code will also apply to the &quot;children&quot; of the parent object too. This happens when, in an action, you indicate that the action must be applied to instances of a certain object, and in code it
-    happens when you use the <a href="../../GameMaker_Language/GML_Overview/Language_Features/with.htm"><span class="inline">with()</span></a> statement. It will work like this too when you call code functions, like <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_position.htm"><span class="inline">instance_position()</span></a>,
-    <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a>, etc... where - if you supply a parent object - all instances of the parent <em>and </em>child instances
-    will be included in the checks. Finally, parenting works when you refer to variables in other objects too, like in the above monster example if I set the enemy 1 speed to 10, then the enemy 2 speed will also go to ten as it is a child object of enemy
-    1.</p>
-  <p>It is generally considered good practice in most cases to create one base parent object and have this base object contain all the default behaviour but never use an instance of it in the game. Rather use all child objects and only use the parent in
-    situations like those I have outlined above, for collisions, for referencing variables, etc... You should also realise that parents can have parents too! Obviously you can&#39;t create a cycle of &quot;parent 1 is child of parent 2 is child of parent
-    1&quot; but you can create what is called &quot;object hierarchy&quot; where &quot;<em>parent3 </em>is child of <em>parent2 </em>is child of <em>parent1</em>&quot;. This is extremely useful to keep your game structured and you are strongly advised
-    to learn to use this mechanism.</p>
+  <h1>부모 객체</h1>
+  <p>GameMaker Studio 2 IDE에서 객체로 작업 할 때 <strong>부모</strong> / 자식 계층을 설정할 수 있습니다. 오브젝트 에디터에서 &quot;Parent&quot;버튼을 클릭 한 다음 Asset Browser에서 다른 오브젝트를 선택하여 편집중인 오브젝트의 &quot;parent&quot;로 선택하면됩니다.</p>
+  <p><img alt="Adding A Parent" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Parent.png"/>따라서 게임 프로젝트의 모든 오브젝트는 부모 오브젝트를 가질 수 있지만 이것이 무엇을 의미합니까? 객체에 부모가 할당 된 경우 해당 부모와 코드, 작업 및 이벤트를 공유 할 수 있습니다. 이 공유를 &quot;상속&quot;이라고하고 부모가있는 개체를 &quot;자식&quot;개체라고합니다. 자식은 부모와 코드를 공유 할 수있을뿐만 아니라 부모 개체를 검사하고 코드를 실행할 수 있으며 자식 개체도 자동으로 포함하므로 많은 시간과 에너지를 절약 할 수 있습니다.</p>
+  <p>복잡하게 들리면 부모 개체를 보는 또 다른 방법은 같은 우산 아래에서 개체를 &quot;그룹화&quot;하여 고유 한 정체성을 잃지 않고 특정 사물을 공유하는 방법입니다. 어쩌면 그것은 여전히 ​​너무 많은 것을 명확하게하지 못하므로 몇 가지 예를 들어 보겠습니다.</p>
+  <p>&quot;플레이어&quot;오브젝트와 네 개의 다른 &quot;적&quot;오브젝트가 있다고 가정하십시오. 자, 플레이어가이 4 개의 물체 중 하나를 만지면 죽게 되길 원하며, 이것은 보통 4 개의 다른 행동 또는 코드 세트 (적의 물체마다 하나씩)로 4 개의 다른 충돌 이벤트를 수반합니다. 그러나 모든 적에 대해 부모 오브젝트를 만들면 부모 오브젝트만으로 충돌 이벤트를 하나만 만들 수 있으며 4 개의 &quot;자식&quot;적 오브젝트 중 하나가 플레이어에 닿아도 트리거됩니다. 편리한 물건! 실제 GameMaker Studio 2 오브젝트에서 다음과 같은 것을 볼 수 있습니다 :</p>
+  <p><img alt="Parenting For Collisions" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_ParentCollision.png"/>왼쪽에는 4 개의 개별 충돌 이벤트가 있고 오른쪽에는 &quot;부모&quot;오브젝트를 만들고 모든 적 오브젝트를 할당 했으므로 단일 충돌 이벤트가 있습니다. 부모 객체에는 이벤트 나 코드가 필요하지 않습니다.</p>
+  <p>육아의 또 다른 예는 10 개의 다른 모양의 개체를 만들고 같은 방식으로 동작하도록하는 게임이있는 경우입니다. 이를 위해 하나의 상위 오브젝트를 작성하고 필요한 이벤트에 모든 동작 조치 또는 코드가있는 경우 조치 또는 코드가 아닌 스프라이트가 다른 10 개의 오브젝트를 작성하고 상위 오브젝트를 지정합니다. 이제 이러한 인스턴스를 방에 배치하면 모두 동일한 방식으로 작동하지만 부모의 이벤트를 &quot;상속&quot;하기 때문에 다르게 보입니다.</p>
+  <p>마지막으로, 육아를 사용하여 이벤트와 동작을 &quot;혼합 및 일치&quot;할 수 있습니다. 우리는 이것을 하나의 마지막 예제로 설명 할 것입니다 ... 두 개의 괴물이 필요합니다. 하나는 위아래로 움직이고 다른 하나는 왼쪽과 오른쪽으로 움직이지만 두 마리는 같은 건강을 원합니다 플레이어와 충돌하면 플레이어를 다치게합니다. 이 경우 움직임을 제어하는 ​​하나 또는 두 개를 제외하고 거의 모든 이벤트에 동일한 조치가 있어야 함을 알 수 있습니다. 다시 한 개체를 다른 개체의 부모로 만들 수 있지만이 경우 자식 개체에 대한 특정 이벤트도 정의합니다. 이러한 이벤트는 상위 이벤트를 &quot;재정의&quot;합니다. 즉, 하위 오브젝트의 이벤트에 조치가 포함되어 있으면 상위 이벤트에 포함 된 조치 대신 실행됩니다. 부모 이벤트도 실행하려면 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited ()</span></a> 함수 또는 DnD ™ 액션 <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Call_Parent_Event.htm">부모 이벤트 호출을</a> 사용하여 소위 &quot;상속 된&quot;이벤트를 호출 할 수 있습니다.</p>
+  <p><img alt="Inheriting Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_InheritEvents.png"/>왼쪽에는 5 개의 이벤트가있는 부모 개체가 있으며 오른쪽에는 &quot;자식&quot;개체가 있습니다. 자식 개체에도 5 개의 이벤트가 있지만 그 중 두 개는 부모에서 상속 된 이벤트 ( <strong>Step</strong> 및 <strong>Draw</strong> 이벤트)를 재정의하고 나머지 3 개는 부모에서 상속 된 이벤트이므로 회색으로 표시됩니다. 상속 된 이벤트는 이벤트 편집기에서 옆에 &quot;parent override&quot;아이콘이 있습니다.</p>
+  <p><img alt="Parent Override" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_ParentOverride.png"/>클릭하면 상속 된 이벤트에서는 상속 된 부모 코드를 표시하기 위해 코드 편집기가 열리지 만 부모 개체 자체에서만 편집 할 수 있으므로이 코드를 편집 할 수 없습니다. 마우스 오른쪽 버튼을 클릭 할 수 있습니다 상위 이벤트 중 하나에서 다음 옵션 메뉴를 엽니 다.</p>
+  <p><img alt="Parent Event RMB Menu" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_Parent_Menu.png"/>여기에서 두 개의 상위 이벤트 <strong>열기</strong> 를 선택하여 코드를 검사하거나 이벤트 <strong>상속</strong> 또는 이벤트 <strong>대체를</strong> 선택할 수 있습니다. <strong>상속</strong> 을 선택하면 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited ()</span></a> 함수가 이미 추가 된 함수 (또는 DnD ™를 사용하는 경우 <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Call_Parent_Event.htm">부모 이벤트 호출</a> 작업 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">)</span></a> 와 함께 코드 편집기가 열립니다. 이 이벤트에 추가 코드를 추가하면 이제 상위 개체의 코드와 함께 실행됩니다. 이벤트를 <strong>재정의</strong> 하도록 선택하면 코드 창이 열립니다. 이제 <span class="inline">event_inherited ()</span> 함수 만 호출되지 않으므로 여기에 추가 한 모든 항목이 상위 개체의 코드 <em>대신</em> 실행 <em>됩니다</em> .</p>
+  <p class="note"><strong>NOTE</strong>: From the code editor you can quickly navigate to the parent object by clicking the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/>팝업 메뉴에서 <strong>객체</strong> 로 <strong>이동을</strong> 선택하거나 (이벤트가 재정의 된 경우) <strong>상속 된 이벤트 열기</strong> 를 선택하여 상위 이벤트 코드가 포함 된 코드 편집기로 직접 이동할 수 있습니다.</p>
+  <p>코드에서 부모 개체를 대상으로 지정할 때마다 코드는 부모 개체의 &quot;자식&quot;에도 적용됩니다. 이것은 액션에서 특정 객체의 인스턴스에 액션을 적용해야 함을 나타내며 코드에서 <a href="../../GameMaker_Language/GML_Overview/Language_Features/with.htm"><span class="inline">with ()</span></a> 문을 사용할 때 발생합니다. <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_position.htm"><span class="inline">instance_position ()</span></a> , <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number ()</span></a> 등과 같은 코드 함수를 호출 할 때도 이와 같이 작동합니다. 여기서 부모 개체를 제공하는 경우 부모 <em>및</em> 자식 인스턴스의 모든 인스턴스가 검사에 포함됩니다. 마지막으로, 육체는 다른 물체에서도 변수를 참조 할 때 위의 괴물 예와 같이 적 1 속도를 10으로 설정하면 적 2 속도도 적 1의 자식 개체이므로 10으로 이동합니다.</p>
+  <p>대부분의 경우 하나의 기본 상위 오브젝트를 작성하고이 기본 오브젝트에 모든 기본 동작이 포함되지만 게임에서 해당 인스턴스를 사용하지 않는 것이 좋습니다. 오히려 모든 자식 객체를 사용하고 위에서 설명한 상황, 충돌, 변수 참조 등의 상황에서만 부모를 사용하십시오. 부모도 부모를 가질 수 있음을 알아야합니다! 분명히 당신의 사이클을 만들 수 있지만 <em>&quot;parent3이</em> <em>parent2의</em> 자식 <em>상위 1의</em> 자식&quot; &quot;개체 계층 구조&quot;라는 것을 만들 수 있습니다 &quot;부모 한 부모 2의 아이가 부모 1 자녀입니다&quot;. 게임 구성을 유지하는 데 매우 유용하며이 메커니즘을 사용하는 방법을 배우는 것이 좋습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors\Object_Properties\Parent_Objects.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Objects.htm">The Object Editor</a></div>
-        <div style="float:right">Next: <a href="Physics_Objects.htm">Physics Objects</a></div>
+        <div style="float:left">뒤로: <a href="../Objects.htm">객체 편집기</a></div>
+        <div style="float:right">다음: <a href="Physics_Objects.htm">물리 객체</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Parent Objects
@@ -144,4 +118,4 @@ inheritance
 parent_objects
 -->
 
-</body></html>
+</body></html> 

@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Objects And Instances">
-        <span>Objects And Instances</span>
+        <span>객체와 인스턴스</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,97 +81,74 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Objects And Instances</h1>
-  <p>With the assets you have seen so far you can add some nice images and sounds to the game asset browser, but they don&#39;t do anything in the game itself yet! For that we need the most important assets of all in GameMaker Studio 2, the <strong>Object </strong>asset.
-    Objects are a special asset that we use to control aspects of a game and to do specific things. Most of the time they have a sprite associated with them so that you can see them in the game rooms, but sometimes they are used as a &quot;behind the
-    scenes&quot; <strong>controller </strong>objects to do things like track stats, or set timings for cut-scenes, etc... Objects can be given behaviours and they can react to certain events as well as to each other, and most of the things you see in
-    a game are based on objects and their interactions with the user and each other.</p>
-  <p>Now, we can&#39;t talk about Objects without talking about <strong>Instances</strong>. In a game made with GameMaker Studio 2, the characters, monsters, balls, walls, etc... that you see in the game are actually all considered as being <strong>instances</strong>.
-    An instance is essentially a &quot;copy&quot; of an object that is found in the Asset Browser and then placed in a room (think of objects as <strong>templates </strong>for instances). So when we talk about something affecting or changing an instance,
-    we mean that one particular copy of an object in a room is being affected while all the rest are not, but when we talk about affecting or changing an object we mean that anything we do to it will be reflected in all the instances created from that
-    point on too. So, <strong>the object is the template for the instance, and the instance is what we place in a room to make our game</strong>.</p>
-  <p>To create a new object asset, it&#39;s the same as for every other asset and you simply right click <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> on the Objects asset folder and select <em>Create</em> (or right click
-    anywhere in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and select <em>Create Object</em>).</p>
+  <h1>객체와 인스턴스</h1>
+  <p>지금까지 본 애셋으로 게임 애셋 브라우저에 멋진 이미지와 사운드를 추가 할 수 있지만 아직 게임 자체에서 아무것도하지 않습니다! 이를 위해 GameMaker Studio 2에서 가장 중요한 자산 인 <strong>Object</strong> 자산이 필요합니다. 오브젝트는 게임의 측면을 제어하고 특정 작업을 수행하는 데 사용하는 특수 자산입니다. 대부분의 경우 게임 룸에서 볼 수 있도록 스프라이트가 연결되어 있지만 때때로 트랙 통계와 같은 작업을 수행하거나 컷 장면의 타이밍을 설정하는 &quot;장면&quot; <strong>컨트롤러</strong> 오브젝트로 사용됩니다. 등 ... 객체에 동작을 부여하고 특정 이벤트 및 서로에 반응 할 수 있으며 게임에서 볼 수있는 대부분의 객체는 객체 및 사용자와의 상호 작용을 기반으로합니다.</p>
+  <p>이제 <strong>Instances</strong> 에 대해 이야기하지 않고 Objects에 대해 이야기 할 수 없습니다. GameMaker Studio 2로 제작 된 게임에서 게임에서 볼 수있는 캐릭터, 몬스터, 공, 벽 등은 실제로 <strong>인스턴스</strong> 로 간주됩니다. 인스턴스는 기본적으로 자산 브라우저에서 찾은 다음 방에 배치되는 객체의 &quot;복사&quot;입니다 (객체를 <strong>템플릿으로</strong> 생각합니다). 따라서 인스턴스에 영향을 주거나 변경하는 것에 대해 이야기 할 때, 방에있는 객체의 특정 사본 하나가 영향을받는 반면 나머지는 영향을받지 않는다는 것을 의미하지만, 객체에 영향을 주거나 변경하는 것에 대해서는 그 시점에서 생성 된 모든 인스턴스에도 반영됩니다. 따라서 <strong>객체는 인스턴스의 템플릿이며 인스턴스는 게임을 만들기 위해 방에 배치하는 것</strong> 입니다.</p>
+  <p>To create a new object asset, it&#39;s the same as for every other asset and you simply right click <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/>Objects asset 폴더에서 <em>Create를</em> 선택하거나 <a href="../Introduction/The_Asset_Browser.htm">Asset Browser의</a> 아무 곳이나 마우스 오른쪽 버튼으로 클릭하고 <em>Create Object를</em> 선택합니다.</p>
   <p><img alt="The Object Editor" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor.png"/></p>
   <p>This is the <a href="../The_Asset_Editors/Objects.htm">Object Editor</a> window and shows the current object properties, and the first thing you should do is name the object, again using a prefix like &quot; <span class="inline">obj_</span>&quot; or
-    some other identifier. In general, for an object to draw anything and register collisions with instances of other objects it needs to have a sprite assigned to it, which is added using the <img alt="Add Sprite Icon " class="icon" height="24" src="../assets/Images/Icons/Icon_AddSound.png" width="31"/> button. This will open the <strong>Asset Explorer</strong> where you can select the sprite to use (you can also drag sprites from the Asset Browser and drop them onto the Object Editor to assign them):</p>
+    some other identifier. In general, for an object to draw anything and register collisions with instances of other objects it needs to have a sprite assigned to it, which is added using the <img alt="Add Sprite Icon " class="icon" height="24" src="../assets/Images/Icons/Icon_AddSound.png" width="31"/>단추. 그러면 사용할 스프라이트를 선택할 수있는 <strong>자산 탐색기</strong> 가 열립니다 (애셋 브라우저에서 스프라이트를 드래그하여 오브젝트 편집기에 놓아 할당 할 수도 있습니다).</p>
   <p><img alt="The Asset Explorer" class="center" src="../assets/Images/QS_Guide/QS_AssetExplorer.png"/></p>
-  <p>If you do not have an appropriate sprite yet, you can click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the <em>New Sprite</em> button <img alt="New Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_NewSprite.png"/> to create a new sprite asset and edit it as you wish, just as if you had created the asset through the standard sprite create options, only now it will automatically be assigned to the object that you had open when you started to create it. Once
-    you select a sprite you can also click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the <em>Edit Sprite</em> <img alt="Edit Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_EditSprite.png"/> or <em>Edit Image</em>    <img alt="Edit Image Icon" class="icon" src="../assets/Images/Icons/Icon_EditImage.png"/> buttons to edit either the images of the sprite itself or the sprite asset. This can be faster than first finding the sprite in the Asset Browser and then indicating
-    you want to edit it.</p>
-  <p>Once you have added or created the sprite, you can change a few other object properties like whether it should be <strong>visible </strong>or not - for example - or what kind of <strong>collision mask</strong> it should have. For simple games you probably
-    don&#39;t need to change anything here and can now go on to add <strong>Events </strong>to the object.</p>
-  <p>Events are discreet moments in the game loop where things are made to happen based on what you have programmed for them. GameMaker Studio 2 works with cycles of these events - from the moment a room is started to the moment it is finished there is a
-    game loop running where every step a series of events are run, and you can choose to place GML code or DnD™ actions in your instances that respond to these events (a <strong>step </strong>is a moment in game time, governed by the game speed setting
-    - also called a &quot;frame&quot;).</p>
-  <p>To add an event you click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the Add Event button:</p>
+  <p>If you do not have an appropriate sprite yet, you can click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/><em>새 스프라이트</em> 버튼에 표준 스프라이트 생성 옵션을 통해 자산을 생성 한 것처럼 새 스프라이트 자산을 생성하고 원하는대로 편집 할 수 있습니다. 이제는 생성을 시작할 때 연 오브젝트에 자동으로 할당됩니다. 스프라이트를 선택하면 <em>스프라이트 편집</em> 또는 <em>이미지 편집</em> 버튼을 눌러 스프라이트 자체의 이미지 또는 스프라이트 자산을 편집합니다. 애셋 브라우저에서 스프라이트를 찾은 다음 편집하라고 표시하는 것보다 빠를 수 있습니다.</p>
+  <p>스프라이트를 추가하거나 만든 후에는 <strong>표시</strong> 여부와 같은 다른 객체 속성을 변경할 수 <strong>있습니다 (</strong> 예 : <strong>충돌 마스크</strong> 종류). 간단한 게임의 경우 여기에서 아무것도 변경할 필요가 없으며 이제 객체에 <strong>이벤트</strong> 를 추가 할 수 있습니다.</p>
+  <p>이벤트는 게임 루프에서 신중하게 결정된 순간입니다. 이벤트는 프로그래밍 된 내용에 따라 발생합니다. GameMaker Studio 2는 이러한 이벤트의주기와 함께 작동합니다. 방이 시작된 순간부터 완료 될 때까지 일련의 이벤트가 실행되는 모든 단계에서 실행되는 게임 루프가 있으며 GML 코드 또는 DnD를 배치하도록 선택할 수 있습니다. ¢ 이러한 이벤트에 응답하는 인스턴스에서의 조치 ( <strong>단계</strong> 는 게임 속도 설정에 의해 결정되는 게임 시간의 순간입니다 ( &quot;프레임&quot;이라고도 함)).</p>
+  <p>To add an event you click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/>이벤트 추가 버튼에서 :</p>
   <p><img alt="The Object Editor Events" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor_Events.png"/></p>
-  <p>Above you can see all the different <strong>Event Categories</strong>, some of which contain other sub-categories. We won&#39;t go through all the events here, but we will cover the five most important ones briefly:</p>
+  <p>위에서 다른 모든 <strong>이벤트 범주를</strong> 볼 수 있으며, 그 중 일부에는 다른 하위 범주가 포함되어 있습니다. 여기서는 모든 이벤트를 진행하지는 않지만 가장 중요한 다섯 가지 이벤트를 간략하게 설명합니다.</p>
   <table class="icons">
     <tbody>
       <tr>
-        <td class="icons"><img alt="Icon Create Event" src="../assets/Images/Icons/Icon_Event_Create.png"/></td>
-        <td class="icons"><strong>Create Event</strong></td>
-        <td class="text">This event happens when an instance of the object is first created, and is the very first thing that happens within an instance that has been placed in the room through the room editor when a room is entered. This means that this event is the
-          ideal place to initialize variables, start Timelines, set paths etc... and do anything else that generally only needs to be done once or only when an instance first appears in the room.</td>
+        <td class="icons"><img alt="아이콘 이벤트 생성" src="../assets/Images/Icons/Icon_Event_Create.png"/></td>
+        <td class="icons"><strong>이벤트 만들기</strong></td>
+        <td class="text">이 이벤트는 객체의 인스턴스가 처음 생성 될 때 발생하며, 룸에 들어갈 때 룸 편집기를 통해 룸에 배치 된 인스턴스 내에서 가장 먼저 발생합니다. 즉,이 이벤트는 변수를 초기화하고, 타임 라인을 시작하고, 경로를 설정하는 등의 이상적인 장소이며, 일반적으로 인스턴스가 방에 처음 나타날 때만 수행하면됩니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Icon Step Event" src="../assets/Images/Icons/Icon_Event_Step.png"/></td>
-        <td class="icons"><strong>Step Event</strong></td>
-        <td class="text">GameMaker Studio 2 splits game time into steps with the game speed defining how many of these steps there are supposed to be per second. A step, is basically the loop that runs constantly with all the events being checked and triggered as necessary
-          while the game runs, so as you can imagine, the Step Event is an event that is checked every single step of the game while the instance exists. Note that the Step Event category has three sub-categories to &quot;fine tune&quot; timing within
-          the instance, but in general you will use the main Step Event most.</td>
+        <td class="icons"><img alt="아이콘 단계 이벤트" src="../assets/Images/Icons/Icon_Event_Step.png"/></td>
+        <td class="icons"><strong>스텝 이벤트</strong></td>
+        <td class="text">GameMaker Studio 2는 게임 시간을 게임 속도로 단계별로 나눠서 초당 몇 단계가 필요한지를 정의합니다. 단계는 기본적으로 게임이 실행되는 동안 필요에 따라 모든 이벤트를 확인하고 트리거하여 지속적으로 실행되는 루프이므로 단계 이벤트는 인스턴스가 존재하는 동안 게임의 모든 단계마다 확인되는 이벤트입니다. . 단계 이벤트 범주에는 인스턴스 내에서 타이밍을 &quot;미세 조정&quot;하기위한 세 개의 하위 범주가 있지만 일반적으로 기본 단계 이벤트를 가장 많이 사용합니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Icon Collision Event" src="../assets/Images/Icons/Icon_Event_Collision.png"/></td>
-        <td class="icons"><strong>Collision Event</strong></td>
-        <td class="text">Obviously when making a game, it is very important that you know when two (or more) instances of an object have collided, and for that we have the collision event. This is an event that you place in an object and then specify against which other
-          object you should be checking for collisions. Once you have added the event and chosen the object to check for you can add GML code or DnD™ to resolve the collision.</td>
+        <td class="icons"><img alt="아이콘 충돌 이벤트" src="../assets/Images/Icons/Icon_Event_Collision.png"/></td>
+        <td class="icons"><strong>충돌 이벤트</strong></td>
+        <td class="text">분명히 게임을 만들 때 객체의 두 개 이상의 인스턴스가 충돌 한 시점과 충돌 이벤트가 발생하는 시점을 아는 것이 매우 중요합니다. 이것은 객체에 놓은 다음 충돌을 확인해야하는 다른 객체에 대해 지정하는 이벤트입니다. 이벤트를 추가하고 확인할 객체를 선택하면 GML 코드 또는 DnD ™를 추가하여 충돌을 해결할 수 있습니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Icon Draw Event" src="../assets/Images/Icons/Icon_Event_Draw.png"/></td>
-        <td class="icons"><strong>Draw Event</strong></td>
-        <td class="text">There are multiple different Draw Events within the draw event category, but the one you use most is the one at the top simply called &quot;Draw&quot;. This general draw event will be called, like the step event, every game frame, but it works
-          in two different ways. The first is when you don&#39;t add this event to the object... When there is no <em>specified </em>Draw Event, then GameMaker Studio 2 will default to drawing the sprite assigned to the object, using any transforms that
-          have been applied elsewhere in the object (like to change its size or alpha blending), so even when no Draw Event is listed in the Events list, it is still being run and will still draw to the screen when an instance is placed in a room. The
-          second way it works is when you add the event itself and include any GML or DnD™ in it. Adding something to the event tells GameMaker Studio 2 &quot; <em>I want to control what you draw for instances of this object</em>&quot; and it completely
-          over-rides the default draw. This means that you can have an object with a sprite assigned, then set the draw event to draw text and the sprite will not be drawn as you have not told GameMaker Studio 2 to draw it, although the text will be.</td>
+        <td class="icons"><img alt="아이콘 추첨 이벤트" src="../assets/Images/Icons/Icon_Event_Draw.png"/></td>
+        <td class="icons"><strong>이벤트 추첨</strong></td>
+        <td class="text">추첨 이벤트 카테고리에는 여러 가지 추첨 이벤트가 있지만 가장 많이 사용하는 추첨 이벤트는 맨 위에있는 &quot;그리기&quot;입니다. 이 일반적인 드로우 이벤트는 스텝 이벤트와 같이 모든 게임 프레임에서 호출되지만 두 가지 방식으로 작동합니다. 첫 번째는 오브젝트에이 이벤트를 추가하지 않을 때입니다 ... <em>지정된</em> Draw 이벤트가 없으면 GameMaker Studio 2는 기본적으로 오브젝트의 다른 곳에 적용된 변환을 사용하여 오브젝트에 지정된 스프라이트를 그리도록 설정합니다 객체 (크기 또는 알파 블렌딩 변경과 같은)와 같으므로 이벤트 목록에 Draw Event가 나열되어 있지 않더라도 인스턴스가 룸에 배치 될 때 여전히 실행 중이며 화면에 계속 그려집니다. 두 번째 방법은 이벤트 자체를 추가하고 GML 또는 DnD ™를 이벤트에 추가하는 것입니다. 이벤트에 무언가를 추가하면 GameMaker Studio 2에 &quot; <em>이 개체의 인스턴스에 대해 그리는 것을 제어하고 싶습니다</em> &quot;라고 알려주며 기본 그리기를 완전히 무시 <em>합니다</em> . 즉, 스프라이트가 할당 된 오브젝트를 가질 수 있고 draw 이벤트를 설정하여 텍스트를 그리면 GameMaker Studio 2에 텍스트를 표시하지 않아도 스프라이트가 그려지지 않습니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Icon Destroy Event" src="../assets/Images/Icons/Icon_Event_Destroy.png"/></td>
-        <td class="icons"><strong>Destroy Event</strong></td>
-        <td class="text">This event is the very last event to be executed when an instance is destroyed. It is often overlooked when adding behaviours to objects, but it can be very useful - for example, for creating explosion or particle effects when an enemy is killed,
-          or for re-spawning a new instance of the object in another part of the room, or even for adding points onto a score.</td>
+        <td class="icons"><img alt="아이콘 파괴 이벤트" src="../assets/Images/Icons/Icon_Event_Destroy.png"/></td>
+        <td class="icons"><strong>이벤트 파괴</strong></td>
+        <td class="text">이 이벤트는 인스턴스가 파괴 될 때 가장 마지막으로 실행되는 이벤트입니다. 객체에 동작을 추가 할 때 종종 간과되지만, 적을 죽일 때 폭발 또는 파티클 효과를 생성하거나 방의 다른 부분에서 객체의 새로운 인스턴스를 다시 생성하는 등 매우 유용 할 수 있습니다. 또는 점수에 점수를 추가하기 위해.</td>
       </tr>
     </tbody>
   </table>
-  <p>
-    <!--</div>-->
-  </p>
-  <p>For further information on all the different events, please see <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">here</a>.</p>
-  <p>Adding an event will open either the code editor or the Drag and Drop™ editor, depending what type of project you are creating. In this window you can now add the GML or DnD™ actions that you wish to be performed each time that event is triggered within
-    the game loop. A typical object with events and code will look like this:</p>
+  <p><!--</div>--></p>
+  <p>다른 모든 이벤트에 대한 자세한 내용은 <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">여기</a> 를 참조 <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">하십시오</a> .</p>
+  <p>이벤트를 추가하면 생성중인 프로젝트 유형에 따라 코드 편집기 또는 드래그 앤 드롭 편집기가 열립니다. 이 창에서 이제 이벤트가 게임 루프 내에서 트리거 될 때마다 수행 할 GML 또는 DnD ™ 액션을 추가 할 수 있습니다. 이벤트와 코드가있는 일반적인 객체는 다음과 같습니다.</p>
   <p><img alt="Object Editor Chained Windows" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor_Chain.png"/></p>
-  <p>You can find more information about using GML and DnD™ in your object events from the two pages given below:</p>
+  <p>아래 두 페이지에서 객체 이벤트에서 GML 및 DnD ™ 사용에 대한 자세한 정보를 찾을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="../Drag_And_Drop/Drag_And_Drop_Overview/DnD_Overview.htm">Drag and Drop™ Overview</a></li>
-    <li><a href="../GameMaker_Language/GML_Overview/GML_Overview.htm">GameMaker Language Overview</a></li>
+    <li><a href="../Drag_And_Drop/Drag_And_Drop_Overview/DnD_Overview.htm">끌어서 놓기 개요</a></li>
+    <li><a href="../GameMaker_Language/GML_Overview/GML_Overview.htm">게임 메이커 언어 개요</a></li>
   </ul>
-  <p>And you can find a full explanation of all the different parts of the Object Editor here:</p>
+  <p>Object Editor의 모든 다른 부분에 대한 자세한 설명은 여기를 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Objects.htm">Editors: The Object Editor</a></li>
+    <li><a href="../The_Asset_Editors/Objects.htm">편집자 : 개체 편집기</a></li>
   </ul>
-  <p>The next part of this guide will look at one more resource type, <strong>Sequences</strong>...</p>
+  <p>이 가이드의 다음 부분에서는 하나 이상의 리소스 유형 인 <strong>시퀀스</strong> ...를 살펴 봅니다.</p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Quick_Start_Guide\Objects_And_Instances.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Sequences.htm">Sequences</a></div>
+        <div style="float:left">뒤로: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:right">다음: <a href="Sequences.htm">시퀀스</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Objects And Instances
@@ -181,4 +158,4 @@ Quick Start: Objects and Instances
 qs_objects_instances
 -->
 
-</body></html>
+</body></html> 

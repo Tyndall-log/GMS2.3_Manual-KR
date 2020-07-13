@@ -71,7 +71,7 @@
         <span>buffer_create_from_vertex_buffer</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,95 +81,91 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>buffer_create_from_vertex_buffer</h1>
-  <p>You use this function to allocate a portion of memory as a buffer in your game filled with the data from a previously created <a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">vertex buffer</a>. The function returns a unique <i>buffer id</i>    that should be stored in a variable and used for all further function calls to the buffer. The function takes the id for the vertex buffer to use (as returned by the function <a href="../Drawing/Primitives/vertex_create_buffer.htm"><tt>vertex_create_buffer()</tt></a>,
-    for example) with the following constants being used to define the buffer type:</p>
+  <p>이 함수를 사용하여 게임에서 이전에 생성 된 <a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">정점 버퍼</a> 의 데이터로 채워진 버퍼로 메모리의 일부를 할당합니다. 이 함수는 변수에 저장해야하며 <i>버퍼에</i> 대한 모든 추가 함수 호출에 사용해야하는 고유 한 <i>버퍼 ID</i> 를 반환합니다. 이 함수는 버퍼 유형을 정의하는 데 다음 상수가 사용되는 정점 버퍼의 id (예 : <a href="../Drawing/Primitives/vertex_create_buffer.htm"><tt>vertex_create_buffer ()</tt></a> 함수에서 반환)를 사용합니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>buffer_fixed</td>
-        <td>A buffer of fixed size.</td>
+        <td>고정 크기의 버퍼.</td>
       </tr>
       <tr>
         <td>buffer_grow</td>
-        <td>A buffer that will &quot;grow&quot; dynamically as data is added</td>
+        <td>데이터가 추가 될 때 동적으로 &quot;증가&quot;하는 버퍼</td>
       </tr>
       <tr>
         <td>buffer_wrap</td>
-        <td>A buffer where the data will &quot;wrap&quot;. When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</td>
+        <td>데이터가 &quot;랩핑&quot;되는 버퍼입니다. 추가되는 데이터가 버퍼 크기의 한계에 도달하면 덮어 쓰기가 버퍼의 시작 부분에 다시 배치되고 이후부터 계속해서 쓰기가 계속됩니다.</td>
       </tr>
       <tr>
         <td>buffer_fast</td>
-        <td>Special &quot;stripped&quot; buffer that is extremely fast to read/write to. Can only be used with <tt>buffer_u8</tt> <a href="buffer_write.htm">data types</a>, and <i>must</i> be 1 byte aligned.</td>
+        <td>읽기 / 쓰기 속도가 매우 빠른 특수 &quot;스트립 형&quot;버퍼. <tt>buffer_u8</tt> <a href="buffer_write.htm">데이터 유형</a> 에만 사용할 수 있으며 1 바이트로 정렬 <i>되어야합니다</i> .</td>
       </tr>
       <tr>
         <td>buffer_vbuffer</td>
-        <td>This type of buffer is to be used as a vertex buffer only.</td>
+        <td>이 유형의 버퍼는 꼭짓점 버퍼로만 사용됩니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>Apart from the buffer type, you will also have to set the <i>byte alignment</i> for the buffer. This value will vary depending on the data that you wish to store in the buffer, and in most cases a value of 1 is perfectly fine. However, be aware that
-    for some operations a specific alignment is <i>essential</i>, and an incorrect alignment may cause errors (for further details on alignment see <a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Buffers</a>). The following is a general
-    guide to show which values are most appropriate for each data type (when in doubt, use an alignment of 1):</p>
+  <p>버퍼 유형 외에도 버퍼의 <i>바이트 정렬</i> 을 설정해야합니다. 이 값은 버퍼에 저장하려는 데이터에 따라 다르며 대부분의 경우 1 값은 완벽합니다. 그러나 일부 작업의 경우 특정 정렬이 <i>필수적</i> 이며 잘못 정렬하면 오류가 발생할 수 있습니다 (정렬에 대한 자세한 내용은 <a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">버퍼</a> 참조). 다음은 각 데이터 유형에 가장 적합한 값을 보여주는 일반 안내서입니다 (의심 할 경우 1의 정렬 사용).</p>
   <ul class="colour">
-    <li>Strings should be aligned to 1 byte.</li>
-    <li>Signed or unsigned 8bit integers can be aligned to any value, but note that for a fast buffer (see <a href="buffer_write.htm"><tt>buffer_write()</tt></a>) it <i>must</i> be aligned to 1.</li>
-    <li>Signed or unsigned 16bit integers should be aligned to 2 bytes.</li>
-    <li>Signed or unsigned 32bit integers should be aligned to 4 bytes</li>
-    <li>Floats of up to 16bits should be aligned to 2 bytes. <i>(Not currently supported!)</i></li>
-    <li>Floats of up to 32bits should be aligned to 4 bytes.</li>
-    <li>Floats of up to 64bits should be aligned to 8 bytes.</li>
+    <li>문자열은 1 바이트로 정렬되어야합니다.</li>
+    <li>부호있는 또는 부호없는 8 비트 정수는 임의의 값으로 정렬 될 수 있지만 빠른 버퍼 ( <a href="buffer_write.htm"><tt>buffer_write ()</tt></a> 참조)의 경우 1로 정렬 <i>되어야합니다</i> .</li>
+    <li>부호있는 또는 부호없는 16 비트 정수는 2 바이트로 정렬되어야합니다.</li>
+    <li>부호있는 또는 부호없는 32 비트 정수는 4 바이트로 정렬되어야합니다.</li>
+    <li>최대 16 비트의 부동 소수점은 2 바이트로 정렬되어야합니다. <i>(현재 지원되지 않습니다!)</i></li>
+    <li>최대 32 비트의 부동 소수점은 4 바이트로 정렬되어야합니다.</li>
+    <li>최대 64 비트의 부동 소수점은 8 바이트로 정렬되어야합니다.</li>
   </ul>
-  <p class="note"><b>NOTE</b>: Vertex buffers are 1 byte aligned, but you can create the buffer with any alignment depending on how you want to treat the data, as the vertex data is simply a raw memory copy into the buffer.</p>
-  <p class="note"><b>NOTE</b>: It&#39;s important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again
-    using <span style="font-size:1px;"><a href="buffer_delete.htm"><tt style="font-size: 14px">buffer_delete()</tt></a></span>. Also note that the vertex buffer used to create the new buffer is not removed from memory either and you should use the function
-    <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><tt style="font-size: 14px">vertex_delete_buffer()</tt></a></span> when it is no longer required.</p>
+  <p class="note"><b>참고</b> : 정점 버퍼는 1 바이트로 정렬되지만 정점 데이터는 단순히 버퍼로의 원시 메모리 복사본이므로 데이터 처리 방법에 따라 정렬로 버퍼를 만들 수 있습니다.</p>
+  <p class="note"><b>참고</b> : 메모리 누수를 방지하기 위해 더 이상 필요없는 메모리에서 이와 같이 동적으로 생성 된 리소스를 제거하는 것이 중요합니다. 따라서 생성 한 버퍼를 완료하면 <span style="font-size:1px;"><a href="buffer_delete.htm"><tt style="font-size: 14px">buffer_delete ()를</tt></a></span> 사용하여 다시 해제해야합니다. 또한 새 버퍼를 만드는 데 사용 된 정점 버퍼도 메모리에서 제거되지 않으며 더 이상 필요하지 않은 경우 <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><tt style="font-size: 14px">vertex_delete_buffer ()</tt></a></span> 함수를 사용해야합니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">buffer_create_from_vertex_buffer(vertex_buffer, type, alignment)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>vertex_buffer</td>
-        <td>The vertex buffer index to use.</td>
+        <td>버텍스 _ 버퍼</td>
+        <td>사용할 버텍스 버퍼 인덱스.</td>
       </tr>
       <tr>
-        <td>type</td>
-        <td>The type of buffer to create (see the constants list above).</td>
+        <td>유형</td>
+        <td>작성할 버퍼의 유형입니다 (위의 상수 목록 참조).</td>
       </tr>
       <tr>
-        <td>alignment</td>
-        <td>The byte alignment for the buffer</td>
+        <td>조정</td>
+        <td>버퍼의 바이트 정렬</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Int (Vertex buffer ID)</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">player_buffer = buffer_create_from_vertex_buffer(model_buffer, buffer_grow, 1);</p>
-  <p>The above code allocates memory to a buffer then copies the data from the given vertex buffer into it, returning the index of the new buffer which is stored in the variable &quot;player_buffer&quot;, for future use.</p>
+  <p>위의 코드는 메모리를 버퍼에 할당 한 다음 주어진 버텍스 버퍼에서 데이터를 복사하여 나중에 사용할 수 있도록 변수 &quot;player_buffer&quot;에 저장된 새 버퍼의 인덱스를 반환합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Buffers\buffer_create_from_vertex_buffer.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_create_from_vertex_buffer_ext.htm">buffer_create_from_vertex_buffer_ext</a></div>
+        <div style="float:left">뒤로: <a href="Buffers.htm">버퍼</a></div>
+        <div style="float:right">다음: <a href="buffer_create_from_vertex_buffer_ext.htm">buffer_create_from_vertex_buffer_ext</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 buffer_create_from_vertex_buffer
@@ -183,4 +179,4 @@ buffer_vbuffer
 buffer_create_from_vertex_buffer
 -->
 
-</body></html>
+</body></html> 
