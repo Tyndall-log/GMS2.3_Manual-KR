@@ -83,7 +83,7 @@
   <h1>sprite_replace</h1>
   <p>이 함수는 <a href="sprite_add.htm"><tt>sprite_add ()</tt></a> 와 거의 동일한 방식으로 작동하며, 가져 오는 스프라이트의 인덱스를 반환하는 대신 이전에 생성 된 스프라이트 인덱스를 덮어 씁니다. 이 기능을 사용하면이 같은 다른 기능을 사용하여 변수에 생성되고 저장되어있는 스프라이트 인덱스를 사용해야합니다 <a href="sprite_add.htm"><tt>sprite_add ()</tt></a> 또는 <a href="sprite_create_from_surface.htm"><tt>sprite_create_from_surface ()</tt></a> , 또는 <a href="sprite_duplicate.htm"><tt>sprite_duplicate을 ()</tt></a> 보다는 리소스 트리 스프라이트 자산을. 이 함수를 사용하여 게임 자산에서 스프라이트를 교체 <i>할 수</i> 있지만 그렇게하면 <tt>game_restart ()</tt> 호출 여부에 관계없이 교체중인 스프라이트의 참조 ID가 손실되므로 권장하지 않습니다. 스프라이트 교체와 관계없이이 함수는 스프라이트에 <b>대한 새로운 텍스처 페이지를 생성</b> 하므로 렌더링에 필요한 텍스처 스왑 수를 늘려 성능에 부정적인 영향을 줄 수 있으므로이를 사용할 때주의를 기울여야합니다.</p>
   <p>로드 할 이미지 파일은 <b>항상</b> <tt>* .png</tt> 형식이어야하며 애니메이션 스프라이트로 변환 할 모든 이미지는 &quot;스트립&quot;형식이어야합니다 (아래 이미지 참조). 규칙 <b>스프라이트 너비 = 스트립 너비 / 하위 이미지에</b> 따라 지정된 하위 이미지 수로 분할됩니다.</p>
-  <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png"/></p>
+  <p><img alt="스프라이트 스트립 예" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png"/></p>
   <p>위 이미지에서 볼 수 있듯이 스프라이트는 진한 자주색 배경에 배치되었으며 &quot;removeback&quot;인수를 <tt>true</tt> 로 설정하여 제거 할 수 있습니다. 스프라이트의 <i>왼쪽 아래</i> 픽셀에서 색상을 확인한 다음 제거 할 색상으로 사용합니다. 예를 들어 위의 이미지에서 왼쪽 아래 픽셀 색상이 녹색이면 스프라이트의 모든 녹색 부분이 제거되고 나머지 자주색 배경은 무시됩니다.</p>
   <p>&quot;removeback&quot;옵션을 선택하면, &quot;smooth&quot;인수를 <tt>true</tt> 로 설정하여 GameMaker Studio 2가 스프라이트의 가장자리를 부드럽게 할 수도 있습니다. 이 모든 것은 스프라이트의 배경을 제거한 후 스프라이트 가장자리 주위에 반투명 테두리를 만드는 것입니다.</p>
   <p>마지막으로 스프라이트의 x 및 y <i>원점</i> 을 지정할 수도 있습니다. 이것은 스프라이트가 그것을 사용하는 인스턴스에 스프라이트가 &quot;고정 된&quot;지점이며, 항상 하나의 스프라이트 서브 이미지의 왼쪽 상단의 0,0을 기준으로 계산됩니다. 예를 들어,이 값이 (16,16)으로 설정된 32 x 32 픽셀 인 스프라이트는 중심에 원점이 있습니다.</p>
@@ -139,7 +139,7 @@
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Asset_Management\Sprites\Sprite_Manipulation\sprite_replace.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_replace.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

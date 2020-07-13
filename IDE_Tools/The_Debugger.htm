@@ -81,25 +81,23 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>디버거</h1>
-  <p>The <strong>Debugger </strong>is a powerful tool for checking your game, and is especially useful for tracking down errors and bugs in your code, as well as checking that scripts are run when they should be, and that variables and arrays contain the
-    values you expect etc... You can start the Debugger by running your game from GameMaker Studio 2 <a class="tooltip" title="The IDE, or Integrated Development Environment, is a software application that provides comprehensive facilities to computer programmers for software development. In this case, the entire frontend of GameMaker Studio 2 is considered the IDE, and includes sections to create graphics, add sounds, and add code to make your games.">IDE</a> using the Debug button <img alt="Debug Icon" class="icon" src="../assets/Images/Icons/Icon_Debug.png"/>IDE 상단에서 또는 <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">Build 메뉴</a> 로 이동하여 &quot; <em>Debug</em> &quot;를 선택 <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">하십시오</a> .</p>
+  <p><strong>디버거</strong> 는 게임을 확인하는 강력한 도구이며 코드에서 오류 및 버그를 추적하고 스크립트가 필요할 때 실행되고 변수 및 배열에 예상 값 등이 포함되어 있는지 확인하는 데 특히 유용합니다. .. 디버그 버튼을 사용하여 GameMaker Studio 2 <a class="tooltip" title="IDE (Integrated Development Environment)는 컴퓨터 프로그래머에게 소프트웨어 개발을위한 포괄적 인 기능을 제공하는 소프트웨어 응용 프로그램입니다. 이 경우 GameMaker Studio 2의 전체 프론트 엔드는 IDE로 간주되며 그래픽을 생성하고 사운드를 추가하며 게임을 만들기위한 코드를 추가하는 섹션을 포함합니다.">IDE</a> 에서 게임을 실행하여 디버거를 시작할 수 있습니다 IDE 상단에서 또는 <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">Build 메뉴</a> 로 이동하여 &quot; <em>Debug</em> &quot;를 선택 <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">하십시오</a> .</p>
   <p class="note"><strong>참고</strong> :이 모듈에 대한 보안 예외를 작성하라는 메시지가 Windows 방화벽 (또는 실행중인 다른 방화벽 프로그램)에 의해 표시 될 수 있습니다. <strong>그렇지 않으면 올바르게 작동하지 않습니다</strong> . 이것은 디버거가 작동하는 방식 때문이며 모바일 플랫폼을 디버깅하는 데 필수적입니다.</p>
   <p>디버그 모드에서 게임을 실행하면 IDE에 디버거에 사용할 수있는 다양한 도구가 표시됩니다.</p>
-  <p><img alt="The Debugger Windows" class="center" src="../assets/Images/IDE Tools/Debug_Module.png"/>위의 이미지는 디버거의 기본 레이아웃을 보여 주지만 IDE의 다른 측면과 마찬가지로 필요에 따라 창을 닫거나 필요에 따라 문서 및 창 크기를 변경하여 필요에 맞게이를 사용자 지정할 수 있습니다. IDE 맨 위에있는 디버거 컨텍스트 메뉴에서 언제든지 디버거 레이아웃을 재설정하거나 닫힌 창을 다시 열 수 있습니다.</p>
-  <p><img alt="Debugger Context Menu" class="center" src="../assets/Images/IDE Tools/Debug_Module_Context_Menu.png"/>아래는 디버거의 각 섹션에 대한 설명입니다.</p>
+  <p>위의 이미지는 디버거의 기본 레이아웃을 보여 주지만 IDE의 다른 측면과 마찬가지로 필요에 따라 창을 닫거나 필요에 따라 문서 및 창 크기를 변경하여 필요에 맞게이를 사용자 지정할 수 있습니다. IDE 맨 위에있는 디버거 컨텍스트 메뉴에서 언제든지 디버거 레이아웃을 재설정하거나 닫힌 창을 다시 열 수 있습니다.</p>
+  <p>아래는 디버거의 각 섹션에 대한 설명입니다.</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">그래프보기</span> <span data-close-text="true">그래프보기</span></a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">그래프보기는 프로젝트에서 시간이 지남에 따라 메모리와 프레임 속도를 사용하는 방법을 그래픽으로 표시합니다.</p>
-    <p class="dropspot"><img alt="Debug Graph" class="center" src="../assets/Images/IDE Tools/Debug_Graph.png"/>그래프는 현재 및 평균 메모리 사용량과 시간에 따른 현재 및 평균 FPS를 보여 주며, / 마우스 휠과 함께 그래프 요소 중 하나에 마우스 커서를 놓으면 선택한 점에서 해당 요소의 값이 표시됩니다.</p>
+    <p class="dropspot">그래프는 현재 및 평균 메모리 사용량과 시간에 따른 현재 및 평균 FPS를 보여 주며, / 마우스 휠과 함께 그래프 요소 중 하나에 마우스 커서를 놓으면 선택한 점에서 해당 요소의 값이 표시됩니다.</p>
     <p class="dropspot">그래프보기에는 특정 디버그 이벤트가 그래프 길이에 따라 점으로 표시됩니다. 이러한 이벤트는 게임 실행 중 특정 시점에 GameMaker Studio 2에 의해 자동으로 생성되어 특정 중요 이벤트를 표시하지만 <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"><span class="inline">show_debug_message ()</span></a> 및 <a href="../GameMaker_Language/GML_Reference/Debugging/debug_event.htm"><span class="inline">debug_event ()</span></a> 함수를 사용하여 자체 그래프 요소를 추가 할 수도 있습니다. 시스템 이벤트는 코드를 통해 트리거되는 이벤트와 다른 색으로 표시됩니다.</p>
-    <p class="dropspot"><img alt="Debug Graph Events" class="center" src="../assets/Images/IDE Tools/Debug_Graph_Events.png"/>디버그에서 게임을 실행하고 이러한 이벤트를 마우스로 이동하면 게임의 해당 시점에서 트리거 된 모든 이벤트의 목록이 표시되며,이를 클릭하여 수정을 위해 별도의 창으로 목록을 가져 오는 옵션이 있습니다. &quot; <strong>새 창에서 열려면 클릭하십시오</strong> &quot;텍스트 :</p>
-    <p class="dropspot"><img alt="Debug Events" class="center" src="../assets/Images/IDE Tools/Debug_Events.png"/></p>
+    <p class="dropspot">디버그에서 게임을 실행하고 이러한 이벤트를 마우스로 이동하면 게임의 해당 시점에서 트리거 된 모든 이벤트의 목록이 표시되며,이를 클릭하여 수정을 위해 별도의 창으로 목록을 가져 오는 옵션이 있습니다. &quot; <strong>새 창에서 열려면 클릭하십시오</strong> &quot;텍스트 :</p>
+    <p class="dropspot"><img alt="디버그 이벤트" class="center" src="../assets/Images/IDE Tools/Debug_Events.png"/></p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">리소스 뷰</span> <span data-close-text="true">리소스 뷰</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The Resource View shows you a list of all the resources being used in the project that can contain code or DnD™ actions. This section works much like the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and you can expand the items
-      in it to show more information, for example, the different events for a specific object. You can then double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/><strong>코드보기</strong> 창에서 코드를 열려면 모든 리소스에서 값을 확인하고 <strong>중단 점을</strong> 추가 또는 제거 할 수 있습니다.</p>
+    <p class="dropspot">리소스 뷰에는 코드 또는 DnD ™ 액션을 포함 할 수있는 프로젝트에서 사용중인 모든 리소스의 목록이 표시됩니다. 이 섹션은 <a href="../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 와 매우 유사하며 항목을 확장하여 자세한 정보 (예 : 특정 객체에 대한 다른 이벤트)를 표시 할 수 있습니다. 그런 다음 더블 클릭 할 수 있습니다 <strong>코드보기</strong> 창에서 코드를 열려면 모든 리소스에서 값을 확인하고 <strong>중단 점을</strong> 추가 또는 제거 할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">콜 스택</span> <span data-close-text="true">콜 스택</span></a></p>
@@ -153,9 +151,9 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">코드 뷰</span> <span data-close-text="true">코드 뷰</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">The code view is where we can see and review different scripts or event code from our project as it runs. By default this starts empty, but you can double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/><strong>리소스보기의</strong> 모든 자산에서 여기를 엽니 다. 여러 개의 다른 이벤트 나 스크립트도 열 수 있으며 상단의 탭으로 코드 뷰 작업 공간에 추가됩니다.</p>
-    <p class="dropspot">While any code window is open in the Code View, you can left click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/>거터 (줄 번호가있는)에서 <strong>중단 점</strong> 을 추가하거나 제거 <strong>합니다</strong> ( <strong>중단 점에</strong> 대한 자세한 내용은이 페이지 아래 부분 참조).</p>
-    <p class="dropspot">You can also use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/><strong>컨텍스트 메뉴</strong> 를 열면 중단 점을 추가하거나 제거하고 선택한 코드를 클립 보드에 복사 할 수 있습니다.</p>
+    <p class="dropspot">코드 뷰는 프로젝트가 실행될 때 다른 스크립트 나 이벤트 코드를보고 검토 할 수있는 곳입니다. 기본적으로 이것은 비워 지지만 더블 클릭 할 수 있습니다 <strong>리소스보기의</strong> 모든 자산에서 여기를 엽니 다. 여러 개의 다른 이벤트 나 스크립트도 열 수 있으며 상단의 탭으로 코드 뷰 작업 공간에 추가됩니다.</p>
+    <p class="dropspot">코드 뷰에서 코드 창이 열려있는 동안 마우스 왼쪽 버튼을 클릭 할 수 있습니다 거터 (줄 번호가있는)에서 <strong>중단 점</strong> 을 추가하거나 제거 <strong>합니다</strong> ( <strong>중단 점에</strong> 대한 자세한 내용은이 페이지 아래 부분 참조).</p>
+    <p class="dropspot">마우스 오른쪽 버튼을 사용할 수도 있습니다 <strong>컨텍스트 메뉴</strong> 를 열면 중단 점을 추가하거나 제거하고 선택한 코드를 클립 보드에 복사 할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">시계</span> <span data-close-text="true">시계</span></a></p>
@@ -165,18 +163,17 @@
       <li class="dropspot"><a href="The_Debugger/Watches.htm">시계</a></li>
     </ul>
   </div>
-  <p><br/>게임이 실행되는 동안 기본적으로 변수 값과 기타 세부 사항으로 디버그 창을 업데이트하지 않으므로 먼저 일시 정지 버튼을 사용해야합니다. 로컬, 글로벌 및 기타 데이터를 사용할 수 있기 전에 디버거에서 게임을 일시 중지하거나 상단의 아이콘에서 실시간 업데이트를 활성화 . 이 규칙의 유일한 예외는 <strong>프로필</strong> 보기입니다. 실시간보기와 독립적으로 활성화되면 자체 켜기 / 끄기 버튼이있어 실시간으로 업데이트됩니다. 다음 페이지에서이보기에 대한 전체 정보를 찾을 수 있습니다.</p>
+  <p>게임이 실행되는 동안 기본적으로 변수 값과 기타 세부 사항으로 디버그 창을 업데이트하지 않으므로 먼저 일시 정지 버튼을 사용해야합니다. 로컬, 글로벌 및 기타 데이터를 사용할 수 있기 전에 디버거에서 게임을 일시 중지하거나 상단의 아이콘에서 실시간 업데이트를 활성화 . 이 규칙의 유일한 예외는 <strong>프로필</strong> 보기입니다. 실시간보기와 독립적으로 활성화되면 자체 켜기 / 끄기 버튼이있어 실시간으로 업데이트됩니다. 다음 페이지에서이보기에 대한 전체 정보를 찾을 수 있습니다.</p>
   <ul class="colour">
     <li><a href="The_Debugger/The_Profiler.htm">프로파일 러</a></li>
   </ul>
-  <p>Another important part of debugging your game is the use of <strong>Breakpoints</strong>. A breakpoint is a place in your project code that you wish it to stop at so you can see what&#39;s going on. With the Debugger running, you can add or remove breakpoints
-    at any time and in any code or script block by left clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/>거터 (줄 번호가있는 곳)에서 또는 마우스 오른쪽 버튼을 사용할 수 있습니다 <strong>상황에 맞는 메뉴</strong> 를 열면 중단 점을 추가하거나 제거 할 수 있습니다.</p>
-  <p><img alt="Add/Remove Breakpoints" class="center" src="../assets/Images/IDE Tools/Add_Remove_Breakpoint.gif"/>GameMaker Studio 2 IDE에서 중단 점을 설정할 수도 있습니다. 프로젝트를 작성할 때 <span class="inline">f9를</span> 사용하거나 마우스 오른쪽 버튼을 사용하여 언제든지 프로젝트를 추가하거나 제거 할 수 있습니다. 개체 창 (DnD ™ 사용자의 경우) 또는 코드 편집기 창의 행에서 &quot; <strong>토글 중단 점 토글</strong> &quot;을 선택합니다. 이제 게임을 디버그 모드에서 실행하면 정의한 지점에서 일시 중지됩니다.</p>
+  <p>게임 디버깅의 또 다른 중요한 부분은 <strong>Breakpoints</strong> 사용입니다. 중단 점은 프로젝트 코드에서 중단하고 싶은 곳이므로 진행 상황을 확인할 수 있습니다. 디버거를 실행 한 상태에서 왼쪽 클릭을하면 언제든지 코드 또는 스크립트 블록에서 중단 점을 추가하거나 제거 할 수 있습니다. 거터 (줄 번호가있는 곳)에서 또는 마우스 오른쪽 버튼을 사용할 수 있습니다 <strong>상황에 맞는 메뉴</strong> 를 열면 중단 점을 추가하거나 제거 할 수 있습니다.</p>
+  <p>GameMaker Studio 2 IDE에서 중단 점을 설정할 수도 있습니다. 프로젝트를 작성할 때 <span class="inline">f9를</span> 사용하거나 마우스 오른쪽 버튼을 사용하여 언제든지 프로젝트를 추가하거나 제거 할 수 있습니다. 개체 창 (DnD ™ 사용자의 경우) 또는 코드 편집기 창의 행에서 &quot; <strong>토글 중단 점 토글</strong> &quot;을 선택합니다. 이제 게임을 디버그 모드에서 실행하면 정의한 지점에서 일시 중지됩니다.</p>
   <p>IDE에서 설정 한 중단 점은 프로젝트와 함께 저장되며 다시 제거 될 때까지 다양한 실행에 걸쳐 지속되지만 디버거에서 코드에 중단 점을 추가하면 모듈을 닫거나 새로운 테스트 실행이 시작된 후 중단 점을 잃게됩니다 . 모든 중단 점은 <a href="../Introduction/The_Output_Window.htm">출력 창에</a> 나타나 활성화 또는 비활성화하거나 제거 할 수 있습니다.</p>
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('IDE_Tools\The_Debugger.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('IDE_Tools/The_Debugger.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

@@ -82,7 +82,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>프로파일 러</h1>
   <p>디버거를 사용하면 코드를 단계별로 살펴보고 코드베이스와 관련된 문제를 찾을 수 있지만 때로는 게임을 올바르게 최적화하기 위해 미묘한 세부 정보를 확인해야 할 수도 있습니다. <strong>프로파일</strong> 옵션은 성능 개요를 제공하고 함수, 스크립트를 호출하는 데 걸리는 시간 및 특정 이벤트를 완료하는 데 걸린 시간까지 보여줌으로써이를 수행하는 데 도움이됩니다.</p>
-  <p><img alt="Debug Profile Window" class="center" src="../../assets/Images/IDE Tools/Debug_Profile.png"/>호출되는 모든 다양한 이벤트, 스크립트 및 함수를 표시하는 기본 창 외에도 프로파일 러를 사용하기위한 다음 옵션이 있습니다.</p>
+  <p>호출되는 모든 다양한 이벤트, 스크립트 및 함수를 표시하는 기본 창 외에도 프로파일 러를 사용하기위한 다음 옵션이 있습니다.</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">활성화 / 비활성화</span> <span data-close-text="true">활성화 / 비활성화</span></a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">프로파일 러를 활성화 또는 비활성화하는 버튼입니다. 활성화되면 프로파일 러가 시작되고 이벤트, 스크립트 및 기능이 각각 다른 데이터 값과 함께 기본 창에 표시됩니다. 이 데이터가 표시되는 방법은 <strong>시간 표시</strong> 및 <strong>보기 모드</strong> 에 따라 다릅니다 (둘 다 자세히 설명).</p>
@@ -96,19 +96,17 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">보기 모드</span> <span data-close-text="true">보기 모드</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">이 메뉴를 사용하면 <strong>Top Down</strong> 또는 <strong>Bottom Up</strong> 중 하나 <strong>인보기</strong> 모드를 선택할 수 있습니다.</p>
-    <p class="dropspot">Selecting the <strong>Top Down</strong> view mode will show the profile from the top down (more or less the same as the callstack hierarchy) so it will show the event, then the script and then any functions used. Note that you can double click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/>항목이있는 경우 <strong>소스</strong> 디버그 창에서 열려면 항목 중 하나를 선택하십시오. 당신이 볼 경우 이름 옆에있는 아이콘을 클릭하면 해당 섹션 내에 추가 스크립트 또는 함수 호출이 있으며 트리를 확장하여 표시합니다.</p>
-    <p class="dropspot">Selecting the <strong>Bottom Up</strong> view mode will show things from the bottom up so you can see all the functions and script calls individually. When using this view mode, clicking on the <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" width="12" height="12"/>함수 또는 스크립트를 확장하여 실제로 호출 한 것을 표시합니다.</p>
+    <p class="dropspot"><strong>하향식</strong> 보기 모드를 선택하면 프로파일이 하향식 (콜 스택 계층 구조와 다소 유사)에서 표시되므로 이벤트, 스크립트 및 사용 된 기능이 표시됩니다. 두 번 클릭해도됩니다. 항목이있는 경우 <strong>소스</strong> 디버그 창에서 열려면 항목 중 하나를 선택하십시오. 당신이 볼 경우 이름 옆에있는 아이콘을 클릭하면 해당 섹션 내에 추가 스크립트 또는 함수 호출이 있으며 트리를 확장하여 표시합니다.</p>
+    <p class="dropspot"><strong>상향식</strong> 보기 모드를 선택하면 <strong>상향식으로 항목</strong> 이 표시되므로 모든 기능과 스크립트 호출을 개별적으로 볼 수 있습니다. 이보기 모드를 사용할 때 함수 또는 스크립트를 확장하여 실제로 호출 한 것을 표시합니다.</p>
     <p class="dropspot"></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">대상보기 대상</span> <span data-close-text="true">보기</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The <strong>View Target</strong> permits you to choose between viewing the project GML (event and code data), the background engine processes or both. If you choose &quot;GML&quot;, then you will get the events, functions and scripts being called
-      each step while the &quot;Engine&quot; view will only show the engine calls required by the project, enabling you to see any bottlenecks in the way that your project is handling things. If you select &quot;Both&quot;, then both sets of data will
-      be displayed, but note that when combined with the &quot;Bottom Up&quot; view, the different script and function calls will be nested within the engine calls and you will need to click the <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" width="12" height="12"/>그들을 볼 수 있도록 확장합니다.</p>
+    <p class="dropspot"><strong>View Target을 사용</strong> 하면 프로젝트 GML (이벤트 및 코드 데이터)보기, 백그라운드 엔진 프로세스 또는 둘 다를 선택할 수 있습니다. &quot;GML&quot;을 선택하면 각 단계마다 이벤트, 함수 및 스크립트가 호출되고 &quot;엔진&quot;보기에는 프로젝트에 필요한 엔진 호출 만 표시되므로 프로젝트 방식에 병목 현상이 발생합니다. 물건을 다루고 있습니다. &quot;Both&quot;를 선택하면 두 데이터 세트가 모두 표시되지만 &quot;Bottom Up&quot;보기와 결합하면 다른 스크립트 및 함수 호출이 엔진 호출 내에 중첩되므로 그들을 볼 수 있도록 확장합니다.</p>
     <p class="dropspot"></p>
   </div>
   <p>프로필 데이터는 4 개의 열로 표시되며이 중 하나를 클릭하면 열 기준에 따라 데이터가 정렬됩니다.</p>
-  <p><img alt="Profile Display" class="center" src="../../assets/Images/IDE Tools/Profiler_Display.gif"/></p>
+  <p><img alt="프로필 표시" class="center" src="../../assets/Images/IDE Tools/Profiler_Display.gif"/></p>
   <ul class="colour">
     <li><strong>이름</strong> : 이것은 호출되는 이벤트, 스크립트 또는 함수의 이름이며 옆에 추가 호출을 나타내거나 선택한 <strong>보기 모드</strong> 에 따라 다른 호출을 나타냅니다. 더블 클릭 할 수 있습니다 소스 창 내에서 코드 블록 또는 스크립트를 열려면 모든 이름을 입력하십시오. 이 열의 상단을 클릭하면 이름이 알파벳 순서로 정렬됩니다.</li>
     <li><strong>시간</strong> : 프로파일 링하는 동안 함수 (또는 스크립트 또는 이벤트)가 걸린 <em>총</em> 시간 또는 각 단계를 호출하는 데 걸린 <em>평균</em> 시간 (선택한 <strong>시간 표시</strong> 옵션에 따라 다름)을 표시합니다. 마이크로 초.</li>
@@ -118,7 +116,7 @@
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('IDE_Tools\The_Debugger\The_Profiler.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('IDE_Tools/The_Debugger/The_Profiler.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

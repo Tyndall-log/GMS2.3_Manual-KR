@@ -83,16 +83,15 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>표준 워크 플로우</h1>
   <p>프로젝트를 진행하면서 자연스럽게 스프라이트 생성, 스크립트 편집, 타임 라인 삭제 등 시간이 지남에 따라 프로젝트가 개발하는 데 필요한 모든 것을 얻을 수 있습니다. 이것들은 당신이 추적하고 무언가 잘못되었을 때 되돌아 갈 수있는 모든 행동입니다. 이것이 사고를 되돌릴 수 있도록 소스 제어를 사용하는 주된 이유이며, 처음부터 기본 워크 플로를 신속하게 안내하여 이것이 어떻게 작동하는지 이해할 것입니다.</p>
-  <p>Starting from the beginning, create a new GML project and then activate source control through the <a href="../../Settings/Game_Options.htm">main options</a>. This gives us access to the Source Control menu on the top, so we&#39;ll immediately go and
-    select <strong>Create Project Repository</strong>. If you look at the room resources, you can see that the default room has gained a red exclamation <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png"/>, 마지막 상태에서 <strong>수정</strong> 되었음을 의미합니다. 프로젝트에 다른 리소스가있는 경우 아래 이미지와 같이 모두 동일한 아이콘이 표시됩니다.</p>
-  <p><img alt="Source Control Modified Assets" class="center" src="../../assets/Images/IDE Tools/SCM_ModifiedState.png"/>이제 빈 프로젝트를 그대로 커밋하거나 기본 상태로 만드는 옵션이 있습니다. 지금은 첫 번째 커밋을 수행 할 것이므로 <strong>소스 제어</strong> &gt; <strong>커밋 변경을</strong> 클릭하십시오. 이제 세 개의 영역으로 분할 된 새 창이 열립니다.</p>
-  <p><img alt="Source Control Commit Window" class="center" src="../../assets/Images/IDE Tools/SCM_CommitWindow.png"/></p>
+  <p>처음부터 새 GML 프로젝트를 만든 다음 <a href="../../Settings/Game_Options.htm">기본 옵션을</a> 통해 소스 제어를 활성화하십시오. 그러면 상단의 소스 제어 메뉴에 액세스 할 수 있으므로 즉시 <strong>프로젝트 저장소 작성을</strong> 선택 <strong>하십시오</strong> . 회의실 리소스를 보면 기본 회의실에 빨간색 느낌표가 표시됩니다. , 마지막 상태에서 <strong>수정</strong> 되었음을 의미합니다. 프로젝트에 다른 리소스가있는 경우 아래 이미지와 같이 모두 동일한 아이콘이 표시됩니다.</p>
+  <p>이제 빈 프로젝트를 그대로 커밋하거나 기본 상태로 만드는 옵션이 있습니다. 지금은 첫 번째 커밋을 수행 할 것이므로 <strong>소스 제어</strong> &gt; <strong>커밋 변경을</strong> 클릭하십시오. 이제 세 개의 영역으로 분할 된 새 창이 열립니다.</p>
+  <p><img alt="소스 제어 커밋 창" class="center" src="../../assets/Images/IDE Tools/SCM_CommitWindow.png"/></p>
   <ul class="colour">
     <li><strong>단계적 변경</strong> : 소스에 적용 할 변경을 나타냅니다. 이것은 비어있을 수 있지만 주 옵션 변경이 표시 될 수 있습니다.</li>
     <li><strong>Unstaged Changes</strong> : <strong>변경</strong> 된 파일을 보여 주지만 Git에 커밋하고 싶다고 말하지 않았으며 변경 사항이 &quot;보류 중&quot;입니다.</li>
     <li><strong>커밋 메시지</strong> : 변경 사항을 설명하기 위해 추가 할 수 있습니다.</li>
   </ul>
-  <p>For now, click the <strong>Stage All</strong> button, as we want to commit all the changes, and type something like &quot;First Commit!&quot; into the Commit Message and click <strong>Commit</strong>. All our resources should now have a green tick<img alt="SCM Committed Icon" class="icon" src="../../assets/Images/Icons/SCM_Committed.png"/>수정 사항이 없음을 의미합니다.</p>
+  <p>지금은 모든 변경 사항을 커밋하려면 &quot; <strong>모두 준비&quot;</strong> 단추를 클릭하고 &quot;First Commit!&quot;과 같은 내용을 입력하십시오. 로 메시지를 커밋하고 <strong>커밋을</strong> 클릭합니다. 우리의 모든 자원은 이제 녹색 체크 표시 수정 사항이 없음을 의미합니다.</p>
   <p>그것은 당신이 창 내에서 작업 할 때, 다양한 <strong>단계적와</strong> <strong>Unstaged</strong> 메시지가 상징 접두어됩니다 주목할 가치가있다. 사용되는 기호는 작업 및 파일에 따라 달라지며 다음과 같이 사용됩니다.</p>
   <ul class="colour">
     <li><span class="inline">[...]</span> -단계적 변경 (이전 [A])</li>
@@ -105,11 +104,11 @@
   </ul>
   <p>이제 우리의 작업 프로세스가 시작될 수 있으며 위의 단락에서했던 것처럼 프로젝트를 빌드하고 변경 사항을 저장하고 커밋 할 수 있습니다.</p>
   <p>얼마 동안 일한 후에는 언제든지 커밋 한 내용을 확인하고 확인하여 <strong>커밋 기록</strong> 을 열 수 있습니다. 히스토리 창을 열려면 <strong>소스 제어</strong> &gt; <strong>히스토리보기</strong> 로 이동하여 세 개의 창이있는 다른 창을여십시오.</p>
-  <p><img alt="Source Control History Window" class="center" src="../../assets/Images/IDE Tools/SCM_HistoryWindow.png"/>맨 위 분할 창은 확약을 설명하고 중간 분할 창은 선택된 확약에 지정된 주석을 설명하고 아래쪽 분할 창은이 확약에서 수정 된 파일을 설명합니다. <a href="External_Merge_Diff_Tools.htm">Diff Tool</a> 을 설정 한 경우이 창에서 파일을 두 번 클릭하면 diff 도구가 열리고 파일 간 변경 사항을 볼 수 있습니다.</p>
+  <p>맨 위 분할 창은 확약을 설명하고 중간 분할 창은 선택된 확약에 지정된 주석을 설명하고 아래쪽 분할 창은이 확약에서 수정 된 파일을 설명합니다. <a href="External_Merge_Diff_Tools.htm">Diff Tool</a> 을 설정 한 경우이 창에서 파일을 두 번 클릭하면 diff 도구가 열리고 파일 간 변경 사항을 볼 수 있습니다.</p>
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('IDE_Tools\Source_Control\Standard_Workflow.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('IDE_Tools/Source_Control/Standard_Workflow.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

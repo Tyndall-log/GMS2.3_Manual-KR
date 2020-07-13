@@ -81,12 +81,9 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>컴파일</h1>
-  <p><a class="tooltip" title="Compiling is when GameMaker takes your code and collects it together in such a way as to create an executable package that will run on a device as a game.">Compiling</a> your game can mean one of two things: compiling it for testing, or compiling it to create an <em> <a class="tooltip" title="A package of files that are used to execute a program. In GameMaker Studio this can be a single file - like an installer for windows - or multiple files - like the HTML5 output.">executable package</a></em> or
-    a specific target platform. Compiling your game for testing can be done by simply pressing the Play button  <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"/>IDE 상단에 지정된 타겟을 사용하여 테스트 할 게임이 시작됩니다. 디버그 버튼을 사용하여 테스트하여 <strong>디버그 모드</strong> 에서 게임을 실행할 수도 있습니다. . 게임이 실행되지만 <strong>디버그 창이</strong> 열립니다. 여기서 게임 성능을 모니터링하고 문제를 확인할 수 있습니다 (자세한 내용은 <a href="Debugging.htm">디버깅</a> 섹션 참조).</p>
-  <p>By default GameMaker Studio 2 will run and debug using the built in <a class="tooltip" title="In GameMaker, the The VM (Virtual Machine) is a compiling method that uses a generic runner for each platform and then uses that to interpret the code for your game.">Virtual Machine (VM)</a>, which is more or less the same as running on the desktop OS being used. However GameMaker
-    Studio 2 is a <strong>cross platform engine</strong> and you can test, debug and compile executable packages of your projects on a number of different target platforms (the exact platforms available will depend on the details of your licence). To
-    change the current target platform you can click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/>타겟 버튼에서 <strong>대상 창</strong> 을 열려면 다음과 같이 표시됩니다 (정확한 세부 정보는 라이센스 유형에 따라 다름).</p>
-  <p><img alt="Target List" class="center" src="../assets/Images/Introduction/QS_TargetList.png"/></p>
+  <p><a class="tooltip" title="컴파일은 GameMaker가 코드를 가져와 장치에서 게임으로 실행되는 실행 패키지를 만드는 방식으로 함께 수집하는 시점입니다.">컴파일</a> 테스트, 또는 만들 그것을 컴파일을 컴파일 : 게임은 두 가지 중 하나를 의미 할 수 <em><a class="tooltip" title="프로그램을 실행하는 데 사용되는 파일 패키지입니다. GameMaker Studio에서 이것은 Windows 설치 프로그램과 같은 단일 파일이거나 HTML5 출력과 같은 여러 파일 일 수 있습니다.">실행 패키지</a></em> 또는 특정 대상 플랫폼을. 테스트 버튼을 누르면 테스트를위한 게임 컴파일이 가능합니다. IDE 상단에 지정된 타겟을 사용하여 테스트 할 게임이 시작됩니다. 디버그 버튼을 사용하여 테스트하여 <strong>디버그 모드</strong> 에서 게임을 실행할 수도 있습니다. . 게임이 실행되지만 <strong>디버그 창이</strong> 열립니다. 여기서 게임 성능을 모니터링하고 문제를 확인할 수 있습니다 (자세한 내용은 <a href="Debugging.htm">디버깅</a> 섹션 참조).</p>
+  <p>기본적으로 GameMaker Studio 2는 사용중인 데스크탑 OS에서 실행되는 것과 거의 동일하거나 내장 된 <a class="tooltip" title="GameMaker에서 VM (가상 머신)은 각 플랫폼에 일반 러너를 사용한 다음이를 사용하여 게임의 코드를 해석하는 컴파일 방법입니다.">가상 머신 (VM)을</a> 사용하여 실행 및 디버그합니다. 그러나 GameMaker Studio 2는 <strong>크로스 플랫폼 엔진</strong> 이며 다양한 대상 플랫폼에서 프로젝트의 실행 패키지를 테스트, 디버그 및 컴파일 할 수 있습니다 (사용 가능한 정확한 플랫폼은 라이센스 세부 정보에 따라 다름). 현재 대상 플랫폼을 변경하려면 클릭하십시오 타겟 버튼에서 <strong>대상 창</strong> 을 열려면 다음과 같이 표시됩니다 (정확한 세부 정보는 라이센스 유형에 따라 다름).</p>
+  <p><img alt="대상 목록" class="center" src="../assets/Images/Introduction/QS_TargetList.png"/></p>
   <p>상단의 대상 버튼 옆에는 현재 사용중인 플랫폼과 특정 설정을 알려주는 현재 설정이 있으며 나머지 창의 사용 가능한 모든 대상에 대한 세부 정보 및 옵션이 표시됩니다. 대신 사용하도록 선택하십시오. 이 창의 각 섹션은 다음과 같습니다.</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#"><span data-open-text="true">작업자</span> <span data-close-text="true">작업자</span></a></p>
   <div class="droptext" data-targetname="drop_down">
@@ -99,7 +96,7 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#"><span data-open-text="true">플랫폼</span> <span data-close-text="true">플랫폼</span></a></p>
   <div class="droptext" data-targetname="drop_down2">
-    <p class="dropspot">This section lists all the available target platforms. The contents of this list will vary depending on the licence that you have, but will always have at least the &quot;Test&quot; target. To select a target, simply click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/>그 위에. 그러면 선택한 플랫폼에 따라 다른 세부 정보가 표시되도록 나머지 옵션 창을 업데이트합니다.</p>
+    <p class="dropspot">이 섹션에는 사용 가능한 모든 대상 플랫폼이 나열되어 있습니다. 이 목록의 내용은 보유한 라이센스에 따라 다르지만 항상 &quot;테스트&quot;대상이됩니다. 대상을 선택하려면 클릭 그 위에. 그러면 선택한 플랫폼에 따라 다른 세부 정보가 표시되도록 나머지 옵션 창을 업데이트합니다.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#"><span data-open-text="true">출력</span> <span data-close-text="true">출력</span></a></p>
@@ -116,9 +113,9 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down4" href="#"><span data-open-text="true">장치</span> <span data-close-text="true">장치</span></a></p>
   <div class="droptext" data-targetname="drop_down4">
-    <p class="dropspot">Certain platforms (like iOS or Android) permit you to associate one or more devices with GameMaker Studio 2 so that games can selectively compile to them. Initially, the device list will be empty and you need to click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/>연필 아이콘 <strong>장치 편집기</strong> 를 열려면</p>
-    <p class="dropspot"><img alt="The Device Editor" class="center" src="../assets/Images/Introduction/QS_DeviceEditor.png"/>여기에 새로운 장치를 추가하고 GameMaker Studio 2가 연결될 수있는 모든 장치에 대한 연결을 테스트하도록 할 수 있습니다. 이 창의 정확한 내용은 플랫폼 별 정보에 따라 다릅니다 (해당 플랫폼에 대한 자세한 내용은 <a href="../Setting_Up_And_Version_Information/The_Device_Manager.htm">장치 관리자</a> 섹션 참조). 기기를 찾거나 추가하면 Android의 다음 이미지 예와 같이이 창에 표시됩니다.</p>
-    <p class="dropspot"><img alt="Add An Android Device" class="center" src="../assets/Images/Introduction/QS_AddDevice.png"/>장치 설정 및 문제 해결에 대한 정확한 절차 및 요구 사항은 <a href="https://help.yoyogames.com/hc/en-us/categories/204246668-GameMaker-Studio-2">GameMaker Studio 2 기술 자료</a> 의 해당 섹션에서 찾을 수 있습니다.</p>
+    <p class="dropspot">iOS 또는 Android와 같은 특정 플랫폼에서는 게임을 선택적으로 컴파일 할 수 있도록 하나 이상의 장치를 GameMaker Studio 2와 연결할 수 있습니다. 처음에는 장치 목록이 비어 있으므로 클릭해야합니다. 연필 아이콘 <strong>장치 편집기</strong> 를 열려면</p>
+    <p class="dropspot">여기에 새로운 장치를 추가하고 GameMaker Studio 2가 연결될 수있는 모든 장치에 대한 연결을 테스트하도록 할 수 있습니다. 이 창의 정확한 내용은 플랫폼 별 정보에 따라 다릅니다 (해당 플랫폼에 대한 자세한 내용은 <a href="../Setting_Up_And_Version_Information/The_Device_Manager.htm">장치 관리자</a> 섹션 참조). 기기를 찾거나 추가하면 Android의 다음 이미지 예와 같이이 창에 표시됩니다.</p>
+    <p class="dropspot">장치 설정 및 문제 해결에 대한 정확한 절차 및 요구 사항은 <a href="https://help.yoyogames.com/hc/en-us/categories/204246668-GameMaker-Studio-2">GameMaker Studio 2 기술 자료</a> 의 해당 섹션에서 찾을 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down5" href="#"><span data-open-text="true">구성</span> <span data-close-text="true">구성</span></a></p>
@@ -128,10 +125,9 @@
   <p> </p>
   <p> </p>
   <h1>최종 실행 가능 패키지 작성</h1>
-  <p>Compiling your game project to any target platform will require that you have set up the correct <strong> <a class="tooltip" title="Build tools are external applications that GameMaker Studio 2 requires to generate executable packages for the different target platforms.">build tools</a></strong> (see <a href="../Setting_Up_And_Version_Information/Required_SDKs.htm">here</a>)
-    and also filled in the appropriate <a href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a>. Once you have done that you can simply click the Create Executable button  <img alt="Compile Icon" class="icon" src="../assets/Images/Icons/Icon_Compile.png"/>IDE에서 컴파일러 빌드를 시작하거나 <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">빌드 메뉴</a> 에서 <strong>실행 파일 작성을</strong> 선택 <strong>하십시오</strong> . 옵션을 선택하면 파일 탐색기 창이 열리고 <em>저장</em> 및 <em>저장</em> 프로세스를 시작하기 전에 <em>저장</em> 을 클릭하기 전에 게임 실행 파일에 사용할 최종 이름을 지정할 수 있습니다. 이 작업을 완료하면 필요한 파일이 생성되어 원하는대로 배포 할 수 있습니다.</p>
+  <p>게임 프로젝트를 대상 플랫폼으로 컴파일하려면 올바른 <strong><a class="tooltip" title="빌드 도구는 GameMaker Studio 2가 다른 대상 플랫폼에 대한 실행 가능 패키지를 생성하는 데 필요한 외부 응용 프로그램입니다.">빌드 도구를</a></strong> 설정하고 ( <a href="../Setting_Up_And_Version_Information/Required_SDKs.htm">여기</a> 참조) 적절한 <a href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">플랫폼 환경 설정을</a> 채워야합니다. 완료 한 후에는 Create Executable 버튼을 클릭하면됩니다. IDE에서 컴파일러 빌드를 시작하거나 <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">빌드 메뉴</a> 에서 <strong>실행 파일 작성을</strong> 선택 <strong>하십시오</strong> . 옵션을 선택하면 파일 탐색기 창이 열리고 <em>저장</em> 및 <em>저장</em> 프로세스를 시작하기 전에 <em>저장</em> 을 클릭하기 전에 게임 실행 파일에 사용할 최종 이름을 지정할 수 있습니다. 이 작업을 완료하면 필요한 파일이 생성되어 원하는대로 배포 할 수 있습니다.</p>
   <p class="note"><strong>중대한!</strong> 무료 <strong>30 일 평가판 라이센스가</strong> 있는 경우 최종 실행 파일을 컴파일 할 수 없으며 유료 라이센스 중 하나로 업그레이드하여 배포 용 게임을 컴파일해야합니다.</p>
-  <p class="note"><strong>NOTE</strong>: Before doing a final build of your project for release, you should <strong>always clear the Asset Compiler <a class="tooltip" title="The cache is a collection of files that are generated by GameMaker once and then stored and re-used over multiple runs of a project. Note that this cache can sometimes become &#39;stale&#39;, meaning it must be cleared to force GameMaker to rebuild it from scratch, ensuring that no stale files corrupt your final game exectable.">Cache</a></strong> (using the &quot;broom&quot; icon <img alt="Clean Cache Icon" class="icon" src="../assets/Images/Icons/Icon_Clean.png"/>IDE 상단). GameMaker Studio 2는 많은 게임 파일을 캐시하여 컴파일 속도를 최소로 유지합니다.</p>
+  <p class="note"><strong>참고</strong> : 릴리스를 위해 프로젝트의 최종 빌드를 수행하기 전에 <strong>항상</strong> &quot;빗자루&quot;아이콘을 사용하여 <strong>자산 컴파일러 <a class="tooltip" title="캐시는 GameMaker가 한 번 생성 한 다음 여러 프로젝트 실행에서 저장하고 재사용하는 파일 모음입니다. 이 캐시는 때때로 &#39;스톨 (stale)&#39;이 될 수 있습니다. 즉, GameMaker가 처음부터 다시 빌드하도록하여 파일이 부실 파일이 최종 게임을 손상시키지 않도록해야합니다.">캐시를</a> 지우십시오.</strong> IDE 상단). GameMaker Studio 2는 많은 게임 파일을 캐시하여 컴파일 속도를 최소로 유지합니다.</p>
   <p>각 대상 옵션은 아래 나열된 플랫폼 별 형식으로 저장됩니다.</p>
   <ul class="colour">
     <li><strong>Windows-</strong> 일반 Windows OS 용 컴파일은 먼저 <em>설치 프로그램</em> 또는 <em>Zip</em> 패키지를 생성하도록 요청합니다. 여기서 설치 프로그램은 게임을 설치할 단일 실행 파일이고 Zip 파일은 단일 <span class="inline">* .zip</span> 형식입니다. 모든 게임 파일이 저장된 파일 (게임을 실행하려면 파일을 추출해야합니다). <strong>패키징 옵션 기억</strong> 상자를 <strong>선택</strong> 하면 GameMaker Studio 2는 향후 모든 컴파일에 대한 선택을 기억합니다 ( <a href="../Setting_Up_And_Version_Information/Platform_Preferences/Windows.htm">Windows 환경 설정</a> 에서 재설정하거나 변경할 수 있음). <a href="https://help.yoyogames.com/hc/en-us/sections/207157668">YoYo Games 도움말 센터</a> 에서 자세한 내용을 확인할 수 있습니다.</li>
@@ -146,7 +142,7 @@
   <p>GameMaker Studio 2로 제작 한 게임은 판매를 포함하여 원하는 방식으로 자유롭게 배포 할 수 있습니다. 물론 이것은 스프라이트, 이미지 및 사운드를 배포 또는 판매 할 수 있으며 모든 자산에 대한 법적 권리가 있다고 가정하고 게임이 <a href="https://www.yoyogames.com/legal/eula">YoYo Games EULA를</a> 준수한다고 가정합니다. <a href="https://www.yoyogames.com/legal/eula">GameMaker Studio 2</a> .</p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('Introduction\Compiling.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('Introduction/Compiling.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

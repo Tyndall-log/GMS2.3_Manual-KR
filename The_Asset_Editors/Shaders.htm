@@ -81,7 +81,7 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>셰이더 에디터</h1>
-  <p><img alt="Shader Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Shaders.png"/>셰이더는 게임이 화면에 렌더링하는 그래픽을 조작하는 데 사용할 수있는 매우 강력한 도구로, 예를 들어 스프라이트에 미묘한 색상 색조를 추가하는 등 전체 화면 왜곡 효과에 이르기까지 매우 빠른 효과를 허용합니다. . 그러나 쉐이더 란 무엇입니까?</p>
+  <p>셰이더는 게임이 화면에 렌더링하는 그래픽을 조작하는 데 사용할 수있는 매우 강력한 도구로, 예를 들어 스프라이트에 미묘한 색상 색조를 추가하는 등 전체 화면 왜곡 효과에 이르기까지 매우 빠른 효과를 허용합니다. . 그러나 쉐이더 란 무엇입니까?</p>
   <p>셰이더는 기본적으로 그래픽 카드 자체에서 직접 실행되는 두 부분으로 구성된 프로그램으로, GPU가 모든 작업을 수행하고 게임 코드의 CPU주기를 늘리기 때문에 매우 빠릅니다. 풀 쉐이더는 버텍스 쉐이더 프로그램과 프래그먼트 쉐이더 프로그램 (픽셀 쉐이더라고도 함)으로 구성됩니다. 이 작은 프로그램은 그래픽 카드가 화면에 렌더링하는 것을 조작하기 위해 함께 작동합니다. 그러면 <a class="tooltip" title="디스플레이 버퍼는 모든 것이 최종적으로 그려지는 &#39;캔버스&#39;입니다. 일부 이벤트는이를 Pre Target 이벤트와 같이 직접 대상으로하는 반면, 다른 이벤트는 먼저 응용 프로그램 화면으로 그린 ​​다음이를 디스플레이 버퍼로 그립니다.">디스플레이 버퍼</a> 에 실제로 <a class="tooltip" title="GameMaker Studio 2에서 무언가가 렌더링 될 때, 이는 일반적으로 단순히 &#39;디스플레이 버퍼에 그려 지거나&#39;표면에 그려 졌음을 의미합니다. 렌더링은 어떤 종류의 벡터 소스 (글꼴과 같은)를 비트 맵 이미지로 변환하는 프로세스를 가리킬 수도 있습니다.">렌더링</a> 되는 실시간 위치, 색상 및 알파 값을 조작 할 수 있습니다.</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">정점 셰이더</span> <span data-close-text="true">정점 셰이더</span></a></p>
   <div class="droptext" data-targetname="drop-down">
@@ -134,8 +134,8 @@
     </tbody>
   </table>
   <p> </p>
-  <p>To create a shader resource, simply right click <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/><a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> 에서 <em>Create Shader를</em> 선택합니다. 기본 셰이더를 만들었 으면 오른쪽 마우스를 사용할 수 있습니다 코드 편집을 계속하기 전에 새 리소스의 메뉴에서 셰이더 유형을 선택하십시오.</p>
-  <p><img alt="Shader Editor RMB Menu" class="center" src="../assets/Images/Asset_Editors/Editor_Shader_RMBMenu.png"/>코드 편집기 자체는 새 셰이더를 만들 때 두 개의 &quot;프로그램&quot;(정점 및 조각)으로 분할되며 각 셰이더는 편집기 상단의 탭에서 사용할 수 있습니다. 두 <em>파트없이 셰이더를 만들 수</em> 없기 때문에 둘 다 한 번에 생성됩니다. 프래그먼트 셰이더 만 사용하려는 경우에도 먼저 &quot;통과&quot;버텍스 셰이더를 만들어야하므로 기본적으로 생성되는 새 셰이더에는 이미 코딩 된 버텍스와 프래그먼트가 이미 코딩되어 있습니다 ( 페이지 상단의 스크린 샷에서 코드 편집기 창보기를 사용하여 두 개의 셰이더를 나란히 표시했습니다. 두 셰이더 프로그램을 함께 작업 할 때 유용합니다).</p>
+  <p>셰이더 리소스를 만들려면 마우스 오른쪽 버튼을 클릭하십시오. <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> 에서 <em>Create Shader를</em> 선택합니다. 기본 셰이더를 만들었 으면 오른쪽 마우스를 사용할 수 있습니다 코드 편집을 계속하기 전에 새 리소스의 메뉴에서 셰이더 유형을 선택하십시오.</p>
+  <p>코드 편집기 자체는 새 셰이더를 만들 때 두 개의 &quot;프로그램&quot;(정점 및 조각)으로 분할되며 각 셰이더는 편집기 상단의 탭에서 사용할 수 있습니다. 두 <em>파트없이 셰이더를 만들 수</em> 없기 때문에 둘 다 한 번에 생성됩니다. 프래그먼트 셰이더 만 사용하려는 경우에도 먼저 &quot;통과&quot;버텍스 셰이더를 만들어야하므로 기본적으로 생성되는 새 셰이더에는 이미 코딩 된 버텍스와 프래그먼트가 이미 코딩되어 있습니다 ( 페이지 상단의 스크린 샷에서 코드 편집기 창보기를 사용하여 두 개의 셰이더를 나란히 표시했습니다. 두 셰이더 프로그램을 함께 작업 할 때 유용합니다).</p>
   <p><em>모든</em> 대상 플랫폼에서 GLSL ES 셰이더를 사용할 수 있지만 <strong>HTML5</strong> 대상 플랫폼에서 작동하려면 <a href="../Settings/Game_Options/HTML5.htm">HTML5 게임 옵션</a> 에서 WebGL을 활성화해야합니다. 그렇지 않으면 작동하지 않습니다.</p>
   <p>쉐이더 기능 및 GameMaker Studio 2에서의 기능 사용 방법에 대한 자세한 내용은 다음 페이지를 참조하십시오.</p>
   <ul class="colour">
@@ -148,7 +148,7 @@
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('The_Asset_Editors\Shaders.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Shaders.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

@@ -82,8 +82,8 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>객체 변수</h1>
   <p><strong>변수</strong> 버튼을 클릭하면 <strong>객체 변수</strong> 창이 열리 며, <strong>객체의</strong> 이벤트 생성 <em>전에</em> 변수를 생성하는 데 사용할 수 있습니다.</p>
-  <p><img alt="Object Editor Variables Window" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_Variables.png"/>이 창에서 추가 버튼을 클릭하여 목록에 새 변수를 <strong>추가</strong> 할 수 있습니다. 그런 다음 변수 <strong>이름</strong> 을 지정하고 <strong>유형</strong> 을 설정하고 <strong>속성을</strong> 조정할 수 <strong>있습니다</strong> .</p>
-  <p><img alt="Object Editor New Variable" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_NewVariable.png"/>변수 이름은 문자로 시작해야하며 최대 64 자 길이의 문자, 숫자 및 밑줄 기호 &#39;_&#39;만 포함 할 수 있습니다. 따라서 유효한 변수는 <span class="inline">fish</span> , <span class="inline">foo_bar</span> , <span class="inline">num1</span> 과 <span class="inline">같</span> 으며 <em>유효하지 않은</em> 변수는 <span class="inline">6fish</span> , <span class="inline">foo bar</span> 또는 <span class="inline">* num</span> 입니다. 변수 이름을 지정하면 변수 유형을 설정해야합니다. 다음 중 하나 일 수 있습니다. 이 기능은 부모 / 자식 인스턴스로 작업 할 때 특히 유용합니다. 정의 된 변수 세트를 가진 부모 개체를 가질 수 있고 자식 개체에서 간단히 수정할 수 있기 때문입니다 (아래의 <strong>개체 변수 및 자식 개체</strong> 섹션 참조). 더 자세한 정보)- <a href="../Rooms.htm">룸 편집기</a> 에 인스턴스를 추가 할 때 ( <strong>레이어</strong> &gt; <strong>인스턴스 레이어</strong> 섹션 참조), 룸에 배치 된 개별 인스턴스에 대해 이러한 변수를 수정할 수도 있습니다.</p>
+  <p>이 창에서 추가 버튼을 클릭하여 목록에 새 변수를 <strong>추가</strong> 할 수 있습니다. 그런 다음 변수 <strong>이름</strong> 을 지정하고 <strong>유형</strong> 을 설정하고 <strong>속성을</strong> 조정할 수 <strong>있습니다</strong> .</p>
+  <p>변수 이름은 문자로 시작해야하며 최대 64 자 길이의 문자, 숫자 및 밑줄 기호 &#39;_&#39;만 포함 할 수 있습니다. 따라서 유효한 변수는 <span class="inline">fish</span> , <span class="inline">foo_bar</span> , <span class="inline">num1</span> 과 <span class="inline">같</span> 으며 <em>유효하지 않은</em> 변수는 <span class="inline">6fish</span> , <span class="inline">foo bar</span> 또는 <span class="inline">* num</span> 입니다. 변수 이름을 지정하면 변수 유형을 설정해야합니다. 다음 중 하나 일 수 있습니다. 이 기능은 부모 / 자식 인스턴스로 작업 할 때 특히 유용합니다. 정의 된 변수 세트를 가진 부모 개체를 가질 수 있고 자식 개체에서 간단히 수정할 수 있기 때문입니다 (아래의 <strong>개체 변수 및 자식 개체</strong> 섹션 참조). 더 자세한 정보)- <a href="../Rooms.htm">룸 편집기</a> 에 인스턴스를 추가 할 때 ( <strong>레이어</strong> &gt; <strong>인스턴스 레이어</strong> 섹션 참조), 룸에 배치 된 개별 인스턴스에 대해 이러한 변수를 수정할 수도 있습니다.</p>
   <p>작성할 수있는 다양한 유형의 변수는 다음과 같습니다.</p>
   <ul class="colour">
     <li><strong>실수</strong> : 실수는 정수가 아닌 양수이거나 음수가 될 수있는 숫자입니다. 따라서 <span class="inline">124.5</span> , <span class="inline">45639.566546456</span> , <span class="inline">0.9</span> , <span class="inline">-45.5</span> 등은 모두 실수의 예입니다. 모든 실수는 64 비트 <a class="tooltip" title="부동 소수점 숫자는 부동 소수점을 포함하는 숫자입니다. 예를 들어 숫자 5.5, 0.001 및 -2,345.6789는 부동 소수점 숫자입니다. 소수점 이하 자릿수가없는 숫자를 정수라고합니다.">부동 소수점</a> 값 (더블)으로 저장됩니다. <strong>실수</strong> (및 <strong>정수</strong> ) 데이터 유형에는 옵션을 클릭하여 액세스 할 수있는 값 범위를 설정하는 <strong>옵션이 있습니다.</strong> 단추: 이를 확인하면 시작 값과 끝 값을 입력 할 수 있으며 Object Variables 창에서 변수에 대해 고정 값을 표시하는 대신 다음 값으로 고정되는 슬라이더가 있습니다.</li>
@@ -100,12 +100,12 @@
   <h1>객체 변수와 자식 객체</h1>
   <p>객체 변수의 중요한 기능은 자산 브라우저에있는 모든 하위 객체에 의해 <em>상속</em> 된다는 것입니다 (자세한 내용은 <a href="Parent_Objects.htm">상위 객체</a> 섹션 참조). 따라서 모든 또는 일부를 재정의하거나 변경하도록 선택할 수 있습니다. 당신이 원한다면 그들.</p>
   <p>변수가 정의 된 다른 오브젝트 자원의 하위 오브젝트를 작성하면 다음과 같이 오브젝트 변수 창에 표시됩니다.</p>
-  <p><img alt="Object Editor Variable In A Child Object" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_ChildVariables.png"/>상단 이미지에서 Parent 객체에 4 개의 객체 변수가 있고 하단 이미지에도 &quot;회색으로 표시&quot;되고 <strong>Inherited From Parent가 있음을 확인할 수 있습니다.</strong> 아이콘이 상속되었음을 나타냅니다. 변수 <strong>무시</strong> 를 클릭하면 상속 된 변수를 편집 할 수 있습니다 버튼을 클릭하면 범위 슬라이더 또는 값을 조정하거나 목록 등에서 다른 항목을 선택할 <em>수 있습니다</em> . 상위 변수 <em>를</em> 편집 할 때 <em>정의 된 값만 변경할 수</em> 있지만 이름은 변경할 수 없으며 변수를 변경할 수도 없습니다. 옵션. 또한 새 개체 변수를 자식 개체에도 추가 할 수 있습니다 (위의 예제 이미지에서 &quot;문자 유형&quot;은 자식 개체에 대해서만 새로운 개체 변수라는 것을 알 수 있습니다).</p>
-  <p>If you have edited an inherited Object Variable, then you can click the Delete <img alt="Delete Variable Icon" class="icon" src="../../assets/Images/Icons/Icon_DeleteVariable.png"/>변수를 제외하고 편집을 제거하려면 버튼을 클릭하십시오. 변수는 여전히 상위에서 상속되지만 상위 기본값을 다시 사용합니다. 변수를 완전히 제거해야하는 경우 상위 오브젝트에서이를 수행해야합니다.</p>
+  <p>상단 이미지에서 Parent 객체에 4 개의 객체 변수가 있고 하단 이미지에도 &quot;회색으로 표시&quot;되고 <strong>Inherited From Parent가 있음을 확인할 수 있습니다.</strong> 아이콘이 상속되었음을 나타냅니다. 변수 <strong>무시</strong> 를 클릭하면 상속 된 변수를 편집 할 수 있습니다 버튼을 클릭하면 범위 슬라이더 또는 값을 조정하거나 목록 등에서 다른 항목을 선택할 <em>수 있습니다</em> . 상위 변수 <em>를</em> 편집 할 때 <em>정의 된 값만 변경할 수</em> 있지만 이름은 변경할 수 없으며 변수를 변경할 수도 없습니다. 옵션. 또한 새 개체 변수를 자식 개체에도 추가 할 수 있습니다 (위의 예제 이미지에서 &quot;문자 유형&quot;은 자식 개체에 대해서만 새로운 개체 변수라는 것을 알 수 있습니다).</p>
+  <p>상속 된 객체 변수를 편집 한 경우 삭제를 클릭 할 수 있습니다 변수를 제외하고 편집을 제거하려면 버튼을 클릭하십시오. 변수는 여전히 상위에서 상속되지만 상위 기본값을 다시 사용합니다. 변수를 완전히 제거해야하는 경우 상위 오브젝트에서이를 수행해야합니다.</p>
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('The_Asset_Editors\Object_Properties\Object_Variables.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Object_Properties/Object_Variables.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

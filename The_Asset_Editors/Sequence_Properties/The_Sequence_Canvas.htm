@@ -81,14 +81,12 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>시퀀스 캔버스</h1>
-  <p>When creating sequences for your projects a large part of the work will be done in the <strong>canvas</strong> of the <a href="../Sequences.htm">Sequence Editor</a>. The canvas is simply the area that will be used to contain the sequence elements, and
-    it also defines what will be shown when the sequence is added to a room to be displayed. When you first create a sequence, the canvas will be set to the default size of 1366px by 768px, but this can be changed from the <strong>Toolbox </strong>by
-    clicking the <img alt="Icon Grid Menu" class="icon" src="../../assets/Images/Icons/Icon_CanvasOptions.png"/><strong>캔버스 프레임 토글</strong> 옆에 단추:</p>
-  <p><img alt="Sequence Editor Canvas Options" class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_CanvasControls.png"/>캔버스 크기는 시퀀스를 구성하는 자산을 배치 할 수있는 시각적 영역을 정의하지만 프레임은 단순히 크기를 안내하는 것으로서 렌더링 방식에 영향을 미치지 않습니다 (예 : 스프라이트 자산을 프레임 외부에 배치하고 추가하는 경우) 룸 순서는 자산이 여전히 렌더링됩니다.</p>
+  <p>프로젝트의 시퀀스를 만들 때 작업의 많은 부분이 <a href="../Sequences.htm">시퀀스 편집기</a> 의 <strong>캔버스</strong> 에서 수행됩니다. 캔버스는 단순히 시퀀스 요소를 포함하는 데 사용되는 영역이며 시퀀스를 표시 할 룸에 추가 할 때 표시되는 영역을 정의합니다. 시퀀스를 처음 만들면 캔버스가 기본 크기 인 1366x768 픽셀로 설정되지만이 값을 클릭하면 <strong>도구 상자</strong> 에서 변경할 수 있습니다. <strong>캔버스 프레임 토글</strong> 옆에 단추:</p>
+  <p>캔버스 크기는 시퀀스를 구성하는 자산을 배치 할 수있는 시각적 영역을 정의하지만 프레임은 단순히 크기를 안내하는 것으로서 렌더링 방식에 영향을 미치지 않습니다 (예 : 스프라이트 자산을 프레임 외부에 배치하고 추가하는 경우) 룸 순서는 자산이 여전히 렌더링됩니다.</p>
   <p>프레임은 시퀀스 내에서 자산의 위치를 ​​안내하는 데 사용하려는 <strong>참조 이미지</strong> 를 수용하는 데에도 사용됩니다. 참조 이미지는 캔버스 프레임의 크기를 설정하는 동일한 <strong>캔버스 옵션</strong> 메뉴에서 추가 할 수 있으며 시퀀스 캔버스의 배경 이미지로 사용됩니다. 이를 통해 프로젝트 아티스트의 UI 모형에 따라 항목을 배치 할 수 있습니다.</p>
-  <p><img alt="The Canvas With A Reference Image" class="center" src="../../assets/Images/Asset_Editors/Canvas_Reference.png"/>참조 이미지는 프로젝트와 함께 저장되지 않으며 시퀀스가 ​​룸에 추가 될 때 렌더링되지 않습니다.</p>
+  <p>참조 이미지는 프로젝트와 함께 저장되지 않으며 시퀀스가 ​​룸에 추가 될 때 렌더링되지 않습니다.</p>
   <p>캔버스가 원하는 방식으로 설정되면 애셋을 추가 할 수 있습니다. <a href="../../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 에서 캔버스로 드래그하면 <a href="The_Track_Panel.htm">트랙 패널</a> 에 <a class="tooltip" title="단일 트랙, 스프라이트, 사운드, 인스턴스 또는 시퀀스를 보유하는 시퀀스 트랙 패널의 트랙.">자산 트랙</a> 이 생성됩니다.</p>
-  <p><img alt="Adding An Asset To The Canvas" class="center" src="../../assets/Images/Asset_Editors/Canvas_Add_Asset.gif"/>시퀀스에 추가 할 수있는 자산은 다음과 같습니다.</p>
+  <p>시퀀스에 추가 할 수있는 자산은 다음과 같습니다.</p>
   <ul class="colour">
     <li>스프라이트</li>
     <li>사물</li>
@@ -101,23 +99,21 @@
     <li>자산의 원점에서 변형 기즈모를 사용하면 캔버스 도구 상자에서 변경할 수 있습니다.</li>
   </ul>
   <p>자산의 초기 변환을 설정 한 경우 (필요한 경우) 캔버스를 사용하여 <strong>트랙 패널</strong> 에서 자산 트랙에 <a class="tooltip" title="매개 변수 키 (키 프레임이라고도 함)는 도프 시트의 타임 라인에서 매개 변수 값의 변경이 정의 된 지점입니다.">매개 변수 키</a> 를 추가 할 수 있습니다. 이것이 어떻게 작동하는지에 대한 간단한 예는 자산을 시작 위치에 놓은 다음 <a href="Using_The_Dope_Sheet.htm">Dope Sheet</a> 의 <a class="tooltip" title="시퀀스 도프 시트, 애니메이션 커브 편집기 또는 스프라이트 편집기의 타임 라인 내 현재 &#39;재생&#39;위치. 시퀀스 (및 스프라이트)에서는 애니메이션을 미리 볼 때 이동하며 특정 프레임에 배치하여 해당 위치에서 키와 키 프레임을보고 편집 할 수 있습니다.">재생 헤드</a> 를 이동을 끝내려는 프레임으로 옮긴 다음 자산을 다시 이동시키는 기본 위치 변환입니다.</p>
-  <p><img alt="Adding A Parameter Key To An Asset In The Canvas" class="center" src="../../assets/Images/Asset_Editors/Canvas_Add_Keys.gif"/>위 이미지에서 볼 수 있듯이 &quot; <strong>변경 사항 자동 기록</strong> &quot;을 활성화하면 트랙에 새 위치가 자동으로 기록됩니다. 트랙 패널에서 또한 자산의 시간을 통한 이동을 나타 내기 위해 캔버스보기에 점선이 추가 된 것을 볼 수 있습니다. 자동 녹음을 사용하도록 설정하지 않은 경우에도 자산을 이동 한 다음 재생 헤드를 설정 한 다음 마지막으로 &quot; <strong>새 키 녹음</strong> &quot;을 클릭하여 포인트를 추가 할 수 있습니다 단추.</p>
-  <p>One final point worth mentioning is that the canvas permits you to use and add <strong>smart guides</strong>, which are guidelines that can be added to the canvas so that assets can be aligned against them. By default the canvas will show horizontal
-    and vertical guides around the center point, as well as a rectangular guide around the &quot;edge&quot; of the sequence canvas, based on the size of the canvas. These guides will not be rendered in the final sequence when added to a room and are just
-    there to help you get an idea of space and to help position things. You can also add your own guides by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/>눈금자에서 캔버스로 드래그 :</p>
-  <p><img alt="Adding Guides To The Canvas" class="center" src="../../assets/Images/Asset_Editors/Canvas_Adding_Guides.gif"/>안내선을 제거하려면 간단히 안내선을 클릭 한 다음 눈금자를 향해 다시 드래그하십시오. 시퀀스에 안내선을 추가 한 경우 경계 상자 나 원점이 충분히 가까워지면 자산을 이동하면 안내선에 &quot;스냅&quot;되고 자산 사이의 거리를 표시하고 자산을 표시하는 추가 스마트 안내선이 표시됩니다 모두 같은 안내선이나 같은 위치에 있습니다 (색상이 다르게 표시됨).</p>
-  <p><img alt="Canvas Smart Guides" class="center" src="../../assets/Images/Asset_Editors/Canvas_Smart_Guides.gif"/></p>
+  <p>위 이미지에서 볼 수 있듯이 &quot; <strong>변경 사항 자동 기록</strong> &quot;을 활성화하면 트랙에 새 위치가 자동으로 기록됩니다. 트랙 패널에서 또한 자산의 시간을 통한 이동을 나타 내기 위해 캔버스보기에 점선이 추가 된 것을 볼 수 있습니다. 자동 녹음을 사용하도록 설정하지 않은 경우에도 자산을 이동 한 다음 재생 헤드를 설정 한 다음 마지막으로 &quot; <strong>새 키 녹음</strong> &quot;을 클릭하여 포인트를 추가 할 수 있습니다 단추.</p>
+  <p>마지막으로 언급해야 할 점은 캔버스를 통해 <strong>스마트 가이드</strong> 를 사용하고 추가 할 수 있다는 것입니다.이 가이드는 에셋을 정렬 할 수 있도록 캔버스에 추가 할 수있는 가이드입니다. 기본적으로 캔버스는 중심점 주위의 가로 및 세로 안내 선과 캔버스의 크기에 따라 시퀀스 캔버스의 &quot;가장자리&quot;주위의 직사각형 안내선을 표시합니다. 이 안내선은 방에 추가 될 때 최종 순서대로 렌더링되지 않으며 공간에 대한 아이디어를 얻고 물건을 배치하는 데 도움이됩니다. 클릭하여 자신 만의 가이드를 추가 할 수도 있습니다 눈금자에서 캔버스로 드래그 :</p>
+  <p>안내선을 제거하려면 간단히 안내선을 클릭 한 다음 눈금자를 향해 다시 드래그하십시오. 시퀀스에 안내선을 추가 한 경우 경계 상자 나 원점이 충분히 가까워지면 자산을 이동하면 안내선에 &quot;스냅&quot;되고 자산 사이의 거리를 표시하고 자산을 표시하는 추가 스마트 안내선이 표시됩니다 모두 같은 안내선이나 같은 위치에 있습니다 (색상이 다르게 표시됨).</p>
+  <p><img alt="캔버스 스마트 가이드" class="center" src="../../assets/Images/Asset_Editors/Canvas_Smart_Guides.gif"/></p>
   <p> </p>
   <p> </p>
   <h1>인민폐 메뉴 및 탐색</h1>
-  <p>To navigate around the canvas view, you can use the same basic controls as the for a regular Workspace, ie: Use the middle mouse button <img alt="MMB Icon" class="icon" src="../../assets/Images/Icons/Icon_MMB.png"/>드래그하여 캔버스를 이동 (또는 + 마우스 휠로 가로로 스크롤 할 수 있습니다. 또는를 사용하여 확대 및 축소 / 키와 마우스 휠 .</p>
-  <p>To select an asset, simply click the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/>그것에, 또는 사용하여 여러 자산을 선택할 수 있습니다 / 과 각 자산을 클릭하십시오. 다음을 사용하여 여러 자산을 선택할 수도 있습니다 클릭 그리고 끌기. 그러면 캔버스에 &quot;상자&quot;가 생성되고 상자 영역에 닿는 자산이 선택됩니다.</p>
-  <p>When you have an asset or assets selected, you can cut, copy and paste them using the <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/>/ + &quot; <span class="inline">X</span> &quot;, / + &quot; <span class="inline">C</span> &quot;및 / + &quot; <span class="inline">V</span> &quot;키 조합.</p>
+  <p>캔버스보기를 탐색하려면 일반 작업 공간과 동일한 기본 제어를 사용할 수 있습니다. 예 : 가운데 마우스 버튼 사용 드래그하여 캔버스를 이동 (또는 + 마우스 휠로 가로로 스크롤 할 수 있습니다. 또는를 사용하여 확대 및 축소 / 키와 마우스 휠 .</p>
+  <p>자산을 선택하려면 마우스 왼쪽 버튼을 클릭하십시오. 그것에, 또는 사용하여 여러 자산을 선택할 수 있습니다 / 과 각 자산을 클릭하십시오. 다음을 사용하여 여러 자산을 선택할 수도 있습니다 클릭 그리고 끌기. 그러면 캔버스에 &quot;상자&quot;가 생성되고 상자 영역에 닿는 자산이 선택됩니다.</p>
+  <p>자산을 선택하면 다음을 사용하여 자산을 잘라 내고 복사하여 붙여 넣을 수 있습니다 / + &quot; <span class="inline">X</span> &quot;, / + &quot; <span class="inline">C</span> &quot;및 / + &quot; <span class="inline">V</span> &quot;키 조합.</p>
   <p>캔버스에서 여러 자산을 선택하면 각 자산에 대해 <a class="tooltip" title="스프라이트의 경우 경계 상자는 충돌이 처음 감지되는 영역의 가장자리에 지정된 이름이며 적용되는 스프라이트와 크기가 같지 않아도됩니다. 시퀀스의 경우 경계 상자는 하나 이상의 자산이 캔버스에서 차지하는 전체 공간의 바깥 쪽 가장자리입니다.">경계 상자가</a> 표시되고 모든 자산에 대해 더 큰 경계 상자가 표시됩니다. 왼쪽 상단의 아이콘에서이 경계 상자의 동작을 변경할 수 있습니다.</p>
-  <p><img alt="Combined Selection BBox Controls" class="center" src="../../assets/Images/Asset_Editors/Canvas_BBox_Controls.png"/>원 아이콘을 클릭하면 변환 제어 기즈모가 선택된 모든 자산에 대한 전체 경계 상자의 원점으로 변경되며, 상자 아이콘을 클릭하면 선택 항목의 각 자산에 대한 개별 제어 위젯이 표시됩니다. 단일 자산과 마찬가지로 그룹화 된 자산을 이동하고 복사 / 붙여 넣기 등을 수행 할 수 있습니다.</p>
+  <p>원 아이콘을 클릭하면 변환 제어 기즈모가 선택된 모든 자산에 대한 전체 경계 상자의 원점으로 변경되며, 상자 아이콘을 클릭하면 선택 항목의 각 자산에 대한 개별 제어 위젯이 표시됩니다. 단일 자산과 마찬가지로 그룹화 된 자산을 이동하고 복사 / 붙여 넣기 등을 수행 할 수 있습니다.</p>
   <p>겹치는 자산이 여러 개 있고 나머지 자산을 방해하지 않고 특정 자산을 선택하려는 경우 마우스를 자산 위로 가져 가서 <strong>항목 도구 상자</strong> 를 표시하면 마우스 아래에 각 항목의 아이콘 목록이 표시됩니다. 그런 다음이 항목 중 하나를 클릭하여 선택하고 편집 할 수 있습니다.</p>
-  <p><img alt="The Item Toolbox" class="center" src="../../assets/Images/Asset_Editors/Canvas_Item_Toolbox.gif"/>또한 마우스 오른쪽 버튼으로 여러 가지 추가 옵션을 사용할 수 있습니다 순서대로 자산을 클릭하면</p>
-  <p><img alt="Canvas Asset RIght Mouse Button Menu" class="center" src="../../assets/Images/Asset_Editors/Canvas_RMB_Menu.png"/>여기서 사용할 수있는 옵션은 다음과 같습니다.</p>
+  <p>또한 마우스 오른쪽 버튼으로 여러 가지 추가 옵션을 사용할 수 있습니다 순서대로 자산을 클릭하면</p>
+  <p>여기서 사용할 수있는 옵션은 다음과 같습니다.</p>
   <ul class="colour">
     <li><strong>기록</strong> :이 옵션을 사용하면 자산에 대한 매개 변수 키를 기록 할 수 있으며, 그 위에 마우스를 놓으면 <em>스케일</em> , <em>회전</em> 또는 <em>위치</em> 를 기록하는 옵션이 표시됩니다.</li>
     <li><strong>Group</strong> : 이것을 선택하면 트랙 패널에 새 그룹 폴더가 생성되고 선택된 자산이 그 폴더로 이동합니다.</li>
@@ -132,7 +128,7 @@
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('The_Asset_Editors\Sequence_Properties\The_Sequence_Canvas.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Sequence_Properties/The_Sequence_Canvas.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

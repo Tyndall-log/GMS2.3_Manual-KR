@@ -82,8 +82,8 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_joint_prismatic_create</h1>
   <p>회전 조인트와 마찬가지로 프리즘 조인트는 1 자유도 만 갖지만이 조인트를 사용하면 회전이 아닌 축을 기준으로 방향이 지정되며 실제로 모든 형태의 회전을 방지합니다. 작동 방식을 시각화하는 데 도움이되는 이미지는 다음과 같습니다.</p>
-  <p><img alt="Prismatic joint anchor points illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/prismatic_joint_image_1.png"/>우리는 앵커 포인트에 두 개의 인스턴스가 결합되어 있습니다. 벡터에서 물리 세계의 (0,0) 좌표에 대한 두 개의 w_axis x / y 좌표로 정의 된 이동 축이 있습니다. 1 (0,1)은 조인트를 수직 프리즘 조인트로 만듭니다). 이 조인트는 스프링이나 피스톤처럼이 축을 기준으로 <i>만</i> 움직일 수 있습니다. 하한 또는 상한 트랜스 한계를 설정하면 기본적으로이 축을 따라 이동량이 제한됩니다. 여기서 0 위치는 w_anchor x / y로 정의한 정확한 지점이므로 음수 값은 &quot;왼쪽&quot;으로 이동합니다. 다음 다이어그램에 표시된대로 축을 따라 해당 점의 양수 값과 &quot;오른쪽&quot;의 양수 값 ( &quot;왼쪽&quot;과 &quot;오른쪽&quot;이 상대적인 용어임을 인식하십시오!) :</p>
-  <p><img alt="Prismatic joint limits illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/prismatic_joint_image_2.png"/>관절에 모터가 있는지 여부를 정의 할 수도 있습니다. 이는 충돌에 영향을받지 않으면 조인트가 축을 따라 한 방향으로 움직입니다. 이 방향은 모터 속도로 정의되며 양수는 축 좌표를 향하고 ( &quot;오른쪽&quot;), 음수는 기준점을 향합니다 ( &quot;왼쪽&quot;). &quot;max_motor_force&quot;인수는 이동 속도를 제한하여 지속적으로 가속되는 모터를 얻지 못하고 충돌이 이동에 미칠 수있는 영향을 제한합니다. 이런 방식으로 조인트 모터를 사용하여 조인트 속도를 0으로 설정하고 최대 힘을 ​​작지만 중요한 값으로 설정하여 조인트 마찰을 시뮬레이션 할 수 있습니다. 모터는 조인트가 움직이지 않도록 시도하지만 상당한 하중을 발생시킵니다.</p>
+  <p>우리는 앵커 포인트에 두 개의 인스턴스가 결합되어 있습니다. 벡터에서 물리 세계의 (0,0) 좌표에 대한 두 개의 w_axis x / y 좌표로 정의 된 이동 축이 있습니다. 1 (0,1)은 조인트를 수직 프리즘 조인트로 만듭니다). 이 조인트는 스프링이나 피스톤처럼이 축을 기준으로 <i>만</i> 움직일 수 있습니다. 하한 또는 상한 트랜스 한계를 설정하면 기본적으로이 축을 따라 이동량이 제한됩니다. 여기서 0 위치는 w_anchor x / y로 정의한 정확한 지점이므로 음수 값은 &quot;왼쪽&quot;으로 이동합니다. 다음 다이어그램에 표시된대로 축을 따라 해당 점의 양수 값과 &quot;오른쪽&quot;의 양수 값 ( &quot;왼쪽&quot;과 &quot;오른쪽&quot;이 상대적인 용어임을 인식하십시오!) :</p>
+  <p>관절에 모터가 있는지 여부를 정의 할 수도 있습니다. 이는 충돌에 영향을받지 않으면 조인트가 축을 따라 한 방향으로 움직입니다. 이 방향은 모터 속도로 정의되며 양수는 축 좌표를 향하고 ( &quot;오른쪽&quot;), 음수는 기준점을 향합니다 ( &quot;왼쪽&quot;). &quot;max_motor_force&quot;인수는 이동 속도를 제한하여 지속적으로 가속되는 모터를 얻지 못하고 충돌이 이동에 미칠 수있는 영향을 제한합니다. 이런 방식으로 조인트 모터를 사용하여 조인트 속도를 0으로 설정하고 최대 힘을 ​​작지만 중요한 값으로 설정하여 조인트 마찰을 시뮬레이션 할 수 있습니다. 모터는 조인트가 움직이지 않도록 시도하지만 상당한 하중을 발생시킵니다.</p>
   <p>모든 관절과 마찬가지로 &quot;col&quot;값을 <tt>true</tt> 로 설정하면 두 인스턴스가 서로 상호 작용하고 충돌 할 수 있지만 충돌 이벤트가있는 경우 <i>에만</i> 충돌이 발생합니다. 그러나 <tt>false</tt> 로 설정되어 있으면 충돌이 발생하지 않습니다. .</p>
   <p> </p>
   <h4>통사론:</h4>
@@ -160,7 +160,7 @@
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('GameMaker_Language\GML_Reference\Physics\Joints\physics_joint_prismatic_create.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Physics/Joints/physics_joint_prismatic_create.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

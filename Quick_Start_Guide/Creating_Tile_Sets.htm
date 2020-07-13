@@ -85,11 +85,11 @@
   <p><strong>타일 ​​세트</strong> 는 스프라이트로 만들어 지지만 GameMaker Studio 2가 처리하는 방식이 스프라이트와 오브젝트와 약간 다르기 때문에 별도의 자산 유형으로 분류됩니다. 따라서 타일 세트는 하나의 스프라이트로 함께 생성 된 타일 모음이며, 타일은 단순히 <strong><a class="tooltip" title="타일 ​​맵은 타일 세트에서 가져와 게임에서 레벨을 만드는 데 사용되는 타일 모음에 부여 된 이름입니다.">타일 ​​맵의</a></strong> 일부로 GameMaker Studio 2 룸에 추가되는 그래픽 리소스입니다. 그런 다음 이러한 타일 맵은 CPU / GPU 처리가 거의없이 화면에 그려 지므로 레벨의 정적 항목을 설계하는 데 이상적입니다.</p>
   <p>타일을 너무 빨리 처리하려면 특정 제한이 있으며 가장 기본적인 <strong>것은 직사각형 또는 정사각형 일 수 있습니다</strong> (이 이외의 것을 원하면 일반 스프라이트를 만들고 <em>자산</em> 방 편집기에서 <em>레이어,</em> 그러나 우리의 뒷부분에서 그 논의 할 것이다 <a href="Rooms.htm">객실</a> ). 다른 제한 사항은 90 ° 만 회전하거나 미러링하거나 뒤집을 수 있으며 <strong>2</strong> 의 <strong>거듭 제곱</strong> (예 : 2, 4, 8, 16 등)의 프레임으로 만 애니메이션 할 수 있다는 사실입니다. .</p>
   <p>하향식 게임을위한 몇 가지 사각형 벽 타일-타일 세트의 간단한 예를 살펴 보겠습니다.</p>
-  <p><img alt="Example Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_ExampleTileset.png"/></p>
+  <p><img alt="타일 ​​세트 스프라이트 예" class="center" src="../assets/Images/QS_Guide/QS_ExampleTileset.png"/></p>
   <p>우선 타일 세트 <strong>스프라이트</strong> 로 만들어야합니다. <a href="../The_Asset_Editors/Sprites.htm">스프라이트 에디터</a> / <a href="../The_Asset_Editors/Image_Editor.htm">이미지 에디터</a> (또는 외부 이미지 에디터에서 스프라이트로 임포트)에서 수행됩니다. 최종 스프라이트는 다음과 같아야합니다.</p>
-  <p><img alt="Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Sprite.png"/><strong>해당 이미지에서 첫 번째 타일은 비어</strong> 있습니다. 방의 타일 맵이 GameMaker Studio 2에 저장되는 방식은 첫 번째 타일은 기본적으로 &quot;삭제&quot;타일 또는 &quot;빈 공간&quot;타일이므로이 타일은 항상 비어 있어야합니다 (이 &quot;빈&quot;타일에는 <strong>색인이 있음)</strong> 값 0-타일은 0에서 시작하여 왼쪽에서 오른쪽으로, 위에서 아래로 계산되는 값으로 색인됩니다. 따라서 타일 세트를 만들 때 항상 왼쪽 상단 타일이 비어 있어야합니다. 또한 위의 이미지에는 47 개의 타일로 구성된 전체 벽 타일이 표시되지만 나중에 룸 편집기에 타일을 배치 할 때 타일을 회전하고 뒤집을 수있는 개수만큼 필요하지 않을 수도 있습니다.</p>
-  <p>With the sprite created, we can go ahead and define the tile set itself, which means you have to first create a new tile set resource by right clicking <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/>타일 ​​세트 자산 폴더에서 <em>Create를</em> 선택 <em>하십시오</em> . 그러면 Sprite를 추가하고 속성을 설정할 수있는 <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor</a> 가 열립니다.</p>
-  <p><img alt="Tile set Editor" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Editor.png"/></p>
+  <p><strong>해당 이미지에서 첫 번째 타일은 비어</strong> 있습니다. 방의 타일 맵이 GameMaker Studio 2에 저장되는 방식은 첫 번째 타일은 기본적으로 &quot;삭제&quot;타일 또는 &quot;빈 공간&quot;타일이므로이 타일은 항상 비어 있어야합니다 (이 &quot;빈&quot;타일에는 <strong>색인이 있음)</strong> 값 0-타일은 0에서 시작하여 왼쪽에서 오른쪽으로, 위에서 아래로 계산되는 값으로 색인됩니다. 따라서 타일 세트를 만들 때 항상 왼쪽 상단 타일이 비어 있어야합니다. 또한 위의 이미지에는 47 개의 타일로 구성된 전체 벽 타일이 표시되지만 나중에 룸 편집기에 타일을 배치 할 때 타일을 회전하고 뒤집을 수있는 개수만큼 필요하지 않을 수도 있습니다.</p>
+  <p>스프라이트가 생성되면 타일 세트 자체를 정의 할 수 있습니다. 즉, 먼저 마우스 오른쪽 버튼을 클릭하여 새 타일 세트 리소스를 만들어야합니다 타일 ​​세트 자산 폴더에서 <em>Create를</em> 선택 <em>하십시오</em> . 그러면 Sprite를 추가하고 속성을 설정할 수있는 <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor</a> 가 열립니다.</p>
+  <p><img alt="타일 ​​세트 편집기" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Editor.png"/></p>
   <p>타일 ​​세트 크기를 64px로 설정했으며 오프셋이나 그와 비슷한 것을 필요로하지 않기 때문에 나머지 옵션을 기본값으로 남겨 두었습니다 (오프셋 값은 공백이있는 타일 세트 스프라이트에 유용합니다) 각 타일). &quot; <span class="inline">ts_</span> &quot;와 같은 적절한 접두사를 사용하여 타일 세트 자산의 이름을 지정하고 나중에 쉽게 식별 할 수 있으며 스프라이트와 동일한 제한 사항이 적용됩니다. 즉, 이름은 숫자로 시작할 수 없으며 숫자 만 가능합니다. 밑줄 &quot;_&quot;기호 및 영숫자 문자를 사용하십시오.</p>
   <p>타일 ​​세트 &quot;있는 그대로&quot;를 사용하여 룸 편집기에서 타일 맵 레이어를 만들 수 있으므로 타일 세트 편집기를 닫을 수 있습니다. 그러나 타일 세트 편집기의 고급 기능에 대한 자세한 내용을 보려면 매뉴얼의 다음 섹션 :</p>
   <ul class="colour">
@@ -98,7 +98,7 @@
   <p>이제 프로젝트에 <strong>사운드 효과</strong> 를 추가하는 방법에 대해 이야기하겠습니다.</p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('Quick_Start_Guide\Creating_Tile_Sets.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('Quick_Start_Guide/Creating_Tile_Sets.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

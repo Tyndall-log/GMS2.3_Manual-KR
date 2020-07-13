@@ -82,7 +82,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>GIT 플러그인 설정</h1>
   <p>GIT 플러그인 사용을 시작할 때 GIT가 다음과 같이 커밋하도록 ID를 설정해야합니다. 즉, <a href="../../Setting_Up_And_Version_Information/IDE_Preferences.htm">환경 설정</a> 의 <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">플러그인-소스 제어 (Git)</a> 섹션으로 이동하여 인증 세부 사항을 추가해야합니다.</p>
-  <p><img alt="SCM Identity Preferences" class="center" src="../../assets/Images/IDE Tools/SCM_IdentityPrefs.png"/>이 인증 아이덴티티는 향후 모든 프로젝트에 사용될 것이며 GameMaker Studio 2는이를 설정할 수있는 두 가지 방법을 제공합니다.</p>
+  <p>이 인증 아이덴티티는 향후 모든 프로젝트에 사용될 것이며 GameMaker Studio 2는이를 설정할 수있는 두 가지 방법을 제공합니다.</p>
   <ul class="colour">
     <li><strong>사용자 이름 및 비밀번호</strong> : &quot; <em>새 사용자 / 패스 인증 추가</em> &quot;버튼을 클릭하면 <strong>리포지토리 URL</strong> , <strong>사용자 이름</strong> 및 <strong>비밀번호를</strong> 입력 할 수있는 다음 창이 나타납니다. 이것이 특정 저장소에만 영향을 미치려면 저장소의 URL을 맨 위 필드에 두십시오. 그러나 도메인 전체 인증이 필요한 경우 (예 : &quot; <span class="inline">bitbucket.org</span> &quot;또는 &quot; <span class="inline">github.com</span> &quot;) 도메인을 배치하면됩니다. 인증을 확인해야 할 경우 먼저 특정 리포지토리 일치를 찾은 다음 도메인 일치를 찾습니다. 이를 통해 도메인에 대한 기본 인증을 보유하고 나중에 특정 리포지토리에 대한 특정 세부 정보로 재정의 할 수 있습니다.</li>
   </ul>
@@ -91,14 +91,14 @@
     <li><strong>SSH 키 쌍</strong> : &quot; <em>새 SSH 키 쌍 인증 추가</em> &quot;를 클릭하면 필요한 <strong>공개 키</strong> 및 <strong>개인 키</strong> 파일에 경로를 제공하기 전에 <strong>리포지토리 URL</strong> 및 <strong>암호</strong> 를 입력 할 수있는 다음 창이 나타납니다. 사용자 이름 / 암호 인증과 마찬가지로 SSH 키 쌍을 사용할 때 도메인 및 저장소 별 인증을 가질 수 있습니다. SSH 키 쌍이 이미 생성 된 경우 여기에 경로와 여기에 액세스하는 데 필요한 비밀번호를 설정할 수 있습니다. 공개 키, 복사 버튼에 빠르게 액세스해야하는 경우 내용을 클립 보드에 자동으로 복사합니다. SSH 키 페어가없는 경우 <strong>Create KeyPair</strong> 버튼을 클릭하면 개인 키를 배치 할 위치에 대한 파일 대화 상자가 표시되고 그 옆에 공개 키가 생성됩니다. 공개 및 개인 키가 자동으로 제공됩니다.</li>
   </ul>
   <p>이 설정은 이제 복제, 푸시 및 풀 요청을 처리 할 때 리포지토리 (IE : Git Hub, Bit Bucket 등)와 통신하는 데 사용됩니다. 그러나 여전히 <a href="../../Settings/Game_Options.htm">메인 옵션</a> 을 열고 <strong>소스 제어 사용</strong> <a href="../../Settings/Game_Options.htm">옵션</a> 을 클릭하여 수행 할 수있는 프로젝트 별 옵션을 설정해야합니다. 현재 프로젝트에 대한 SCM이 활성화됩니다.</p>
-  <p><img alt="Enable Source Control" class="center" src="../../assets/Images/IDE Tools/SCM_EnableSourceControl.png"/>소스 컨트롤을 활성화하고 적용하면 IDE의 맨 위에 다음과 같은 옵션으로 새 컨텍스트 메뉴가 나타납니다 (각각이 자습서의 나머지 섹션에서 자세히 설명합니다).</p>
+  <p>소스 컨트롤을 활성화하고 적용하면 IDE의 맨 위에 다음과 같은 옵션으로 새 컨텍스트 메뉴가 나타납니다 (각각이 자습서의 나머지 섹션에서 자세히 설명합니다).</p>
   <p><img class="center" src="../../assets/Images/IDE Tools/SCM_ContextMenu.png"/></p>
   <p class="note"><strong>참고</strong> : 인증 세부 정보를 다시 편집해야하는 경우 항목을 두 번 클릭하면 세부 정보 창이 열리지 만 편집 할 수는 없지만 URL의 이름을 바꿀 수는 없습니다. URL을 변경해야하는 경우 인증 세부 사항을 삭제하고 다시 추가해야합니다. 인증 세부 사항을 삭제하려면 기본 환경 설정 창의 행 왼쪽에있는 닫기 단추를 클릭하십시오.</p>
-  <p class="note"><img alt="Delete SSH Keypairs" class="center" src="../../assets/Images/IDE Tools/SCM_DeleteSSH.png"/></p>
+  <p class="note"><img alt="SSH 키 쌍 삭제" class="center" src="../../assets/Images/IDE Tools/SCM_DeleteSSH.png"/></p>
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('IDE_Tools\Source_Control\Setting_Up_Git_Plugin.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('IDE_Tools/Source_Control/Setting_Up_Git_Plugin.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">

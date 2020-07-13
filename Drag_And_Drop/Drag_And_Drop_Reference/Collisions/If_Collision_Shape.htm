@@ -82,16 +82,16 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>충돌 모양 인 경우</h1>
   <p>이 동작은 주어진 모양 영역 내에서 또는 선을 따라 주어진 객체의 인스턴스와 충돌이 있는지 확인하고 확인하는 데 사용됩니다. 셰이프 (직사각형, 타원 또는 선), 확인할 객체를 제공 한 다음 사용중인 셰이프의 왼쪽 상단 및 오른쪽 하단 모서리에 대한 좌표를 제공하거나 라인의 경우 시작 및 시작 최종 위치. 이들은 게임 룸 내에서 절대 위치이거나 작업을 수행하는 인스턴스와 관련된 위치 일 수 있습니다. 아래 이미지에서 어떻게 작동하는지 확인할 수 있습니다.</p>
-  <p><img alt="Example of different collision shapes" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/collision_shape_example.png"/>당신이 볼 수 있듯이, 결과는 당신이 찾고있는 개체의 인스턴스 즉, 검사되는 인스턴스의 충돌 마스크에 따라 달라집니다 <i>해야한다</i> <tt>sprite_index에</tt> 할당 된 스프라이트, 또는 <tt>mask_index에</tt> 할당 된 스프라이트가 있습니다. 그렇지 않으면 스프라이트 그리기 여부에 관계없이 이러한 기능에 의해 감지되지 않습니다. 타원 또는 직사각형 모양에 대해 설정된 경계 내에 완전히 속하는 인스턴스도 충돌을 반환한다는 점은 주목할 가치가 있습니다. 충돌이 감지되면 작업이 <tt>true로</tt> 평가합니다, 또는 그렇지 않은 <tt>경우는 false,</tt> 당신은 또한 확인할 수 있지만 <b>하지</b> 가 있는지 확인하는 플래그를 <i>하지</i> 주어진 모양의 영역과 충돌하고, 작업이 만 <tt>참으로</tt> 평가하는 경우 <i>어떤</i> 충돌 그렇지 않으면 <tt>false로</tt> 평가됩니다. 충돌 검사에서 호출 인스턴스를 제외하도록 <b>자체 제외</b> 옵션을 설정할 수도 있습니다.</p>
+  <p>당신이 볼 수 있듯이, 결과는 당신이 찾고있는 개체의 인스턴스 즉, 검사되는 인스턴스의 충돌 마스크에 따라 달라집니다 <i>해야한다</i> <tt>sprite_index에</tt> 할당 된 스프라이트, 또는 <tt>mask_index에</tt> 할당 된 스프라이트가 있습니다. 그렇지 않으면 스프라이트 그리기 여부에 관계없이 이러한 기능에 의해 감지되지 않습니다. 타원 또는 직사각형 모양에 대해 설정된 경계 내에 완전히 속하는 인스턴스도 충돌을 반환한다는 점은 주목할 가치가 있습니다. 충돌이 감지되면 작업이 <tt>true로</tt> 평가합니다, 또는 그렇지 않은 <tt>경우는 false,</tt> 당신은 또한 확인할 수 있지만 <b>하지</b> 가 있는지 확인하는 플래그를 <i>하지</i> 주어진 모양의 영역과 충돌하고, 작업이 만 <tt>참으로</tt> 평가하는 경우 <i>어떤</i> 충돌 그렇지 않으면 <tt>false로</tt> 평가됩니다. 충돌 검사에서 호출 인스턴스를 제외하도록 <b>자체 제외</b> 옵션을 설정할 수도 있습니다.</p>
   <p>다음으로 <b>Return List</b> 옵션을 체크 / 체크 해제 할 수 있습니다. 이를 확인하면 조치가 <a href="../Data_Structures/Data_Structure_Actions.htm">목록을</a> 작성하고 채 웁니다. <i>모든</i> 인스턴스가 모양과 충돌하는 데이터 구조를 사용하고 <b>대상</b> 변수를 DS 목록 ID로 설정하십시오. 이 옵션을 선택하지 않으면 충돌이 감지되지 않거나 충돌에있는 인스턴스 <i>중 하나</i> 의 고유 ID 값만 <b>대상</b> 변수를 0보다 작은 값으로 설정합니다 (여러 인스턴스가 충돌하는 경우에는 목록을 사용하지 않을 때 어떤 인스턴스 ID가 반환되는지 알 수 있습니다.</p>
   <p>목록을 반환하도록 선택하고 대상 변수가 <b>임시로</b> 설정 <i>되지 않은</i> 경우 <b>자유 대상</b> 옵션을 선택할 수도 있습니다. <tt>true로</tt> 설정되면, 대상 변수에 포함 된 목록이 삭제되고 조치를 호출 할 때마다 새 목록이 작성되고 대상 변수로 리턴됩니다. 이런 방식으로 메모리 누수에 대해 걱정하지 않고 동일한 변수를 재사용 할 수 있습니다. <b>자유 대상</b> 옵션을 선택하지 <i>않으면</i> 조치에서 변수를 다시 사용하기 전에 목록을 제거해야합니다. 이 옵션의 선택 여부에 <i>관계없이</i> 조치를 <b>Return List</b> 로 설정 한 경우 대상 변수는 <i>항상 목록 ID를 포함</i> 하므로 인스턴스가 손상되거나 인스턴스가 해제 될 때 해제되어야합니다. 룸 종료 (예 : <a href="../Data_Structures/Free_Data_Structure.htm">무료 데이터 구조</a> 와 함께 <b>클린업</b> 이벤트를 사용할 수 <a href="../Data_Structures/Free_Data_Structure.htm">있음)</a> 동작). 미리 정의 된 변수 또는 표현식을 사용하도록 <b>자유 대상</b> 옵션을 설정할 수 있으므로 변수를 다른 위치 (또는 표현식에 대해 다른 결과를 가짐)를 설정하여 목록 데이터 구조가 해제되는시기를 제어 할 수 있습니다. <tt>true</tt> / <tt>false로</tt> 평가됩니다.</p>
   <p>마지막으로, 리턴 된 값 또는 목록 ID를 보유하려는 <b>대상</b> 변수를 제공하십시오. 당신이 인으로 반환 된 값 보유 할 대상 변수 플래그 경우 <b>온도</b> (로컬) 변수를, 다음 작업이 반환 값을 유지하기 위해이 변수를 만들 것입니다 <i>만</i> 이 경우에는 무료 대상 옵션은 아무것도하지 않고, 이벤트가 끝날 때까지 해당 옵션을 선택한 경우 DS 목록을 삭제해야합니다. 대상 변수가 제공되지 않고 <b>리턴 목록</b> 옵션이 선택된 경우 목록이 작성되지 않습니다.</p>
   <p class="note"><b>중대한!</b> 충돌은 즉 유효한 충돌 마스크를 가지고 해당 인스턴스에 등록됩니다 그들은 <tt>sprite_index에</tt> 할당 된 스프라이트, 또는 <tt>mask_index에</tt> 할당 된 스프라이트가 있습니다. 이 작업에서 확인중인 객체의 인스턴스에 충돌 마스크가없는 경우 해당 시점에 인스턴스가 그린 내용에 관계없이 충돌이 감지되지 않습니다.</p>
   <p>&quot; <span class="inline">if</span> &quot;블록에 액션을 추가하려면 아래 이미지와 같이 액션 <i>측면</i> 에 드롭해야합니다.</p>
-  <p><img alt="If Collision Shape drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Shape.png"/></p>
+  <p><img alt="충돌 모양 드롭 동작" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Shape.png"/></p>
   <p> </p>
   <h4>동작 구문 :</h4>
-  <p><img alt="If Collision Shape Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/a_Collision_Shape.png"/></p>
+  <p><img alt="충돌 모양 동작" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/a_Collision_Shape.png"/></p>
   <h4>인수 :</h4>
   <table>
     <tbody>
@@ -135,11 +135,11 @@
   </table>
   <p> </p>
   <h4>예:</h4>
-  <p><img alt="If Collision Shape Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/e_Collision_Shape.png"/>위의 액션 블록 코드는 호출 인스턴스 위치 주위의 100px 서클 내에서 &quot; <span class="inline">obj_Enemy</span> &quot;개체 인스턴스와의 충돌을 확인합니다. 이 작업은 충돌이 발생한 것으로 밝혀진 모든 인스턴스의 목록을 생성하고 목록 변수를 대상 변수에 저장합니다. 작업이 <tt>true</tt> 로 평가되면 목록이 반복되고 목록에 ID가 저장된 각 인스턴스의 &quot; <span class="inline">hp</span> &quot;변수가 1 씩 줄어 듭니다. 그런 다음 DS 목록이 해제됩니다.</p>
+  <p>위의 액션 블록 코드는 호출 인스턴스 위치 주위의 100px 서클 내에서 &quot; <span class="inline">obj_Enemy</span> &quot;개체 인스턴스와의 충돌을 확인합니다. 이 작업은 충돌이 발생한 것으로 밝혀진 모든 인스턴스의 목록을 생성하고 목록 변수를 대상 변수에 저장합니다. 작업이 <tt>true</tt> 로 평가되면 목록이 반복되고 목록에 ID가 저장된 각 인스턴스의 &quot; <span class="inline">hp</span> &quot;변수가 1 씩 줄어 듭니다. 그런 다음 DS 목록이 해제됩니다.</p>
   <p> </p>
   <p> </p>
   <div class="Participant">번역 : 구글번역기</div>
-  <div class="Original_text" onclick="winopen('Drag_And_Drop\Drag_And_Drop_Reference\Collisions\If_Collision_Shape.htm');">영문 페이지 보기</div>
+  <div class="Original_text" onclick="winopen('Drag_And_Drop/Drag_And_Drop_Reference/Collisions/If_Collision_Shape.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
