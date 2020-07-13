@@ -568,3 +568,22 @@ ol.RoundSquare>li>ol>li>ol>li>ol>li>ol>li>ol {
 ol.Decimal {
   list-style-type: decimal;
 }
+/* -------------------------------------------------------- 번역용 추가 도움말 */
+.Participant { /*참고 링크 : https://www.the-art-of-web.com/css/border-radius/ , 링크 2 : https://zetawiki.com/wiki/CSS_둥근_모서리_border-radius_속성 */
+  display:inline-block;
+  background-color: #181818A0;
+  border: 1px solid #CDE;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  bottom: 7px;
+  left: 10px;
+  color: #CDE;
+  font-size: 10px;
+  position: sticky;
+  text-shadow: 0px 0px 4px #CDE;
+  box-shadow: 0px 0px 4px #CDE;
+}
