@@ -91,9 +91,9 @@
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">코드 작성과 관련하여 모든 사람은 <em>스타일을</em> 갖습니다. 프로그래밍하는 스타일은 대괄호를 배치하는 방법, 줄을 들여 쓰는 방법, 변수를 선언하고 이름을 지정하는 방법 등이며 다른 사람들 (및 미래의 자아, 다른 일을 한 후에이 프로젝트로 돌아와야 할 때).</p>
     <p class="dropspot">많은 <a href="http://en.wikipedia.org/wiki/Programming_style">프로그래밍 스타일이</a> 있으며, 일부는 자신의 <a href="http://en.wikipedia.org/wiki/Programming_style">스타일</a> 이 사용하기에 가장 적합하다고 주장하지만 실제로는 스타일을 사용할 때 <strong>일관성</strong> 이 있고 거의 모든 스타일이 <em>명확</em> 하고 <em>분명</em> 하다는 것이 거의 모든 스타일입니다. 그렇습니다.</p>
-    <p class="dropspot">위의 이미지는 위의 요점을 설명하기 위해 스크립트에서 함수 선언의 예입니다. JSDoc 스타일 주석을 사용하여 모든 기능을 명확하게 설명하고 4 개의 공백 들여 쓰기, 로컬 vars에 사용되는 밑줄, 로그 출력 등으로 코딩 스타일이 일관성이 있음을 알 수 있습니다.</p>
+    <p class="dropspot"><img alt="Code Style Example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractice_Style_Example.png"/>위의 이미지는 위의 요점을 설명하기 위해 스크립트에서 함수 선언의 예입니다. JSDoc 스타일 주석을 사용하여 모든 기능을 명확하게 설명하고 4 개의 공백 들여 쓰기, 로컬 vars에 사용되는 밑줄, 로그 출력 등으로 코딩 스타일이 일관성이 있음을 알 수 있습니다.</p>
     <p class="dropspot">또한 스크립트 편집기를 사용하면 각 열기 / 닫기 대괄호에서 코드를 접을 수 있지만 <span class="inline">#region</span> 및 <span class="inline">#endregion</span> 태그를 사용하여 코드의 일부를 분리하고 가독성이 크게 향상됩니다. 특히 포함 된 더 큰 스크립트를 처리 할 때 여러 기능. 지역도 주석을 달 수 있습니다-매뉴얼에서이 페이지의 편집 섹션을 참조하십시오.</p>
-    <p class="dropspot">코드를 작성할 때 GameMaker Studio 2는 최종 게임을 컴파일 할 때 주석을 제거하고 불필요한 줄 바꿈과 공백을 제거하며 상수 / 매크로 / 열거 형 값을 대체하며 일반적으로 프로세스의 일부로 코드를 압축합니다. 즉, 코드 주위에 필요한만큼 많은 공백을 추가 할 수 있으며 주석을 짧게 유지하거나 조금만 사용하는 것에 대해 걱정할 필요가 없습니다.</p>
+    <p class="dropspot"><img alt="Example Of Using Regions" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractice_Regions.png"/>코드를 작성할 때 GameMaker Studio 2는 최종 게임을 컴파일 할 때 주석을 제거하고 불필요한 줄 바꿈과 공백을 제거하며 상수 / 매크로 / 열거 형 값을 대체하며 일반적으로 프로세스의 일부로 코드를 압축합니다. 즉, 코드 주위에 필요한만큼 많은 공백을 추가 할 수 있으며 주석을 짧게 유지하거나 조금만 사용하는 것에 대해 걱정할 필요가 없습니다.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">지역 변수 사용 지역 변수</span> <span data-close-text="true">사용</span></a></p>
@@ -159,7 +159,7 @@ else<br/>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">텍스처 스왑 및 정점 배치</span> <span data-close-text="true">텍스처 스왑 및 정점 배치</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
     <p class="dropspot"><a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_overlay.htm"><strong>디버그 오버레이</strong></a> 를 켜면 테스트 할 때 화면 상단에 괄호 안에 두 개의 숫자가있는 것을 볼 수 있습니다. 첫 번째는 수행되는 <strong>텍스처 스왑</strong> 수이고 두 번째는 <strong>정점 배치</strong> 수입니다. 많은 요소들이 이러한 수치에 영향을 미치며 엔진이 각 단계마다 하나 또는 두 개의 단계를 요구하므로 절대로 (0) (0)으로 떨어지지 않지만 가능한 한 낮은 값을 낮추는 것을 목표로해야합니다.</p>
-    <p class="dropspot">텍스처 스왑의 경우 가장 효율적이고 효과적인 방법은 텍스처 페이지에 스프라이트와 배경이 저장되는 방식을 최적화하는 것입니다. 이것은 <a href="../The_Asset_Editors/Sprites.htm">스프라이트 속성</a> 에서 이루어지며, <a href="../Settings/Texture_Groups.htm">Texture Group Editor</a> 에서 텍스쳐 페이지를 생성 할 수 있습니다. 주 메뉴에서만 사용되는 이미지가 여러 개인 경우 (예를 들어) 별도의 <a href="../Settings/Texture_Information/Texture_Pages.htm">텍스처 페이지</a> 에 함께 배치 <a href="../Settings/Texture_Information/Texture_Pages.htm">하십시오</a> . 레벨 별 이미지 또는 플레이어와 적 등이있는 경우에도 동일합니다. 기본적으로 스왑이 가능한 한 많이 줄어들도록 사용별로 그룹화하려고합니다. 또한 <a class="tooltip" title="VRAM은 비디오에 사용 가능한 메모리의 양입니다. 즉, 텍스처와 이미지를 저장할 수있는 메모리 공간입니다.">VRAM을</a> 최적화 된 상태로 유지하려면 다른 <a href="../GameMaker_Language/GML_Reference/Drawing/Textures/Textures.htm">프리 페치 및 플러시</a> 기능을 사용하여 필요에 따라 메모리에서 텍스처를로드하고 제거 할 수 있습니다.</p>
+    <p class="dropspot"><img alt="The Debug Overlay Bar" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractices_DebugOverlay.png"/>텍스처 스왑의 경우 가장 효율적이고 효과적인 방법은 텍스처 페이지에 스프라이트와 배경이 저장되는 방식을 최적화하는 것입니다. 이것은 <a href="../The_Asset_Editors/Sprites.htm">스프라이트 속성</a> 에서 이루어지며, <a href="../Settings/Texture_Groups.htm">Texture Group Editor</a> 에서 텍스쳐 페이지를 생성 할 수 있습니다. 주 메뉴에서만 사용되는 이미지가 여러 개인 경우 (예를 들어) 별도의 <a href="../Settings/Texture_Information/Texture_Pages.htm">텍스처 페이지</a> 에 함께 배치 <a href="../Settings/Texture_Information/Texture_Pages.htm">하십시오</a> . 레벨 별 이미지 또는 플레이어와 적 등이있는 경우에도 동일합니다. 기본적으로 스왑이 가능한 한 많이 줄어들도록 사용별로 그룹화하려고합니다. 또한 <a class="tooltip" title="VRAM은 비디오에 사용 가능한 메모리의 양입니다. 즉, 텍스처와 이미지를 저장할 수있는 메모리 공간입니다.">VRAM을</a> 최적화 된 상태로 유지하려면 다른 <a href="../GameMaker_Language/GML_Reference/Drawing/Textures/Textures.htm">프리 페치 및 플러시</a> 기능을 사용하여 필요에 따라 메모리에서 텍스처를로드하고 제거 할 수 있습니다.</p>
     <p class="note"><strong>참고</strong> :이 페이지의 시작 부분에서 언급했듯이, 적절한 FPS로 게임이 제대로 실행되면 텍스처 스왑에 대해 너무 걱정하지 마십시오. 특히 데스크탑 대상에서 프로젝트를 만들 때. 이러한 최적화는 대형 게임이나 저가형 모바일 장치와 함께 사용할 때 가장 적합하며 잘못 사용하면 실제로 성능에 부정적인 영향을 줄 수 있습니다.</p>
     <p class="dropspot">정점 정보는 드로잉을 위해 &quot;배치&quot;로 GPU에 전송되며 일반적으로 배치가 클수록 더 좋습니다. 따라서 GPU에 전송되는 정점 배치 수가 증가하기 때문에 배치를 &quot;파손&quot;하는 것은 피해야합니다. 배치를 깨뜨리는 많은 것들이 있으며, 주요 것은 <strong>블렌드 모드</strong> , <strong>그리기 색상</strong> 설정, <strong>그리기 알파</strong> 설정 및 내장 모양과 기본 요소를 사용하여 그리기입니다.</p>
     <p class="dropspot">예를 들어 <span class="inline">bm_add</span> 블렌드 모드를 사용하여 여러 개의 글 머리 기호 인스턴스를 그리는 경우 각 버텍스 배치를 새로 만들 것입니다. 대신 게임에 다음과 같이 총알을 대신 그리는 컨트롤러 객체를 두십시오.</p>
@@ -200,7 +200,7 @@ else<br/>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="Additional_Information.htm">추가 정보</a></div>
+        <div style="float:left">목록: <a href="Additional_Information.htm">추가 정보</a></div>
         <div style="float:right">다음: <a href="The_File_System.htm">파일 시스템</a></div>
       </div>
     </div>

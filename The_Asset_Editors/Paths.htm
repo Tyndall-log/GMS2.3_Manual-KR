@@ -81,7 +81,7 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>경로 편집기</h1>
-  <p>게임을 만드는 동안 어느 시점에서 레벨 중 하나를 따라 가려면 인스턴스 중 하나가 필요할 수 있습니다. 이제 이것은 방 안에서 위치의 배열을 만들고 그 사이에 인스턴스를 이동시킴으로써 코드로 수행 할 수 있지만 설정하기가 쉽지 않으며 다른 인스턴스에 대해 변경, 테스트 및 적응하기가 어렵습니다. 이러한 이유로 GameMaker Studio 2에는 경로 리소스와 전용 경로 편집기가 있습니다.</p>
+  <p><img alt="The Path Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Paths.png"/>게임을 만드는 동안 어느 시점에서 레벨 중 하나를 따라 가려면 인스턴스 중 하나가 필요할 수 있습니다. 이제 이것은 방 안에서 위치의 배열을 만들고 그 사이에 인스턴스를 이동시킴으로써 코드로 수행 할 수 있지만 설정하기가 쉽지 않으며 다른 인스턴스에 대해 변경, 테스트 및 적응하기가 어렵습니다. 이러한 이유로 GameMaker Studio 2에는 경로 리소스와 전용 경로 편집기가 있습니다.</p>
   <p>기본 아이디어는 다소 간단합니다. 경로 편집기에서 경로를 그려 경로를 정의한 다음 객체의 생성 이벤트에 동작 (또는 코드)을 배치하여 인스턴스가 해당 특정 경로를 따르도록 지시 할 수 있습니다. 경로를 따라 이동하는 속도와 방 내 경로의 위치 및 방향과 관련된 여러 가지 다른 작업을 설정할 수도 있습니다. 경로 리소스를 처음 만들면 다음 옵션이 포함 된 경로 편집기 창이 열립니다.</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">경로 속성</span> <span data-close-text="true">경로 속성</span></a></p>
@@ -90,13 +90,13 @@
     <p class="dropspot">경로 이름을 지정하면 오른쪽의 기본 편집기에 점을 배치하여 위치를 정의 할 수 있습니다. 각 점은 여기에 위치 및 속도와 함께 목록에 추가됩니다. 패스 포인트의 속도 값은 인스턴스가 패스를 따라 이동하는 속도의 백분율로 정의됩니다 (기본값은 100 %). 따라서 경로를 따라 2 (스텝 당 2 픽셀)의 속도로 인스턴스를 시작한 경우 경로 포인트 중 하나의 속도 값이 50 % 인 경우 인스턴스가이 포인트에 접근 할 때 속도가 1로 감소합니다. (경로 속도의 50 %). 마찬가지로 속도를 150 %로 설정할 수 있으며 인스턴스가 포인트에 도달하면 가속됩니다. 이런 식으로 코드를 만들지 않고도 멋진 역동적 인 움직임을 만들 수 있습니다.</p>
     <p class="dropspot">빠르게 더블 클릭 할 수 있다는 점은 주목할 가치가 있습니다. 목록의 정의 된 지점에서 편집기를 선택한 지점으로 이동하거나 두 번 클릭 속도를 느리게 값 중 하나를 수동으로 편집하려면 (x, y 또는 속도).</p>
     <p class="dropspot">전체 경로에 대한 연결 종류와 경로를 닫을 지 여부를 지정할 수도 있습니다 (닫힌 경로는 경로의 마지막 지점을 첫 번째 지점과 연결 함). 연결 종류는 <strong>직선</strong> 이거나 <strong>매끄러</strong> 울 수 있습니다. 직선 연결은 단순히 각 점의 각도 변화와 함께 경로의 점을 직선으로 연결하는 반면 매끄럽게 연결하면 직접 통과하지 못하는 훨씬 더 부드러운 경로를 만듭니다. 점을 통과하지만 대략적인 선을 취하여 <a class="tooltip" title="부드러운 보간법은 인접한 두 개의 알려진 값을 수학적으로 생성 된 스플라인 곡선과 연결하여 새로운 값을 추정하는 것입니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다.">부드러운 보간을</a> 사용하여 멋진 곡선을 만듭니다. 곡선의 정밀도 (기본값은 4)를 지정할 수 있습니다 (기본값은 4). 8은 가장 부드럽습니다. 아래 이미지는 이러한 옵션이 경로에 미치는 영향의 예를 보여줍니다.</p>
-    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_Examples.png" src="../assets/Images/Asset_Editors/Editor_Paths_Examples.png" alt="경로 편집기 예" class="center"/></p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_Examples.png" src="../assets/Images/Asset_Editors/Editor_Paths_Examples.png" alt="Path Editor Examples" class="center"/></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">경로 편집</span> <span data-close-text="true">경로 편집</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
     <p class="dropspot">경로 클릭에 포인트를 추가 할 수 있습니다 편집 창의 아무 곳이나 클릭하면 이후의 모든 클릭으로 더 많은 포인트가 추가됩니다. 편집기에 배치되면 클릭하여 포인트를 이동할 수 있습니다 드래그하여 또는 X 및 Y 위치 및 속도에 대해 왼쪽에 표시된 값을 변경하여 위의 <strong>경로 속성을</strong> 참조하십시오. 당신이 사용할 수있는 / 왼쪽 클릭 여러 포인트를 함께 선택하여 원하는대로이 포인트 그룹을 드래그하여 배치 할 수 있습니다. 누를 수 있습니다 선택한 포인트를 삭제합니다.</p>
     <p class="dropspot">마우스 오른쪽 버튼을 클릭하면 편집기 창에 추가 메뉴가 있습니다 아래에 표시됩니다.</p>
-    <p class="dropspot">이 메뉴의 각 항목은 다음과 같이 작동합니다.</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_Menu.png" src="../assets/Images/Asset_Editors/Editor_Paths_Menu.png" class="center" alt="Path Editor RMB Menu"/>이 메뉴의 각 항목은 다음과 같이 작동합니다.</p>
     <ul class="dropspotlist">
       <li class="dropspot"><strong>포인트 삭제</strong> -선택한 포인트를 삭제합니다.</li>
       <li class="dropspot"><strong>경로로 이동</strong> -편집기의보기 <strong>를 경로</strong> 중심으로 이동합니다.</li>
@@ -110,7 +110,7 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">도구 상자 도구</span> <span data-close-text="true">상자</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">상단의 도구 상자 버튼은 편집기 창에서 물건을 그리는 방법을 제어 할 수있는 곳입니다. 배경 그리드를 켜거나 끄고 경로 포인트 추가를이 그리드에 스냅할지 여부를 설정할 수 있습니다.</p>
-    <p class="dropspot">스냅 값은 그리드 셀의 크기를 나타내며 필요한 값으로 변경할 수 있습니다. 나머지 도구는 편집기 영역을 확대 및 축소하고 이동하는 데 사용되며 버튼을 누르면 디스플레이와 1 : 1로 재설정됩니다. 패스를 그리려는 위치에서 너무 멀리 이동하면 마우스 오른쪽 버튼을 사용할 수 있습니다. 메뉴를 클릭 한 다음 <strong>경로</strong> 로 이동을 클릭 <strong>하여</strong> 작업중인 위치로 다시 스크롤합니다.</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_GridOptions.png" src="../assets/Images/Asset_Editors/Editor_Paths_GridOptions.png" class="center" alt="Path Editor Grid Options"/>스냅 값은 그리드 셀의 크기를 나타내며 필요한 값으로 변경할 수 있습니다. 나머지 도구는 편집기 영역을 확대 및 축소하고 이동하는 데 사용되며 버튼을 누르면 디스플레이와 1 : 1로 재설정됩니다. 패스를 그리려는 위치에서 너무 멀리 이동하면 마우스 오른쪽 버튼을 사용할 수 있습니다. 메뉴를 클릭 한 다음 <strong>경로</strong> 로 이동을 클릭 <strong>하여</strong> 작업중인 위치로 다시 스크롤합니다.</p>
     <p class="dropspot"></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">패스 포인트</span> <span data-close-text="true">패스 포인트</span></a></p>
@@ -132,7 +132,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="Rooms.htm">뒤로 : 자산 편집자</a></div>
+        <div style="float:left">목록: <a href="Rooms.htm">뒤로 : 자산 편집자</a></div>
         <div style="float:right">다음: <a href="Rooms.htm">
       <div class="clear">
         <div style="float:left"><a href="Rooms.htm">Back: The Asset Editors</a></div>

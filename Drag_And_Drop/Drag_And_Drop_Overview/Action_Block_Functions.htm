@@ -83,18 +83,18 @@
   <h1>액션 블록 스크립트 함수</h1>
   <p><a href="../../Introduction/The_Asset_Browser.htm">자산 브라우저</a> 에서 가장 중요한 자산 중 하나는 <a href="../../The_Asset_Editors/Scripts.htm">스크립트</a> 자산입니다. 스크립트는 본질적으로 사용자 정의 함수를위한 &quot;컨테이너&quot;이며 실제로 게임에서 직접 호출하지는 않는다는 점에서 특별한 자산입니다. 모든 스크립트는 범위 내에서 <strong>전역 적</strong> 이며 게임이 시작될 때 GameMaker에서 자동으로 실행되므로 게임 전체에서 사용할 전역 변수 및 함수를 정의하는 데 사용할 수 있습니다.</p>
   <p>각 DnD ™ 스크립트에는 하나 이상의 사용자 정의 함수가 추가 될 수 있으며 이러한 함수는 <a href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">새 함수 선언</a> :</p>
-  <p>여기서 정의한 함수는 범위 내에서 전역 적이며 내장 된 DnD ™ 액션과 매우 유사하게 작동합니다. 즉, <a class="tooltip" title="인수 (파라미터라고도 함)는 함수에 전달되는 값입니다. 예를 들어, GameMaker 언어 함수 &#39;sqr (num)&#39;은 인수로 제공 한 숫자의 제곱을 제공하는 함수입니다. 예 : &#39;a = sqr (4);&#39; 여기서 인수는 4이고 함수는 변수 &#39;a&#39;에 저장된 16을 리턴합니다.">인수</a> (또는 매개 변수)라고하는 다른 값을 가져 오거나 전혀 사용할 수 없으며 작업을 수행하여 반환합니다. 필요에 따라 값을 반환하거나 아무것도 반환하지 않습니다. 그런 다음 <a href="../Drag_And_Drop_Reference/Common/Function_Call.htm">함수 호출을</a> 사용하여 게임에서 <a href="../Drag_And_Drop_Reference/Common/Function_Call.htm">함수를 호출합니다.</a> 동작은 다음과 같습니다.</p>
-  <p>DnD ™ 스크립트를 만들려면 마우스 오른쪽 버튼을 사용하면됩니다. 자산 브라우저의 아무 곳에서나 <strong>생성을</strong> 선택한 다음 <strong>스크립트를</strong> 선택 <strong>하십시오</strong> . 그러면 새로운 DnD ™ 스크립트가 생성되고 편집기 창이 열립니다.</p>
-  <p>마우스 오른쪽 버튼을 클릭하여 스크립트 이름을 지정할 수 있습니다 자산 브라우저에서 <strong>이름 바꾸기를</strong> 선택하고 <strong>이름 바꾸기를</strong> 선택하십시오. 스크립트 이름은 자산의 일반 규칙을 준수해야하므로 문자로 시작해야하며 문자, 숫자 또는 &quot;_&quot;하단 막대 기호 만 포함해야합니다. 스크립트 <strong>에는 새로운 함수 선언</strong> 작업이 미리 채워져 있으며,이를 작성할 준비가되어 있으며 필요에 따라 더 많은 함수 선언을 추가 할 수 있습니다 (단일 스크립트는 여러 함수를 보유 할 수 있음). 또는 연결된 사용법과 함께).</p>
+  <p><img alt="Declare A New Function Syntax" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Common_Declare_Function.png"/>여기서 정의한 함수는 범위 내에서 전역 적이며 내장 된 DnD ™ 액션과 매우 유사하게 작동합니다. 즉, <a class="tooltip" title="인수 (파라미터라고도 함)는 함수에 전달되는 값입니다. 예를 들어, GameMaker 언어 함수 &#39;sqr (num)&#39;은 인수로 제공 한 숫자의 제곱을 제공하는 함수입니다. 예 : &#39;a = sqr (4);&#39; 여기서 인수는 4이고 함수는 변수 &#39;a&#39;에 저장된 16을 리턴합니다.">인수</a> (또는 매개 변수)라고하는 다른 값을 가져 오거나 전혀 사용할 수 없으며 작업을 수행하여 반환합니다. 필요에 따라 값을 반환하거나 아무것도 반환하지 않습니다. 그런 다음 <a href="../Drag_And_Drop_Reference/Common/Function_Call.htm">함수 호출을</a> 사용하여 게임에서 <a href="../Drag_And_Drop_Reference/Common/Function_Call.htm">함수를 호출합니다.</a> 동작은 다음과 같습니다.</p>
+  <p><img alt="Function Call Syntax" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Common_Execute_Function.png"/>DnD ™ 스크립트를 만들려면 마우스 오른쪽 버튼을 사용하면됩니다. 자산 브라우저의 아무 곳에서나 <strong>생성을</strong> 선택한 다음 <strong>스크립트를</strong> 선택 <strong>하십시오</strong> . 그러면 새로운 DnD ™ 스크립트가 생성되고 편집기 창이 열립니다.</p>
+  <p><img alt="D&amp;D Script editor" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Scripts.png"/>마우스 오른쪽 버튼을 클릭하여 스크립트 이름을 지정할 수 있습니다 자산 브라우저에서 <strong>이름 바꾸기를</strong> 선택하고 <strong>이름 바꾸기를</strong> 선택하십시오. 스크립트 이름은 자산의 일반 규칙을 준수해야하므로 문자로 시작해야하며 문자, 숫자 또는 &quot;_&quot;하단 막대 기호 만 포함해야합니다. 스크립트 <strong>에는 새로운 함수 선언</strong> 작업이 미리 채워져 있으며,이를 작성할 준비가되어 있으며 필요에 따라 더 많은 함수 선언을 추가 할 수 있습니다 (단일 스크립트는 여러 함수를 보유 할 수 있음). 또는 연결된 사용법과 함께).</p>
   <p>위에서 언급했듯이 여러 인수를 함수에 전달할 수 있으며,이를 사용하여 작성한 작업을 수행합니다. 이를 더 잘 이해하려면 예를 들어 내장 조치를 취하고 작동 방식에 대해 생각하십시오. 이벤트에 배치하고 많은 값을 제공하면 인스턴스가 무언가를 수행하게됩니다. 사용자 정의 함수는 정확히 동일하지만 <em>사용자가</em> 작성하는 차이점은 다릅니다.</p>
   <p>새 함수를 정의 할 때 이름을 지정하고 필요한 경우 인수 이름도 정의합니다 (필요한 기능에 따라 함수는 인수가 없거나 여러 개의 인수를 사용할 수 있음). 인수 이름을 지정하면 함수 입력 값을 보유하는 <strong>로컬 변수</strong> 로 함수가 호출하는 조치에 사용됩니다.</p>
   <p><a href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JS Doc 규칙</a> 에 따라 수행하는 작업을 설명하는 작업에 대한 설명을 추가하는 것이 좋습니다. 예를 들어, <span class="inline">set_vec ()</span> 함수를 고려하십시오.</p>
-  <p>위의 스크립트를 호출하려면 다음과 같이 <strong>Call Function</strong> 액션을 사용하면됩니다.</p>
-  <p>함수에 인수를 전달할 수있을뿐만 아니라 함수에 값을 반환하도록 요청할 수도 있습니다 ( <a href="../Drag_And_Drop_Reference/Common/Return.htm">Return을</a> 사용하여) (예를 들어) 복잡한 충돌 감지 또는 여러 가지를 수행 한 후 계산 방법을 구축하거나 인스턴스 ID를 제공하는 데 사용할 수 있습니다. 그러나 return을 사용 <strong>하면 함수가 종료</strong> 되므로 사용한 후에는 아무런 조치도 실행되지 않으므로 함수의 구조를 결정하는 데 어느 정도의 생각이 필요합니다.</p>
+  <p><img alt="D&amp;D Function Example With Comments" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_FunctionExample.png"/>위의 스크립트를 호출하려면 다음과 같이 <strong>Call Function</strong> 액션을 사용하면됩니다.</p>
+  <p><img alt="Call A Function From A Script" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Declare_Function_2.png"/>함수에 인수를 전달할 수있을뿐만 아니라 함수에 값을 반환하도록 요청할 수도 있습니다 ( <a href="../Drag_And_Drop_Reference/Common/Return.htm">Return을</a> 사용하여) (예를 들어) 복잡한 충돌 감지 또는 여러 가지를 수행 한 후 계산 방법을 구축하거나 인스턴스 ID를 제공하는 데 사용할 수 있습니다. 그러나 return을 사용 <strong>하면 함수가 종료</strong> 되므로 사용한 후에는 아무런 조치도 실행되지 않으므로 함수의 구조를 결정하는 데 어느 정도의 생각이 필요합니다.</p>
   <p>아래는 값을 반환하는 드래그 앤 드롭 기능입니다.</p>
-  <p><img alt="D &amp; D 스크립트 반환 예" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Script_Example_Return.png"/></p>
+  <p><img alt="D&amp;D Script Return Example" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Script_Example_Return.png"/></p>
   <p>위의 함수는 단순히 방의 모든 인스턴스를 확인하여 <span class="inline">object_index</span> 가 무엇인지 확인하고 그중 하나가 플레이어 객체 인 경우 함수는 <span class="inline">true</span> (함수 호출 종료) 또는 <span class="inline">false를</span> 반환 <span class="inline">합니다</span> . 이 함수를 다음과 같이 호출합니다.</p>
-  <p>따라서 함수를 호출하고 반환 된 값 (이 경우 <span class="inline">true</span> 또는 <span class="inline">false</span> )을 저장하기 위해 임시 (로컬) 변수를 만든 다음이 변수를 확인하고 조치를 취합니다.</p>
+  <p><img alt="Call D&amp;D Script With Return Value" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Script_Call_Return.png"/>따라서 함수를 호출하고 반환 된 값 (이 경우 <span class="inline">true</span> 또는 <span class="inline">false</span> )을 저장하기 위해 임시 (로컬) 변수를 만든 다음이 변수를 확인하고 조치를 취합니다.</p>
   <p>DnD ™ 스크립트에 대한 함수를 만들 때 개체 이벤트에 동작을 추가 할 때와 동일한 동작을 모두 사용할 수 있으며 함수 내에서 함수를 호출 할 수도 있으며이 방법으로 더 &quot;모듈 식&quot;동작 코드를 만들 수 있습니다. 이러한 방식으로 함수를 사용하여 스크립트를 작성하면 동일한 조치 순서를 작성하는 데 많은 시간을 절약 할 수 있으며 조치 순서를보다 쉽게 ​​읽고 디버그 할 수 있습니다.</p>
   <p> </p>
   <p> </p>
@@ -103,7 +103,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="../../Content.htm">인덱스</a></div>
+        <div style="float:left">목록: <a href="../../Content.htm">인덱스</a></div>
         <div style="float:right">다음: <a href="Changing_DnD_To_Code.htm">DnD ™ 코드로 변경</a></div>
       </div>
     </div>

@@ -81,8 +81,8 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>추첨 이벤트</h1>
-  <p>Draw 이벤트 범주는 게임을 실행할 때 화면에 표시되는 내용을 제어하는 ​​모든 이벤트가있는 범주입니다. 게임에 대한 다양한 그림 요구 사항을 더 잘 처리하기 위해 여러 개의 개별 이벤트로 분할되며 아래 이미지는 각 이벤트의 순서를 보여줍니다.</p>
-  <p>일반적인 Draw 이벤트는 <strong>Draw Begin</strong> , 표준 <strong>Draw</strong> 및 <strong>Draw End</strong> 이벤트의 세 가지 하위 유형으로 분류됩니다. 일반적으로 표준 Draw 이벤트 만 사용해야하며, 방의 모든 인스턴스는이 이벤트가 게임의 각 단계에서 트리거되므로 인스턴스가 <strong>표시</strong> 되는 한 항상이 이벤트가 호출됩니다. 플래그가 true로 설정되었습니다. 객체 속성에서이 하위 이벤트에 대해 아무것도 정의하지 않았더라도 (예 : 코드 나 동작 없음) <em>객체에 스프라이트가 할당 된 경우에도 여전히 트리거 이벤트가 발생</em> 한다는 것을 이해하는 것이 중요 <em>합니다</em> . GameMaker Studio 2에는 Draw 이벤트에서 물건을 그리는 두 가지 방법이 있기 때문입니다.</p>
+  <p><img alt="The Draw Event" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Draw.png"/>Draw 이벤트 범주는 게임을 실행할 때 화면에 표시되는 내용을 제어하는 ​​모든 이벤트가있는 범주입니다. 게임에 대한 다양한 그림 요구 사항을 더 잘 처리하기 위해 여러 개의 개별 이벤트로 분할되며 아래 이미지는 각 이벤트의 순서를 보여줍니다.</p>
+  <p><img alt="Object Editor Draw Diagram" class="center" src="../../assets/Images/Asset_Editors/Editor_Events_DrawOrder.png"/>일반적인 Draw 이벤트는 <strong>Draw Begin</strong> , 표준 <strong>Draw</strong> 및 <strong>Draw End</strong> 이벤트의 세 가지 하위 유형으로 분류됩니다. 일반적으로 표준 Draw 이벤트 만 사용해야하며, 방의 모든 인스턴스는이 이벤트가 게임의 각 단계에서 트리거되므로 인스턴스가 <strong>표시</strong> 되는 한 항상이 이벤트가 호출됩니다. 플래그가 true로 설정되었습니다. 객체 속성에서이 하위 이벤트에 대해 아무것도 정의하지 않았더라도 (예 : 코드 나 동작 없음) <em>객체에 스프라이트가 할당 된 경우에도 여전히 트리거 이벤트가 발생</em> 한다는 것을 이해하는 것이 중요 <em>합니다</em> . GameMaker Studio 2에는 Draw 이벤트에서 물건을 그리는 두 가지 방법이 있기 때문입니다.</p>
   <ul class="colour">
     <li><strong>기본 draw</strong> 는 오브젝트 속성에서 스프라이트를 정의하고 일반 Draw 이벤트에서 액션이나 코드를 배치하지 않는 경우이며,이 경우 GameMaker Studio 2는 할당 된 스프라이트를 자동으로 그립니다. 이미지 스케일, 인덱스, 블렌딩 등을 변경하기 위해 다른 이벤트에서 수행하는 모든 변환은 드로우 이벤트가 비어있는 한 반영됩니다.</li>
     <li><strong>사용자 지정 draw</strong> 는 draw 이벤트에 코드 또는 작업을 배치 할 때 사용됩니다. 이것은 GameMaker Studio 2에게 &quot; <em>이 객체의 인스턴스에 대해 그리는 것을 제어하고 싶다</em> &quot; <em>고</em> 말하고 기본 드로잉을 완전히 무시합니다. 예를 들어, 당신은 할당 된 스프라이트와 객체를 가질 수 있습니다,이 방법은, 다음 텍스트를 그릴 추첨 이벤트를 설정하면 텍스트가 화면에 그려 질 것입니다,하지만 당신은 GameMaker 스튜디오 2 말하지 않았다으로 스프라이트가 그려지지 <em>않습니다</em> 텍스트와 함께 그립니다.</li>
@@ -114,7 +114,7 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">사전 및 사후 그리기</span> <span data-close-text="true">사전 및 사후 그리기</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">프리 드로우 및 포스트 드로우 이벤트는 드로우 이벤트 범주의 일부입니다. 그러나, 다른 그리기 이벤트와는 달리 이들은 <em>직접</em> 그릴 <a class="tooltip" title="디스플레이 버퍼는 모든 것이 최종적으로 그려지는 &#39;캔버스&#39;입니다. 일부 이벤트는이를 Pre Target 이벤트와 같이 직접 대상으로하는 반면, 다른 이벤트는 먼저 응용 프로그램 화면으로 그린 ​​다음이를 디스플레이 버퍼로 그립니다.">디스플레이 버퍼</a> 에만 모두에 하나 개의 뷰포트 또는 없음을 사용하는 경우 현재 보이는 모든 뷰포트에 대한 결합 된 화면 공간, <em>또는</em> 창 크기의 크기가됩니다. 아래 이미지는 이것을 보여줍니다.</p>
-    <p class="dropspot">따라서 Pre 또는 Post 그리기 이벤트를 사용하는 경우 모든 뷰포트가 맞는 창과 크기가 같은 전체 화면 렌더 대상 (디스플레이 버퍼)에 그리게됩니다. 뷰포트가 활성화되어 있지 않으면 대신 창 자체의 크기로 설정됩니다.</p>
+    <p class="dropspot"><img alt="Object Editor Post Draw" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_PostDraw.png"/>따라서 Pre 또는 Post 그리기 이벤트를 사용하는 경우 모든 뷰포트가 맞는 창과 크기가 같은 전체 화면 렌더 대상 (디스플레이 버퍼)에 그리게됩니다. 뷰포트가 활성화되어 있지 않으면 대신 창 자체의 크기로 설정됩니다.</p>
     <p class="dropspot">프리 드로우 이벤트는 다른 드로우 이벤트보다 먼저 트리거되며, 뷰포트 또는 GUI 레이어의 크기에 대해 걱정할 필요없이 값을 설정하고, 그리기 속성을 설정하고, 그릴 수도 있습니다 (GUI 레이어 크기는 화면 버퍼, 그러나 GUI 해상도를 코드로 설정할 수 있기 때문에 아닐 수도 있습니다).</p>
     <p class="dropspot">이 이벤트는 일반 그리기를 위해 디스플레이 버퍼가 지워 <em>지기 전에</em> 발생합니다. 즉, 룸 편집기에서 뷰 지우기를 끄지 않으면 첫 번째 뷰포트 그리기로 Pre Draw 이벤트에서 그린 것이 표시되지 않습니다. 그것을 취소합니다. 뷰포트 자체를 통해 보거나 뷰포트를 전혀 사용하지 않으려면 <strong><a href="../Rooms.htm">룸 편집기</a></strong> 에서 배경색의 알파가 0이되도록 설정해야합니다.</p>
     <p class="note"><strong>참고</strong> :이 옵션을 끄면 게임을 테스트 할 때 화면에 원치 않는 인공물이 그려지는 것을 볼 수 있습니다 (예 : &quot;트레일&quot;). 디스플레이 버퍼의 이전 프레임을 지우지 않고 직접 그리려고하기 때문입니다. 그러나 <span class="inline" style="font-size: 14px"><a href="../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/draw_clear_alpha.htm">draw_clear_alpha ()</a></span> 를 사용하여 <span class="inline" style="font-size: 14px"><a href="../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/draw_clear_alpha.htm">직접</a></span> 할 수 있습니다.</p>
@@ -135,7 +135,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="Object_Events.htm">객체 이벤트</a></div>
+        <div style="float:left">목록: <a href="Object_Events.htm">객체 이벤트</a></div>
         <div style="float:right">다음: <a href="Async_Events.htm">비동기 이벤트</a></div>
       </div>
     </div>

@@ -84,9 +84,9 @@
   <h1>스프라이트 만들기</h1>
   <p><a href="What_Is_Programming_.htm">프로그램이 무엇인지 알았</a> 으므로 이제 GameMaker Studio 2에서 게임을 만들기 위해 사용할 수있는 여러 가지 <strong>자산</strong> 을 살펴볼 차례입니다. 우선 <strong>스프라이트를</strong> 살펴 보겠습니다. <strong>스프라이트</strong> 는 일반적으로 프로젝트를 만들 때 가장 먼저 필요한 것 중 하나입니다. <a href="../Introduction/The_Asset_Browser.htm">에셋 브라우저</a> 섹션에서 설명한 것처럼 스프라이트는 애니메이션을 적용한 후 (필요하지 않아도) 화면에 그릴 수있는 이미지입니다. 일반적으로 스프라이트는 객체와 연결되지만 코드 또는 룸 편집기 <strong>자산 레이어</strong> 에서 스프라이트를 자체적으로 그릴 수 있습니다 (자세한 내용은 나중에 <a href="Rooms.htm">룸</a> 섹션에서 설명 <a href="Rooms.htm">합니다</a> ). <a class="tooltip" title="타일 ​​세트는 그리드에 단일 이미지로 배치 된 정사각형 또는 직사각형 그래픽 자산의 모음입니다. 그런 다음 격자의 각 항목을 방에 여러 번 배치하여 &#39;타일 맵&#39;이라는 더 큰 장면을 만들 수 있습니다.">타일 ​​세트</a> 로 사용할 스프라이트를 만들 수도 있지만 이후 섹션에서도 해당 옵션을 살펴 보겠습니다.</p>
   <p><a href="../Introduction/The_Start_Page.htm">시작 페이지</a> 에서 새 프로젝트를 만들면 자산 브라우저에 필요한 리소스에 대한 빈 폴더 만 포함되므로 마우스 오른쪽 버튼을 클릭해야합니다 스프라이트 자산 폴더에서 <strong>생성</strong> 옵션을 선택합니다 (스프라이트 자산 폴더가없는 경우 마우스 오른쪽 버튼 메뉴에서 폴더를 만든 다음 스프라이트를 만들거나 자산 브라우저의 아무 곳이나 마우스 오른쪽 버튼으로 클릭하면됩니다) 그것을 만듭니다). 이것은 새로운 스프라이트 자산을 만들고 열립니다 <a href="../The_Asset_Editors/Sprites.htm"><strong>스프라이트 편집기를</strong></a> (당신을 위해 스프라이트 편집기를 열 수 없습니다, 단순히 더블 클릭을 수행하는 경우 새 자산) :</p>
-  <p>보시다시피, 창의 왼쪽 상단에는 스프라이트 <strong>이름</strong> 필드가 있습니다. 모든 스프라이트 (및 기타 모든 자산)에는 사용자 (및 GameMaker Studio 2)가 쉽게 식별 할 수 있도록 이름이 있어야합니다.이 이름은 실제로 &quot;지시하는&quot;ID 값을 보유하는 <strong><a class="tooltip" title="변수는 프로그램 내에서 명명 된 값으로, 필요할 때마다 수정, 저장 및 표시 할 수 있습니다. 예를 들어 이름이 XYZ 인 정수 변수가 있고 값 10을 저장하는 경우 A = XYZ + 10과 같은 작업을 수행 할 수 있습니다. 그러면 XYZ가 10이고 변수 A의 값이 20으로 설정됩니다. 그것에 10을 더하고 있습니다. 연산자를 사용하여 변수 값을 변경할 수도 있으므로 XYZ = XYZ + 100을 수행하면 XYZ 변수의 값이 110으로 수정됩니다. 변수는 식별자와 다른 자산에 대한 참조를 저장하는 데 사용될 수도 있습니다.">변수</a></strong> 일뿐입니다. 리소스에이 경우 스프라이트입니다. 각 스프라이트에 설명적인 이름을 지정하는 것이 가장 좋습니다. 특정 자산이 스프라이트인지 또는 오브젝트인지를 한눈에 파악할 수 있으며 많은 사람들이 &quot; <span class="inline">spr</span> &quot;문자로 접두어를 붙이거나 접미사를 붙여이를 수행합니다. 예 : &quot; <span class="inline">spr_Ball</span> &quot; 리소스 이름은 문자, 숫자 및 밑줄 기호 &quot;_&quot;만 사용하도록 제한되며 모든 자산의 이름은 숫자가 아닌 문자로 시작해야합니다.</p>
+  <p><img alt="The Sprite Editor" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteEditor.png"/>보시다시피, 창의 왼쪽 상단에는 스프라이트 <strong>이름</strong> 필드가 있습니다. 모든 스프라이트 (및 기타 모든 자산)에는 사용자 (및 GameMaker Studio 2)가 쉽게 식별 할 수 있도록 이름이 있어야합니다.이 이름은 실제로 &quot;지시하는&quot;ID 값을 보유하는 <strong><a class="tooltip" title="변수는 프로그램 내에서 명명 된 값으로, 필요할 때마다 수정, 저장 및 표시 할 수 있습니다. 예를 들어 이름이 XYZ 인 정수 변수가 있고 값 10을 저장하는 경우 A = XYZ + 10과 같은 작업을 수행 할 수 있습니다. 그러면 XYZ가 10이고 변수 A의 값이 20으로 설정됩니다. 그것에 10을 더하고 있습니다. 연산자를 사용하여 변수 값을 변경할 수도 있으므로 XYZ = XYZ + 100을 수행하면 XYZ 변수의 값이 110으로 수정됩니다. 변수는 식별자와 다른 자산에 대한 참조를 저장하는 데 사용될 수도 있습니다.">변수</a></strong> 일뿐입니다. 리소스에이 경우 스프라이트입니다. 각 스프라이트에 설명적인 이름을 지정하는 것이 가장 좋습니다. 특정 자산이 스프라이트인지 또는 오브젝트인지를 한눈에 파악할 수 있으며 많은 사람들이 &quot; <span class="inline">spr</span> &quot;문자로 접두어를 붙이거나 접미사를 붙여이를 수행합니다. 예 : &quot; <span class="inline">spr_Ball</span> &quot; 리소스 이름은 문자, 숫자 및 밑줄 기호 &quot;_&quot;만 사용하도록 제한되며 모든 자산의 이름은 숫자가 아닌 문자로 시작해야합니다.</p>
   <p>이 섹션의 끝에서 설명 할 스프라이트 편집기의 다른 기능이지만 먼저 스프라이트를 그리는 방법을 설명해야합니다. 이것은 <a href="../The_Asset_Editors/Image_Editor.htm"><strong>이미지 편집기</strong></a> 에서 수행됩니다. 이미지 편집기는 게임에서 그래픽을 작성하기위한 매우 강력한 도구이며 <em>이미지 편집</em> 버튼을 클릭하면 열립니다.</p>
-  <p><img alt="이미지 편집기" class="center" src="../assets/Images/QS_Guide/QS_Sprites_ImageEditor.png"/></p>
+  <p><img alt="The Image Editor" class="center" src="../assets/Images/QS_Guide/QS_Sprites_ImageEditor.png"/></p>
   <p>우리는 여기에 사용 가능한 도구에 대해 너무 깊이 들어 가지 않을 것입니다. 매뉴얼의 이미지 편집기 섹션이 있기 때문입니다.</p>
   <ul class="colour">
     <li>왼쪽 상단의 <strong>프레임보기</strong> -스프라이트의 프레임이 표시되며 돋보기 아이콘을 사용하여 크기를 조정할 수 있습니다.</li>
@@ -99,12 +99,12 @@
   <p>이미지 편집기에 무언가를 그려서 옵션으로 재생하는 데 시간이 걸리면 준비가되면 이미지 편집기 작업 영역을 닫고 (이미지를 저장함) 스프라이트 편집기가있는 기본 작업 영역으로 돌아갑니다. 방금 시작할 때 알아야 할 스프라이트 편집기의 몇 가지 다른 기능에 대해 살펴 보겠습니다.</p>
   <p>가장 먼저 알아야 할 것은 스프라이트의 <strong>원점</strong> 을 설정하는 방법입니다. 원점은 단순히 방 안에서 스프라이트를 &quot;고정&quot;하는 데 사용될 지점이며,이 경우 중앙에 설정하려고합니다.</p>
   <p>클릭합니다 출발지 설정을 위해 아래에서 메뉴에서 &quot;중간 중심&quot;을 선택하십시오.</p>
-  <p><img alt="스프라이트 원점을 보여주는 예제" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteOrigin.png"/></p>
+  <p><img alt="Example Showing The Sprite Origin" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteOrigin.png"/></p>
   <p>미리보기 이미지에서 파란색 원점 마커가 스프라이트의 중심으로 이동하는 것을 볼 수 있습니다. 간단히 클릭하여 원점을 원하는 위치에 배치 할 수 있습니다. 미리보기 이미지에서 상단의 x / y 필드에 값을 추가하여 원점 위치를 수동으로 입력 할 수도 있습니다.</p>
   <p>알아야 할 또 다른 중요한 사항은 스프라이트에 대한 <strong>충돌 마스크</strong> 를 설정하는 방법입니다. 충돌 마스크는 GameMaker Studio 2가 게임에서 개체의 다른 인스턴스와 충돌이 있는지 확인하기 위해 확인하는 영역이며, 기본적으로 사각형으로 설정되어 있습니다 (이는 가장 빠른 해결 방법 임). <strong><a class="tooltip" title="스프라이트의 경우 경계 상자는 충돌이 처음 감지되는 영역의 가장자리에 지정된 이름이며 적용되는 스프라이트와 크기가 같지 않아도됩니다. 시퀀스의 경우 경계 상자는 하나 이상의 자산이 캔버스에서 차지하는 전체 공간의 바깥 쪽 가장자리입니다.">경계 상자</a></strong> 의 감지 모드를 자동 (기본값) 또는 수동으로 설정할 수 있습니다. 수동을 선택하면 경계 상자 값을 왼쪽, 오른쪽, 위쪽 및 아래쪽으로 설정할 수 있습니다.</p>
-  <p><img alt="스프라이트 마스크를 보여주는 예" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteMask.png"/></p>
+  <p><img alt="Example Showing The Sprite Mask" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteMask.png"/></p>
   <p>사각형 이외의 모든 유형의 충돌 마스크는 해결 속도가 느리지 만 작고 간단한 게임을 만들 때는 일반적으로 문제가되지 않습니다. 스프라이트 편집기에서 <em>가져 오기</em> 버튼을 클릭하여 다른 소프트웨어로 만든 스프라이트를 가져올 수도 있고, 이미지 파일을 GameMaker Studio 2 IDE로 드래그하여 스프라이트로 자산 브라우저에 추가 할 수도 있습니다. 자산 브라우저에서 스프라이트를 드래그하여 사물에 직접 추가 할 수도 있습니다.이 경우 IDE는 스프라이트를 추가 할 수있는 위치를 강조 표시합니다.</p>
-  <p>Sprite Editor 및 Image Editor에 대한 자세한 내용을 보려면 다음 매뉴얼 섹션을 참조하십시오.</p>
+  <p><img alt="Where To Drop A Sprite On An Object" class="center" src="../assets/Images/QS_Guide/QS_DropSprite.png"/>Sprite Editor 및 Image Editor에 대한 자세한 내용을 보려면 다음 매뉴얼 섹션을 참조하십시오.</p>
   <ul class="colour">
     <li><a href="../The_Asset_Editors/Sprites.htm">에디터 : 스프라이트 에디터</a></li>
     <li><a href="../The_Asset_Editors/Image_Editor.htm">편집자 : 이미지 편집기</a></li>
@@ -116,7 +116,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:left">목록: <a href="../Content.htm">인덱스</a></div>
         <div style="float:right">다음: <a href="Creating_Tile_Sets.htm">타일셋 만들기</a></div>
       </div>
     </div>

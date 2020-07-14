@@ -81,7 +81,7 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>스프라이트 에디터</h1>
-  <p><strong>Sprite Editor</strong> 는 <a class="tooltip" title="스프라이트는 더 큰 장면의 일부로 디자인 된 비트 맵 그래픽입니다. 정적 이미지이거나 애니메이션 그래픽 일 수 있습니다.">스프라이트</a> 의 일반 속성을 설정하는 곳입니다. 새 스프라이트를 생성하여이 창을 열 수 있습니다 (오른쪽 클릭 <a href="../Introduction/The_Asset_Browser.htm">애셋 브라우저</a> 에서 &quot;Create Sprite&quot;를 선택하십시오) 기존 스프라이트에서 또는 마우스 오른쪽 버튼을 클릭하여 기존 스프라이트를 선택하고 &quot; <strong>속성</strong> &quot;을 선택하십시오.</p>
+  <p><img alt="The Sprite Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sprites.png"/><strong>Sprite Editor</strong> 는 <a class="tooltip" title="스프라이트는 더 큰 장면의 일부로 디자인 된 비트 맵 그래픽입니다. 정적 이미지이거나 애니메이션 그래픽 일 수 있습니다.">스프라이트</a> 의 일반 속성을 설정하는 곳입니다. 새 스프라이트를 생성하여이 창을 열 수 있습니다 (오른쪽 클릭 <a href="../Introduction/The_Asset_Browser.htm">애셋 브라우저</a> 에서 &quot;Create Sprite&quot;를 선택하십시오) 기존 스프라이트에서 또는 마우스 오른쪽 버튼을 클릭하여 기존 스프라이트를 선택하고 &quot; <strong>속성</strong> &quot;을 선택하십시오.</p>
   <p>Sprite Editor를 구성하는 부분은 다음과 같습니다.</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">스프라이트 이름</span> <span data-close-text="true">스프라이트 이름</span></a></p>
@@ -92,7 +92,7 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">이미지 속성</span> <span data-close-text="true">이미지 속성</span></a></p>
   <div class="droptext" data-targetname="drop-down9">
     <p class="dropspot">이 섹션에서는 <strong>스프라이트 크기</strong> 버튼을 클릭하여 이미지 크기를 설정할 수 있습니다 . 다음 창이 열립니다 :</p>
-    <p class="dropspot">여기에서 선택한 변환을 적용하기 전후에 스프라이트를 미리 볼 수 있으며 아래 섹션은 새 스프라이트 속성을 설정하기위한 것으로 두 부분으로 나뉩니다.</p>
+    <p class="dropspot"><img alt="Sprite Editor Resize Properties" class="center" src="../assets/Images/Asset_Editors/Editor_Sprites_ResizeProperties.png"/>여기에서 선택한 변환을 적용하기 전후에 스프라이트를 미리 볼 수 있으며 아래 섹션은 새 스프라이트 속성을 설정하기위한 것으로 두 부분으로 나뉩니다.</p>
     <ul class="dropspotlist">
       <li class="dropspot"><strong>이미지</strong> 크기 조정 :이 옵션을 사용하면 스프라이트 그리기 캔버스의 크기를 조정할 수 있으며 스프라이트에 포함 된 모든 이미지가 새 크기에 맞게 확장되고 크기가 조정됩니다. 기본 이미지의 가로 세로 비율을 조정하고 유지하도록 선택할 수 있으며 픽셀 또는 백분율로 크기를 조정할 수도 있습니다. 작업중인 이미지 유형에 따라 선형 보간을 사용하거나 사용하지 않을 수도 있습니다 (일반적으로 선형 보간은 영역에서 픽셀을 &quot;부드럽게&quot;만들므로 픽셀 아트에서는 가장 잘 사용하지 않는 것이 좋습니다).</li>
       <li class="dropspot"><strong>캔버스 크기 조정</strong> :이 옵션은 내용의 크기를 조정하지 않고 그리기 캔버스의 크기를 새로운 크기로 조정합니다. 방향 화살표를 사용하여 크기 조정의 &quot;앵커&quot;지점을 설정 한 다음 크기 값을 설정할 수 있습니다. 캔버스 크기를 조정할 때 종횡비를 유지하는 옵션이 있으며 맨 아래에서 크기 조정 값을 픽셀 또는 백분율로 설정하도록 선택할 수 있습니다.</li>
@@ -136,8 +136,8 @@
       <li class="dropspot"><strong>Precise (프레임 당)</strong> : 프레임 단위로 정확한 충돌 마스크를 만듭니다 (예 : 마스크가 각기 다른 프레임의 윤곽에 맞게 변경됨). 모드가 수동으로 설정되어 있고 기본값을 변경하면 정확한 마스크가 <a class="tooltip" title="스프라이트의 경우 경계 상자는 충돌이 처음 감지되는 영역의 가장자리에 지정된 이름이며 적용되는 스프라이트와 크기가 같지 않아도됩니다. 시퀀스의 경우 경계 상자는 하나 이상의 자산이 캔버스에서 차지하는 전체 공간의 바깥 쪽 가장자리입니다.">경계 상자에</a> 잘립니다. 이는 가장 느리게 해결되는 충돌 마스크 유형으로, 매우 구체적이고 드문 경우를 제외하고는 피해야합니다.</li>
     </ul>
     <p class="dropspot">다음 이미지는 다양한 마스크 옵션을 보여줍니다.</p>
-    <p class="dropspot">충돌 확인 옵션은 게임에서 매우 중요한 옵션으로, 개체의 상호 작용 방식과 게임 실행 방식에 직접적인 영향을 미치며, 잘못된 설정은 모든 성능에 부정적인 영향을 미칩니다. 왜 그런 겁니까? 글쎄, 두 인스턴스가 만나고 두 인스턴스가 모두 유효한 마스크를 가질 때마다 경계 상자 <em>와</em> 마스크의 겹침을 검사하여 충돌 이벤트가 생성됩니다.이 상자는 정확하거나 정확하지 않고 이미지 색인에 맞게 조정될 수 있습니다. 아래는이를 설명하기위한 이미지입니다.</p>
-    <p class="dropspot"><img alt="다른 충돌과 해결 방법" class="center" src="../assets/Images/Asset_Editors/basic_collisions_image.png"/></p>
+    <p class="dropspot"><img alt="Collisions" class="center" src="../assets/Images/Asset_Editors/bbox_image.png"/>충돌 확인 옵션은 게임에서 매우 중요한 옵션으로, 개체의 상호 작용 방식과 게임 실행 방식에 직접적인 영향을 미치며, 잘못된 설정은 모든 성능에 부정적인 영향을 미칩니다. 왜 그런 겁니까? 글쎄, 두 인스턴스가 만나고 두 인스턴스가 모두 유효한 마스크를 가질 때마다 경계 상자 <em>와</em> 마스크의 겹침을 검사하여 충돌 이벤트가 생성됩니다.이 상자는 정확하거나 정확하지 않고 이미지 색인에 맞게 조정될 수 있습니다. 아래는이를 설명하기위한 이미지입니다.</p>
+    <p class="dropspot"><img alt="Different collisions and how they are resolved" class="center" src="../assets/Images/Asset_Editors/basic_collisions_image.png"/></p>
     <p class="dropspot">충돌 마스크 설정 아래에는 <strong>알파 공차</strong> 슬라이더가 있습니다.이 공차는 스프라이트 픽셀의 투명도와 관련하여 마스크를 만드는 공차를 나타냅니다. 부분적으로 투명한 공차 픽셀은 마스크 외부에 남겨두고 낮은 공차는 유지합니다 마스크는 해당 픽셀을 고려합니다. 이는 경계 상자 (수동으로 설정되지 않은 경우)와 정확한 충돌 검사를위한 마스크에 영향을줍니다.</p>
     <p class="dropspot">마지막으로 마스크의 <strong>경계 상자</strong> 제한을 설정할 수 있습니다. 경계 상자는 스프라이트 마스크가 맞는 사각형 영역에 지정된 이름입니다.이 경계 상자 내부의 픽셀 만 마스크에 사용되며 충돌 검사에 관여하며 기본적으로 알파 공차를 고려하여 자동으로 계산됩니다. 계정. &quot;정확한 (프레임 당)&quot;이 체크되어 있으면 서브 이미지마다 분리됩니다. 직접 설정할 때 왼쪽, 오른쪽 위, 아래 상자에 값을 입력하거나 클릭 할 수 있습니다 스프라이트 미리보기 창에서 스프라이트 위로 드래그하여 &quot;그립니다&quot;. 경계 상자를 &quot;그리기&quot;할 때 마스크는 최종 값에 맞게 자동으로 생성되며 경계 상자는 마스크를 &quot;클립&quot;할 수 있습니다.</p>
     <p class="dropspot">미리보기 창으로 가면 각 모서리에있는 &quot;손잡이&quot;를 사용하여 충돌 마스크를 조정할 수 있습니다. 이를 클릭하고 드래그하면 경계 상자에 입력하는 값과 동일하게 충돌 마스크가 조정됩니다.</p>
@@ -177,7 +177,7 @@
   <div class="droptext" data-targetname="drop-down18">
     <p class="dropspot">스프라이트 편집기의이 부분은 시퀀스 타임 라인을 따라 단일 스프라이트 세트를 구성하는 각기 다른 <strong>프레임</strong> 을 보여줍니다. 클릭 할 수 있습니다 아무 프레임에서나 왼쪽 또는 오른쪽으로 드래그하여 애니메이션 순서를 변경하고 두 번 클릭해도됩니다 아무 프레임에서나 <a href="Image_Editor.htm">이미지 편집기</a> 를 시작하고 편집 할 수 있습니다. 표준 키보드 단축키를 사용하거나 마우스 오른쪽 버튼을 사용하여 프레임을 잘라 내고 복사하고 붙여 넣을 수 있습니다 메뉴 옵션을 사용하여 여러 프레임을 선택하여 사용할 수 있습니다. / + .</p>
     <p class="dropspot">마우스 오른쪽 버튼 메뉴에는 다음과 같은 옵션이 있습니다.</p>
-    <p class="dropspot"><img alt="인민폐 프레임보기 메뉴" class="center" src="../assets/Images/Asset_Editors/Sprite_RMB_Frame_menu.png"/></p>
+    <p class="dropspot"><img alt="RMB Frame View Menu" class="center" src="../assets/Images/Asset_Editors/Sprite_RMB_Frame_menu.png"/></p>
     <ul class="dropspotlist">
       <li class="dropspot"><strong>프레임 추가</strong> -끝에 애니메이션에 새 프레임을 추가합니다.</li>
       <li class="dropspot"><strong>프레임 삽입</strong> -현재 선택된 프레임 다음에 애니메이션에 새 프레임을 삽입합니다.</li>
@@ -189,9 +189,9 @@
       <li class="dropspot"><strong>자산 키 삭제</strong> -실제로 프레임 자체를 제거하지 않고 프레임에서 이미지를 제거하는 데 사용할 수 있습니다.</li>
     </ul>
     <p class="dropspot">프레임을 늘리기 위해 위에 제공된 옵션 외에도 마우스를 프레임 가장자리에 놓고 커서가 이중 화살표로 바뀌면 간단히 클릭하십시오. 더 많은 시간이 걸리도록 드래그하여 프레임 크기를 조정하십시오.</p>
-    <p class="dropspot">동일한 프레임을 여러 번 복제 한 것처럼 확장 된 프레임을 표시하는 데 시간이 더 걸립니다.</p>
+    <p class="dropspot"><img alt="Stretch a frame using the mouse" class="center" src="../assets/Images/Asset_Editors/Sprite_Stretch_Frame.gif"/>동일한 프레임을 여러 번 복제 한 것처럼 확장 된 프레임을 표시하는 데 시간이 더 걸립니다.</p>
     <p class="dropspot">마지막으로, 프레임보기에서 애니메이션 루프의 시작점과 끝점을 클릭하고 드래그하여 루프시 애니메이션의 선택된 부분이 어떻게 동작하는지 확인할 수 있습니다. 이것은 클릭하여 수행됩니다 빨간색 &quot;루프 마커&quot;에서 원하는 위치로 드래그합니다.</p>
-    <p class="dropspot">루프 포인트는 애니메이션 작업시 <strong>시각적으로 도움</strong> 이되며 게임에서 애니메이션이 표시되는 방식에는 영향을 미치지 않습니다.</p>
+    <p class="dropspot"><img alt="Change the loop markers" class="center" src="../assets/Images/Asset_Editors/Sprite_Loop_Markers.gif"/>루프 포인트는 애니메이션 작업시 <strong>시각적으로 도움</strong> 이되며 게임에서 애니메이션이 표시되는 방식에는 영향을 미치지 않습니다.</p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
@@ -202,7 +202,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
+        <div style="float:left">목록: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
         <div style="float:right">다음: <a href="Tile_Sets.htm">타일 ​​세트</a></div>
       </div>
     </div>

@@ -83,7 +83,7 @@
   <h1>sprite_add</h1>
   <p>이 기능을 사용하면로드 할 이미지 파일이 <b>항상</b> <tt>* .png</tt> , <tt>* .gif</tt> , <tt>* .jpg / jpeg</tt> 또는 <tt>* .json</tt> 형식이어야하는 외부 소스에서 이미지를 스프라이트로 추가 할 수 있습니다 ( <tt>* json</tt> 파일은 Spine으로 만든 <a href="../Skeletal_Animation/Skeletal_Animation.htm">스켈레톤 애니메이션 스프라이트</a> 를로드하는 데 사용됩니다. 이 함수는 새 스프라이트 인덱스를 반환하고 스프라이트와 관련된 모든 추가 코드에서 사용해야합니다. 이 함수를 HTML5와 함께 사용하거나 URL에서 이미지를 가져 오는 경우이 함수는 <b>이미지로드 된</b> 비동기 이벤트도 생성합니다. 자세한 내용 <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">은 비동기 이벤트</a> 페이지를 참조하십시오.</p>
   <p><tt>* .gif</tt> (아래 참조)를 제외한 애니메이션 스프라이트로 변환 될 모든 이미지는 &quot;스트립&quot;형식이어야하며 (아래 이미지 참조) 규칙에 따라 지정된 하위 이미지 수로 분할됩니다. <b>스프라이트 너비 = 스트립 너비 / 하위 이미지</b> .</p>
-  <p><img alt="스프라이트 스트립 예" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png"/></p>
+  <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png"/></p>
   <p>위 이미지에서 볼 수 있듯이 스프라이트는 진한 자주색 배경에 배치되었으며 &quot;removeback&quot;인수를 <tt>true</tt> 로 설정하여 제거 할 수 있습니다. 스프라이트의 <i>왼쪽 아래</i> 픽셀에서 색상을 확인한 다음 제거 할 색상으로 사용합니다. 예를 들어 위의 이미지에서 왼쪽 아래 픽셀 색상이 녹색이면 스프라이트의 모든 녹색 부분이 제거되고 나머지 자주색 배경은 무시됩니다.</p>
   <p>&quot;removeback&quot;옵션을 선택하면, &quot;smooth&quot;인수를 <tt>true</tt> 로 설정하여 GameMaker Studio 2가 스프라이트의 가장자리를 부드럽게 할 수도 있습니다. 이 모든 것은 스프라이트의 배경을 제거한 후 스프라이트 가장자리 주위에 반투명 테두리를 만드는 것입니다.</p>
   <p>마지막으로 스프라이트의 x 및 y <i>원점</i> 을 지정할 수도 있습니다. 이것은 스프라이트가 그것을 사용하는 인스턴스에 스프라이트가 &quot;고정 된&quot;지점이며, 항상 하나의 스프라이트 서브 이미지의 왼쪽 상단의 0,0을 기준으로 계산됩니다. 예를 들어,이 값이 (16,16)으로 설정된 32 x 32 픽셀 인 스프라이트는 중심에 원점이 있습니다.</p>
@@ -142,7 +142,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="Sprite_Manipulation.htm">스프라이트 조작</a></div>
+        <div style="float:left">목록: <a href="Sprite_Manipulation.htm">스프라이트 조작</a></div>
         <div style="float:right">다음: <a href="sprite_replace.htm">sprite_replace</a></div>
       </div>
     </div>

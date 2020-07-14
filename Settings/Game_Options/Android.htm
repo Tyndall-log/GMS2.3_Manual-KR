@@ -84,7 +84,7 @@
   <p>이 섹션에서는 Android 게임 프로젝트를 컴파일하는 방법을 제어 할 수있는 다양한 옵션에 대해 간략하게 설명합니다. 다른 섹션은 다음과 같습니다.</p>
   <p> </p>
   <h2>일반</h2>
-  <p><strong>일반</strong> 섹션의 첫 번째 부분은 <strong>제품 정보</strong> 및 <strong>빌드 설정</strong> 전용입니다. 당신은 프로젝트가 <strong>도메인,</strong> <strong>회사</strong> 및 <strong>제품</strong> 구성 <strong>이름,</strong> 패키지 정보를 <strong>표시</strong> 포함하는 제품의 정보를 입력해야합니다. 패키지 정보는 AZ 및 숫자 0-9의 문자로만 구성 될 수 있으며 기호 나 기타 특수 문자가 전혀없고 대문자도 없어야합니다. 그런 다음이 세부 사항을 사용하여 &quot; <span class="inline">com.company.myappname</span> &quot;형식의 패키지 ID를 생성하십시오.</p>
+  <p><img alt="General Android Game Options 1" class="center" src="../../assets/Images/Settings/Android_General1_Options.png"/><strong>일반</strong> 섹션의 첫 번째 부분은 <strong>제품 정보</strong> 및 <strong>빌드 설정</strong> 전용입니다. 당신은 프로젝트가 <strong>도메인,</strong> <strong>회사</strong> 및 <strong>제품</strong> 구성 <strong>이름,</strong> 패키지 정보를 <strong>표시</strong> 포함하는 제품의 정보를 입력해야합니다. 패키지 정보는 AZ 및 숫자 0-9의 문자로만 구성 될 수 있으며 기호 나 기타 특수 문자가 전혀없고 대문자도 없어야합니다. 그런 다음이 세부 사항을 사용하여 &quot; <span class="inline">com.company.myappname</span> &quot;형식의 패키지 ID를 생성하십시오.</p>
   <p class="note"><strong>참고</strong> : <a href="Amazon_Fire.htm">Amazon Fire</a> 대상 게임 옵션을 이미 설정 한 경우 상단의 &quot; <strong>Amazon Fire에서 동기화</strong> &quot;버튼을 클릭하여 관련 정보를 Amazon Fire 대상에서 Android 대상으로 전송할 수 있습니다.</p>
   <p>그런 다음 <strong>Build</strong> , <strong>Target</strong> , <strong>Minimum</strong> 및 <strong>Compile SDK</strong> 버전을 설정해야합니다.</p>
   <p class="note"><strong>참고</strong> : &quot; <strong>지원 라이브러리</strong> &quot;버전에 사용할 옵션도 있습니다. GameMaker Studio v2.2.4 이상에서는 더 이상 필요하지 않으며 여기에 사용 된 값은 무시됩니다. 이 설정은 2.2.4 이전의 런타임이 필요한 레거시 프로젝트에서 사용하도록 유지됩니다.</p>
@@ -96,7 +96,7 @@
   </ul>
   <p><strong>SDK</strong> 값을 선택한 API 수준으로 <strong>미리 채우기</strong> 버튼을 클릭하여 사전 정의 된 대상 설정 중 하나를 선택할 수 있습니다.이 버튼을 클릭하면 선택할 수있는 다른 API 목록이 열립니다. 이들 중 하나를 선택하면 모든 SDK 파일이 적절한 값으로 채워져 필요에 따라 사용하거나 편집 할 수 있습니다.</p>
   <p class="note"><strong>참고</strong> : 프로젝트가 올바르게 컴파일 되려면 Android SDK Manager 또는 Android Studio를 통해 적절한 API를 설치해야합니다.</p>
-  <p><img alt="안드로이드 일반 옵션 2 부" class="center" src="../../assets/Images/Settings/Android_General2_Options.png"/></p>
+  <p><img alt="Android General Options Part 2" class="center" src="../../assets/Images/Settings/Android_General2_Options.png"/></p>
   <p><strong>일반</strong> 섹션의 두 번째 부분은 다음과 같은 옵션을 사용하여 빌드 할 CPU 아키텍처를 다룹니다 (모두 선택하거나 필요한 옵션 만 선택할 수 있지만 각 옵션은 컴파일 된 apk의 최종 크기에 추가됨) :</p>
   <ul class="Disc">
     <li>ARMV5 용 빌드 (기본적으로 선택되어 있음)</li>
@@ -122,7 +122,7 @@
   <p>여기에서 Android <strong>Sleep Margin을</strong> 설정할 수도 있습니다. 이 옵션은 특정 시스템에서 게임을 실행할 때 끊김을 줄이는 것과 관련이 있습니다. 기본적으로 게임이 룸 속도보다 빠르게 실행되는 경우 GameMaker Studio 2가 남은 시간 동안 &quot;절전&quot;상태가되지만이 절전 모드는 상당히 부정확 할 수 있으며 종종 필요 이상으로 절전 모드를 종료 할 수 있습니다. 말더듬을 유발합니다. 이 문제를 해결하려면 더 적은 시간 동안 잠을 자고 나머지 시간 동안 꽉 조여서 더 정확하게 만들 수 있습니다. 루프에 앉아있는 문제는 CPU 사용량이 증가한다는 것입니다. CPU 온도가 상승하고 장치가 더 많은 배터리를 사용하게합니다. 기본적으로이 값은 4로 설정되어 있으며 99.99 %의 경우에는 문제가 없지만 저급 장치 또는 백그라운드 프로세스가 많은 장치의 경우 이상적인 솔루션이 아니며 값이 아닐 수 있습니다 5 ~ 10이 필요할 수 있습니다. 이것은 매우 장치 별 구성이며 빌드 장치에서 작동하는 것은 다른 사용자에게 적합하지 않을 수 있으므로 의심스러운 경우 4로 설정하십시오.</p>
   <p> </p>
   <h2>적응 형 아이콘</h2>
-  <p>Android 8.0 (API 레벨 26)에는 게임에 <strong>적합한 적응 형 실행기 아이콘이</strong> 도입 <strong>되었으며이 아이콘</strong> 은 다양한 장치 모델에서 다양한 모양을 표시 할 수 있습니다. 이 문제를 해결하려면 아이콘이 다른 크기로 표시 될 수 있도록 여러 개의 전경 및 배경 이미지를 제공해야합니다. 이 아이콘 크기는 다음과 같습니다.</p>
+  <p><img alt="Android Adaptive Icons Options" class="center" src="../../assets/Images/Settings/Android_AdaptiveIcons_Options.png"/>Android 8.0 (API 레벨 26)에는 게임에 <strong>적합한 적응 형 실행기 아이콘이</strong> 도입 <strong>되었으며이 아이콘</strong> 은 다양한 장치 모델에서 다양한 모양을 표시 할 수 있습니다. 이 문제를 해결하려면 아이콘이 다른 크기로 표시 될 수 있도록 여러 개의 전경 및 배경 이미지를 제공해야합니다. 이 아이콘 크기는 다음과 같습니다.</p>
   <ul class="Disc">
     <li>81x81 픽셀 (LDPI)</li>
     <li>108x108 픽셀 MDPI)</li>
@@ -133,10 +133,10 @@
   </ul>
   <p>각 전경 및 배경 이미지를 개별적으로 제공하거나 파일에서 아이콘 생성을 선택할 수 있습니다. 즉, GameMaker Studio 2는 기본 (XXXHDPI) 파일에서 필요한 아이콘 이미지를 생성합니다. 전경과 배경에 대해 각각 하나의 이미지를 제공 한 다음 생성이라고 표시된 버튼을 클릭하면 아이콘이 만들어집니다. 이미지는 모두 <span class="inline">* .png</span> 형식 <span class="inline">이어야</span> 합니다.</p>
   <p>적응 형 아이콘은 특정 장치에서 마스킹 될 수 있으며, 적응 형 아이콘 <strong>미리보기</strong> 메뉴에서 이러한 마스크와 함께 어떻게 표시되는지 확인할 수도 있습니다.</p>
-  <p>이것은 선택된 마스크로 아이콘 <em>이</em> 어떻게 보이는지에 대한 미리보기이며, 설정은 아이콘이 게임이 실행되는 장치 및 OS에 따라 아이콘을 내보내고 표시하는 방법에 영향을 미치지 않습니다. 또한이 아이콘은 <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> 도구를 사용할 때 수행 된 이미지 생성의 일부로 생성 <strong>되지 않습니다</strong> .</p>
+  <p><img alt="Android Adaptive Mask Preview" class="center" src="../../assets/Images/Settings/Android_AdaptiveIcons_Masks.gif"/>이것은 선택된 마스크로 아이콘 <em>이</em> 어떻게 보이는지에 대한 미리보기이며, 설정은 아이콘이 게임이 실행되는 장치 및 OS에 따라 아이콘을 내보내고 표시하는 방법에 영향을 미치지 않습니다. 또한이 아이콘은 <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> 도구를 사용할 때 수행 된 이미지 생성의 일부로 생성 <strong>되지 않습니다</strong> .</p>
   <p> </p>
   <h2>제도법</h2>
-  <p>다음 옵션을 사용하여 게임 표시 방법과 관련된 다음 세부 정보를 변경할 수 있습니다.</p>
+  <p><img alt="Android Graphics Options" class="center" src="../../assets/Images/Settings/Android_Graphics_Options.png"/>다음 옵션을 사용하여 게임 표시 방법과 관련된 다음 세부 정보를 변경할 수 있습니다.</p>
   <ul class="colour">
     <li><strong>픽셀 간 색상 보간</strong> : 기본적으로 &quot;매끄러운&quot;픽셀 인 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간을</a> 켭니다. 선명한 픽셀 그래픽의 경우 꺼져 있어야하지만 멋진 알파 블렌드와 매끄러운 가장자리 그래픽이있는 경우 그대로 유지하는 것이 좋습니다. 이것은 기본적으로 켜져 있습니다.</li>
     <li><strong>Screen Color Depth</strong> : 렌더링의 색 농도를 16 비트 또는 24 비트로 설정하는 데 사용할 수 있습니다. 이는 24 비트로 설정된 경우 일부 구형 디바이스와의 호환성에 영향을 미치며 필요한 <em>불확실성</em> 을 증가시킵니다 (이것은 AmazonFire 디바이스의 공유 메모리입니다).</li>
@@ -147,11 +147,11 @@
   <p class="note"><strong>참고</strong> : 텍스처 페이지의 크기가 클수록 게임이 다른 브라우저 및 장치와 호환되지 않습니다.</p>
   <p> </p>
   <h2>아이콘</h2>
-  <p>이 섹션에서는 프로젝트가 다른 상점 페이지 및 장치에 필요한 다양한 <strong>아이콘</strong> 이미지를 추가 할 수 있습니다. 모든 아이콘 이미지는 주어진 적절한 크기의 24 비트 <span class="inline">* .png</span> 파일로 생성되어야합니다.</p>
+  <p><img alt="Android Icons Options" class="center" src="../../assets/Images/Settings/Android_Icons_Options.png"/>이 섹션에서는 프로젝트가 다른 상점 페이지 및 장치에 필요한 다양한 <strong>아이콘</strong> 이미지를 추가 할 수 있습니다. 모든 아이콘 이미지는 주어진 적절한 크기의 24 비트 <span class="inline">* .png</span> 파일로 생성되어야합니다.</p>
   <p>GameMaker Studio 2에는 게임이 컴파일되는 모든 다른 대상 플랫폼에 필요한 모든 이미지를 자동으로 만드는 데 사용할 수있는 <a href="../../IDE_Tools/Project_Image_Generator.htm">프로젝트 이미지 생성기</a> 도구가 있습니다. 이 도구를 사용하는 경우 필요한 이미지가되도록 만들어진 이미지를 수정해야합니다. 이 도구는 이미지뿐만 아니라 아이콘도 생성합니다 (아래 섹션 참조).</p>
   <p> </p>
   <h2>이미지</h2>
-  <p>여기에서 전체 화면을 채우도록 설정되지 않은 스플래시 화면의 배경으로 사용될 <strong>테두리 색</strong> 을 설정할 수 있습니다. 게임이 장치에로드되는 동안 표시되는 <em>가로</em> 및 <em>세로</em> 모드 모두에 대해 최종 게임 파일에 <strong>스플래시 화면</strong> 을 추가 할 수도 있습니다. 이 화면은 24 비트 <span class="inline">* .png</span> 파일 <span class="inline">이어야</span> 하며 게임의 첫 번째 방 (또는보기)과 동일한 크기를 권장합니다. 특정 시간 동안 스플래시 화면을 표시해야하는 경우 여기에서 0-10 초 범위로 설정할 수도 있습니다 (기본 시간 0은 자산로드 기간 동안 만 표시됨을 의미 함). 다음 옵션에서 스플래시 화면을 표시하는 방법을 설정할 수도 있습니다.</p>
+  <p><img alt="Android Images Options" class="center" src="../../assets/Images/Settings/Android_Images_Options.png"/>여기에서 전체 화면을 채우도록 설정되지 않은 스플래시 화면의 배경으로 사용될 <strong>테두리 색</strong> 을 설정할 수 있습니다. 게임이 장치에로드되는 동안 표시되는 <em>가로</em> 및 <em>세로</em> 모드 모두에 대해 최종 게임 파일에 <strong>스플래시 화면</strong> 을 추가 할 수도 있습니다. 이 화면은 24 비트 <span class="inline">* .png</span> 파일 <span class="inline">이어야</span> 하며 게임의 첫 번째 방 (또는보기)과 동일한 크기를 권장합니다. 특정 시간 동안 스플래시 화면을 표시해야하는 경우 여기에서 0-10 초 범위로 설정할 수도 있습니다 (기본 시간 0은 자산로드 기간 동안 만 표시됨을 의미 함). 다음 옵션에서 스플래시 화면을 표시하는 방법을 설정할 수도 있습니다.</p>
   <ul class="colour">
     <li><strong>가로 세로 비율</strong> 유지 : 장치 화면과 비교하여 이미지의 가로 세로 비율을 유지하여 필요한 경우 가장자리 주위에 &quot;패딩&quot;을 추가합니다.</li>
     <li><strong>자르기 맞춤</strong> : 장치 화면에서 이미지를 1 : 1로 유지하고 필요에 따라 가장자리를 자르거나 채 웁니다.</li>
@@ -160,7 +160,7 @@
   <p>마지막으로 24 비트 <span class="inline">* .png 인</span> Android TV 장치에서 게임의 <strong>배너 이미지</strong> 를 설정할 수 있습니다.</p>
   <p> </p>
   <h2>포장</h2>
-  <p><img alt="안드로이드 패키징 옵션" class="center" src="../../assets/Images/Settings/Android_Packaging_Options.png"/></p>
+  <p><img alt="Android Packaging Options" class="center" src="../../assets/Images/Settings/Android_Packaging_Options.png"/></p>
   <p>Android 게임에 Google Play를 사용하는 기능 중 하나는 게임 <strong>라이센스</strong> 를 <strong>부여</strong> 하는 기능입니다. 즉, 마켓을 통해 게임을 다운로드 한 사람 만 게임을 플레이 할 수 있으므로 게임의 불법 복제물이 배포되는 것을 방지 할 수 있도록 Google에서 게임을 제어합니다.</p>
   <p>게임에서이 기능을 활성화하려면 먼저 <strong>Google 라이센싱 활성화</strong> 상자에 플래그를 지정한 다음 <strong>퍼블릭 키</strong> 를 <strong>Google 라이센싱 공개 키</strong> 상자에 복사해야합니다. 이 라이센스는 <a href="https://play.google.com/apps/publish">Google Play 개발자 페이지</a> 로 이동 한 다음 편집 할 게임을 선택하면 찾을 수 있습니다. 게임 프로필 페이지에서 &quot; <em>서비스 및 API</em> &quot;섹션까지 아래로 스크롤하면이 기능을 활성화하는 데 필요한 공개 키가 있습니다.</p>
   <p>활성화되면 게임을 소유 할 권한이없는 사람이 게임을 시도하면 해당 장치에서 라이센스를 찾을 수 없다는 팝업 메시지 상자가 표시되고 다시 시도 할 수있는 옵션이 제공됩니다. 다시 테스트하거나 게임을 종료하십시오.</p>
@@ -168,7 +168,7 @@
   <p>마지막으로 최종 앱 패키지를 <strong>Android TV</strong> 게임으로 준비 할 수 있습니다 (게임이 <a href="https://developer.android.com/training/tv/games/">Android TV 지침을</a> 준수하는 경우에만이 옵션을 선택해야 함).</p>
   <p> </p>
   <h2>권한</h2>
-  <p>이 탭에서 게임이 Android Manifest 내에서 요청할 수있는 일부 권한을 변경할 수 있습니다. GameMaker Studio 2는 게임이 사용하는 기능에 따라 필요에 따라 권한을 자동으로 할당하지만, 사용자 지정 확장 프로그램을 사용할 때와 같이 올바르게 할당되지 않은 게임에 대한 권한이 필요한 경우 필요한 권한 상자.</p>
+  <p><img alt="Android Permission Options" class="center" src="../../assets/Images/Settings/Android_Permissions_Options.png"/>이 탭에서 게임이 Android Manifest 내에서 요청할 수있는 일부 권한을 변경할 수 있습니다. GameMaker Studio 2는 게임이 사용하는 기능에 따라 필요에 따라 권한을 자동으로 할당하지만, 사용자 지정 확장 프로그램을 사용할 때와 같이 올바르게 할당되지 않은 게임에 대한 권한이 필요한 경우 필요한 권한 상자.</p>
   <p>아래 목록에는 사용 가능한 권한이 요약되어 있습니다.</p>
   <ul class="colour">
     <li><span class="inline">WRITE_EXTERNAL_STORAGE</span> : 게임이 외부 저장소에 쓸 수 있도록합니다.</li>
@@ -187,7 +187,7 @@
   <p class="code">android:usesCl</p>
   <p> </p>
   <h2>사회적인</h2>
-  <p>이 섹션은 Android 게임에서 다양한 <strong>소셜</strong> 기능을 활성화하기위한 것입니다. 다음과 같은 옵션을 선택할 수 있습니다.</p>
+  <p><img class="center" src="../../assets/Images/Settings/Android_Social_Options.png"/>이 섹션은 Android 게임에서 다양한 <strong>소셜</strong> 기능을 활성화하기위한 것입니다. 다음과 같은 옵션을 선택할 수 있습니다.</p>
   <ul class="colour">
     <li><strong>Facebook</strong> : Facebook 기능이 필요한 경우이 확인란을 선택한 다음 <strong>Facebook 앱 ID</strong> 및 <strong>Facebook 앱 이름을 제공해야</strong> 합니다. 모든 Facebook 기능은 확장을 통해 액세스되며, Facebook 사용 상자를 처음 선택하면 <a href="../../Introduction/The_Marketplace.htm">마켓 플레이스</a> 에서 Facebook 확장을 다운로드하여 설치하라는 메시지가 표시됩니다.</li>
     <li><strong>Google</strong> – <strong>클라우드 절약 사용</strong> :이를 선택하면 Google 클라우드 절약이 활성화되고 <a href="../../Introduction/The_Marketplace.htm">마켓 플레이스</a> 에서 관련 확장을 다운로드하여 설치하라는 메시지가 표시됩니다. <a href="../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm">비동기 함수</a> 페이지에서 클라우드 절약 섹션을 참조하십시오.</li>
@@ -199,7 +199,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="../Game_Options.htm">게임 옵션</a></div>
+        <div style="float:left">목록: <a href="../Game_Options.htm">게임 옵션</a></div>
         <div style="float:right">다음: <a href="iOS.htm">iOS</a></div>
       </div>
     </div>

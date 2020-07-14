@@ -87,13 +87,13 @@
   <h1>dot_product</h1>
   <p>내적은 두 벡터 간의 각도 관계를 나타내는 값으로, 두 벡터를 취하고이를 곱한 다음 결과를 추가하여 구합니다. &quot;dot product&quot;라는 이름은이 작업을 지정하는 데 자주 사용되는 중심 점 &quot;Â&quot;에서 파생됩니다 (대안 &quot;scalar product&quot;는 결과의 벡터 특성이 아니라 스칼라를 강조합니다).</p>
   <p>실제 수학 공식은 다음과 같이 작성할 수 있습니다.</p>
-  <p><img alt="도트 제품 공식" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png"/></p>
+  <p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png"/></p>
   <p>따라서 2D에서 벡터 <span class="inline">a [x1, y1]</span> 및 <span class="inline">b [x2,2]의</span> <span class="inline">내적</span> 은 <span class="inline">x1x2 + y1y2</span> 이므로 GameMaker Studio 2의 내적은 다음과 같이 계산됩니다.</p>
   <p class="code">a · b = (x1*x2)+(y1*y2);</p>
   <p>내적에 대한 흥미로운 점은 입력 벡터에 의해 형성된 각도와의 관계이며 다음과 같이 표현할 수 있습니다.</p>
   <p class="code">a · b = (length of a) * (length of b) * cos(angle)</p>
   <p>즉, 두 벡터의 내적은 각 벡터의 길이를 곱한 벡터 간 각도의 코사인과 같습니다. 설명 할 이미지는 다음과 같습니다.</p>
-  <p><img alt="도트 제품 ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406"/></p>
+  <p><img alt="Dot Product ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406"/></p>
   <p class="note"><strong>참고</strong> : 벡터에 대한 자세한 내용은 <a href="../../../../Additional_Information/Vectors.htm">여기를</a> 참조 <a href="../../../../Additional_Information/Vectors.htm">하십시오</a> .</p>
   <p>우리는 그들의 내적 결과와 관련하여 두 벡터에서 진술 할 수있는 몇 가지가 있습니다 :</p>
   <ul class="colour">
@@ -102,7 +102,7 @@
     <li>a와 b 사이의 각도가 90 도보 다 크면 <span class="inline">cos (ang)</span> 이 음수이므로 내적은 음수 (0보다 작음 <span class="inline">)</span> 입니다.</li>
   </ul>
   <p>그렇다면 이것이 게임을하는 우리에게는 어떤 의미입니까? 글쎄,이 수학적 관계는 몇 가지 상황에서 사용될 수 있지만, 그것을 보는 가장 좋은 방법은 실제 시나리오를 구축하고 무슨 일이 일어나고 있는지 직접 보는 것입니다. 이 작업을 수행하는 가장 간단한 방법 중 하나는 플랫폼 게임에서 적에 대한 간단한 &quot;시선&quot;검사를 생성하는 것입니다. 벡터 <i>법선</i> .</p>
-  <p>기본적으로, 우리는 적으로부터 벡터 법선을 가져와야합니다 (즉, 방향과 시야 거리로 구성됨) 그리고 플레이어의 벡터를 적에게 가져와야합니다. 그런 다음이 벡터의 dot_product를 얻습니다. 결과가 양수이면 플레이어가 표시되고 음수이면 표시되지 않습니다. 이 작업을 수행하기위한 실제 코드는 아래 예에서 제공됩니다.</p>
+  <p><img alt="Dot product example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_1.png"/>기본적으로, 우리는 적으로부터 벡터 법선을 가져와야합니다 (즉, 방향과 시야 거리로 구성됨) 그리고 플레이어의 벡터를 적에게 가져와야합니다. 그런 다음이 벡터의 dot_product를 얻습니다. 결과가 양수이면 플레이어가 표시되고 음수이면 표시되지 않습니다. 이 작업을 수행하기위한 실제 코드는 아래 예에서 제공됩니다.</p>
   <p> </p>
   <h4><b>통사론:</b></h4>
   <p class="code">dot_product(x1, y1, x2, y2)</p>
@@ -144,7 +144,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="Angles_And_Distance.htm">각도와 거리</a></div>
+        <div style="float:left">목록: <a href="Angles_And_Distance.htm">각도와 거리</a></div>
         <div style="float:right">다음: <a href="dot_product_3d.htm">dot_product_3d</a></div>
       </div>
     </div>

@@ -85,14 +85,14 @@
   <p>지금까지 본 애셋으로 게임 애셋 브라우저에 멋진 이미지와 사운드를 추가 할 수 있지만 아직 게임 자체에서 아무것도하지 않습니다! 이를 위해 GameMaker Studio 2에서 가장 중요한 자산 인 <strong>Object</strong> 자산이 필요합니다. 오브젝트는 게임의 측면을 제어하고 특정 작업을 수행하는 데 사용하는 특수 자산입니다. 대부분의 경우 게임 룸에서 볼 수 있도록 스프라이트가 연결되어 있지만 때때로 트랙 통계와 같은 작업을 수행하거나 컷 장면의 타이밍을 설정하는 &quot;장면&quot; <strong>컨트롤러</strong> 오브젝트로 사용됩니다. 등 ... 객체에 동작을 부여하고 특정 이벤트 및 서로에 반응 할 수 있으며 게임에서 볼 수있는 대부분의 객체는 객체 및 사용자와의 상호 작용을 기반으로합니다.</p>
   <p>이제 <strong>Instances</strong> 에 대해 이야기하지 않고 Objects에 대해 이야기 할 수 없습니다. GameMaker Studio 2로 제작 된 게임에서 게임에서 볼 수있는 캐릭터, 몬스터, 공, 벽 등은 실제로 <strong>인스턴스</strong> 로 간주됩니다. 인스턴스는 기본적으로 자산 브라우저에서 찾은 다음 방에 배치되는 객체의 &quot;복사&quot;입니다 (객체를 <strong>템플릿으로</strong> 생각합니다). 따라서 인스턴스에 영향을 주거나 변경하는 것에 대해 이야기 할 때, 방에있는 객체의 특정 사본 하나가 영향을받는 반면 나머지는 영향을받지 않는다는 것을 의미하지만, 객체에 영향을 주거나 변경하는 것에 대해서는 그 시점에서 생성 된 모든 인스턴스에도 반영됩니다. 따라서 <strong>객체는 인스턴스의 템플릿이며 인스턴스는 게임을 만들기 위해 방에 배치하는 것</strong> 입니다.</p>
   <p>새 객체 자산을 만들려면 다른 모든 자산과 동일하며 마우스 오른쪽 버튼을 클릭하기 만하면됩니다 Objects asset 폴더에서 <em>Create를</em> 선택하거나 <a href="../Introduction/The_Asset_Browser.htm">Asset Browser의</a> 아무 곳이나 마우스 오른쪽 버튼으로 클릭하고 <em>Create Object를</em> 선택합니다.</p>
-  <p><img alt="객체 편집기" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor.png"/></p>
+  <p><img alt="The Object Editor" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor.png"/></p>
   <p>이것은 <a href="../The_Asset_Editors/Objects.htm">개체 편집기</a> 창이며 현재 개체 속성을 표시하며 가장 먼저해야 할 일은 &quot; <span class="inline">obj_</span> &quot;또는 다른 식별자와 같은 접두사를 사용하여 개체 이름을 지정하는 것입니다. 일반적으로 객체가 무언가를 그리고 다른 객체의 인스턴스와 충돌을 등록하려면 스프라이트가 할당되어 있어야합니다. 단추. 그러면 사용할 스프라이트를 선택할 수있는 <strong>자산 탐색기</strong> 가 열립니다 (애셋 브라우저에서 스프라이트를 드래그하여 오브젝트 편집기에 놓아 할당 할 수도 있습니다).</p>
-  <p><img alt="자산 탐색기" class="center" src="../assets/Images/QS_Guide/QS_AssetExplorer.png"/></p>
+  <p><img alt="The Asset Explorer" class="center" src="../assets/Images/QS_Guide/QS_AssetExplorer.png"/></p>
   <p>아직 적절한 스프라이트가 없으면 <em>새 스프라이트</em> 버튼에 표준 스프라이트 생성 옵션을 통해 자산을 생성 한 것처럼 새 스프라이트 자산을 생성하고 원하는대로 편집 할 수 있습니다. 이제는 생성을 시작할 때 연 오브젝트에 자동으로 할당됩니다. 스프라이트를 선택하면 <em>스프라이트 편집</em> 또는 <em>이미지 편집</em> 버튼을 눌러 스프라이트 자체의 이미지 또는 스프라이트 자산을 편집합니다. 애셋 브라우저에서 스프라이트를 찾은 다음 편집하라고 표시하는 것보다 빠를 수 있습니다.</p>
   <p>스프라이트를 추가하거나 만든 후에는 <strong>표시</strong> 여부와 같은 다른 객체 속성을 변경할 수 <strong>있습니다 (</strong> 예 : <strong>충돌 마스크</strong> 종류). 간단한 게임의 경우 여기에서 아무것도 변경할 필요가 없으며 이제 객체에 <strong>이벤트</strong> 를 추가 할 수 있습니다.</p>
   <p>이벤트는 게임 루프에서 신중하게 결정된 순간입니다. 이벤트는 프로그래밍 된 내용에 따라 발생합니다. GameMaker Studio 2는 이러한 이벤트의주기와 함께 작동합니다. 방이 시작된 순간부터 완료 될 때까지 일련의 이벤트가 실행되는 모든 단계에서 실행되는 게임 루프가 있으며 GML 코드 또는 DnD를 배치하도록 선택할 수 있습니다. ¢ 이러한 이벤트에 응답하는 인스턴스에서의 조치 ( <strong>단계</strong> 는 게임 속도 설정에 의해 결정되는 게임 시간의 순간입니다 ( &quot;프레임&quot;이라고도 함)).</p>
   <p>클릭 한 이벤트를 추가하려면 이벤트 추가 버튼에서 :</p>
-  <p><img alt="객체 편집기 이벤트" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor_Events.png"/></p>
+  <p><img alt="The Object Editor Events" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor_Events.png"/></p>
   <p>위에서 다른 모든 <strong>이벤트 범주를</strong> 볼 수 있으며, 그 중 일부에는 다른 하위 범주가 포함되어 있습니다. 여기서는 모든 이벤트를 진행하지는 않지만 가장 중요한 다섯 가지 이벤트를 간략하게 설명합니다.</p>
   <table class="icons">
     <tbody>
@@ -126,7 +126,7 @@
   <p><!--</div>--></p>
   <p>다른 모든 이벤트에 대한 자세한 내용은 <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">여기</a> 를 참조 <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">하십시오</a> .</p>
   <p>이벤트를 추가하면 생성중인 프로젝트 유형에 따라 코드 편집기 또는 드래그 앤 드롭 편집기가 열립니다. 이 창에서 이제 이벤트가 게임 루프 내에서 트리거 될 때마다 수행 할 GML 또는 DnD ™ 액션을 추가 할 수 있습니다. 이벤트와 코드가있는 일반적인 객체는 다음과 같습니다.</p>
-  <p><img alt="객체 편집기 체인 윈도우" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor_Chain.png"/></p>
+  <p><img alt="Object Editor Chained Windows" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor_Chain.png"/></p>
   <p>아래 두 페이지에서 객체 이벤트에서 GML 및 DnD ™ 사용에 대한 자세한 정보를 찾을 수 있습니다.</p>
   <ul class="colour">
     <li><a href="../Drag_And_Drop/Drag_And_Drop_Overview/DnD_Overview.htm">끌어서 놓기 개요</a></li>
@@ -143,7 +143,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:left">목록: <a href="../Content.htm">인덱스</a></div>
         <div style="float:right">다음: <a href="Sequences.htm">시퀀스</a></div>
       </div>
     </div>

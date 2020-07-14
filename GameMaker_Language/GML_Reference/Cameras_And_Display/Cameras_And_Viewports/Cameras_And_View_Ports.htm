@@ -89,9 +89,9 @@
     <li><b>보기</b> : 카메라의 위치, 투영 및 회전을 기반으로 카메라가 보는 것</li>
     <li><b>뷰 포트</b> : 카메라 뷰가 표시되는 화면 영역</li>
   </ul>
-  <p><b>룸 편집기</b> 를 통해 카메라를 추가하는 경우 <tt>view_camera</tt> 변수를 사용하여 <i>카메라 ID</i> 값을 검색 할 수 있습니다. 그런 다음 아래 기능을 사용하여 뷰를 조작 할 수 있으며 필요한 경우 기본 카메라를 파괴 할 수도 있습니다. 뷰에 새 카메라를 할당해야 할 경우 그렇지 않으면 매우 예측할 수없는 동작이 발생합니다. 룸 편집기의 뷰 포트에 추가 된 카메라는 범위가 <b>전역</b> 적이므로 게임을 시작할 때 한 번 생성 된 다음 각 룸에 들어가면 룸 편집기에서 설정 한 값으로 설정됩니다. 의 기본 카메라 <i>어떤</i> 방, 그것은 존재하지 않게됩니다 <i>모든 객실</i> .</p>
+  <p><img alt="Camera illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/Camera_Example.png"/><b>룸 편집기</b> 를 통해 카메라를 추가하는 경우 <tt>view_camera</tt> 변수를 사용하여 <i>카메라 ID</i> 값을 검색 할 수 있습니다. 그런 다음 아래 기능을 사용하여 뷰를 조작 할 수 있으며 필요한 경우 기본 카메라를 파괴 할 수도 있습니다. 뷰에 새 카메라를 할당해야 할 경우 그렇지 않으면 매우 예측할 수없는 동작이 발생합니다. 룸 편집기의 뷰 포트에 추가 된 카메라는 범위가 <b>전역</b> 적이므로 게임을 시작할 때 한 번 생성 된 다음 각 룸에 들어가면 룸 편집기에서 설정 한 값으로 설정됩니다. 의 기본 카메라 <i>어떤</i> 방, 그것은 존재하지 않게됩니다 <i>모든 객실</i> .</p>
   <p>카메라 및 뷰 포트에 대해 알아야 할 사항은 <i>게임의 첫 번째 방에있는 모든 활성 뷰 포트</i> 의 경계 상자의 총 면적이 <b>배경 캔버스 크기</b> (또는 MacOS, Ubuntu (Linux) 및 Windows의 경우 창 크기)를 정의한다는 것입니다. , 뷰 포트로 덮여 있지 않은 영역은 아래 이미지와 같이 창 색상을 사용하여 그리기로 기본 설정됩니다.</p>
-  <p><img alt="포트 캔버스보기" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/viewport_canvas.png"/></p>
+  <p><img alt="View Port Canvas" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/viewport_canvas.png"/></p>
   <p class="note"><b>참고</b> : 기본적으로 룸 편집기에서 &quot;Clear Display Buffer&quot;를 선택하여 색상을 표시해야하며 <tt>window_set_colour ()</tt> 함수를 사용해서 만 색상을 설정할 수 있습니다. 이 기능을 사용하지 않으면 기본적으로 검은 색이됩니다.</p>
   <p>모든 인스턴스의 드로우 이벤트가 각각의 가시적 뷰에 대해 한 번 호출되므로 여러 대의 카메라를 사용할 때주의해야합니다. 따라서 한 방에 3 개의 카메라 뷰가 활성화되어 있으면 드로우 이벤트는 모든 단계마다 3 회 (기본적으로 3 회 수행) 게임이 크거나 복잡한 경우 속도 저하의 원인이 될 수 있습니다. <tt>view_current</tt> 변수는 어떤 뷰가 그려 <tt>지는지</tt> 확인하고 주어진 뷰 포트에 특정한 항목 만 그리기함으로써 이러한 그리기 호출을 제한하는 데 도움이됩니다. 방에서 카메라를 만들고 <a href="camera_destroy.htm"><tt>camera_destroy ()</tt></a> 를 사용하여 <a href="camera_destroy.htm"><tt>카메라를</tt></a> 제거하지 않으면 메모리 누수가 발생할 수 있으므로 자체 카메라를 만들 때도주의하십시오.</p>
   <p>아래의 다른 섹션에서 사용 가능한 모든 기능에 대한 개요를 찾을 수 있지만 이러한 기능 중 일부는 다른 매트릭스의 설정 및 사용이 필요하므로 <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">Matrix</a> 매뉴얼 섹션을 참조하십시오. <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">기능</a> 또한 얻을 세트 카메라와 현재 이외의 다른 객실보기 포트 값 <span>(섹션</span> 참조하는 데 사용할 수있는 몇 룸 기능이 있음을 유의 <a href="../../Asset_Management/Rooms/Rooms.htm">객실</a> ).</p>
@@ -179,7 +179,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="../Cameras_And_Display.htm">카메라 및 디스플레이</a></div>
+        <div style="float:left">목록: <a href="../Cameras_And_Display.htm">카메라 및 디스플레이</a></div>
         <div style="float:right">다음: <a href="../The_Game_Window/The_Game_Window.htm">게임 창</a></div>
       </div>
     </div>

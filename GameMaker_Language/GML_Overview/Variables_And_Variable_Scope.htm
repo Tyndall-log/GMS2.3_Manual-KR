@@ -32,7 +32,7 @@
     }
 
     -->
-  
+
 /*]]>*/</style>
 
   <script type="text/javascript">//<![CDATA[
@@ -40,7 +40,7 @@
     gRootRelPath = "../..";
     gCommonRootRelPath = "../..";
     gTopicId = "9.1.1";
-  
+
 //]]></script>
 
   <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
@@ -85,23 +85,13 @@
   <p class="code">var _num = 126.4545;<br/> var _str = &quot;Hello World&quot;;<br/> new_num = _num * 100;<br/> global.my_string = _str + &quot; I said&quot;;</p>
   <p>변수를 사용하여 함수에서 반환 된 값을 유지할 수도 있습니다. 예를 들면 다음과 같습니다.</p>
   <p class="code">var _id = instance_nearest(x, y, obj_Tree);<br/> root = sqrt(1000);<br/> global.str = string_upper(&quot;Hello World&quot;);</p>
-  <p>!DOCTYPE html>
-<html lang=en>
-  <meta charset=utf-8>
-  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
-  <title>Error 403 (Forbidden)!!1</title>
-  <style>
-    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
-  </style>
-  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
-  <p><b>403.</b> <ins>That’s an error.</ins>
-  <p>Your client does not have permission to get URL <code>/translate_a/t?client=te_lib&amp;format=html&amp;sl=en&amp;tl=ko&amp;sp=nmt&amp;tk=664719.845460</code> from this server.  <ins>That’s all we know.</ins></p>
+  <p>따라서 변수는 나중에 하나 이상의 작업에서 사용하기 위해 값을 저장하고 이름을 지정할 수있는 것입니다. &quot;실수값(근사값)&quot;을 가지는 변수의 좋은 예는 <b>pi(𝜋)</b>입니다. 모든 사람들이 알고있는 무한소수이며 근사값은 약 3.14159265입니다. 그런데 왜 우리는 이것을 문자로 표시하고 있을까요? 음, &quot;삼점일사일오구이육오&quot;보다 &quot;pi&quot;라고 말하는 것이 훨씬 쉽기 때문입니다! 더군다나 이와 같이 이름으로 지정하면 앞으로의 작업이 훨씬 간단해집니다. 만일 한 곳에서 pi 근사값을 계속 바꾸더라도 변수 <i>이름</i>은 여전히 같기 때문에 다른 곳에서 pi 근사값을 매 번 변경할 필요가 없습니다.</p>
   <p><b>GML</b> 에서 변수를 작성할 때 이름은 문자 또는 밑줄 기호 &quot;_&quot;로 시작해야하며 문자, 숫자 및 밑줄 기호 &#39;_&#39;는 최대 길이가 64 자일 수 있습니다. 따라서 유효한 변수는 <tt>fish</tt> , <tt>foo_bar</tt> , <tt>num1</tt> 또는 <tt>_str</tt> 이며 유효하지 않은 변수는 <tt>6fish</tt> , <tt>foo bar</tt> 또는 <tt>* num</tt> 입니다.</p>
   <p>이제 많은 프로그래밍 언어에서 변수 &quot;할당&quot;을 작성해야 사용할 수 있습니다. 이것은 기본적으로 컴퓨터에 변수에 사용할 이름을 말하고 초기 값을 할당한다는 것을 의미합니다. 그런 다음 변수를 메모리에 저장하여 값을 저장하거나 그에 대한 작업을 수행합니다. 변수를 할당하는 형식은 다음과 같습니다.</p>
   <p class="code">&lt;variable&gt; = &lt;expression&gt;;</p>
   <p>식은 단순한 값일 수 있지만 더 복잡 할 수도 있으므로 변수에 값을 할당하는 대신 <span class="inline"><b>+ =를</b></span> 사용하여 변수의 현재 값에 값을 추가 할 수도 있습니다. 예를 들면 다음과 같습니다.</p>
   <p class="code">a = 100;   // Assigning a simple value<br/> b = 200;<br/> c = 300;<br/> a += b;    // Assigning with operation<br/> a = b + c; // Assigning with expression</p>
-  <p class="note"><b>참고</b> : 게임 메이커 언어는 할당에 &quot; <span class="inline">: =</span> &quot;를 허용하지만 일반적으로 가장 일반적인 방법은 아닙니다.</p>
+  <p class="note"><b>참고</b> : 게임 메이커 언어는 할당에 &quot;<span class="inline">:=</span>&quot;를 허용하지만 일반적으로 가장 일반적인 방법은 아닙니다.</p>
   <p class="code">&lt;variable&gt; := &lt;expression&gt;;</p>
   <p>마찬가지로 <span class="inline"><b>-=를</b></span> 사용하여 빼거나 <span class="inline"><b>* =를</b></span> 사용하여 곱하거나 <span class="inline"><b>/ =를</b></span> 사용하여 나누거나 <span class="inline"><b>| =</b></span> , <span class="inline"><b>&amp; =</b></span> 또는 <span class="inline"><b>^ =를</b></span> 사용하여 비트 연산자를 사용할 수 있습니다. 또한 더하거나 뺄 수 있습니다 <i>하나</i> 를 사용하여 값에서 <span class="inline"><b>++</b></span> , <span class="inline"><b>-</b></span> . 자세한 내용은 <a href="Expressions_And_Operators.htm">식 및 연산자</a> 섹션을 참조하십시오.</p>
   <p>다음 (또는 변형)을 수행 할 <i>수 없습니다</i> .</p>
@@ -130,12 +120,12 @@
   </ul>
   <p> </p>
   <p> </p>
-  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Participant">부분 한글화 : IreneStella(euns****), 번역 : 구글번역기</div>
   <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="GML_Overview.htm">GML 개요</a></div>
+        <div style="float:left">목록: <a href="GML_Overview.htm">GML 개요</a></div>
         <div style="float:right">다음: <a href="Arrays.htm">배열</a></div>
       </div>
     </div>

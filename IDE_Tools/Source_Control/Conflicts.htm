@@ -85,12 +85,12 @@
   <p>이 섹션에서는 <a href="Cloning_A_Repository.htm">복제 된 로컬 리포지토리</a> 와 마스터 리포지토리 간의 충돌 해결에 대해 살펴 보겠습니다. 이제 로컬 저장소를 사용한다고 가정하면 파일을 편집 한 후 일종의 충돌이 발생하므로 사용했던 테스트 스크립트를 열고 &quot;Hello World&quot;메시지를 다음과 같이 변경하십시오.</p>
   <p class="code">show_debug_message(&quot;Hello World, How Are You?&quot;);</p>
   <p>이제 프로젝트를 저장하고 로컬 저장소에 커밋해야합니다. 이제 원격 마스터 리포지토리에 연결되어 있기 때문에 (같은 디스크에 복제 한 경우에도) 푸시를 수행하여 마스터에 변경 사항을 적용해야합니다. 이를 위해 <strong>소스 제어</strong> &gt; <strong>푸시 변경으로</strong> 이동하면 소스 제어 <a href="../../Introduction/The_Output_Window.htm">출력 탭</a> 에서 상태 업데이트가 제공됩니다.</p>
-  <p>이제 복제 된 프로젝트가 아닌 원래 프로젝트를 열어야하므로 디스크에서 <strong>프로젝트</strong> 를 저장 한 위치로 이동하거나 <a href="../../IDE_Navigation/Menus/The_File_Menu.htm">파일 메뉴</a> 에서 <strong>최근 프로젝트</strong> 를 확인하여 현재 <strong>프로젝트</strong> 바로 아래에 있어야합니다. 올바른 프로젝트가 있는지 확인하는 쉬운 방법은 가지고있는 스크립트를 확인하고 메시지가 &quot;Hello World&quot;인 경우 올바른 스크립트를 가지고 있거나 <strong>View History</strong> 창을 열고 확인할 수 있습니다. 그런 식으로.</p>
+  <p><img alt="Source Control Output Panel" class="center" src="../../assets/Images/IDE Tools/SCM_OutputPanel.png"/>이제 복제 된 프로젝트가 아닌 원래 프로젝트를 열어야하므로 디스크에서 <strong>프로젝트</strong> 를 저장 한 위치로 이동하거나 <a href="../../IDE_Navigation/Menus/The_File_Menu.htm">파일 메뉴</a> 에서 <strong>최근 프로젝트</strong> 를 확인하여 현재 <strong>프로젝트</strong> 바로 아래에 있어야합니다. 올바른 프로젝트가 있는지 확인하는 쉬운 방법은 가지고있는 스크립트를 확인하고 메시지가 &quot;Hello World&quot;인 경우 올바른 스크립트를 가지고 있거나 <strong>View History</strong> 창을 열고 확인할 수 있습니다. 그런 식으로.</p>
   <p>이제 스크립트를 다시 편집해야하므로 다음과 같이 읽습니다.</p>
   <p class="code">show_debug_message(&quot;This will cause a conflict.&quot;);</p>
   <p>디스크에 저장하고 변경 사항을 커밋 할 수 있지만 이러한 변경 사항을 적용하려고하면 다음 메시지가 나타납니다.</p>
   <p>누군가 아직 변경하지 않은 변경 사항을 푸시했습니다! 즉, 리포지토리를 가져와 문제가 정확히 무엇인지 확인해야하므로 <strong>소스 제어</strong> &gt; <strong>풀 변경으로 이동하십시오</strong> . 여기에는 두 개의 창이 표시되는데, 첫 번째는 변경된 파일에 대한 경고 (이전 작업에서와 같이 여기에서 <strong>다시로드</strong> 를 선택하고 <strong>저장</strong> <em>하지 않음</em> ) 및 다른 하나는 <strong>충돌</strong> 창입니다.</p>
-  <p>이 창은 왼쪽에있는 목록에서 충돌 된 파일을 표시하며 마우스 왼쪽 버튼을 사용하여 해당 목록에서 파일을 선택할 수 있습니다 (또는 / 또는 와 함께 ). 충돌하는 파일을 다루는 네 가지 옵션이 있으며, 오른쪽 단추에서 사용할 수 있습니다.</p>
+  <p><img alt="Source Control Conflict Window" class="center" src="../../assets/Images/IDE Tools/SCM_ConflictsWindow.png"/>이 창은 왼쪽에있는 목록에서 충돌 된 파일을 표시하며 마우스 왼쪽 버튼을 사용하여 해당 목록에서 파일을 선택할 수 있습니다 (또는 / 또는 와 함께 ). 충돌하는 파일을 다루는 네 가지 옵션이 있으며, 오른쪽 단추에서 사용할 수 있습니다.</p>
   <ul class="colour">
     <li><strong>사용</strong> -원격 저장소에서 변경 한 내용을 덮어 씁니다.</li>
     <li><strong>Use Mine-</strong> 원격 저장소의 변경 사항을 방금 변경 한 내용보다 우선합니다.</li>
@@ -98,7 +98,7 @@
     <li><strong>병합 도구 선택</strong> - <strong>병합 도구</strong> 를 구성 할 수 있습니다 (자세한 내용은 <a href="External_Merge_Diff_Tools.htm">외부 병합 / 확산 도구</a> 섹션 참조).</li>
   </ul>
   <p>이제 버튼을 사용하여 충돌을 정리할 수 있지만 그렇게하기 전에 충돌 된 파일을 열어 문제가 무엇인지 정확히 살펴 보겠습니다. 충돌하는 스크립트를 열면 다음과 같이 나타납니다.</p>
-  <p>이것은 &quot;이것이 충돌을 야기 할 것&quot;이 HEAD (이것은 우리가 로컬 저장소로 푸시 한 것임)에 있으며 &quot;Hello World, How are You?&quot; 원격 저장소 인 master에서 가져옵니다. 이제 충돌 창으로 돌아가서 <strong>사용을</strong> 클릭하여 변경된 파일을 가져 와서 현재 HEAD 파일을 덮어 쓸 수 있습니다. 이제 스크립트가 변경된 것으로 플래그가 지정되며 계속하기 전에 새 커밋 및 푸시를 수행해야합니다.</p>
+  <p><img alt="Source Control Conflicted Code" class="center" src="../../assets/Images/IDE Tools/SCM_ConflictedCode.png"/>이것은 &quot;이것이 충돌을 야기 할 것&quot;이 HEAD (이것은 우리가 로컬 저장소로 푸시 한 것임)에 있으며 &quot;Hello World, How are You?&quot; 원격 저장소 인 master에서 가져옵니다. 이제 충돌 창으로 돌아가서 <strong>사용을</strong> 클릭하여 변경된 파일을 가져 와서 현재 HEAD 파일을 덮어 쓸 수 있습니다. 이제 스크립트가 변경된 것으로 플래그가 지정되며 계속하기 전에 새 커밋 및 푸시를 수행해야합니다.</p>
   <p>실제로 GameMaker Studio 2 IDE에서이 문제를 해결할 수 있습니다. 1, 2, 3, 5 행을 제거하여 <span class="inline">show_debug_message ( &quot;Hello World, How Are You?&quot;)</span> 로 남겨두고 저장하면 Git은 사용자가 무엇인지 알고 있다고 가정하므로 충돌을 해결합니다 자신의 파일로 수행합니다. 그러나 이는 오류가 발생하기 쉬우므로 병합 도구를 설치 한 다음 수동으로 병합하는 대신 구성하고 사용하는 것이 좋습니다.</p>
   <p> </p>
   <p> </p>
@@ -107,7 +107,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">뒤로: <a href="../Source_Control.htm">소스 컨트롤</a></div>
+        <div style="float:left">목록: <a href="../Source_Control.htm">소스 컨트롤</a></div>
         <div style="float:right">다음: <a href="External_Merge_Diff_Tools.htm">외부 병합 / 확산 도구</a></div>
       </div>
     </div>
