@@ -81,44 +81,44 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>variable_global_set</h1>
-  <p>With this function you can set the value of a given global variable. You supply the name of the global variable to set the value of <i>as a string</i> (see example code below), and then the value to set (can be any valid <a href="../../GML_Overview/Data_Types.htm">data type</a>).
-    If the global variable does not exist already in the game it will be created and then assigned the value.</p>
+  <p>이 함수를 사용하시면 인자로 넣어준 전역변수의 값을 설정할 수 있습니다. 함수의 인자값은 설정하길 원하는 전역변수의 <i>이름(문자열 데이터)</i>과 설정하고 싶은 <i>값</i>(<a href="../../GML_Overview/Data_Types.htm">data type</a>항목에 부합되면 어떤 형태든 상관없음)을 넣어주시면 됩니다.
+    만약 인자값으로 넣어준 전역변수의 이름이 게임내에 존재하지 않다면 해당 변수이름의 값을 생성하고 값을 부여하게 됩니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">variable_global_set(name, val);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
       </tr>
       <tr>
         <td>name</td>
-        <td>The name of the global variable to set (as a string)</td>
+        <td>값을 설정하고 싶은 전역변수의 이름(문자열 데이터)</td>
       </tr>
       <tr>
         <td>val</td>
-        <td>The value to set the global variable to</td>
+        <td>전역변수를 설정하고 싶은 값</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예제:</h4>
   <p class="code">if !variable_global_exists(&quot;enemy_num&quot;)<br/>    {
     <br/>    variable_global_set(&quot;enemy_num&quot;, 0);<br/>    }
   </p>
-  <p>The above code will check to see if a global variable exists and if it does not then it is created and set to 0.</p>
+  <p>위 코드는 전역변수가 존재하는지 여부를 판단하고, 존재하지 않는다면 해당 변수이름으로 생성하고 0으로 값을 부여해줍니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a href="variable_struct_exists.htm">variable_struct_exists</a></div>
+        <div style="float:left">이전: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">다음: <a href="variable_struct_exists.htm">variable_struct_exists</a></div>
       </div>
     </div>
     <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
