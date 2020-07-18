@@ -81,36 +81,36 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>instance_of</h1>
-  <p>This function can be used to get the name of the function that was used to create a struct when the struct was created using a <a href="../../GML_Overview/Structs.htm">constructor function</a> and the <a href="../../GML_Overview/Language_Features/new.htm"><tt></tt></a>
-    <a href="../../GML_Overview/Language_Features/new.htm"><tt>new</tt></a> operator. You supply the variable with the struct reference to check and the function will return either a string with the function name or <tt>undefined</tt>. Note that if you pass the function a struct literal (ie: a struct that
-      was created without using a constructor function) then it will simply return the string &quot;struct&quot;.</p>
+  <p>이 함수는 <a href="../../GML_Overview/Structs.htm">constructor function</a>(생성자 함수) 또는 <a href="../../GML_Overview/Language_Features/new.htm"><tt>new</tt></a> 연산자를 사용해서 구조체를 생성할 때 쓰인 함수의 이름을 찾는데 사용됩니다.
+     함수인자값으로 확인하고 싶은 구조체 참조자를 넣어주면, 함수를 사용했다면 문자열 데이터로 함수의 이름을 반환하고, 그렇지 않다면 <tt>&quot;undefined&quot;<tt>를 반환합니다(구조체 참조자 이외에 변수를 넣어주면 undefined가 출력됨).
+     만약 구조체 리터럴(a struct literal : 구조체를 생성할 때 &quot;생성자 함수&quot;를 사용하지 않는 참조자를 의미함)인 참조자를 인자값으로 넣어주면 함수는 단순히  &quot;struct&quot;이란 문자열 데이터값을 반환할 것입니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">instanceof(struct_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
       </tr>
       <tr>
         <td>struct</td>
-        <td>The struct reference to use.</td>
+        <td>생성자 함수를 알고 싶은 구조체 참조자</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">String or <tt>undefined</tt></p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>In this example we must first define the function that will be used as the constructor for the struct:</p>
+  <h4>확장 예제:</h4>
+  <p>이 예제에선 우리는 먼저 구조체 생성자 함수로 사용될 함수를 정의를 해야 합니다. :</p>
   <p class="code">function init_struct(_a, _b, _c) constructor<br/>     {
     <br/>     a = _a;<br/>     b = _b;<br/>     c = _c;<br/>     }
   </p>
-  <p>This function can then be used along with the <tt>new</tt> operator to create a struct and populate it with the variables set to the values of the arguments used in the function:</p>
+  <p>정의된 함수는 <tt>new</tt>연산자를 같이 사용해서 구조체를 생성하면서 인자값으로 넣어준 값으로 함수 내부에 선언된 변수들을 초기화 해줍니다. :</p>
   <p class="code">mystruct = new init_struct(10, 100, &quot;Hello World&quot;);</p>
-  <p>We can then get the name of the function that was used like this:</p>
+  <p>그런다면 함수의 이름을 다음과 같은 방법으로 얻으실 수 있습니다. :</p>
   <p class="code">var _name = instanceof(mystruct);<br/> if is_string(_name)<br/>     {
     <br/>     show_debug_message(_name);
     <br/>     }
@@ -121,8 +121,8 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a href="array_create.htm">array_create</a></div>
+        <div style="float:left">이전: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">다음: <a href="array_create.htm">array_create</a></div>
       </div>
     </div>
     <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
