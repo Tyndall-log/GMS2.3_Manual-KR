@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,51 +81,51 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text_transformed</h1>
-  <p>This function will draw text in a similar way to <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a> only now you can choose to scale the text along the horizontal or vertical axis (effectively stretching or shrinking it) and also have
-    GameMaker Studio 2 draw it at an angle (where 0 is normal and every degree over 0 rotates the text anti-clockwise).</p>
+  <p>이 함수는 <a href="draw_text.htm"><tt>draw_text</tt><tt>()</tt><tt></tt></a>함수와 비슷하게 작동하며 수평 혹은 수직의 크기를 바꿀수 있습니다 (효율적으로 축소와 확대가 가능합니다) 그리고 게임메이커 스튜디오2는
+    특정한 각도로 문자를 돌립니다.(0은 기본값이며 0을 넘으면 문자는 반시계방향으로 움직입니다).</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>문법:</h4>
   <p class="code">draw_text_transformed(x, y, string, xscale, yscale, angle);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>인자</th>
+        <th>설명</th>
       </tr>
       <tr>
         <td>x</td>
-        <td>The x coordinate of the drawn string.</td>
+        <td>그려질 x좌표.</td>
       </tr>
       <tr>
         <td>y</td>
-        <td>The y coordinate of the drawn string.</td>
+        <td>그려질 y좌표.</td>
       </tr>
       <tr>
         <td>string</td>
-        <td>The string to draw.</td>
+        <td>그려질 문자열.</td>
       </tr>
       <tr>
         <td>xscale</td>
-        <td>The horizontal scale (default 1).</td>
+        <td>수평 크기(기본값은 1).</td>
       </tr>
       <tr>
         <td>yscale</td>
-        <td>The vertical scale(default 1).</td>
+        <td>수직 크기(기본값은 1).</td>
       </tr>
       <tr>
         <td>angle</td>
-        <td>The angle of the text.</td>
+        <td>문자의 각도.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예시:</h4>
   <p class="code">draw_set_halign(fa_center);<br/> draw_set_valign(fa_middle);
     <br/> image_angle += 1;<br/> draw_text_transformed(room_width / 2, room_height / 2, &quot;GAME OVER!&quot;, 2, 2, image_angle);</p>
-  <p>The above code will draw the given text in the middle of the room, spinning round and scaled to twice its original size.</p>
+  <p>이 위의 코드는 룸의 중앙에 문자열을 그립니다, 기본보다 2배의 크기로 그려지며 image_angle값만큼 돌아갈수 있습니다.</p>
   <p> </p>
   <p> </p>
   <p> </p>

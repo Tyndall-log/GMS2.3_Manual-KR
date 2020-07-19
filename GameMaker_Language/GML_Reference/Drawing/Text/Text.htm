@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -81,11 +81,11 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Text</h1>
-  <p>There are a number of functions available to you for drawing text in various forms. It should be noted that some of these functions change the text colours and sizes in a dynamic way when being drawn, but when working with HTML5 or devices, these functions
-    can slow down your game or look poor and so it may be better to have various sized font resources rather than use scaled drawing, or have large font resources and then draw them scaled <i>down</i> rather than <i>up</i>.
-    Also, if you need to colour large blocks of text it is better to use the <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a> and <a href="../Colour_And_Alpha/draw_set_alpha.htm"><tt>draw_set_alpha()</tt></a> functions
-    first along with the simple <tt>draw_text</tt> function, rather than those extended functions that have a colour component.</p>
-  <p>The following functions are for setting the font to be used when drawing, as well as the positioning of the text when drawn:</p>
+  <p>문자를 그릴수 있는 수 많은 함수가 있습니다. 알아야 할 점은 몇몇 함수는 문자의 색과 크기를 원레 주어진 값과 다르게 그릴수있습니다, 그러나 HTML5나 특정 기기에서, 이 함수들은
+    당신의 게임을 느리게 만들거나 보기 안좋게 만들수 있으므로 각 크기의 글꼴을 따로 저장하는것이 더 좋을수 있습니다, 혹은 큰 글꼴을 이용하여 작게 만드는것이 반대로 사용하는 것보다 더 좋습니다.
+    또한, 만약 코드 여러줄을 하나의 색을 정하고 싶다면 각각을 확장된 함수를 사용하는것 보다 <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a> 그리고 <a href="../Colour_And_Alpha/draw_set_alpha.htm"><tt>draw_set_alpha()</tt></a> 함수를 이용하여
+    <tt>draw_text</tt> 함수를 사용하는것이 더 좋습니다.</p>
+  <p>이 함수들은 그려질 문자열들을 조정하는데 사용되는 함수입니다:</p>
   <p> </p>
   <ul class="colour">
     <li><a href="draw_set_font.htm">draw_set_font</a></li>
@@ -96,7 +96,7 @@
     <li><a href="draw_get_valign.htm">draw_get_valign</a></li>
   </ul>
   <p> </p>
-  <p>These functions can be used to draw text to the screen, either simply or with transforms and colour:</p>
+  <p>이 함수들은 화면에 문자를 그릴때 사용됩니다, 이중 몇개는 간단한 조정으로만 그려지며 몇개는 색과 크기를 변경하며 그릴수도 있습니다:</p>
   <p> </p>
   <ul class="colour">
     <li><a href="draw_text.htm">draw_text</a></li>
@@ -109,7 +109,7 @@
     <li><a href="draw_text_ext_transformed_colour.htm">draw_text_ext_transformed_colour</a></li>
   </ul>
   <p> </p>
-  <p>The following function also exists that is specific to drawing highscores created using the built in highscore system:</p>
+  <p>이 함수는 내장 변수인 highscore을 이용하여 highscore들을 그릴때 사용됩니다:</p>
   <p> </p>
   <ul class="colour">
     <li><a href="draw_highscore.htm">draw_highscore</a></li>
