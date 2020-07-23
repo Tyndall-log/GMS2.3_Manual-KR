@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Arrays">
-        <span>Arrays</span>
+        <span>배열</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,150 +80,126 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Arrays</h1>
-  <p>Arrays can be extremely useful and are an essential part of making games. Here are just a few things that would be impossible (or at least, a lot more difficult) without arrays:</p>
+  <h1>배열</h1>
+  <p>배열은 매우 유용 할 수 있으며 게임을 만드는 데 필수적인 부분입니다. 다음은 배열 없이는 불가능하거나 적어도 훨씬 더 어려운 몇 가지 사항입니다.</p>
   <ul class="colour">
-    <li>Menus. An array or two can make it much easier to create a good menu system.</li>
-    <li>RPGs. Arrays are essential for making RPGs, because instead of having a jumble of variables, you just have a few lines, which you can refer back to at any time.</li>
-    <li>Card Games. Good for keeping track of cards and hands.</li>
-    <li>High scores and other statistics. Much easier to keep track of one array than multiple variables.</li>
+    <li>메뉴. 하나 또는 두 개의 배열을 사용하면 좋은 메뉴 시스템을 훨씬 쉽게 만들 수 있습니다.</li>
+    <li>롤 플레잉. 배열은 RPG를 만드는 데 필수적입니다. 변수가 혼잡하지 않고 몇 줄만 있으면 언제든지 다시 참조 할 수 있습니다.</li>
+    <li>카드 게임. 카드와 손을 추적하는 데 좋습니다.</li>
+    <li>높은 점수 및 기타 통계. 여러 변수보다 하나의 배열을 추적하는 것이 훨씬 쉽습니다.</li>
   </ul>
-  <p>That&#39;s just the tip of the iceberg as arrays are one of the most fundamental and useful programming tools you can use, and you&#39;d be surprised at the applications they can have! They are also very memory efficient and generally fast to parse,
-    making them ideal for keeping performance to a maximum.</p>
-  <p><label for="aone">A basic array is classed as having 1 <strong>dimension</strong>, but you can have arrays with more than one dimension too. The sections below explain a bit more about both types of array: </label></p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">1 Dimension Arrays</span><span data-close-text="true">1 Dimension Arrays</span></a></p>
+  <p>배열은 사용할 수있는 가장 기본적이고 유용한 프로그래밍 도구 중 하나이므로 사용 가능한 응용 프로그램에 놀랄 것입니다. 또한 메모리 효율성이 높고 일반적으로 구문 분석이 빠르기 때문에 성능을 최대로 유지하는 데 이상적입니다.</p>
+  <p><label for="aone">기본 배열은 1 <strong>차원</strong> 으로 분류되지만 <strong>차원</strong> 이 여러 개인 배열도 가질 수 있습니다.</label> <label for="aone">아래 섹션에서는 두 유형의 배열에 대해 조금 더 설명합니다.</label></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">1 차원 배열</span> <span data-close-text="true">1 차원 배열</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Before going any further let&#39;s just clarify what an array actually is and how it&#39;s structured. An array is simply a <a href="Data_Types.htm">data type</a> that is assigned to a variable, and it can contain not just one value, but multiple
-      values. The image below shows a schematic for a basic array: </p>
+    <p class="dropspot">더 나아 가기 전에 배열이 실제로 무엇이고 어떻게 구성되어 있는지 명확히하자. 배열은 단순히 변수에 지정된 <a href="Data_Types.htm">데이터 유형</a> 이며 하나의 값뿐만 아니라 여러 값을 포함 할 수 있습니다. 아래 이미지는 기본 배열에 대한 회로도를 보여줍니다.</p>
     <p class="dropspot"><img class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/1DArrayExample.png"/></p>
-    <p class="dropspot">This is called a <strong>1D</strong> (one dimension) array, and as you can see the array is stored in the variable &quot;<span class="inline">a</span>&quot; and contains multiple values. To access the array you would do something like the following:</p>
+    <p class="dropspot">이것을 <strong>1D</strong> (1 차원) 배열이라고하며 배열에서 변수 &quot; <span class="inline">a</span> &quot;에 저장되며 여러 값을 포함합니다. 배열에 액세스하려면 다음과 같은 작업을 수행하십시오.</p>
     <p class="code">var _val = a[0];<br/> show_debug_message(_val);
     </p>
-    <p class="dropspot">The above code gets the value from position 0 of the array &quot;a&quot; then outputs it to the console, which - based on the contents of the array shown in the image above - would output 125. If you did the following:</p>
+    <p class="dropspot">위의 코드는 배열 &quot;a&quot;의 위치 0에서 값을 가져 와서 위의 이미지에 표시된 배열의 내용에 따라 125를 출력하는 콘솔로 출력합니다. 다음을 수행 한 경우 :</p>
     <p class="code">var _val = a[3];<br/> show_debug_message(_val);
     </p>
-    <p class="dropspot">The output would show &quot;Hi!&quot;.</p>
-    <p class="dropspot">As you can see, you give the array a variable name and then a value in square brackets <span class="inline">[]</span>, where the value is the position in the array to get data from. So, essentially an array is a container with a number of spaces to
-      store values, and each position in the container has a specific number to identify it, which is what we put in the <span class="inline">[]</span>. It&#39;s worth noting that the contents of an array <b>always start at 0</b> and can <i>never be negative</i>!</p>
-    <p class="dropspot">We&#39;ve shown how to check an array for data, but how do we create the array to start with? First it has to be <i>initialized</i> before we can use it or GameMaker Studio 2 will give us an error. Initializing an array just means that we give each
-      position of the array an initial value in preparation for it to be used elsewhere in the project code. This is important to remember as it means that you have to do a certain amount of planning before using arrays, but it is easy enough to initialize
-      one using a repeat loop like this...</p>
+    <p class="dropspot">출력에 &quot;Hi!&quot;가 표시됩니다.</p>
+    <p class="dropspot">보시다시피, 배열에 변수 이름을 지정한 다음 대괄호 <span class="inline">[]로</span> 값을 지정합니다. 여기서 값은 데이터를 가져올 배열의 위치입니다. 따라서 기본적으로 배열은 값을 저장할 수있는 공간이 많은 컨테이너이며 컨테이너의 각 위치에는이를 식별하기위한 특정 숫자가 있습니다.이를 <span class="inline">[]에</span> 넣습니다. 배열의 내용은 <b>항상 0에서 시작하며</b> <i>절대 음수가 될</i> 수 <i>없습니다</i> !</p>
+    <p class="dropspot">배열을 확인하여 데이터를 확인하는 방법을 보여 주었지만, 시작할 배열을 어떻게 생성합니까? 먼저 사용하기 전에 <i>초기화</i> 해야합니다. 그렇지 않으면 GameMaker Studio 2에서 오류가 발생합니다. 배열을 초기화한다는 것은 프로젝트 코드의 다른 곳에서 사용할 수 있도록 배열의 각 위치에 초기 값을 부여한다는 의미입니다. 이것은 배열을 사용하기 전에 일정량의 계획을 수행해야한다는 것을 기억하는 것이 중요하지만 이와 같은 반복 루프를 사용하여 계획을 초기화하는 것은 쉽습니다.</p>
     <p class="code">var i = 9;<br/> repeat(10)
       <br/>     {
       <br/>     array[i] = 0;<br/>     i -= 1;<br/>     }
     </p>
-    <p class="dropspot">This simple code will initialize a ten position array (from 0 to 9) to hold 0, ie: each position in the array contains the value 0. You will notice that the array has been initialised <i>backwards</i>, with the last value being defined first. This
-      is not strictly necessary but is the optimal way to do it as it will reserve a space in memory that is the exact size of the array, whereas if you initialize an array from 0 <em>upwards</em>, the memory has to be re-allocated for every additional
-      value added (so for a ten item array, initialising it in a loop would change the memory allocation ten times). The speed difference is negligible for smaller arrays, but larger ones should be optimised as much as possible in this way.</p>
-    <p class="note"><b>NOTE</b>: The HTML5 export is the exception to the above rule, and when targetting that you should initialise arrays in consecutive order from 0 upwards.</p>
-    <p class="dropspot">You can also use the GML function <a href="../GML_Reference/Variable_Functions/array_create.htm"><tt>array_create()</tt></a> to initialise an array to a fixed size, and you can even create &quot;empty&quot; arrays with <em>no</em> values, for example:</p>
+    <p class="dropspot">이 간단한 코드는 0을 유지하기 위해 10 개의 위치 배열 (0에서 9까지)을 초기화합니다. 즉, 배열의 각 위치에는 값 0이 포함됩니다. 마지막 값이 먼저 정의 된 상태에서 배열이 <i>뒤로</i> 초기화되었음을 알 수 있습니다. 이것은 꼭 필요한 것은 아니지만 배열의 정확한 크기 인 메모리에 공간을 확보하므로 최적의 방법입니다. 반드시 0 <em>이상</em> 에서 배열을 초기화하면 모든 메모리를 다시 할당해야합니다 추가 된 값 추가 (따라서 10 개의 항목 배열의 경우 루프에서 초기화하면 메모리 할당이 10 번 변경됨). 작은 어레이에서는 속도 차이를 무시할 수 있지만이 방법으로 최대한 큰 어레이를 최적화해야합니다.</p>
+    <p class="note"><b>참고</b> : HTML5 내보내기는 위의 규칙에 대한 예외이며 대상을 지정할 때 0부터 순차적으로 배열을 초기화해야합니다.</p>
+    <p class="dropspot">GML 함수 <a href="../GML_Reference/Variable_Functions/array_create.htm"><tt>array_create ()</tt></a> 를 사용하여 배열을 고정 크기로 초기화하고 값 <em>없이</em> &quot;빈&quot;배열을 만들 수도 있습니다. 예를 들면 다음과 같습니다.</p>
     <p class="code">my_array= [];</p>
-    <p class="dropspot">This tells GameMaker that the variable &quot;my_array&quot; is an array, and you can then add values to it at any time in the future. However, if you try to access a value in an amty array then you will get an error. In fact, you should always take
-      care to only access valid array positions, as trying to access a value outside of an array will also give an error. For example, this will cause the project to crash when run:</p>
+    <p class="dropspot">이렇게하면 변수 &quot;my_array&quot;가 배열임을 GameMaker에 알려주고 나중에 언제든지 값을 추가 할 수 있습니다. 그러나 amty 배열의 값에 액세스하려고하면 오류가 발생합니다. 실제로 배열 외부의 값에 액세스하려고하면 오류가 발생하므로 항상 유효한 배열 위치에만 액세스해야합니다. 예를 들어, 다음을 실행하면 프로젝트가 중단됩니다.</p>
     <p class="code">my_array = array_create(5, 0);<br/> var _val = my_array[6];</p>
-    <p class="dropspot">The array was only initialised with 5 positions, but we&#39;ve tried to get position 7 - arrays are nummbered from 0 so <span class="inline">array[6]</span> is position 7 - therfor the game generates an error and crashes.</p>
-    <p class="dropspot">We&#39;ve shown how to initialise and array with the same value for every position, but what if we want to initialize the array with different values for each position? Well for that we have to manually type each and every position ourselves, but
-      there is a nice trick to help us keep track of things there:</p>
+    <p class="dropspot">배열은 5 개의 위치로만 초기화되었지만, 우리는 위치 7을 얻으려고 시도했습니다.-배열은 0에서 좁아 지므로 <span class="inline">배열 [6]</span> 은 위치 7입니다. 따라서 게임에서 오류가 발생하고 충돌이 발생합니다.</p>
+    <p class="dropspot">우리는 모든 위치에 대해 동일한 값으로 초기화하고 배열하는 방법을 보여 주었지만 각 위치에 대해 다른 값으로 배열을 초기화하려면 어떻게해야합니까? 이를 위해 우리는 각각의 모든 위치를 수동으로 입력해야하지만, 거기에있는 것들을 추적하는 데 도움이되는 멋진 트릭이 있습니다.</p>
     <p class="code">var _count = 3;<br/> array[_count] = &quot;you?&quot;<br/> count -= 1;<br/> array[_count] = &quot;are &quot;<br/> count -= 1;<br/> array[_count] = &quot;How &quot;<br/> count -= 1;<br/> array[_count] = &quot;Hello!&quot;<br/> count -= 1;</p>
-    <p class="dropspot">As you can see, we haven&#39;t used any numbers in the actual array, rather a <a href="Variables/Local_Variables.htm">local variable</a> to count down through the values. This is very useful, especially for larger arrays, as it means you don&#39;t
-      have to track how many positions there are nor which number you are on, as the code will look after that for you. You just need to know how many total positions the array has to hold.</p>
-    <p class="dropspot">Finally you can assign the values to an array using a single variable call like this:</p>
+    <p class="dropspot">보시다시피 실제 배열에서 숫자를 사용하지 않고 <a href="Variables/Local_Variables.htm">값</a> 을 카운트 다운하는 <a href="Variables/Local_Variables.htm">로컬 변수</a> 를 사용하지 않았습니다. 이것은 코드가 당신을 위해 그것을 돌볼 것이기 때문에 얼마나 많은 위치와 어떤 숫자가 있는지 추적 할 필요가 없기 때문에 특히 큰 배열에 매우 유용합니다. 어레이가 보유해야하는 총 위치 수를 알아야합니다.</p>
+    <p class="dropspot">마지막으로 다음과 같이 단일 변수 호출을 사용하여 값을 배열에 할당 할 수 있습니다.</p>
     <p class="code">var _a = [0, 1, 2, 3, 4];<br/> var _b = [];</p>
-    <p class="dropspot">The above will create two arrays as local variables, the first already populated with 5 elements and the second as an empty array ready to have values added.</p>
-    <p class="dropspot">With that done how do we use an array for practical things? Exactly the same as we would use a normal variable, as shown by the following examples:</p>
+    <p class="dropspot">위의 내용은 두 개의 배열을 로컬 변수로 생성합니다. 첫 번째는 이미 5 개의 요소로 채워져 있고 두 번째는 빈 배열로 값을 추가 할 수 있습니다.</p>
+    <p class="dropspot">이것으로 실제적인 일에 배열을 어떻게 사용합니까? 다음 예제와 같이 일반 변수를 사용하는 것과 정확히 동일합니다.</p>
     <p class="code">// Add two array values together<br/> total = array[0] + array[5];<br/>
       <br/> // Check an array value<br/> if (array[9]) == 10<br/>     {
       <br/>     //do something<br/>     }
       <br/>
       <br/> // draw an array value<br/> draw_text(32, 32, array[3]);</p>
-    <p class="dropspot">Since arrays are numbered consecutively, this means you can loop through them to perform extra actions too, just like we did to initialize it:</p>
+    <p class="dropspot">배열은 연속적으로 번호가 매겨지기 때문에 초기화하는 것처럼 추가 작업을 수행하기 위해 배열을 반복 할 수 있습니다.</p>
     <p class="code">var total = 0;<br/> for (var i = 0; i &lt; 10; ++i;)<br/>     {
       <br/>     total += array[i];<br/>     draw_text(32, 32 + (i * 32), array[i]);<br/>     }
       <br/> draw_text(32, 32 + (i * 32), total);</p>
-    <p class="dropspot">The above code will add up all the values in our array, draw each of them and draw the total value at the end.</p>
-    <p class="dropspot">The last thing to mention about arrays is that you can also delete an array simply by &quot;re-assigning&quot; the variable that defines it to a single value. This will free up the memory associated with all the positions and values for that array.
-      For example:</p>
+    <p class="dropspot">위의 코드는 배열의 모든 값을 합산하여 각 값을 그리고 마지막에 총 값을 그립니다.</p>
+    <p class="dropspot">배열에 대해 마지막으로 언급 할 것은 배열을 정의하는 변수를 단일 값으로 &quot;재 할당&quot;하여 배열을 삭제할 수도 있다는 것입니다. 그러면 해당 배열의 모든 위치 및 값과 관련된 메모리가 비워집니다. 예를 들면 다음과 같습니다.</p>
     <p class="code">//Create the array for (var i = 9; i &gt; -1; --i;)<br/>     {
       <br/>     a[i] = i;<br/>     }
       <br/> //Delete the array<br/> a = -1;</p>
-    <p class="dropspot">If the array has multiple dimensions (see below), they will all be cleaned up too, and note that when you create arrays in instances, these do not need to be cleaned up when the instance is removed from the game, as they will be removed automatically
-      by the <a class="tooltip" title="The garbage collector is an automated tool that is part of the game code and is used to remove certain things (like arrays and structs) from memory when they are no longer referenced in your code, without the need for you to explicitly remove them.">garbage collector</a> on destroy or room end. However, if any of the array positions hold references to <em>dynamic</em> assets - like particle systems, buffers, or data structures
-      - then these <em>will</em> need to be destroyed before the array is deleted or the instance is destroyed or the room ends.</p>
+    <p class="dropspot">배열의 차원이 여러 개인 경우 (아래 참조) 모두 정리되며 인스턴스에서 배열을 만들 때 게임에서 인스턴스를 제거 할 때 정리할 필요가 없습니다. 파괴 또는 방 끝에서 <a class="tooltip" title="가비지 수집기는 게임 코드의 일부인 자동화 된 도구로, 명시 적으로 제거 할 필요없이 코드에서 더 이상 참조되지 않을 때 메모리에서 특정 항목 (예 : 배열 및 구조체)을 제거하는 데 사용됩니다.">가비지 수집기</a> 에 의해 자동으로 제거됩니다. 그러나 배열 위치 중 일부에 파티클 시스템, 버퍼 또는 데이터 구조와 같은 <em>동적</em> 자산에 대한 참조가있는 경우 배열을 삭제하거나 인스턴스가 삭제되거나 룸이 종료되기 전에 이러한 항목 <em>을</em> 삭제해야합니다.</p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Multi-Dimension Arrays</span><span data-close-text="true">Multi-Dimension Arrays</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">다차원 배열</span> <span data-close-text="true">다차원 배열</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><span style="text-align: justify;">We know what a 1 dimension array is, but in GameMaker Studio 2 you can have arrays with multiple dimensions, which are essentially structured as an array inside an array inside an array... For example, the following is a <strong>2D</strong> (two dimension) array</span><br/></p>
+    <p class="dropspot"><span style="text-align: justify;">우리는 1 차원 배열이 무엇인지 알고 있지만 GameMaker Studio 2에서는 여러 차원의 배열을 가질 수 있습니다.이 배열은 본질적으로 배열 내부 배열 내부의 배열로 구성됩니다 ... 예를 들어 다음은 <strong>2D</strong> (2 차원)입니다 정렬</span></p>
     <p class="code"><span style="text-align: justify;"></span>array[0][0] = 5;<br/></p>
-    <p class="dropspot">This is essentially telling GameMaker that the array is actually comprised of various 1D arrays. Here&#39;s an extended example:<br/></p>
+    <p class="dropspot">이것은 본질적으로 배열이 실제로 다양한 1D ​​배열로 구성되어 있음을 GameMaker에 알려주는 것입니다. 확장 된 예는 다음과 같습니다.</p>
     <p class="code">array[1][2] = 1;<br/>array[1][1] = &quot;hello&quot;;<br/>array[1][0] = 55.5;<br/>array[0][2] = sprite_index;<br/>array[0][1] = &quot;world&quot;;<br/>array[0][0] = -67.89;</p>
-    <p class="dropspot">A multi-dimension array needs to be initialised before use, the same as a single 1D array, and can hold real numbers, strings, and any other <a href="Data_Types.htm">data type</a>, just like any variable, making them ideal candidates for any game
-      that needs to store large amounts of data in an easily accessible way (remember, you can loop through an array easily). Here is one final example of how this may be used in an actual game... Say you want to spawn four different enemies at four different
-      points in your game depending on a random value. Well, we can use an array with 2 dimensions to do this and save writing out a load of code.</p>
-    <p class="dropspot">First we should initialize the array we are going to use in the create event of our &quot;controller&quot; object (note the use of comments to remind you what each array entry does):<br/></p>
+    <p class="dropspot">다차원 배열은 사용하기 전에 단일 1D 배열과 동일하게 초기화해야하며 변수와 마찬가지로 실수, 문자열 및 기타 <a href="Data_Types.htm">데이터 유형을</a> 보유 할 수 있으므로 저장해야하는 모든 게임에 이상적인 후보입니다. 많은 양의 데이터를 쉽게 액세스 할 수있는 방식으로 배열을 쉽게 반복 할 수 있습니다. 실제 게임에서 이것이 어떻게 사용될 수 있는지에 대한 마지막 예는 다음과 같습니다. 무작위 값에 따라 게임에서 4 개의 다른 지점에 4 개의 다른 적을 스폰하고 싶다고 가정 해보십시오. 이를 위해 2 차원 배열을 사용하여 많은 양의 코드를 작성할 수 있습니다.</p>
+    <p class="dropspot">먼저 &quot;controller&quot;객체의 create 이벤트에서 사용할 배열을 초기화해야합니다 (각 배열 항목의 기능을 상기시키기 위해 주석 사용).</p>
     <p class="code">enemy[3][2] = 448;       //y position<br/>enemy[3][1] = 32;        //x position<br/>enemy[3][0] = obj_Slime; //Object<br/>enemy[2][2] = 448;<br/>enemy[2][1] = 608;<br/>enemy[2][0] = obj_Skeleton;<br/>enemy[1][2] = 32;<br/>enemy[1][1] = 608;<br/>enemy[1][0]
       = obj_Knight;<br/>enemy[0][2] = 32;<br/>enemy[0][1] = 32;<br/>enemy[0][0] = obj_Ogre;<br/></p>
-    <p class="dropspot">We now have the objects to spawn instances of and their corresponding x and y spawn coordinates within the room all stored in our array. This can now be used as follows in another event of the controller object (an alarm for example, or a key press
-      event):
-      <br/></p>
+    <p class="dropspot">이제 인스턴스를 스폰 할 오브젝트와 해당 룸에 x 및 y 스폰 좌표가 모두 배열에 저장되었습니다. 이제 컨트롤러 객체의 다른 이벤트 (예 : 알람 또는 키 누름 이벤트)에서 다음과 같이 사용할 수 있습니다.</p>
     <p class="code">//get a random number from 0 to 3, inclusive<br/>var i = irandom(3); <br/>//Use the array to create the object<br/>instance_create_layer(enemy[i][1], enemy[i][2], &quot;Enemy_Layer&quot;, enemy[i][0]);</p>
-    <p class="dropspot">That short code will now spawn a random enemy in the game room, and it uses far less code than an &quot;<tt>if / then / else</tt>&quot; structure or even a &quot;<tt>switch</tt>&quot;, and as the array is initialized all together in the create event
-      it is MUCH easier to edit and change any of those values as they are not <a class="tooltip" title="In computer programming, the term hard-coded is used to describe code that is considered fixed and not likely to change. Hardcoded features are built into hardware or software in such a way that they cannot be modified later on. For example, if you are making a game and &#39;hard-code&#39; the player health to 10, then you would be using the value 10 throughout the game code rather than using a variable.">hard-coded</a> into the rest of the project code.<br/></p>
-    <p class="dropspot">It should be noted too that the length of each dimension in the array can be different, so you can have the initial array dimension with a length of 3, but the second dimension entry can be a different length for each of the the initial array values
-      it&#39;s assigned to, for example:</p>
+    <p class="dropspot">이 짧은 코드는 이제 게임 룸에서 임의의 적을 생성하며, &quot; <tt>if / then / else</tt> &quot;구조 또는 &quot; <tt>switch</tt> &quot;보다 훨씬 적은 코드를 사용하며, create 이벤트에서 배열이 모두 초기화 될 때 이 값은 나머지 프로젝트 코드에 <a class="tooltip" title="컴퓨터 프로그래밍에서 하드 코딩이라는 용어는 고정 된 것으로 간주되고 변경되지 않는 코드를 설명하는 데 사용됩니다. 하드 코드 된 기능은 나중에 수정할 수없는 방식으로 하드웨어 나 소프트웨어에 내장되어 있습니다. 예를 들어 게임을 만들고 플레이어 상태를 10으로 &#39;하드 코딩&#39;하는 경우 변수를 사용하는 대신 게임 코드 전체에서 값 10을 사용하게됩니다.">하드 코딩</a> 되어 있지 않으므로 이러한 값을 훨씬 쉽게 편집하고 변경할 수 있습니다.</p>
+    <p class="dropspot">또한 배열의 각 차원의 길이가 다를 수 있으므로 길이가 3 인 초기 배열 차원을 가질 수 있지만 두 번째 차원 항목은 초기 배열 값마다 길이가 다를 수 있습니다 예를 들어 다음과 같이 할당됩니다.</p>
     <p class="code">array[2][2] = &quot;3&quot;;<br/>array[2][1] = &quot;2&quot;;<br/>array[2][0] = &quot;1&quot;;<br/>array[1][3] = &quot;four&quot;;<br/>array[1][2] = &quot;three&quot;;<br/>array[1][1] = &quot;two&quot;;<br/>array[1][0] = &quot;one&quot;;<br/>array[0][1]
       = 2;<br/>array[0][0] = 1;<br/></p>
-    <p class="dropspot">Finally, multi-dimension arrays are not limited to <em>just </em>two dimensions, and you can have 3, 4 or more dimensions to an array as required in your code, just by adding <span class="inline">[n]</span> further arguments, eg:<br/></p>
+    <p class="dropspot">마지막으로, 다차원 배열은 <em>단지</em> 2 차원으로 제한되지 않으며, 코드에 필요에 따라 3, 4 이상의 차원을 배열에 추가 할 수 있습니다. <span class="inline">[n]</span> 추가 인수를 추가하면됩니다.</p>
     <p class="code">array[0][0][0] = 1;     // A three dimensional array<br/>array[0][0][0][0] = 1;  // A four dimensional array<br/>// etc...</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot"></p>
   </div>
   <p> </p>
-  <p>Just like normal variables, you can pass arrays through to <a href="Script_Functions.htm">script functions</a> and <a href="Method_Variables.htm">method variables</a> to be used and then returned to the instance that called the function. To do this,
-    you simply have to specify the array variable (no need for each of the individual positions, nor the <span class="inline">[]</span> brackets) and the entire array will be <b>passed by reference</b> into the function. However, should you change any
-    of the array values, the array will be copied into a <em>temporary </em>array just for that function. <strong>Note the use of the word <i>temporary</i> here!</strong> You are not actually passing the array itself into the function (as you would a
-    variable), but instead you are requesting that the function create a <i>copy</i> of this array, which you will change. This means that you <b>must always return the array</b> from the function if you wish to change any array values (this behaviour
-    is called &quot;<em>copy on write</em>&quot;).</p>
-  <p class="note"><b>NOTE: </b>Due to the way that this works internally, passing arrays to functions may affect performance, especially if the array is very large. So use this functionality with care!</p>
-  <p>As an example, consider the following code. First we create the array we want to use, and then we pass that array to the function:</p>
+  <p>일반 변수와 마찬가지로, <a href="Script_Functions.htm">스크립트 함수</a> 및 <a href="Method_Variables.htm">메서드 변수</a> 에 배열을 전달하여 사용 된 다음 함수를 호출 한 인스턴스로 반환 할 수 있습니다. 이렇게하려면 배열 변수를 지정하기 만하면 (각 개별 위치 나 <span class="inline">[]</span> 괄호가 필요하지 않음) 전체 배열이 <b>참조</b> 로 함수에 <b>전달됩니다</b> . 그러나 배열 값을 변경하면 해당 함수에 대해서만 배열이 <em>임시</em> 배열로 복사됩니다. <strong>여기서 <i>임시</i> 단어를 사용하십시오!</strong> 실제로 변수 자체와 같이 배열 자체를 함수에 전달하는 것이 아니라 함수 가이 배열의 <i>사본</i> 을 작성하도록 요청하고 있습니다.이 배열은 변경됩니다. 즉, 배열 값을 변경 <b>하려면 항상</b> 함수 <b>에서 배열</b> 을 <b>반환해야</b> 합니다 (이 동작을 &quot; <em>쓰기시 복사</em> &quot;라고 함).</p>
+  <p class="note"><b>참고 :</b> 내부적으로 작동하는 방식으로 인해 배열을 함수에 전달하면 특히 배열이 매우 큰 경우 성능에 영향을 줄 수 있습니다. 따라서이 기능을주의해서 사용하십시오!</p>
+  <p>예를 들어 다음 코드를 고려하십시오. 먼저 사용할 배열을 만든 다음 해당 배열을 함수에 전달합니다.</p>
   <p class="code">for (var i = 9; i &gt; -1; --i;)<br/>     {
     <br/>     a[i] = i;<br/>     }
     <br/> my_array_func(a);
   </p>
-  <p>The function itself is something simple like:</p>
+  <p>함수 자체는 다음과 같이 간단합니다.</p>
   <p class="code">my_array_func = function(array)<br/>     {
     <br/>     for (var i = 9; i &gt; -1; --i;)<br/>         {
     <br/>         array[i] = i * 100;<br/>         }
     <br/>     }
   </p>
-  <p>Now you would expect the final array to hold the values 900, 800, 700, etc... BUT this will not be the case, since we did <i>not</i> return the array from the function, so all we changed was the temporary copy that was created when we passed the array
-    as an argument into the function, and when the function has finished that basically disappears too. To rectify this we should have formatted the code as follows:</p>
+  <p>이제 최종 배열은 900, 800, 700 등의 값을 보유 할 것으로 예상되지만 함수에서 배열을 반환하지 않았 <i>으므로 변경되지</i> 않았 <i>으므로</i> 변경 된 모든 것은 임시 사본이었습니다. 배열을 함수에 인수로 전달하면 함수가 완료되면 기본적으로 사라집니다. 이를 수정하려면 다음과 같이 코드를 포맷해야합니다.</p>
   <p class="code">for (var i = 9; i &gt; -1; --i;)<br/>     {
     <br/>     a[i] = i;<br/>     }
     <br/> a = my_array_func(a);</p>
-  <p>And the function should now look like this:</p>
+  <p>그리고 함수는 이제 다음과 같아야합니다 :</p>
   <p class="code">my_array_func = function(array)<br/>     {
     <br/>     for (var i = 9; i &gt; -1; --i;)<br/>         {
     <br/>         array[i] = i * 100;<br/>         }
     <br/>     return array;<br/>     }
   </p>
-  <p class="note"><b>NOTE: </b>The above is <b>not</b> necessary if you are not changing any of the array values, but rather simply referencing them. Referencing an array will not copy it and will be faster to parse.</p>
-  <p>It is also worth noting that you can use the accessor <tt>@</tt> to reference an array from a function and change its values directly, which saves the CPU overhead of having it copied into the function. You can find out more information on accessors
-    and how they work, along with an example for arrays, from the following page:</p>
+  <p class="note"><b>참고 :</b> 위가 <b>되지</b> 는 배열 값을 변경하지 않고, 단순히를 참조하지 않는 경우 필요. 배열을 참조하면 배열이 복사되지 않으며 구문 분석이 더 빠릅니다.</p>
+  <p>접근 자 <tt>@</tt> 를 사용하여 함수에서 배열을 참조하고 해당 값을 직접 변경하여 함수에 복사하는 CPU 오버 헤드를 줄일 수 있다는 점도 주목할 가치가 있습니다. 다음 페이지에서 접근 자 및 배열 작동 방법에 대한 자세한 내용을 다음 페이지에서 확인할 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="Accessors.htm">Accessors</a></li>
+    <li><a href="Accessors.htm">접근 자</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Overview/Arrays.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a href="Data_Types.htm">Data Types</a></div>
+        <div style="float:left">목록: <a href="GML_Overview.htm">GML 개요</a></div>
+        <div style="float:right">다음: <a href="Data_Types.htm">데이터 타입</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Arrays
@@ -234,4 +210,4 @@ deleting arrays
 arrays
 -->
 
-</body></html>
+</body></html> 

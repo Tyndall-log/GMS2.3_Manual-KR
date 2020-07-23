@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="The Edit Menu">
-        <span>The Edit Menu</span>
+        <span>편집 메뉴</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,50 +80,45 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Edit Menu</h1>
+  <h1>편집 메뉴</h1>
   <p><img alt="The Edit Menu" class="center" src="../../assets/Images/IDE_Input/Edit_Menu.png"/></p>
-  <p>The edit menu is where you can use the general edition tools of the GameMaker Studio 2 interface. The available options are:</p>
+  <p>편집 메뉴는 GameMaker Studio 2 인터페이스의 일반 판 도구를 사용할 수있는 곳입니다. 사용 가능한 옵션은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><strong>Undo </strong>- Undo an action.</li>
-    <li><strong>Redo </strong>- Redo a previous action.</li>
-    <li><strong>Search and replace </strong>- This will open a search window which permits you to search through your entire code (including room creation code, scripts, and events) for a given input - see below for further information.</li>
+    <li><strong>실행 취소</strong> -작업을 실행 취소합니다.</li>
+    <li><strong>다시 실행</strong> -이전 작업을 다시 실행하십시오.</li>
+    <li><strong>검색 및 교체</strong> -검색 창을 열어 주어진 입력에 대해 전체 코드 (방 생성 코드, 스크립트 및 이벤트 포함)를 검색 할 수 있습니다. 자세한 내용은 아래를 참조하십시오.</li>
   </ul>
-  <p>When you select Search and Replace from the Edit menu, it will open the following window:</p>
-  <p><img alt="Search In Assets Window" class="center" src="../../assets/Images/IDE_Input/Search_Menu.png"/>You can use this to search through all the scripted assets in your game, including room code, event code, scripts and shaders. When searching, you
-    can type in a new search term in the box at the top, or you can click the arrow icon to the right to open a list of previously searched for terms. You also have the option to give a replacement term that will be used to replace the initial search
-    term, and this too has an option to use a previously used replace string from the arrow button on the right.</p>
-  <p>Searches can be general or you can refine them using the options below the search term inputs:</p>
+  <p>편집 메뉴에서 검색 및 바꾸기를 선택하면 다음 창이 열립니다.</p>
+  <p><img alt="Search In Assets Window" class="center" src="../../assets/Images/IDE_Input/Search_Menu.png"/>이를 사용하여 룸 코드, 이벤트 코드, 스크립트 및 셰이더를 포함하여 게임의 모든 스크립트 된 자산을 검색 할 수 있습니다. 검색 할 때 상단의 상자에 새 검색어를 입력하거나 오른쪽에있는 화살표 아이콘을 클릭하여 이전에 검색 한 용어 목록을 열 수 있습니다. 초기 검색어를 대체하는 데 사용할 대체 용어를 제공하는 옵션도 있으며 오른쪽의 화살표 단추에서 이전에 사용한 대체 문자열을 사용하는 옵션도 있습니다.</p>
+  <p>검색은 일반적이거나 검색어 입력 아래의 옵션을 사용하여 세분화 할 수 있습니다.</p>
   <ul class="colour">
-    <li>You can choose to make the search <strong>case sensitive</strong>, in which case it will only include words that exactly match the search string case, ie: searching for &quot;My_Var&quot; without this option and you will get results with &quot;my_var&quot;,
-      &quot;mY_VAR&quot;, or &quot;My_Var&quot;, but with this option checked only &quot;My_Var&quot; will be included in the search results.</li>
-    <li>You can choose to only include search results that include the <strong>whole word only</strong>, in which case any results that include the search term but aren&#39;t an exact match will be ignored, ie: a search for &quot;game&quot; without this checked
-      will show up things like the function &quot;game_end()&quot; or variables like &quot;game_state&quot;, while checking this and doing the search will only show results that are &quot;game&quot; itself.</li>
-    <li>You can choose to have the search <strong>ignore comments</strong>. When this is checked, any comments in your code that contain the search term will simply be ignored and not shown in the output results.</li>
-    <li>You can apply a <strong>filter </strong>on the search results based on the different asset types in the asset browser. By default this is set to &quot;Everything&quot;, but clicking on this will open the following menu where you can check or uncheck
-      assets to be included in the search:</li>
+    <li>검색 <strong>대소 문자를 구분</strong> 하도록 선택할 수 있습니다.이 경우 검색 문자열과 정확히 일치하는 단어 만 포함됩니다 (예 :이 옵션없이 &quot;My_Var&quot;를 검색하면 &quot;my_var&quot;, &quot;mY_VAR&quot;, 또는 &quot;My_Var&quot;이지만이 옵션을 선택하면 &quot;My_Var&quot;만 검색 결과에 포함됩니다.</li>
+    <li><strong>전체 단어 만</strong> 포함하는 검색 결과 만 포함하도록 선택할 수 있습니다.이 경우 검색어를 포함하지만 정확히 일치하지 않는 결과는 무시됩니다. 즉,이 항목을 선택하지 않은 &quot;게임&quot;에 대한 검색이 표시됩니다. &quot;game_end ()&quot;또는 &quot;game_state&quot;와 같은 변수와 같은 것을 확인하고 검색하는 동안 &quot;game&quot;자체의 결과 만 표시됩니다.</li>
+    <li>검색시 <strong>주석을 무시</strong> 하도록 선택할 수 있습니다. 이를 선택하면 검색어가 포함 된 코드의 주석이 무시되고 출력 결과에 표시되지 않습니다.</li>
+    <li>자산 브라우저의 다양한 자산 유형을 기반으로 검색 결과에 <strong>필터</strong> 를 적용 할 수 있습니다. 기본적으로이 항목은 &quot;Everything&quot;으로 설정되어 있지만이 항목을 클릭하면 검색에 포함 할 자산을 확인하거나 선택 취소 할 수있는 다음 메뉴가 열립니다.</li>
   </ul>
-  <p><img alt="Search Filter Options" class="center" src="../../assets/Images/IDE_Input/Search_Menu_Filter.png"/>Once you have given a search (and optionally a replace) term and set up the search options, you can use the different buttons at the bottom
-    to choose how to perform the search and any actions to take. These buttons are:</p>
+  <p><img alt="Search Filter Options" class="center" src="../../assets/Images/IDE_Input/Search_Menu_Filter.png"/>검색 (및 선택적으로 대체) 용어를 제공하고 검색 옵션을 설정 한 후 하단의 다른 단추를 사용하여 검색 수행 방법 및 수행 할 조치를 선택할 수 있습니다. 이 버튼들은 :</p>
   <ul class="colour">
-    <li><strong>Find All</strong>: Find all the search terms and show them in the output window.</li>
-    <li><strong>Find Previous</strong>: Find the previous instance of the search term. This will open the asset containing the reference in the workspace (if it&#39;s not already open) and pan to it.</li>
-    <li><strong>Find Next</strong>: Find the next instance of the search term. This will open the asset containing the reference in the workspace (if it&#39;s not already open) and pan to it.</li>
-    <li><strong>Replace All</strong>: This will perform a search for the given term with the options set and also replace it in the assets with the new replace term you have specified.</li>
-    <li><strong>Replace</strong>: This will replace the currently selected term in the current editor where it&#39;s highlighted with the selected replace term.</li>
-    <li><strong>Stop Search</strong>: Stop the current search if one is in progress.</li>
+    <li><strong>모두 찾기</strong> : 모든 검색어를 찾아서 출력 창에 표시합니다.</li>
+    <li><strong>이전 찾기</strong> : 검색어의 이전 인스턴스를 찾습니다. 작업 공간에서 참조가 포함 된 자산을 열고 (아직 열려 있지 않은 경우) 이동합니다.</li>
+    <li><strong>다음 찾기</strong> : 검색어의 다음 인스턴스를 찾습니다. 작업 공간에서 참조가 포함 된 자산을 열고 (아직 열려 있지 않은 경우) 이동합니다.</li>
+    <li><strong>모두 바꾸기</strong> : 옵션 세트를 사용하여 지정된 용어를 검색하고 자산에서 지정한 새 바꾸기 용어로 대체합니다.</li>
+    <li><strong>바꾸기</strong> : 현재 편집기에서 현재 선택된 용어를 선택한 대체 용어로 강조 표시합니다.</li>
+    <li><strong>검색 중지</strong> : 현재 검색이 진행중인 경우 중지합니다.</li>
   </ul>
-  <p>All results from using the Search / Replace window will be shown in the <a href="../../Introduction/The_Output_Window.htm">Search Output Window</a> at the bottom of the IDE. Each result can be <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> double-clicked to open the asset with the term in the current workspace and pan to it, ready for editing.</p>
+  <p>검색 / 바꾸기 창을 사용한 모든 결과는 IDE 하단의 <a href="../../Introduction/The_Output_Window.htm">검색 출력 창</a> 에 표시됩니다. 각 결과는 두 번 클릭하여 현재 작업 공간에서 용어가있는 자산을 열고 이동하여 편집 할 수 있습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('IDE_Navigation/Menus/The_Edit_Menu.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Menus.htm">Menus</a></div>
-        <div style="float:right">Next: <a href="The_Build_Menu.htm">The Build Menu</a></div>
+        <div style="float:left">목록: <a href="../Menus.htm">메뉴</a></div>
+        <div style="float:right">다음: <a href="The_Build_Menu.htm">빌드 메뉴</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Edit Menu
@@ -132,4 +127,4 @@ The Edit Menu
 edit_menu
 -->
 
-</body></html>
+</body></html> 

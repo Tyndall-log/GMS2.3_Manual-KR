@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Other Events">
-        <span>Other Events</span>
+        <span>기타 행사</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,118 +80,96 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Other Events</h1>
+  <h1>다른 이벤트</h1>
   <p><img alt="The Other Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_OtherEvents.png"/></p>
-  <p>This page explains each of the different events that are collected under the <strong>Other</strong> events category in the Object Editor:</p>
+  <p>이 페이지는 오브젝트 편집기의 <strong>기타</strong> 이벤트 카테고리에서 수집되는 각기 다른 이벤트에 대해 설명합니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Outside Room</span><span data-close-text="true">Outside Room</span></a> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">외부 방</span> <span data-close-text="true">외부 방</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This event is triggered when an instance goes outside the room, and is based on a check done against the assigned sprite (and its properties) of the instance, so that even if you have set the image x or y scale to a value other than one, this event
-      will only be triggered when the whole sprite would be out the screen. If the instance has no sprite, then the position of the instance is used and the moment its x or y position is outside of the room then it will trigger the event too. This event
-      is typically used for things like bullets, where they are destroyed once they leave the room so you don&#39;t end up with millions of bullets flying away infinitely and causing your game to slow down. Note that this event is only triggered once
-      when the instance leaves the room initially.</p>
+    <p class="dropspot">이 이벤트는 인스턴스가 방 밖으로 나갈 때 트리거되며 인스턴스의 지정된 스프라이트 (및 해당 속성)에 대해 수행 된 검사를 기반으로하므로 이미지 x 또는 y 스케일을 다른 값으로 설정 한 경우에도 하나,이 이벤트는 전체 스프라이트가 화면을 벗어날 때만 트리거됩니다. 인스턴스에 스프라이트가 없으면 인스턴스의 위치가 사용되고 x 또는 y 위치가 방 밖에있는 순간에도 이벤트가 트리거됩니다. 이 이벤트는 일반적으로 방을 나가면 파괴되는 총알과 같은 것들에 사용됩니다. 수백만 개의 총알이 무한히 날아가서 게임 속도가 느려지지 않습니다. 이 이벤트는 인스턴스가 처음 방을 떠날 때 한 번만 트리거됩니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Intersect Boundary</span><span data-close-text="true">Intersect Boundary</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">경계</span> <span data-close-text="true">교차</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This event is triggered when an instance &quot;touches&quot; the inside edge of the room, and, like the outside room event, is based on a check done against the assigned sprite of the instance, so that even if you have set the image x or y scale to
-      a value other than one, this event still be triggered the moment a part of the sprite intersects the room boundary. If the instance has <em>no </em>sprite, then the position of the instance is used and the moment its x or y position intersects the
-      room boundary then it will trigger the event too. You can use this event to do things like tell an instance to &quot;bounce&quot; back in towards the room again rather than go outside.</p>
+    <p class="dropspot">이 이벤트는 인스턴스가 룸의 내부 가장자리를 &quot;만질&quot;때 트리거되며 외부 룸 이벤트와 같이 인스턴스의 할당 된 스프라이트에 대해 수행 된 검사를 기반으로하므로 이미지 x 또는 y가 아닌 다른 값으로 조정되는 경우에도 스프라이트의 일부가 룸 경계와 교차하는 순간이 이벤트가 트리거됩니다. 인스턴스에 스프라이트가 <em>없는</em> 경우 인스턴스의 위치가 사용되고 x 또는 y 위치가 방 경계와 교차하는 순간 이벤트도 트리거됩니다. 이 이벤트를 사용하여 인스턴스가 외부로 나가지 않고 다시 방으로 다시 튀어 오도록하는 등의 작업을 수행 할 수 있습니다.</p>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Views</span><span data-close-text="true">Views</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">조회수</span> <span data-close-text="true">조회수</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">Camera views are normally defined in the room editor and used to show only a small area of a large room at any one time. This event category has two seperate sub-categories (<strong>Outside View</strong> and <strong>Intersect Boundary</strong>), with
-      eight different events in each corresponding to the eight available view ports. These two categories function exactly the same as the respective room events, only taking the boundary of the camera view as the thing for the instance to check against
-      rather than the room.</p>
+    <p class="dropspot">카메라 뷰는 일반적으로 룸 편집기에서 정의되며 한 번에 큰 룸의 작은 영역 만 표시하는 데 사용됩니다. 이 이벤트 범주에는 2 개의 개별 하위 범주 ( <strong>Outside View</strong> 및 <strong>Intersect Boundary</strong> )가 있으며 각각 8 개의 사용 가능한보기 포트에 해당하는 8 개의 서로 다른 이벤트가 있습니다. 이 두 범주는 각 룸 이벤트와 정확히 동일하게 작동하며, 카메라 뷰의 경계를 인스턴스가 아닌 룸이 아닌 확인해야하는 것으로 간주합니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Game Start</span><span data-close-text="true">Game Start</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">게임 시작</span> <span data-close-text="true">게임 시작</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">This special event is triggered only once in the whole game and only for those instances with actions or code placed in the event. These instances must be present in the first room of the game and have been placed there in the room editor, rather
-      than have been created dynamically using code or actions. It should be noted that this event happens <em>after </em>the create event of all instances and so can contain code or actions with variables that have been previously defined in that event.
-      This event is typically defined in only one &quot;controller&quot; object and is typically used to initialize global variables, start music, read from files and any other thing that is usually only done once at the start of a game.</p>
+    <p class="dropspot">이 특별 이벤트는 전체 게임에서 한 번만 트리거되며 이벤트에 조치 또는 코드가있는 인스턴스에 대해서만 트리거됩니다. 이러한 인스턴스는 게임의 첫 번째 방에 존재해야하며 코드 나 동작을 사용하여 동적으로 생성 된 것이 아니라 룸 편집기에 있어야합니다. 이 이벤트는 모든 인스턴스의 create 이벤트 <em>이후</em> 에 발생하므로 해당 이벤트에서 이전에 정의 된 변수가있는 코드 또는 조치를 포함 할 수 있습니다. 이 이벤트는 일반적으로 하나의 &quot;컨트롤러&quot;객체에만 정의되며 일반적으로 전역 변수 초기화, 음악 시작, 파일 읽기 및 일반적으로 게임 시작시 한 번만 수행되는 기타 작업에 사용됩니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Game End</span><span data-close-text="true">Game End</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">게임 끝</span> <span data-close-text="true">게임 끝</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">Similar to the above mentioned Game Start event, this event is only triggered once in the whole game and that is just before the game window actually closes. Again, for an instance with this event to actually do anything it has to be in the room as
-      the game is closed. Please note that this event in really only viable for <strong>Windows</strong>, <strong>Ubuntu </strong>(Linux) and <strong>macOS</strong> games as mobile devices may just close the game without giving GameMaker Studio 2 the
-      chance to call this event. For browser games made with the HTML5 module, this event should work when the game tab or browser is closed, but not all browsers support this feature (Firefox, Chrome and Safari do at the time of writing) so care must
-      be taken when using it. Typically you would use this event to save data.</p>
+    <p class="dropspot">위에서 언급 한 Game Start 이벤트와 유사하게이 이벤트는 전체 게임에서 한 번만 트리거되며 실제로 게임 창이 닫히기 직전입니다. 다시 말하지만,이 이벤트가있는 인스턴스는 실제로 게임이 닫힐 때 룸에 있어야하는 모든 것을 수행합니다. 모바일 장치가 GameMaker Studio 2에이 이벤트를 호출 할 기회를주지 않으면 서 게임을 닫을 수 있으므로이 이벤트는 <strong>Windows</strong> , <strong>Ubuntu</strong> (Linux) 및 <strong>macOS</strong> 게임에서만 실제로 실행됩니다. HTML5 모듈로 만든 브라우저 게임의 경우이 이벤트는 게임 탭이나 브라우저가 닫혀있을 때 작동하지만 모든 브라우저가이 기능을 지원하는 것은 아닙니다 (작성시 파이어 폭스, 크롬 및 사파리는 지원함). . 일반적으로이 이벤트를 사용하여 데이터를 저장합니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Room Start</span><span data-close-text="true">Room Start</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">방 시작</span> <span data-close-text="true">방 시작</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">This event happens for all instances initially in a room when the room starts. Please note that it happens <em>after </em>the creation event and so can depend on variables and things defined previously in that event.</p>
+    <p class="dropspot">이 이벤트는 회의실이 시작될 때 회의실의 모든 인스턴스에서 처음 발생합니다. 작성 이벤트 <em>이후</em> 에 발생하므로 해당 이벤트에서 이전에 정의 된 변수 및 사물에 따라 달라질 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Room End</span><span data-close-text="true">Room End</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">방 끝</span> <span data-close-text="true">방 끝</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">This event happens to all instances that are in the room when the room ends. This event is very useful for &quot;cleaning up&quot; after a level has ended, for example you can delete loaded resources here, or remove a particle system to prevent memory
-      leaks etc...</p>
+    <p class="dropspot">이 이벤트는 회의실이 종료 될 때 회의실에있는 모든 인스턴스에 발생합니다. 이 이벤트는 레벨이 종료 된 후 &quot;정리&quot;에 매우 유용합니다. 예를 들어 여기에서로드 된 리소스를 삭제하거나 파티클 시스템을 제거하여 메모리 누수 등을 방지 할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Animation End</span><span data-close-text="true">Animation End</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">애니메이션 끝</span> <span data-close-text="true">애니메이션 끝</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">In GameMaker Studio 2 sprites are not static things as they can have sub-images and be animated at different speeds. Each frame of an animation (called a sub-image) has its own number, starting at 0, which can be checked in code or through actions,
-      but sometimes all you really need to know is when the animation has ended. That&#39;s when this event is triggered, right at the end of the animation when the sub image index shows that the last frame has been reached. This event is really useful
-      for many things, for example an explosion object where you can set the instance to destroy itself when the last frame of the animation is reached.</p>
+    <p class="dropspot">GameMaker Studio 2에서 스프라이트는 하위 이미지를 가질 수 있고 다른 속도로 애니메이션 될 수 있기 때문에 정적 인 것은 아닙니다. 애니메이션의 각 프레임 (하위 이미지)은 0부터 시작하여 코드 또는 작업을 통해 확인할 수있는 고유 번호를 갖지만 때로는 애니메이션이 종료 된 시점 만 알면됩니다. 하위 이미지 인덱스에 마지막 프레임에 도달했음을 나타내는 애니메이션이 끝날 때이 이벤트가 트리거되는 시점입니다. 이 이벤트는 애니메이션의 마지막 프레임에 도달했을 때 인스턴스 자체를 파괴하도록 인스턴스를 설정할 수있는 폭발 오브젝트와 같은 많은 것들에 실제로 유용합니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Animation Update</span><span data-close-text="true">Animation Update</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">애니메이션 업데이트</span> <span data-close-text="true">애니메이션 업데이트</span></a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">This event is designed only for use with the <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Skeletal_Animation/Skeletal_Animation.htm">Skeletal Animation Functions</a>. It is a special event that is triggered every step in
-      an instance that uses a skeletal animation sprite, and is designed to &quot;intercept&quot; the bone data after the orientation of the bones has been calculated for the current animation state but before this data is committed to use for drawing.
-      This allows you to make modifications to the bone data using the appropriate functions.</p>
+    <p class="dropspot">이 이벤트는 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Skeletal_Animation/Skeletal_Animation.htm">Skeletal Animation Functions</a> 와 함께 사용하도록 설계되었습니다. 스켈 레탈 애니메이션 스프라이트를 사용하는 인스턴스의 모든 단계에서 트리거되는 특수 이벤트로, 뼈의 방향이 현재 애니메이션 상태에 대해 계산 된 후이 데이터가 커밋되기 전에 뼈 데이터를 &quot;차단&quot;하도록 설계되었습니다. 그리기에 사용합니다. 이를 통해 적절한 기능을 사용하여 본 데이터를 수정할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Animation Event</span><span data-close-text="true">Animation Event</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">애니메이션 이벤트</span> <span data-close-text="true">애니메이션 이벤트</span></a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot"><strong></strong>This event is designed only for use with the <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Skeletal_Animation/Skeletal_Animation.htm">Skeletal Animation Functions</a>. This event is triggered in an object
-      which has a skeletal animation sprite assigned to it, and where the object is using the default draw for the assigned sprite, or the sprite is being drawn via draw_self(). It currently won&#39;t trigger on skeleton animation sprites drawn any other
-      way. The event is designed to capture and transmit data that has been assigned to particular events in the sprite animation as defined in the editor used to make them.</p>
-    <p class="dropspot">When the Animation Event is triggered, a special <a href="../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> will be created called the event_data map (much the same as we have the async_load map for an async event).
-      This map will have all of the following key/value pairs that you can parse to get information about the event:</p>
+    <p class="dropspot">이 이벤트는 <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Skeletal_Animation/Skeletal_Animation.htm">Skeletal Animation Functions</a> 와 함께 사용하도록 설계되었습니다. 이 이벤트는 스켈 레탈 애니메이션 스프라이트가 할당 된 오브젝트에서, 오브젝트가 지정된 스프라이트에 대한 기본 드로우를 사용하거나, draw_self ()를 통해 스프라이트가 그려지는 오브젝트에서 트리거됩니다. 현재 다른 방식으로 그려진 스켈레톤 애니메이션 스프라이트에서는 트리거되지 않습니다. 이 이벤트는 스프라이트 애니메이션의 특정 이벤트에 할당 된 데이터를 캡처하고 편집기에 정의 된 데이터를 전송하도록 설계되었습니다.</p>
+    <p class="dropspot">애니메이션 이벤트가 트리거되면 event_data 맵이라는 특수 <a href="../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> 이 생성됩니다 (비동기 이벤트에 대한 async_load 맵과 거의 동일). 이 맵에는 이벤트에 대한 정보를 얻기 위해 구문 분석 할 수있는 다음과 같은 키 / 값 쌍이 모두 있습니다.</p>
     <ul class="dropspotlist">
-      <li>&quot;<span class="inline">name</span>&quot;: the name of the event (as defined in the animation program)</li>
-      <li>&quot;<span class="inline">track</span>&quot;: the index of the track the animation is playing on (default is 0)</li>
-      <li>&quot;<span class="inline">integer</span>&quot;: an integer value associated with the event (as defined in the animation program, default is 0)</li>
-      <li>&quot;<span class="inline">float</span>&quot;: a float value associated with the event (as defined in the animation program, default is 0.0)</li>
-      <li>&quot;<span class="inline">string</span>&quot;: a string value associated with the event (as defined in the animation program, default is an empty string &quot;&quot;)</li>
+      <li>&quot; <span class="inline">name</span> &quot;: 이벤트 이름 (애니메이션 프로그램에 정의 된대로)</li>
+      <li>&quot; <span class="inline">track</span> &quot;: 애니메이션이 재생되는 트랙의 색인 (기본값은 0)</li>
+      <li>&quot; <span class="inline">integer</span> &quot;: 이벤트와 연관된 정수 값 (애니메이션 프로그램에 정의 된대로 기본값은 0 임)</li>
+      <li>&quot; <span class="inline">float</span> &quot;: 이벤트와 관련된 부동 소수점 값 (애니메이션 프로그램에 정의 된대로 기본값은 0.0 임)</li>
+      <li>&quot; <span class="inline">string</span> &quot;: 이벤트와 관련된 문자열 값 (애니메이션 프로그램에 정의 된대로 기본값은 빈 문자열 &quot;&quot;)</li>
     </ul>
     <p> </p>
     <p><strong></strong></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">Path Ended</span><span data-close-text="true">Path Ended</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">끝낸</span> <span data-close-text="true">경로 끝난</span></a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot"><a href="../Paths.htm">Paths</a> can be an important part of making any game, whether it is for a tower defence type game, or a shoot-em-up or whatever, and it&#39;s often really important that an instance does some particular action when it reaches
-      the end of its path. This event detects this and is triggered when it happens allowing you to add in code or actions to deal with the circumstances, for example in a tower defence game you would use this to destroy the instance and remove a health
-      point from the goal object.</p>
+    <p class="dropspot"><a href="../Paths.htm">패스</a> 는 타워 디펜스 타입 게임이든, 슛-엠-업이든 무엇이든간에 게임을 만드는 데 중요한 부분이 될 수 있으며 인스턴스가 끝날 때 특정 작업을 수행하는 것이 종종 중요합니다. 통로. 이 이벤트는이를 감지하고 상황을 처리하기 위해 코드 또는 조치를 추가 할 수있게되면 트리거됩니다 (예 : 타워 방어 게임에서이를 사용하여 인스턴스를 파괴하고 목표 오브젝트에서 상태 지점을 제거합니다).</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#"><span data-open-text="true">User Events</span><span data-close-text="true">User Events</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#"><span data-open-text="true">사용자 이벤트</span> <span data-close-text="true">사용자 이벤트</span></a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">These are special events that are not triggered by GameMaker Studio 2 automatically, but have to be <em>implicitly </em>called by you using code or actions while the game is running. There are 12 user events in total and they can contain code or actions
-      and they can be called at any time in the game loop, making them very useful for creating your own events that happen when <em>you </em>decide.</p>
+    <p class="dropspot">이러한 이벤트는 GameMaker Studio 2에 의해 자동으로 트리거되지 않지만 게임이 실행되는 동안 코드 나 액션을 사용하여 <em>암시 적으로</em> 호출해야하는 특수 이벤트입니다. 이 총 12 사용자 이벤트는 그들은 코드 또는 조치를 포함 할 수 있으며, 그들은 <em>당신이</em> 결정할 때 발생하는 자신의 이벤트를 생성하기에 매우 유용하고, 게임 루프에서 언제든지 호출 할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#"><span data-open-text="true">Broadcast Message</span><span data-close-text="true">Broadcast Message</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#"><span data-open-text="true">방송 메시지</span> <span data-close-text="true">방송 메시지</span></a></p>
   <div class="droptext" data-targetname="drop-down12">
-    <p class="dropspot">This event is triggered whenever a sprite or a sequence generates a broadcast message string. For more information please see the page on <a href="../Sequence_Properties/Broadcast_Messages.htm">Broadcast Messages</a>.</p>
+    <p class="dropspot">이 이벤트는 스프라이트 또는 시퀀스가 ​​브로드 캐스트 메시지 문자열을 생성 할 때마다 트리거됩니다. 자세한 내용은 <a href="../Sequence_Properties/Broadcast_Messages.htm">브로드 캐스트 메시지</a> 페이지를 참조하십시오.</p>
     <p> </p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Object_Properties/Other_Events.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Object_Events.htm">Object Events</a></div>
-        <div style="float:right">Next: <a href="Draw_Events.htm">Draw Events</a></div>
+        <div style="float:left">목록: <a href="Object_Events.htm">객체 이벤트</a></div>
+        <div style="float:right">다음: <a href="Draw_Events.htm">이벤트 추첨</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Other Events
@@ -215,4 +193,4 @@ Broadcast Message
 other_events
 -->
 
-</body></html>
+</body></html> 

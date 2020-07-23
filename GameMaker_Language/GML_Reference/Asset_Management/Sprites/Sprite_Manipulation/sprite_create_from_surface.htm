@@ -71,7 +71,7 @@
         <span>sprite_create_from_surface</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,86 +81,81 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_create_from_surface</h1>
-  <p>With this function you can create a sprite from a previously initialised surface (the surface index ID value is returned when you create the surface using <a href="../../../Drawing/Surfaces/surface_create.htm"><tt>surface_create()</tt></a>). The x and
-    y coordinates that you then input in the function should be relative to the (0,0) position of the <i>surface</i> (the top left corner) and not the game window (nor the view if you have one active). The width and height arguments are in pixels and
-    define the width and height of the part of the surface to use.</p>
-  <p>Setting the &quot;removeback&quot; argument to <tt>true</tt> will remove a colour from the sprite, by checking the <i>bottom left</i> pixel of the sprite for the colour there and then using that as the colour to be removed.</p>
-  <p>If you choose the &quot;removeback&quot; option, you may also want GameMaker Studio 2 to smooth the edges of the sprite by setting the &quot;smooth&quot; argument to <tt>true</tt>. All this does is create a semi-transparent border around the edges of
-    the sprite after it has had its background removed.</p>
-  <p>Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is &quot;fixed&quot; onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of one sprite sub-image. So,
-    for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have its origin in the center.</p>
-  <p>By default all new sprites have their bounding boxes calculated automatically (the exact bbox will depend on the size and transparency of the sprite), however you may wish to customise this, in which case you should also use the function <a href="sprite_collision_mask.htm"><tt>sprite_collision_mask()</tt></a>.</p>
-  <p class="note"><b>NOTE:</b> When you create a sprite in GameMaker Studio 2 with this method you must remember to remove it again (with <a href="sprite_delete.htm"><tt>sprite_delete()</tt></a>) when no longer needed, otherwise there is risk of a memory leak which will
-    slow down and eventually crash your game.</p>
+  <p>이 함수를 사용하면 이전에 초기화 된 표면에서 스프라이트를 만들 수 있습니다 ( <a href="../../../Drawing/Surfaces/surface_create.htm"><tt>surface_create ()를</tt></a> 사용하여 표면을 만들 때 표면 인덱스 ID 값이 반환 <a href="../../../Drawing/Surfaces/surface_create.htm"><tt>됨</tt></a> ). 함수에 입력 한 x 및 y 좌표는 게임 윈도우가 아닌 <i>표면</i> 의 (0,0) 위치 (왼쪽 위 모서리)를 기준으로해야합니다. width 및 height 인수는 픽셀 단위이며 사용할 표면 부분의 너비 및 높이를 정의합니다.</p>
+  <p>&quot;removeback&quot;인수를 <tt>true로</tt> 설정하면 스프라이트의 <i>왼쪽 아래</i> 픽셀에서 해당 색상을 확인한 다음 제거 할 색상으로 사용하여 스프라이트에서 색상을 제거합니다.</p>
+  <p>&quot;removeback&quot;옵션을 선택하면, &quot;smooth&quot;인수를 <tt>true</tt> 로 설정하여 GameMaker Studio 2가 스프라이트의 가장자리를 부드럽게 할 수도 있습니다. 이 모든 것은 스프라이트의 배경을 제거한 후 스프라이트 가장자리 주위에 반투명 테두리를 만드는 것입니다.</p>
+  <p>마지막으로 스프라이트의 x 및 y <i>원점</i> 을 지정할 수도 있습니다. 이것은 스프라이트가 그것을 사용하는 인스턴스에 스프라이트가 &quot;고정 된&quot;지점이며, 항상 하나의 스프라이트 서브 이미지의 왼쪽 상단의 0,0을 기준으로 계산됩니다. 예를 들어,이 값이 (16,16)으로 설정된 32 x 32 픽셀 인 스프라이트는 중심에 원점이 있습니다.</p>
+  <p>기본적으로 모든 새 스프라이트에는 경계 상자가 자동으로 계산됩니다 (정확한 bbox는 스프라이트의 크기와 투명도에 따라 <a href="sprite_collision_mask.htm"><tt>다름)</tt></a> . 그러나이를 사용자 정의 할 수 있습니다.이 경우 <a href="sprite_collision_mask.htm"><tt>sprite_collision_mask ()</tt></a> 함수도 사용해야합니다.</p>
+  <p class="note"><b>참고 :</b> 이 방법으로 GameMaker Studio 2에서 스프라이트를 생성 할 때 더 이상 필요하지 않은 경우 <a href="sprite_delete.htm"><tt>스프라이트를</tt></a> 다시 제거해야합니다 ( <a href="sprite_delete.htm"><tt>sprite_delete () 사용</tt></a> ). 그렇지 않으면 메모리 누수로 인해 속도가 느려지고 게임이 중단 될 수 있습니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">sprite_create_from_surface(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td>The index of the surface to create from.</td>
+        <td>인덱스</td>
+        <td>만들 표면의 색인입니다.</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to copy from.</td>
+        <td>엑스</td>
+        <td>복사 할 x 위치입니다.</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to copy from.</td>
+        <td>와이</td>
+        <td>복사 할 y 위치입니다.</td>
       </tr>
       <tr>
-        <td>w</td>
-        <td>The width of the area to be copied (from the x position).</td>
+        <td>승</td>
+        <td>복사 할 영역의 너비입니다 (x 위치에서).</td>
       </tr>
       <tr>
         <td>h</td>
-        <td>The height of the area to be copied (from the y position).</td>
+        <td>복사 할 영역의 높이입니다 (y 위치에서).</td>
       </tr>
       <tr>
-        <td>removeback</td>
-        <td>Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</td>
+        <td>제거</td>
+        <td>배경색 (왼쪽 아래 픽셀)이있는 모든 픽셀을 투명하게 만들지 여부를 나타냅니다.</td>
       </tr>
       <tr>
-        <td>smooth</td>
-        <td>Indicates whether to smooth the edges.</td>
+        <td>부드러운</td>
+        <td>가장자리를 부드럽게할지 여부를 나타냅니다.</td>
       </tr>
       <tr>
-        <td>xorig</td>
-        <td>Indicates the x position of the origin in the sprite.</td>
+        <td>코 리그</td>
+        <td>스프라이트에서 원점의 ​​x 위치를 나타냅니다.</td>
       </tr>
       <tr>
         <td>yorig</td>
-        <td>Indicates the y position of the origin in the sprite.</td>
+        <td>스프라이트에서 원점의 ​​y 위치를 나타냅니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns</h4>
+  <h4>보고</h4>
   <p class="code">Real (unique sprite ID value)</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">var surf;<br/> surf = surface_create(32, 32);<br/> surface_set_target(surf);
     <br/> draw_clear_alpha(c_black, 0);<br/> draw_sprite(spr_Body, 0, 0, 0);<br/> draw_sprite(spr_Clothes, 0, 0, 0);<br/> draw_sprite(spr_Hair, 0, 0, 0);<br/> spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br/> surface_reset_target();
     <br/> surface_free(surf);
   </p>
-  <p>The above code creates a surface and stores its index in the local variable &quot;surf&quot;. It then targets that surface, clears it and draws several sprites on top of each other. Finally it creates a new sprite from the composite image drawn on the
-    surface and assigns its index to &quot;spr_Custom&quot; before freeing up the memory used by the surface.</p>
+  <p>위의 코드는 표면을 작성하고 색인을 로컬 변수 &quot;surf&quot;에 저장합니다. 그런 다음 해당 표면을 대상으로 지정하고 지우고 서로 위에 여러 개의 스프라이트를 그립니다. 마지막으로 표면에 그려진 합성 이미지에서 새 스프라이트를 만들고 표면에 사용 된 메모리를 비우기 전에 해당 인덱스를 &quot;spr_Custom&quot;에 할당합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_create_from_surface.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_add_from_surface.htm">sprite_add_from_surface</a></div>
+        <div style="float:left">목록: <a href="Sprite_Manipulation.htm">스프라이트 조작</a></div>
+        <div style="float:right">다음: <a href="sprite_add_from_surface.htm">sprite_add_from_surface</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 sprite_create_from_surface
@@ -169,4 +164,4 @@ sprite_create_from_surface
 sprite_create_from_surface
 -->
 
-</body></html>
+</body></html> 

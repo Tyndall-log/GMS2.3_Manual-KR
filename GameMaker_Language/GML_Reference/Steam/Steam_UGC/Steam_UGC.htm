@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Steam UGC">
-        <span>Steam UGC</span>
+        <span>증기 UGC</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,17 +80,15 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Steam</h1>
-  <p>This section is for those users that have been given access to the Steam API for publishing your game to that platform and that want to use the possibilities that the Steam Workshop and Community gives you for adding and generating user content in your
-    projects. The simplest form of user generated content is the ability for the user to take and share screenshots, which is facilitated using the following two functions:</p>
+  <h1>증기</h1>
+  <p>이 섹션은 게임을 해당 플랫폼에 게시하기 위해 Steam API에 액세스 할 수 있고 프로젝트에서 사용자 컨텐츠를 추가 및 생성하기 위해 Steam 창작 마당 및 커뮤니티에서 제공 할 수있는 가능성을 사용하려는 사용자를위한 것입니다. 가장 간단한 형태의 사용자 생성 콘텐츠는 사용자가 스크린 샷을 찍고 공유 할 수있는 기능으로, 다음 두 가지 기능을 사용하여 촉진됩니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="steam_is_screenshot_requested.htm">steam_is_screenshot_requested</a></li>
     <li><a href="steam_send_screenshot.htm">steam_send_screenshot</a></li>
   </ul>
   <p> </p>
-  <p>The rest of the function on this page are related to using the <strong>Steam Worksop</strong> and some of them require the <strong>Steam App ID</strong> for your project as well as a <strong>User ID</strong> for the person playing the game or their
-    user name, which can be found using the following functions:</p>
+  <p>이 페이지의 나머지 기능은 <strong>Steam Worksop</strong> 사용과 관련이 있으며 일부는 프로젝트의 <strong>Steam 앱 ID</strong> 와 게임을하는 사람의 <strong>사용자 ID</strong> 또는 사용자 이름을 필요로합니다. 다음 기능들 :</p>
   <p> </p>
   <ul class="colour">
     <li><a href="../Steam_API/steam_get_app_id.htm">steam_get_app_id</a></li>
@@ -98,28 +96,24 @@
     <li><a href="../Steam_API/steam_get_user_persona_name.htm">steam_get_user_persona_name</a></li>
   </ul>
   <p> </p>
-  <p>Before using any of the built in functions for the Steam UGC (<strong>U</strong>ser <strong>G</strong>enerated <strong>C</strong>ontent) API you need to have set up your game correctly from the Steam dashboard and you should have read through the required
-    documentation found here:</p>
+  <p>중 하나를 사용하기 전에 UGC <strong>(U</strong> 버리는 <strong>G</strong> enerated <strong>C</strong> ontent) API는 스팀 대시 보드에서 제대로 게임을 설정하고 당신이 필요한 문서를 읽어해야 여기에서 찾을 필요로하는 증기를위한 기능 내장 :</p>
   <ul class="colour">
-    <li><a href="https://partner.steamgames.com/documentation/ugc#Tech" target="_blank">Sharing User Generated Content</a></li>
+    <li><a href="https://partner.steamgames.com/documentation/ugc#Tech" target="_blank">사용자 생성 컨텐츠 공유</a></li>
   </ul>
-  <p class="note"><strong>NOTE</strong>: You need to have your game accepted for the Steam online store and have access to the developer areas of the Steam API documentation.</p>
-  <p>All subscribed UGC items will be downloaded by the Steam client automatically, and you should have code in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam Asynchronous Event</a> to catch this and store the
-    ID of the UGC that has been downloaded for use in the other UGC functions.</p>
-  <p class="note"><b>IMPORTANT!</b> Steam UGC IDs can be huge numbers over 600,000,000. This means that sometimes you may need to store these as a string rather than try and store them as a real value, especially if working with buffers or trying to write the value to
-    a text file (since this will convert it to a simplified standard format like &quot;6.6624e+003&quot; which will cause issues being read back).</p>
-  <p>The normal workflow for getting UGC into your game would be as follows:</p>
+  <p class="note"><strong>참고</strong> : Steam 온라인 상점에서 게임을 수락하고 Steam API 설명서의 개발자 영역에 액세스 할 수 있어야합니다.</p>
+  <p>가입 한 모든 UGC 항목은 Steam 클라이언트에 의해 자동으로 다운로드되며,이를 스팀으로 잡아서 다른 UGC 기능에 사용하기 위해 다운로드 된 UGC의 ID를 저장하려면 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam 비동기 이벤트</a> 에 코드가 있어야합니다.</p>
+  <p class="note"><b>중대한!</b> Steam UGC ID는 600,000,000 이상이 될 수 있습니다. 이것은 때로는 버퍼로 작업하거나 텍스트 파일에 값을 쓰려고 할 때 실제 값으로 저장하지 않고 문자열로 저장해야 할 수도 있습니다 (단순한 표준 형식으로 변환하기 때문에) &quot;6.6624e + 003&quot;과 같이 문제를 다시 읽습니다).</p>
+  <p>UGC를 게임에 도입하기위한 일반적인 작업 과정은 다음과 같습니다.</p>
   <ol>
-    <li>The user would subscribe to an item (either from your game using <a href="steam_ugc_subscribe_item.htm"><tt>steam_ugc_subscribe_item()</tt></a> or from the client/browser.</li>
-    <li>Your game would &quot;listen&quot; for new subscriptions with the appropriate code in the Steam Async Event.</li>
-    <li>When you get a subscription async event, you would then check if the item is installed (ie: downloaded) with <a href="steam_ugc_get_item_install_info.htm"><tt>steam_ugc_get_item_install_info()</tt></a>.</li>
-    <li>If the item is <i>not</i> installed, you&#39;ll need a check using <a href="steam_ugc_get_item_update_info.htm"><tt>steam_ugc_get_item_update_info()</tt></a> to track the download progress.</li>
+    <li>사용자는 항목을 구독합니다 ( <a href="steam_ugc_subscribe_item.htm"><tt>steam_ugc_subscribe_item ()을</tt></a> 사용하는 게임 또는 클라이언트 / 브라우저).</li>
+    <li>게임은 Steam Async Event에서 적절한 코드로 새로운 구독을 &quot;듣습니다&quot;.</li>
+    <li>구독 비동기 이벤트가 발생하면 <a href="steam_ugc_get_item_install_info.htm"><tt>steam_ugc_get_item_install_info ()를 사용</tt></a> 하여 항목이 설치되어 있는지 (예 : 다운로드) 확인합니다.</li>
+    <li>항목이 설치되어 <i>있지 않은</i> 경우 다운로드 진행 상황을 추적하려면 <a href="steam_ugc_get_item_update_info.htm"><tt>steam_ugc_get_item_update_info ()</tt></a> 를 사용하여 확인해야합니다.</li>
   </ol>
-  <p>The following sections explain all the functions required to get UGC functioning in GameMaker Studio 2:</p>
+  <p>다음 섹션은 GameMaker Studio 2에서 UGC 기능을 수행하는 데 필요한 모든 기능을 설명합니다.</p>
   <p> </p>
-  <h2><label for="a">Creating And Editing Content</label></h2>
-  <p>The following functions are essentially &quot;wrapper&quot; functions for those supplied in the Steam API for creating and uploading content to their servers. As such, we recommend that you read over the linked Steam documentation before using them
-    to gain a greater understanding of how they work: <a href="https://partner.steamgames.com/documentation/ugc#CreateUploadContent" target="_blank">Creating And Uploading Content</a>.</p>
+  <h2><label for="a">컨텐츠 작성 및 편집</label></h2>
+  <p>다음 함수는 본질적으로 서버에 컨텐츠를 작성하고 업로드하기 위해 Steam API에서 제공되는 기능에 대한 &quot;래퍼&quot;함수입니다. 따라서 링크 된 Steam 설명서를 사용하기 전에 내용을 읽고 이해하는 것이 좋습니다. <a href="https://partner.steamgames.com/documentation/ugc#CreateUploadContent" target="_blank">내용 작성 및 업로드</a> .</p>
   <p> </p>
   <ul class="colour">
     <li><a href="steam_ugc_create_item.htm">steam_ugc_create_item</a></li>
@@ -135,9 +129,8 @@
   </ul>
   <p> </p>
   <p> </p>
-  <h2><label for="b">Consuming Content</label></h2>
-  <p>Once your user content has been created and the workshop has it available for download, people can subscribe to it through the Steam App or through the Web portal. However GameMaker Studio 2 also includes the following functions to use the Steam
-    API for creating and canceling subscriptions as well as for getting information about what the user is subscribed to currently:</p>
+  <h2><label for="b">소비 내용</label></h2>
+  <p>사용자 컨텐츠가 작성되고 워크샵에서 다운로드 할 수있게되면 사람들은 Steam 앱 또는 웹 포털을 통해 해당 컨텐츠를 구독 할 수 있습니다. 그러나 GameMaker Studio 2에는 또한 구독을 생성 및 취소하고 사용자가 현재 구독 한 대상에 대한 정보를 얻기 위해 Steam API를 사용하는 다음 기능이 포함되어 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="steam_ugc_subscribe_item.htm">steam_ugc_subscribe_item</a></li>
@@ -150,8 +143,8 @@
   </ul>
   <p> </p>
   <p> </p>
-  <h2><label for="c">Querying Content</label></h2>
-  <p>There are also a large number of functions available to query the Steam API about the UGC items available:</p>
+  <h2><label for="c">컨텐츠 쿼리</label></h2>
+  <p>사용 가능한 UGC 항목에 대해 Steam API를 쿼리하는 데 사용할 수있는 많은 함수가 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="steam_ugc_create_query_user.htm">steam_ugc_create_query_user</a></li>
@@ -170,21 +163,22 @@
     <li><a href="steam_ugc_send_query.htm">steam_ugc_send_query</a></li>
   </ul>
   <p> </p>
-  <p>You can get a preview image of any UGC item from the workshop by using the function <tt>steam_ugc_send_query()</tt> to get the preview file handle of the image, and then calling the following function:</p>
+  <p><tt>steam_ugc_send_query ()</tt> 함수를 사용하여 이미지의 미리보기 파일 핸들을 가져온 후 다음 함수를 호출하여 워크샵에서 UGC 항목의 미리보기 이미지를 얻을 수 있습니다.</p>
   <ul class="colour">
     <li><a href="steam_ugc_download.htm">steam_ugc_download</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Steam/Steam_UGC/Steam_UGC.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Steam.htm">Steam</a></div>
-        <div style="float:right">Next: <a href="../Steam_API/Steam_API.htm">General Steam API</a></div>
+        <div style="float:left">목록: <a href="../Steam.htm">증기</a></div>
+        <div style="float:right">다음: <a href="../Steam_API/Steam_API.htm">일반 스팀 API</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Steam UGC
@@ -193,4 +187,4 @@ Steam UGC
 ugc_functions
 -->
 
-</body></html>
+</body></html> 

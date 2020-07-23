@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Obsolete Functions">
-        <span>Obsolete Functions</span>
+        <span>사용되지 않는 기능</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,86 +80,61 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Obsolete Functions</h1>
-  <p>Here you can find a list of all the functions that have been made obsolete when you compare GameMaker Studio 2 to legacy versions of the product. The functions listed here will be converted into <a href="Compatibility_Scripts.htm">compatibility scripts</a>    when you import a <span class="inline">*.yyz</span> made with a legacy version, and you can continue to work on the project as before. However, we recommend that you revise all the compatibility scripts created in a project, and ensure that future
-    projects use the new functions/methods of working rather than depend on these scripts.</p>
+  <h1>사용되지 않는 기능</h1>
+  <p>여기에서 GameMaker Studio 2를 레거시 버전의 제품과 비교할 때 사용되지 않는 모든 기능 목록을 찾을 수 있습니다. 여기에 나열된 기능은 레거시 버전으로 만든 <span class="inline">* .yyz</span> 를 가져올 때 <a href="Compatibility_Scripts.htm">호환성 스크립트</a> 로 변환되며 이전과 같이 프로젝트에서 계속 작업 할 수 있습니다. 그러나 프로젝트에서 생성 된 모든 호환성 스크립트를 수정하고 향후 프로젝트에서 이러한 스크립트에 의존하기보다는 새로운 기능 / 방법을 사용하도록 권장합니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Backgrounds</span><span data-close-text="true">Backgrounds</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">배경</span> <span data-close-text="true">배경</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">In legacy GameMaker you had a separate <strong>background </strong>resource, where you could add images to be used as backgrounds. In GameMaker Studio 2 all images are considered sprites, and the use you put them too will depend on the layer they
-      are assigned to in the room. This means that there is no longer a &quot;background&quot; resource, and it also means that the following functions are obsolete:</p>
+    <p class="dropspot">레거시 GameMaker에는 별도의 <strong>배경</strong> 리소스가있어 <strong>배경</strong> 으로 사용할 이미지를 추가 할 수 있습니다. GameMaker Studio 2에서 모든 이미지는 스프라이트로 간주되며 이미지를 넣는 용도는 룸에 지정된 레이어에 따라 다릅니다. 이는 더 이상 &quot;백그라운드&quot;리소스가 없으며 다음 기능이 더 이상 사용되지 않음을 의미합니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <td>draw_background</td>
           <td style="">draw_background_ext</td>
-          <td style="">draw_background_<br/> stretched
-          </td>
-          <td>draw_background_<br/> stretched_ext
-          </td>
+          <td style="">draw_background_ 뻗어</td>
+          <td>draw_background_ stretched_ext</td>
         </tr>
         <tr>
-          <td>draw_background_<br/> part
-          </td>
-          <td style="">draw_background_<br/> part_ext
-          </td>
-          <td style="">draw_background_<br/> general
-          </td>
-          <td>draw_background_<br/> tiled
-          </td>
+          <td>draw_background_ 부분</td>
+          <td style="">draw_background_ part_ext</td>
+          <td style="">draw_background_ 일반</td>
+          <td>draw_background_ 타일</td>
         </tr>
         <tr>
-          <td>draw_background_<br/> tiled_ext
-          </td>
+          <td>draw_background_ tiled_ext</td>
           <td style="">background_name</td>
           <td style="">background_exists</td>
-          <td>background_get_<br/> name
-          </td>
+          <td>background_get_ 이름</td>
         </tr>
         <tr>
           <td>draw_background</td>
           <td style="">draw_background_ext</td>
-          <td style="">draw_background_<br/> stretched
-          </td>
-          <td>draw_background_<br/> stretched_ext
-          </td>
+          <td style="">draw_background_ 뻗어</td>
+          <td>draw_background_ stretched_ext</td>
         </tr>
         <tr>
-          <td>background_get_<br/> width
-          </td>
-          <td style="">background_get_<br/> height
-          </td>
-          <td style="">background_get_<br/> transparent
-          </td>
-          <td>background_get_<br/> smooth
-          </td>
+          <td>background_get_ 너비</td>
+          <td style="">background_get_ 높이</td>
+          <td style="">background_get_ 투명</td>
+          <td>background_get_ smooth</td>
         </tr>
         <tr>
-          <td>background_get_<br/> preload
-          </td>
+          <td>background_get_ 예압</td>
           <td style="">background_get_uvs</td>
-          <td style="">background_get_<br/> texture
-          </td>
-          <td>background_set_alpha_<br/> from_background
-          </td>
+          <td style="">background_get_ 텍스처</td>
+          <td>background_set_alpha_ from_background</td>
         </tr>
         <tr>
-          <td>background_create_<br/> from_surface
-          </td>
-          <td style="">background_create_<br/> color
-          </td>
-          <td style="">background_create_<br/> colour
-          </td>
-          <td>background_create_<br/> gradient
-          </td>
+          <td>background_create_ from_surface</td>
+          <td style="">background_create_ 색상</td>
+          <td style="">background_create_ 색상</td>
+          <td>background_create_ 그라디언트</td>
         </tr>
         <tr>
           <td>background_add</td>
           <td style="">background_replace</td>
-          <td style="">background_add_<br/> alpha
-          </td>
-          <td>background_replace_<br/> alpha
-          </td>
+          <td style="">background_add_ alpha</td>
+          <td>background_replace_ alpha</td>
         </tr>
         <tr>
           <td>background_delete</td>
@@ -169,78 +144,57 @@
         </tr>
         <tr>
           <td>background_prefetch</td>
-          <td style="">background_<br/> prefetch_multi
-          </td>
+          <td style="">background_ 프리 페치 _ 멀티</td>
           <td style="">background_flush</td>
-          <td>background_flush_<br/> multi
-          </td>
+          <td>background_flush_ multi</td>
         </tr>
         <tr>
           <td>room_set_background</td>
-          <td style="">room_set_<br/> background_colour
-          </td>
-          <td style=""> </td>
+          <td style="">room_set_ background_colour</td>
+          <td style=""></td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">Legacy GameMaker lso had a number of different background variables that accessed the global background array. These are no longer required in GameMaker Studio 2:</p>
+    <p class="dropspot">레거시 GameMaker lso에는 전역 배경 배열에 액세스 한 다양한 배경 변수가있었습니다. GameMaker Studio 2에서는 더 이상 필요하지 않습니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
         </tr>
         <tr>
-          <td>background_<br/> index[0..7]
-          </td>
-          <td>background_<br/> visible[0..7]
-          </td>
-          <td>background_<br/> alpha[0..7]
-          </td>
-          <td>background_<br/> blend[0..7]
-          </td>
+          <td>background_ 인덱스 [0..7]</td>
+          <td>background_ visible [0..7]</td>
+          <td>background_ alpha [0..7]</td>
+          <td>background_ blend [0..7]</td>
         </tr>
         <tr>
-          <td>background_x[0..7]</td>
-          <td>background_y[0..7]</td>
-          <td>background_<br/> colour
-          </td>
-          <td>background_<br/> showcolour
-          </td>
+          <td>background_x [0..7]</td>
+          <td>background_y [0..7]</td>
+          <td>background_ 색상</td>
+          <td>background_ showcolour</td>
         </tr>
         <tr>
-          <td>background_<br/> foreground[0..7]
-          </td>
-          <td>background_<br/> hspeed[0..7]
-          </td>
-          <td>background_<br/> vspeed[0..7]
-          </td>
-          <td>background_<br/> htiled[0..7]
-          </td>
+          <td>background_ 전경 [0..7]</td>
+          <td>background_ hspeed [0..7]</td>
+          <td>background_ vspeed [0..7]</td>
+          <td>background_ htiled [0..7]</td>
         </tr>
         <tr>
-          <td>background_<br/> vtiled[0..7]
-          </td>
-          <td>background_<br/> width[0..7]
-          </td>
-          <td>background_<br/> height[0..7]
-          </td>
-          <td>background_<br/> xscale[0..7]
-          </td>
+          <td>background_ vtiled [0..7]</td>
+          <td>background_ 너비 [0..7]</td>
+          <td>background_ 높이 [0..7]</td>
+          <td>background_ xscale [0..7]</td>
         </tr>
         <tr>
-          <td>background_<br/> yscale[0..7]
-          </td>
+          <td>background_ yscale [0..7]</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about <b>Background Layers</b> from the section on the <a href="../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Room Editor</a>, and for more information on the functions that control background layers using code see
-      <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Background_Layers/Background_Layers.htm">Background Layers</a>.</p>
+    <p class="dropspot"><a href="../The_Asset_Editors/Room_Properties/Layer_Properties.htm">룸 편집기</a> 의 섹션에서 <b>배경 레이어에</b> 대한 자세한 내용을 볼 수 있으며 코드를 사용하여 배경 레이어를 제어하는 ​​기능에 대한 자세한 내용은 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Background_Layers/Background_Layers.htm">배경 레이어를</a> 참조하십시오.</p>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Tiles</span><span data-close-text="true">Tiles</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">타일</span> <span data-close-text="true">타일</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">As with backgrounds (explained above) the <strong>tile </strong>resource from legacy GameMaker no longer exists, and instead we have <strong>Tile Sets</strong> in GameMaker Studio 2. In legacy GameMaker, tiles used a background resource and were placed
-      at different depths in the room editor or through code, however the method used was not terribly flexible and was also not that efficient. To address these issues, in GameMaker Studio 2 tilesets are now created from a sprite resource, and can have
-      various different properties (like animation or auto-tiling). They are then placed on a tilemap layer within the room editor or through code. Due to these changes the following functions are now obsolete:</p>
+    <p class="dropspot">배경 (위에서 설명)과 마찬가지로 레거시 GameMaker의 <strong>타일</strong> 리소스가 더 이상 존재하지 않고 대신 GameMaker Studio 2에 <strong>타일 ​​세트</strong> 가 있습니다. 레거시 GameMaker에서 타일은 배경 리소스를 사용했으며 룸 편집기 또는 코드를 통해 다른 깊이에 배치되었습니다. 그러나 사용 된 방법은 그다지 유연하지 않았고 그다지 효율적이지 않았습니다. 이러한 문제를 해결하기 위해 GameMaker Studio 2에서 타일셋은 이제 스프라이트 리소스에서 생성되며 애니메이션이나 자동 타일링과 같은 다양한 속성을 가질 수 있습니다. 그런 다음 룸 편집기 내 또는 코드를 통해 타일 ​​맵 레이어에 배치됩니다. 이러한 변경으로 인해 다음 기능이 더 이상 사용되지 않습니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
@@ -302,15 +256,12 @@
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about Tile Sets from the manual section on the <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor</a> and about how to use them in the room editor from the section on <a href="../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Tile Layers</a>.
-      For more information on the functions that control background layers using code see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Tilemap Layers</a>. It is also worth noting that the GameMaker
-      Language has some specific funtions related to using legacy tiles in imported projects, and you can find information on those <a href="Compatibility_Functions.htm">here</a>.</p>
+    <p class="dropspot"><a href="../The_Asset_Editors/Tile_Sets.htm">타일 ​​세트 편집기</a> 의 매뉴얼 섹션에서 <a href="../The_Asset_Editors/Tile_Sets.htm">타일 ​​세트</a> 및 <a href="../The_Asset_Editors/Room_Properties/Layer_Properties.htm">타일 ​​레이어</a> 섹션의 룸 편집기에서 <a href="../The_Asset_Editors/Tile_Sets.htm">타일 ​​세트</a> 를 사용하는 방법에 대해 자세히 알아볼 수 있습니다. 코드를 사용하여 백그라운드 레이어를 제어하는 ​​함수에 대한 자세한 내용은 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Tilemap 레이어를</a> 참조하십시오. GameMaker Language는 가져온 프로젝트에서 레거시 타일을 사용하는 것과 관련된 특정 기능을 가지고 있으며 <a href="Compatibility_Functions.htm">여기에서</a> 정보를 찾을 수 <a href="Compatibility_Functions.htm">있습니다</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Objects</span><span data-close-text="true">Objects</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">개체</span> <span data-close-text="true">개체</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The way objects are treated in GameMaker Studio 2 has changed slightly due to the introduction of layers in the room editor. There still exists the &quot;depth&quot; variable, but it is now only really used for compatibility and you can no longer
-      get or set the depth for objects, only instances. This makes the following functions obsolete:</p>
+    <p class="dropspot">룸 메이커에 레이어가 도입되어 GameMaker Studio 2에서 객체가 처리되는 방식이 약간 변경되었습니다. &quot;depth&quot;변수는 여전히 존재하지만 이제는 실제로 호환성을 위해서만 사용되며 더 이상 객체의 심도를 얻거나 설정할 수 없으며 인스턴스 만 가능합니다. 이로 인해 다음 기능이 더 이상 사용되지 않습니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
@@ -321,12 +272,12 @@
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about object resources from the manual section on the <a href="../The_Asset_Editors/Objects.htm">Object Editor</a> and on the functions that control objects using code from the section <a href="../GameMaker_Language/GML_Reference/Asset_Management/Objects/Objects.htm">Objects</a>.</p>
+    <p class="dropspot">당신은 매뉴얼 섹션에서 객체의 리소스에 대한 자세한 찾을 수 있습니다 <a href="../The_Asset_Editors/Objects.htm">개체 편집기</a> 및 제어 섹션에서 코드를 사용하여 객체를 그 기능에 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Objects/Objects.htm">객체</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Sounds</span><span data-close-text="true">Sounds</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">소리</span> <span data-close-text="true">소리</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Legacy GameMaker had two different sound API&#39;s, one which used the deprecated <span class="inline">sound_</span> functions (that was only really valid for the HTML5 target platform), and the other which used the <span class="inline">audio_</span>      functions. The audio API has been improved and expanded in GameMaker Studio 2, making the legacy functions listed below obsolete:</p>
+    <p class="dropspot">레거시 GameMaker 두 개의 서로 다른 사운드 API의 (HTML5의 대상 플랫폼에서만 정말 유효)가 사용되지 않는 <span class="inline">sound_ 기능을</span> 사용 하나, 그리고 <span class="inline">audio_ 기능을</span> 사용하는 다른했다. GameMaker Studio 2에서 오디오 API가 개선 및 확장되어 아래 나열된 기존 기능이 더 이상 사용되지 않습니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
@@ -370,13 +321,12 @@
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about audio resources from the manual section on the <a href="../The_Asset_Editors/Sounds.htm">Sound Editor</a> and on the functions that control audio using code from the section on <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">Audio</a>. </p>
+    <p class="dropspot">당신은 매뉴얼 섹션에서 오디오 리소스에 대한 자세한 내용을 확인할 수 있습니다 <a href="../The_Asset_Editors/Sounds.htm">사운드 에디터</a> 제어 오디오 섹션에서 코드를 사용하는 기능에 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">오디오</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">D3D</span><span data-close-text="true">D3D</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">D3D</span> <span data-close-text="true">D3D</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">When using 3D models or primitives in legacy GameMaker, you had to use the <span class="inline">d3d_</span> functions. These used an obsolete API for drawing and in many cases were not related strictly to Direct 3D API, or even to using 3D itself.
-      With the advent of vertex buffers, matrices and cameras in GameMaker Studio 2, the following functions have been made obsolete:</p>
+    <p class="dropspot">레거시 GameMaker에서 3D 모델 또는 프리미티브를 사용하는 경우 <span class="inline">d3d_</span> 함수를 사용해야했습니다. 이것들은 그림에 쓸모없는 API를 사용했으며 많은 경우 Direct 3D API 또는 3D 자체 사용과 엄격하게 관련이 없었습니다. GameMaker Studio 2의 버텍스 버퍼, 매트릭스 및 카메라의 등장으로 다음 기능이 더 이상 사용되지 않습니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
@@ -400,70 +350,46 @@
           <td>d3d_set_projection_ext</td>
         </tr>
         <tr>
-          <td>d3d_set_projection_<br/> ortho
-          </td>
-          <td>d3d_set_projection_<br/> perspective
-          </td>
-          <td>d3d_transform_set_<br/> identity
-          </td>
-          <td>d3d_transform_<br/> set_translation
-          </td>
+          <td>d3d_set_projection_ 오르토</td>
+          <td>d3d_set_projection_ 관점</td>
+          <td>d3d_transform_set_ 정체성</td>
+          <td>d3d_transform_ set_translation</td>
         </tr>
         <tr>
-          <td>d3d_transform_set_<br/> scaling
-          </td>
-          <td>d3d_transform_<br/> set_rotation_x
-          </td>
-          <td>d3d_transform_set_<br/> rotation_y
-          </td>
-          <td>d3d_transform_<br/> set_rotation_z
-          </td>
+          <td>d3d_transform_set_ 스케일링</td>
+          <td>d3d_transform_ set_rotation_x</td>
+          <td>d3d_transform_set_ rotation_y</td>
+          <td>d3d_transform_ set_rotation_z</td>
         </tr>
         <tr>
-          <td>d3d_transform_set_<br/> rotation_axis
-          </td>
-          <td>d3d_transform_<br/> add_translation
-          </td>
-          <td>d3d_transform_add_<br/> scaling
-          </td>
-          <td>d3d_transform_<br/> add_rotation_x
-          </td>
+          <td>d3d_transform_set_ rotation_axis</td>
+          <td>d3d_transform_ add_translation</td>
+          <td>d3d_transform_add_ 스케일링</td>
+          <td>d3d_transform_ add_rotation_x</td>
         </tr>
         <tr>
-          <td>d3d_transform_add_<br/> rotation_y
-          </td>
-          <td>d3d_transform_<br/> add_rotation_z
-          </td>
-          <td>d3d_transform_add_<br/> rotation_axis
-          </td>
-          <td>d3d_transform_<br/> stack_clear
-          </td>
+          <td>d3d_transform_add_ rotation_y</td>
+          <td>d3d_transform_ add_rotation_z</td>
+          <td>d3d_transform_add_ rotation_axis</td>
+          <td>d3d_transform_ stack_clear</td>
         </tr>
         <tr>
-          <td>d3d_transform_stack_<br/> empty
-          </td>
-          <td>d3d_transform_<br/> stack_push
-          </td>
-          <td>d3d_transform_stack_<br/> pop
-          </td>
-          <td>d3d_transform_<br/> stack_top
-          </td>
+          <td>d3d_transform_stack_ 비어 있음</td>
+          <td>d3d_transform_ stack_push</td>
+          <td>d3d_transform_stack_ pop</td>
+          <td>d3d_transform_ stack_top</td>
         </tr>
         <tr>
-          <td>d3d_transform_stack_<br/> discard
-          </td>
+          <td>d3d_transform_stack_ 폐기</td>
           <td>d3d_transform_vertex</td>
-          <td>d3d_light_define_<br/> ambient
-          </td>
-          <td>d3d_light_define_<br/> direction
-          </td>
+          <td>d3d_light_define_ 앰비언트</td>
+          <td>d3d_light_define_ 방향</td>
         </tr>
         <tr>
           <td>d3d_light_define_point</td>
           <td>d3d_light_enable</td>
           <td>d3d_primitive_begin</td>
-          <td>d3d_primitive_<br/> begin_texture
-          </td>
+          <td>d3d_primitive_ begin_texture</td>
         </tr>
         <tr>
           <td>d3d_primitive_end</td>
@@ -473,25 +399,18 @@
         </tr>
         <tr>
           <td>d3d_vertex_texture</td>
-          <td>d3d_vertex_texture_<br/> color
-          </td>
-          <td>d3d_vertex_texture_<br/> colour
-          </td>
+          <td>d3d_vertex_texture_ 색상</td>
+          <td>d3d_vertex_texture_ 색상</td>
           <td>d3d_vertex_normal</td>
         </tr>
         <tr>
-          <td>d3d_vertex_normal_<br/> color
-          </td>
-          <td>d3d_vertex_normal_<br/> colour
-          </td>
-          <td>d3d_vertex_normal_<br/> texture
-          </td>
-          <td>d3d_vertex_normal_<br/> texture_color
-          </td>
+          <td>d3d_vertex_normal_ 색상</td>
+          <td>d3d_vertex_normal_ 색상</td>
+          <td>d3d_vertex_normal_ 텍스처</td>
+          <td>d3d_vertex_normal_ texture_color</td>
         </tr>
         <tr>
-          <td>d3d_vertex_normal_<br/> texture_colour
-          </td>
+          <td>d3d_vertex_normal_ texture_colour</td>
           <td>d3d_draw_block</td>
           <td>d3d_draw_cylinder</td>
           <td>d3d_draw_cone</td>
@@ -510,39 +429,26 @@
         </tr>
         <tr>
           <td>d3d_model_draw</td>
-          <td>d3d_model_primitive_<br/> begin
-          </td>
-          <td>d3d_model_<br/> primitive_end
-          </td>
+          <td>d3d_model_primitive_ begin</td>
+          <td>d3d_model_ primitive_end</td>
           <td>d3d_model_vertex</td>
         </tr>
         <tr>
-          <td>d3d_model_vertex_<br/> color
-          </td>
-          <td>d3d_model_vertex_<br/> colour
-          </td>
-          <td>d3d_model_<br/> vertex_texture
-          </td>
-          <td>d3d_model_vertex_<br/> texture_color
-          </td>
+          <td>d3d_model_vertex_ 색상</td>
+          <td>d3d_model_vertex_ 색상</td>
+          <td>d3d_model_ vertex_texture</td>
+          <td>d3d_model_vertex_ texture_color</td>
         </tr>
         <tr>
-          <td>d3d_model_vertex_<br/> texture_colour
-          </td>
-          <td>d3d_model_vertex_<br/> normal
-          </td>
-          <td>d3d_model_<br/> vertex_normal_color
-          </td>
-          <td>d3d_model_vertex_<br/> normal_colour
-          </td>
+          <td>d3d_model_vertex_ texture_colour</td>
+          <td>d3d_model_vertex_ normal</td>
+          <td>d3d_model_ vertex_normal_color</td>
+          <td>d3d_model_vertex_ normal_colour</td>
         </tr>
         <tr>
-          <td>d3d_model_vertex_<br/> normal_texture
-          </td>
-          <td>d3d_model_vertex_<br/> normal_texture_color
-          </td>
-          <td>d3d_model_vertex_<br/> normal_texture_colour
-          </td>
+          <td>d3d_model_vertex_ normal_texture</td>
+          <td>d3d_model_vertex_ normal_texture_color</td>
+          <td>d3d_model_vertex_ normal_texture_colour</td>
           <td>d3d_model_block</td>
         </tr>
         <tr>
@@ -556,14 +462,12 @@
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about vertex buffers <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">here</a>, more about matrices <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">here</a>,
-      more about cameras <a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">here</a>, and more about the GPU functions <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/GPU_Control.htm">here</a>.</p>
+    <p class="dropspot">당신은 버텍스 버퍼에 대한 자세한 찾을 수 있습니다 <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">여기에</a> 더 행렬에 대해, <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">여기</a> 이상의 카메라에 대해, <a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">여기</a> , 그리고 더 많은 GPU의 기능에 대한 <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/GPU_Control.htm">여기에</a> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">View Variables And Window Functions</span><span data-close-text="true">View Variables And Window Functions</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">변수 및 창 함수보기 변수 및 창 함수</span> <span data-close-text="true">보기</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">With the advent of the camera functions in GameMaker Studio 2, it means that a number of view variables are no longer required, specifically those referring to the view into the room rather than the view_port (which is still used). There are also
-      a few functions for controlling how things are displayed that were available in legacy versions of GameMaker: Studio 1.4 which are also no longer appropriate. These variables and functions are listed below:</p>
+    <p class="dropspot">GameMaker Studio 2에 카메라 기능이 추가됨에 따라 많은 뷰 변수가 더 이상 필요하지 않음을 의미합니다. 특히 view_port (여전히 사용되는)가 아니라 룸으로 뷰를 참조하는 변수가 더 이상 필요하지 않습니다. 레거시 버전의 GameMaker : Studio 1.4에서 사용 가능한 항목 표시 방법을 제어하기위한 몇 가지 기능도 있으며 더 이상 적합하지 않습니다. 이러한 변수와 함수는 다음과 같습니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
@@ -581,71 +485,53 @@
         <tr>
           <td>view_hspeed</td>
           <td>view_vspeed</td>
-          <td>display_set_windows_<br/> vertex_buffer_method
-          </td>
-          <td>display_get_windows_<br/> vertex_buffer_method
-          </td>
+          <td>display_set_windows_ vertex_buffer_method</td>
+          <td>display_get_windows_ vertex_buffer_method</td>
         </tr>
         <tr>
-          <td>display_set_windows_<br/> alternate_sync
-          </td>
-          <td>display_get_windows_<br/> alternate_sync
-          </td>
+          <td>display_set_windows_ alternate_sync</td>
+          <td>display_get_windows_ alternate_sync</td>
           <td>room_set_view</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about cameras from the manual section on <a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Display.htm">Cameras And The Display</a>.</p>
+    <p class="dropspot"><a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Display.htm">카메라 및 디스플레이</a> 의 매뉴얼 섹션에서 <a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Display.htm">카메라</a> 에 대한 자세한 내용을 확인할 수 있습니다.</p>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">3rd Party Support</span><span data-close-text="true">3rd Party Support</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">타사 지원</span> <span data-close-text="true">타사 지원</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">GameMaker Studio 2 moves a lot of built in functionality from previous versions into <a href="../The_Asset_Editors/Extensions.htm">extensions</a>, meaning that the following 3rd party support functions are considered obsolete:</p>
+    <p class="dropspot">GameMaker Studio 2는 많은 내장 기능을 이전 버전에서 <a href="../The_Asset_Editors/Extensions.htm">확장</a> 기능으로 이동시켜 다음 타사 지원 기능이 더 이상 사용되지 않는 것으로 간주됩니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <td>ads_enable</td>
           <td>ads_disable</td>
           <td>ads_move</td>
-          <td>ads_get_display_<br/> width
-          </td>
+          <td>ads_get_display_ 너비</td>
         </tr>
         <tr>
-          <td>ads_get_display_<br/> height
-          </td>
-          <td>ads_interstitial_<br/> available
-          </td>
-          <td>ads_interstitial_<br/> display
-          </td>
+          <td>ads_get_display_ height</td>
+          <td>ads_interstitial_ 사용 가능</td>
+          <td>ads_interstitial_ 디스플레이</td>
           <td>ads_setup</td>
         </tr>
         <tr>
-          <td>ads_engagement_<br/> available
-          </td>
-          <td>ads_engagement_<br/> launch
-          </td>
-          <td>ads_engagement_<br/> active
-          </td>
+          <td>ads_engagement_ 사용 가능</td>
+          <td>ads_engagement_ launch</td>
+          <td>ads_engagement_ 활성</td>
           <td>ads_event</td>
         </tr>
         <tr>
           <td>ads_event_preload</td>
-          <td>ads_set_reward_<br/> callback
-          </td>
-          <td>playhaven_add_<br/> notification_badge
-          </td>
-          <td>playhaven_hide_<br/> notification_badge
-          </td>
+          <td>ads_set_reward_ 콜백</td>
+          <td>playhaven_add_ notification_badge</td>
+          <td>playhaven_hide_ notification_badge</td>
         </tr>
         <tr>
-          <td>playhaven_position_<br/> notification_badge
-          </td>
-          <td>playhaven_update_<br/> notification_badge
-          </td>
-          <td>pocketchange_display_<br/> reward
-          </td>
-          <td>pocketchange_display_<br/> shop
-          </td>
+          <td>playhaven_position_ notification_badge</td>
+          <td>playhaven_update_ notification_badge</td>
+          <td>pocketchange_display_ 보상</td>
+          <td>pocketchange_display_ shop</td>
         </tr>
         <tr>
           <td>analytics_event</td>
@@ -654,36 +540,32 @@
           <td>facebook_login</td>
         </tr>
         <tr>
-          <td>facebook_request_<br/> publish_permissions
-          </td>
-          <td>facebook_request_<br/> read_permissions
-          </td>
-          <td>facebook_check_<br/> permission
-          </td>
+          <td>facebook_request_ publish_permissions</td>
+          <td>facebook_request_ read_permissions</td>
+          <td>facebook_check_ 권한</td>
           <td>facebook_status</td>
         </tr>
         <tr>
           <td>facebook_accesstoken</td>
           <td>facebook_user_id</td>
-          <td>facebook_graph_<br/> request
-          </td>
+          <td>facebook_graph_ 요청</td>
           <td>facebook_dialog</td>
         </tr>
         <tr>
-          <td>facebook_send_invite<span style="display: none;"> </span><span style="display: none;"> </span></td>
-          <td>facebook_post_<br/> message <span style="display: none;"> </span><span style="display: none;"> </span></td>
-          <td>facebook_logout<span style="display: none;"> </span></td>
-          <td>facebook_launch_<br/> offerwall <span style="display: none;"> </span></td>
+          <td>facebook_send_invite <span style="display: none;"> </span><span style="display: none;"></span></td>
+          <td>facebook_post_ 메시지 <span style="display: none;"></span><span style="display: none;"></span></td>
+          <td>facebook_logout <span style="display: none;"> </span></td>
+          <td>facebook_launch_ offerwall <span style="display: none;"></span></td>
         </tr>
         <tr>
-          <td>iap_event_queue<span style="display: none;"> </span></td>
-          <td>iap_files_purchased<span style="display: none;"> </span></td>
-          <td>iap_is_downloaded<span style="display: none;"> </span></td>
-          <td>iap_product_files<span style="display: none;"> </span></td>
+          <td>iap_event_queue <span style="display: none;"> </span></td>
+          <td>iap_files_purchased <span style="display: none;"> </span></td>
+          <td>iap_is_downloaded <span style="display: none;"> </span></td>
+          <td>iap_product_files <span style="display: none;"> </span></td>
         </tr>
         <tr>
-          <td>iap_product_status<span style="display: none;"> </span></td>
-          <td>iap_store_status<span style="display: none;"> </span></td>
+          <td>iap_product_status <span style="display: none;"> </span></td>
+          <td>iap_store_status <span style="display: none;"> </span></td>
           <td>iap_data</td>
           <td>iap_activate</td>
         </tr>
@@ -697,7 +579,7 @@
           <td>iap_consume</td>
           <td>iap_product_details</td>
           <td>iap_purchase_details</td>
-          <td> </td>
+          <td></td>
         </tr>
         <tr>
           <td>immersion_play_effect</td>
@@ -705,14 +587,12 @@
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can get the official YoYo Games extensions for advertising and other things from their <a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">Marketplace Page</a>.</p>
+    <p class="dropspot"><a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">마켓 플레이스 페이지</a> 에서 광고 및 기타 사항에 대한 공식 YoYo Games 확장 프로그램을 얻을 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Drag And Drop™ Actions</span><span data-close-text="true">Drag And Drop™ Actions</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">끌어서 놓기 액션</span> <span data-close-text="true">끌어서 놓기 액션</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">Both legacy GameMaker and GameMaker Studio 2 have a visual scripting <strong>Drag and Drop™</strong> (DnD™) interface for creating your games, however the way it is handled in GameMaker Studio 2 is quite different to the previous methods used. Previously,
-      all DnD™ actions had their own corresponding function which worked &quot;behind the scenes&quot; to get the desired results, however this was not very transparent and added in extra overheads to the function calls, resulting in poorer performance.
-      In GameMaker Studio 2 this has been changed, and now all actions compile to pure code (and can be shown as such if required), meaning that the following action functions are obsolete:</p>
+    <p class="dropspot">레거시 GameMaker와 GameMaker Studio 2에는 게임을 만들기위한 시각적 스크립팅 <strong>드래그 앤 드롭</strong> (DnD ™) 인터페이스가 있지만 GameMaker Studio 2에서 처리되는 방식은 이전에 사용 된 방법과는 다릅니다. 이전에는 모든 DnD ™ 액션에 원하는 결과를 얻기 위해 &quot;장면 뒤에서&quot;작동하는 고유의 해당 기능이 있었지만이 기능은 투명하지 않았으며 함수 호출에 추가 오버 헤드가 추가되어 성능이 떨어졌습니다. GameMaker Studio 2에서는이 기능이 변경되었으며 이제 모든 액션이 순수 코드로 컴파일되며 필요한 경우 표시 될 수 있습니다. 이는 다음 액션 기능이 더 이상 사용되지 않음을 의미합니다.</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
@@ -819,8 +699,7 @@
         </tr>
         <tr>
           <td>action_replace_sound</td>
-          <td>action_replace_<br/> background
-          </td>
+          <td>action_replace_ 배경</td>
           <td>action_if_empty</td>
           <td>action_if_collision</td>
         </tr>
@@ -909,8 +788,7 @@
           <td>action_draw_ellipse</td>
         </tr>
         <tr>
-          <td>action_draw_<br/> ellipse_gradient
-          </td>
+          <td>action_draw_ ellipse_gradient</td>
           <td>action_draw_line</td>
           <td>action_draw_arrow</td>
           <td>action_color</td>
@@ -926,20 +804,21 @@
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about the new DnD™ from the manual section on <a href="../Drag_And_Drop/Drag_And_Drop_Index.htm">Drag And Drop™</a>.</p>
+    <p class="dropspot"><a href="../Drag_And_Drop/Drag_And_Drop_Index.htm">Drag &amp; Drop ™</a> 의 매뉴얼 섹션에서 새로운 DnD ™에 대한 자세한 내용을 확인할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Additional_Information/Obsolete_Functions.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="The_File_System.htm">The File System</a></div>
+        <div style="float:left">목록: <a href="Additional_Information.htm">추가 정보</a></div>
+        <div style="float:right">다음: <a href="The_File_System.htm">파일 시스템</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Obsolete Functions
@@ -948,4 +827,4 @@ Obsolete Functions
 obsolete_functions
 -->
 
-</body></html>
+</body></html> 

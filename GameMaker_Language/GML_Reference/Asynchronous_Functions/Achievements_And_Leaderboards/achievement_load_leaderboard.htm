@@ -71,7 +71,7 @@
         <span>achievement_load_leaderboard</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,76 +81,73 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>achievement_load_leaderboard</h1>
-  <p>This function will send a request to the server for information on the given leaderboard. The leaderboard must have been created previously on the developer dashboard for your game and the ID given is that which you must supply as the first argument
-    of the function. It will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> which contains the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    map populated with the relevant key/value pairs. The <i>id</i> key of this <tt>DS Map</tt> is used to identify the correct callback (there can be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b>    <tt>achievement_leaderboard_info</tt> as well as a number of other key/value pairs for each player. The exact contents of the map are shown below:</p>
-  <p class="note"><b>NOTE</b>: this function is for <b>iOS</b> only.</p>
+  <p>이 기능은 주어진 리더 보드에 대한 정보를 서버에 요청합니다. 리더 보드는 게임의 개발자 대시 보드에서 이전에 생성되어 있어야하며 제공된 ID는 함수의 첫 번째 인수로 제공해야합니다. 관련 키 / 값 쌍으로 채워진 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> 맵이 포함 된 콜백 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">소셜 비동기 이벤트</a> 를 트리거합니다. 이 <tt>DS 맵</tt> 의 <i>id</i> 키는 올바른 콜백을 식별하는 데 사용되며 (어떤 주어진 비동기 이벤트에 대해 두 개 이상의 트리거 기능이있을 수 있음) <b>상수</b> <tt>achievement_leaderboard_info</tt> 및 다른 여러 키 / 값 쌍과 쌍을 이룹니다 각 플레이어. 지도의 정확한 내용은 다음과 같습니다.</p>
+  <p class="note"><b>참고</b> :이 기능은 <b>iOS</b> 전용입니다.</p>
   <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - For this function it should be <tt>achievement_leaderboard_info</tt></li>
-    <li>&quot;<b>leaderboardid</b>&quot; - The unique ID for the leaderboard as defined on the provider dashboard.</li>
-    <li>&quot;<b>numentries</b>&quot; - The number of entries in the leaderboard that you have received.</li>
-    <li>&quot;<b>PlayerN</b>&quot; - The name of the player, where &quot;N&quot; is an integer value corresponding to their position within the leaderboard entries list.</li>
-    <li>&quot;<b>PlayeridN</b>&quot; - The unique user id of the player, &quot;N&quot;.</li>
-    <li>&quot;<b>RankN</b>&quot; - The rank of the player &quot;N&quot; within the leaderboard.</li>
-    <li>&quot;<b>ScoreN</b>&quot; - The score of the player &quot;N&quot;.</li>
+    <li>&quot; <b>id</b> &quot;-이 함수의 경우 <tt>achievement_leaderboard_info</tt></li>
+    <li>&quot; <b>leaderboardid</b> &quot;-제공자 대시 보드에 정의 된 리더 보드의 고유 ID입니다.</li>
+    <li>&quot; <b>numentries</b> &quot;-리더 보드에서받은 항목 수입니다.</li>
+    <li>&quot; <b>PlayerN</b> &quot;-플레이어의 이름입니다. 여기서 &quot;N&quot;은 순위표 항목 목록 내 위치에 해당하는 정수 값입니다.</li>
+    <li>&quot; <b>PlayeridN</b> &quot;-플레이어의 고유 사용자 ID &quot;N&quot;</li>
+    <li>&quot; <b>RankN</b> &quot;-순위표 내 플레이어 &quot;N&quot;의 순위입니다.</li>
+    <li>&quot; <b>ScoreN</b> &quot;-플레이어 &quot;N&quot;의 점수입니다.</li>
   </ul>
-  <p>You can specify the exact portion of the leaderboard to show by giving a minimum and maximum index value, as well as request that the results be filtered to retrieve only those scores by your friends or those posted by all players using the following
-    filter <b>constants</b>:</p>
+  <p>다음과 같은 필터 <b>상수를</b> 사용하여 친구 나 모든 플레이어가 게시 한 점수 만 검색하도록 결과를 필터링하도록 요청하고 최소 및 최대 색인 값을 제공하여 리더 보드의 정확한 부분을 표시 할 수 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>achievement_filter_friends_only </td>
-        <td>Get only the scores of the players friends.</td>
+        <td>achievement_filter_friends_only</td>
+        <td>플레이어 친구의 점수 만 얻으십시오.</td>
       </tr>
       <tr>
-        <td>achievement_filter_all_players </td>
-        <td>Get all scores for all players.</td>
+        <td>achievement_filter_all_players</td>
+        <td>모든 플레이어의 모든 점수를 얻으십시오.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h4><b>통사론:</b></h4>
   <p class="code">achievement_load_leaderboard(ident, minindex, maxindex, filter)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>ident</td>
-        <td>The unique ID of the leaderboard as shown on the developer dashboard.</td>
+        <td>신분</td>
+        <td>개발자 대시 보드에 표시된 리더 보드의 고유 ID입니다.</td>
       </tr>
       <tr>
-        <td>minindex</td>
-        <td>The starting index value to get the leaderboard data from.</td>
+        <td>최소 색인</td>
+        <td>리더 보드 데이터를 가져올 시작 색인 값입니다.</td>
       </tr>
       <tr>
         <td>maxindex</td>
-        <td>The maximum index value to get the leaderboard data from.</td>
+        <td>리더 보드 데이터를 가져올 최대 색인 값입니다.</td>
       </tr>
       <tr>
-        <td>filter</td>
-        <td>Whether to filter the results to those that are on your friends list or to all players (see the <b>Description</b> below)</td>
+        <td>필터</td>
+        <td>친구 목록에있는 결과 또는 모든 플레이어에 대한 결과를 필터링할지 여부 (아래 <b>설명</b> 참조)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The following code would probably be called after the player has logged into their game account using <a href="achievement_login.htm"><tt>achievement_login()</tt></a> to get a list of all friends leaderboard positions for the game, on either Android
-    or iOS:</p>
+  <h4>확장 된 예 :</h4>
+  <p>다음 코드는 플레이어가 <a href="achievement_login.htm"><tt>achievement_login ()</tt></a> 을 사용하여 게임 계정에 로그인하여 Android 또는 iOS에서 게임의 모든 친구 순위표 목록을 가져온 후에 호출 될 수 있습니다.</p>
   <p class="code">if os_type == os_ios<br/>     {
     <br/>     achievement_load_leaderboard(&quot;CgkIs9_51u0PEAIQBw&quot;, 1, 100, achievement_filter_friends_only);<br/>     }
   </p>
-  <p>This will send off a request for the information on the given leaderboard and generate an asynchronous callback with the special <tt>async_load</tt> ds_map containing the following data:</p>
+  <p>그러면 주어진 리더 보드에 대한 정보 요청이 전송되고 다음 데이터가 포함 된 특수 <tt>async_load</tt> ds_map을 사용하여 비동기 콜백이 생성됩니다.</p>
   <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_leaderboard_info<br/>     {
     <br/>     var lbid = ds_map_find_value(async_load,&quot;leaderboardid&quot;);<br/>     if lbid == &quot;CgkIs9_51u0PEAIQBw&quot; || lbid == &quot;leaderboard1id&quot;<br/>         {
     <br/>         global.numentries = ds_map_find_value(async_load,&quot;numentries&quot;);<br/>         for(var i = 0; i &lt; numentries; i++;)<br/>             {
@@ -160,19 +157,19 @@
     <br/>         }
     <br/>     }
   </p>
-  <p>The above code checks the returned <tt>DS Map</tt> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then checks to make sure that the leaderboard being sent matches the original function call before
-    looping through the map and storing all the different values in a number of arrays. It also requests an image for each of the entries in the map (see <a href="achievement_get_pic.htm"><tt>achievement_get_pic()</tt></a>).</p>
+  <p>위의 코드는 <b>소셜 비동기 이벤트</b> 에서 반환 된 <tt>DS Map</tt> 을 확인하고 &quot;id&quot;가 확인되는 상수와 일치하면 전송되는 리더 보드가 원래 함수 호출과 일치하는지 확인하여 맵을 반복하고 모든 여러 배열에서 다른 값. 또한 맵의 각 항목에 대한 이미지를 요청합니다 ( <a href="achievement_get_pic.htm"><tt>achievement_get_pic ()</tt></a> 참조).</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asynchronous_Functions/Achievements_And_Leaderboards/achievement_load_leaderboard.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Achievements_And_Leaderboards.htm">Achievements And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="achievement_load_progress.htm">achievement_load_progress</a></div>
+        <div style="float:left">목록: <a href="Achievements_And_Leaderboards.htm">업적과 순위표</a></div>
+        <div style="float:right">다음: <a href="achievement_load_progress.htm">achievement_load_progress</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 achievement_load_leaderboard
@@ -184,4 +181,4 @@ achievement_filter_all_players 
 achievement_load_leaderboard
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Guide To Using Shaders">
-        <span>Guide To Using Shaders</span>
+        <span>셰이더 사용 안내서</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,191 +80,139 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Guide To Using Shaders</h1>
-  <p>Shaders are often used to create beautiful graphical effects in games. They are also among the most advanced features offered by GameMaker Studio 2, so it is necessary that you have a basic understanding of programming and how GameMaker Studio 2 works
-    before getting started with them.</p>
-  <p>So, what is a shader? Initially they were created to provide shading for lighting (hence the name), but they are now used to produce a huge variety of effects. Shader code is similar to regular code, but it is (almost always) executed by the GPU, not
-    the CPU. This difference comes with its own set of rules and limitations, but we’ll cover those later.</p>
-  <p>Each shader is made up of two separate components: a <strong>vertex shader </strong>and a <strong>fragment shader </strong>(also referred to as <strong>pixel shader</strong>). Let’s start with the vertex shader. Each sprite is formed by a rectangle,
-    but computers like to draw triangles, so those rectangles are split into two triangles (sometimes called a <em>quad</em>). This leaves us with six vertices (corners) per sprite, but two of those are the same one, so we should only worry about four.
-    Now, imagine we have a for loop that goes over every vertex and executes the code inside the vertex shader for each. This allows us to change the vertex position and color before passing it over to the fragment shader since the vertex shader is executed
-    earlier.</p>
-  <p>Here’s how that would look:</p>
-  <p><img alt="Shader Vertices" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Vertices.gif"/>For the fragment shader, you can imagine the same loop as before, but this time it goes over every single pixel in your
-    sprite, giving you information such as location and color of that pixel. In your fragment shader code, you perform operations and calculations to determine the color of that pixel to get the effect you want. For example, if you want a shader to make
-    your sprite be black and white, then you’d calculate which shade of grey each pixel needs to be to create the effect.</p>
-  <p>It would look something like this:</p>
-  <p><img alt="Shader Fragments" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Fragments.gif"/>The reason shader code is usually executed by the GPU is that it is more efficient at it. Modern CPUs typically have
-    between two to eight cores. Each core can perform one task at a time, so by taking advantage of multiple cores, we can perform that many tasks simultaneously. In contrast, modern GPUs can perform thousands, and even tens of thousands, of tasks running
-    at the same time. This is helpful for shaders because we can execute the shader code of thousands of pixels concurrently. The limitation is that we only have access to the initial state of the sprite, so we don’t know about any modifications done
-    to other pixels since we can’t know for sure the code has run on them yet.</p>
-  <p class="note"><strong>NOTE</strong>: GameMaker Studio 2 allows users to write shaders in <strong>GLSL</strong> (OpenGL Shader Language), <strong>HLSL</strong> (High-level Shader Language, used when working with DirectX), and <strong>GLSL ES</strong> (a subset of
-    GLSL which is common in mobile devices). Here we are using <strong>GLSL ES</strong> as the shader language since it’s the one that provides the best compatibility across target platforms. Generally this is the one you always want to use unless you
-    have very specific needs and understand the limitation of the other shader languages. The math and techniques should be similar between all three languages however, save for a few syntax differences here and there.</p>
-  <p>The vertex shader is executed first, and as we explained above, it deals with <strong>vertices</strong>. It is used to calculate positions, normals, and texture coordinates. These shaders are not particularly useful in 2D, since every sprite is usually
-    a square, but it can be used to do some skewing, scaling, etc... It becomes much more useful in 3D for lighting calculations and mesh deformations. Fragment shaders are much more interesting and are what will be covered mostly here, since the fragment
-    shader is where we get information about our textures and can tweak the final color of each pixel in our image.</p>
+  <h1>셰이더 사용 안내서</h1>
+  <p>셰이더는 종종 게임에서 아름다운 그래픽 효과를 만드는 데 사용됩니다. 또한 GameMaker Studio 2가 제공하는 가장 고급 기능 중 하나이므로 프로그래밍을 시작하기 전에 프로그래밍과 GameMaker Studio 2의 작동 방식에 대한 기본적인 이해가 필요합니다.</p>
+  <p>그렇다면 셰이더 란 무엇입니까? 처음에는 조명에 음영을 제공하기 위해 만들어 졌으므로 이제는 다양한 효과를내는 데 사용됩니다. 셰이더 코드는 일반 코드와 비슷하지만 CPU가 아닌 GPU에 의해 (거의 항상) 실행됩니다. 이 차이점에는 자체 규칙과 제한 사항이 있지만 나중에 다루겠습니다.</p>
+  <p>각 셰이더는 <strong>버텍스 셰이더</strong> 와 <strong>프래그먼트 셰이더</strong> ( <strong>픽셀 셰이더</strong> 라고도 함)의 두 가지 개별 구성 요소로 구성됩니다. 버텍스 쉐이더로 시작합시다. 각 스프라이트는 사각형으로 구성되지만 컴퓨터는 삼각형을 그리는 것을 좋아하므로 사각형은 두 개의 삼각형 (때로는 <em>quad</em> 라고도 함)으로 나뉩니다. 스프라이트 당 6 개의 정점 (코너)이 남지만 그 중 2 개는 동일하므로 4 개만 걱정하면됩니다. 이제 모든 정점을 통과하고 각 정점 셰이더 내에서 코드를 실행하는 for 루프가 있다고 가정하십시오. 버텍스 쉐이더가 더 일찍 실행되기 때문에 프래그먼트 쉐이더로 전달하기 전에 꼭짓점 위치와 색상을 변경할 수 있습니다.</p>
+  <p>그 모습은 다음과 같습니다.</p>
+  <p><img alt="Shader Vertices" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Vertices.gif"/>프래그먼트 셰이더의 경우 이전과 동일한 루프를 상상할 수 있지만 이번에는 스프라이트의 모든 단일 픽셀을 통과하여 해당 픽셀의 위치 및 색상과 같은 정보를 제공합니다. 프래그먼트 셰이더 코드에서 작업 및 계산을 수행하여 원하는 효과를 얻기 위해 해당 픽셀의 색상을 결정합니다. 예를 들어, 셰이더가 스프라이트를 흑백으로 만들려면 효과를 만들기 위해 각 픽셀에 어떤 회색 음영이 필요한지 계산하십시오.</p>
+  <p>다음과 같이 보일 것입니다.</p>
+  <p><img alt="Shader Fragments" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Fragments.gif"/>셰이더 코드가 일반적으로 GPU에 의해 실행되는 이유는 더 효율적이기 때문입니다. 최신 CPU에는 일반적으로 2-8 개의 코어가 있습니다. 각 코어는 한 번에 하나의 작업을 수행 할 수 있으므로 여러 코어를 활용하여 여러 작업을 동시에 수행 할 수 있습니다. 대조적으로, 현대 GPU는 동시에 실행되는 수천, 심지어 수만 개의 작업을 수행 할 수 있습니다. 수천 픽셀의 셰이더 코드를 동시에 실행할 수 있기 때문에 셰이더에 유용합니다. 제한 사항은 스프라이트의 초기 상태에만 액세스 할 수 있기 때문에 코드가 아직 실행 중인지 확실하지 않기 때문에 다른 픽셀에 대한 수정 사항에 대해서는 알 수 없습니다.</p>
+  <p class="note"><strong>참고</strong> : GameMaker Studio 2를 사용하면 <strong>GLSL</strong> (OpenGL Shader Language), <strong>HLSL</strong> (DirectX와 함께 사용할 때 사용되는 고급 Shader Language) 및 <strong>GLSL ES</strong> (모바일 장치에서 일반적으로 사용되는 GLSL의 하위 집합)로 셰이더를 작성할 수 있습니다. <strong>GLSL ES</strong> 는 대상 플랫폼간에 최고의 호환성을 제공하는 언어이므로 <strong>GLSL ES</strong> 를 쉐이더 ​​언어로 사용합니다. 일반적으로 매우 구체적인 요구 사항이없고 다른 셰이더 언어의 제한 사항을 이해하지 않는 한 항상 사용하려는 것입니다. 수학과 기술은 세 언어 모두에서 비슷해야하지만 여기저기서 약간의 구문 차이를 줄이십시오.</p>
+  <p>정점 셰이더가 먼저 실행되며 위에서 설명한 것처럼 <strong>정점을 처리</strong> 합니다. 위치, 법선 및 텍스처 좌표를 계산하는 데 사용됩니다. 이 쉐이더는 모든 스프라이트가 일반적으로 정사각형이기 때문에 2D에서 특히 유용하지는 않지만 약간의 스 큐잉, 스케일링 등을 수행하는 데 사용될 수 있습니다. 3D에서는 조명 계산 및 메쉬 변형에 훨씬 더 유용합니다. 프래그먼트 셰이더는 훨씬 더 흥미롭고 대부분 여기에서 다룰 것입니다. 프래그먼트 셰이더는 텍스처에 대한 정보를 얻고 이미지에서 각 픽셀의 최종 색상을 조정할 수있는 곳이기 때문입니다.</p>
   <p> </p>
-  <h2>Shader Variables</h2>
-  <p>If you have created a shader in GameMaker Studio 2, you might have noticed the following keywords in the default <strong>pass-through</strong> shader. These keywords help the shader understand the purpose and scope of each variable:</p>
+  <h2>셰이더 변수</h2>
+  <p>GameMaker Studio 2에서 셰이더를 생성 한 경우 기본 <strong>패스 스루</strong> 셰이더에서 다음 키워드를 발견했을 수 있습니다. 이 키워드는 셰이더가 각 변수의 목적과 범위를 이해하는 데 도움이됩니다.</p>
   <ul class="colour">
-    <li><strong>Attribute</strong>: These are variables passed in by OpenGL to the <strong>vertex </strong>shader. These can change per vertex and are read-only. These include information such as vertex position, texture coordinates, vertex color, and vertex
-      normal.</li>
-    <li><strong>Varying</strong>: These are variables used to pass data between the <strong>vertex </strong>and <strong>fragment </strong>shaders. These are available for writing in the vertex shader, but are read-only in the fragment shader.</li>
-    <li><strong>Uniform</strong>: These are variables that change per object and are passed by the user to the shader. These can be used in both the vertex and fragment shaders, but are read-only.</li>
+    <li><strong>속성</strong> : OpenGL이 <strong>버텍스</strong> 쉐이더에 전달한 변수입니다. 버텍스마다 변경 될 수 있으며 읽기 전용입니다. 여기에는 정점 위치, 텍스처 좌표, 정점 색상 및 정점 법선과 같은 정보가 포함됩니다.</li>
+    <li><strong>Varying</strong> : <strong>버텍스</strong> 쉐이더와 <strong>프래그먼트</strong> 셰이더간에 데이터를 전달하는 데 사용되는 변수입니다. 버텍스 셰이더로 쓸 수 있지만 프래그먼트 셰이더에서는 읽기 전용입니다.</li>
+    <li><strong>Uniform</strong> : 오브젝트마다 변경되는 변수로, 사용자가 셰이더에 전달합니다. 버텍스 및 프래그먼트 셰이더 모두에서 사용할 수 있지만 읽기 전용입니다.</li>
   </ul>
-  <p>You&#39;ll also see the use of <strong>vec</strong> as a keyword. This is used to identify a vector variable in the shader and you&#39;ll soon see that vectors are very important when working with shaders. That is why they are implemented as a base
-    type in GLSL. If you are unfamiliar with them, they are a mathematical term represented as a matrix with only one column. In programming, we usually represent them as an array where the number of components corresponds to the dimension. Two and three-dimensional
-    vectors are often used for positions, texture coordinates, or colors without an alpha channel, while four-dimensional ones are used for colors with an alpha channel. We can also specify if they hold booleans, integers, or floating point values. The
-    syntax to declare a vector is this:</p>
+  <p>또한 <strong>vec</strong> 를 키워드로 사용하는 것을 볼 수 있습니다. 셰이더에서 벡터 변수를 식별하는 데 사용되며 곧 셰이더로 작업 할 때 벡터가 매우 중요하다는 것을 알게 될 것입니다. 이것이 GLSL에서 기본 유형으로 구현되는 이유입니다. 그것들에 익숙하지 않다면, 단 하나의 열을 가진 행렬로 표현되는 수학 용어입니다. 프로그래밍에서 우리는 일반적으로 구성 요소의 수가 차원에 해당하는 배열로 나타냅니다. 2 차원 및 3 차원 벡터는 종종 알파 채널이없는 위치, 텍스처 좌표 또는 색상에 사용되는 반면 4 차원 벡터는 알파 채널이있는 색상에 사용됩니다. 부울, 정수 또는 부동 소수점 값을 보유 할 것인지 지정할 수도 있습니다. 벡터를 선언하는 구문은 다음과 같습니다.</p>
   <p class="code">vec2 firstVec;  // Two-dimensional vector of floats<br/> vec3 secondVec; // Three-dimensional vector of floats<br/> vec4 thirdVec;  // Four-dimensional vector of floats<br/>
     <br/> bvec3 boolVec;  // Three-dimensional vector of booleans<br/> ivec4 intVec;   // Four-dimensional vector of booleans</p>
-  <p>To initialize them, we can use the constructor to create the vector. You need to provide the same number of values as the length of the vector, but you can mix and match scalars and smaller vectors to reach the target length. Here are some examples
-    of this:</p>
+  <p>그것들을 초기화하기 위해 생성자를 사용하여 벡터를 만들 수 있습니다. 벡터의 길이와 동일한 수의 값을 제공해야하지만 스칼라와 작은 벡터를 혼합하여 일치시켜 대상 길이에 도달 할 수 있습니다. 이에 대한 몇 가지 예는 다음과 같습니다.</p>
   <p class="code">// Simple 2D vector with 2 scalar values<br/> vec2 firstVec  = vec2(2.0, 1.0);<br/> // A 4D vector using 2 scalars and a vec2 create the 4 values<br/> vec4 secondVec = vec4(1.0, firstVec, 0.0);<br/> // A 3D vector using 1 component of a vec4 plus a
     vec2 to create the 3 values<br/> vec3 thirdVec  = vec3(secondVec.x, firstVec);</p>
-  <p>We can also assign them another vector of the same length (or <em>swizzle </em>the vector until it has the proper length, but we&#39;ll explain that in a moment):</p>
+  <p>동일한 길이의 다른 벡터를 할당 할 수도 있습니다 (또는 적절한 길이가 될 때까지 벡터를 <em>쓸어 넘기지</em> 만 잠시 후에 설명하겠습니다).</p>
   <p class="code">vec3 firstVec;<br/> vec3 secondVec = firstVec;<br/> vec4 thirdVec  = secondVec.xyz;<br/> vec2 fourthVec = thirdVec.zx;</p>
-  <p>When accessing vector components in GLSL, we have a few options. The most basic one is to treat the vector as an array and access the components using square brackets, like this:</p>
+  <p>GLSL에서 벡터 컴포넌트에 액세스 할 때 몇 가지 옵션이 있습니다. 가장 기본적인 것은 벡터를 배열로 취급하고 다음과 같이 대괄호를 사용하여 구성 요소에 액세스하는 것입니다.</p>
   <p class="code">vec4 myVec;<br/> myVec[0] = 1.0;<br/> myVec[1] = 0.0;<br/> myVec[2] = 2.0;<br/> myVec[3] = 1.0;</p>
-  <p>However, there is another way to access the components with the following syntax:</p>
+  <p>그러나 다음 구문으로 구성 요소에 액세스하는 다른 방법이 있습니다.</p>
   <p class="code">vec4 myVec;<br/> myVec.x = 1.0;<br/> myVec.y = 2.0;</p>
-  <p>This uses the component names inside the vector to access them. You can use x, y, z, or w, to get the first, second, third, or fourth components, respectively. We refer to this method as <strong>swizzling </strong>because the following syntax is also
-    valid:</p>
+  <p>벡터 내부의 구성 요소 이름을 사용하여 액세스합니다. x, y, z 또는 w를 사용하여 첫 번째, 두 번째, 세 번째 또는 네 번째 구성 요소를 각각 얻을 수 있습니다. 다음 구문도 유효 <strong>하므로이</strong> 방법을 <strong>스위 즐링</strong> 이라고합니다.</p>
   <p class="code">vec4 firstVec;<br/> vec3 secondVec = firstVec.xyz;<br/> vec2 thirdVec  = secondVec.zy;<br/> vec4 fourthVec = thirdVec.yxxy;</p>
-  <p>As you can see, we can use any combination of up to four letters to create a vector of that length. We cannot attempt to access a component that would be out of bounds (for example, trying to access w in <span class="inline">secondVec</span> or
-    <span class="inline">thirdVec</span>, since they don’t have a fourth component). Also, we can repeat letters and use them in any order, as long as the vector variable it’s being assigned to is the same size as the number of letters used.</p>
-  <p>For obvious reasons, when using swizzle to set component values, you can’t use the same component twice. For example, the below is not valid as you are trying to set the same component to two different values:</p>
+  <p>보시다시피, 최대 4 개의 문자 조합을 사용하여 해당 길이의 벡터를 만들 수 있습니다. 경계를 벗어난 구성 요소에 액세스하려고 시도 할 수 없습니다 (예 : <span class="inline">secondVec</span> 또는 <span class="inline">thirdVec</span> 에서 w에 액세스하려고 시도하는 경우 네 번째 구성 요소가 없기 때문에). 또한 할당 된 벡터 변수가 사용 된 문자 수와 동일한 크기 인 경우 문자를 반복하여 순서에 상관없이 사용할 수 있습니다.</p>
+  <p>명백한 이유로, 스위 즐을 사용하여 구성 요소 값을 설정할 때 동일한 구성 요소를 두 번 사용할 수 없습니다. 예를 들어, 동일한 구성 요소를 두 개의 다른 값으로 설정하려고하면 아래가 유효하지 않습니다.</p>
   <p class="code">myVec.xx = vec2(2.0, 3.0);</p>
-  <p>Last, we have been using <span class="inline">xyzw</span> as our swizzle mask, which is usually the case when dealing with positions. There are two more sets of masks you can use: <span class="inline">rgba</span> (used for colors), or <span class="inline">stpq</span>    (used for texture coordinates). Internally, there is no difference between these masks, and we only use them to make the code clearer as to what the vector represents in that instance. Also, we can’t combine swizzle masks in the same operation, so
-    this is invalid:</p>
+  <p>마지막으로, 우리는 스위 즐 마스크로 <span class="inline">xyzw</span> 를 사용해 왔는데, 이는 일반적으로 위치를 다룰 때 사용됩니다. 사용할 수있는 마스크 세트는 <span class="inline">rgba</span> (컬러에 사용) 또는 <span class="inline">stpq</span> (텍스처 좌표에 사용)가 더 있습니다. 내부적으로 이러한 마스크 사이에는 차이가 없으며 해당 인스턴스에서 벡터가 나타내는 것을 명확하게하기 위해 마스크를 사용합니다. 또한 동일한 작업에서 스위 즐 마스크를 결합 할 수 없으므로 이는 유효하지 않습니다.</p>
   <p class="code"><span class="inline"></span>myVec = otherVec.ybp;</p>
-  <p>Those were a lot of definitions and information, but knowing these things is necessary to understand shaders themselves.</p>
+  <p>그것들은 많은 정의와 정보 였지만, 이것들을 아는 것은 쉐이더 자체를 이해하는 데 필요합니다.</p>
   <p> </p>
-  <h2>Creating A Shader</h2>
-  <p>When you create a shader in GameMaker Studio 2, it will open two files for you: a vertex shader (<span class="inline">.vsh</span>) and a fragment shader (<span class="inline">.fsh</span>). This is the most basic shader you can make, which takes a sprite,
-    reads the texture, and colors each pixel with that color. If you specify vertex colors when drawing, those colors will blend with the texture.</p>
-  <p>Let’s go through the code for a newly created shader asset and analyze it, starting with the vertex shader.</p>
+  <h2>셰이더 만들기</h2>
+  <p>GameMaker Studio 2에서 셰이더를 생성하면 정점 셰이더 ( <span class="inline">.vsh</span> )와 프래그먼트 셰이더 ( <span class="inline">.fsh</span> )의 두 파일이 열립니다. 이것은 가장 기본적인 셰이더로 스프라이트를 취하고 텍스처를 읽고 각 픽셀에 해당 색상으로 색상을 지정합니다. 그릴 때 꼭짓점 색상을 지정하면 해당 색상이 텍스처와 혼합됩니다.</p>
+  <p>버텍스 셰이더부터 새로 생성 된 셰이더 애셋의 코드를 살펴보고 분석해 봅시다.</p>
   <p class="code">// Passthrough Vertex Shader<br/> attribute vec3 in_Position;                  // (x,y,z)<br/> //attribute vec3 in_Normal;                  // (x,y,z)     unused in this shader.<br/> attribute vec4 in_Colour;                    // (r,g,b,a)<br/> attribute
     vec2 in_TextureCoord;              // (u,v)<br/>
     <br/> varying vec2 v_vTexcoord;<br/> varying vec4 v_vColour;<br/>
     <br/> void main()<br/> {
     <br/>     vec4 object_space_pos = vec4( in_Position.x, in_Position.y, in_Position.z, 1.0);<br/>     gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * object_space_pos;<br/>     <br/>     v_vColour = in_Colour;<br/>     v_vTexcoord = in_TextureCoord;<br/>    }
   </p>
-  <p>Outside of the main function, we see some variable declarations and their qualifiers. The attributes are given to us by GameMaker. The varying ones are created by the user to pass that information over to the fragment shader. Inside the main function,
-    we have the calculations to find the screen position of the vertex:</p>
+  <p>주 함수 외부에서 변수 선언과 한정자가 있습니다. 속성은 GameMaker에서 제공합니다. 다양한 정보는 해당 정보를 프래그먼트 셰이더로 전달하기 위해 사용자가 만듭니다. 메인 함수 안에서 정점의 화면 위치를 찾기위한 계산이 있습니다 :</p>
   <ul class="colour">
-    <li>First, we create a <span class="inline">vec4</span> and initialize it with the components of the position, adding one as the fourth component. In linear algebra, the convention is that we add a one to the fourth component if the vector is representing
-      a point, or a zero if it represents an actual vector.</li>
-    <li>Next, we need to add this fourth component to multiply it with the <span class="inline">MATRIX_WORLD_VIEW_PROJECTION</span> matrix, which is a 4x4 matrix. This multiplication will project the world position of the vertex into screen coordinates.</li>
-    <li>Finally we pass the vertex color and texture coordinate to the fragment shader through our varying variables.</li>
+    <li>먼저 <span class="inline">vec4를</span> 만들고 위치의 구성 요소로 초기화하여 하나를 네 번째 구성 요소로 추가합니다. 선형 대수에서, 관례는 벡터가 점을 나타내는 경우 네 번째 성분에 1을 추가하고 실제 벡터를 나타내는 경우 0을 추가하는 것입니다.</li>
+    <li>다음으로이 네 번째 컴포넌트를 추가하여 4x4 매트릭스 인 <span class="inline">MATRIX_WORLD_VIEW_PROJECTION</span> 매트릭스와 곱해야합니다. 이 곱셈은 정점의 월드 위치를 화면 좌표로 투영합니다.</li>
+    <li>마지막으로 다양한 변수를 통해 정점 색상과 텍스처 좌표를 프래그먼트 셰이더로 전달합니다.</li>
   </ul>
-  <p>This shader should be left alone if you are not planning to play with vertex positions and it will not be used in any of the examples given below because all the effects shown will be created using the fragment shader.</p>
-  <p>Let’s take a quick look at the fragment shader now:</p>
+  <p>꼭짓점 위치를 가지고 놀 계획이 아니라면이 쉐이더는 단독으로 남겨 두어야하며, 표시된 모든 효과는 프래그먼트 쉐이더를 사용하여 만들어지기 때문에 아래 예제에서 사용되지 않습니다.</p>
+  <p>이제 프래그먼트 셰이더를 간단히 살펴 보겠습니다.</p>
   <p class="code">// Passthrough Fragment Shader<br/> varying vec2 v_vTexcoord;<br/> varying vec4 v_vColour;<br/>
     <br/> void main()<br/> {
     <br/>     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );<br/> }
   </p>
-  <p>As explained before, the idea behind a fragment shader is to return the color of the current pixel. This is done by assigning the variable <span class="inline">gl_FragColor</span> the final color value. The <span class="inline">texture2D</span> function
-    takes a texture and a <span class="inline">vec2</span> with the UV coordinates you want to check in that texture, which returns a <span class="inline">vec4</span> with the color. In the pass through shader, all we are doing is grabbing the color of
-    the texture in the coordinate of this pixel and multiplying it by the color of the vertex associated with this pixel.</p>
-  <p>Now that we have our first shader, all we have to do to test it is create an object and assign it a sprite, then in the <strong>Draw Event</strong> of the object you set the shader like this:</p>
+  <p>앞에서 설명한 것처럼 조각 셰이더의 기본 개념은 현재 픽셀의 색상을 반환하는 것입니다. 변수 <span class="inline">gl_FragColor</span> 에 최종 색상 값을 할당하면됩니다. <span class="inline">texture2D</span> 함수는 텍스처를 확인하려는 UV 좌표로 텍스처와 <span class="inline">vec2</span> 를 가져 <span class="inline">와서 vec4</span> 를 색상으로 반환합니다. 패스 스루 셰이더에서 우리가하는 일은이 픽셀의 좌표에서 텍스처의 색상을 잡고이 픽셀과 관련된 정점의 색상을 곱하는 것입니다.</p>
+  <p>이제 첫 번째 셰이더를 만들었으므로 테스트하기 위해 객체를 만들고 스프라이트를 할당하기 만하면됩니다. 그런 다음 객체의 <strong>Draw 이벤트</strong> 에서 다음과 같이 셰이더를 설정합니다.</p>
   <p class="code">// Draw Event<br/> shader_set(shdrColorOverlay);
     <br/> draw_self();
     <br/> shader_reset();
   </p>
-  <p>Every draw call we make between <a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_set.htm"><span class="inline">shader_set()</span></a> and <a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_reset.htm"><span class="inline">shader_reset()</span></a> will
-    have the shader applied to it. Here, we are drawing the object sprite with our passthrough shader:</p>
-  <p><img alt="Drawing Sprite Using Passthough Shader" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_PassThrough.gif"/>As you might have guessed, this does not visually changing anything, as this is a simple pass-through
-    shader. However the sections below outline some simple steps you can take to modify this and change the way the sprite will be drawn. Each of the section shows a different shader that you can create and use in your projects, explaining the steps required
-    to create them and why we are doing things the way we are.</p>
+  <p><a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_set.htm"><span class="inline">shader_set ()</span></a> 과 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_reset.htm"><span class="inline">shader_reset ()</span></a> 사이의 모든 그리기 호출에는 셰이더가 적용됩니다. 여기서는 패스 스루 셰이더로 오브젝트 스프라이트를 그립니다.</p>
+  <p><img alt="Drawing Sprite Using Passthough Shader" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_PassThrough.gif"/>짐작할 수 있듯이 이것은 단순한 패스 스루 셰이더이므로 시각적으로 아무것도 변경되지 않습니다. 그러나 아래 섹션에서는이를 수정하고 스프라이트가 그려지는 방식을 변경하기 위해 수행 할 수있는 몇 가지 간단한 단계를 간략하게 설명합니다. 각 섹션에는 프로젝트에서 만들고 사용할 수있는 서로 다른 셰이더가 나와 있으며,이를 생성하는 데 필요한 단계와 현재의 방식대로 작업하는 이유를 설명합니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Colour Overlay Shader</span><span data-close-text="true">Colour Overlay Shader</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">컬러 오버레이 쉐이더</span> <span data-close-text="true">컬러 오버레이 쉐이더</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">We can edit the base shader now to do something different. We&#39;ll not be touching the vertex shdaer part, and only editing the fragment shader, and to start with we&#39;ll do a very simple operation, which is to make the shader draw the sprite
-      using the colour red. We&#39;ll do this by simply changing the <span class="inline">gl_FragColor</span> to be red., like this:</p>
+    <p class="dropspot">베이스 쉐이더를 편집하여 다른 작업을 할 수 있습니다. 정점 shdaer 부분을 건드리지 않고 프래그먼트 셰이더를 편집하는 것만으로 시작하고 매우 간단한 작업을 수행합니다.이 작업은 셰이더가 빨간색을 사용하여 스프라이트를 그리도록합니다. <span class="inline">gl_FragColor</span> 를 빨간색으로 변경하면 <span class="inline">됩니다</span> :</p>
     <p class="code">// Color Overlay Fragment Shader<br/> void main()<br/> {
       <br/>     gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);<br/> }
     </p>
-    <p class="dropspot">This will give us the following result:</p>
-    <p class="dropspot"><img alt="Initial Colour Overlay Block" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_ColourOverlay_Block.gif"/>Not exactly what we expected! What we need to remember is that every sprite is ultimately a rectangle,
-      so unless we consider transparency - which we haven&#39;t - this is the result we’ll get.</p>
-    <p class="note"><strong>NOTE</strong>: In the image above, the rectangle changes size because the base sprite has had the &quot;empty&quot; space around it cropped automatically when it was placed on the texture page by GameMaker, so each animation frame the triangles
-      that make it up are different sizes to fit the cropped size of the frame. If you disable this option, then you&#39;d simply have a motionless red square on the screen.</p>
-    <p class="dropspot">Above we mentioned the <span class="inline">texture2D</span> function, and we&#39;ll use that to grab the color at the pixel we are working on and get the transparency from it. The return value of is <span class="inline">texture2D</span> is a
-      <span class="inline">vec4</span>, where the components are the red, green, blue, and alpha, in that order. We can access the alpha channel either by putting a period followed by an <span class="inline">a</span> or a <span class="inline">w</span>      after the variable name. This corresponds to RGBA and XYZW, respectively.</p>
-    <p class="dropspot">Here’s the updated code:</p>
+    <p class="dropspot">결과는 다음과 같습니다.</p>
+    <p class="dropspot"><img alt="Initial Colour Overlay Block" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_ColourOverlay_Block.gif"/>정확히 우리가 기대 한 것이 아닙니다! 우리가 기억해야 할 것은 모든 스프라이트는 궁극적으로 사각형이므로 투명성을 고려하지 않는 한 투명성을 고려하지 않는 한 이것이 우리가 얻을 수있는 결과입니다.</p>
+    <p class="note"><strong>참고</strong> : 위 이미지에서 기본 스프라이트는 GameMaker에 의해 텍스처 페이지에 배치 될 때 자동으로 잘리는 주변의 &quot;빈&quot;공간을 가지기 때문에 사각형의 크기가 변경되므로 각 애니메이션 프레임을 구성하는 삼각형의 크기가 다릅니다 자른 프레임 크기에 맞 춥니 다. 이 옵션을 비활성화하면 화면에 움직임이없는 빨간색 사각형이 나타납니다.</p>
+    <p class="dropspot">위에서 <span class="inline">texture2D</span> 함수를 언급했으며,이 함수를 사용하여 작업중인 픽셀의 색상을 잡고 투명도를 얻습니다. 의 반환 값은 <span class="inline">texture2D 그</span> 순서대로 구성 요소는 빨강, 녹색, 파랑 및 알파됩니다 <span class="inline">vec4,입니다.</span> 변수 이름 뒤에 마침표와 <span class="inline">a</span> 또는 <span class="inline">w</span> 를 붙여서 알파 채널에 액세스 할 수 있습니다. 이것은 각각 RGBA 및 XYZW에 해당합니다.</p>
+    <p class="dropspot">업데이트 된 코드는 다음과 같습니다.</p>
     <p class="code">// Color Overlay Fragment Shader<br/> varying vec2 v_vTexcoord;<br/>
       <br/> void main()<br/> {
       <br/>     vec4 texColor = texture2D(gm_BaseTexture, v_vTexcoord);<br/>     gl_FragColor = vec4(1.0, 0.0, 0.0, texColor.a);<br/> }
     </p>
-    <p class="dropspot">We are now assigning a new <span class="inline">vec4</span> to <span class="inline">gl_FragColor</span>, where the red channel is maxed, the green, and blue channels are zero, and the alpha channel is the same as the original texture. The output looks
-      like this:</p>
-    <p class="dropspot"><img alt="Overlay Shader Making Sprite Red" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_ColourOverlay.gif"/>Now that’s what we were after! We have replaced the color of every pixel with red, but have kept
-      the alpha channel intact.</p>
-    <p class="dropspot">Having to change the shader each time we want to use a different color isn’t a good idea, especially since we’d need to have a separate shader for each color we want. Instead, we will pass the color information to the shader using a <strong>uniform</strong>.
-      To do this, we first need to get a <strong>pointer </strong>to the uniform. We will do this in the <strong>Create Event</strong> of our object that has the sprite by adding:</p>
+    <p class="dropspot">우리는 이제 새로운 <span class="inline">vec4</span> 를 <span class="inline">gl_FragColor에</span> 할당하고 있습니다. 여기서 빨강 채널은 최대, 녹색, 파랑 채널은 0이며 알파 채널은 원래 텍스처와 같습니다. 결과는 다음과 같습니다.</p>
+    <p class="dropspot"><img alt="Overlay Shader Making Sprite Red" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_ColourOverlay.gif"/>이제 이것이 우리가 추구 한 것입니다! 모든 픽셀의 색상을 빨간색으로 바꾸었지만 알파 채널은 그대로 유지했습니다.</p>
+    <p class="dropspot">다른 색상을 사용하려고 할 때마다 셰이더를 변경해야하는 것은 좋은 생각이 아닙니다. 특히 원하는 각 색상에 대해 별도의 셰이더가 필요하기 때문입니다. 대신, <strong>유니폼을</strong> 사용하여 색상 정보를 셰이더에 전달합니다. 이렇게하려면 먼저 유니폼에 대한 <strong>포인터</strong> 를 가져와야합니다. 스프라이트가있는 오브젝트의 <strong>Create Event</strong> 에서 다음을 추가하여이 작업을 수행합니다.</p>
     <p class="code">// Create Event<br/> _uniColor = shader_get_uniform(shdrColorOverlay, &quot;u_colour&quot;);<br/> _color    = [1.0, 1.0, 0.0, 1.0];</p>
-    <p class="dropspot">All we need to do is call <a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a> to get a pointer to the uniform. The parameters we need to pass are the shader
-      asset name (without quotation because we want to pass the ID that GameMaker generates for us) and the name of the uniform variable inside of the shader, this time as a string. This name needs to match exactly the one inside the shader code for it
-      to work. We have also added a colour variable so we can change it at runtime and have it remember our changes.</p>
-    <p class="dropspot">Now the code in our draw event will change slightly to pass the uniform variable.</p>
+    <p class="dropspot">유니폼에 대한 포인터를 얻기 위해 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_get_uniform.htm"><span class="inline">shader_get_uniform ()</span></a> 을 호출하기 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_get_uniform.htm"><span class="inline">만하면</span></a> 됩니다. 전달해야하는 파라미터는 셰이더 애셋 이름 (GameMaker가 생성 한 ID를 전달하기 때문에 인용하지 않고)과 이번에는 셰이더 내부의 균일 한 변수 이름입니다 (이번에는 문자열). 이 이름은 셰이더 코드 내부의 이름과 정확히 일치해야 작동합니다. 또한 색상 변수를 추가하여 런타임에 변경하고 변경 사항을 기억할 수 있습니다.</p>
+    <p class="dropspot">이제 draw 이벤트의 코드가 균일 변수를 전달하기 위해 약간 변경됩니다.</p>
     <p class="code">// Draw Event<br/> shader_set(shdrColorOverlay);
       <br/> shader_set_uniform_f_array(_uniColor, _color);<br/> draw_self();
       <br/> shader_reset();
     </p>
-    <p class="dropspot">It’s the same code as before, but before we draw anything, we need to pass all the uniform values to the shader. In this case, we are passing the color as an array of floats. As for the shader, we will change it to include the uniform and use it,
-      so it becomes:</p>
+    <p class="dropspot">이전과 동일한 코드이지만 무언가를 그리기 전에 모든 균일 한 값을 셰이더에 전달해야합니다. 이 경우 색상을 부동 배열로 전달합니다. 셰이더는 유니폼을 포함하도록 변경하여 사용하므로 다음과 같이됩니다.</p>
     <p class="code">// Color Overlay Fragment Shader<br/> varying vec2 v_vTexcoord;<br/> uniform vec4 u_color;<br/> void main()<br/> {
       <br/>     vec4 texColor = texture2D(gm_BaseTexture, v_vTexcoord);<br/>     gl_FragColor = vec4(u_color.rgb, texColor.a);<br/> }
     </p>
-    <p class="dropspot">We declare a variable with the same name as in the create shader (<span class="inline">u_color</span>) and we pass it as the first three components of the <span class="inline">gl_FragColor</span> vector, taking advantage of swizzling. If we compile
-      again, we should see this:</p>
-    <p class="dropspot"><img alt="Overlay Shader Making Sprite Yellow" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_ColourOverlay_Yellow.gif"/>Now the shader is much more useful and reusable. It’s up to you to add more functionality
-      if you need it to set the color (using the variable <span class="inline">_color</span>) during runtime.</p>
+    <p class="dropspot">create shader ( <span class="inline">u_color</span> )에서와 같은 이름을 가진 변수를 선언하고이를 스위 즐링을 이용하여 <span class="inline">gl_FragColor</span> 벡터의 처음 세 구성 요소로 전달합니다. 다시 컴파일하면 다음을 볼 수 있습니다 :</p>
+    <p class="dropspot"><img alt="Overlay Shader Making Sprite Yellow" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_ColourOverlay_Yellow.gif"/>이제 셰이더가 훨씬 더 유용하고 재사용 가능합니다. 런타임 중에 색상을 설정 (변수 <span class="inline">_color 사용</span> )해야하는 경우 더 많은 기능을 추가해야합니다.</p>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Black And White Shader</span><span data-close-text="true">Black And White Shader</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">흑인과 백인 셰이더</span> <span data-close-text="true">흑인과 백인 셰이더</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Making a black and white shader is a great way to learn more about how shaders work, and a lot of beginners start by trying to do this, since conceptually it&#39;s quite simple: get every pixel and assign it a shade of gray. But is it simple? Not
-      quite...
-    </p>
-    <p class="dropspot">When using RGB colour, if all three components are the same value, then we get a gray tone. The naïve approach to creating a shader to use this idea would be to add all three color channels (red, green, and blue) and then divide it by three. After
-      that you&#39;d assigned the value to all three channels, thus creating a gray tone. Here’s what that fragment shader looks like:</p>
+    <p class="dropspot">흑백 셰이더를 만드는 것은 셰이더의 작동 방식에 대해 더 잘 배울 수있는 좋은 방법이며, 많은 초보자는 개념적으로 매우 간단하기 때문에이 작업을 시작합니다. 모든 픽셀을 가져 와서 회색 음영을 지정합니다. 그러나 간단합니까? 좀 빠지는...</p>
+    <p class="dropspot">RGB 색상을 사용할 때 세 가지 구성 요소가 모두 같은 값이면 회색 톤이 나타납니다. 이 아이디어를 사용하기 위해 셰이더를 만드는 방법은 세 가지 색상 채널 (빨간색, 녹색 및 파란색)을 모두 추가 한 다음 3으로 나누는 것입니다. 그런 다음 세 채널 모두에 값을 할당하여 회색 톤을 만듭니다. 프래그먼트 셰이더의 모양은 다음과 같습니다.</p>
     <p class="code">// Black and white fragment shader<br/> varying vec2 v_vTexcoord;<br/> varying vec4 v_vColour;<br/>
       <br/> void main()<br/> {
       <br/>     vec4 texColor = texture2D(gm_BaseTexture, v_vTexcoord);<br/>     float gray = (texColor.r + texColor.g + texColor.b) / 3.0;<br/>     gl_FragColor = v_vColour * vec4(gray, gray, gray, texColor.a);<br/> }
     </p>
-    <p class="dropspot">One thing you might have noticed is that in the <span class="inline">gl_FragColor</span> code, we&#39;re multiplying the <span class="inline">vec4</span> with something called <span class="inline">v_vColour</span>. This is a variable passed by the
-      vertex shader which tells us the color of the vertex associated with this pixel. It’s always a good idea to multiply your final calculated color with the vertex color. In most cases, it won’t do anything, but if you changed the vertex color in GML,
-      this will reflect that (by using functions such as <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a> or <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_general.htm"><span class="inline">draw_sprite_general()</span></a> to
-      change the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_blend.htm"><span class="inline">image_blend</span></a>).</p>
-    <p class="dropspot">As for the draw event, it’s quite simple since we don’t have a uniform to pass in:</p>
+    <p class="dropspot"><span class="inline">gl_FragColor</span> 코드에서 <span class="inline">vec4에 v_vColour</span> 라는 값을 <span class="inline">곱하고</span> 있다는 것을 <span class="inline">알 수</span> 있습니다. 이것은 정점 셰이더가 전달한 변수로,이 픽셀과 관련된 정점의 색상을 알려줍니다. 최종 계산 된 색에 꼭짓점 색을 곱하는 것이 항상 좋습니다. 대부분의 경우 아무 작업도 수행하지 않지만 GML에서 정점 색상을 변경하면 <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><span class="inline">draw_sprite_ext ()</span></a> 또는 <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_general.htm"><span class="inline">draw_sprite_general ()</span></a> 과 같은 함수를 사용하여 <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_general.htm"><span class="inline">image_blend</span></a> 를 변경하여 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_blend.htm"><span class="inline">이를 반영</span></a> 합니다.</p>
+    <p class="dropspot">추첨 이벤트는 전달할 유니폼이 없기 때문에 매우 간단합니다.</p>
     <p class="code">// Draw Event<br/> shader_set(shdrBlackAndWhite);
       <br/> draw_self();
       <br/> shader_reset();
     </p>
-    <p class="dropspot">Let’s compile and see what we got.</p>
-    <p class="dropspot"><img alt="Black And White Shader" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_BlackAndWhite.gif"/>This looks great already, right? Well, yes and no... there is a solution that is more “correct”, since instead
-      of adding the components and dividing by three, we multiply each component by the standard NTSC values for black and white. Here’s the modified fragment shader code:</p>
+    <p class="dropspot">컴파일하고 우리가 얻은 것을 보자.</p>
+    <p class="dropspot"><img alt="Black And White Shader" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_BlackAndWhite.gif"/>이거 벌써 좋아 보인다? 그렇습니다. 아니요. 더 정확한 해결책이 있습니다. 컴포넌트를 추가하고 3으로 나누는 대신 각 컴포넌트에 표준 NTSC 값을 흑백으로 곱하기 때문입니다. 다음은 수정 된 조각 쉐이더 코드입니다.</p>
     <p class="code">// Black and white fragment shader<br/> varying vec2 v_vTexcoord;<br/>
       <br/> void main()<br/> {
       <br/>     vec4 texColor = texture2D(gm_BaseTexture, v_vTexcoord);<br/>     float gray = dot(texColor.rgb, vec3(0.299, 0.587, 0.114));<br/>     gl_FragColor = vec4(gray, gray, gray, texColor.a);<br/> }
     </p>
-    <p class="dropspot">We use the dot product as a shorthand for multiplying each component of <span class="inline">texColor</span> with the correct weights and then add them together. If you are unfamiliar with the dot product, this is essentially what’s happening:</p>
+    <p class="dropspot">우리는 <span class="inline">texColor의</span> 각 구성 요소에 올바른 가중치를 곱한 다음 함께 더하기 위해 내적을 사용합니다. 내적 제품에 익숙하지 않은 경우 기본적으로 이런 일이 발생합니다.</p>
     <p class="code">float gray = (texColor.r * 0.299) + (texColor.g * 0.587) + (texColor.b * 0.114);</p>
-    <p class="dropspot">In the end, it looks very similar, but it’s technically more correct.</p>
+    <p class="dropspot">결국, 그것은 매우 비슷해 보이지만 기술적으로 더 정확합니다.</p>
     <p class="dropspot"><img alt="Corrected Black And White Shader" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_BlackAndWhite_Improved.gif"/></p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Rainbow Shader</span><span data-close-text="true">Rainbow Shader</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">레인보우 쉐이더</span> <span data-close-text="true">레인보우 쉐이더</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">Our final shader example is a fun one and can be used to add life to text and buttons and other things. We&#39;ll start simple and add functionality gradually since this shader is highly customizable. There&#39;s quite a lot to cover for this one,
-      so if you feel a bit lost or confused, please go back and re-read some of the sections above.</p>
-    <p class="dropspot">The first thing we want to do is color pixels with every hue, depending on the pixel’s horizontal position. The way to do this is to set the x position to be the hue and then convert from HSV (hue, saturation, brightness) format to RGB (red, green,
-      and blue) format. For this, we will need to write a helper function in our fragment shader that takes HSV values and returns an RGB vector. We will use a single function which does this without the need for any <span class="inline">if</span> statements,
-      as using conditionals in shader code makes shaders <em>very </em>slow, and should be avoided.</p>
-    <p class="dropspot">Here’s what the shader looks like at this stage:</p>
+    <p class="dropspot">마지막 셰이더 예제는 재미있는 것으로 텍스트와 버튼 및 기타 것들에 생명을 불어 넣는 데 사용할 수 있습니다. 이 쉐이더는 사용자 정의가 가능하므로 간단하게 시작하고 점차적으로 기능을 추가합니다. 이것에 대해 다루어야 할 것이 많이 있으므로 약간의 손실이나 혼란을 느끼면 위의 섹션 중 일부를 다시 읽으십시오.</p>
+    <p class="dropspot">가장 먼저 할 일은 픽셀의 수평 위치에 따라 모든 색조의 컬러 픽셀입니다. 이를 수행하는 방법은 x 위치를 색조로 설정 한 다음 HSV (색조, 채도, 밝기) 형식에서 RGB (빨강, 녹색 및 파랑) 형식으로 변환하는 것입니다. 이를 위해 프래그먼트 셰이더에 HSV 값을 가져와 RGB 벡터를 반환하는 도우미 함수를 작성해야합니다. 셰이더 코드에서 조건을 사용하면 셰이더가 <em>매우</em> 느려져 피해야하기 때문에 <span class="inline">if</span> 문이 필요없는 단일 함수를 사용할 것입니다.</p>
+    <p class="dropspot">이 단계에서 셰이더의 모양은 다음과 같습니다.</p>
     <p class="code">// Fragment Shader<br/> varying vec2 v_vTexcoord;<br/> varying vec4 v_vColour;<br/>
       <br/> vec3 hsv2rgb(vec3 c) <br/> {
       <br/>     vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);<br/>     vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);<br/>     return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);<br/> }
@@ -272,32 +220,22 @@
       <br/> void main()<br/> {
       <br/>     vec3 col = vec3(v_vTexcoord.x, 1.0, 1.0);<br/>     float alpha = texture2D(gm_BaseTexture, v_vTexcoord).a;<br/>     gl_FragColor = v_vColour * vec4(hsv2rgb(col), alpha);<br/> }
     </p>
-    <p class="dropspot">There&#39;s a bit more going on here than in the previous examples, but most of it should be fairly obvious to you now. First, there’s our <span class="inline">hsv2rgb</span> function, which takes a <span class="inline">vec3</span> with our HSV colour
-      and returns another <span class="inline">vec3</span> with our RGB conversion. In the main function, we start by creating our HSV colour, where the hue is our x position, and we’ll leave the saturation and brightness as 1.0 for now. Then, we get
-      the alpha from the texture so it only colors our sprite character and not the entire sprite rectangle (as we did in the colour overlay example, above). Lastly, we set our Fragment color to be our HSV color converted to RGB with the alpha, multiplied
-      by the vertex color (good practice to do this always).</p>
-    <p class="dropspot">As for our draw code, it is trivial at the moment:</p>
+    <p class="dropspot">이전 예제보다 조금 더 진행되었지만 지금은 대부분 분명합니다. 우리 HSV 색상과 반환 우리 RGB 변환을 다른 <span class="inline">VEC3와</span> <span class="inline">VEC3 소요</span> 첫째는 thereâ € ™ s의 우리 <span class="inline">hsv2rgb 기능.</span> 주요 기능에서 우리는 HSV 색상을 만드는 것으로 시작합니다. 여기서 색조는 x 위치이며 채도와 밝기는 1.0으로 유지합니다. 그런 다음 텍스처에서 알파를 가져와 스프라이트 문자 만 채색하고 전체 스프라이트 사각형이 아닌 채색합니다 (위의 색상 오버레이 예에서와 같이). 마지막으로 Fragment 색상을 알파를 사용하여 RGB로 변환 한 HSV 색상으로 정점 색상을 곱한 값으로 설정했습니다 (항상 권장하는 방법).</p>
+    <p class="dropspot">우리의 드로우 코드에 관해서는, 현재로서는 사소합니다.</p>
     <p class="code">// Draw Event<br/> shader_set(shdrRainbow);
       <br/> draw_self();
       <br/> shader_reset();
     </p>
-    <p class="dropspot">Let’s check out what we got:</p>
-    <p class="dropspot"><img alt="Initial Rainbow Shader" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Rainbow_Overlay.gif"/>We are close to what we want, but there’s an issue: we are not seeing all the colors at once in every frame
-      of the animation, and the colors seem to change randomly. The reason is that we assumed that <span class="inline">v_vTexcoord</span> gave us the coordinates of the sprite, starting at the top-left corner (0,0) and ending in the bottom right corner
-      (1,1), which is standard in shaders. However, for optimization, GameMaker stuffs as many textures together as it can fit in what is called a <a href="../Settings/Texture_Information/Texture_Pages.htm">texture page,</a> and because of that, this
-      is how our texture actually looks:</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Texture.png"/>As explained above, <span class="inline">v_vTexcoord</span> gives us the absolute coordinates of the sprite within this entire texture page,
-      but what we want is a value from 0.0 to 1.0 that only covers our current sprite. This process is called <strong>normalizing</strong> (getting a value and translating it to a 0 to 1 range). To normalize our horizontal values, we need to know the
-      values of x0 and x1 in the picture above. Luckily, GameMaker has a function that gives us the location of every corner in our sprite within the texture page. First, we need to go to the Create Event and create a uniform to pass this data over to
-      the shader:</p>
+    <p class="dropspot">우리가 얻은 것을 확인하자.</p>
+    <p class="dropspot"><img alt="Initial Rainbow Shader" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Rainbow_Overlay.gif"/>우리는 원하는 것에 가깝지만 문제가 있습니다. 애니메이션의 모든 프레임에서 모든 색상을 한 번에 볼 수는 없으며 색상이 무작위로 변하는 것 같습니다. 그 이유는 <span class="inline">v_vTexcoord</span> 가 왼쪽 상단 (0,0)에서 시작하여 오른쪽 하단 (1,1)에서 끝나는 스프라이트의 좌표를 셰이더의 표준으로 가정 한 것입니다. 그러나 최적화를 위해 GameMaker는 <a href="../Settings/Texture_Information/Texture_Pages.htm">텍스처 페이지</a> 라고하는 것에 맞출 수있는만큼 많은 텍스처를 채 웁니다.이 때문에 텍스처가 실제로 보이는 방식입니다.</p>
+    <p class="dropspot"><img class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Texture.png"/>위에서 설명한 것처럼 <span class="inline">v_vTexcoord</span> 는이 전체 텍스처 페이지 내에서 스프라이트의 절대 좌표를 제공하지만 원하는 것은 현재 스프라이트에만 적용되는 0.0에서 1.0 사이의 값입니다. 이 과정을 <strong>정규화</strong> (값을 가져 와서 0에서 1 범위로 변환)라고합니다. 수평 값을 정규화하려면 위 그림에서 x0 및 x1 값을 알아야합니다. 운 좋게도 GameMaker에는 텍스처 페이지 내 스프라이트의 모든 모서리 위치를 제공하는 기능이 있습니다. 먼저 Create Event로 이동하여이 데이터를 셰이더에 전달할 유니폼을 만들어야합니다.</p>
     <p class="code">// Create Event<br/> _uniUV = shader_get_uniform(shdrRainbow, &quot;u_uv&quot;);</p>
-    <p class="dropspot">And we modify the draw event to get the values and then pass them to the shader:</p>
+    <p class="dropspot">그리고 draw 이벤트를 수정하여 값을 얻은 다음 셰이더에 전달합니다.</p>
     <p class="code">// Draw Event<br/> shader_set(shdrRainbow);
       <br/> var uv = sprite_get_uvs(sprite_index, image_index);<br/> shader_set_uniform_f(_uniUV, uv[0], uv[2]);<br/> draw_self();
       <br/> shader_reset();
     </p>
-    <p class="dropspot">The function <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm"><span class="inline">sprite_get_uvs()</span></a> takes a sprite and an index, and it returns an array with tons of information,
-      such as the coordinates for each corner, how many pixels were cropped to optimize it, etc. We are interested in two of those values: the left and right coordinates of the sprite, which are stored in <span class="inline">uv[0]</span> and <span class="inline">uv[2]</span>      respectively. In the fragment shader, we will use those values now to calculate the normalized horizontal position like this:</p>
+    <p class="dropspot"><a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm"><span class="inline">sprite_get_uvs ()</span></a> 함수는 스프라이트와 인덱스를 가져와 각 모서리의 좌표, 픽셀을 최적화하기 위해 잘린 픽셀 수 등과 같은 수많은 정보가 포함 된 배열을 반환합니다.이 값 중 두 가지에 관심이 있습니다. 스프라이트의 왼쪽 및 오른쪽 좌표는 각각 <span class="inline">uv [0]</span> 및 <span class="inline">uv [2]에 저장</span> 됩니다. 프래그먼트 셰이더에서이 값을 사용하여 다음과 같이 정규화 된 수평 위치를 계산합니다.</p>
     <p class="code">// Fragment Shader<br/> varying vec2 v_vTexcoord;<br/> varying vec4 v_vColour;<br/>
       <br/> uniform vec2 u_uv;<br/>
       <br/> vec3 hsv2rgb(vec3 c) <br/> {
@@ -306,22 +244,19 @@
       <br/> void main()<br/> {
       <br/>     float pos = (v_vTexcoord.x - u_uv[0]) / (u_uv[1] - u_uv[0]);<br/>     vec3 col = vec3(pos, 1.0, 1.0);<br/>     float alpha = texture2D(gm_BaseTexture, v_vTexcoord).a;<br/>     gl_FragColor = v_vColour * vec4(hsv2rgb(col), alpha);<br/>      }
     </p>
-    <p class="dropspot">Here we add the uniform variable at the top of the file with the same name we used in the Create Event. Next, we calculate the normalized horizontal position by translating our current <span class="inline">x</span> coordinate to the origin (
-      <span class="inline">v_vTexcoord.x - u_uv[0]</span>) and then we divide it by the width of the sprite to make the range from 0 to 1 (<span class="inline">u_uv[1] - u_uv[0]</span>).</p>
-    <p class="dropspot">The result is:</p>
-    <p class="dropspot"><img alt="Rainbow Overlay Shader Improved" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Rainbow_Overlay_Improved.gif"/>There we go! This is exactly what we wanted. We can see every color of the spectrum inside
-      our sprite.</p>
-    <p class="dropspot">You might be happy with that, but we can have some more fun with this shader. What if we added an offset to the colors based around time to produce movement? To do this, we will need two extra variables for <strong>speed </strong>and <strong>time</strong>.
-      We will also need two more uniforms, one for each of the new variables, so the Create Event becomes:</p>
+    <p class="dropspot">여기에서 Create Event에서 사용한 것과 같은 이름으로 파일 상단에 균일 변수를 추가합니다. 다음으로 현재 <span class="inline">x</span> 좌표를 원점 ( <span class="inline">v_vTexcoord.x-u_uv [0]</span> )으로 변환하여 정규화 된 수평 위치를 계산 한 다음 스프라이트의 너비로 나누어 0에서 1 ( <span class="inline">u_uv [1 ]-u_uv [0]</span> ).</p>
+    <p class="dropspot">결과는 다음과 같습니다.</p>
+    <p class="dropspot"><img alt="Rainbow Overlay Shader Improved" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Rainbow_Overlay_Improved.gif"/>우리는 거기에 갈! 이것이 바로 우리가 원하는 것입니다. 스프라이트 내부의 모든 스펙트럼 색상을 볼 수 있습니다.</p>
+    <p class="dropspot">당신은 그것에 만족할지도 모르지만, 우리는이 쉐이더로 더 재미있을 수 있습니다. 움직임을 만들기 위해 시간을 기준으로 색상에 오프셋을 추가하면 어떻게됩니까? 이를 위해서는 <strong>속도</strong> 와 <strong>시간에</strong> 대해 두 개의 추가 변수가 필요합니다. 또한 새 변수마다 하나씩 두 개의 유니폼이 더 필요하므로 Create Event는 다음과 같습니다.</p>
     <p class="code">// Create Event<br/> _uniUV    = shader_get_uniform(shdrRainbow, &quot;u_uv&quot;);<br/> _uniTime  = shader_get_uniform(shdrRainbow, &quot;u_time&quot;);<br/> _uniSpeed = shader_get_uniform(shdrRainbow, &quot;u_speed&quot;);<br/> _time  = 0;<br/>      _speed = 1.0;</p>
-    <p class="dropspot">We also need to increase the time every frame, so in the Step Event we add:</p>
+    <p class="dropspot">또한 매 프레임마다 시간을 늘려야하므로 단계 이벤트에서 다음을 추가합니다.</p>
     <p class="code">// Step Event<br/> _time += 1 / room_speed;</p>
-    <p class="dropspot">Let’s go to the draw event now to send these uniforms to the shader:</p>
+    <p class="dropspot">이제 유니폼을 셰이더에 보내기 위해 draw 이벤트로갑니다.</p>
     <p class="code">// Draw Event<br/> shader_set(shdrRainbow);
       <br/> var uv = sprite_get_uvs(sprite_index, image_index);<br/> shader_set_uniform_f(_uniUV, uv[0], uv[2]);<br/> shader_set_uniform_f(_uniSpeed, _speed);<br/> shader_set_uniform_f(_uniTime, _time);<br/> draw_self();
       <br/> shader_reset();
     </p>
-    <p class="dropspot">Finally, we&#39;ll go back to our shader to actually use these variables now. What we will do is multiply the speed with the time and add it to the position, like so:</p>
+    <p class="dropspot">마지막으로 쉐이더로 돌아가서 실제로 이러한 변수를 사용하겠습니다. 우리가 할 일은 속도와 시간을 곱하고 다음과 같이 위치에 추가하는 것입니다.</p>
     <p class="code">// Fragment Shader<br/> varying vec2 v_vTexcoord;<br/> varying vec4 v_vColour;<br/>
       <br/> uniform vec2 u_uv;<br/> uniform float u_speed;<br/> uniform float u_time;<br/>
       <br/> vec3 hsv2rgb(vec3 c) <br/> {
@@ -332,22 +267,18 @@
       alpha);
       <br/> }
     </p>
-    <p class="dropspot">If you did everything correctly, you should be seeing something like this:</p>
-    <p class="dropspot"><img alt="Rainbow Shader Overlay Moving With Time" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Rainbow_Overlay_Final.gif"/>To finish this shader, we will add a few more uniforms to customize it even further.
-      The first two are to control the saturation and brightness. The next one we&#39;ll call &quot;section&quot; and its function is to allow the user to pass a number between zero and one to determine what percentage of the entire spectrum we see at
-      a time. Last, we will add a variable called &quot;mix&quot;, which will specify how much we want to mix our shader color with the original texture color (1.0 is all rainbow, 0.0 is all texture). As always, let’s start by adding the variables to
-      the Create Event:</p>
+    <p class="dropspot">모든 것을 올바르게했다면 다음과 같이 보일 것입니다.</p>
+    <p class="dropspot"><img alt="Rainbow Shader Overlay Moving With Time" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Rainbow_Overlay_Final.gif"/>이 쉐이더를 완성하기 위해 유니폼을 추가하여 더 커스터마이징 할 것입니다. 처음 두 가지는 채도와 밝기를 제어하는 ​​것입니다. 다음으로 &quot;섹션&quot;이라고 부르고 그 기능은 사용자가 0에서 1 사이의 숫자를 전달하여 한 번에 전체 스펙트럼의 몇 퍼센트를 볼 수 있도록하는 것입니다. 마지막으로 &quot;mix&quot;라는 변수를 추가하여 셰이더 색상과 원래 질감 색상 (1.0은 모두 무지개, 0.0은 모두 질감)을 얼마나 혼합 할 것인지 지정합니다. 항상 그렇듯이 Create Event에 변수를 추가하여 시작하겠습니다.</p>
     <p class="code">// Create Event<br/> _uniUV         = shader_get_uniform(shdrRainbow, &quot;u_uv&quot;);<br/> _uniTime       = shader_get_uniform(shdrRainbow, &quot;u_time&quot;);<br/> _uniSpeed      = shader_get_uniform(shdrRainbow, &quot;u_speed&quot;);<br/> _uniSection
          = shader_get_uniform(shdrRainbow, &quot;u_section&quot;);<br/> _uniSaturation = shader_get_uniform(shdrRainbow, &quot;u_saturation&quot;); <br/> _uniBrightness = shader_get_uniform(shdrRainbow, &quot;u_brightness&quot;);<br/> _uniMix        =
       shader_get_uniform(shdrRainbow, &quot;u_mix&quot;);<br/>
       <br/> _time  = 0;<br/> _speed = 1.0;<br/> _section = 0.5;<br/> _saturation = 0.7;<br/> _brightness = 0.8;<br/> _mix = 0.5;</p>
-    <p class="dropspot">Our draw event changes to include these uniforms like this:</p>
+    <p class="dropspot">우리의 드로우 이벤트는 다음과 같이 유니폼을 포함하도록 변경됩니다.</p>
     <p class="code">// Draw Event<br/> shader_set(shdrRainbow);
       <br/> var uv = sprite_get_uvs(sprite_index, image_index);<br/> shader_set_uniform_f(_uniUV, uv[0], uv[2]);<br/> shader_set_uniform_f(_uniSpeed, _speed);<br/> shader_set_uniform_f(_uniTime, _time);<br/> shader_set_uniform_f(_uniSaturation, _saturation);<br/>      shader_set_uniform_f(_uniBrightness, _brightness);<br/> shader_set_uniform_f(_uniSection, _section);<br/> shader_set_uniform_f(_uniMix, _mix);<br/> draw_self();
       <br/> shader_reset();
     </p>
-    <p class="dropspot">As for the shader, we need to pass the saturation and brightness to the color, which will affect the color generated by our helper function. The section needs to be multiplied by our position to reduce the range. We will also grab the entire texture
-      color, so we can calculate our final color by mixing the texture color with the RGB conversion of our color. The last parameter of the mix function determines how much of the second color we want to add. This is our final shader code:</p>
+    <p class="dropspot">셰이더의 경우 채도와 밝기를 색상에 전달해야합니다. 이는 도우미 기능으로 생성 된 색상에 영향을 미칩니다. 범위를 줄이려면 섹션에 위치를 곱해야합니다. 또한 전체 텍스처 색상을 가져 와서 텍스처 색상과 색상의 RGB 변환을 혼합하여 최종 색상을 계산할 수 있습니다. mix 함수의 마지막 매개 변수는 추가 할 두 번째 색의 양을 결정합니다. 이것이 마지막 셰이더 코드입니다.</p>
     <p class="code">// Fragment Shader<br/> varying vec2 v_vTexcoord;<br/> varying vec4 v_vColour;<br/>
       <br/> uniform vec2 u_uv;<br/> uniform float u_speed;<br/> uniform float u_time;<br/> uniform float u_saturation;<br/> uniform float u_brightness;<br/> uniform float u_section;<br/> Uniform float u_mix;<br/>
       <br/> vec3 hsv2rgb(vec3 c) <br/> {
@@ -356,24 +287,25 @@
       <br/> void main()<br/> {
       <br/>     float pos = (v_vTexcoord.x - u_uv[0]) / (u_uv[1] - u_uv[0]);<br/>     vec4 texColor = texture2D(gm_BaseTexture, v_vTexcoord);<br/>     <br/>     vec3 col = vec3(u_section * ((u_time * u_speed) + pos), u_saturation, u_brightness);<br/>        vec4 finalCol = mix(texColor, vec4(hsv2rgb(col), texColor.a), u_mix);<br/>     <br/>     gl_FragColor = v_vColour * finalCol;<br/> }
     </p>
-    <p class="dropspot">And our final result is this!</p>
+    <p class="dropspot">그리고 우리의 최종 결과는 이것입니다!</p>
     <p class="dropspot"><img alt="Rainbow Shader Final" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Shader_Rainbow_Final.gif"/></p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
-  <p>That&#39;s the end of this short guide and you should now have a better understanding of how shaders work and some of the uses they can be put to. You should take your time to play with the shaders you&#39;ve created following this guide, and try to
-    experiment with them do other things - how about creating a blur shader, or a shader that makes a gameboy-style monochrome screen? - since shaders are an incredibly powerful tool for adding visual complexity and style to your games.</p>
+  <p>이제이 짧은 안내서의 끝이되었으며 이제 셰이더의 작동 방식과 적용 할 수있는 일부 사용법에 대해 더 잘 이해해야합니다. 이 가이드에 따라 생성 한 셰이더로 시간을내어 블러 셰이더 또는 게임 보이 스타일의 흑백 화면을 만드는 셰이더를 만드는 방법에 대해 실험 해보십시오. -셰이더는 게임에 시각적 복잡성과 스타일을 추가 할 수있는 매우 강력한 도구이기 때문에.</p>
   <p> </p>
-  <p class="note">YoYo Games would like to thank <a href="https://twitter.com/AleHitti">Alejandro Hitti</a> and <strong>Amazon</strong> for permitting us to reproduce this guide. You can find the original version on the <a href="https://developer.amazon.com/es/blogs/appstore/post/acefafad-29ba-4f31-8dae-00805fda3f58/intro-to-shaders-and-surfaces-with-gamemaker-studio-2">Amazon Developer Blog</a>.</p>
+  <p class="note">YoYo Games는이 가이드를 재현 할 수 있도록 해준 <a href="https://twitter.com/AleHitti">Alejandro Hitti</a> 와 <strong>Amazon</strong> 에게 감사의 <a href="https://twitter.com/AleHitti">말씀</a> 을 전합니다. <a href="https://developer.amazon.com/es/blogs/appstore/post/acefafad-29ba-4f31-8dae-00805fda3f58/intro-to-shaders-and-surfaces-with-gamemaker-studio-2">Amazon 개발자 블로그</a> 에서 원본 버전을 찾을 수 있습니다.</p>
   <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Additional_Information/Guide_To_Using_Shaders.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="Guide_To_Primitives_And_Vertex_Building.htm">Guide To Primitives And Vertex Building</a></div>
+        <div style="float:left">목록: <a href="Additional_Information.htm">추가 정보</a></div>
+        <div style="float:right">다음: <a href="Guide_To_Primitives_And_Vertex_Building.htm">프리미티브 및 버텍스 구축 가이드</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Shaders
@@ -385,4 +317,4 @@ Guide To Using Shaders
 using_shaders
 -->
 
-</body></html>
+</body></html> 

@@ -71,7 +71,7 @@
         <span>xboxlive_stats_get_leaderboard</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,75 +81,71 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_get_leaderboard</h1>
-  <p>This function can be used to retrieve a global leaderboard of ranks for a given statistic. You supply the user ID (as returned, for example, by the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user()</tt></a>), the
-    stat string (as defined when you registered it as a &quot;Featured Stat&quot;), and then you specify a number of details about what leaderboard information you want to retrieve. Note that you can only retrieve a global leaderboard for int or real
-    stats, but <i>not</i> for string stats.</p>
-  <p class="note"><b>IMPORTANT!</b> Stats used in global leaderboards must be registered as &quot;Featured Stats&quot; in the XDP/Windows Dev Center otherwise an error will be returned. If you want local (social) leaderboards, then please see the function <a href="xboxlive_stats_get_social_leaderboard.htm"><tt><span style="font-size:14px;">xboxlive_stats_get_social_leaderboard()</span></tt></a>.</p>
-  <p>The function will generate a callback which will trigger a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">System Asynchronous Event</a>. This event will have the built in DS map <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"> <tt>async_load</tt> </a>    which should then be parsed for the following keys:</p>
+  <p>이 함수는 주어진 통계에 대한 순위의 글로벌 순위표를 검색하는 데 사용할 수 있습니다. 사용자 ID (예 : <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>xboxlive_get_user ()</tt></a> 함수에 의해 리턴 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><tt>됨</tt></a> ), 통계 문자열 ( &quot;추천 통계&quot;로 등록 할 때 정의 된대로)을 제공 한 다음 리더 보드 정보에 대한 세부 사항을 지정합니다. 검색하고 싶습니다. int 또는 real 통계에 대한 글로벌 리더 보드 만 검색 할 수 있지만 문자열 통계에 대해서는 검색 할 수 <i>없습니다</i> .</p>
+  <p class="note"><b>중대한!</b> 글로벌 리더 보드에서 사용되는 통계는 XDP / Windows Dev Center에서 &quot;추천 통계&quot;로 등록되어야합니다. 그렇지 않으면 오류가 리턴됩니다. 로컬 (소셜) 리더 보드를 원하면 <a href="xboxlive_stats_get_social_leaderboard.htm"><tt><span style="font-size:14px;">xboxlive_stats_get_social_leaderboard ()</span></tt></a> 함수를 참조하십시오.</p>
+  <p>이 함수는 콜백을 생성하여 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">시스템 비동기 이벤트를</a> 트리거합니다. 이 이벤트에는 내장 DS 맵 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> 가 있으며 다음 키에 대해 구문 분석해야합니다.</p>
   <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - Will hold the constant <tt>achievement_stat_event</tt></li>
-    <li>&quot;<b>event</b>&quot; - Will hold the string &quot;<i>GetLeaderboardComplete</i>&quot;</li>
-    <li>&quot;<b>userid</b>&quot; - The user ID associated with the request</li>
-    <li>&quot;<b>error</b>&quot; - 0 if successful, some other value if there has been an error. The following two are the most common errors returned:
-      <ul>
-        <li>2145844844: Cannot find requested leaderboard (the stat is not registered as a featured stat)</li>
-        <li>-2145844848: Bad request (the stat is not a valid leaderboard type, ie: a string)</li>
+    <li>&quot; <b>id</b> &quot;-일정한 <tt>achievement_stat_event를</tt> 유지합니다</li>
+    <li>&quot; <b>event</b> &quot;- &quot; <i>GetLeaderboardComplete</i> &quot;문자열을 보유합니다</li>
+    <li>&quot; <b>userid</b> &quot;-요청과 연관된 사용자 ID</li>
+    <li>&quot; <b>error</b> &quot;-성공하면 0, 오류가 있으면 다른 값. 다음 두 가지 가장 일반적인 오류가 반환됩니다. 2145844844 : 요청 된 리더 보드를 찾을 수 없습니다 (통계가 추천 통계로 등록되지 않았습니다)</li>
+        <li>-2145844848 : 잘못된 요청 (통계가 유효한 리더 보드 유형이 아닙니다 (예 : 문자열))</li>
       </ul>
     </li>
-    <li>&quot;<b>errormessage</b>&quot; - A string with an error message, if any is available</li>
-    <li>&quot;<b>display_name</b>&quot; - The unique ID for the leaderboard as defined on the provider dashboard.</li>
-    <li>&quot;<b>numentries</b>&quot; - The number of entries in the leaderboard that you have received.</li>
+    <li>&quot; <b>errormessage</b> &quot;-사용 가능한 경우 오류 메시지가있는 문자열</li>
+    <li>&quot; <b>display_name</b> &quot;-제공자 대시 보드에 정의 된 리더 보드의 고유 ID입니다.</li>
+    <li>&quot; <b>numentries</b> &quot;-리더 보드에서받은 항목 수입니다.</li>
   </ul>
-  <p>The rest of the DS map will also contain the leaderboard data with the following format (where &quot;N&quot; is the position in the leaderboard data, from 0 to &quot;numentries&quot;):</p>
+  <p>DS 맵의 나머지 부분에는 다음 형식의 리더 보드 데이터도 포함됩니다 (여기서 &quot;N&quot;은 리더 보드 데이터에서 0에서 &quot;numentries&quot;까지의 위치 임).</p>
   <ul class="colour">
-    <li>&quot;<b>Player<i>N</i></b>&quot; - The name of the player, where &quot;N&quot; is an integer value corresponding to their position within the leaderboard entries list.</li>
-    <li>&quot;<b>Playerid<i>N</i></b>&quot; - The unique user id of the player, &quot;N&quot;.</li>
-    <li>&quot;<b>Rank<i>N</i></b>&quot; - The rank of the player &quot;N&quot; within the leaderboard.</li>
-    <li>&quot;<b>Score<i>N</i></b>&quot; - The score of the player &quot;N&quot;.</li>
+    <li>&quot; <b>Player</b> <i>N</i> &quot;- <b>플레이어</b> 의 이름입니다. 여기서 &quot;N&quot;은 순위표 항목 목록 내 위치에 해당하는 정수 값입니다.</li>
+    <li>&quot; <b>Playerid</b> <i>N</i> &quot;-플레이어의 고유 사용자 ID &quot;N&quot;</li>
+    <li>&quot; <b>Rank</b> <i>N</i> &quot;-순위표 내의 플레이어 &quot;N&quot;의 순위입니다.</li>
+    <li>&quot; <b>Score</b> <i>N</i> &quot;-플레이어 &quot;N&quot;의 점수입니다.</li>
   </ul>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">xboxlive_stats_get_leaderboard(user_id, stat, num_entries, start_rank, start_at_user, ascending);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>user_id</td>
-        <td>The user ID of the user to get the leaderboard for</td>
+        <td>리더 보드를 가져올 사용자의 사용자 ID</td>
       </tr>
       <tr>
-        <td>stat</td>
-        <td>The stat (as string) to create the global leaderboard from</td>
+        <td>통계</td>
+        <td>전역 리더 보드를 생성하는 통계 (문자열)</td>
       </tr>
       <tr>
         <td>num_entries</td>
-        <td>The number of entries from the global leaderboard to retrieve</td>
+        <td>글로벌 리더 보드에서 검색 할 항목 수</td>
       </tr>
       <tr>
-        <td>start_rank</td>
-        <td>The rank in the leaderboard to start from (use 0 if the &quot;start_at_user&quot; argument is set to <tt>true</tt>)</td>
+        <td>시작 _ 순위</td>
+        <td>리더 보드에서 시작할 순위입니다 ( &quot;start_at_user&quot;인수가 <tt>true</tt> 로 설정된 경우 0 사용)</td>
       </tr>
       <tr>
         <td>start_at_user</td>
-        <td>Set to <tt>true</tt> to start at the user ID rank, <tt>false</tt> otherwise (set to <tt>false</tt> if the &quot;start_rank&quot; argument is anything other than 0)</td>
+        <td>사용자 ID 순위에서 시작하려면 <tt>true</tt> 로 설정하고 그렇지 않으면 <tt>false로</tt> 설정하십시오 ( &quot;start_rank&quot;인수가 0이 아닌 경우 <tt>false로</tt> 설정)</td>
       </tr>
       <tr>
-        <td>ascending</td>
-        <td>Set to <tt>true</tt> for ascending order and <tt>false</tt> for descending order</td>
+        <td>오름차순</td>
+        <td>오름차순의 <tt>경우 true</tt> 로, 내림차순의 경우 <tt>false</tt> 로 설정하십시오.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The following is an extended example of how this function can be used. To start with you&#39;d call it in some event like <b>Room Start</b> or <b>Create</b>:</p>
+  <h4>확장 된 예 :</h4>
+  <p>다음은이 기능을 사용하는 방법에 대한 확장 된 예입니다. 시작하려면 <b>Room Start</b> 또는 <b>Create</b> 같은 일부 이벤트에서 호출 <b>하십시오</b> .</p>
   <p class="code">xboxlive_stats_get_leaderboard(user_id, &quot;GlobalTime&quot;, 20, 1, false, true);</p>
-  <p>The above code would be called to get a list of all social leaderboard positions for the game, and will generate a Social Asynchronous Event call back which we would deal with in the following way:</p>
+  <p>위 코드는 게임의 모든 소셜 리더 보드 위치 목록을 얻기 위해 호출되며 다음과 같은 방식으로 처리 할 소셜 비동기 이벤트 콜백을 생성합니다.</p>
   <p class="code">if (async_load[? &quot;id&quot;] == achievement_stat_event)<br/>     {
     <br/>     if (async_load[? &quot;event&quot;] == &quot;GetLeaderboardComplete&quot;)<br/>         {
     <br/>         global.numentries = async_load[? &quot;numentries&quot;];<br/>         for(var i = 0; i &lt; numentries; i++;)<br/>             {
@@ -157,19 +153,19 @@
     <br/>         }
     <br/>     }
   </p>
-  <p>The above code checks the returned DS map in the Social Asynchronous Event and if its &quot;id&quot; matches the constant being checked, it then checks to see if the event has been triggered by returned leaderboard data before looping through the map
-    and storing all the different values in a number of global arrays.</p>
+  <p>위의 코드는 소셜 비동기 이벤트에서 반환 된 DS 맵을 확인하고 &quot;id&quot;가 확인중인 상수와 일치하는 경우 맵을 반복하고 다른 모든 항목을 저장하기 전에 반환 된 리더 보드 데이터에 의해 이벤트가 트리거되었는지 확인합니다. 많은 전역 배열의 값.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Stats_And_Leaderboards/xboxlive_stats_get_leaderboard.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_get_social_leaderboard.htm">xboxlive_stats_get_social_leaderboard</a></div>
+        <div style="float:left">목록: <a href="Stats_And_Leaderboards.htm">통계 및 리더 보드</a></div>
+        <div style="float:right">다음: <a href="xboxlive_stats_get_social_leaderboard.htm">xboxlive_stats_get_social_leaderboard</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_get_leaderboard
@@ -179,4 +175,4 @@ achievement_stat_event
 xboxlive_stats_get_leaderboard
 -->
 
-</body></html>
+</body></html> 

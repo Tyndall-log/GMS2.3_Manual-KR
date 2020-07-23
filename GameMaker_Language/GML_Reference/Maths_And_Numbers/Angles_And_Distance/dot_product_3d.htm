@@ -71,7 +71,7 @@
         <span>dot_product_3d</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -84,82 +84,78 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>dot_product_3d</h1>
-  <p>The dot product is a value expressing the angular relationship between two vectors and is found by taking two vectors, multiplying them together and then adding the results. The name &quot;dot product&quot; is derived from the centered dot &quot;·&quot;
-    that is often used to designate this operation (the alternative name &quot;scalar product&quot; emphasizes the scalar rather than vector nature of the result).</p>
-  <p>The actual mathematical formula can be written like this:</p>
+  <p>내적은 두 벡터 간의 각도 관계를 나타내는 값으로, 두 벡터를 취하고이를 곱한 다음 결과를 추가하여 구합니다. &quot;dot product&quot;라는 이름은이 작업을 지정하는 데 자주 사용되는 중심 점 &quot;Â&quot;에서 파생됩니다 (대안 &quot;scalar product&quot;는 결과의 벡터 특성이 아니라 스칼라를 강조합니다).</p>
+  <p>실제 수학 공식은 다음과 같이 작성할 수 있습니다.</p>
   <p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png"/></p>
-  <p>In 2D, the dot product of vectors <span class="inline">a[x1,y1]</span> and <span class="inline">b[x2,y2]</span> is <span class="inline">x1x2 + y1y2</span>, so in 3D, the dot product of vectors <span class="inline">a[x1,y1,z1]</span> and <span class="inline">b[x1,y1,z1]</span>    is <span class="inline">x1x2 + y1y2 + z1z2</span>. So, the dot_product_3d in GameMaker Studio 2 is calculated as:</p>
+  <p>2D에서 벡터 <span class="inline">a [x1, y1]</span> 및 <span class="inline">b [x2, y2]의</span> <span class="inline">내적</span> 은 <span class="inline">x1x2 + y1y2</span> 이므로 3D에서 벡터 <span class="inline">a [x1, y1, z1]</span> 및 <span class="inline">b [x1, y1</span> 의 내적 <span class="inline">은</span> <span class="inline">z1]</span> 은 <span class="inline">x1x2 + y1y2 + z1z2</span> 입니다. 따라서 GameMaker Studio 2의 dot_product_3d는 다음과 같이 계산됩니다.</p>
   <p class="code">a · b = (x1*x2) + (y1*y2) + (z1*z2);</p>
-  <p>The curious thing about the dot product is the relationship it has to the angle formed by the input vectors which can be expressed as:</p>
+  <p>내적에 대한 흥미로운 점은 입력 벡터에 의해 형성된 각도와의 관계이며 다음과 같이 표현할 수 있습니다.</p>
   <p class="code">a · b = (length of a) * (length of b) * cos(angle)</p>
-  <p>That is to say, the dot product of two vectors will be equal to the cosine of the angle between those vectors, multiplied by the lengths of each of them. Here is an image to illustrate:</p>
+  <p>즉, 두 벡터의 내적은 각 벡터의 길이를 곱한 벡터 간 각도의 코사인과 같습니다. 설명 할 이미지는 다음과 같습니다.</p>
   <p><img alt="Dot Product ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406"/></p>
-  <p class="note"><strong>NOTE</strong>: For more information on vectors, see <a href="../../../../Additional_Information/Vectors.htm">here</a>.</p>
-  <p>There are a few things that we can now state from any two vectors in relation to the result of their dot product:</p>
+  <p class="note"><strong>참고</strong> : 벡터에 대한 자세한 내용은 <a href="../../../../Additional_Information/Vectors.htm">여기를</a> 참조 <a href="../../../../Additional_Information/Vectors.htm">하십시오</a> .</p>
+  <p>우리는 그들의 내적 결과와 관련하여 두 벡터에서 진술 할 수있는 몇 가지가 있습니다 :</p>
   <ul class="colour">
-    <li>If a and b are perpendicular (at 90 degrees to each other), the result of the dot product will be zero, because <span class="inline">cos(ang)</span> will be zero</li>
-    <li>If the angle between a and b are less than 90 degrees, the dot product will be positive (greater than zero), as <span class="inline">cos(ang)</span> will be positive</li>
-    <li>If the angle between a and b are greater than 90 degrees, the dot product will be negative (less than zero), as <span class="inline">cos(ang)</span> will be negative</li>
+    <li>a와 b가 서로 수직 인 경우 (90도) <span class="inline">cos (ang)</span> 이 0이므로 내적 결과는 0이됩니다.</li>
+    <li>a와 b 사이의 각도가 90 도보 다 작 으면 <span class="inline">cos (ang)</span> 이 양수이므로 내적은 양수 (0보다 큼 <span class="inline">)</span> 입니다.</li>
+    <li>a와 b 사이의 각도가 90 도보 다 크면 <span class="inline">cos (ang)</span> 이 음수이므로 내적은 음수 (0보다 작음 <span class="inline">)</span> 입니다.</li>
   </ul>
-  <p>So what does this mean for those of us that make games? Well, this mathematical relationship can be used in quite a few circumstances, but the best way to see it is to build an actual scenario and see for yourself what is going on. One of the simplest
-    ways to do this is to generate a simple &quot;height&quot; check for an enemy in, say, a platform game so that the enemy will &quot;see&quot; the player if they are above the plane formed by the enemy <i>normal</i> vector and the 3d floor.</p>
-  <p><img alt="Dot product 3D example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_3d_image.png"/>Basically, we are getting the vector normal from the enemy perpendicular to the floor and then we are
-    getting the vector of the player to the enemy. We will then get the dot_product of these vectors, and if the result is positive the player is &quot;above&quot; the enemy floor plane and if it is negative he is below. The actual code to get this working
-    is supplied in the example below.</p>
+  <p>그렇다면 이것이 게임을하는 우리에게는 어떤 의미입니까? 글쎄,이 수학적 관계는 몇 가지 상황에서 사용될 수 있지만, 그것을 보는 가장 좋은 방법은 실제 시나리오를 구축하고 무슨 일이 일어나고 있는지 직접 보는 것입니다. 이 작업을 수행하는 가장 간단한 방법 중 하나는 플랫폼 게임에서 적에 대한 간단한 &quot;높이&quot;검사를 생성하여 적들이 <i>법선</i> 벡터에 의해 형성된 평면 위에 있으면 플레이어가 &quot;볼&quot;수 있도록하는 것입니다. 3D 층.</p>
+  <p><img alt="Dot product 3D example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_3d_image.png"/>기본적으로, 우리는 적으로부터 바닥에 수직 인 벡터 법선을 얻은 다음 플레이어의 벡터를 적에게 가져옵니다. 그런 다음이 벡터의 dot_product를 얻습니다. 결과가 양수이면 플레이어가 적의 바닥면 위에 &quot;위&quot;이고 음수이면 아래에 있습니다. 이 작업을 수행하기위한 실제 코드는 아래 예에서 제공됩니다.</p>
   <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h4><b>통사론:</b></h4>
   <p class="code">dot_product_3d(x1, y1, z1, x2, y2, z2)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>x1</td>
-        <td>The x coordinate of the first vector.</td>
+        <td>첫 번째 벡터의 x 좌표입니다.</td>
       </tr>
       <tr>
         <td>y1</td>
-        <td>The y coordinate of the first vector.</td>
+        <td>첫 번째 벡터의 y 좌표입니다.</td>
       </tr>
       <tr>
         <td>z1</td>
-        <td>The z coordinate of the first vector.</td>
+        <td>첫 번째 벡터의 z 좌표입니다.</td>
       </tr>
       <tr>
         <td>x2</td>
-        <td>The x coordinate of the second vector.</td>
+        <td>두 번째 벡터의 x 좌표입니다.</td>
       </tr>
       <tr>
         <td>y2</td>
-        <td>The y coordinate of the second vector.</td>
+        <td>두 번째 벡터의 y 좌표입니다.</td>
       </tr>
       <tr>
         <td>z2</td>
-        <td>The z coordinate of the second vector.</td>
+        <td>두 번째 벡터의 z 좌표입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">var x1, y1, x2, y2;<br/> x1 = 0;<br/> y1 = 1;<br/> z1 = 0;<br/> x2 = o_Player.x - x;<br/> y2 = o_Player.y - y;<br/> z2 = o_Player.z - z; if dot_product_3d(x1, y1, z1, x2, y2, z2) &gt; 0 above=true else above=false;</p>
-  <p>The above code creates a vector normal along the instances y (up) axis, and then gets the vector of the player object &quot;o_Player&quot; to itself. Finally it calculates the dot product of these two vectors and if it is greater tan 0 it sets the variable
-    &quot;above&quot; to true, and if it is less than or equal to 0 it sets it to &quot;false&quot;.</p>
+  <p>위의 코드는 인스턴스 y (위) 축을 따라 법선 벡터를 만든 다음 플레이어 객체 &quot;o_Player&quot;의 벡터를 가져옵니다. 마지막으로이 두 벡터의 내적을 계산하고 tan 0보다 크면 변수 &quot;above&quot;를 true로 설정하고 0보다 작거나 같으면 &quot;false&quot;로 설정합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/dot_product_3d.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Angles_And_Distance.htm">Angles And Distance</a></div>
-        <div style="float:right">Next: <a href="dot_product_normalised.htm">dot_product_normalised</a></div>
+        <div style="float:left">목록: <a href="Angles_And_Distance.htm">각도와 거리</a></div>
+        <div style="float:right">다음: <a href="dot_product_normalised.htm">dot_product_normalised</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 dot_product_3d
@@ -168,4 +164,4 @@ dot_product_3d
 dot_product_3d
 -->
 
-</body></html>
+</body></html> 

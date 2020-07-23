@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="The Sequence Instance Struct">
-        <span>The Sequence Instance Struct</span>
+        <span>시퀀스 인스턴스 구조</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,85 +80,73 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Sequence Instance Struct</h1>
-  <p>A sequence, when placed in a room, is placed as an <strong>element</strong> on the layer, and this element contains a <strong>sequence instance</strong>. This sequence instance will have the following properties in its <a href="../../../../GML_Overview/Structs.htm">struct</a>:</p>
+  <h1>시퀀스 인스턴스 구조</h1>
+  <p>방에 배치 된 시퀀스는 레이어에 <strong>요소</strong> 로 배치되며이 요소에는 <strong>시퀀스 인스턴스가 포함</strong> 됩니다. 이 시퀀스 인스턴스는 <a href="../../../../GML_Overview/Structs.htm">구조체에</a> 다음과 같은 속성을 갖습니다.</p>
   <ul class="colour">
-    <li><tt>sequence</tt>: This is the ID of the <b>sequence object</b> struct that the sequence instance has been created from (see <a href="The_Sequence_Object_Struct.htm">here</a>for more details). You can get or set this struct, and so change the base
-      sequence that the instance is referencing.</li>
-    <li><tt>headPosition</tt>: This is the current <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet, the Animation Curve editor or the Sprite editor. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> position (in frames) for the sequence instance. You can get or set this value, but note that setting it to a value greater or less than
-      the currently defined play region will have different effects depending on the type of playback set for the sequence. See <a href="../../Rooms/Sequence_Layers/layer_sequence_headpos.htm"><tt>layer_sequence_headpos()</tt></a> for more information.</li>
-    <li><tt>headDirection</tt>: This is the current playback direction for the sequence instance. You can get or set this value using the following constants (Note that you can use the layer functions <a href="../../Rooms/Sequence_Layers/layer_sequence_get_headdir.htm"><tt>layer_sequence_get_headdir()</tt></a> and
-      <a href="../../Rooms/Sequence_Layers/layer_sequence_headdir.htm"><tt>layer_sequence_headdir()</tt></a> to get or set this value without having to access the struct directly):</li>
+    <li><tt>sequence</tt> : 시퀀스 인스턴스가 생성 된 <b>시퀀스 객체</b> 구조체의 ID입니다 (자세한 내용은 <a href="The_Sequence_Object_Struct.htm">여기</a> 참조). 이 구조체를 얻거나 설정할 수 있으므로 인스턴스가 참조하는 기본 시퀀스를 변경하십시오.</li>
+    <li><tt>headPosition</tt> : 시퀀스 인스턴스의 현재 <a class="tooltip" title="시퀀스 도프 시트, 애니메이션 커브 편집기 또는 스프라이트 편집기의 타임 라인 내 현재 &#39;재생&#39;위치. 시퀀스 (및 스프라이트)에서는 애니메이션을 미리 볼 때 이동하며 특정 프레임에 배치하여 해당 위치에서 키와 키 프레임을보고 편집 할 수 있습니다.">재생 헤드</a> 위치 (프레임 단위)입니다. 이 값을 가져 오거나 설정할 수 있지만 현재 정의 된 재생 영역보다 크거나 작은 값으로 설정하면 시퀀스에 설정된 재생 유형에 따라 다른 효과가 나타납니다. 자세한 내용은 <a href="../../Rooms/Sequence_Layers/layer_sequence_headpos.htm"><tt>layer_sequence_headpos ()</tt></a> 를 참조하십시오.</li>
+    <li><tt>headDirection</tt> : 시퀀스 인스턴스의 현재 재생 방향입니다. 다음 상수를 사용하여이 값을 가져 오거나 설정할 수 있습니다 (레이어 함수 <a href="../../Rooms/Sequence_Layers/layer_sequence_get_headdir.htm"><tt>layer_sequence_get_headdir ()</tt></a> 및 <a href="../../Rooms/Sequence_Layers/layer_sequence_headdir.htm"><tt>layer_sequence_headdir ()</tt></a> 을 사용하여 구조체에 직접 액세스하지 <a href="../../Rooms/Sequence_Layers/layer_sequence_headdir.htm"><tt>않고도이</tt></a> 값을 가져 오거나 설정할 수 있습니다).</li>
   </ul>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>일정한</th>
+        <th>기술</th>
+        <th>값</th>
       </tr>
       <tr>
         <td>seqdir_right</td>
-        <td>The sequence will play frames in an incremental order from left to right</td>
+        <td>시퀀스는 왼쪽에서 오른쪽으로 점진적으로 프레임을 재생합니다</td>
         <td>1</td>
       </tr>
       <tr>
         <td>seqdir_left</td>
-        <td>The sequence will play frames in a decremental order from right to left</td>
+        <td>시퀀스는 오른쪽에서 왼쪽으로 감소하는 순서로 프레임을 재생합니다</td>
         <td>-1</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <ul class="colour">
-    <li><tt>speedScale</tt>: This property can be used to get or set the playback speed scale. The speed scale is a <i>multiplier</i>, where 1 is the default playback speed and values less than 1 will slow the playback and values larger than 1 will speed
-      it up, eg: a value of 0.5 would be half playback speed, while a value of 2 would be double playback speed. Note that you can use the layer functions <a href="../../Rooms/Sequence_Layers/layer_sequence_get_speedscale.htm"><tt>layer_sequence_get_speedscale()</tt></a> and
-      <a href="../../Rooms/Sequence_Layers/layer_sequence_speedscale.htm"><tt>layer_sequence_speedscale()</tt></a> to get or set this value without having to access the struct directly.</li>
-    <li><tt>paused</tt>: You can check this property to see if a sequence has been paused or not, and it will be <tt>true</tt> if it has, or <tt>false</tt> otherwise. This is a <b>read-only</b> property, but you can use the layer function <a href="../../Rooms/Sequence_Layers/layer_sequence_pause.htm"><tt>layer_sequence_pause()</tt></a> to
-      pause playback, and <a href="../../Rooms/Sequence_Layers/layer_sequence_play.htm"><tt>layer_sequence_play()</tt></a> to resume it again if required. You can also check this property using the layer function <a href="../../Rooms/Sequence_Layers/layer_sequence_is_paused.htm"><tt>layer_sequence_is_paused()</tt></a> rather
-      than check the property in the struct directly.</li>
-    <li><tt>finished</tt>: You can check this property to see if a sequence has finished playing or not, returning <tt>true</tt> if it is finished playing, and <tt>false</tt> otherwise. This is a <b>read-only</b> property, and will only ever return <tt>true</tt>      for tracks that are not set to loop or ping-pong. You can also check this property using the layer function <a href="../../Rooms/Sequence_Layers/layer_sequence_is_finished.htm"><tt>layer_sequence_is_finished()</tt></a> rather than check the property
-      in the struct directly.</li>
-    <li><tt>elementID</tt>: This property holds the ID of the sequence <i>element</i>. This iD is a simple identifying value that is associated with a layer in the room editor, and it can then be used with the appropriate <a href="../../Rooms/General_Layer_Functions/General_Layer_Functions.htm">layer functions</a> to
-      find the layer the sequence has been assigned to or to change certain sequence properties without having to deal with the struct.</li>
-    <li><tt>activeTracks</tt>: This property will hold an array of &quot;evaluation&quot; structs containing information on the current state of each <b>asset track</b> in the sequence (graphics, sequence, audio etc...). These are only the top-level tracks,
-      and the array returned is <b>read-only</b>. For the contents of the asset track struct returned in each array entry, please see the section below.</li>
+    <li><tt>speedScale</tt> :이 속성을 사용하여 재생 속도 스케일을 가져 오거나 설정할 수 있습니다. 속도 스케일은 <i>승수입니다</i> . 여기서 1은 기본 재생 속도이고 1보다 작은 값은 재생 속도를 늦추고 1보다 큰 값은 속도를 높입니다 (예 : 0.5 값은 절반 재생 속도, 2 값은 2) 재생 속도가 두 배가됩니다. 레이어 함수 <a href="../../Rooms/Sequence_Layers/layer_sequence_get_speedscale.htm"><tt>layer_sequence_get_speedscale ()</tt></a> 및 <a href="../../Rooms/Sequence_Layers/layer_sequence_speedscale.htm"><tt>layer_sequence_speedscale ()</tt></a> 을 사용하여 구조체에 직접 액세스하지 <a href="../../Rooms/Sequence_Layers/layer_sequence_speedscale.htm"><tt>않고도이</tt></a> 값을 가져 오거나 설정할 수 있습니다.</li>
+    <li><tt>paused</tt> :이 속성을 확인하여 시퀀스가 ​​일시 중지되었는지 여부를 확인할 수 있으며, 시퀀스가 ​​있으면 <tt>true</tt> , 그렇지 않으면 <tt>false</tt> 입니다. 이 속성은 <b>읽기 전용</b> 속성이지만 레이어 함수 <a href="../../Rooms/Sequence_Layers/layer_sequence_pause.htm"><tt>layer_sequence_pause ()</tt></a> 를 사용하여 재생을 일시 중지하고 <a href="../../Rooms/Sequence_Layers/layer_sequence_play.htm"><tt>layer_sequence_play ()</tt></a> 를 사용하여 재생을 다시 시작할 수 있습니다. 구조체의 속성을 직접 확인하는 대신 <a href="../../Rooms/Sequence_Layers/layer_sequence_is_paused.htm"><tt>layer_sequence_is_paused ()</tt></a> 레이어 함수를 사용하여이 속성을 확인할 수도 있습니다.</li>
+    <li><tt>finished</tt> :이 속성을 확인하여 시퀀스 재생이 완료되었는지 여부를 확인하고 재생이 완료되면 <tt>true를</tt> 반환하고 그렇지 않으면 <tt>false를</tt> 반환 할 수 있습니다. 이것은 <b>읽기 전용</b> 속성이며 루프 또는 탁구로 설정되지 않은 트랙에 대해서만 <tt>true</tt> 를 반환 <tt>합니다</tt> . 구조체의 속성을 직접 확인하는 대신 <a href="../../Rooms/Sequence_Layers/layer_sequence_is_finished.htm"><tt>layer_sequence_is_finished ()</tt></a> 레이어 함수를 사용하여이 속성을 확인할 수도 있습니다.</li>
+    <li><tt>elementID</tt> :이 속성은 시퀀스 <i>요소</i> 의 ID를 보유합니다. 이 iD는 룸 편집기에서 레이어와 연관된 간단한 식별 값이며, 적절한 <a href="../../Rooms/General_Layer_Functions/General_Layer_Functions.htm">레이어 기능</a> 과 함께 사용하여 시퀀스가 ​​할당 된 레이어를 찾거나 처리하지 않고도 특정 시퀀스 속성을 변경할 수 있습니다 구조체.</li>
+    <li><tt>activeTracks</tt> :이 속성은 시퀀스 (그래픽, 시퀀스, 오디오 등)에서 각 <b>자산 트랙</b> 의 현재 상태에 대한 정보를 포함하는 &quot;평가&quot;구조체 배열을 보유합니다. 이들은 최상위 트랙 일 뿐이며, 반환 된 배열은 <b>읽기 전용</b> 입니다. 각 배열 항목에 반환 된 자산 트랙 구조의 내용은 아래 섹션을 참조하십시오.</li>
   </ul>
-  <p>The following list contains the properties that may be available to you when accessing a track struct (as returned by the <tt>activeTracks</tt> property of the parent sequence struct, explained above). Each asset track struct may have some or all of
-    the following properties, depending on the type of asset the track is referencing (note that you can get or set all these properties, except where specified as read-only), and all values returned are the for the <i>current playhead position</i>:</p>
+  <p>다음 목록에는 트랙 구조체에 액세스 할 때 사용할 수있는 속성이 포함되어 있습니다 (상위 시퀀스 구조체의 <tt>activeTracks</tt> 속성에 의해 반환 됨). 각 자산 트랙 구조에는 트랙이 참조하는 자산 유형에 따라 다음 속성 중 일부 또는 전부가있을 수 있습니다 (읽기 전용으로 지정된 경우를 제외하고 이러한 속성을 모두 가져 오거나 설정할 수 있음). <i>현재 재생 헤드 위치의</i> :</p>
   <ul class="colour">
-    <li><tt>matrix</tt>: This is the transformation matrix used to draw the track (sprite, instance and sequence tracks).</li>
-    <li><tt>posx</tt>: The position of asset in the sequence along the X axis for the track at the current playhead position (all assets).</li>
-    <li><tt>posy</tt>: The position of asset in the sequence along the Y axis for the track at the current playhead position (all assets).</li>
-    <li><tt>scalex</tt>: The scale of asset in the sequence along the X axis for the track at the current playhead position (sprite, instance and sequence tracks).</li>
-    <li><tt>scaley</tt>: The scale of asset in the sequence along the Y axis for the track at the current playhead position (sprite, instance and sequence tracks).</li>
-    <li><tt>xorigin</tt>: The X origin of the asset for the track (all assets).</li>
-    <li><tt>yorigin</tt>: The Y origin of the asset for the track (all assets).</li>
-    <li><tt>width</tt>: The width (in pixels) of the asset for the track (sprite, instance and sequence tracks).</li>
-    <li><tt>height</tt>: The height (in pixels) of the asset for the track (sprite, instance and sequence tracks).</li>
-    <li><tt>imageindex</tt>: The image index for the asset on the track in the sequence at the current playhead position (sprite and instance tracks).</li>
-    <li><tt>imagespeed</tt>: The image speed for the asset on the track in the sequence at the current playhead position (sprite and instance tracks).</li>
-    <li><tt>colourMultiply</tt>: The colour multiply value for the asset on the track in the sequence at the current playhead position (sprite, instance and sequence tracks). This value will be an <a href="../../../../GML_Overview/Arrays.htm">array</a> of
-      four <a class="tooltip" title="This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). ">ARGB</a> values with the format [A, R, G, B]. Note that the values for each component are expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX
-      value #FF (0 - 255 as shown in the colour picker for colour multiply tracks in the Sequences Editor).</li>
-    <li><tt>gain</tt>: The gain (volume) of the track at the current playhead position (audio tracks).</li>
-    <li><tt>pitch</tt>: The pitch of the track at the current playhead position (audio tracks).</li>
-    <li><tt>track</tt>: The track data struct that this track is based on (all assets, a <b>read-only</b> value).</li>
-    <li><tt>parent</tt>: The parent sequence instance ID for the track (all assets, a <b>read-only</b> value).</li>
-    <li><tt>activeTracks</tt>: This is an array of evaluation structs for each parameter track that the asset track contains (all assets, a <b>read-only</b> value). The contents of each struct in the array are listed in the parameter <a href="The_Track_Struct.htm">Track Struct</a>      section.</li>
+    <li><tt>matrix</tt> : 트랙 (스프라이트, 인스턴스 및 시퀀스 트랙)을 그리는 데 사용되는 변환 매트릭스입니다.</li>
+    <li><tt>posx</tt> : 현재 재생 헤드 위치 (모든 자산)에서 트랙의 X 축을 따라 시퀀스의 자산 위치.</li>
+    <li><tt>posy</tt> : 현재 재생 헤드 위치 (모든 자산)에서 트랙의 Y 축을 따라 시퀀스의 자산 위치.</li>
+    <li><tt>scalex</tt> : 현재 재생 헤드 위치 (스프라이트, 인스턴스 및 시퀀스 트랙)에서 트랙의 X 축을 따라 시퀀스의 자산 스케일입니다.</li>
+    <li><tt>scaley</tt> : 현재 재생 헤드 위치 (스프라이트, 인스턴스 및 시퀀스 트랙)의 트랙에 대해 Y 축을 따라 시퀀스의 자산 스케일입니다.</li>
+    <li><tt>xorigin</tt> : 트랙에 대한 자산의 X 원점 (모든 자산).</li>
+    <li><tt>yorigin</tt> : 트랙에 대한 자산의 Y 원점 (모든 자산).</li>
+    <li><tt>width</tt> : 트랙에 대한 자산의 너비 (픽셀)입니다 (스프라이트, 인스턴스 및 시퀀스 트랙).</li>
+    <li><tt>height</tt> : 트랙에 대한 자산의 높이 (픽셀)입니다 (스프라이트, 인스턴스 및 시퀀스 트랙).</li>
+    <li><tt>imageindex</tt> : 현재 재생 헤드 위치 (스프라이트 및 인스턴스 트랙)의 시퀀스에서 트랙의 자산에 대한 이미지 인덱스입니다.</li>
+    <li><tt>imagespeed</tt> : 현재 재생 헤드 위치 (스프라이트 및 인스턴스 트랙)에서 시퀀스의 트랙에있는 자산의 이미지 속도입니다.</li>
+    <li><tt>colourMultiply</tt> : 현재 재생 헤드 위치 (스프라이트, 인스턴스 및 시퀀스 트랙)에서 시퀀스의 트랙에있는 자산의 색상 곱하기 값입니다. 이 값은 [A, R, G, B] 형식의 4 개의 <a class="tooltip" title="이것은 Alpha, Red, Green, Blue의 약어이며 16 진수 값으로 지정된 색상 구성 요소를 나타내는 데 사용됩니다 (예 : # FF53E270). 여기서 두 자리 숫자 각각은 단일 구성 요소를 나타냅니다. 위의 ARGB 예제를 분류하면 Alpha (FF), Red (53), Green (E2) 및 Blue (70)의 구성 요소 값이 제공됩니다.">ARGB</a> 값으로 구성된 <a href="../../../../GML_Overview/Arrays.htm">배열</a> 입니다. 각 구성 요소의 값은 0과 1 사이로 표현됩니다. 여기서 0은 HEX 값 # 00에 해당하고 1은 HEX 값 #FF에 해당합니다 (시퀀스의 색상 곱하기 트랙에 대한 색상 선택기에 표시된대로 0-255). 편집자).</li>
+    <li><tt>gain</tt> : 현재 재생 헤드 위치 (오디오 트랙)에서 트랙의 게인 (볼륨).</li>
+    <li><tt>pitch</tt> : 현재 재생 헤드 위치에서 트랙의 피치 (오디오 트랙).</li>
+    <li><tt>track</tt> :이 트랙이 기반으로하는 트랙 데이터 구조 (모든 자산, <b>읽기 전용</b> 값).</li>
+    <li><tt>parent</tt> : 트랙의 부모 시퀀스 인스턴스 ID (모든 자산, <b>읽기 전용</b> 값).</li>
+    <li><tt>activeTracks</tt> : 자산 트랙에 포함 된 각 매개 변수 트랙 (모든 자산, <b>읽기 전용</b> 값)에 대한 평가 구조의 배열입니다. 배열에있는 각 구조체의 내용은 <a href="The_Track_Struct.htm">Track Struct</a> 매개 변수 섹션에 나열됩니다.</li>
   </ul>
   <p> </p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="The_Track_Struct.htm">The Track Struct</a></div>
+        <div style="float:left">목록: <a href="../Sequences.htm">시퀀스</a></div>
+        <div style="float:right">다음: <a href="The_Track_Struct.htm">트랙 구조</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Sequence Instance Struct
@@ -193,4 +181,4 @@ parent
 sequence_instance
 -->
 
-</body></html>
+</body></html> 

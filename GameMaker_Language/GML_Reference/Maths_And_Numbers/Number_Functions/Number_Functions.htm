@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Number Functions">
-        <span>Number Functions</span>
+        <span>숫자 함수</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -84,85 +84,78 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Number Functions</h1>
-  <p>Real numbers in GameMaker Studio 2 are considered <i>double-precision floating-point numbers</i> - that is to say that they have a decimal point in them with no fixed number of digits either
-    before or after the point - or <i>integers</i> - that is to say they are whole numbers with no decimal point value. 2, for example, is an integer but 2.01 is a floating point real.</p>
-  <p class="note"><b>NOTE</b>: On the <b>HTML5</b> target, all real numbers are doubles.</p>
-  <p>This distinction between integers and floats is very important when dealing with cross platform development as the precision of calculations made on a Windows PC is <i>not</i> the same as the precision of those same calculations
-    when made on a mobile device. This means that you should pay particular attention when making comparisons, for example:</p>
+  <h1>숫자 함수</h1>
+  <p>GameMaker Studio 2의 실수는 <i>배정 밀도 부동 소수점 숫자</i> 로 간주됩니다. 즉, 소수점 앞뒤에 고정 된 숫자가없는 소수점 또는 <i>정수</i> 입니다. 소수점 값이없는 정수 예를 들어 2는 정수이지만 2.01은 부동 소수점 실수입니다.</p>
+  <p class="note"><b>참고</b> : <b>HTML5</b> 대상에서 모든 실수는 두 배입니다.</p>
+  <p>정수와 부동 소수점 사이의 차이는 크로스 플랫폼 개발을 처리 할 때 Windows PC에서 수행되는 계산의 정밀도가 모바일 장치에서 수행 될 때의 동일한 계산의 정밀도와 동일 <i>하지 않기</i> 때문에 매우 중요합니다. 즉, 비교할 때 특히주의해야합니다.</p>
   <p class="code">if (image_index == 1)<br/>     {<br/>     do something...<br/>     }</p>
-  <p>In the example above, if we have been setting the <tt>image_speed</tt> to 0.25 - for example - then after four steps you may assume that the <tt>image_index</tt> value would be 1, but it <i>may</i> be
-    a value like 1.0000002 due to the way floating point maths works and so the evaluation will not be <tt>true</tt>. These types of errors can be quite hard to debug and so it is always good to be aware of them and to plan ahead and use
-    other means of checking values or to use the appropriate flooring or rounding functions (listed below) to convert the number to check into an integer (for more information on floating point maths and why this is an issue, please <a href="https://floating-point-gui.de/" target="_blank">see here</a>). For example the above code could be written as:</p>
+  <p>위의 예에서 <tt>image_speed</tt> 를 0.25로 설정 한 경우 (예 : 4 단계) <tt>image_index</tt> 값은 1이라고 가정 할 수 있지만 부동 소수점 수학이 작동하는 방식으로 인해 1.0000002와 같은 값일 <i>수</i> 있습니다. 따라서 평가는 <tt>사실</tt> 이 아닙니다. 이러한 유형의 오류는 디버깅하기가 매우 어려울 수 있으므로 항상 오류를 인식하고 미리 계획하고 값을 확인하는 다른 방법을 사용하거나 숫자를 정수를 확인하십시오 (부동 소수점 수학 및 이것이 왜 문제인지에 대한 자세한 내용 <a href="https://floating-point-gui.de/" target="_blank">은 여기</a> 를 <a href="https://floating-point-gui.de/" target="_blank">참조하십시오</a> ). 예를 들어 위 코드는 다음과 같이 작성할 수 있습니다.</p>
   <p class="code">if (floor(image_index) == 1)<br/>     {<br/>     do something...<br/>     }</p>
-  <p>It is also worth noting that when using the <b>YoYo Compiler</b> targets, all expressions and functions are <i>evaluated from left to right</i>, while on all other target platforms they are evaluated <i>from right to left</i>,
-    meaning that this - for example - will give different results depending on the platform:</p>
+  <p><b>YoYo Compiler</b> 대상을 사용할 때 모든 표현식과 함수는 <i>왼쪽에서 오른쪽으로 평가되는</i> 반면 다른 모든 대상 플랫폼에서는 <i>오른쪽에서 왼쪽으로</i> 평가되므로 이는 예를 들어 다른 결과를 제공합니다. 플랫폼에서 :</p>
   <p class="code">val = max(num, ++num, num++);</p>
-  <p class="note"><strong>NOTE</strong>: For more informaton, see the section on <a href="../../../GML_Overview/Evaluation_Order.htm">Evaluation Order</a>.</p>
-  <p>You can also use a special function available in GameMaker Studio 2 to set the <b>epsilon</b> value for floating point maths. When a real number is rounded to the nearest floating point number,
-    the epsilon (also know as &quot;machine epsilon&quot;) forms an upper bound on the relative error, and you can get and set the epsilon value using the following functions:</p>
+  <p class="note"><strong>참고</strong> : 자세한 정보는 <a href="../../../GML_Overview/Evaluation_Order.htm">평가 순서</a> 섹션을 참조하십시오.</p>
+  <p>GameMaker Studio 2에서 제공되는 특수 기능을 사용하여 부동 소수점 수학에 대한 <b>엡실론</b> 값을 설정할 수도 있습니다. 실수가 가장 가까운 부동 소수점 수로 반올림되면 엡실론 ( &quot;기계 엡실론&quot;이라고도 함)은 상대 오류의 상한을 형성하며 다음 함수를 사용하여 엡실론 값을 가져오고 설정할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="math_set_epsilon.htm">math_set_epsilon</a></li>
     <li><a href="math_get_epsilon.htm">math_get_epsilon</a></li>
   </ul>
   <p> </p>
-  <p>These functions all deal with using random numbers and values:</p>
-  <p class="note"><b>NOTE: </b>When using the random functions, GameMaker Studio 2 maintains the same random seed every time you start the game. This makes debugging much easier as you are guaranteed that the random functions will always initially return
-    the same value, however should you not wish this to happen, you must first set a new random seed at the very start of the game, either using <span style="font-size:1px;"><a href="randomise.htm"><tt style="font-size: 14px">randomise()</tt></a></span> or 
-    <span style="font-size:1px;"><a href="random_set_seed.htm"><tt style="font-size: 14px">random_set_seed()</tt></a></span>.</p>
+  <p>이 함수는 모두 임의의 숫자와 값을 사용합니다.</p>
+  <p class="note"><b>참고 :</b> 랜덤 기능을 사용할 때 GameMaker Studio 2는 게임을 시작할 때마다 동일한 랜덤 시드를 유지합니다. 랜덤 함수가 항상 처음에 같은 값을 반환한다는 보장으로 디버깅이 훨씬 쉬워 지지만, 원하지 않는 경우, 게임 시작시 랜덤을 사용하여 새로운 랜덤 시드를 먼저 설정해야합니다 <span style="font-size:1px;"><a href="randomise.htm"><tt style="font-size: 14px">( )</tt></a></span> 또는 <span style="font-size:1px;"><a href="random_set_seed.htm"><tt style="font-size: 14px">random_set_seed ()</tt></a></span> 입니다.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="choose.htm">choose</a></li>
-    <li><a href="random.htm">random</a></li>
+    <li><a href="choose.htm">고르다</a></li>
+    <li><a href="random.htm">무작위</a></li>
     <li><a href="random_range.htm">random_range</a></li>
-    <li><a href="irandom.htm">irandom</a></li>
+    <li><a href="irandom.htm">이란</a></li>
     <li><a href="irandom_range.htm">irandom_range</a></li>
     <li><a href="random_set_seed.htm">random_set_seed</a></li>
     <li><a href="random_get_seed.htm">random_get_seed</a></li>
-    <li><a href="randomise.htm">randomise</a><b></b></li>
+    <li><a href="randomise.htm">무작위</a> <b></b></li>
   </ul>
   <p> </p>
-  <p>These are all functions that will round values in some way, or select a single value from various given values:</p>
+  <p>이들은 모두 어떤 방식 으로든 값을 반올림하거나 다양한 주어진 값 중에서 단일 값을 선택하는 함수입니다.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="round.htm">round</a></li>
-    <li><a href="floor.htm">floor</a></li>
+    <li><a href="round.htm">일주</a></li>
+    <li><a href="floor.htm">바닥</a></li>
     <li><a href="frac.htm">frac</a></li>
-    <li><a href="abs.htm">abs</a></li>
-    <li><a href="sign.htm">sign</a></li>
-    <li><a href="ceil.htm">ceil</a></li>
-    <li><a href="max.htm">max</a></li>
-    <li><a href="mean.htm">mean</a></li>
-    <li><a href="median.htm">median</a></li>
-    <li><a href="min.htm">min</a></li>
-    <li><a href="lerp.htm">lerp</a></li>
-    <li><a href="clamp.htm">clamp</a></li>
+    <li><a href="abs.htm">복근</a></li>
+    <li><a href="sign.htm">기호</a></li>
+    <li><a href="ceil.htm">올림</a></li>
+    <li><a href="max.htm">최대</a></li>
+    <li><a href="mean.htm">평균</a></li>
+    <li><a href="median.htm">중앙값</a></li>
+    <li><a href="min.htm">분</a></li>
+    <li><a href="lerp.htm">Lerp</a></li>
+    <li><a href="clamp.htm">집게</a></li>
   </ul>
   <p> </p>
-  <p>Finally we a miscellaneous collection of important mathematical functions:</p>
+  <p>마지막으로 중요한 수학 함수의 기타 모음 :</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="exp.htm">exp</a></li>
+    <li><a href="exp.htm">특급</a></li>
     <li><a href="ln.htm">ln</a></li>
-    <li><a href="power.htm">power</a></li>
+    <li><a href="power.htm">힘</a></li>
     <li><a href="sqr.htm">sqr</a></li>
     <li><a href="sqrt.htm">sqrt</a></li>
     <li><a href="log2.htm">log2</a></li>
     <li><a href="log10.htm">log10</a></li>
-    <li><a href="logn.htm">logn</a></li>
+    <li><a href="logn.htm">로그온</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Maths_And_Numbers.htm">Maths And Numbers</a></div>
-        <div style="float:right">Next: <a href="../Angles_And_Distance/Angles_And_Distance.htm">Vectors</a></div>
+        <div style="float:left">목록: <a href="../Maths_And_Numbers.htm">수학과 숫자</a></div>
+        <div style="float:right">다음: <a href="../Angles_And_Distance/Angles_And_Distance.htm">벡터</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Number Functions
@@ -171,4 +164,4 @@ Number Functions
 number_functions
 -->
 
-</body></html>
+</body></html> 

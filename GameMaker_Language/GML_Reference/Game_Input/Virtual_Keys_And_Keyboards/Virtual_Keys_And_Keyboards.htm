@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Virtual Keys And Virtual Keyboards">
-        <span>Virtual Keys And Virtual Keyboards</span>
+        <span>가상 키 및 가상 키보드</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -83,20 +83,16 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Virtual Keys And Virtual Keyboards</h1>
-  <p><b></b>When developing games for touchscreen devices, it&#39;s often important to get keyboard input from the user. When using GameMaker Studio 2 this can be done in one of two ways:</p>
+  <h1>가상 키 및 가상 키보드</h1>
+  <p>터치 스크린 장치 용 게임을 개발할 때 사용자로부터 키보드 입력을받는 것이 종종 중요합니다. GameMaker Studio 2를 사용할 때 다음 두 가지 방법 중 하나를 수행 할 수 있습니다.</p>
   <ul class="colour">
-    <li>Create your own on-screen <b>virtual keys</b> to get input</li>
-    <li>Pop up the OS <b>virtual keyboard</b> and get input from that</li>
+    <li>화면상의 <b>가상 키</b> 를 만들어 입력하십시오.</li>
+    <li>OS <b>가상 키보드</b> 를 띄우고 입력을받습니다</li>
   </ul>
-  <p>What you use will depend very much on the game and what you need, but in general you would use virtual keys when you want to have onscreen buttons for player control or for menus, while you&#39;d use the virtual keyboard when you need player input,
-    like getting a name or setting a value.</p>
-  <p>In order for your games to work properly on mobile devices with a touch screen, you may need to be able to assign areas of the screen to respond to certain things when they are touched by the user. This is done by assigning a &quot;virtual Key&quot;
-    to an internally mapped standard keyboard key and then using the keyboard events that they generate to control your application. It is worth noting that these &quot;virtual keys&quot; are mapped to the <i>screen</i> position rather than room position
-    and so the x/y values are absolute, based on the display size. This means that you don&#39;t need to worry about the use of views or the relative room coordinates, and can simply draw your key sprites and define your virtual keys in the <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a> of
-    an object.</p>
-  <p class="note"><b>NOTE: </b>These functions will not work on the Windows, Ubuntu (Linux), nor the MacOS, target platforms using a touch screen, although they will recieve mouse clicks as &quot;touches&quot;.</p>
-  <p>The available virtual key functions are:</p>
+  <p>사용하는 것은 게임과 필요한 것에 크게 좌우되지만, 일반적으로 플레이어 제어 또는 메뉴 용 화면 버튼을 원할 때는 가상 키를 사용하고 플레이어 입력이 필요할 때는 가상 키보드를 사용합니다 이름 가져 오기 또는 값 설정과 같은</p>
+  <p>터치 스크린이있는 모바일 장치에서 게임이 제대로 작동하려면 사용자가 터치 할 때 특정 항목에 반응하도록 화면 영역을 할당해야 할 수 있습니다. 내부적으로 매핑 된 표준 키보드 키에 &quot;가상 키&quot;를 할당 한 다음 생성 된 키보드 이벤트를 사용하여 응용 프로그램을 제어하면됩니다. 이 &quot;가상 키&quot;는 룸 위치가 아닌 <i>화면</i> 위치에 매핑되므로 x / y 값은 디스플레이 크기에 따라 절대적입니다. 즉, 뷰 또는 상대 룸 좌표 사용에 대해 걱정할 필요가 없으며 객체의 <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">GUI 이벤트 그리기</a> 에서 키 스프라이트를 그리고 가상 키를 간단하게 정의 할 수 있습니다.</p>
+  <p class="note"><b>참고 :</b> 이러한 기능은 터치 스크린을 사용하는 Windows, Ubuntu (Linux) 또는 MacOS 대상 플랫폼에서는 작동하지 않지만 마우스 클릭은 &quot;터치&quot;로 표시됩니다.</p>
+  <p>사용 가능한 가상 키 기능은 다음과 같습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="virtual_key_add.htm">virtual_key_add</a></li>
@@ -105,26 +101,20 @@
     <li><a href="virtual_key_delete.htm">virtual_key_delete</a></li>
   </ul>
   <p> </p>
-  <p>If you require text or numeric input in your game on a touchscreen device, then you can use the <b>virtual keyboard</b> functions provided to use the device OS keyboard. These functions will call up or hide the OS keyboard
-    and accept input from it, however it will <i>not</i> trigger the regular keyboard events, but rather update the <tt><a href="../Keyboard_Input/keyboard_string.htm">keyboard_string</a></tt> variable
-    with the user input (this is due to the fact that the virtual keyboard can input whole words and not just single characters).</p>
-  <p>Opening or closing the virtual keyboard will generate <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">System Asynchronous Events</a>, in which the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS
-    map will be populated with the following key/value pairs:</p>
+  <p>게임에서 터치 스크린 장치의 텍스트 또는 숫자 입력이 필요한 경우 제공된 <b>가상 키보드</b> 기능을 사용하여 장치 OS 키보드를 사용할 수 있습니다. 이 함수는 호출 또는 OS 키보드를 숨기고 동의 그것에서 입력, 그러나 그것은 할 것 <i>없는</i> 일반 키보드 이벤트를 트리거, 오히려 업데이트 <tt><a href="../Keyboard_Input/keyboard_string.htm">keyboard_string의</a></tt> 사실로 인해 사용자 입력 (이은과 변수를 가상 키보드 입력 할 수있다 전체가 단일 문자가 아닌 단어).</p>
+  <p>가상 키보드를 열거 나 닫으면 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">시스템 비동기 이벤트</a> 가 생성되어 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS 맵에 다음 키 / 값 쌍이 채워집니다.</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - the type of system event received, which will be &quot;<b>virtual keyboard status</b>&quot; for virtual keyboards.</li>
-    <li>&quot;<b>screen_height</b>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li>&quot;<b>keyboard_status</b>&quot; - the current status of the keyboard, returned as one of the following strings:
-      <ul class="colour">
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
-        <li>&quot;visible&quot;</li>
+    <li>&quot; <b>event_type</b> &quot;-수신 된 시스템 이벤트 유형으로, <b>가상 키보드의</b> 경우 &quot; <b>가상 키보드 상태</b> &quot;가됩니다.</li>
+    <li>&quot; <b>screen_height</b> &quot;-가상 키보드의 높이 (픽셀). 키보드가 보이지 않으면 0이됩니다.</li>
+    <li>&quot; <b>keyboard_status</b> &quot;- <b>키보드</b> 의 현재 상태로, 다음 문자열 중 하나로 반환됩니다. &quot;숨김&quot;</li>
+        <li>&quot;숨겨진&quot;</li>
+        <li>&quot;전시&quot;</li>
+        <li>&quot;명백한&quot;</li>
       </ul>
     </li>
   </ul>
-  <p>The available virtual keyboard functions are:</p>
-  <p class="note"><b>NOTE: </b>These functions are only valid for the <strong>Android</strong> (including <strong>Amazon Fire</strong>, <strong>FireTV</strong>, and <strong>AndroidTV</strong>), <strong>iOS </strong>(including <strong>tvOS</strong>), and
-    <strong>UWP </strong>target platforms.</p>
+  <p>사용 가능한 가상 키보드 기능은 다음과 같습니다.</p>
+  <p class="note"><b>참고 :</b> 이 기능은 <strong>(tvOS</strong> 포함) <strong>iOS</strong> 및 <strong>UWP 대상</strong> 플랫폼 <strong>(아마존 화재,</strong> <strong>FireTV</strong> 및 <strong>AndroidTV</strong> 포함) <strong>안드로이드에만</strong> 유효합니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="keyboard_virtual_show.htm">keyboard_virtual_show</a></li>
@@ -135,15 +125,16 @@
   <p> </p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
-        <div style="float:right">Next: <a href="../Keyboard_Input/Keyboard_Input.htm">Keyboard Input</a></div>
+        <div style="float:left">목록: <a href="../Game_Input.htm">게임 입력</a></div>
+        <div style="float:right">다음: <a href="../Keyboard_Input/Keyboard_Input.htm">키보드 입력</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Virtual Keys
@@ -154,4 +145,4 @@ Virtual Keys And Keyboards
 virtual_key_functions
 -->
 
-</body></html>
+</body></html> 

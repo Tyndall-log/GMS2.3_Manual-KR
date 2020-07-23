@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Colour And Alpha">
-        <span>Colour And Alpha</span>
+        <span>색깔과 알파</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,121 +80,118 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Colour And Alpha</h1>
-  <p>GameMaker Studio 2 has a comprehensive selection of functions to manipulate the colour and alpha of what is drawn on the screen (for blending images using special <b>blend modes</b> and other PGU specific
-    functions see the section on the <a href="../GPU_Control/GPU_Control.htm">GPU Control</a>. Using these functions you can separate colours into their component parts, create new colours and manipulate the draw alpha to change how different
-    things in your game are drawn together. Apart from these functions, there are also a number of constants that can be used as base colours in these (and other) functions:</p>
+  <h1>색깔과 알파</h1>
+  <p>GameMaker Studio 2에는 화면에 그려진 색상과 알파를 조작하는 포괄적 인 기능이 있습니다 (특수 <b>블렌드 모드를</b> 사용하여 이미지를 블렌딩하고 다른 PGU 특정 기능을 사용하려면 <a href="../GPU_Control/GPU_Control.htm">GPU 제어</a> 섹션을 참조하십시오.이 기능을 사용하면 색상을 분리 할 수 ​​있습니다) 구성 요소 부분에 새로운 색을 만들고 드로우 알파를 조작하여 게임의 다양한 사물이 함께 그려지는 방식을 변경합니다.이 기능 외에도 이러한 상수 (및 기타)의 기본 색으로 사용할 수있는 여러 상수 기능 :</p>
   <p> </p>
   <table style="max-width: 400px">
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Colour</th>
-        <th>Value</th>
+        <th>일정한</th>
+        <th>색깔</th>
+        <th>값</th>
       </tr>
       <tr>
         <td>c_aqua</td>
-        <td style="text-align: center;background-color: #00fffe"> </td>
+        <td style="text-align: center;background-color: #00fffe"></td>
         <td style="text-align: right">16776960</td>
       </tr>
       <tr>
         <td>c_black</td>
-        <td style="text-align: center;background-color: #000000"> </td>
+        <td style="text-align: center;background-color: #000000"></td>
         <td style="text-align: right">0</td>
       </tr>
       <tr>
         <td>c_blue</td>
-        <td style="text-align: center;background-color: #0000FF"> </td>
+        <td style="text-align: center;background-color: #0000FF"></td>
         <td style="text-align: right">16711680</td>
       </tr>
       <tr>
         <td>c_dkgray</td>
-        <td style="text-align: center;background-color: #424242"> </td>
+        <td style="text-align: center;background-color: #424242"></td>
         <td style="text-align: right">4210752</td>
       </tr>
       <tr>
         <td>c_fuchsia</td>
-        <td style="text-align: center;background-color: #ff00f9"> </td>
+        <td style="text-align: center;background-color: #ff00f9"></td>
         <td style="text-align: right">16711935</td>
       </tr>
       <tr>
         <td>c_gray</td>
-        <td style="text-align: center;background-color: #7f7f7f"> </td>
+        <td style="text-align: center;background-color: #7f7f7f"></td>
         <td style="text-align: right">8421504</td>
       </tr>
       <tr>
-        <td>c_green</td>
-        <td style="text-align: center;background-color: #00820f"> </td>
+        <td>c_ 그린</td>
+        <td style="text-align: center;background-color: #00820f"></td>
         <td style="text-align: right">32768</td>
       </tr>
       <tr>
-        <td>c_lime</td>
-        <td style="text-align: center;background-color: #00ff00"> </td>
+        <td>지방</td>
+        <td style="text-align: center;background-color: #00ff00"></td>
         <td style="text-align: right">65280</td>
       </tr>
       <tr>
         <td>c_ltgray</td>
-        <td style="text-align: center;background-color: #bfbfbf"> </td>
+        <td style="text-align: center;background-color: #bfbfbf"></td>
         <td style="text-align: right">12632256</td>
       </tr>
       <tr>
         <td>c_maroon</td>
-        <td style="text-align: center;background-color: #800000"> </td>
+        <td style="text-align: center;background-color: #800000"></td>
         <td style="text-align: right">128</td>
       </tr>
       <tr>
         <td>c_navy</td>
-        <td style="text-align: center;background-color: #000080"> </td>
+        <td style="text-align: center;background-color: #000080"></td>
         <td style="text-align: right">8388608</td>
       </tr>
       <tr>
         <td>c_olive</td>
-        <td style="text-align: center;background-color: #808000"> </td>
+        <td style="text-align: center;background-color: #808000"></td>
         <td style="text-align: right">32896</td>
       </tr>
       <tr>
-        <td>c_orange</td>
-        <td style="text-align: center;background-color: #FFA040"> </td>
+        <td>c_ 오렌지</td>
+        <td style="text-align: center;background-color: #FFA040"></td>
         <td style="text-align: right">4235519</td>
       </tr>
       <tr>
         <td>c_purple</td>
-        <td style="text-align: center;background-color: #800080"> </td>
+        <td style="text-align: center;background-color: #800080"></td>
         <td style="text-align: right">8388736</td>
       </tr>
       <tr>
         <td>c_red</td>
-        <td style="text-align: center;background-color: #FF0000"> </td>
+        <td style="text-align: center;background-color: #FF0000"></td>
         <td style="text-align: right">255</td>
       </tr>
       <tr>
         <td>c_silver</td>
-        <td style="text-align: center;background-color: #C0C0C0"> </td>
+        <td style="text-align: center;background-color: #C0C0C0"></td>
         <td style="text-align: right">12632256</td>
       </tr>
       <tr>
         <td>c_teal</td>
-        <td style="text-align: center;background-color: #008080"> </td>
+        <td style="text-align: center;background-color: #008080"></td>
         <td style="text-align: right">8421376</td>
       </tr>
       <tr>
         <td>c_white</td>
-        <td style="text-align: center;background-color: #ffffff"> </td>
+        <td style="text-align: center;background-color: #ffffff"></td>
         <td style="text-align: right">16777215</td>
       </tr>
       <tr>
-        <td>c_yellow</td>
-        <td style="text-align: center;background-color: #ffff00"> </td>
+        <td>c_ 노란색</td>
+        <td style="text-align: center;background-color: #ffff00"></td>
         <td style="text-align: right">65535</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>Note that you can also create colours from their hexadecimal value using the &quot;$&quot; symbol beforehand, and these values can also be used in the colour functions to get component hues or for mixing, etc... The hexadecimal value for these colours
-    is split into three parts with the format Blue / Green / Red so, for example, to define a purple colour you could use:</p>
+  <p>미리 &quot;$&quot;기호를 사용하여 16 진수 값에서 색상을 만들 수도 있으며,이 값은 색상 함수에서 구성 요소 색상을 얻거나 혼합하기 위해 사용할 수도 있습니다.이 색상의 16 진수 값은 분할됩니다. 예를 들어 자주색을 정의하기 위해 Blue / Green / Red 형식의 세 부분으로 나눌 수 있습니다.</p>
   <p class="code">col = $983c95</p>
-  <p>Where 98 is the blue component, 3c is the green component and 95 is the red component.</p>
-  <p>The following functions can be used to get the component hues, compound hue, saturation and luminosity of a selected colour as well as the alpha and other properties:</p>
+  <p>98이 파란색 구성 요소 인 경우 3c는 녹색 구성 요소이고 95는 빨간색 구성 요소입니다.</p>
+  <p>다음 기능을 사용하여 선택한 색상의 구성 요소 색상, 복합 색조, 채도 및 광도뿐만 아니라 알파 및 기타 속성을 가져올 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="colour_get_blue.htm">colour_get_blue</a></li>
@@ -209,7 +206,7 @@
     <li><a href="draw_get_alpha.htm">draw_get_alpha</a></li>
   </ul>
   <p> </p>
-  <p>These functions can be used to create colours from raw input values for colour components:</p>
+  <p>이 기능을 사용하여 색상 구성 요소의 원시 입력 값에서 색상을 작성할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="make_colour_hsv.htm">make_colour_hsv</a></li>
@@ -217,7 +214,7 @@
     <li><a href="merge_colour.htm">merge_colour</a></li>
   </ul>
   <p> </p>
-  <p>The following functions can be used to set the various different options for drawing to the screen, including alpha, colour and blending:</p>
+  <p>다음 기능을 사용하여 알파, 색상 및 혼합을 포함하여 화면에 그리기위한 다양한 옵션을 설정할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="draw_clear.htm">draw_clear</a></li>
@@ -227,15 +224,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="../GPU_Control/GPU_Control.htm">GPU Control</a></div>
+        <div style="float:left">목록: <a href="../Drawing.htm">그림</a></div>
+        <div style="float:right">다음: <a href="../GPU_Control/GPU_Control.htm">GPU 제어</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Colour And Alpha
@@ -265,4 +263,4 @@ c_yellow
 colour_alpha_functions
 -->
 
-</body></html>
+</body></html> 

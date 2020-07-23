@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Async Events">
-        <span>Async Events</span>
+        <span>비동기 이벤트</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,40 +80,36 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Async Events</h1>
+  <h1>비동기 이벤트</h1>
   <p><img alt="The Async Event" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Async.png"/></p>
-  <p>An Asynchronous Event is one that is fired off when GameMaker Studio 2 receives a <a class="tooltip" title="A callback is simply a function that runs and then triggers another function (or code block) when it has finished doing whatever it was assigned to do. For example, the funtion sprite_add() will trigger a callback in the asynchronous Image Loaded event when the sprite has been loaded.">callback</a> from some external source, which can be from the web or from the device running your game. Basically,
-    you tell GameMaker Studio 2 to do something - like load an image - and it&#39;ll start to do this but continue doing whatever it else it has to do meanwhile its working. Then, when the request has been completed, a callback will be sent to GameMaker
-    Studio 2 and any Asynchronous Events defined for that type of callback will be fired.</p>
-  <p>Please note that the Asynchronous Events are fired for <em>all </em>instances that have them, much like the keyboard events, so you can - for example - do an <span class="inline">http_get()</span> call in one instance, yet have the <strong>Asynchronous HTTP Event</strong>    in another to deal with the callback.</p>
-  <p class="note"><strong>NOTE</strong>: You should be aware that due to XSS protection in browsers, requests and attempts to load resources from across domains are blocked and may appear to return blank results when using any of the following events.</p>
-  <p>There are various types of events associated with the Asynchronous event category, and they are all explained in the sections below:</p>
-  <p class="note"><strong>NOTE</strong>: The variable <a href="../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span style="font-size:14px;"><span class="inline" style="font-size: 14px">async_load</span></span></a>  which is mentioned
-    in the following sections is <strong>only valid in these events</strong>, as the DS map that it points to is created at the start of the event, then deleted again at the end, with this variable being reset to a value of -1 at all other times.</p>
+  <p>비동기 이벤트는 GameMaker Studio 2가 웹 또는 게임을 실행하는 장치에서 발생할 수있는 외부 소스로부터 <a class="tooltip" title="콜백은 단순히 실행 된 다음 수행 된 작업을 모두 마쳤을 때 다른 함수 (또는 코드 블록)를 트리거하는 함수입니다. 예를 들어, sprite_add () 함수는 스프라이트가로드 될 때 비동기 이미지로드 이벤트에서 콜백을 트리거합니다.">콜백</a> 을 수신하면 발생하는 이벤트입니다. 기본적으로 GameMaker Studio 2에 이미지로드와 같은 작업을 수행하도록 지시하면이 작업이 시작되지만 작업하는 동안 다른 작업을 계속 수행합니다. 그런 다음 요청이 완료되면 콜백이 GameMaker Studio 2로 전송되고 해당 유형의 콜백에 대해 정의 된 모든 비동기 이벤트가 시작됩니다.</p>
+  <p>키보드 이벤트와 마찬가지로 인스턴스가있는 <em>모든</em> 인스턴스에 대해 비동기 이벤트가 시작되므로 예를 들어 한 인스턴스에서 <span class="inline">http_get ()</span> 호출을 수행하고 다른 인스턴스에서는 <strong>비동기 HTTP 이벤트</strong> 를 처리하여 콜백.</p>
+  <p class="note"><strong>참고</strong> : 브라우저의 XSS 보호로 인해 도메인 간 리소스 요청 및로드 시도가 차단되어 다음 이벤트 중 하나를 사용할 때 빈 결과가 반환 될 수 있습니다.</p>
+  <p>비동기 이벤트 범주와 관련된 다양한 유형의 이벤트가 있으며 아래 섹션에 모두 설명되어 있습니다.</p>
+  <p class="note"><strong>참고</strong> : 다음 섹션에서 언급 된 <a href="../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span style="font-size:14px;"><span class="inline" style="font-size: 14px">async_load</span></span></a> 변수는 <strong>해당 이벤트</strong> 가 시작될 때 생성 된 DS 맵이 생성 된 후 끝에서 다시 삭제 <a href="../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span style="font-size:14px;"><span class="inline" style="font-size: 14px">되므로이</span></span></a> 섹션에서 언급 된 변수 <a href="../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span style="font-size:14px;"><span class="inline" style="font-size: 14px">async_load</span></span></a> <strong>는이 이벤트에서만 유효</strong> 합니다. 다른 모든 시간에 -1의 값.</p>
   <ul class="colour">
-    <li><a href="Async_Events/Audio_Playback.htm">Audio Playback</a></li>
-    <li><a href="Async_Events/Audio_Recording.htm">Audio Recording</a></li>
-    <li><a href="Async_Events/Cloud.htm">Cloud</a></li>
-    <li><a href="Async_Events/Dialog.htm">Dialog</a></li>
+    <li><a href="Async_Events/Audio_Playback.htm">오디오 재생</a></li>
+    <li><a href="Async_Events/Audio_Recording.htm">오디오 녹음</a></li>
+    <li><a href="Async_Events/Cloud.htm">구름</a></li>
+    <li><a href="Async_Events/Dialog.htm">대화</a></li>
     <li><a href="Async_Events/HTTP.htm">HTTP</a></li>
-    <li><a href="Async_Events/IAP.htm">In App Purchase</a></li>
-    <li><a href="Async_Events/Image_Loaded.htm">Image Loaded</a></li>
-    <li><a href="Async_Events/Networking.htm">Networking</a></li>
-    <li><a href="Async_Events/Push_Notifications.htm">Push Notifications</a></li>
-    <li><a href="Async_Events/Save_Load.htm">Save / Load</a></li>
-    <li><a href="Async_Events/Social.htm">Social</a></li>
-    <li><a href="Async_Events/Steam.htm">Steam</a></li>
-    <li><a href="Async_Events/System.htm">System</a></li>
+    <li><a href="Async_Events/IAP.htm">인앱 구매</a></li>
+    <li><a href="Async_Events/Image_Loaded.htm">이미지로드</a></li>
+    <li><a href="Async_Events/Networking.htm">네트워킹</a></li>
+    <li><a href="Async_Events/Push_Notifications.htm">푸시 알림</a></li>
+    <li><a href="Async_Events/Save_Load.htm">저장 /로드</a></li>
+    <li><a href="Async_Events/Social.htm">사회적인</a></li>
+    <li><a href="Async_Events/Steam.htm">증기</a></li>
+    <li><a href="Async_Events/System.htm">체계</a></li>
   </ul>
   <p> </p>
-  <p>It may be that if you are making extensions for different platforms you would like to target one or more of these asynchronous events for callbacks from your extension functions. To that end, you can find a table below that outlines each of the internal
-    event name constants and their corresponding ID value. Note that these event constants are <b>only</b> for use with extensions!</p>
+  <p>다른 플랫폼에 대한 확장을 만드는 경우 확장 기능의 콜백에 대해 이러한 비동기 이벤트 중 하나 이상을 대상으로 할 수 있습니다. 이를 위해 각 내부 이벤트 이름 상수와 해당 ID 값을 요약 한 표가 아래에 있습니다. 이 이벤트 상수는 확장 <b>에서만</b> 사용됩니다!</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th width="40%">Constant</th>
-        <th>Value</th>
+        <th width="40%">일정한</th>
+        <th>값</th>
       </tr>
       <tr>
         <td><b>ev_web_image_load</b></td>
@@ -175,15 +171,16 @@
   </table>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Object_Properties/Async_Events.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Object_Events.htm">Object Events</a></div>
-        <div style="float:right">Next: <a href="Gesture_Events.htm">Gesture Events</a></div>
+        <div style="float:left">목록: <a href="Object_Events.htm">객체 이벤트</a></div>
+        <div style="float:right">다음: <a href="Gesture_Events.htm">제스처 이벤트</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Events
@@ -231,4 +228,4 @@ ev_broadcast_message
 aync_events
 -->
 
-</body></html>
+</body></html> 

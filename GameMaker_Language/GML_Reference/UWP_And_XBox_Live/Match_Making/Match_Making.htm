@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Match Making">
-        <span>Match Making</span>
+        <span>매치 메이킹</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,22 +80,19 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Match Making</h1>
-  <p>Matchmaking (multiplayer) for Xbox Live and UWP requires a bit of configuration, partly via a configuration file which defines what network connections you are going to use, and partly via setup of session templates and matchmaking hoppers on the Xbox
-    Developer Portal. GameMaker Studio 2 supports this through the use of the UWP target and permits you to do the following:</p>
+  <h1>매치 메이킹</h1>
+  <p>Xbox Live 및 UWP 용 매치 메이킹 (멀티 플레이어)은 일부 네트워크 연결을 정의하는 구성 파일과 Xbox 개발자 포털에서 세션 템플릿 및 매치 메이킹 호퍼 설정을 통해 약간의 구성이 필요합니다. GameMaker Studio 2는 UWP 대상을 사용하여이를 지원하며 다음을 수행 할 수 있습니다.</p>
   <ul class="colour">
-    <li>Create a multiplayer session</li>
-    <li>Find (and/or join) a multiplayer session</li>
-    <li>Be notified when relevant players join or leave a session, as well as receive their network connection details</li>
-    <li>Be notified when the session host migrates to a different user</li>
-    <li>Get a list of users in the session</li>
-    <li>Leave a session</li>
+    <li>멀티 플레이어 세션 만들기</li>
+    <li>멀티 플레이어 세션 찾기 및 / 또는 참여</li>
+    <li>관련 플레이어가 세션에 참여하거나 세션을 떠날 때 알림을 받고 네트워크 연결 세부 정보를받습니다.</li>
+    <li>세션 호스트가 다른 사용자로 마이그레이션 될 때 알림</li>
+    <li>세션에서 사용자 목록 가져 오기</li>
+    <li>세션을 종료</li>
   </ul>
-  <p>Xbox Live network connectivity relies on something called a <b>Secure Device Association</b>, which is basically a contract defining exactly how the device connects to other devices and what sort of data it is able to communicate using
-    that connection. These are configured using a file which you need to include in your project. You can find an example of this file <a href="http://help.yoyogames.com/attachments/token/aF6pHTwVLjGal1JOQbV3NpyZg/?name=test_xbox_network_manifest.man" target="_blank">here</a>. The main important points in the file are the protocol and port numbers for each socket description, as these must match what you actually set up in code.</p>
-  <p>Once you have created this network manifest file, it should be added to the project as an <a href="../../../../Settings/Included_Files.htm">included file</a>. Then, inside the UWP Game Options, in the Xbox One General tab, it should be
-    selected in the &quot;Included File for Network Config Manifest&quot; combo box.</p>
-  <p>To create a multiplayer session, you need to specify what <b>Session Template</b> is going to be used. These session templates are defined on the XDP, but an example is shown below:</p>
+  <p>Xbox Live 네트워크 연결은 기본적으로 장치를 다른 장치에 연결하는 방법과 해당 연결을 사용하여 통신 할 수있는 데이터 종류를 정의하는 계약 인 <b>보안 장치 연결 (Secure Device Association)</b> 에 의존합니다. 이들은 프로젝트에 포함해야하는 파일을 사용하여 구성됩니다. 이 파일의 예는 <a href="http://help.yoyogames.com/attachments/token/aF6pHTwVLjGal1JOQbV3NpyZg/?name=test_xbox_network_manifest.man" target="_blank">여기에서</a> 찾을 수 있습니다. 파일에서 주요 중요 사항은 각 소켓 설명에 대한 프로토콜 및 포트 번호입니다. 이는 코드에서 실제로 설정 한 것과 일치해야하기 때문입니다.</p>
+  <p>이 네트워크 매니페스트 파일을 만든 후에는 <a href="../../../../Settings/Included_Files.htm">포함 된 파일</a> 로 프로젝트에 추가해야 <a href="../../../../Settings/Included_Files.htm">합니다</a> . 그런 다음 UWP 게임 옵션의 Xbox One 일반 탭에서 &quot;네트워크 구성 매니페스트에 포함 된 파일&quot;콤보 상자에서 선택해야합니다.</p>
+  <p>멀티 플레이어 세션을 만들려면 사용할 <b>세션 템플릿</b> 을 지정해야합니다. 이 세션 템플릿은 XDP에 정의되어 있지만 아래에 예가 나와 있습니다.</p>
   <p class="code">Session Name: MatchSession<br/> Contract Version: 107<br/> Session Template (JSON text):<br/>     {
     <br/>     &quot;constants&quot;: {<br/>         &quot;system&quot;: {<br/>             &quot;version&quot;: 1,<br/>             &quot;maxMembersCount&quot;: 12,<br/>             &quot;capabilities&quot;: {<br/>             },
     <br/>             &quot;memberInitialization&quot;: {<br/>                 &quot;externalEvaluation&quot;: false,<br/>                 &quot;membersNeededToStart&quot;: 1<br/>                 }
@@ -103,11 +100,9 @@
     <br/>         &quot;custom&quot;: {}<br/>         }
     <br/>     }
   </p>
-  <p>A description of the fields can be found in &quot;Session Overview&quot; in the XDK help file. Note that we currently don&#39;t support setting session parameters dynamically from GameMaker Studio 2.</p>
-  <p>Along with the session template, a matchmaking hopper must also be set up to allow the session to be found (this is also done on the XDP). Hoppers are used to define rules which are used when matching players. As with session parameters, we don&#39;t
-    currently support setting hopper parameters dynamically from GameMaker: Studio. See the &quot;SmartMatch Matchmaking Configuration&quot; section in the XDK help file for further details.</p>
-  <p>The following functions are available for XboxLive matchmaking (note that you will also need to use the GameMaker Studio 2 <a href="../../Networking/Networking.htm">Networking Functions</a> for the connections
-    etc...):</p>
+  <p>필드에 대한 설명은 XDK 도움말 파일의 &quot;세션 개요&quot;에서 찾을 수 있습니다. 현재 GameMaker Studio 2에서 세션 매개 변수 설정을 지원하지 않습니다.</p>
+  <p>세션 템플리트와 함께 세션을 찾을 수 있도록 매치 메이킹 호퍼도 설정해야합니다 (XDP에서도 수행됨). 호퍼는 플레이어를 일치시킬 때 사용되는 규칙을 정의하는 데 사용됩니다. 세션 매개 변수와 마찬가지로 현재 GameMaker : Studio에서 호퍼 매개 변수 설정을 동적으로 지원하지 않습니다. 자세한 내용은 XDK 도움말 파일의 &quot;SmartMatch Matchmaking 구성&quot;섹션을 참조하십시오.</p>
+  <p>XboxLive 매치 메이킹에 다음 기능을 사용할 수 있습니다 (연결 등을 위해 GameMaker Studio 2 <a href="../../Networking/Networking.htm">네트워킹 기능도</a> 사용해야합니다).</p>
   <p> </p>
   <ul class="colour">
     <li><a href="xboxlive_matchmaking_start.htm">xboxlive_matchmaking_start</a></li>
@@ -119,8 +114,7 @@
     <li><a href="xboxlive_matchmaking_session_leave.htm">xboxlive_matchmaking_session_leave</a></li>
   </ul>
   <p> </p>
-  <p>GameMaker Studio 2 provides an extra set of matchmaking functions for you to use to invite other players on the network to join a session, or for you to accept an invitation to join someone else&#39;s session. The functions available
-    are:</p>
+  <p>GameMaker Studio 2는 네트워크의 다른 플레이어를 세션에 초대하거나 다른 사람의 세션에 초대를 수락하는 데 사용할 수있는 추가 매치 메이킹 기능을 제공합니다. 사용 가능한 기능은 다음과 같습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="xboxlive_matchmaking_send_invites.htm">xboxlive_matchmaking_send_invites</a></li>
@@ -128,31 +122,28 @@
     <li><a href="xboxlive_matchmaking_join_invite.htm">xboxlive_matchmaking_join_invite</a></li>
   </ul>
   <p> </p>
-  <p>When the player accepts an invitation from another player, one of two things happens:</p>
+  <p>플레이어가 다른 플레이어의 초대를 수락하면 다음 두 가지 중 하나가 발생합니다.</p>
   <ul class="colour">
-    <li>If your game is currently running, you will receive a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> with <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a>      DS map containing the following keys/values:
-      <ul>
-        <li>&quot;<strong>id</strong>&quot; - This will be set to MATCHMAKING_INVITATION.</li>
-        <li>&quot;<strong>invitation_id</strong>&quot; - This is the unique session ID value</li>
-        <li>&quot;<strong>invitation_host</strong>&quot; - This is the unique session ID value for the session host</li>
+    <li>게임이 현재 실행중인 경우 다음 키 / 값이 포함 된 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> DS 맵이 포함 된 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">소셜 비동기 이벤트</a> 가 수신됩니다. &quot; <strong>id</strong> &quot;-MATCHMAKING_INVITATION (으)로 설정됩니다.</li>
+        <li>&quot; <strong>invitation_id</strong> &quot;-고유 세션 ID 값입니다.</li>
+        <li>&quot; <strong>invitation_host</strong> &quot;-세션 호스트의 고유 세션 ID 값입니다.</li>
       </ul>
       You should save the ID and Host values then leave any sessions you need to, and call the function <tt>xboxlive_matchmaking_join_invite()</tt>, passing in as arguments the invitation ID and invitation host values in a Step event.</li>
-    <li>If your game is not currently running, it will be started by the OS. You will receive the same type of <b>Social Asynchronous Event</b> with the same keys set as those listed above. Save them to variables, then connect to
-      Xbox Live matchmaking and finally call <tt>xboxlive_matchmaking_join_invite()</tt>.</li>
+    <li>게임이 현재 실행되고 있지 않으면 OS에 의해 시작됩니다. 위에 나열된 것과 동일한 키가 설정된 동일한 유형의 <b>소셜 비동기 이벤트</b> 가 수신됩니다. 변수에 변수를 저장 한 다음 Xbox Live 매치 메이킹에 연결하고 <tt>xboxlive_matchmaking_join_invite ()를</tt> 호출하십시오.</li>
   </ul>
-  <p>Once you have called <tt>xboxlive_matchmaking_join_invite()</tt> the user will attempt to join the session and you will receive Asynchronous Social Events as if you had called <tt>xboxlive_matchmaking_find()</tt> on
-    this session.</p>
+  <p><tt>xboxlive_matchmaking_join_invite ()를</tt> 호출하면 사용자가 세션에 참여하려고 시도하고 <tt>마치이</tt> 세션에서 <tt>xboxlive_matchmaking_find ()</tt> 를 호출 한 것처럼 비동기 소셜 이벤트가 수신됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Match_Making/Match_Making.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../UWP_And_XBox_Live.htm">UWP And XBox Live</a></div>
-        <div style="float:right">Next: <a href="../Users_And_Accounts/Users_And_Accounts.htm">Users And Accounts</a></div>
+        <div style="float:left">목록: <a href="../UWP_And_XBox_Live.htm">UWP와 XBox 라이브</a></div>
+        <div style="float:right">다음: <a href="../Users_And_Accounts/Users_And_Accounts.htm">사용자 및 계정</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 XBox Live Match Making
@@ -161,4 +152,4 @@ XBox Live Match Making
 xboxlive_matchmaking_functions
 -->
 
-</body></html>
+</body></html> 

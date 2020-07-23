@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Strings">
-        <span>Strings</span>
+        <span>현</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,98 +80,87 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Strings</h1>
-  <p>At some time when making your game you will need to use text. Text in games is dealt with by using the <b>string</b> functions (a string is just another way of saying a line of text) and GameMaker Studio 2 has a complete set of functions that
-    permit you to manipulate strings in many ways, including the insertion of one string in another, the copying of strings and the ability to parse strings for the digits or the letters that they contain. In general a string can <i>only</i> be created
-    by adding text within double quotes &quot; &quot; and <em>single quote strings are not accepted</em>, nor can you split the string over multiple lines and expect GameMaker Studio 2 to render it as if the line breaks were newlines (unless a
-    <strong>string literal</strong> <span class="inline">@</span> identifier is used, as explained below).</p>
-  <p>It is worth noting that there are certain conventions that you can use when creating strings, mostly concerned with using <i>escape characters</i>. These are characters that are preceded by a &quot;<span class="inline">\</span>&quot; symbol. So, for
-    example, if you wanted to put quotation marks within a string you would have something like this:</p>
+  <h1>현</h1>
+  <p>게임을 만들 때 언젠가는 텍스트를 사용해야합니다. 게임의 텍스트는 <b>문자열</b> 함수 (문자열은 텍스트 줄을 말하는 또 다른 방법 임)를 사용하여 처리되며 GameMaker Studio 2에는 하나의 삽입을 포함하여 다양한 방법으로 문자열을 조작 할 수있는 완전한 기능 세트가 있습니다 문자열 복사, 문자열 복사 및 포함 된 숫자 또는 문자에 대한 문자열 구문 분석 기능. 일반적으로 큰 따옴표 &quot;&quot;안에 텍스트를 추가 <i>해야만</i> 문자열을 생성 할 <i>수</i> 있으며 <em>작은 따옴표 문자열은 허용</em> 되지 않으며 문자열을 여러 줄로 나누거나 줄 바꿈이 줄 바꿈 인 것처럼 GameMaker Studio 2에서 렌더링하지 않을 수도 있습니다 ( 아래에 설명 된대로 <strong>문자열 리터럴</strong> <span class="inline">@</span> 식별자가 사용됩니다).</p>
+  <p>문자열을 만들 때 사용할 수있는 특정 규칙이 있으며 대부분 <i>이스케이프 문자</i> 사용과 관련이 있습니다. &quot; <span class="inline">\\</span> &quot;기호가 앞에 오는 문자입니다. 예를 들어 문자열 안에 따옴표를 넣으려면 다음과 같이하십시오.</p>
   <p class="code">str = &quot;Hello\&quot;World\&quot;&quot;;</p>
-  <p>GameMaker Studio 2 also has full four byte wide Unicode character support, allowing you to decode and encode Unicode characters in the upper bounds of the standard (including - but not limited to - emoji). To deal with Unicode characters, you
-    can use the &quot;<span class="inline">\</span>&quot; to precede any Unicode literal - digits of hex preceded a &quot;<span class="inline">u</span>&quot;, for example &quot;<span class="inline"><tt>\u00e2</tt></span>&quot; for &quot;á&quot;- where
-    the digits are the number of the Unicode character. When working with Unicode in this way, you need to be aware of the fact that GameMaker Studio 2 will interpret <i>all</i> digits following the &quot;<span class="inline">u</span>&quot;, so
-    if you wanted to write &quot;áa&quot; for example, you should use:</p>
+  <p>GameMaker Studio 2는 또한 전체 4 바이트 폭의 유니 코드 문자를 지원하므로 표준의 상한 (이모티콘 포함)에서 유니 코드 문자를 디코딩하고 인코딩 할 수 있습니다. 유니 코드 문자를 처리하려면 &quot; <span class="inline">\\</span> &quot;를 사용하여 유니 코드 리터럴 앞에 16 진수의 숫자가 &quot; <span class="inline">u</span> &quot;앞에 <span class="inline"><tt>오도록</tt></span> 합니다 (예 : &quot; <span class="inline"><tt>Ã¡</tt></span> &quot;에 대한 &quot; <span class="inline"><tt>\\ u00e2</tt></span> &quot;). 여기서 숫자는 유니 코드 문자의 수입니다. . 이런 방식으로 유니 코드로 작업 할 때 GameMaker Studio 2가 &quot; <span class="inline">u</span> &quot;뒤에있는 <i>모든</i> 숫자를 해석한다는 사실을 알고 있어야합니다. 예를 들어 &quot;Ã&quot;를 쓰려면 다음을 사용해야합니다.</p>
   <p class="code">&quot;\u00e2\a&quot;</p>
-  <p>or</p>
+  <p>또는</p>
   <p class="code">&quot;\u00e2\u61&quot;</p>
-  <p>or</p>
+  <p>또는</p>
   <p class="code">&quot;\u00e2&quot; + &quot;a&quot;</p>
-  <p>as just using &quot;<tt>\u00e2a</tt>&quot; would actually result in the Unicode character &quot;<tt>ส</tt>&quot; (essentially becoming &quot;<tt>\ue2a</tt>&quot;).<i></i></p>
-  <p>GameMaker Studio 2 can also handle any hexadecimal literal - normally written as digits of hex following &quot;<span class="inline">0x</span>&quot;, for example &quot;<span class="inline">0xff</span>&quot;, where the digits are the number of
-    the character to use. In GameMaker Studio 2 these are written using &quot;<tt>\x</tt>&quot; and then the hex value. These and other predefined escape characters are listed in the table below:</p>
+  <p>&quot; <tt>\\ u00e2a</tt> &quot;를 사용하면 실제로 유니 코드 문자 &quot; <tt>à¸ª</tt> &quot;(실질적으로 &quot; <tt>\\ ue2a</tt> &quot;가 됨)가됩니다. <i></i></p>
+  <p>또한 GameMaker Studio 2는 16 진수 리터럴을 처리 할 수 ​​있습니다. 일반적으로 &quot; <span class="inline">0x</span> &quot;다음에 16 진수로 기록됩니다 (예 : &quot; <span class="inline">0xff</span> &quot;). 여기서 숫자는 사용할 문자 수입니다. GameMaker Studio 2에서는 &quot; <tt>\\ x</tt> &quot;를 사용하여 16 진수 값을 사용합니다. 이들 및 기타 사전 정의 된 이스케이프 문자는 아래 표에 나열되어 있습니다.</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>\n</td>
-        <td>Newline</td>
+        <td>\\엔</td>
+        <td>줄 바꿈</td>
       </tr>
       <tr>
-        <td>\r</td>
-        <td>Carriage return</td>
+        <td>\\아르 자형</td>
+        <td>캐리지 리턴</td>
       </tr>
       <tr>
-        <td>\b</td>
-        <td>Backspace (0x08)</td>
+        <td>\\비</td>
+        <td>백 스페이스 (0x08)</td>
       </tr>
       <tr>
-        <td>\f</td>
-        <td>Form Feed (0x0c)</td>
+        <td>\\에프</td>
+        <td>용지 공급 (0x0c)</td>
       </tr>
       <tr>
-        <td>\t</td>
-        <td>Horizontal Tab (0x09)</td>
+        <td>\\티</td>
+        <td>가로 탭 (0x09)</td>
       </tr>
       <tr>
-        <td>\v</td>
-        <td>Vertical Tab (0x0b)</td>
+        <td>\\V</td>
+        <td>세로 탭 (0x0b)</td>
       </tr>
       <tr>
-        <td>\\</td>
-        <td>Backslash itself (0x5c)</td>
+        <td>\\\\</td>
+        <td>백 슬래시 자체 (0x5c)</td>
       </tr>
       <tr>
-        <td>\a</td>
-        <td>Alert (0x07)</td>
+        <td>\\ㅏ</td>
+        <td>경고 (0x07)</td>
       </tr>
       <tr>
-        <td>\u[Hex Digits]</td>
-        <td>Insert Unicode character</td>
+        <td>\\ u [16 진수]</td>
+        <td>유니 코드 문자 삽입</td>
       </tr>
       <tr>
-        <td>\x[Hex Digits]</td>
-        <td>Insert hex literal character</td>
+        <td>\\ x [육각수]</td>
+        <td>16 진 리터럴 문자 삽입</td>
       </tr>
       <tr>
-        <td>\[Octal Digits]</td>
-        <td>Insert octal Unicode character</td>
+        <td>\\ [소수]</td>
+        <td>8 진 유니 코드 문자 삽입</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p class="note"><b>NOTE</b>: Strings support form feed, vertical tab etc... but this does not mean to say that <b>rendering</b> does, and when drawing strings these characters may be ignored.</p>
-  <p>You can also create verbatim <i>string literals</i> by preceding the whole string with the <span class="inline">@</span> character:</p>
+  <p class="note"><b>참고</b> : 문자열은 용지 공급, 세로 탭 등을 지원하지만 <b>렌더링을</b> 의미하는 것은 아니며 문자열을 그릴 때 이러한 문자는 무시 될 수 있습니다.</p>
+  <p>전체 문자열 앞에 <span class="inline">@</span> 문자를 붙여서 그대로 <i>문자열 리터럴</i> 을 만들 수도 있습니다.</p>
   <p class="code">var test = @&quot;<br/> Line breaks<br/> over multiple<br/> lines
     <br/> &quot;;
   </p>
-  <p>The above code will render the string over multiple lines as if there was a line break escape character included. A verbatim string literal is similar to previous GameMaker version string literals but they also use double or single quotes and must be
-    prefixed by an <span class="inline">@</span> symbol, they can be broken over multiple lines in the code file and they DO NOT support escaped characters i.e. <span class="inline">@&quot;Hello\World&quot;</span> will <em>not</em> try to escape the W
-    on World and will be stored verbatim. Note though that when using string literals like this, you will need to break the string if you wish to include quotation marks as part of the string, ie:</p>
+  <p>위의 코드는 줄 바꿈 이스케이프 문자가 포함 된 것처럼 여러 줄에 문자열을 렌더링합니다. 완전 문자열 리터럴은 이전 GameMaker 버전 문자열 리터럴과 유사하지만 큰 따옴표 나 작은 따옴표를 사용해야하며 <span class="inline">@</span> 기호가 앞에 붙어야합니다. 코드 파일에서 여러 줄로 나눌 수 있으며 이스케이프 된 문자, 즉 <span class="inline">@ &quot;를</span> 지원하지 않습니다. <span class="inline">Hello \\ World &quot;</span> 는 W on World를 벗어나려고 <em>하지 않으며</em> 그대로 저장됩니다. 이와 같은 문자열 리터럴을 사용할 때 문자열의 일부로 따옴표를 포함하려면 문자열을 분리해야합니다.</p>
   <p class="code">var test = @&quot;Hello &quot; + &quot;\&quot;&quot; + @&quot;World&quot; + &quot;\&quot;&quot;</p>
-  <p>Another thing to note is that the Unicode character 9647 (▯) is used to substitute any missing glyphs that you may have in your designated font when rendering it in the draw event. So if your font doesn&#39;t have, for example, the ° symbol, then writing
-    90° will actually produce 90▯.</p>
-  <p>The following list of functions are all for dealing with strings:</p>
+  <p>주목해야 할 또 다른 사항은 유니 코드 문자 9647 (â–¯)이 draw 이벤트에서 렌더링 할 때 지정된 글꼴에있을 수있는 누락 된 글리프를 대체하는 데 사용된다는 것입니다. 따라서 글꼴에 예를 들어 Â ° 기호가 없으면 90 °를 쓰면 실제로 90 °가됩니다.</p>
+  <p>다음 함수 목록은 모두 문자열을 다루기위한 것입니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="ansi_char.htm">ansi_char</a></li>
     <li><a href="chr.htm">chr</a></li>
-    <li><a href="ord.htm">ord</a></li>
-    <li><a href="real.htm">real</a></li>
-    <li><a href="string.htm">string</a></li>
+    <li><a href="ord.htm">오드</a></li>
+    <li><a href="real.htm">레알</a></li>
+    <li><a href="string.htm">끈</a></li>
     <li><a href="string_byte_at.htm">string_byte_at</a></li>
     <li><a href="string_byte_length.htm">string_byte_length</a></li>
     <li><a href="string_set_byte_at.htm">string_set_byte_at</a></li>
@@ -203,7 +192,7 @@
     <li><a href="../Variable_Functions/is_string.htm">is_string</a></li>
   </ul>
   <p> </p>
-  <p>Other than those functions that relate specifically to strings, the <b>Windows</b> target also permits you to use access the clipboard to get and set text information:</p>
+  <p>문자열과 관련된 기능 외에 <b>Windows</b> 대상을 사용하면 클립 보드에 액세스하여 텍스트 정보를 가져오고 설정할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="clipboard_has_text.htm">clipboard_has_text</a></li>
@@ -212,15 +201,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Strings/Strings.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Maths_And_Numbers/Maths_And_Numbers.htm">Maths And Numbers</a></div>
+        <div style="float:left">목록: <a href="../GML_Reference.htm">GML 참조</a></div>
+        <div style="float:right">다음: <a href="../Maths_And_Numbers/Maths_And_Numbers.htm">수학과 숫자</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Strings
@@ -240,4 +230,4 @@ Strings
 string_functions
 -->
 
-</body></html>
+</body></html> 

@@ -71,7 +71,7 @@
         <span>uwp_check_privilege</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,151 +81,114 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>uwp_check_privilege</h1>
-  <p>With this function you can check that a given user has a chosen privilege. The function will return true or false in the System Asynchronous Event depending on whether the privilege is enabled or not, and if you set the attempt_resolution argument to
-    true and the privilege isn&#39;t enabled, it will also open a system dialog (suspending the game) to prompt the user to upgrade the account or whatever is required to get the privilege. If the user then enables the required option, the function will
-    return true.</p>
-  <p>The function requires that you use one of the following constants for the privilege request:</p>
+  <p>이 기능을 사용하면 지정된 사용자에게 선택된 권한이 있는지 확인할 수 있습니다. 이 기능은 권한이 활성화되어 있는지 여부에 따라 시스템 비동기 이벤트에서 true 또는 false를 반환하며, try_resolution 인수를 true로 설정하고 권한이 활성화되어 있지 않으면 시스템 대화 상자가 열립니다 (게임 일시 중지) )를 사용하여 계정 또는 권한을 얻는 데 필요한 모든 것을 업그레이드하라는 메시지를 표시합니다. 사용자가 필요한 옵션을 활성화하면이 함수는 true를 반환합니다.</p>
+  <p>이 기능을 사용하려면 권한 요청에 다음 상수 중 하나를 사용해야합니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>uwp_privilege_internet_browsing</td>
-        <td>Check to see if internet browsing is permitted</td>
+        <td>인터넷 브라우징이 허용되는지 확인</td>
       </tr>
       <tr>
         <td>uwp_privilege_social_network_sharing</td>
-        <td>Check to see if sharing to social networks is permitted</td>
+        <td>소셜 네트워크 공유가 허용되는지 확인</td>
       </tr>
       <tr>
         <td>uwp_privilege_share_kinect_content</td>
-        <td>Check whether sharing the Kinect controller is permitted</td>
+        <td>Kinect 컨트롤러 공유가 허용되는지 확인</td>
       </tr>
       <tr>
         <td>uwp_privilege_video_communications</td>
-        <td>Check to see if video communication is permitted</td>
+        <td>비디오 통신이 허용되는지 확인</td>
       </tr>
       <tr>
         <td>uwp_privilege_communications</td>
-        <td>Check to see if internet communication is permitted</td>
+        <td>인터넷 통신이 허용되는지 확인</td>
       </tr>
       <tr>
         <td>uwp_privilege_user_created_content</td>
-        <td>Check if access to user created content is permitted</td>
+        <td>사용자 제작 콘텐츠에 대한 액세스가 허용되는지 확인</td>
       </tr>
       <tr>
         <td>uwp_privilege_multiplayer_sessions</td>
-        <td>Check to see if online multiplayer sessions are permitted</td>
+        <td>온라인 멀티 플레이어 세션이 허용되는지 확인</td>
       </tr>
       <tr>
         <td>uwp_privilege_sessions</td>
-        <td>Check to see if online sessions are permitted</td>
+        <td>온라인 세션이 허용되는지 확인</td>
       </tr>
       <tr>
         <td>uwp_privilege_fitness_upload</td>
-        <td>Check to see if fitness data uploading is permitted</td>
+        <td>피트니스 데이터 업로드가 허용되는지 확인</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>Once the function has been called, on XBox One it will trigger an <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">Asynchronous System event</a> when the callback result has been received, which will have the special DS
-    map <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>. This map should then be parsed for the following key:</p>
+  <p>함수가 호출되면 XBox One에서 콜백 결과가 수신 될 때 <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">비동기 시스템 이벤트를</a> 트리거하며 특수 DS 맵 <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load가</tt></a> 있습니다. 그런 다음이 키를 다음 키에 대해 구문 분석해야합니다.</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - should hold the value &quot;check_privilege_result&quot; if the event was triggered by this function</li>
+    <li>&quot; <b>event_type</b> &quot;-이벤트가이 함수에 의해 트리거 된 경우 &quot;check_privilege_result&quot;값을 보유해야합니다.</li>
   </ul>
-  <p>If the event type relates to this function, then there will also be the following additional keys when the function is called on XBox:</p>
+  <p>이벤트 유형이이 기능과 관련이있는 경우 XBox에서 함수가 호출 될 때 다음과 같은 추가 키가 있습니다.</p>
   <ul class="colour">
-    <li>&quot;<b>result</b>&quot; - Will be one or more of the following constants (combined values):<br/>
-      <table>
-        <tbody>
-          <tr>
-            <th>Constant</th>
-            <th>Description</th>
-            <th>Value</th>
-          </tr>
-          <tr>
-            <td>uwp_privilege_result_no_issue</td>
-            <td>There are no privilege issues with the user</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>uwp_privilege_result_purchase_required</td>
-            <td>The user must purchase something additional, usually a subscription, for access</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>uwp_privilege_result_aborted</td>
-            <td>The check was aborted</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>uwp_privilege_result_banned</td>
-            <td>The user is banned</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>uwp_privilege_result_restricted</td>
-            <td>The user is restricted from access, usually through parental controls</td>
-            <td>8</td>
-          </tr>
-        </tbody>
-      </table>
-    </li>
+    <li>&quot; <b>result</b> &quot;-다음 상수 중 하나 이상이됩니다 (결합 된 값). 일정한 기술 값 uwp_privilege_result_no_issue 사용자와 관련된 권한 문제가 없습니다 0 uwp_privilege_result_purchase_required 사용자는 액세스를 위해 일반적으로 추가 요금을 구매해야합니다. 1 uwp_privilege_result_aborted 수표가 중단되었습니다 2 uwp_privilege_result_banned 사용자가 금지되었습니다 4 uwp_privilege_result_restricted 일반적으로 자녀 보호 기능을 통해 사용자의 액세스가 제한됩니다. 8</li>
     <br/>
-    <li>&quot;<b>privilege</b>&quot; - will be one of the constants listed above for use in the function, so you can check which privilege you have requested in the case of multiple checks.</li>
+    <li>&quot; <b>privilege</b> &quot;-함수에 사용하기 위해 위에 나열된 상수 중 하나이므로 다중 검사의 경우 요청한 권한을 확인할 수 있습니다.</li>
   </ul>
-  <p>If the project is run on a UWP platform that is not XBox One, then the Async Event will <i>not</i> be triggered, and instead the function will immediately return wither -1, 0, or 1 where:</p>
+  <p>프로젝트가 XBox One이 아닌 UWP 플랫폼에서 실행되는 경우 비동기 이벤트가 트리거 <i>되지</i> 않고 대신 함수가 -1, 0 또는 1로 즉시 리턴됩니다.</p>
   <ul class="colour">
-    <li>-1 means -1 the user doesn&#39;t have the privilege</li>
-    <li>0 means the function hasn&#39;t been able to query the user</li>
-    <li>1 means the user has the privilege.</li>
+    <li>-1은 -1은 사용자에게 권한이 없음을 의미합니다.</li>
+    <li>0은 함수가 사용자를 쿼리 할 수 ​​없음을 의미합니다</li>
+    <li>1은 사용자에게 권한이 있음을 의미합니다.</li>
   </ul>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">uwp_check_privilege(user_id, privilege, attempt_resolution);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>user_id</td>
-        <td>The User ID pointer to check.</td>
+        <td>확인할 사용자 ID 포인터.</td>
       </tr>
       <tr>
-        <td>privilege</td>
-        <td>The privilege constant to check (see description, above).</td>
+        <td>특권</td>
+        <td>확인할 특권 상수 (위의 설명 참조).</td>
       </tr>
       <tr>
-        <td>attempt_resolution</td>
-        <td>Enable attempting a resolution if set to <tt>true</tt>, or ignore if set to <tt>false</tt>.</td>
+        <td>시도 _ 해결</td>
+        <td><tt>true로</tt> 설정된 경우 해상도 시도를 활성화하거나 <tt>false로</tt> 설정된 경우 무시하십시오.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Integer</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">var user_one = xboxlive_get_user(0);<br/> if (xboxlive_user_is_signed_in(user_one))<br/>     {
     <br/>     uwp_check_privilege(user_one, xboxlive_privilege_multiplayer_sessions, true);<br/>     }
   </p>
-  <p>The above checks to see if the user is signed in and if they are it checks the multiplayer sessions permission.</p>
+  <p>위의 내용은 사용자가 로그인했는지 확인하고 사용자인지 확인하여 멀티 플레이어 세션 권한을 확인합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/UWP_And_XBox_Live/uwp_check_privilege.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="UWP_And_XBox_Live.htm">UWP And XBox Live</a></div>
-        <div style="float:right">Next: <a href="uwp_suspend.htm">uwp_suspend</a></div>
+        <div style="float:left">목록: <a href="UWP_And_XBox_Live.htm">UWP와 XBox 라이브</a></div>
+        <div style="float:right">다음: <a href="uwp_suspend.htm">uwp_suspend</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 uwp_check_privilege
@@ -248,4 +211,4 @@ uwp_privilege_fitness_upload
 uwp_check_privilege
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Primitives And Vertex Formats">
-        <span>Primitives And Vertex Formats</span>
+        <span>기본 요소와 정점 형식</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,12 +80,10 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Primitives And Vertex Formats</h1>
-  <p>A primitive is a type of drawing done using points to define what is shown on the screen. They can be made up of single points, lines, or triangles and can be coloured, have alpha blending and even be given a texture, which means that they can be used
-    to create some very exciting effects in a 2D game! For example, you can create a rectangle using multiple triangle primitives, then texture it with a flag sprite and in the draw event of an instance have that flag &quot;wave&quot; in the wind and
-    distort the sprite you used by simply modifying the points that form the primitive.</p>
-  <p class="note"><b>WARNING! </b>These functions do not work with the HTML5 module unless you have enabled OpenGL in the <a href="../../../../Settings/Game_Options/HTML5.htm">Game Options</a>.</p>
-  <p>Information on drawing primitives can be found on the following pages:</p>
+  <h1>기본 요소와 정점 형식</h1>
+  <p>프리미티브는 포인트를 사용하여 화면에 표시되는 내용을 정의하는 드로잉 유형입니다. 단일 포인트, 선 또는 삼각형으로 구성 될 수 있으며 색상을 지정하고 알파 블렌딩을 할 수 있으며 텍스처를 적용 할 수도 있습니다. 이는 2D 게임에서 매우 흥미로운 효과를 만드는 데 사용될 수 있습니다! 예를 들어, 여러 삼각형 프리미티브를 사용하여 사각형을 생성 한 다음 플래그 스프라이트로 텍스처를 생성하고 인스턴스의 드로우 이벤트에서 플래그를 바람에 &quot;파동&quot;으로 만들고 형성하는 점을 간단히 수정하여 사용한 스프라이트를 왜곡합니다 프리미티브.</p>
+  <p class="note"><b>경고!</b> <a href="../../../../Settings/Game_Options/HTML5.htm">게임 옵션</a> 에서 OpenGL을 활성화하지 않으면 이러한 기능은 HTML5 모듈에서 작동하지 않습니다.</p>
+  <p>프리미티브 그리기에 대한 정보는 다음 페이지에서 찾을 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="draw_primitive_begin.htm">draw_primitive_begin</a></li>
@@ -97,8 +95,7 @@
     <li><a href="draw_vertex_texture_colour.htm">draw_vertex_texture_colour</a></li>
   </ul>
   <p> </p>
-  <p>GameMaker Studio 2 permits you to define your own <strong>vertex formats</strong> from which you can create your own custom primitives. This can greatly speed up shader operations or can be used to extend their capabilities and create surprising
-    effects. You can find information on this in the following sections:</p>
+  <p>GameMaker Studio 2를 사용하면 나만의 커스텀 프리미티브를 만들 수있는 나만의 <strong>버텍스 형식</strong> 을 정의 할 수 있습니다. 이는 셰이더 작업 속도를 크게 높이거나 기능을 확장하고 놀라운 효과를 만드는 데 사용될 수 있습니다. 다음 섹션에서 이에 대한 정보를 찾을 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="vertex_format_begin.htm">vertex_format_begin</a></li>
@@ -112,51 +109,50 @@
     <li><a href="vertex_format_delete.htm">vertex_format_delete</a></li>
   </ul>
   <p> </p>
-  <p>Once you have created your vertex format (see the section above) you can then use it to build the primitives that you want to draw using the following veretx buffer functions:</p>
+  <p>정점 형식을 만들면 (위 섹션 참조) 다음 정점 버퍼 함수를 ​​사용하여 그릴 기본 형식을 작성할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="vertex_create_buffer.htm">vertex_create_buffer</a></li>
+    <li><a href="vertex_create_buffer.htm">정점 _ 생성 _ 버퍼</a></li>
     <li><a href="vertex_create_buffer_ext.htm">vertex_create_buffer_ext</a></li>
-    <li><a href="vertex_create_buffer_from_buffer.htm">vertex_create_buffer_from_buffer</a></li>
+    <li><a href="vertex_create_buffer_from_buffer.htm">버텍스 _create_buffer_from_buffer</a></li>
     <li><a href="vertex_create_buffer_from_buffer_ext.htm">vertex_create_buffer_from_buffer_ext</a></li>
     <li><a href="vertex_get_buffer_size.htm">vertex_get_buffer_size</a></li>
-    <li><a href="vertex_get_number.htm">vertex_get_number</a></li>
-    <li><a href="vertex_delete_buffer.htm">vertex_delete_buffer</a></li>
-    <li><a href="vertex_begin.htm">vertex_begin</a></li>
-    <li><a href="vertex_colour.htm">vertex_colour</a></li>
-    <li><a href="vertex_normal.htm">vertex_normal</a></li>
-    <li><a href="vertex_position.htm">vertex_position</a></li>
-    <li><a href="vertex_position_3d.htm">vertex_position_3d</a></li>
-    <li><a href="vertex_argb.htm">vertex_argb</a></li>
-    <li><a href="vertex_texcoord.htm">vertex_texcoord</a></li>
-    <li><a href="vertex_float1.htm">vertex_float1</a></li>
-    <li><a href="vertex_float2.htm">vertex_float2</a></li>
-    <li><a href="vertex_float3.htm">vertex_float3</a></li>
-    <li><a href="vertex_float4.htm">vertex_float4</a></li>
+    <li><a href="vertex_get_number.htm">정점 _get_number</a></li>
+    <li><a href="vertex_delete_buffer.htm">버텍스 _ 삭제 _ 버퍼</a></li>
+    <li><a href="vertex_begin.htm">정점 _ 시작</a></li>
+    <li><a href="vertex_colour.htm">버텍스 _ 컬러</a></li>
+    <li><a href="vertex_normal.htm">정점</a></li>
+    <li><a href="vertex_position.htm">정점 _ 위치</a></li>
+    <li><a href="vertex_position_3d.htm">정점 _ 위치 _3d</a></li>
+    <li><a href="vertex_argb.htm">정점 _argb</a></li>
+    <li><a href="vertex_texcoord.htm">정점</a></li>
+    <li><a href="vertex_float1.htm">정점 _float1</a></li>
+    <li><a href="vertex_float2.htm">정점 _float2</a></li>
+    <li><a href="vertex_float3.htm">정점 _float3</a></li>
+    <li><a href="vertex_float4.htm">정점 _float4</a></li>
     <li><a href="vertex_ubyte4.htm">vertex_ubyte4</a></li>
-    <li><a href="vertex_end.htm">vertex_end</a></li>
-    <li><a href="vertex_freeze.htm">vertex_freeze</a></li>
-    <li><a href="vertex_submit.htm">vertex_submit</a></li>
+    <li><a href="vertex_end.htm">정점 _ 끝</a></li>
+    <li><a href="vertex_freeze.htm">정점</a></li>
+    <li><a href="vertex_submit.htm">정점 _ 제출</a></li>
   </ul>
   <p> </p>
-  <p class="note"><b>IMPORTANT!</b> The primitives that you build should follow the format that you have set using the Vertex Format functions, so if you have defined a vertex format with only positional data, there is no point building your primitive with
-    colour data. You should note that the order in which you add properties to the primitive you are building is defined by the order in which you added these properties when creating the vertex format, so if you have defined the vector format with the
-    order position, colour and texture coordinate, you <i>must</i> add these properties to the primitive being built in the same order otherwise you will get errors.</p>
-  <p>For an overview of how to build primitives using the vertex functions, see:</p>
+  <p class="note"><b>중대한!</b> 빌드하는 프리미티브는 버텍스 포맷 함수를 사용하여 설정 한 포맷을 따라야하므로 위치 데이터만으로 버텍스 포맷을 정의한 경우 컬러 데이터로 프리미티브를 구축 할 필요가 없습니다. 빌드하는 프리미티브에 속성을 추가하는 순서는 정점 형식을 만들 때 이러한 속성을 추가 한 순서로 정의되므로 순서 위치, 색상 및 질감으로 벡터 형식을 정의한 경우 좌표와 동일한 순서로 빌드되는 기본 요소에 이러한 특성을 추가 <i>해야</i> 합니다. 그렇지 않으면 오류가 발생합니다.</p>
+  <p>꼭짓점 함수를 사용하여 기본 요소를 작성하는 방법에 대한 개요는 다음을 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="../../../../Additional_Information/Guide_To_Primitives_And_Vertex_Building.htm">Guide To Primitives And Vertex Building</a></li>
+    <li><a href="../../../../Additional_Information/Guide_To_Primitives_And_Vertex_Building.htm">프리미티브 및 버텍스 구축 가이드</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="../Surfaces/Surfaces.htm">Surfaces</a></div>
+        <div style="float:left">목록: <a href="../Drawing.htm">그림</a></div>
+        <div style="float:right">다음: <a href="../Surfaces/Surfaces.htm">표면</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Primitives And Vertex Formats
@@ -165,4 +161,4 @@ Primitives And Vertex Formats
 primitive_vertex_functions
 -->
 
-</body></html>
+</body></html> 

@@ -71,7 +71,7 @@
         <span>http_request</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,69 +81,63 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>http_request</h1>
-  <p>With this function, you can create an HTTP header request to define the operating parameters of an HTTP transaction, which can be used for many things like (for example) authentication via HTTP headers if you use RESTful APIs. The function requires
-    the full IP address of the server to request from as well as the type of request to make (as a string, see the note below): &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;TRACE&quot;, &quot;OPTIONS&quot;,
-    or &quot;CONNECT&quot;. You will also need to supply a <tt><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a></tt> of key/value pairs (as strings, where the key is the header field and the value is the required data for the header), and
-    the final argument is an optional data string that you can add to the request, and if it&#39;s not needed then it can be either 0 or an empty string &quot;&quot;. Note that you can also send a buffer (see the section on <a href="../../Buffers/Buffers.htm">Buffers</a>    for more details), in which case the last argument would be the &quot;handle&quot; of the buffer to send.</p>
-  <p class="note"><b>NOTE</b>: HTTP headers normally follow the format &quot;key:value&quot;, but since GMS creates these pairs for you from the ds_map, there is no need to include the colon &quot;:&quot; in your map key or value strings.</p>
-  <p class="note"><b>NOTE</b>: When using a buffer for the body argument, if the buffer seek position is at the start (0) then no body is sent and the buffer is filled with the response from the http call, but if the buffer seek position is non-zero, then the buffer
-    string content is sent as the body.</p>
-  <p class="note"><b>NOTE</b>: You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results. Please see the part on <a href="HTTP.htm">Cross Domain Issues</a>    for further details.</p>
-  <p>This event will generate a &quot;call back&quot; which is picked up by any <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP Events</a>, in which case it will generate a <tt>DS Map</tt> (more commonly known as a &quot;dictionary&quot;)
-    that is exclusive to this event and is stored in the special variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. This DS map has the following two keys related to the request function:</p>
+  <p>이 기능을 사용하면 HTTP 헤더 요청을 작성하여 HTTP 트랜잭션의 작동 매개 변수를 정의 할 수 있습니다. 이는 RESTful API를 사용하는 경우 HTTP 헤더를 통한 인증과 같은 여러 가지에 사용할 수 있습니다. 이 기능을 사용하려면 요청하는 서버의 전체 IP 주소와 요청 유형 (문자열, 아래 참고 참조)이 필요합니다 : &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot; 삭제 &quot;,&quot;TRACE &quot;,&quot;OPTIONS &quot;또는&quot;CONNECT &quot;. 키 / 값 쌍의 <tt><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a></tt> (문자열, 키는 헤더 필드, 값은 헤더에 필요한 데이터)을 제공해야하며 마지막 인수는 추가 할 수있는 선택적 데이터 문자열입니다. 필요하지 않은 경우 0 또는 빈 문자열 &quot;&quot;일 수 있습니다. 버퍼를 보낼 수도 있습니다 (자세한 내용은 <a href="../../Buffers/Buffers.htm">버퍼</a> 섹션 참조).이 경우 마지막 인수는 보낼 버퍼의 &quot;핸들&quot;입니다.</p>
+  <p class="note"><b>참고</b> : HTTP 헤더는 일반적으로 &quot;key : value&quot;형식을 따르지만 GMS는 ds_map에서 이러한 쌍을 생성하므로 맵 키 또는 값 문자열에 콜론 &quot;:&quot;을 포함 할 필요가 없습니다.</p>
+  <p class="note"><b>참고</b> : body 인수에 버퍼를 사용할 때 버퍼 탐색 위치가 시작 (0)에 있으면 본문이 전송되지 않고 http 호출의 응답으로 버퍼가 채워지지만 버퍼 탐색 위치가 아닌 경우 0이면 버퍼 문자열 내용이 본문으로 전송됩니다.</p>
+  <p class="note"><b>참고</b> : 브라우저의 XSS 보호로 인해 도메인 간 리소스 요청 및로드 시도가 차단되어 빈 결과가 반환 될 수 있습니다. 자세한 내용은 <a href="HTTP.htm">도메인 간 문제</a> 부분을 ​​참조하십시오.</p>
+  <p>이 이벤트는 모든 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP 이벤트에</a> 의해 선택되는 &quot;콜백&quot;을 생성합니다.이 경우이 이벤트 전용의 <tt>DS 맵</tt> (일반적으로 &quot;사전&quot;)이 생성되고 특수 변수에 저장됩니다. <b>async_load</b> 이 DS 맵에는 요청 기능과 관련된 다음 두 개의 키가 있습니다.</p>
   <ul class="colour">
-    <li><b>id: </b>The ID which was returned from the command. If you fire off a series of <tt>http_</tt> requests then you need to know which one you are getting the reply to, and so you would use this value to compare to the value you stored when you originally
-      sent the request to find the right one.</li>
-    <li><b>response_headers:</b> If this has a value greater than or equal to 0, it holds a ds_map that contains the HTTP headers returned with the response to the HTTP request.</li>
+    <li><b>id :</b> 명령에서 반환 된 ID입니다. 일련의 <tt>http_</tt> 요청을 발생시키는 경우 응답을받는 요청을 알아야 <tt>하므로이</tt> 값을 사용하여 원래 요청을 보낼 때 저장 한 값과 비교하여 올바른 요청을 찾습니다.</li>
+    <li><b>response_headers :</b> 값이 0보다 크거나 같으면 HTTP 요청에 대한 응답으로 리턴 된 HTTP 헤더가 포함 된 ds_map을 보유합니다.</li>
   </ul>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">http_request(url, method, header_map, body);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>url</td>
-        <td>The web address of the server that you wish to get information from</td>
+        <td>정보를 얻으려는 서버의 웹 주소</td>
       </tr>
       <tr>
-        <td>method</td>
-        <td>The request method (normally &quot;POST&quot; or &quot;GET&quot;, but all methods are supported)</td>
+        <td>방법</td>
+        <td>요청 방법 (일반적으로 &quot;POST&quot;또는 &quot;GET&quot;이지만 모든 방법이 지원됨)</td>
       </tr>
       <tr>
         <td>header_map</td>
-        <td>A ds_map with the required header fields</td>
+        <td>필수 헤더 필드가있는 ds_map</td>
       </tr>
       <tr>
-        <td>body</td>
-        <td>The data to be transmitted following the headers (can be a binary buffer handle)</td>
+        <td>몸</td>
+        <td>헤더를 따라 전송되는 데이터 (이진 버퍼 핸들 일 수 있음)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">var map = ds_map_create();<br/> ds_map_add(map, &quot;Host&quot;, &quot;225.0.0.97:3000&quot;);<br/> ds_map_add(map, &quot;Connection&quot;, &quot;keep-alive&quot;);<br/> ds_map_add(map, &quot;Content-Length&quot;, &quot;169&quot;);<br/> ds_map_add(map,
     &quot;Cache-Control&quot;, &quot;max-age=0&quot;);<br/> ds_map_add(map, &quot;Authorization&quot;, &quot;Basic eW95b19hZG1pbjpjNG5lZmllbGQ=&quot;);<br/> ds_map_add(map, &quot;Accept&quot;, &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;);<br/>    ds_map_add(map, &quot;User-Agent&quot;, &quot;Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36&quot;);<br/> ds_map_add(map, &quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);<br/>    ds_map_add(map, &quot;Accept-Encoding&quot;, &quot;gzip,deflate,sdch&quot;);<br/> ds_map_add(map, &quot;Accept-Language&quot;, &quot;en-GB,en-US;q=0.8,en;q=0.6&quot;);<br/> ds_map_add(map, &quot;Cookie&quot;, &quot;request_method=GET; _InAppPurchases_session=69bb6ef6eec2b&quot;);<br/>    var data=&quot;utf8=%E2%9C%93&amp;authenticity_token=kPmS14DcYcuKgMFZUsN3XFfj3mhs%3D&amp;product%5Bname%5D=CatchTheHaggis&amp;product%5Bproduct_id%5D=http_test&amp;commit=Create+Product&quot;;<br/> request = http_request(&quot;http:225.0.0.97:3000/products&quot;,
     &quot;POST&quot;, map, data);</p>
-  <p>The above code creates a DS map with the relevant HTTP headers for the function, then creates a data string for use as this is a POST request. Finally the function is called, with it&#39;s ID value being stored in the variable &quot;request&quot; for
-    checking in the HTTP asynchronous event.</p>
+  <p>위의 코드는 함수에 대한 관련 HTTP 헤더가 포함 된 DS 맵을 생성 한 다음 POST 요청이므로 사용할 데이터 문자열을 생성합니다. 마지막으로, 함수는 HTTP 비동기 이벤트를 체크인하기 위해 변수 &quot;요청&quot;에 ID 값이 저장되어 호출됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/http_request.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="HTTP.htm">HTTP</a></div>
-        <div style="float:right">Next: <a href="http_get.htm">http_get</a></div>
+        <div style="float:left">목록: <a href="HTTP.htm">HTTP</a></div>
+        <div style="float:right">다음: <a href="http_get.htm">http_get</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 http_request
@@ -152,4 +146,4 @@ http_request
 http_request
 -->
 
-</body></html>
+</body></html> 

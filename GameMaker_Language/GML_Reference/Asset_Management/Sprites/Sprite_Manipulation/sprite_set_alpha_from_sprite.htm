@@ -71,7 +71,7 @@
         <span>sprite_set_alpha_from_sprite</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,41 +81,37 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_set_alpha_from_sprite</h1>
-  <p>This function uses the value/saturation of one sprite and multiplies it with the alpha of the target sprite. Ideally the sprite being used to generate the new alpha map should be greyscale, with the white areas having an equivalent alpha value of 1
-    (opaque), the black areas being equivalent to alpha 0 (transparent), and the grey areas being an alpha in between 0 and 1. The sprite that you are setting the alpha of <i>cannot be a permanent resource</i>, nor can the sprite you use
-    to set the alpha, as this will give an error. This means that you must create two completely new sprites &quot;on the fly&quot; in some way for the function to work correctly. This can be achieved by using surfaces, or by creating a sprite from the
-    screen (the code example below shows how the effect can be achieved with surfaces).</p>
-  <p class="note"><b>NOTE</b>: This function is only useful for <b>bitmap</b> sprites and will not work with SWF or JSON (Spine) sprites.</p>
-  <p>Below is an image that illustrates how this function works:</p>
+  <p>이 함수는 하나의 스프라이트의 값 / 채도를 사용하여 대상 스프라이트의 알파와 곱합니다. 이상적으로 새 알파 맵을 생성하는 데 사용되는 스프라이트는 그레이 스케일이어야합니다. 흰색 영역의 알파 값은 1 (불투명), 검은 색 영역은 알파 0 (투명), 회색 영역은 알파입니다 알파를 설정하는 스프라이트 <i>는 영구 리소스</i> 일 수 없으며 알파를 설정하는 데 사용하는 스프라이트는 오류가 발생할 수 있습니다. 즉, 함수가 제대로 작동하려면 어떤 방식 으로든 &quot;즉석에서&quot;완전히 새로운 두 개의 스프라이트를 만들어야합니다. 표면을 사용하거나 화면에서 스프라이트를 만들어 달성 할 수 있습니다 (아래 코드 예제는 표면으로 효과를 얻는 방법을 보여줍니다).</p>
+  <p class="note"><b>참고</b> :이 함수는 <b>비트 맵</b> 스프라이트에만 유용하며 SWF 또는 JSON (스파인) 스프라이트에서는 작동하지 않습니다.</p>
+  <p>다음은이 기능의 작동 방식을 보여주는 이미지입니다.</p>
   <p><img alt="Sprite Set Alpha Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_alpha.png"/></p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">sprite_set_alpha_from_sprite(ind, spr);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td>The index of the sprite to change the transparency map of.</td>
+        <td>산업</td>
+        <td>투명도 맵을 변경할 스프라이트의 인덱스입니다.</td>
       </tr>
       <tr>
         <td>spr</td>
-        <td>The index of the sprite to take the transparency map data from.</td>
+        <td>투명도 맵 데이터를 가져올 스프라이트의 인덱스입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns</h4>
+  <h4>보고</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>In this extended example we show how you can create a special effect sprite from two sprite resources. To start with we need to have a controller variable in the <b>Create Event</b> of the instance. This variable is to ensure
-    that the sprite is only created once:</p>
+  <h4>확장 된 예 :</h4>
+  <p>이 확장 예제에서는 두 개의 스프라이트 리소스에서 특수 효과 스프라이트를 만드는 방법을 보여줍니다. 시작하려면 인스턴스의 <b>이벤트 생성에</b> 컨트롤러 변수가 있어야합니다. 이 변수는 스프라이트가 한 번만 생성되도록하기위한 것입니다.</p>
   <p class="code">spr_create = true;</p>
-  <p>Once that is done we need to then go to the <b>Draw Event</b> and add in this code:</p>
+  <p>완료되면 <b>Draw Event</b> 로 이동하여 다음 코드를 추가해야합니다.</p>
   <p class="code">if spr_create<br/>     {
     <br/>     spr_create = false;<br/>     var _sw = sprite_get_width(spr_Explosion_Alpha);<br/>     var _sh = sprite_get_height(spr_Explosion_Alpha);<br/>     var _xo = sprite_get_xoffset(spr_Gradient);<br/>     var _yo = sprite_get_yoffset(spr_Gradient);<br/>        var _surf = surface_create(_sw, _sh);<br/>     surface_set_target(_surf);
     <br/>     draw_clear_alpha(c_black, 0);<br/>     draw_sprite(spr_Gradient, 0, 0, 0);<br/>     sprite_index = sprite_create_from_surface(_surf, 0, 0, _sw, _sh, false, false, _xo, _yo);<br/>     draw_clear_alpha(c_black, 0);<br/>     draw_sprite(spr_Explosion_Alpha,
@@ -124,24 +120,21 @@
     <br/>     sprite_set_alpha_from_sprite(sprite_index, _spr);<br/>     sprite_delete(_spr);
     <br/>     }
     <br/> draw_sprite(sprite_index, 0, x, y);</p>
-  <p>The above code first checks to see if the control variable is true or not, and if it is, it then runs the code to set the sprite alpha, setting the variable to false to prevent the code from running more than once. In this case, it creates a surface
-    the size of the alpha mask that we wish to use, then draws the sprite that is to have its alpha changed onto the surface and creates a new sprite from it, assigning it as the <tt>sprite_index</tt> of the object. The code
-    then clears the surface and draws the alpha map sprite to it and creates another new sprite, storing its index in a local variable. Finally, the new sprite assigned to the object gets its alpha set from this temporary sprite, the surface is freed
-    and the temporary sprite is removed.</p>
-  <p>There is one final thing to do here, and that is remove the sprite that has been created for the object from memory when not in use. This would either be done in the <b>Destroy Event</b> or the <b>Room End Event</b> like
-    this:</p>
+  <p>위의 코드는 먼저 제어 변수가 true인지 여부를 확인하고, 그렇지 않은 경우 코드를 실행하여 스프라이트 알파를 설정하고 변수가 false로 설정되어 코드가 두 번 이상 실행되지 않도록합니다. 이 경우 사용하려는 알파 마스크 크기의 표면을 만든 다음 알파를 표면으로 변경해야 할 스프라이트를 그린 후 표면에서 새 스프라이트를 만들어 객체의 <tt>sprite_index</tt> 로 지정합니다. . 그런 다음 코드는 표면을 지우고 알파 맵 스프라이트를 그려서 다른 새 스프라이트를 만들어 인덱스를 로컬 변수에 저장합니다. 마지막으로 객체에 할당 된 새 스프라이트는이 임시 스프라이트에서 알파 세트를 가져오고 표면이 해제되고 임시 스프라이트가 제거됩니다.</p>
+  <p>여기서해야 할 마지막 일이 있는데, 사용하지 않을 때 오브젝트에서 만들어진 스프라이트를 메모리에서 제거하는 것입니다. 이는 다음과 같이 <b>Destroy Event</b> 또는 <b>Room End Event</b> 에서 수행됩니다.</p>
   <p class="code">sprite_delete(sprite_index);</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_alpha_from_sprite.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_set_cache_size.htm">sprite_set_cache_size</a></div>
+        <div style="float:left">목록: <a href="Sprite_Manipulation.htm">스프라이트 조작</a></div>
+        <div style="float:right">다음: <a href="sprite_set_cache_size.htm">sprite_set_cache_size</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 sprite_set_alpha_from_sprite
@@ -150,4 +143,4 @@ sprite_set_alpha_from_sprite
 sprite_set_alpha_from_sprite
 -->
 
-</body></html>
+</body></html> 

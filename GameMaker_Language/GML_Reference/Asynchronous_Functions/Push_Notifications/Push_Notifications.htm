@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Push Notifications">
-        <span>Push Notifications</span>
+        <span>푸시 알림</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,26 +80,19 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Push Notifications</h1>
-  <p>On mobile devices, normally only one application can be active in the foreground at any time, but many games and applications operate in a time-based or interconnected environment where events of interest to users can occur when the application is <i>not</i> in
-    the foreground. In these cases, <b>Local</b> and <b>Remote</b> push notifications can allow these games to notify their users when events occur.</p>
-  <p>When the operating system delivers a local or remote push notification and the target application is not running in the foreground, it presents the notification to the user in the form of a banner. If there is a notification alert and the user taps
-    on it, then the game is launched and an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Push_Notifications.htm">Asynchronous Push Event</a> is called where you can check the callback string that you
-    specify and resolve the push based on its value. If the application is running in the foreground when the notification is delivered, the application will still receive an Asynchronous Push Event, but the user will get no message displayed unless you
-    create it yourself.</p>
-  <p>There are a few differences to note between supported platforms:</p>
+  <h1>푸시 알림</h1>
+  <p>모바일 장치에서는 일반적으로 언제든지 하나의 응용 프로그램 만 포 그라운드에서 활성화 될 수 있지만, 많은 게임과 응용 프로그램은 응용 프로그램이 포 그라운드에 <i>있지 않을</i> 때 사용자에게 관심있는 이벤트가 발생할 수있는 시간 기반 또는 상호 연결된 환경에서 작동합니다. 이 경우 <b>로컬</b> 및 <b>원격</b> 푸시 알림을 통해 이벤트 발생시 이러한 게임이 사용자에게 알릴 수 있습니다.</p>
+  <p>운영 체제가 로컬 또는 원격 푸시 알림을 전달하고 대상 응용 프로그램이 포 그라운드에서 실행되고 있지 않으면 배너 형식으로 사용자에게 알림을 표시합니다. 알림 경고가 있고 사용자가이를 누르면 게임이 시작되고 사용자가 지정한 콜백 문자열을 확인하고 해당 값을 기반으로 푸시를 해결할 수있는 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Push_Notifications.htm">비동기 푸시 이벤트</a> 가 호출됩니다. 알림이 전달 될 때 애플리케이션이 포 그라운드에서 실행중인 경우 애플리케이션은 여전히 ​​비동기 푸시 이벤트를 수신하지만 사용자가 직접 작성하지 않으면 메시지가 표시되지 않습니다.</p>
+  <p>지원되는 플랫폼 간에는 몇 가지 차이점이 있습니다.</p>
   <ul class="colour">
-    <li>On Android, <i>all</i> notifications received when the app is not running/in background, will be stored, and the data delivered by the async event the next time the app runs and you will need to enable push notifications
-      within the <a href="../../../../Settings/Game_Options/Android.htm">Android Game Options</a> for them to work.</li>
-    <li>On iOS, data for a particular notification will only be delivered when the notification is selected (or if the app is running in foreground when the notification is received) and you will need to enable push notifications within the       <a href="../../../../Settings/Game_Options/iOS.htm">iOS Game Options</a> for them to work.</li>
+    <li>Android에서는 앱이 실행 중이 아니거나 백그라운드에서 수신 될 때 수신 된 <i>모든</i> 알림이 저장되고 다음에 앱이 실행될 때 비동기 이벤트에 의해 전달되는 데이터는 <a href="../../../../Settings/Game_Options/Android.htm">Android 게임 옵션</a> 내에서 푸시 알림을 활성화해야합니다. 작업.</li>
+    <li>iOS의 경우 특정 알림에 대한 데이터는 알림을 선택한 경우 (또는 알림을받을 때 앱이 포 그라운드에서 실행중인 경우에만) 전달되며 <a href="../../../../Settings/Game_Options/iOS.htm">iOS 게임 옵션</a> 에서 푸시 알림을 활성화해야 작동합니다.</li>
   </ul>
   <p> </p>
-  <h2>Local Notifications</h2>
-  <p>A local push notification is local to the device that the game is installed on, and requires no back-end server. You simply set the date and time for the notification and it will be displayed to the user if the game is not currently running. This type
-    of notification is useful to set &quot;reminders&quot; for the user to play your game again, or to offer a daily reward for playing, etc... and when the user taps the notification it will launch the game and pass in a data string which can then be
-    parsed by the game to give a reward or whatever.</p>
-  <p><b>NOTE</b>: This functionality is limited to the <b>iOS</b> and <b>Android</b> target modules. For <b>Android</b> you will need to have installed the <a href="https://help.yoyogames.com/hc/en-us/articles/360024582692" target="_blank">Google Push Notification</a> extension.</p>
-  <p>The following functions are available for local notifications:</p>
+  <h2>지역 알림</h2>
+  <p>로컬 푸시 알림은 게임이 설치된 장치에 국한되며 백엔드 서버가 필요하지 않습니다. 당신은 단순히 알림 날짜와 시간을 설정하고 게임이 현재 실행되고 있지 않은 경우 사용자에게 표시됩니다. 이 알림 유형은 사용자가 게임을 다시 플레이하거나 &quot;일일 보상&quot;등을 할 수 있도록 &quot;알림&quot;을 설정하는 데 유용합니다. 사용자가 알림을 탭하면 게임이 시작되고 데이터가 전달됩니다. 그런 다음 게임에서 파싱하여 보상을 줄 수 있습니다.</p>
+  <p><b>참고</b> :이 기능은 <b>iOS</b> 및 <b>Android</b> 대상 모듈로 제한됩니다. <b>Android의</b> 경우 <a href="https://help.yoyogames.com/hc/en-us/articles/360024582692" target="_blank">Google 푸시 알림</a> 확장 프로그램을 설치해야합니다.</p>
+  <p>로컬 알림에 다음 기능을 사용할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="push_local_notification.htm">push_local_notification</a></li>
@@ -109,33 +102,30 @@
   </ul>
   <p> </p>
   <p> </p>
-  <h2><label for="b">Remote Notifications</label></h2>
-  <p>Remote notification messages are sent by a server to a service provided by the device platform app store, and this then forwards those messages onto all the devices on which your application is installed. This is supported by GameMaker Studio 2 on
-    the iOS and Android target modules.</p>
-  <p>There are no functions in GameMaker Studio 2 to deal with remote notifications, as they must all be generated by your server and handled by the respective app atores. However, once set up correctly, GameMaker Studio 2 games
-    will receive these notifications, which can then be dealt with in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Push_Notifications.htm">Asynchronous Push Event</a>, as you would a local notification.</p>
-  <p>Please note that there is no guarantee that remote push notifications will be delivered, and that the allowed data payload is fairly small. This varies between platforms, but iOS is particularly limited - the apple service only delivers the most recent
-    notification, which must be selected by the recipient for the payload data to be delivered to your async event, and these notifications have a maximum payload size of 256bytes. Typically a remote push notification would just indicate that new data
-    is available from your server for example.</p>
-  <p class="note"><b>NOTE</b>: Implementing the server-side is entirely up to the end user, and YoYo Games do not provide any support for that side of things, other than basic set-up information available from their Knowledge Base.</p>
-  <p>For further details on how to go about setting up a server, as well as information specific to the available platforms, please see the following articles:</p>
+  <h2><label for="b">원격 알림</label></h2>
+  <p>원격 알림 메시지는 서버에서 장치 플랫폼 앱 스토어가 제공하는 서비스로 전송 된 다음 해당 메시지를 응용 프로그램이 설치된 모든 장치로 전달합니다. iOS 및 Android 대상 모듈의 GameMaker Studio 2에서 지원됩니다.</p>
+  <p>GameMaker Studio 2에는 원격 알림을 처리하는 기능이 없습니다.이 기능은 모두 서버에서 생성하고 해당 앱 관리자가 처리해야하기 때문입니다. 그러나 일단 올바르게 설정되면 GameMaker Studio 2 게임은 이러한 알림을 수신하며, 로컬 알림과 마찬가지로 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Push_Notifications.htm">비동기 푸시 이벤트</a> 에서 처리 할 수 ​​있습니다.</p>
+  <p>원격 푸시 알림이 전달 될 것이라는 보장은 없으며 허용 된 데이터 페이로드는 상당히 작습니다. 이는 플랫폼마다 다르지만 iOS는 특히 제한적입니다. 애플 서비스는 가장 최근의 알림 만 제공합니다.이 알림은 페이로드 데이터가 비동기 이벤트로 전달되도록 수신자가 선택해야하며,이 알림의 최대 페이로드 크기는 256 바이트입니다. . 일반적으로 원격 푸시 알림은 예를 들어 서버에서 새 데이터를 사용할 수 있음을 나타냅니다.</p>
+  <p class="note"><b>참고</b> : 서버 측 구현은 전적으로 최종 사용자에게 달려 있으며, YoYo Games는 해당 기술 자료에서 제공하는 기본 설정 정보 이외의 다른 측면을 지원하지 않습니다.</p>
+  <p>사용 가능한 플랫폼 별 정보와 서버 설정 방법에 대한 자세한 내용은 다음 문서를 참조하십시오.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360024582652">Android: Remote Notifications Using Firebase</a></li>
-    <li><a href="https://help.yoyogames.com/hc/en-us/articles/216753838">iOS: Remote Push Notifications</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360024582652">Android : Firebase를 사용한 원격 알림</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/216753838">iOS : 원격 푸시 알림</a></li>
   </ul>
   <p> </p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asynchronous_Functions/Push_Notifications/Push_Notifications.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asynchronous_Functions.htm">Asynchronous Functions</a></div>
-        <div style="float:right">Next: <a href="../Facebook/Facebook.htm">Facebook</a></div>
+        <div style="float:left">목록: <a href="../Asynchronous_Functions.htm">비동기 함수</a></div>
+        <div style="float:right">다음: <a href="../Facebook/Facebook.htm">페이스 북</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Push Notification Functions
@@ -144,4 +134,4 @@ Push Notification Functions
 push_functions
 -->
 
-</body></html>
+</body></html> 

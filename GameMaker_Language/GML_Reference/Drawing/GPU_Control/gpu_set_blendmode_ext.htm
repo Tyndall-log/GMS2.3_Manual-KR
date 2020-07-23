@@ -71,7 +71,7 @@
         <span>gpu_set_blendmode_ext</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,16 +81,13 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_blendmode_ext</h1>
-  <p>When GameMaker Studio 2 goes to draw a pixel there is a source colour (the colour of the pixel we&#39;re going to draw) and a destination colour(the colour that&#39;s already in the pixel we&#39;re drawing to), so when determining the new colour
-    of the pixel, the source and destination colours are calculated according to the chosen blend mode. Each component of the colours is stored as a floating point value between 0 and 1, and the new colour is calculated by multiply each component of the
-    source colour by some factor and by multiplying each component of destination colour by some other factor and then adding the results together component by component.</p>
-  <p>This function permits you to set the different component parts that should be factored together to create a custom blend mode. The source and destination both have a red, green, blue and alpha component, and in the following chart the source&#39;s RGBA
-    are considered (Rs, Gs, Bs, As) while the destination&#39;s are (Rd, Gd, Bd, Ad). The eleven constants that are available for use can be either source or destination (or both) when used in this function.</p>
+  <p>GameMaker Studio 2가 픽셀을 그리면 소스 색상 (그린 픽셀의 색상)과 대상 색상 (이미 그리는 픽셀에있는 색상)이 있으므로 픽셀의 새로운 색상, 소스 및 대상 색상은 선택한 블렌드 모드에 따라 계산됩니다. 색상의 각 구성 요소는 0과 1 사이의 부동 소수점 값으로 저장되며, 새로운 색상은 소스 색상의 각 구성 요소에 몇 가지 요소를 곱하고 대상 색상의 각 구성 요소에 다른 요소를 곱한 다음 구성 요소별로 결과를 함께 제공합니다.</p>
+  <p>이 기능을 통해 사용자 정의 블렌드 모드를 생성하기 위해 함께 고려해야하는 다양한 컴포넌트 파트를 설정할 수 있습니다. 소스 및 대상은 모두 빨강, 녹색, 파랑 및 알파 구성 요소를 가지며 다음 차트에서 소스의 RGBA는 (Rs, Gs, Bs, As)로 간주되고 대상은 (Rd, Gd, Bd, Ad)로 간주됩니다. 사용 가능한 11 개의 상수는이 함수에서 사용될 때 소스 또는 대상 (또는 둘 다) 일 수 있습니다.</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Blend factor (Red, Green, Blue, Alpha)</th>
+        <th>일정한</th>
+        <th>블렌드 팩터 (빨강, 녹색, 파랑, 알파)</th>
       </tr>
       <tr>
         <td>bm_zero</td>
@@ -106,7 +103,7 @@
       </tr>
       <tr>
         <td>bm_inv_src_colour</td>
-        <td>(1-Rs, 1-Gs, 1-Bs, 1-As)</td>
+        <td>(1-R, 1-G, 1-B, 1-A)</td>
       </tr>
       <tr>
         <td>bm_src_alpha</td>
@@ -118,11 +115,11 @@
       </tr>
       <tr>
         <td>bm_dest_alpha</td>
-        <td>(Ad, Ad, Ad, Ad)</td>
+        <td>(광고, 광고, 광고, 광고)</td>
       </tr>
       <tr>
         <td>bm_inv_dest_alpha</td>
-        <td>(1-Ad, 1-Ad, 1-Ad, 1-Ad)</td>
+        <td>(1- 광고, 1- 광고, 1- 광고, 1- 광고)</td>
       </tr>
       <tr>
         <td>bm_dest_colour</td>
@@ -134,21 +131,19 @@
       </tr>
       <tr>
         <td>bm_src_alpha_sat</td>
-        <td>(f, f, f, 1) where f = min(As, 1-Ad)</td>
+        <td>(f, f, f, 1) 여기서 f = min (As, 1-Ad)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>Note that you can either supply two individual arguments to this function or you can supply an array of arguments (as returned by the function <a href="gpu_set_blendmode_ext.htm"><tt>gpu_get_blendmode_ext()</tt></a> for example). If supplying an array
-    it should have the following two elements:</p>
+  <p>이 함수에 두 개의 개별 인수를 제공하거나 인수 배열을 제공 할 수 있습니다 <a href="gpu_set_blendmode_ext.htm"><tt>(</tt></a> 예 : <a href="gpu_set_blendmode_ext.htm"><tt>gpu_get_blendmode_ext ()</tt></a> 함수에 의해 리턴 됨). 배열을 제공하는 경우 다음 두 가지 요소가 있어야합니다.</p>
   <ul class="colour">
-    <li>[0] = Source blend mode (default is <tt>bm_src_alpha</tt>)</li>
-    <li>[1] = Destination blend mode (default is <tt>bm_inv_src_alpha</tt>)</li>
+    <li>[0] = 소스 블렌드 모드 (기본값은 <tt>bm_src_alpha</tt> )</li>
+    <li>[1] = 대상 블렌드 모드 (기본값은 <tt>bm_inv_src_alpha</tt> )</li>
   </ul>
-  <p>It can be quite difficult to visualise how these different blend modes work, so below you can find a simple chart that shows the basic interaction of a single sprite being drawn with different combinations of blend modes over a single background. Please
-    note that the actual results of the blend mode you use will very much depend on the colour in the sprite, the alpha value of the sprite and the colour and alpha of the background.</p>
+  <p>이러한 서로 다른 블렌드 모드의 작동 방식을 시각화하는 것은 상당히 어려울 수 있으므로 아래에서 단일 배경에 대해 여러 조합의 블렌드 모드 조합으로 그려지는 단일 스프라이트의 기본 상호 작용을 보여주는 간단한 차트를 찾을 수 있습니다. 사용하는 블렌드 모드의 실제 결과는 스프라이트의 색상, 스프라이트의 알파 값 및 배경의 색상 및 알파에 따라 크게 달라집니다.</p>
   <p><img alt="Blend mode chart" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/blendmode_chart.png"/></p>
-  <p class="note"><b>IMPORTANT!</b> HTML5 without WebGL enabled will <b>not</b> be able to display the following modes correctly:</p>
+  <p class="note"><b>중대한!</b> WebGL을 사용하지 <b>않는</b> HTML5는 다음 모드를 올바르게 표시 할 수 <b>없습니다</b> .</p>
   <ul class="colour" style="padding-left: 120px">
     <li><tt>bm_src_colour</tt></li>
     <li><tt>bm_inv_src_colour</tt></li>
@@ -157,44 +152,44 @@
     <li><tt>bm_src_alpha_sat</tt></li>
   </ul>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">gpu_set_blendmode(src, dest);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>src</td>
-        <td>Source blend mode factor(see constants above).</td>
+        <td>소스 블렌드 모드 계수 (위 상수 참조).</td>
       </tr>
       <tr>
-        <td>dest</td>
-        <td>Destination blend mode factor (see constants above)</td>
+        <td>대상</td>
+        <td>대상 혼합 모드 계수 (위 상수 참조)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">gpu_set_blendmode_ext(bm_src_alpha, bm_one);<br/> draw_circle_colour(100, 100, 50, c_white, c_black, 0);<br/> gpu_set_blendmode(bm_normal);
   </p>
-  <p>This will turn the black into transparency, creating a &#39;glow&#39; effect from the white being strong on the outside and gradually weakening further from the circle centre. The blend mode is reset after the circle is drawn to ensure additive blending
-    is not also applied to everything else after it.</p>
+  <p>이렇게하면 검은 색이 투명 해져서 흰색이 바깥 쪽이 강하고 원 중심에서 점차 약해지면서 &#39;빛나는&#39;효과가 나타납니다. 원을 그린 후에는 블렌드 모드가 재설정되어 추가 블렌딩이 그 이후의 모든 것에 적용되지 않도록합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode_ext.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_blendmode_ext_sepalpha.htm">gpu_set_blendmode_ext_sepalpha</a></div>
+        <div style="float:left">목록: <a href="GPU_Control.htm">GPU 제어</a></div>
+        <div style="float:right">다음: <a href="gpu_set_blendmode_ext_sepalpha.htm">gpu_set_blendmode_ext_sepalpha</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 gpu_set_blendmode_ext
@@ -214,4 +209,4 @@ bm_src_alpha_sat
 gpu_set_blendmode_ext
 -->
 
-</body></html>
+</body></html> 

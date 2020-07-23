@@ -71,7 +71,7 @@
         <span>network_set_config</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,91 +81,85 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>network_set_config</h1>
-  <p>With this function you can set different network configurations.</p>
-  <p class="note"><b>NOTE</b>: This function will not work when used in a project running on the HTML5 target.</p>
-  <p>These configurations are given as <b>constants</b> and the setting will depend on the constant that you have chosen. The table below lists the available constants and their settings:</p>
+  <p>이 기능을 사용하면 다른 네트워크 구성을 설정할 수 있습니다.</p>
+  <p class="note"><b>참고</b> :이 기능은 HTML5 대상에서 실행중인 프로젝트에서 사용될 때 작동하지 않습니다.</p>
+  <p>이러한 구성은 <b>상수</b> 로 제공되며 설정은 선택한 상수에 따라 다릅니다. 아래 표는 사용 가능한 상수와 해당 설정을 보여줍니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Setting</th>
+        <th>일정한</th>
+        <th>기술</th>
+        <th>환경</th>
       </tr>
       <tr>
         <td>network_config_connect_timeout</td>
-        <td>Set a connection timeout value</td>
-        <td>A value in milliseconds</td>
+        <td>연결 시간 초과 값 설정</td>
+        <td>밀리 초 단위의 값</td>
       </tr>
       <tr>
         <td>network_config_use_non_blocking_socket</td>
-        <td>Tell GameMaker Studio 2 not to block on connect.</td>
-        <td>0 = block, 1 = don&#39;t block</td>
+        <td>GameMaker Studio 2에게 연결시 차단하지 말라고 알려주십시오.</td>
+        <td>0 = 차단, 1 = 차단 안 함</td>
       </tr>
       <tr>
         <td>network_config_enable_reliable_udp</td>
-        <td>Enables the &quot;reliable UDP&quot; protocol for an existing UDP socket</td>
-        <td>The socket ID to target</td>
+        <td>기존 UDP 소켓에 대해 &quot;신뢰할 수있는 UDP&quot;프로토콜을 활성화합니다</td>
+        <td>대상으로하는 소켓 ID</td>
       </tr>
       <tr>
         <td>network_config_disable_reliable_udp</td>
-        <td>Disables the &quot;reliable UDP&quot; protocol for an existing UDP socked.</td>
-        <td>The socket ID to target</td>
+        <td>기존 UDP 양말에 대한 &quot;신뢰할 수있는 UDP&quot;프로토콜을 비활성화합니다.</td>
+        <td>대상으로하는 소켓 ID</td>
       </tr>
     </tbody>
   </table>
-  <p><br/>
-    <br/> The first option (<tt>network_config_connect_timeout</tt>) simply sets the timeout for connecting to a server but doesn&#39;t change connection behaviour apart from the time you have to wait. It is recommended that you don&#39;t set this too
-    low and keep it at about 1000 for a LAN only game or 4000 or so for internet, or the game may fail to connect randomly. If you wish to set a timeout value for sending/receiving packets then use the function <a href="network_set_timeout.htm"><tt>network_set_timeout()</tt></a>.</p>
-  <p>The second option (<tt>network_config_use_non_blocking_socket</tt>) means that the network connect functions will all return a <tt>socket_id</tt> instantly, <i>but you can&#39;t send or receive on that socket until you&#39;ve received an async network event</i>.
-    The event triggered will have the &quot;type&quot; key set to <tt>network_type_non_blocking_connect</tt> (you can find further details from the page on the <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">Networking Asynchronous Event</a>).
-    This is a <b>global</b> setting as GameMaker Studio 2 does not support a mixture of blocking and non-blocking in one application.</p>
-  <p>The third and fourth options (<tt>network_config_enable_reliable_udp</tt>, <tt>network_config_disable_reliable_udp</tt>) are for enabling or disabling the GameMaker Studio 2 reliable UDP protocol and as such, should <b>only be used with UDP connections</b>.
-    What &quot;reliable&quot; in this case this means is that, when enabled on <i>both</i> ends of a connection, GameMaker Studio 2 will attempt to check your packets have arrived correctly and re-send any that don&#39;t arrive (note, we do not
-    guarantee in your packets will arrive in order of transmission). When using a reliable socket type, there will be a 12-byte header added to all udp packets which contains information needed by GameMaker Studio 2 to check the packet for errors
-    and re-send missing packets. The following points are worth noting when using this option:</p>
+  <p>첫 번째 옵션 ( <tt>network_config_connect_timeout</tt> )은 단순히 서버에 연결하기위한 시간 제한을 설정하지만 대기 시간과는 별도로 연결 동작을 변경하지는 않습니다. LAN 전용 게임이나 인터넷의 경우 4000 정도 정도로 너무 낮게 설정하지 않고 약 1000으로 유지하는 것이 좋습니다. 그렇지 않으면 게임이 임의로 연결되지 않을 수 있습니다. 패킷을 송수신하기위한 시간 초과 값을 설정하려면 <a href="network_set_timeout.htm"><tt>network_set_timeout ()</tt></a> 함수를 사용하십시오.</p>
+  <p>두 번째 옵션 ( <tt>network_config_use_non_blocking_socket</tt> )은 네트워크 연결 기능이 모두 즉시 <tt>socket_id를</tt> 반환 <i>하지만 비동기 네트워크 이벤트를 수신 할 때까지 해당 소켓에서 보내거나받을 수 없음을 의미합니다</i> . 트리거 된 이벤트에는 &quot;type&quot;키가 <tt>network_type_non_blocking_connect로</tt> 설정됩니다 ( <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">네트워킹 비동기 이벤트</a> 페이지에서 자세한 내용을 확인할 수 있음). GameMaker Studio 2는 하나의 응용 프로그램에서 블로킹과 비 블로킹을 혼합하여 지원하지 않으므로 <b>전역</b> 설정입니다.</p>
+  <p>세 번째 및 네 번째 옵션 ( <tt>network_config_enable_reliable_udp</tt> , <tt>network_config_disable_reliable_udp</tt> )은 GameMaker Studio 2의 신뢰할 수있는 UDP 프로토콜을 활성화 또는 비활성화하기위한 것이므로 <b>UDP 연결에서만</b> 사용해야 <b>합니다</b> . 이 경우 &quot;신뢰할 수있는&quot;것은 연결의 <i>양쪽</i> 끝에서 활성화되면 GameMaker Studio 2가 패킷이 올바르게 도착했는지 확인하고 도착하지 않은 패킷을 다시 보내려고 시도한다는 것을 의미합니다. 당신의 패킷에 전송 순서대로 도착합니다). 안정적인 소켓 유형을 사용하는 경우, 모든 UDP 패킷에 12 바이트 헤더가 추가되는데, 여기에는 GameMaker Studio 2에서 패킷의 오류를 확인하고 누락 된 패킷을 다시 전송하는 데 필요한 정보가 들어 있습니다. 이 옵션을 사용할 때 다음 사항에 유의하십시오.</p>
   <ul class="colour">
-    <li>The protocol should be enabled/disabled on both sides before sending your data, and any data sent or received before the option has been enabled/disabled will not be affected.</li>
-    <li>You can enable or disable the protocol for any given socket ID multiple times, as long as this is properly managed on both the server side and client side</li>
-    <li>It is possible to have two separate UDP sockets, one with reliable UDP enabled for one with reliable UDP disabled for the other.</li>
+    <li>프로토콜은 데이터를 보내기 전에 양쪽에서 활성화 / 비활성화되어야하며 옵션을 활성화 / 비활성화하기 전에 보내거나받은 데이터는 영향을받지 않습니다.</li>
+    <li>서버 측과 클라이언트 측 모두에서 올바르게 관리되는 한 지정된 소켓 ID에 대해 여러 번 프로토콜을 활성화 또는 비활성화 할 수 있습니다.</li>
+    <li>하나는 신뢰할 수있는 UDP를 사용하도록 설정하고 다른 하나는 신뢰할 수있는 UDP를 사용하지 않도록 설정하는 두 개의 개별 UDP 소켓을 가질 수 있습니다.</li>
   </ul>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">network_set_config(config_value, setting);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>config_value</td>
-        <td>The config value constant to set (listed below).</td>
+        <td>설정할 구성 값 상수 (아래에 나열 됨).</td>
       </tr>
       <tr>
-        <td>setting</td>
-        <td>The setting of the config value.</td>
+        <td>환경</td>
+        <td>구성 값의 설정</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">String</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">network_set_config(network_config_connect_timeout, 1000);<br/> network_set_config(network_config_use_non_blocking_socket, 1);</p>
-  <p>The above code will set the timeout for the network connection to 1000ms and tell GameMaker Studio 2 not to block on connect.</p>
+  <p>위의 코드는 네트워크 연결 시간 초과를 1000ms로 설정하고 GameMaker Studio 2가 연결시 차단하지 않도록 지시합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Networking/network_set_config.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Networking.htm">Networking</a></div>
-        <div style="float:right">Next: <a href="network_set_timeout.htm">network_set_timeout</a></div>
+        <div style="float:left">목록: <a href="Networking.htm">네트워킹</a></div>
+        <div style="float:right">다음: <a href="network_set_timeout.htm">network_set_timeout</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 network_set_config
@@ -178,4 +172,4 @@ network_config_disable_reliable_udp
 network_set_config
 -->
 
-</body></html>
+</body></html> 

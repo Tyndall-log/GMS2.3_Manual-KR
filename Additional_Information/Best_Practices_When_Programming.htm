@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Best Practices When Programming">
-        <span>Best Practices When Programming</span>
+        <span>프로그래밍시 모범 사례</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,51 +80,38 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Best Practices When Programming</h1>
-  <p>On this page we are going to cover some &quot;best practices&quot; when programming your game, and at the same time explain a little bit about the inner workings of GameMaker Studio 2. Before continuing, however, it is worth noting two very important
-    points:</p>
+  <h1>프로그래밍시 모범 사례</h1>
+  <p>이 페이지에서는 게임을 프로그래밍 할 때 몇 가지 &quot;모범 사례&quot;를 다루고 동시에 GameMaker Studio 2의 내부 작동에 대해 약간 설명합니다. 그러나 계속하기 전에 두 가지 중요한 점에 주목할 가치가 있습니다.</p>
   <ul class="colour">
-    <li>This is a <em>guide</em>, and not the be-all-and-end-all-definitive-100%-perfect method to write your game! The things mentioned here are generally more on the organisational and micro-optimisation scale and should be incorporated into your programming
-      habits when you feel comfortable with GML and think that they are appropriate.</li>
-    <li>If your game runs fine and you are happy with things as they are, then <em>don&#39;t rush to change everything just to squeeze a few extra FPS out</em>. You have to strike a balance between readable, flexible and modular code with the time and energy
-      required to change things, as well as the overall gain at the end. Basically, if it isn&#39;t broken, don&#39;t fix it and keep what you learn here for your next project.</li>
+    <li>이것은 <em>가이드</em> 이며, 게임을 작성하는 가장 완벽한 100 % 완벽한 방법은 아닙니다! 여기에 언급 된 사항은 일반적으로 조직 및 미세 최적화 규모에 더 적합하며 GML에 익숙하고 적절하다고 생각할 때 프로그래밍 습관에 통합되어야합니다.</li>
+    <li>게임 <em>이 제대로</em> 실행되고있는 그대로 만족 <em>한다면 몇 가지 추가 FPS를 짜기 위해 모든 것을 바꾸려고 서두르지 마십시오</em> . 읽기에 유연하고 모듈화 된 코드와 시간과 에너지를 바꾸는 데 필요한 시간과 에너지, 그리고 최종적인 전반적인 이득 사이의 균형을 유지해야합니다. 기본적으로 손상되지 않은 경우 수정하지 말고 다음 프로젝트를 위해 여기서 배운 내용을 유지하십시오.</li>
   </ul>
-  <p>With that said, lets move on and look at some general tips for writing good GML code that you can apply at any time...</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Programming Style</span><span data-close-text="true">Programming Style</span></a></p>
+  <p>그렇게 말하면 언제든지 적용 할 수있는 좋은 GML 코드 작성을위한 일반적인 팁을 살펴 보겠습니다.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">프로그래밍 스타일</span> <span data-close-text="true">프로그래밍 스타일</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">When it comes to writing code everyone has a <em>style</em>. The style you program in is the way you place your brackets, how you indent the lines, and how you declare and name variables, etc., and is essential to making your code clear and readable
-      to other people (and to your future self, when you have to come back to this project after a time on something else).</p>
-    <p class="dropspot">There are many, many <a href="http://en.wikipedia.org/wiki/Programming_style">programming styles</a>, and some would argue that theirs is the best one to use, but the truth is that almost any style is fine as long as you are <strong>consistent </strong>when
-      using it and it is <em>clear </em>and <em>obvious </em>what everything is and does.</p>
-    <p class="dropspot"><img alt="Code Style Example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractice_Style_Example.png"/>The above image is an example of a function declaration in a script to illustrate the above points. You
-      can see that it uses the JSDoc style comments to clearly explain what it all does, and the coding style is consistent, with 4 space indents, underscores used for local vars, logged output, etc...</p>
-    <p class="dropspot">Also note that while the script editor permits you to fold code at each of the open/close brackets, you can use <span class="inline">#region</span> and <span class="inline">#endregion</span> tags to section off parts of your code and greatly enhance
-      readability, especially when dealing with larger scripts which contain multiple functions. Regions can be commented, too - see the Editing section of this page in the manual):</p>
-    <p class="dropspot"><img alt="Example Of Using Regions" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractice_Regions.png"/>When writing code, you should be aware that when compiling your final game, GameMaker Studio 2 strips out
-      comments, removes unnecessary line breaks and whitespace, substitutes in constant/macro/enum values, and generally compresses your code down as part of the process. This means that you can add as much whitespace around your code as required and
-      you don&#39;t need to worry about keeping your comments short or only using them sparingly.</p>
+    <p class="dropspot">코드 작성과 관련하여 모든 사람은 <em>스타일을</em> 갖습니다. 프로그래밍하는 스타일은 대괄호를 배치하는 방법, 줄을 들여 쓰는 방법, 변수를 선언하고 이름을 지정하는 방법 등이며 다른 사람들 (및 미래의 자아, 다른 일을 한 후에이 프로젝트로 돌아와야 할 때).</p>
+    <p class="dropspot">많은 <a href="http://en.wikipedia.org/wiki/Programming_style">프로그래밍 스타일이</a> 있으며, 일부는 자신의 <a href="http://en.wikipedia.org/wiki/Programming_style">스타일</a> 이 사용하기에 가장 적합하다고 주장하지만 실제로는 스타일을 사용할 때 <strong>일관성</strong> 이 있고 거의 모든 스타일이 <em>명확</em> 하고 <em>분명</em> 하다는 것이 거의 모든 스타일입니다. 그렇습니다.</p>
+    <p class="dropspot"><img alt="Code Style Example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractice_Style_Example.png"/>위의 이미지는 위의 요점을 설명하기 위해 스크립트에서 함수 선언의 예입니다. JSDoc 스타일 주석을 사용하여 모든 기능을 명확하게 설명하고 4 개의 공백 들여 쓰기, 로컬 vars에 사용되는 밑줄, 로그 출력 등으로 코딩 스타일이 일관성이 있음을 알 수 있습니다.</p>
+    <p class="dropspot">또한 스크립트 편집기를 사용하면 각 열기 / 닫기 대괄호에서 코드를 접을 수 있지만 <span class="inline">#region</span> 및 <span class="inline">#endregion</span> 태그를 사용하여 코드의 일부를 분리하고 가독성이 크게 향상됩니다. 특히 포함 된 더 큰 스크립트를 처리 할 때 여러 기능. 지역도 주석을 달 수 있습니다-매뉴얼에서이 페이지의 편집 섹션을 참조하십시오.</p>
+    <p class="dropspot"><img alt="Example Of Using Regions" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractice_Regions.png"/>코드를 작성할 때 GameMaker Studio 2는 최종 게임을 컴파일 할 때 주석을 제거하고 불필요한 줄 바꿈과 공백을 제거하며 상수 / 매크로 / 열거 형 값을 대체하며 일반적으로 프로세스의 일부로 코드를 압축합니다. 즉, 코드 주위에 필요한만큼 많은 공백을 추가 할 수 있으며 주석을 짧게 유지하거나 조금만 사용하는 것에 대해 걱정할 필요가 없습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Use Local Variables</span><span data-close-text="true">Use Local Variables</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">지역 변수 사용 지역 변수</span> <span data-close-text="true">사용</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Continuing on from the above point about programming style, one thing that a lot of beginners do is to cram as much into one line of code as possible. For example:</p>
+    <p class="dropspot">프로그래밍 스타일에 대한 위의 관점에서 계속해서, 많은 초보자들이 할 수있는 한 가지는 가능한 한 줄의 코드에 많은 양을 넣는 것입니다. 예를 들면 다음과 같습니다.</p>
     <p class="code">draw_sprite(sprite_index, image_index, x + lengthdir_x(100, point_direction(x, y, mouse_x, mouse_y)), y + lengthdir_y(100, point_direction(x, y, mouse_x, mouse_y)));</p>
-    <p class="dropspot">While not completely unreadable, it is inefficient (the <span class="inline">point_direction()</span> function is called twice, for example) and it is messy and awkward to look at. It would be far better expressed as:</p>
+    <p class="dropspot">완전히 읽을 수는 <span class="inline">없지만</span> 비효율적 <span class="inline">이며 (</span> 예를 들어 <span class="inline">point_direction ()</span> 함수가 두 번 호출 됨)보기가 어색하고 어색합니다. 다음과 같이 표현하는 것이 훨씬 나을 것입니다.</p>
     <p class="code">var p_dir = point_direction(x, y, mouse_x, mouse_y);<br/> var local_x = x + lengthdir_x(100, p_dir);<br/> var local_y = y + lengthdir_y(100, p_dir);<br/> draw_sprite(sprite_index, image_index, local_x, local_y);</p>
-    <p class="dropspot">The memory and resources required to create those local variables are negligible, and are far outweighed by the instant benefit you (or anyone else reading the code later) gets from its clarity. The same idea should be applied to functions too, where
-      you should assign sensible names to the input variables, and use clear formatting and local variables where required to make it as readable as possible.</p>
-    <p class="dropspot">Local variables are fast to process in-game, so make the most of them, and if an expression appears in a code block or script two or more times, think about creating a local variable for it. When using the <a class="tooltip" title="This is a special compiler for creating executable packages that use native code instead of interepreted code and a runner (wich is what the GameMaker VM compile uses). Compiled code is faster to run, but takes more time to compile the executable.">YoYo Compiler (YYC)</a> targets, if you reference <span class="inline">global</span> or instance variables various times in a function or code block it is particularly beneficial to assign them to a local variable at the start of your code
-      and then reference that local variable, as this will give much better performance.</p>
+    <p class="dropspot">이러한 지역 변수를 만드는 데 필요한 메모리와 리소스는 무시할 수 있으며 사용자 또는 나중에 코드를 읽는 다른 사람이 명확하게 얻는 즉각적인 이점으로 인해 훨씬 ​​중요합니다. 입력 변수에 현명한 이름을 할당하고 가능한 한 읽을 수 있도록 필요한 경우 명확한 서식과 로컬 변수를 사용해야하는 함수에도 동일한 아이디어를 적용해야합니다.</p>
+    <p class="dropspot">로컬 변수는 게임 내에서 빠르게 처리되므로 최대한 활용하십시오. 그리고 표현식이 코드 블록이나 스크립트에 두 번 이상 나타나면 로컬 변수를 만드는 것을 고려하십시오. <a class="tooltip" title="인터프리터 코드와 러너 대신 네이티브 코드를 사용하는 실행 가능 패키지를 만들기위한 특수 컴파일러입니다 (GameMaker VM 컴파일에서 사용하는 것임). 컴파일 된 코드는 실행 속도가 빠르지 만 실행 파일을 컴파일하는 데 시간이 더 걸립니다.">YoYo 컴파일러 (YYC)</a> 대상을 사용할 때 함수 또는 코드 블록에서 <span class="inline">전역</span> 또는 인스턴스 변수를 여러 번 참조하는 경우 코드 시작시 해당 변수를 로컬 변수에 할당 한 다음 해당 로컬 변수를 참조하는 것이 특히 유리합니다. 이것은 훨씬 더 나은 성능을 제공 할 것입니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Arrays</span><span data-close-text="true">Arrays</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">배열</span> <span data-close-text="true">배열</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><a href="../GameMaker_Language/GML_Overview/Arrays.htm">Arrays</a> are fast to use and require less memory than data-structures, but they can be optimised further still. When you create an array, memory is allocated to it based on its size, so you
-      should try to initialise an array to its maximum size first, even if you don&#39;t plan on filling it until later on. For example, if you know you need an array to hold a maximum of 100 values, you would initialise it to 100 slots straight away,
-      using the <a href="../GameMaker_Language/GML_Reference/Variable_Functions/array_create.htm"><span class="inline">array_create()</span></a> function:</p>
+    <p class="dropspot"><a href="../GameMaker_Language/GML_Overview/Arrays.htm">어레이</a> 는 사용이 빠르며 데이터 구조보다 적은 메모리를 필요로하지만 더 최적화 할 수 있습니다. 배열을 만들 때 메모리는 크기를 기준으로 메모리에 할당되므로 나중에 채우기를 계획하지 않더라도 먼저 배열을 최대 크기로 초기화해야합니다. 예를 들어, 최대 100 개의 값을 보유하기 위해 배열이 필요하다는 것을 <a href="../GameMaker_Language/GML_Reference/Variable_Functions/array_create.htm"><span class="inline">안다면 array_create ()</span></a> 함수를 사용하여 즉시 100 개의 슬롯으로 초기화합니다.</p>
     <p class="code">array = array_create(100, 0);</p>
-    <p class="dropspot">This allocates the memory for it in one &quot;chunk&quot; with all array values being set to the default value of 0 and helps keep things fast, as otherwise every time you add a new value to the array the entire memory has to be re-allocated again.</p>
-    <p class="note"><strong>NOTE</strong>: On the HTML5 target assigning arrays like this does not apply and your arrays should be initialised from 0 for this target! You can easily handle this by checking the os_browser variable, for example:</p>
+    <p class="dropspot">이렇게하면 모든 배열 값을 기본값 0으로 설정하여 하나의 &quot;청크&quot;에 메모리를 할당하고 배열에 새 값을 추가 할 때마다 전체 메모리를 다시 할당해야하므로 빠르게 유지하는 데 도움이됩니다. 다시.</p>
+    <p class="note"><strong>참고</strong> : HTML5 대상에서 이와 같은 배열 할당은 적용되지 않으며이 대상에 대해 배열을 0에서 초기화해야합니다! os_browser 변수를 확인하여이를 쉽게 처리 할 수 ​​있습니다. 예를 들면 다음과 같습니다.</p>
     <p class="code"><span style="padding-left:1px;">if (os_browser == browser_not_a_browser)<br/>
     {<br/>
     array_create(100, 0);<br/>
@@ -136,12 +123,10 @@ else<br/>
         array[i] = 0;<br/>
         }<br/>
     }</span></p>
-    <p class="dropspot">You can also free up the memory associated with an array by setting the variable used to equal 0. So, to clear the array from the code example above you would simply use:</p>
+    <p class="dropspot">사용 된 변수를 0으로 설정하여 배열과 관련된 메모리를 확보 할 수도 있습니다. 따라서 위의 코드 예제에서 배열을 지우려면 다음을 사용하면됩니다.</p>
     <p class="code">array = 0;</p>
-    <p class="dropspot">Also note that arrays are <strong>passed by reference</strong>, but will copy the whole thing when a change is made (this behaviour is called <strong>copy on write</strong>). So, if you pass an array to a function, you are passing a <em>reference </em>to
-      the original array and any values read from it will come from the original source. This is nice and fast, but if you need to modify any of the array values, the array itself is duplicated at the point of the write and any changes made <strong>need to be returned from the function or they will be lost</strong>.
-      This is much slower and consumes more memory, so be careful how you use arrays in functions.</p>
-    <p class="dropspot">However, you can avoid this copy on write behaviour by using the special array <a href="../GameMaker_Language/GML_Overview/Accessors.htm">accessor</a> <span class="inline">@</span>, as this gives direct access to the underlying array. For example:</p>
+    <p class="dropspot">또한 배열은 <strong>참조</strong> 로 <strong>전달</strong> 되지만 변경이 이루어질 때 전체 내용을 복사합니다 (이 동작을 <strong>복사시 복사</strong> 라고 함). 따라서 배열을 함수에 전달하면 원래 배열에 대한 <em>참조</em> 를 전달하고 읽은 값은 원래 소스에서 가져옵니다. 이것은 훌륭하고 빠르지 만 배열 값을 수정 해야하는 경우 쓰기 시점에서 배열 자체가 복제되며 변경 사항 <strong>이 함수에서 반환되어야</strong> 합니다. <strong>그렇지 않으면 손실됩니다</strong> . 속도가 훨씬 느리고 메모리를 많이 소비하므로 함수에서 배열을 사용하는 방법에주의하십시오.</p>
+    <p class="dropspot">그러나 기본 배열에 직접 액세스 할 수 있으므로 특수 배열 <a href="../GameMaker_Language/GML_Overview/Accessors.htm">접근 자</a> <span class="inline">@</span> 를 사용하여이 쓰기시 복사 동작을 피할 수 있습니다. 예를 들면 다음과 같습니다.</p>
     <p class="code">// Call a function, passing our array<br/> my_function(my_array);
     </p>
     <p class="code">// The function looks like this:<br/>
@@ -151,105 +136,75 @@ else<br/>
     </p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Data Structures</span><span data-close-text="true">Data Structures</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">데이터 구조</span> <span data-close-text="true">데이터 구조</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">In GameMaker Studio 2 <a href="../GameMaker_Language/GML_Reference/Data_Structures/Data_Structures.htm">data structures</a> have been optimised to be a lot faster than previous GameMaker versions. They still need to be cleaned up (destroyed) when
-      not used to free memory, and they can still be slower than, say, arrays, but the ease of use and the extra functions for dealing with the data they contain can often out-weigh the minimal speed difference, so don&#39;t be afraid to use them in your
-      games.</p>
-    <p class="dropspot">It should be noted that of all the data structures, DS Maps in particular are lighting fast, both to read from and write to, making them an excellent option for all types of tasks.</p>
-    <p class="dropspot">Previously we mentioned <a href="../GameMaker_Language/GML_Overview/Accessors.htm">accessors</a> for arrays, but they are also available for data structures, which can help clean up your code and make it much easier to read.</p>
+    <p class="dropspot">GameMaker Studio 2에서 <a href="../GameMaker_Language/GML_Reference/Data_Structures/Data_Structures.htm">데이터 구조</a> 는 이전 GameMaker 버전보다 훨씬 빠르게 최적화되었습니다. 메모리를 확보하는 데 사용되지 않을 때는 여전히 정리 (파기)해야하며, 어레이보다 속도가 느릴 수 있지만 사용 편의성 및 포함 된 데이터를 처리하기위한 추가 기능이 종종 초과 될 수 있습니다. 속도 차이가 최소이므로 게임에서 사용하는 것을 두려워하지 마십시오.</p>
+    <p class="dropspot">모든 데이터 구조 중에서 DS DS는 특히 빠르게 읽고 쓸 수있어 모든 유형의 작업에 탁월한 옵션입니다.</p>
+    <p class="dropspot">이전에는 배열에 대한 <a href="../GameMaker_Language/GML_Overview/Accessors.htm">접근</a> 자를 언급했지만 데이터 구조에도 사용 가능하므로 코드를 정리하고 훨씬 쉽게 읽을 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Collisions</span><span data-close-text="true">Collisions</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">충돌</span> <span data-close-text="true">충돌</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">There are <a href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/Collisions.htm">multiple ways to deal with collisions</a> in GameMaker Studio 2, and most of them come with a bit of extra CPU overhead attached. The <span class="inline">collision_</span>      and <span class="inline">point_</span> functions, <span class="inline">place_</span> functions, and <span class="inline">instance_</span> functions all rely on <a class="tooltip" title="For sprites, the bounding-box is the name given to the edges of the area that collisions will initially be detected in, and it doesn&#39;t have to be the same size as the sprite it&#39;s being applied to. For sequences, the bounding box is the outer edge of the total space that one or more assets occupy in the canvas.">bounding box</a> checks with
-      all instances of a given type within the room, and while there is some optimisation built in to the engine to limit these checks, collisions are never the most effecient thing to deal with. If you start to use precise collisions, performance will
-      also get noticably worse, as not only will you be doing bounding box checks, but you will also be doing per-pixel checks, which is very slow indeed. There is a YoYo Games tech blog that discusses this here:</p>
+    <p class="dropspot">GameMaker Studio 2에는 <a href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/Collisions.htm">여러 가지 방법으로 충돌을 처리 할 수</a> 있으며 대부분의 경우 약간의 추가 CPU 오버 헤드가 첨부되어 있습니다. <span class="inline">collision_</span> 및 <span class="inline">point_</span> 기능, <span class="inline">PLACE_</span> 기능 및 <span class="inline">instance_</span> 기능 모두에 의존 <a class="tooltip" title="스프라이트의 경우 경계 상자는 충돌이 처음 감지되는 영역의 가장자리에 지정된 이름이며 적용되는 스프라이트와 크기가 같지 않아도됩니다. 시퀀스의 경우 경계 상자는 하나 이상의 자산이 캔버스에서 차지하는 전체 공간의 바깥 쪽 가장자리입니다.">상자 경계</a> 방에서 특정 유형의 모든 인스턴스와 검사를하고, 이러한 검사를 제한하기 위해 엔진에 내장 약간의 최적화가 동시에 충돌이 가장 결코 처리하는 것이 효율적입니다. 정확한 충돌을 사용하기 시작하면 경계 상자 검사를 수행 할뿐만 아니라 픽셀 당 검사도 수행하므로 성능이 현저하게 떨어집니다. 이에 대한 내용은 YoYo Games 기술 블로그가 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="https://www.yoyogames.com/blog/32/the-hazards-of-precise-collision-detection">The Hazards Of Precise Collision Detection</a></li>
+      <li class="dropspot"><a href="https://www.yoyogames.com/blog/32/the-hazards-of-precise-collision-detection">정확한 충돌 감지의 위험</a></li>
     </ul>
-    <p class="dropspot">That is not to say that you shouldn&#39;t use these functions, as they can be very handy. However, you should know which ones to use and when, as they all work slightly differently and will have different speeds. Rough rule of thumb is that the
-      <span class="inline">place_</span> functions are faster than the <span class="inline">instance_</span> functions, which are faster than the <span class="inline">collision_</span> and <span class="inline">point_</span> functions, so read the pages in the manual for each
-        of these types of functions and make sure to choose the most appropriate for every situation.</p>
-    <p class="dropspot">Alternatively, look into creating a<strong> tile-based collision system</strong>, which can be created using the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">tilemap functions</a> or even
-      a custom 2D array or DS grid. These will be very fast and will help boost your game&#39;s speed. However, if you are using irregular terrain or walls and objects that don&#39;t align to a grid they may not be appropriate. You can find a very simple
-      tutorial on tilemap collisions from the following video link</p>
+    <p class="dropspot">즉, 이러한 기능은 매우 유용 할 수 있으므로 사용해서는 안된다는 것은 아닙니다. 그러나 사용하는 시간과 사용 시간이 모두 약간 씩 다르고 속도가 다를 수 있으므로 사용해야합니다. 대략적인 규칙은 <span class="inline">place_</span> 함수가 <span class="inline">충돌</span> 함수 및 <span class="inline">point_</span> 함수보다 빠른 <span class="inline">instance_</span> 함수보다 빠르므로 이러한 각 유형의 함수에 대한 매뉴얼 페이지를 읽고 모든 것에 가장 적합한 것을 선택하십시오 상태.</p>
+    <p class="dropspot">또는 <strong>타일 ​​기반 충돌 시스템을</strong> 만들어 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">타일 ​​맵 기능</a> 이나 사용자 지정 2D 배열 또는 DS 그리드를 사용하여 만들 수도 있습니다. 이것들은 매우 빠르며 게임 속도를 높이는 데 도움이됩니다. 그러나 불규칙한 지형이나 벽 및 그리드에 정렬되지 않은 물체를 사용하는 경우 적절하지 않을 수 있습니다. 다음 비디오 링크에서 타일 맵 충돌에 대한 매우 간단한 자습서를 찾을 수 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="https://youtu.be/UyKdQQ3UR_0">Tile Collisions In GameMaker Studio 2</a></li>
+      <li class="dropspot"><a href="https://youtu.be/UyKdQQ3UR_0">GameMaker Studio 2의 타일 충돌</a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Texture Swaps And Vertex Batches</span><span data-close-text="true">Texture Swaps And Vertex Batches</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">텍스처 스왑 및 정점 배치</span> <span data-close-text="true">텍스처 스왑 및 정점 배치</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">If you switch on the <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_overlay.htm"><strong>debug overlay</strong></a>, you will see that there are two figures in brackets at the top of your screen when testing. The first is the number
-      of <strong>texture swaps </strong>being done and the second is the number of <strong>vertex batches</strong>. A number of factors will influence these figures and you will never get them down to (0) (0) as the engine requires one or two of each
-      every step, but you should aim to get these values down as low as possible.</p>
-    <p class="dropspot"><img alt="The Debug Overlay Bar" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractices_DebugOverlay.png"/>For texture swaps, the best and most efficient way to do this is to optimise how your sprites and backgrounds
-      are stored on the texture page. This is done from the <a href="../The_Asset_Editors/Sprites.htm">sprite properties</a>, and you can create texture pages in the <a href="../Settings/Texture_Groups.htm">Texture Group Editor</a>. If you have a number
-      of images that are only used in the main menu (for example), then put them together on a separate <a href="../Settings/Texture_Information/Texture_Pages.htm">texture page</a>. The same if you have level-specific images, or the player and the enemies,
-      etc. Basically, you want to group them by use so that the swaps are reduced as much as possible. Additionally, to help keep <a class="tooltip" title="VRAM is the amount of memory available for video, ie: the memory space that can store textures and images.">VRAM</a> optimised you can then use the different <a href="../GameMaker_Language/GML_Reference/Drawing/Textures/Textures.htm">prefetch and flush</a>      functions to load and remove textures from memory as required.</p>
-    <p class="note"><strong>NOTE</strong>: As mentioned at the start of this page, if your game runs fine with a decent FPS then don&#39;t worry too much about texture swaps... especially when creating projects on the desktop targets. These optimisations are best when
-      used with large games or on low-end mobile devices, and when used incorrectly can they actually negatively impact performance.</p>
-    <p class="dropspot">Vertex information is sent in &quot;batches&quot; to the GPU for drawing, and in general the larger the batch the better. So &quot;breaking&quot; the batch should be avoided when drawing, as that will increase the number of vertex batches sent to
-      the GPU. There are a number of things that will break the batch, with the main ones being <strong>blend modes</strong>, setting the <strong>draw colour</strong>, setting the <strong>draw alpha</strong>, and drawing using the built in shapes and
-      primitives.</p>
-    <p class="dropspot">So, if you have a number of bullet instances that draw using the <span class="inline">bm_add</span> blend mode - for example - you will be creating a new vertex batch for each one, which is definitely a bad thing! Instead, have a controller object
-      in your game that draws all the bullets instead, like this:</p>
+    <p class="dropspot"><a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_overlay.htm"><strong>디버그 오버레이</strong></a> 를 켜면 테스트 할 때 화면 상단에 괄호 안에 두 개의 숫자가있는 것을 볼 수 있습니다. 첫 번째는 수행되는 <strong>텍스처 스왑</strong> 수이고 두 번째는 <strong>정점 배치</strong> 수입니다. 많은 요소들이 이러한 수치에 영향을 미치며 엔진이 각 단계마다 하나 또는 두 개의 단계를 요구하므로 절대로 (0) (0)으로 떨어지지 않지만 가능한 한 낮은 값을 낮추는 것을 목표로해야합니다.</p>
+    <p class="dropspot"><img alt="The Debug Overlay Bar" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BestPractices_DebugOverlay.png"/>텍스처 스왑의 경우 가장 효율적이고 효과적인 방법은 텍스처 페이지에 스프라이트와 배경이 저장되는 방식을 최적화하는 것입니다. 이것은 <a href="../The_Asset_Editors/Sprites.htm">스프라이트 속성</a> 에서 이루어지며, <a href="../Settings/Texture_Groups.htm">Texture Group Editor</a> 에서 텍스쳐 페이지를 생성 할 수 있습니다. 주 메뉴에서만 사용되는 이미지가 여러 개인 경우 (예를 들어) 별도의 <a href="../Settings/Texture_Information/Texture_Pages.htm">텍스처 페이지</a> 에 함께 배치 <a href="../Settings/Texture_Information/Texture_Pages.htm">하십시오</a> . 레벨 별 이미지 또는 플레이어와 적 등이있는 경우에도 동일합니다. 기본적으로 스왑이 가능한 한 많이 줄어들도록 사용별로 그룹화하려고합니다. 또한 <a class="tooltip" title="VRAM은 비디오에 사용 가능한 메모리의 양입니다. 즉, 텍스처와 이미지를 저장할 수있는 메모리 공간입니다.">VRAM을</a> 최적화 된 상태로 유지하려면 다른 <a href="../GameMaker_Language/GML_Reference/Drawing/Textures/Textures.htm">프리 페치 및 플러시</a> 기능을 사용하여 필요에 따라 메모리에서 텍스처를로드하고 제거 할 수 있습니다.</p>
+    <p class="note"><strong>참고</strong> :이 페이지의 시작 부분에서 언급했듯이, 적절한 FPS로 게임이 제대로 실행되면 텍스처 스왑에 대해 너무 걱정하지 마십시오. 특히 데스크탑 대상에서 프로젝트를 만들 때. 이러한 최적화는 대형 게임이나 저가형 모바일 장치와 함께 사용할 때 가장 적합하며 잘못 사용하면 실제로 성능에 부정적인 영향을 줄 수 있습니다.</p>
+    <p class="dropspot">정점 정보는 드로잉을 위해 &quot;배치&quot;로 GPU에 전송되며 일반적으로 배치가 클수록 더 좋습니다. 따라서 GPU에 전송되는 정점 배치 수가 증가하기 때문에 배치를 &quot;파손&quot;하는 것은 피해야합니다. 배치를 깨뜨리는 많은 것들이 있으며, 주요 것은 <strong>블렌드 모드</strong> , <strong>그리기 색상</strong> 설정, <strong>그리기 알파</strong> 설정 및 내장 모양과 기본 요소를 사용하여 그리기입니다.</p>
+    <p class="dropspot">예를 들어 <span class="inline">bm_add</span> 블렌드 모드를 사용하여 여러 개의 글 머리 기호 인스턴스를 그리는 경우 각 버텍스 배치를 새로 만들 것입니다. 대신 게임에 다음과 같이 총알을 대신 그리는 컨트롤러 객체를 두십시오.</p>
     <p class="code">gpu_set_blendmode(bm_add);<br/> with (obj_BULLET)<br/>     {<br/>     draw_self();<br/>     }<br/> gpu_set_blendmode(bm_normal);
     </p>
-    <p class="note"><strong>NOTE</strong>: This doesn&#39;t just apply to using <span class="inline" style="font-size: 14px">bm_add</span> - any blending change will break the batch and will give a performance hit.</p>
-    <p class="dropspot">In this way, all the bullets will be drawn in the same batch. This method can be applied to alpha and draw colour too, and in fact judicious use of the functions <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendenable.htm"><span class="inline">gpu_set_blendenable()</span></a>,
-      <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a>, and <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a> can
-      greatly improve performance and can be enabled/disabled as required throughout your project code, although they may not be appropriate for all types of graphics or projects.</p>
-    <p class="note"><strong>NOTE</strong>: If you don&#39;t require the instance to draw itself when using a controller in this way then you can simply add a comment into the Draw Event to suppress the default drawing, or make the instance invisible (although this will
-      prevent all code running for the instance in all draw events).</p>
-    <p class="dropspot">Another way to reduce these numbers is to disable the <strong>Separate Texture Page</strong> option for sprites unless absolutely necessary. Each image stored in this way is sent to its own texture page and batched differently, so having these images
-      on a regular texture page is better. You can then get the UVS coordinates using the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm"><span class="inline">sprite_get_uvs()</span></a> function
-      and store them in variables for use later. It may be a small amount of extra code, but the boost you will get is worth it. Note that this method will not permit texture repeats!</p>
-    <p class="dropspot">As with all these tips, if it makes your life more difficult to change it and your game runs fine, don&#39;t worry about it too much...</p>
+    <p class="note"><strong>참고</strong> : 이것은 <span class="inline" style="font-size: 14px">bm_add</span> 사용에만 적용되는 것은 아닙니다. 혼합 변경으로 인해 배치가 중단되고 성능이 저하됩니다.</p>
+    <p class="dropspot">이러한 방식으로 모든 글 머리 기호가 동일한 배치로 그려집니다. 이 메소드는 알파 및 그리기 색상에도 적용 할 수 있으며 실제로 <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendenable.htm"><span class="inline">gpu_set_blendenable ()</span></a> , <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref ()</span></a> 및 <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable ()</span></a> 함수를 신중하게 사용하면 성능을 크게 향상시키고 프로젝트 코드 전체에서 필요에 따라 활성화 / 비활성화 할 수 있습니다. 모든 유형의 그래픽 또는 프로젝트에 적합하지 않을 수 있습니다.</p>
+    <p class="note"><strong>참고</strong> :이 방법으로 컨트롤러를 사용할 때 인스턴스 자체를 그릴 필요가 없으면 Draw Event에 주석을 추가하여 기본 드로잉을 억제하거나 인스턴스를 보이지 않게 할 수 있습니다 (모든 코드가 실행되지는 않지만) 모든 드로우 이벤트의 인스턴스).</p>
+    <p class="dropspot">이 수를 줄이는 또 다른 방법은 꼭 필요한 경우가 아니라면 스프라이트에 대해 <strong>별도의 텍스처 페이지</strong> 옵션을 비활성화하는 것입니다. 이러한 방식으로 저장된 각 이미지는 자체 텍스처 페이지로 전송되고 다르게 배치되므로 이러한 이미지를 일반 텍스처 페이지에 배치하는 것이 좋습니다. 그런 다음 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm"><span class="inline">sprite_get_uvs ()</span></a> 함수를 사용하여 UVS 좌표를 가져 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm"><span class="inline">와서</span></a> 나중에 사용할 수 있도록 변수에 저장할 수 있습니다. 적은 양의 추가 코드 일 수도 있지만 얻을 수있는 부스트는 그만한 가치가 있습니다. 이 방법은 텍스처 반복을 허용하지 않습니다!</p>
+    <p class="dropspot">이 모든 팁과 마찬가지로 인생을 바꾸기가 더 어려워지고 게임이 제대로 실행된다면 너무 걱정하지 마십시오 ...</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Particles</span><span data-close-text="true">Particles</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">입자</span> <span data-close-text="true">입자</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot"><a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">Particles</a> offer a very quick and efficient way to create dynamic effects in your game, and in general they give good performance. However, it&#39;s worth noting that
-      using additive blending, alpha blending and colour blending on the particles may lower that performance, especially on mobile targets, so if you don&#39;t need it don&#39;t use it! Additive blending, in particular, can greatly increase the vertex
-      batches and should be used with care.</p>
-    <p class="dropspot">Note that on the non-WebGL HTML5 target, having multi-coloured, fading particles will require a lot of image caching and will be very slow. However, since particle sprites can be animated, you can create an animated sprite that has sub-images which
-      change colour and then use that for the particle instead. It will still look like a gradual colour change, but not require the constant creation of cache images.</p>
-    <p class="dropspot">You can find out more about particles from the page <a href="Guide_To_Using_Particles.htm">Guide To Using Particles</a>.</p>
+    <p class="dropspot"><a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">파티클</a> 은 게임에서 동적 효과를 만드는 매우 빠르고 효율적인 방법을 제공하며 일반적으로 우수한 성능을 제공합니다. 그러나 입자에 첨가제 블렌딩, 알파 블렌딩 및 색상 블렌딩을 사용하면 특히 모바일 대상에서 성능이 저하 될 수 있으므로 필요하지 않은 경우에는 사용하지 마십시오. 특히 첨가제 혼합은 정점 배치를 크게 증가시킬 수 있으므로주의해서 사용해야합니다.</p>
+    <p class="dropspot">WebGL이 아닌 HTML5 대상에서 여러 가지 색의 페이딩 입자가 있으면 많은 이미지 캐싱이 필요하고 매우 느립니다. 그러나 파티클 스프라이트를 애니메이션으로 만들 수 있으므로 색상이 변하는 하위 이미지가있는 애니메이션 스프라이트를 생성 한 다음 대신 파티클에 사용할 수 있습니다. 여전히 점진적인 색상 변경처럼 보이지만 지속적으로 캐시 이미지를 만들 필요는 없습니다.</p>
+    <p class="dropspot"><a href="Guide_To_Using_Particles.htm">파티클 사용 안내서</a> 페이지에서 파티클에 대한 자세한 내용을 확인할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Surfaces</span><span data-close-text="true">Surfaces</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">표면</span> <span data-close-text="true">표면</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">Finally, we&#39;re going to touch briefly on using <a href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/Surfaces.htm">surfaces</a>, as GameMaker Studio 2 has a fairly significant optimisation when using them in your games: the ability to
-      switch on and off the <strong>depth buffer</strong>.</p>
-    <p class="dropspot">When you just use surfaces as normal, GMS2 will actually create a surface and an accompanying depth buffer to ensure proper depth sorting when drawing anything in 3D. However, for most 2D games, this extra depth buffer is just not required and so
-      is taking up extra memory space and processing time that could be used for other things. This is where the function <a href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/surface_depth_disable.htm"><span class="inline">surface_depth_disable()</span></a> comes
-      into play...</p>
-    <p class="dropspot">This function can be called before you create a surface to disable the depth buffer generation, and all surfaces created afterwards will not have a depth buffer created for them. You can enable/disable this function as required, and can even call
-      it once at the start of the game to disable depth buffers for all subsequent surface calls (and in most 2D games this is fine). It won&#39;t give a major performance boost, but it&#39;s certainly something to keep in mind if your game relies heavily
-      on surfaces and might stop your game running out of memory on lower-specced devices.</p>
+    <p class="dropspot">마지막으로 GameMaker Studio 2는 게임에서 <a href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/Surfaces.htm">표면</a> <strong>버퍼를 사용할</strong> 때 <strong>깊이 버퍼를</strong> 켜고 끄는 기능과 같이 상당히 최적화되어 있으므로 Surface 사용에 대해 간략히 살펴 보겠습니다.</p>
+    <p class="dropspot">서피스를 정상적으로 사용하면 GMS2는 실제로 서피스와 함께 수심 버퍼를 만들어 3D로 무언가를 그릴 때 적절한 심도 정렬을 보장합니다. 그러나 대부분의 2D 게임의 경우이 추가 깊이 버퍼는 필요하지 않으므로 다른 용도로 사용할 수있는 추가 메모리 공간과 처리 시간이 필요합니다. 이것은 <a href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/surface_depth_disable.htm"><span class="inline">surface_depth_disable ()</span></a> 함수가 작동하는 곳입니다 ...</p>
+    <p class="dropspot">깊이 버퍼 생성을 비활성화하기 위해 표면을 생성하기 전에이 함수를 호출 할 수 있으며 이후에 생성 된 모든 표면에는 깊이 버퍼가 생성되지 않습니다. 필요에 따라이 기능을 활성화 / 비활성화 할 수 있으며, 게임 시작시 한 번만 호출하여 모든 후속 표면 호출에 대한 깊이 버퍼를 비활성화 할 수도 있습니다 (대부분의 2D 게임에서는 괜찮습니다). 성능이 크게 향상되지는 않지만 게임이 표면에 크게 의존하고 낮은 사양의 장치에서 게임의 메모리 부족을 막을 수있는 경우 반드시 명심해야합니다.</p>
   </div>
   <p> </p>
-  <p>Apart from the main things mentioned above, there are other more general things that can help with performance and that are considered &quot;good practices&quot; too:</p>
+  <p>위에서 언급 한 주요 사항 외에도 성능에 도움이되고 &quot;좋은 방법&quot;으로 간주되는 다른 일반적인 사항이 있습니다.</p>
   <ul class="colour">
-    <li>don&#39;t be afraid to use the trigonometric functions as (contrary to popular belief) they are pretty fast, especially when compared to particles, collisions, strings, etc...</li>
-    <li>don&#39;t put code that is not for drawing things in the Draw events</li>
-    <li>use an alarm to call any code that doesn&#39;t have to be called every step (rather than just adding this into the Step event anyway)</li>
+    <li>특히 입자, 충돌, 줄 등과 비교할 때 삼각 함수를 사용하는 것을 두려워하지 마십시오 (일반적인 생각과 달리).</li>
+    <li>Draw 이벤트에 그림을 그리는 것이 아닌 코드를 넣지 마십시오</li>
+    <li>알람을 사용하여 단계 이벤트에 추가하지 않고 모든 단계에서 호출 할 필요가없는 코드를 호출하십시오.</li>
   </ul>
-  <p>But, as we mentioned at the start of the page, all these optimisations are optional and if your game runs fine with 60 vertex batches, 80 texture swaps, additive blending, etc., then don&#39;t worry about it too much! Just keep these things in mind
-    when programming your next game...</p>
+  <p>그러나 페이지 시작 부분에서 언급했듯이 이러한 모든 최적화는 선택 사항이며 60 버텍스 배치, 80 텍스처 스왑, 첨가제 블렌딩 등으로 게임이 제대로 실행되면 너무 걱정하지 마십시오! 다음 게임을 프로그래밍 할 때이 점을 명심하십시오 ...</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Additional_Information/Best_Practices_When_Programming.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="The_File_System.htm">The File System</a></div>
+        <div style="float:left">목록: <a href="Additional_Information.htm">추가 정보</a></div>
+        <div style="float:right">다음: <a href="The_File_System.htm">파일 시스템</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Nest Practices
@@ -258,4 +213,4 @@ Nest Practices
 best_practices
 -->
 
-</body></html>
+</body></html> 

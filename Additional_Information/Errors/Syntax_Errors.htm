@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Syntax Errors">
-        <span>Syntax Errors</span>
+        <span>구문 오류</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,247 +80,238 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Syntax Errors</h1>
-  <p>The first level of error reporting when programming your games in GameMaker Studio 2 is in the code or DnD™ editor, and it&#39;s the <a class="tooltip" title="Similar to human languages, programming languages have their own set of rules on how statements can be conveyed, and this set of rules is known as the syntax. While a number of programming languages share many features, functions, and capabilities, they generally differ in syntax. Without the proper use of syntax, one cannot write an executable program, and wrong syntax will lead to errors when compiling.">syntax</a> checker. As you right your code - or add your actions
-    - GameMaker will check that it follows the established syntax for the language, and flag any issues that it finds so you can fix them before it comes to running the game or compiling an executable.</p>
-  <p><img alt="Syntax Errors Example" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Errors_Syntax_Example.png"/>These errors fall into two main categories:</p>
+  <h1>구문 오류</h1>
+  <p>GameMaker Studio 2에서 게임을 프로그래밍 할 때 첫 번째 수준의 오류보고는 코드 또는 DnD ™ 편집기에 있으며 <a class="tooltip" title="휴먼 언어와 유사하게 프로그래밍 언어에는 명령문 전달 방법에 대한 고유 한 규칙 세트가 있으며이 규칙 세트를 구문이라고합니다. 많은 프로그래밍 언어가 많은 특징, 기능 및 기능을 공유하지만 일반적으로 구문이 다릅니다. 구문을 올바르게 사용하지 않으면 실행 프로그램을 작성할 수 없으며 구문이 잘못되면 컴파일시 오류가 발생합니다.">구문</a> 검사기입니다. 코드를 올바르게 작성하거나 작업을 추가하면 GameMaker는 해당 언어에 대해 설정된 구문을 따르는 지 확인하고 찾은 문제를 표시하여 게임을 실행하거나 실행 파일을 컴파일하기 전에 해결할 수 있도록합니다.</p>
+  <p><img alt="Syntax Errors Example" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Errors_Syntax_Example.png"/>이러한 오류는 두 가지 주요 범주로 분류됩니다.</p>
   <ul class="colour">
-    <li><img alt="Syntax Warning Icon" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png"/> <strong>Warnings</strong>: These are shown for things that may be an error, but may not be, and probably won&#39;t stop
-      the game from compiling, but might provoke runtime errors. The most common causes of these warnings is when a variable is used in an expression and it hasn&#39;t been defined yet anywhere else, or when a variable has been defined but hasn&#39;t
-      been used.</li>
-    <li><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/> <strong>Errors</strong>: These are problems that will not permit the game to compile, let alone run.
-      These should be fixed before doing anything further with the code. The table below shows the most common causes of these.</li>
+    <li><strong>경고</strong> : 오류 일 수 있지만 게임 컴파일을 중지하지는 않지만 런타임 오류를 유발할 수있는 항목에 대해 표시됩니다. 이러한 경고의 가장 일반적인 원인은 변수가 식에 사용되고 변수가 아직 다른 곳에 정의되지 않았거나 변수가 정의되었지만 사용되지 않은 경우입니다.</li>
+    <li><strong>오류</strong> : 게임을 컴파일 할 수없는 문제입니다. 코드로 더 진행하기 전에 수정해야합니다. 아래 표는 가장 일반적인 원인을 보여줍니다.</li>
   </ul>
-  <p>Syntax errors will update as you write your code (there will be a short pause between typing something and any errors appearing in this window to prevent errors being reported for unfinished code), and will follow the format:</p>
+  <p>코드를 작성할 때 구문 오류가 업데이트되며 (완료되지 않은 코드에 대해 오류가보고되지 않도록하기 위해이 창에 표시되는 오류와 오류를 입력하는 사이에 약간의 일시 정지가 있음) 형식을 따릅니다.</p>
   <p class="code">[object] - [event] - [Line Number] - [Position In Line]: [error string]</p>
-  <p>Or if the error is in a script, it will be:</p>
+  <p>또는 오류가 스크립트에 있으면 다음과 같습니다.</p>
   <p class="code">[script] - [Line Number] - [Position in line]: [error string]</p>
-  <p>Double clicking <img alt="Icon LMB" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on any of the errors shown in the output console will take you to the line in the object event or script that has the error so you
-    can edit it.</p>
-  <p>It should be noted that some of these errors will be shown at specific places in your code, but the actual error may be cause by something elsewhere, or one single issue may provoke multiple error messages:</p>
-  <p><img alt="Multiple Syntax Errors" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_MultipleSyntaxErrors.png"/>In the above image, all three <img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/> errors have been provoked  by a single mistake - the use of a semi colon &quot;<span class="inline">;</span>&quot; instead of a comma &quot;<span class="inline">,</span>&quot; at line 220 for the function <span class="inline">variable_instance_exists()</span>.</p>
-  <p>The table below lists the different syntax errors and their main causes:</p>
+  <p>더블 클릭 출력 콘솔에 표시된 오류 중 하나에서 오류가있는 개체 이벤트 또는 스크립트의 행으로 이동하여 편집 할 수 있습니다.</p>
+  <p>이러한 오류 중 일부는 코드의 특정 위치에 표시되지만 실제 오류는 다른 곳에서 발생하거나 한 번의 문제로 여러 오류 메시지가 발생할 수 있습니다.</p>
+  <p><img alt="Multiple Syntax Errors" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_MultipleSyntaxErrors.png"/>위 이미지에서 세 가지 모두 오류가 하나의 실수로 자극 한 - 세미 콜론의 사용 <span class="inline">&quot;;&quot;대신</span> 콤마 <span class="inline"><span class="inline">&quot;,&quot;variable_instance_exists</span> ()</span> 함수에 대한 선 (220)에.</p>
+  <p>아래 표에는 다양한 구문 오류와 주요 원인이 나와 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Error</th>
-        <th> Type </th>
-        <th>Description</th>
+        <th>오류</th>
+        <th>유형</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Malformed reference [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This means there is an internal AST Validation Error (you should never see this error, but if you do please consider filing a bug report from the <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">Help Menu</a>) </td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 참조 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 내부 AST 유효성 검사 오류가 있음을 의미합니다 (이 오류는 표시되지 않아야하지만 <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">도움말 메뉴</a> 에서 버그 보고서 제출을 고려하십시오).</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Malformed hexadecimal character escape sequence </td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This can happen when you have used the hexadecimal value for an escape character in a string and this has the wrong format.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 16 진수 문자 이스케이프 시퀀스</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">문자열에서 이스케이프 문자에 16 진수 값을 사용했는데 형식이 잘못되었을 때 발생할 수 있습니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unexpected node [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This means there is an internal AST Validation Error (you should never see this error, but if you do please consider filing a bug report from the <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">Help Menu</a>) </td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">예기치 않은 노드 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 내부 AST 유효성 검사 오류가 있음을 의미합니다 (이 오류는 표시되지 않아야하지만 <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">도움말 메뉴</a> 에서 버그 보고서 제출을 고려하십시오).</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Exception while parsing [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This means there is an internal AST Validation Error (you should never see this error, but if you do please consider filing a bug report from the <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">Help Menu</a>) </td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">구문 분석 중 예외 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 내부 AST 유효성 검사 오류가 있음을 의미합니다 (이 오류는 표시되지 않아야하지만 <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">도움말 메뉴</a> 에서 버그 보고서 제출을 고려하십시오).</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Malformed id reference [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> </td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 ID 참조 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"></td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unnecessary expression [val] used as a statement</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error occurs when the syntax checker detects an expression (shown in [val]) where it was expecting a statement. For example, the following code will throw the error as it&#39;s expecting the ternary operator ? but encounters 32:<br/>
-          <span class="inline">temp_x = x &lt; (room_width / 2)  32: room_width - 32;</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">불필요한 표현 [val]을 문장으로 사용</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 구문 검사기가 명령문을 예상 한 표현식 ([val]으로 표시)을 감지 할 때 발생합니다. 예를 들어, 다음 코드는 삼항 연산자? 32와 만남 : <span class="inline">temp_x = x &lt;(room_width / 2) 32 : room_width-32;</span></td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Malformed array reference [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This means you have tried to reference an array in an incorrect way, and [val] will show the reference.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 배열 참조 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">즉, 잘못된 방식으로 배열을 참조하려고 시도했으며 [val]이 참조를 표시합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unexpected binary operator [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error occurs when you use one of the bitwise operators in a place where it shouldn&#39;t be getting used, with [val] showing where.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">예기치 않은 이진 연산자 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 비트 연산자 중 하나를 사용하지 않아야하는 위치에서 [val]과 함께 사용하면 발생합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unterminated string literal</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error will occur when you open a string using <span class="inline">@“</span> or <span class="inline">“</span> but you do not close it before the end of code.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">종료되지 않은 문자열 리터럴</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">당신이 사용하는 문자열을 열 때이 오류가 <span class="inline">â € œ</span> 또는 <span class="inline">â € œ</span> <span class="inline">@</span> 발생하지만 당신은 가까운 그 코드가 끝나기 전에하지 않습니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Single quotes no longer allowed for string</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error occurs when you try to use strings wrapped in single quotes, eg: &#39;Hello World&#39;, instead of double quotes, eg: &quot;Hello World&quot;.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">작은 따옴표는 더 이상 문자열에 허용되지 않습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 작은 따옴표로 묶은 문자열 (예 : &quot;Hello World&quot;)과 같이 큰 따옴표 대신 &#39;Hello World&#39;를 사용하려고 할 때 발생합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unexpected syntax error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error denotes a syntax error which the parser is not able to identify more specifically.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">예기치 않은 구문 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 구문 분석기가 더 구체적으로 식별 할 수없는 구문 오류를 나타냅니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Got &quot;[val1]&quot;, expected &quot;[val2]&quot;</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This happens when the syntax checker expects some value or symbol but gets a different one, where [val1] is the current symbol or value, and [val2] is the expected symbol or value. For example:<br/>
-          <span class="inline">Got &quot;{&quot;, expected &quot;(&quot;</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">&quot;[val1]&quot;, 예상되는 &quot;[val2]&quot;</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">구문 검사기에서 일부 값 또는 기호가 필요하지만 다른 값을 가져 오는 경우에 발생합니다. 여기서 [val1]은 현재 기호 또는 값이고 [val2]는 예상되는 기호 또는 값입니다. 예 : <span class="inline">&quot;{&quot;, 예상 &quot;(&quot;</span></td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Got &quot;[val1]&quot;, expected &quot;[val2]&quot; or &quot;[val3]&quot;</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">As above, but for when there are multiple possible expected symbols.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">&quot;[val1]&quot;, 예상되는 &quot;[val2]&quot;또는 &quot;[val3]&quot;</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">위와 같지만 가능한 여러 예상 기호가있는 경우에 해당합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Expected expression</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error occurs when the syntax checker expects an expression but one isn&#39;t given.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">예상 표현</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 구문 검사기에서 표현식이 필요하지만 표현식이 제공되지 않을 때 발생합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Empty [val] statement</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This happens when you terminate a statement and leave it empty. For example, the following code will give the error (note the terminating semi-colon):<br/>
-          <span class="inline">if (x &lt; 0);</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">빈 [val] 문</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이것은 명령문을 종료하고 비워두면 발생합니다. 예를 들어, 다음 코드는 오류를 표시합니다 (종료 세미콜론에주의). <span class="inline">if (x &lt;0);</span></td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Nested function calls are not allowed</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This can happen when you are trying to nest function calls within a statement, eg:<br/>
-          <span class="inline">ds_list_find_value(list, 0)).sprite_index</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">중첩 함수 호출은 허용되지 않습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 명령문 내에 함수 호출을 중첩하려고 할 때 발생할 수 있습니다 <span class="inline">(</span> 예 : <span class="inline">ds_list_find_value (list, 0)). sprite_index</span></td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Use of [val] is not allowed in GameMaker Studio 2 Trial</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This message means that the funciton or symbol shown for [val] is not available for use under the Trial Licence for GameMaker Studio 2.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">GameMaker Studio 2 평가판에서는 [val]을 사용할 수 없습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 메시지는 [val]에 표시된 기능 또는 기호를 GameMaker Studio 2 평가판 라이센스에서 사용할 수 없음을 의미합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Number of arguments for function [val1] expected [val2] got val[3]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error tells you that you have not supplied the corect number of arguments to the funtion shown for [val1], which expects the number shown in [val2] but got those shown in [val3].</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">함수 [val1]에 대한 인수 개수 [val2]에 val [3]이 (가) 있습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 [val1]에 표시된 함수에 핵심 인수 수를 제공하지 않았으며 [val2]에 표시된 숫자를 예상하지만 [val3]에 표시된 숫자를 얻었음을 나타냅니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Number of arguments for function [val1] expected [val2] - [val3] got [val4]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">As above only for a range of arguments.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">함수 [val1]에 대한 인수 수가 예상 됨 [val2]-[val3]에 [val4]가 있음</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">위와 같이 다양한 인수에 대해서만 가능합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Duplicate enum entry found</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error tells you that you have duplicated an enum variable entry name </td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">중복 된 열거 형 항목을 찾았습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 열거 형 변수 항목 이름을 복제했음을 나타냅니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Duplicate enum found</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error tells you that you have defined two or more enums with the same name.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">중복 열거가 발견되었습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 이름이 같은 열거 형을 두 개 이상 정의했음을 나타냅니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Missing variable name in globalvar</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This tells you that you have used the <span class="inline">globalvar</span> declaration but omitted to supply a variable name.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">globalvar에 변수 이름이 없습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이것은 <span class="inline">globalvar</span> 선언을 사용했지만 변수 이름을 제공하기 위해 생략 <span class="inline">했음을 나타냅니다</span> .</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Missing variable name in var</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This tells you that you have used the <span class="inline">var</span> declaration but omitted to supply a variable name.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">var에 변수 이름이 없습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이것은 <span class="inline">var</span> 선언을 사용했지만 변수 이름을 제공하기 위해 생략되었음을 나타냅니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">No matching #region found for #endregion</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error means you have declared an end region in your code, without defining a start region.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">#endregion에 해당하는 #region이 없습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 시작 영역을 정의하지 않고 코드에서 끝 영역을 선언했음을 의미합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unclosed #region found at end of script</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error means you have declared a region somewhere in the code but have not defined an end region anywhere for it.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">스크립트 끝에서 닫히지 않은 #region 발견</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 코드 어딘가에 영역을 선언했지만 끝 영역을 정의하지 않았다는 의미입니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unexpected terminal operator [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This means there is an internal AST Validation Error (you should never see this error, but if you do please consider filing a bug report from the <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">Help Menu</a>) </td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">예기치 않은 터미널 연산자 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 내부 AST 유효성 검사 오류가 있음을 의미합니다 (이 오류는 표시되지 않아야하지만 <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">도움말 메뉴</a> 에서 버그 보고서 제출을 고려하십시오).</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unexpected unary operator [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This happens when a unary operator (like +, -, =, etc...) has been found in your code at a place when it isn&#39;t expected, where [val] will show you the operator.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">예기치 않은 단항 연산자 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">예상치 못한 장소에서 코드에 단항 연산자 (예 : +,-, = 등 ...)가 발견되면 발생합니다. 여기서 [val]은 연산자를 표시합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unexpected ternary operator [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error means you have used one of the parts of the ternary operator incorrectly somewhere in your code, where [val] shows the part that is in error.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">예기치 않은 삼항 연산자 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 코드 어딘가에 삼항 연산자의 일부 중 하나를 잘못 사용했음을 의미합니다. 여기서 [val]은 오류가있는 부분을 나타냅니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Try needs to have catch or finally clause</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error means you have called the <span class="inline">try</span> function but have omitted to include a <span class="inline">catch</span> or <span class="inline">finally</span> clause.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">catch 또는 finally 절이 필요합니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 <span class="inline">try</span> 함수를 호출했지만 <span class="inline">catch</span> 또는 <span class="inline">finally</span> 절을 포함하기 <span class="inline">위해</span> 생략했음을 의미합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Macro [val] already exists</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You can get this error when you try to define a macro [val] with the same name as one that has been previously defined.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">매크로 [val]이 이미 존재합니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이전에 정의 된 것과 동일한 이름으로 매크로 [val]을 정의하려고하면이 오류가 발생할 수 있습니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Malformed variable reference, got [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This means there is an internal AST Validation Error (you should never see this error, but if you do please consider filing a bug report from the <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">Help Menu</a>) </td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">변형 된 변수 참조, [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 내부 AST 유효성 검사 오류가 있음을 의미합니다 (이 오류는 표시되지 않아야하지만 <a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">도움말 메뉴</a> 에서 버그 보고서 제출을 고려하십시오).</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Assignment to multi-relational-equality expression - GML does not support multiple assignments in an expression</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error tells you there is an issue with a multi-operator assignment (also called a compound assignment) which is not supported by the GameMaker Language. This includes things like &quot;<span class="inline">*=</span>&quot; or &quot;<span class="inline">/=</span>&quot;,
-          etc...</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">다중 관계형 표현식에 할당-GML은 표현식에서 여러 할당을 지원하지 않습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 GameMaker 언어에서 지원하지 않는 다중 연산자 할당 (복합 할당이라고도 함)에 문제가 있음을 나타냅니다. 여기에는 &quot; <span class="inline">* =</span> &quot;또는 &quot; <span class="inline">/ =</span> &quot;등이 포함됩니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Macro [val] is unused</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Warning Icon" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This happens when the macro [val] is unused anywhere in your code.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">매크로 [val]은 사용되지 않습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 경고 아이콘" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">매크로 [val]이 코드의 어느 곳에서나 사용되지 않을 때 발생합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Variable [val] only referenced once</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Warning Icon" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This means that the given variable [val] is only referenced once in your code.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">변수 [val]은 한 번만 참조</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 경고 아이콘" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 주어진 변수 [val]이 코드에서 한 번만 참조됨을 의미합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unassigned variable [val] referenced</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Warning Icon" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This means that the variable [val] has been referenced in your code, but has not been assigned a value anywhere previously.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">할당되지 않은 변수 [val] 참조</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 경고 아이콘" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 변수 [val]이 코드에서 참조되었지만 이전에 값이 할당되지 않았 음을 의미합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Only functions that are declared as constructors can use inheritance</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error tells you that you have tried to use inheritance on a function which has not been declared as a constructor.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">생성자로 선언 된 함수 만 상속을 사용할 수 있습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 생성자로 선언되지 않은 함수에서 상속을 사용하려했음을 나타냅니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unknown function attribute [val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error means that you have tried to use an invalid or unidentified function modifier ([val]) when declaring an in-kine function (a function modifier is something like the <span class="inline">constructor</span> keyword, which is supported). </td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">알 수없는 함수 속성 [val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 in-kine 함수를 선언 할 때 유효하지 않거나 식별되지 않은 함수 수정 자 ([val])를 사용하려고 시도했음을 의미합니다 (함수 수정자는 <span class="inline">생성자</span> 키워드와 유사하며 지원됨).</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Inherited argument \&quot;[val]\&quot; is not in function arguments</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This error happens when you try to reference an argument in an inherited function that has not been declared in the parent function definition.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">상속 된 인수 \\ &quot;[val] \\&quot;이 (가) 함수 인수에 없습니다.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 오류는 상위 함수 정의에 선언되지 않은 상속 된 함수의 인수를 참조하려고 할 때 발생합니다.</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">[val] Creation Code</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This happens when you have an error [val] in the room creation code somewhere.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">[val] 작성 코드</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="구문 오류 아이콘" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14"/></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이것은 방 생성 코드 어딘가에 오류 [val]가있을 때 발생합니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Additional_Information/Errors/Syntax_Errors.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Error_Reporting.htm">Error Reporting</a></div>
-        <div style="float:right">Next: <a href="Compiler_Errors.htm">Compiler Errors</a></div>
+        <div style="float:left">목록: <a href="../Error_Reporting.htm">오류보고</a></div>
+        <div style="float:right">다음: <a href="Compiler_Errors.htm">컴파일러 오류</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Syntax Errors
@@ -329,4 +320,4 @@ Syntax Errors
 syntax_errors
 -->
 
-</body></html>
+</body></html> 

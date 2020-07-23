@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Fonts">
-        <span>Fonts</span>
+        <span>폰트</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,125 +80,84 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Font Editor</h1>
+  <h1>폰트 에디터</h1>
   <p><img alt="The Font Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts.png"/></p>
-  <p>When you want to draw text in your game this text is drawn in a standard Arial 12 point <a class="tooltip" title="A font is a collection of graphical glyphs used to represent text in a language. Fonts can be different weights, sizes, and styles and are used to display any written content in a project.">font</a>, but to make more interesting or unique looking texts you will probably want to use different fonts.
-    So, to use different fonts that you have on your computer you must create a <strong>font asset</strong> in GameMaker Studio 2. This is done by right clicking <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and selecting &quot;<em>Create Font</em>&quot;. For each font resource you create you specify a particular type of font from your computer which can then be used in your game
-    using the action or code to set a font for drawing.</p>
-  <p>When you first create a font resource the font editor window will open with the following options:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Details</span><span data-close-text="true">Details</span></a></p>
+  <p>게임에서 텍스트를 그리려면이 텍스트는 표준 Arial 12 포인트 <a class="tooltip" title="글꼴은 언어로 텍스트를 나타내는 데 사용되는 그래픽 글리프 모음입니다. 서체는 가중치, 크기 및 스타일이 다를 수 있으며 프로젝트에서 작성된 내용을 표시하는 데 사용됩니다.">글꼴</a> 로 그려 지지만 더 흥미 롭거나 독창적 인 텍스트를 만들려면 다른 글꼴을 사용해야합니다. 따라서 컴퓨터에있는 다른 글꼴을 사용하려면 GameMaker Studio 2에서 <strong>글꼴 자산</strong> 을 만들어야합니다. <a href="../Introduction/The_Asset_Browser.htm">자산 브라우저에서</a> &quot; <em>글꼴 만들기</em> &quot;를 선택 <em>하십시오</em> . 생성하는 각 글꼴 리소스에 대해 컴퓨터에서 특정 글꼴 유형을 지정하면 게임에서 동작 또는 코드를 사용하여 그리기위한 글꼴을 설정할 수 있습니다.</p>
+  <p>글꼴 리소스를 처음 만들면 다음 옵션이 포함 된 글꼴 편집기 창이 열립니다.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">세부</span> <span data-close-text="true">사항</span> <span data-open-text="true">세부</span> <span data-close-text="true">사항</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you can give your font a unique name (alpha numeric characters and the &quot;_&quot; under-bar symbol only), as well as choose the font to use. The font must be installed on your machine and due to licensing issues, GameMaker Studio 2 does not
-      store the actual font files with the project file by default, but rather the font is <a class="tooltip" title="When something is rendered in GameMaker Studio 2, it generally means that it has simply been &#39;drawn to the display buffer&#39; or &#39;drawn to a surface&#39;.  Rendering can also refer to the process of turning some kind of vector source (like a font) into a bitmap image,.">rendered</a> to a <a href="../Settings/Texture_Information/Texture_Pages.htm">texture page</a> as a series
-      of bitmap glyphs. The texture page will be assigned to a <a href="../Settings/Texture_Groups.htm">texture group</a>, which you can choose from the <strong>Group</strong> option here too.</p>
-    <p class="dropspot">If you want to distribute the actual font file ( <span class="inline">*.ttf</span> only) along with the project when making a Marketplace asset or for any other reason, you can check the option <strong>Copy To Project</strong>. This will open the
-      file explorer where you can select the font file and it will then be added to the files bundled with the project.</p>
-    <p class="note"><strong>IMPORTANT!</strong> You should only use fonts that you are <strong>legally permitted and licensed to redistribute or use in your project</strong>.<br/>
-    </p>
+    <p class="dropspot">여기에서 글꼴에 고유 한 이름 (알파벳 및 &quot;_&quot;아래 막대 기호 만)을 지정하고 사용할 글꼴을 선택할 수 있습니다. 폰트는 머신에 설치해야하며 라이센스 문제로 인해 GameMaker Studio 2는 기본적으로 프로젝트 파일과 함께 실제 폰트 파일을 저장하지 않지만 대신 폰트는 일련의 비트 맵 글리프로 <a href="../Settings/Texture_Information/Texture_Pages.htm">텍스처 페이지에</a> <a class="tooltip" title="GameMaker Studio 2에서 무언가가 렌더링 될 때, 이는 일반적으로 단순히 &#39;디스플레이 버퍼에 그려 지거나&#39;표면에 그려 졌음을 의미합니다. 렌더링은 어떤 종류의 벡터 소스 (글꼴과 같은)를 비트 맵 이미지로 변환하는 프로세스를 가리킬 수도 있습니다.">렌더링</a> 됩니다. 텍스처 페이지는 <a href="../Settings/Texture_Groups.htm">텍스처 그룹에</a> 할당되며 여기에서 <strong>그룹</strong> 옵션에서도 선택할 수 있습니다.</p>
+    <p class="dropspot">Marketplace 자산을 만들 때 또는 다른 이유로 프로젝트와 함께 실제 글꼴 파일 ( <span class="inline">* .ttf</span> 만)을 배포하려는 경우 프로젝트에 <strong>복사</strong> 옵션을 선택할 수 있습니다. 글꼴 파일을 선택할 수있는 파일 탐색기가 열리고 프로젝트와 함께 번들로 제공되는 파일에 추가됩니다.</p>
+    <p class="note"><strong>중대한!</strong> <strong>프로젝트에서 재배포하거나 사용할</strong> 수있는 <strong>법적으로 허용되고 허가 된</strong> 글꼴 만 사용해야 <strong>합니다</strong> .</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Presets</span><span data-close-text="true">Presets</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">프리셋</span> <span data-close-text="true">프리셋</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">In this section you can set the size (in points - default is 12pt) and whether the font should be drawn as bold or italic or have <a class="tooltip" title="This is a technique used to smooth otherwise jagged lines or textures by blending the color of an edge with the color of the pixels around it. The result should be a more pleasing and realistic appearance, depending on the intensity of the effect.">anti-aliasing</a> applied. The preview window on the right
-      will show you the text approximately as it will look in your game with the size and transforms you have specified.</p>
-    <p class="dropspot"><br/>
-    </p>
+    <p class="dropspot">이 섹션에서는 크기 (포인트 단위-기본값은 12pt)와 글꼴을 굵게 또는 기울임 꼴로 그릴 것인지 또는 <a class="tooltip" title="가장자리의 색상과 주변 픽셀의 색상을 혼합하여 울퉁불퉁 한 선이나 질감을 부드럽게하는 데 사용되는 기술입니다. 결과는 효과의 강도에 따라 더 즐겁고 사실적인 모양이어야합니다.">앤티 앨리어싱을</a> 적용 할 것인지를 설정할 수 있습니다. 오른쪽의 미리보기 창은 지정한 크기와 변형으로 게임에서 보이는 텍스트를 대략적으로 보여줍니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Range Controls</span><span data-close-text="true">Range Controls</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">범위 제어</span> <span data-close-text="true">범위 제어</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">When creating a font resource it&#39;s rare that you&#39;ll want to include every single glyph for the font. This is why GameMaker Studio 2 defaults to using only the characters from 32 till 127 of the chosen font as this gives us the numbers and
-      the small and capital letters along with certain punctuation marks. You can, however, change the character range used to help optimise your games ie: if you only need the numbers from a specific font, then <em>only </em>select the numbers. To do
-      this, you should first click the <strong>Delete </strong>button to clear the current range (you may need to select the range for this to work by clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on it in the
-      preview window) and then click on the <strong>Add </strong>button to add a new range. This will open the following chained window:<br/>
-    </p>
-    <p class="dropspot"><img alt="Font Range Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts_Range.png"/>This window has some buttons to help you establish a standard range for your font:</p>
-    <p class="dropspot">   - The <em>Normal </em>range from 32 till 127<br/>
-      <br/>    - The <em>ASCII </em>range from 0 till 255<br/>
-      <br/>    - The <em>Digits </em>range that only contains the 10 digits<br/>
-      <br/>    - The <em>Letters </em>range that contains all upper-case and lower-case letters only<br/>
-    </p>
-    <p class="dropspot">Other ranges can be used by typing in the first and last character index of the range you wish to set in the character range input boxes (if a character does not lie in the range it is replaced by a space). Apart from these buttons and input boxes,
-      you also have two further options which are especially useful:<br/>
-    </p>
+    <p class="dropspot">글꼴 리소스를 만들 때 글꼴에 대한 모든 단일 글리프를 포함하는 경우는 거의 없습니다. 이것이 GameMaker Studio 2가 기본적으로 선택한 글꼴의 32에서 127까지의 문자 만 사용하도록하는 이유입니다.이 경우 특정 문장 부호와 함께 숫자와 작은 글자 및 대문자가 표시됩니다. 그러나 게임 최적화에 사용되는 문자 범위를 변경할 수 있습니다. 예를 들어 특정 글꼴의 숫자 만 필요한 경우 숫자 <em>만</em> 선택하십시오. 이렇게하려면 먼저 <strong>삭제</strong> 버튼을 클릭하여 현재 범위를 지우십시오 (클릭하여이 범위를 선택해야 할 수도 있음) 미리보기 창에서 <strong>추가</strong> 한 다음 <strong>추가</strong> 버튼을 클릭하여 새 범위를 추가하십시오. 그러면 다음과 같은 연결 창이 열립니다.</p>
+    <p class="dropspot"><img alt="Font Range Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts_Range.png"/>이 창에는 글꼴의 표준 범위를 설정하는 데 도움이되는 몇 가지 단추가 있습니다.</p>
+    <p class="dropspot">-32에서 127까지의 <em>일반</em> 범위-0에서 255까지의 <em>ASCII</em> 범위-10 자리 만 포함하는 <em>숫자</em> 범위-모두 대문자와 소문자 만 포함하는 <em>문자</em> 범위</p>
+    <p class="dropspot">문자 범위 입력 상자에 설정하려는 범위의 첫 번째 및 마지막 문자 색인을 입력하여 다른 범위를 사용할 수 있습니다 (문자가 범위 내에 있지 않은 경우 공백으로 대체 됨). 이 버튼과 입력 상자 외에도 특히 유용한 두 가지 추가 옵션이 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>From Code</strong>: if you click on this button and then click OK, GameMaker Studio 2 will automatically parse your game code for strings and then create different character ranges to cover all the text in your game. Note that it looks for
-        all strings (either within &quot;&quot; or &#39;&#39;) and so may also include file names in the character ranges.<br/>
-      </li>
-      <li class="dropspot"><strong>From File</strong>: this works similarly to the &quot;from code&quot; option explained above. If you click on it, you will be asked to supply a file, and then once that is done you should click on OK. GameMaker Studio 2 will then parse the
-        file and create character ranges for the text found within it.</li>
+      <li class="dropspot"><strong>코드에서</strong> :이 버튼을 클릭 한 다음 확인을 클릭하면 GameMaker Studio 2가 자동으로 게임 코드를 구문 분석 한 다음 게임의 모든 텍스트를 포함하는 다양한 문자 범위를 만듭니다. 모든 문자열 ( &quot;&quot;또는 &#39;&#39;내)을 검색하므로 문자 범위에 파일 이름이 포함될 수도 있습니다.</li>
+      <li class="dropspot"><strong>파일에서</strong> : 이것은 위에서 설명한 &quot;코드에서&quot;옵션과 유사하게 작동합니다. 파일을 클릭하면 파일을 제공하라는 메시지가 표시되고 완료되면 확인을 클릭해야합니다. GameMaker Studio 2는 파일을 파싱하고 그 안에있는 텍스트의 문자 범위를 생성합니다.</li>
     </ul>
-    <p class="dropspot">Note that you can manually edit the text range by adding or deleting text glyphs into the preview window directly.</p>
+    <p class="dropspot">미리보기 창에 직접 텍스트 글리프를 추가하거나 삭제하여 텍스트 범위를 수동으로 편집 할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Texture Controls</span><span data-close-text="true">Texture Controls</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">텍스처 컨트롤</span> <span data-close-text="true">텍스처 컨트롤</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">As mentioned above (in the section on <strong>Font Details</strong>) by default all font glyphs will be <a class="tooltip" title="When something is rendered in GameMaker Studio 2, it generally means that it has simply been &#39;drawn to the display buffer&#39; or &#39;drawn to a surface&#39;.  Rendering can also refer to the process of turning some kind of vector source (like a font) into a bitmap image,.">rendered</a> to a texture page as part of a texture group to convert them into graphical
-      resources, and when the game is compiled the font will be added to a temporary texture to create a single image with all the required font glyphs and then this will be added to the main texture group for exporting. The buttons here are for tweaking
-      how the font texture is generated or for regenerating a new font texture.</p>
-    <p class="dropspot">The <strong>Options </strong>button will open up the advanced font texture options:</p>
-    <p class="dropspot"><img alt="Font Options Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts_Options.png"/>These options can, sometimes radically, alter how a font will be displayed in the game, and not all fonts will require the same settings.
-      The following options are designed to give you the greatest customisation possible for your font:</p>
+    <p class="dropspot">위에서 언급 한 것처럼 ( <strong>Font Details</strong> 섹션에서) 기본적으로 모든 글꼴 글리프는 텍스처 그룹의 일부로 텍스처 페이지에 <a class="tooltip" title="GameMaker Studio 2에서 무언가가 렌더링 될 때, 이는 일반적으로 단순히 &#39;디스플레이 버퍼에 그려 지거나&#39;표면에 그려 졌음을 의미합니다. 렌더링은 어떤 종류의 벡터 소스 (글꼴과 같은)를 비트 맵 이미지로 변환하는 프로세스를 가리킬 수도 있습니다.">렌더링</a> 되어 그래픽 리소스로 변환되며 게임이 컴파일되면 글꼴이 임시에 추가됩니다 텍스처를 사용하여 필요한 모든 글꼴 글리프가있는 단일 이미지를 만든 다음 내보내기 위해 기본 텍스처 그룹에 추가합니다. 여기에있는 버튼은 글꼴 텍스처 생성 방법을 조정하거나 새 글꼴 텍스처를 재생성하는 데 사용됩니다.</p>
+    <p class="dropspot"><strong>옵션</strong> 버튼은 고급 글꼴 텍스처 옵션을 엽니 다 :</p>
+    <p class="dropspot"><img alt="Font Options Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts_Options.png"/>이러한 옵션은 때때로 게임에서 글꼴이 표시되는 방식을 완전히 바꿀 수 있으며 모든 글꼴에 동일한 설정이 필요한 것은 아닙니다. 다음 옵션은 글꼴에 대해 가능한 최고의 사용자 정의를 제공하도록 설계되었습니다.</p>
     <ul class="colour">
-      <li class="dropspot"><strong>Hinting</strong>: Font hinting (also known as instructing) is the use of mathematical instructions to adjust the display of an outline font so that it lines up with a rasterized grid. At low screen resolutions, hinting is critical for producing
-        clear, legible text, and here you can select from different hinting algorithms to get the best result possible. Default is &quot;normal&quot;.</li>
-      <li class="dropspot"><strong>Glyph Options</strong>: These options can be used to change how the glyphs are loaded by enabling/disabling different operations. These are:
-        <ol>
-          <li><em>Disable Hinting</em>: This will disable the fonts native hinting and the auto-hinter.</li>
-          <li><em>Disable Auto-Hinter</em>: This will disable the auto-hinter and instead use the fonts native hinter (if it has one). Note that this overrides the &quot;Prefer Auto-hinter&quot; option.</li>
-          <li><em>Prefer Auto-Hinter</em>: This will tell GameMaker Studio 2 to prefer using the auto-hinter over any native hinting that the font may have. Note that this is overriden by the &quot;Disable Auto-hinter&quot; and &quot;Disable Hinting&quot;
-            options.
-          </li>
-          <li><em>Warping</em>: Enabling this will slightly warp glyphs to improve grid alignment. Note that this requires the auto-hinter and a &quot;Normal&quot; hinting mode.</li>
-          <li><em>No Scale</em>: When this option is checked it will keep glyphs in font units and ignore the requested size. This implies hinting is disabled.<br/>
-          </li>
+      <li class="dropspot"><strong>힌트</strong> : 글꼴 힌트 (명령이라고도 함)는 수학 명령을 사용하여 윤곽선 글꼴의 표시를 조정하여 래스터 화 된 그리드와 정렬되도록합니다. 낮은 화면 해상도에서 힌트는 명확하고 읽기 쉬운 텍스트를 생성하는 데 중요합니다. 여기서 최상의 힌트를 얻으려면 다양한 힌트 알고리즘 중에서 선택할 수 있습니다. 기본값은 &quot;정상&quot;입니다.</li>
+      <li class="dropspot"><strong>글리프 옵션</strong> :이 옵션은 다른 작업을 활성화 / 비활성화하여 글리프가로드되는 방식을 변경하는 데 사용할 수 있습니다. 이것들은: <em>힌트 사용 안함</em> : 글꼴 기본 힌트 및 자동 힌트를 사용하지 <em>않습니다</em> .</li>
+          <li><em>자동 힌더 비활성화</em> : <em>자동 힌더</em> 를 비활성화하고 대신 글꼴 기본 <em>힌트</em> 를 사용합니다 (있는 경우). 이는 &quot;자동 장애 선호&quot;옵션보다 우선합니다.</li>
+          <li><em>Auto-Hinter 선호</em> : GameMaker Studio 2는 글꼴에있을 수있는 기본 힌트보다 auto-hinter를 선호합니다. 이는 &quot;자동 장애 사용 안 함&quot;및 &quot;힌트 사용 안 함&quot;옵션에 의해 재정의됩니다.</li>
+          <li><em>워프</em> :이 그리드 정렬을 개선하기 위해 약간 워프 문양을 것이다 활성화. 이를 위해서는 자동 장애 및 &quot;일반&quot;힌트 모드가 필요합니다.</li>
+          <li><em>스케일 없음</em> :이 옵션을 선택하면 글리프가 글꼴 단위로 유지되고 요청 된 크기는 무시됩니다. 이는 힌트가 비활성화되었음을 의미합니다.</li>
         </ol>
         The default state for all the above options is <strong>disabled</strong>.</li>
-      <li class="dropspot"><strong>Interpreter</strong>: Here you can select the <em>TrueType</em> version that GameMaker Studio 2 should use for font rendering. Default is <em>TrueType v40</em>.</li>
-      <li class="dropspot"><strong>Rounding</strong>: This option is for setting the rounding method when converting from a fixed point decimal size to an integer. Default is &quot;floor&quot;.</li>
+      <li class="dropspot"><strong>Interpreter</strong> : GameMaker Studio 2가 폰트 렌더링에 사용해야하는 <em>트루 타입</em> 버전을 선택할 수 있습니다. 기본값은 <em>TrueType v40</em> 입니다.</li>
+      <li class="dropspot"><strong>반올림</strong> :이 옵션은 소수점 이하 자릿수를 정수로 변환 할 때 반올림 방법을 설정합니다. 기본값은 &quot;바닥&quot;입니다.</li>
     </ul>
-    <p class="dropspot">The <strong>Regenerate </strong>button can be used to regenerate the font texture. This is required if you want to update any changes you&#39;ve made to an existing font, or if you have created a new font and you want to see how it looks in the Preview
-      Window. Note that you can also regenerate fonts from the right button <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> menu for the font (or fonts) in the Asset Browser.<br/>
-    </p>
-    <p class="dropspot"><img alt="Regenerate Fonts RMB Menu Option" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts_MenuRegenerate.png"/>It is important to note that when you first create a new font, if you don&#39;t regenerate the texture in the editor,
-      then the texture will be created the first time you run or test your game, but that is the only time that it will be automatically generated. This means that once a font has a generated texture, any changes made to the font resource will require
-      that the font is regenerated for the changes to be visible in the game, otherwise the &quot;old&quot; font texture will still be used.</p>
-    <p class="dropspot">GameMaker Studio 2 will render the generated font texture as a <span class="inline">PNG </span>file along with the rest of the project files, and should you load the project and the base font is not found, then the game will still display text correctly
-      using the stored texture. A missing font will mean, however, that you can no longer change any of its properties, other than its name, font family and texture group (from the <a href="../Settings/Texture_Groups.htm">Texture Group Editor</a>).</p>
-    <p class="dropspot"><br/>
-    </p>
+    <p class="dropspot"><strong>재생성</strong> 버튼을 사용하여 글꼴 질감을 재생성 할 수 있습니다. 기존 글꼴에 대한 변경 사항을 업데이트하거나 새 글꼴을 만들었고 미리보기 창에 표시되는 모양을 보려면이 작업이 필요합니다. 오른쪽 버튼에서 글꼴을 재생성 할 수도 있습니다. 자산 브라우저의 글꼴 메뉴.</p>
+    <p class="dropspot"><img alt="Regenerate Fonts RMB Menu Option" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts_MenuRegenerate.png"/>새 글꼴을 처음 만들 때 편집기에서 텍스처를 재생성하지 않으면 게임을 처음 실행하거나 테스트 할 때 텍스처가 만들어 지지만 이것이 유일한 시간이라는 점에 유의해야합니다. 자동으로 생성됩니다. 즉, 글꼴에 텍스처가 생성되면 글꼴 리소스를 변경하면 게임에서 변경 사항을 볼 수 있도록 글꼴을 재생성해야합니다. 그렇지 않으면 &quot;오래된&quot;글꼴 텍스처가 계속 사용됩니다.</p>
+    <p class="dropspot">GameMaker Studio 2는 생성 된 폰트 텍스처를 나머지 프로젝트 파일과 함께 <span class="inline">PNG</span> 파일로 렌더링하며, 프로젝트를로드하고 기본 폰트를 찾지 못하면 저장된 텍스처를 사용하여 텍스트가 올바르게 표시됩니다. 그러나 글꼴이 없으면 <a href="../Settings/Texture_Groups.htm">텍스처 그룹 편집기</a> 에서 이름, 글꼴 패밀리 및 텍스처 그룹 이외의 속성을 더 이상 변경할 수 없습니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Preview Mode</span><span data-close-text="true">Preview Mode</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">미리보기 모드</span> <span data-close-text="true">미리보기 모드</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">In this section you can choose to have the Preview Window show either some sample text of the font selected, or the rendered texture image that has been generated for the font.</p>
+    <p class="dropspot">이 섹션에서는 미리보기 창에 선택한 글꼴의 일부 샘플 텍스트 또는 글꼴에 대해 생성 된 렌더링 된 텍스처 이미지가 표시되도록 선택할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Preview</span><span data-close-text="true">Preview</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">미리</span> <span data-close-text="true">보기</span> <span data-open-text="true">미리</span> <span data-close-text="true">보기</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">The
-      <strong>Preview Window</strong> is where you can see a preview of the font, either as a sample of text, or as a texture. When the
-      <strong>Preview Mode </strong>is set to
-      <em>Sample</em>, you can type in any text that you want to test directly into the preview window to see how it looks, while selecting
-      <em>Game Preview </em>will show the rendered texture image that was generated for the font. If no image is present, then you should click the
-      <strong>Regenerate </strong>button to generate the texture.</p>
-    <p class="dropspot">Note that the texture image can be different to the sample, since the texture will
-      <em>not</em> be regenerated unless explicitly told to. This means that after you have initially generated a font texture, changes made to the font resource will not be carried over to the game unless the texture is regenerated.</p>
+    <p class="dropspot"><strong>미리보기 창</strong> 에서 글꼴의 미리보기를 텍스트 샘플 또는 텍스처로 볼 수 있습니다. <strong>미리보기 모드</strong> 가 <em>샘플</em> 로 설정되면 미리보기 창에 직접 테스트하려는 텍스트를 입력하여 모양을 확인할 수 있으며 <em>게임 미리보기</em> 를 선택하면 글꼴에 대해 생성 된 렌더링 된 텍스처 이미지가 표시됩니다. 이미지가 없으면 <strong>재생성</strong> 버튼을 클릭하여 텍스처를 생성해야합니다.</p>
+    <p class="dropspot">텍스처 이미지는 샘플과 다를 수 있습니다. 텍스처가 명시 적으로 지시되지 않는 한 텍스처가 재생성되지 <em>않기</em> 때문입니다. 즉, 처음에 폰트 텍스처를 생성 한 후에는, 텍스처를 재생성하지 않으면 폰트 리소스에 대한 변경 사항이 게임으로 전달되지 않습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Range Preview</span><span data-close-text="true">Range Preview</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">범위 미리보기</span> <span data-close-text="true">범위 미리보기</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">Here the different character ranges that you have added for the font will be listed. The range values are shown on the left and the range glyphs that correspond to those values are shown on the right.</p>
+    <p class="dropspot">여기에 글꼴에 추가 한 다른 문자 범위가 나열됩니다. 범위 값은 왼쪽에 표시되고 해당 값에 해당하는 범위 글리프는 오른쪽에 표시됩니다.</p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Fonts.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Notes.htm">Notes</a></div>
+        <div style="float:left">목록: <a href="The_Asset_Editors.htm">자산 편집자</a></div>
+        <div style="float:right">다음: <a href="Notes.htm">노트</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Font Editor
@@ -208,4 +167,4 @@ Fonts
 font_editor
 -->
 
-</body></html>
+</body></html> 

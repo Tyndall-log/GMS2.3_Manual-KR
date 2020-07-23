@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Keyboard Input">
-        <span>Keyboard Input</span>
+        <span>키보드 입력</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,191 +80,186 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Keyboard Input</h1>
-  <p>When dealing with the keyboard in GameMaker Studio 2 you have a variety of functions that can be used to recognise different keyboard states like pressed or released. There are also some that store all the key-presses as a string or that can
-    tell you what the last key pressed was, as well as others that allow you to clear the keyboard state completely.</p>
-  <p class="note"><b>NOTE:</b> These functions are designed for Windows/Mac/Ubuntu desktop platforms only. You may find some of the built-in variables and constants aren&#39;t valid on other platforms and many of the functions won&#39;t work on mobiles.</p>
-  <p>Each input character from a key (or multiple keys) is defined by its <a href="https://en.wikipedia.org/wiki/UTF-8" target="_blank">UTF8</a> code, which is a numerical value. This value can be retrieved for any character using the <a href="../../Strings/ord.htm"><tt>ord()</tt></a>    function but, GameMaker Studio 2 also has a series of <tt>constants</tt> for the most used keyboard special keys and a special functions. Typically you&#39;d use a combination of <tt>ord()</tt> with the <tt>keyboard_check*()</tt> functions,
-    something like this:</p>
+  <h1>키보드 입력</h1>
+  <p>GameMaker Studio 2에서 키보드를 다룰 때 누르거나 놓는 것과 같은 다른 키보드 상태를 인식하는 데 사용할 수있는 다양한 기능이 있습니다. 모든 키 누름을 문자열로 저장하거나 마지막으로 누른 키가 무엇인지 알려주는 키보드 키 상태와 키보드 상태를 완전히 지울 수있는 키가 있습니다.</p>
+  <p class="note"><b>참고 :</b> 이 기능은 Windows / Mac / Ubuntu 데스크탑 플랫폼 전용입니다. 내장 변수 및 상수 중 일부가 다른 플랫폼에서는 유효하지 않으며 모바일에서 작동하지 않는 기능이 많이있을 수 있습니다.</p>
+  <p>키 (또는 여러 키)의 각 입력 문자는 숫자 값인 <a href="https://en.wikipedia.org/wiki/UTF-8" target="_blank">UTF8</a> 코드로 정의됩니다. 이 값은 <a href="../../Strings/ord.htm"><tt>ord ()</tt></a> 함수를 사용하여 모든 캐릭터에 대해 검색 할 수 있지만 GameMaker Studio 2에는 가장 많이 사용되는 키보드 특수 키 및 특수 함수에 대한 일련의 <tt>상수도</tt> 있습니다. 일반적으로 다음과 같이 <tt>ord ()</tt> 와 <tt>keyboard_check * ()</tt> 함수를 함께 사용합니다.</p>
   <p class="code">if keyboard_check(ord(&quot;A&quot;))<br/>     {
     <br/>     hspeed = -5;<br/>     }
   </p>
-  <p>So, the above will check the &quot;A&quot; key and if it&#39;s being pressed then it&#39;ll set the horizontal speed of the object to -5. Note, that using <tt>ord()</tt> in this way will only function correctly if the input string is only one character
-    in length and is a number from 0 to 9 or a <i>capitalised</i> Roman character from A to Z. The function <tt>ord()</tt> will return a full UTF8 value, but the <tt>keyboard_check*()</tt> functions will <i>only detect A - Z and 0 - 9</i>. But what if
-    you want to use the arrow keys? Or if you want to modify an action using the &quot;shift&quot; key? Well, for that GameMaker Studio 2 has a series of <tt>vk_</tt> constants (<tt>vk_</tt> stands for <i>virtual key</i>) that you can use in place
-    of <tt>ord()</tt>:</p>
+  <p>따라서 위의 &quot;A&quot;키를 확인하고 누르고 있으면 객체의 수평 속도를 -5로 설정합니다. 이 방법으로 <tt>ord ()</tt> 를 사용하면 입력 문자열의 길이가 한 문자이고 0에서 9 사이의 숫자이거나 A에서 Z까지의 <i>대문자</i> 로마자 인 경우에만 올바르게 작동합니다. <tt>ord ()</tt> 함수는 전체 UTF8 값이지만 <tt>keyboard_check * ()</tt> 함수는 <i>A-Z 및 0-9 만 감지</i> 합니다. 그러나 화살표 키를 사용하려면 어떻게해야합니까? 또는 &quot;shift&quot;키를 사용하여 작업을 수정하려면? GameMaker Studio 2에는 <tt>ord ()</tt> 대신 사용할 수있는 일련의 <tt>vk_</tt> 상수 ( <tt>vk_</tt> 는 <i>가상 키를</i> 나타냄)가 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td><tt>vk_nokey</tt></td>
-        <td>keycode representing that no key is pressed</td>
+        <td>아무 키도 누르지 않았 음을 나타내는 키 코드</td>
       </tr>
       <tr>
         <td><tt>vk_anykey</tt></td>
-        <td>keycode representing that any key is pressed</td>
+        <td>키를 눌렀 음을 나타내는 키 코드</td>
       </tr>
       <tr>
         <td><tt>vk_left</tt></td>
-        <td>keycode for the left arrow key</td>
+        <td>왼쪽 화살표 키의 키 코드</td>
       </tr>
       <tr>
         <td><tt>vk_right</tt></td>
-        <td>keycode for the right arrow key</td>
+        <td>오른쪽 화살표 키의 키 코드</td>
       </tr>
       <tr>
         <td><tt>vk_up</tt></td>
-        <td>keycode for the up arrow key</td>
+        <td>위쪽 화살표 키의 키 코드</td>
       </tr>
       <tr>
         <td><tt>vk_down</tt></td>
-        <td>keycode for the down arrow key</td>
+        <td>아래쪽 화살표 키의 키 코드</td>
       </tr>
       <tr>
         <td><tt>vk_enter</tt></td>
-        <td>enter key</td>
+        <td>키를 입력</td>
       </tr>
       <tr>
         <td><tt>vk_escape</tt></td>
-        <td>escape key</td>
+        <td>이스케이프 키</td>
       </tr>
       <tr>
         <td><tt>vk_space</tt></td>
-        <td>space key</td>
+        <td>스페이스 키</td>
       </tr>
       <tr>
         <td><tt>vk_shift</tt></td>
-        <td>either of the shift keys</td>
+        <td>Shift 키 중 하나</td>
       </tr>
       <tr>
         <td><tt>vk_control</tt></td>
-        <td>either of the control keys</td>
+        <td>컨트롤 키 중 하나</td>
       </tr>
       <tr>
         <td><tt>vk_alt</tt></td>
-        <td>alt key</td>
+        <td>대체 키</td>
       </tr>
       <tr>
         <td><tt>vk_backspace</tt></td>
-        <td>backspace key</td>
+        <td>백 스페이스 키</td>
       </tr>
       <tr>
         <td><tt>vk_tab</tt></td>
-        <td>tab key</td>
+        <td>탭 키</td>
       </tr>
       <tr>
         <td><tt>vk_home</tt></td>
-        <td>home key</td>
+        <td>홈 키</td>
       </tr>
       <tr>
         <td><tt>vk_end</tt></td>
-        <td>end key</td>
+        <td>엔드 키</td>
       </tr>
       <tr>
         <td><tt>vk_delete</tt></td>
-        <td>delete key</td>
+        <td>키 삭제</td>
       </tr>
       <tr>
         <td><tt>vk_insert</tt></td>
-        <td>insert key</td>
+        <td>키 삽입</td>
       </tr>
       <tr>
         <td><tt>vk_pageup</tt></td>
-        <td>pageup key</td>
+        <td>페이지 업 키</td>
       </tr>
       <tr>
         <td><tt>vk_pagedown</tt></td>
-        <td>pagedown key</td>
+        <td>페이지 다운 키</td>
       </tr>
       <tr>
         <td><tt>vk_pause</tt></td>
-        <td>pause/break key</td>
+        <td>일시 정지 / 중지 키</td>
       </tr>
       <tr>
         <td><tt>vk_printscreen</tt></td>
-        <td>printscreen/sysrq key</td>
+        <td>인쇄 화면 / sysrq 키</td>
       </tr>
       <tr>
         <td><tt>vk_f1 ... vk_f12</tt></td>
-        <td>keycode for the function keys F1 to F12</td>
+        <td>기능 키 F1 ~ F12의 키 코드</td>
       </tr>
       <tr>
         <td><tt>vk_numpad0 ... vk_numpad9</tt></td>
-        <td>number keys on the numeric keypad</td>
+        <td>숫자 키패드의 숫자 키</td>
       </tr>
       <tr>
         <td><tt>vk_multiply</tt></td>
-        <td>multiply key on the numeric keypad</td>
+        <td>숫자 키패드의 곱하기 키</td>
       </tr>
       <tr>
         <td><tt>vk_divide</tt></td>
-        <td>divide key on the numeric keypad</td>
+        <td>숫자 키패드의 나누기 키</td>
       </tr>
       <tr>
         <td><tt>vk_add</tt></td>
-        <td>add key on the numeric keypad</td>
+        <td>숫자 키패드에서 키 추가</td>
       </tr>
       <tr>
         <td><tt>vk_subtract</tt></td>
-        <td>subtract key on the numeric keypad</td>
+        <td>숫자 키패드에서 빼기 키</td>
       </tr>
       <tr>
         <td><tt>vk_decimal</tt></td>
-        <td>decimal dot keys on the numeric keypad</td>
+        <td>숫자 키패드의 소수점</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>The following constants can only be used with <tt>keyboard_check_direct()</tt>:</p>
+  <p>다음 상수는 <tt>keyboard_check_direct ()</tt> 와 함께 만 사용할 수 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td><tt>vk_lshift</tt></td>
-        <td>left shift key</td>
+        <td>왼쪽 쉬프트 키</td>
       </tr>
       <tr>
         <td><tt>vk_lcontrol</tt></td>
-        <td>left control key</td>
+        <td>왼쪽 컨트롤 키</td>
       </tr>
       <tr>
         <td><tt>vk_lalt</tt></td>
-        <td>left alt key</td>
+        <td>왼쪽 Alt 키</td>
       </tr>
       <tr>
         <td><tt>vk_rshift</tt></td>
-        <td>right shift key</td>
+        <td>오른쪽 시프트 키</td>
       </tr>
       <tr>
         <td><tt>vk_rcontrol</tt></td>
-        <td>right control key</td>
+        <td>올바른 컨트롤 키</td>
       </tr>
       <tr>
         <td><tt>vk_ralt</tt></td>
-        <td>right alt key</td>
+        <td>오른쪽 Alt 키</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p><span style="text-align: justify;">The following is a small example of how to use the</span><span style="text-align: justify;"> </span><tt>vk_</tt><span style="text-align: justify;"> </span><span style="text-align: justify;">constants:</span></p>
+  <p><span style="text-align: justify;">다음은 사용 방법에 대한 작은 예입니다.</span> <tt>vk_</tt> <span style="text-align: justify;">상수 :</span></p>
   <p class="code">if keyboard_check_pressed(vk_tab)<br/>     {
     <br/>     instance_create_layer(x, y, &quot;Controllers&quot;, obj_Menu);<br/>     }
   </p>
-  <p>The above code will detect if the &quot;Tab&quot; key is <i>pressed</i> and create an instance of object &quot;obj_Menu&quot; if it is.</p>
-  <p>If you need to check for a key character that is not 0 - 9, A - Z or one of the VK constants, then you should be checking one of the <tt>keyboard_*</tt> variables, like <tt>keyboard_lastchar</tt> for example:</p>
+  <p>위의 코드는 &quot;Tab&quot;키가 <i>눌 렸는지</i> 감지하고 &quot;obj_Menu&quot;개체의 인스턴스를 작성합니다.</p>
+  <p>0-9, A-Z 또는 VK 상수 중 하나가 아닌 키 문자를 확인해야하는 경우 <tt>keyboard_lastchar</tt> 와 같은 <tt>keyboard_</tt> <tt>*</tt> 변수 중 하나를 확인해야합니다.</p>
   <p class="code">var _key = keyboard_lastchar;<br/> if ord(_key) == ord(&quot;ç&quot;)<br/>     {
     <br/>     show_debug_message(&quot;ç key pressed&quot;);<br/>     }
   </p>
-  <p>The following functions are available for use when working with a keyboard:</p>
-  <p class="note"><b>NOTE</b>: These functions will <i>not</i> work when using an on-screen <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Virtual Keyboard</a>.</p>
+  <p>키보드로 작업 할 때 다음 기능을 사용할 수 있습니다.</p>
+  <p class="note"><b>참고</b> :이 기능은 온 스크린 <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">가상 키보드를</a> 사용할 때는 작동 <i>하지 않습니다</i> .</p>
   <ul class="colour">
     <li><a href="io_clear.htm">io_clear</a></li>
     <li><a href="keyboard_check.htm">keyboard_check</a></li>
@@ -279,16 +274,15 @@
     <li><a href="keyboard_get_numlock.htm">keyboard_get_numlock</a></li>
   </ul>
   <p> </p>
-  <p>There are also some functions that can be used to simulate keypresses:</p>
+  <p>키 누르기를 시뮬레이션하는 데 사용할 수있는 기능도 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="keyboard_key_press.htm">keyboard_key_press</a></li>
     <li><a href="keyboard_key_release.htm">keyboard_key_release</a></li>
   </ul>
   <p> </p>
-  <p>Finally, the following variables are built-in to GameMaker Studio 2 and can be accessed to get information about the keyboard state and input:</p>
-  <p class="note"><b>NOTE</b>: When using the <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Virtual Keyboard</a>, <i>only</i> the <span style="font-size:1px;"><tt style="font-size: 14px">keyboard_string</tt></span> variable will be updated with
-    the keyboard input.</p>
+  <p>마지막으로 다음 변수가 GameMaker Studio 2에 내장되어 있으며 키보드 상태 및 입력에 대한 정보를 얻기 위해 액세스 할 수 있습니다.</p>
+  <p class="note"><b>참고</b> : <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">가상 키보드</a> 사용시 키보드 입력으로 <span style="font-size:1px;"><tt style="font-size: 14px">keyboard_string</tt></span> 변수 <i>만</i> 업데이트됩니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="keyboard_key.htm">keyboard_key</a></li>
@@ -298,15 +292,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
-        <div style="float:right">Next: <a href="../Mouse_Input/Mouse_Input.htm">Mouse Input</a></div>
+        <div style="float:left">목록: <a href="../Game_Input.htm">게임 입력</a></div>
+        <div style="float:right">다음: <a href="../Mouse_Input/Mouse_Input.htm">마우스 입력</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Keyboard Input Functions
@@ -370,4 +365,4 @@ vk_ralt
 keyboard_functions
 -->
 
-</body></html>
+</body></html> 

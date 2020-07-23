@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Texture Pages">
-        <span>Texture Pages</span>
+        <span>텍스처 페이지</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,46 +80,30 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Texture Pages</h1>
-  <p>When you create a game with GameMaker Studio 2, you will surely have created graphics - sprites, tilesets and fonts - to go along with it. These graphics are stored on <strong>Texture Pages</strong> which GameMaker Studio 2 builds for you from all the
-    image resources that your game contains. Below is an example of a completed texture page:</p>
-  <p><img alt="Texture Page Example" class="center" src="../../assets/Images/Settings/Texture_Page_Example.png"/>As you can see, the game graphics are all jumbled up together in such a way that they all fit on a power of 2 sized page, eg 512x512, 1024x512
-    etc... up to a maximum size of 4096x4096 pixels page. Note that the maximum size of a texture page will depend on the chosen export platform, as some targets will not permit pages larger than 2048x2048px, and even then, the maximum available size
-    may not be optimal for all the devices that use the target platform OS.</p>
-  <p>Note too that if your images have a lot of empty space (ie: transparent pixels) around them, then they will be cropped by default to remove any of these &quot;invisible&quot; pixels and pack as many images as possible onto a single texture page. If
-    this is not what you wish to happen, then you need to disable it from the <a href="../Texture_Groups.htm">Texture Groups</a> window.</p>
-  <p>It is important to understand how the different available texture settings will affect an image, so lets look at the <a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a> section titled <strong>Texture Settings</strong>, shown below:</p>
-  <p><img alt="Texture Page Options" class="center" src="../../assets/Images/Settings/Texture_Page_Options.png"/>Here you can define how the image is to be stored on the texture page as well as whether it is an image specifically for use with 3D and has
-    to be stored separately and which texture page (if any) it has to be assigned to as well as a few other options (explained in epth on the <a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a> page). The options we are interested in are the
-    first two: Tile Horizontal and Tile Vertical. These relate to how the edges of the image will be created when placed on the texture page.</p>
-  <p>An image that is to be tiled will have the edges (horizontal or vertical) added to by the edges from the opposite side, while if no tiling is selected the sprite will be <em>clamped </em>and the edges pixels will be repeated (note that tilesets also
-    have a setting for the output border width, found in the <a href="../../The_Asset_Editors/Tile_Sets.htm">Tile Set Properties</a> which does the same thing, only for each tile in the set). The following image illustrates this:</p>
-  <p><img alt="Texture Page Results" class="center" src="../../assets/Images/Settings/Texture_Page_Results.png"/>Underneath those settings is the <strong>Separate Texture Page </strong>setting. This option will force GameMaker Studio 2 to place this image
-    on its own unique texture page and there are no options associated with this as the tiling or clamping is controlled directly through code. This is most commonly used for texturing 3D models (in which case the texture should be a power of 2, eg: 128x128,
-    512x512, 256x1024, etc...), but you can use it to force any image to be drawn to its own unique page.</p>
-  <p class="note"><strong>NOTE</strong>: Take care when using this option as you can quickly use up all the available texture memory, especially on mobile devices, if you have too many texture pages.</p>
-  <p>Now, when your game is large with a lot of artistic resources, it may be that the way GameMaker Studio 2 automatically creates these pages is not the optimum for getting the most out of the target device, due to the fact that if a room in your game
-    needs resources from 4 different texture pages, the device will have to swap these pages into (and out of) memory constantly, which may cause a loss in performance. To that end, you have the option to tell GameMaker Studio 2 what images are to be
-    placed on any specific texture page by assigning them to specific <strong>Texture Groups</strong>. The final aim of this is to minimise the number of swaps being done in a game at any one time (texture pages can added from the <a href="../Texture_Groups.htm">Texture Groups</a>    window).</p>
-  <p>It should be noted that in the individual platform tabs that can be found in the <a href="../Game_Options.htm">Game Options</a> there is a button that permits you to view the texture pages that you have defined, just as they would be created for each
-    target. This is very handy for working out how many pages are being created and what&#39;s on them.</p>
-  <p>Should you have a texture in your game that is larger than the maximum selected texture page size, then this will be <em>scaled down by half </em>(and half again if necessary) until it fits on the maximum page size. It will <em>not </em>be split into
-    sections over various texture pages. This means that when you test your game on Windows, Ubuntu (Linux) or MacOS the game may look fine as you are using larger texture pages, but on iOS (or any of the other targets that require a smaller texture page
-    size for optimal performance) the texture may look blurred or have artefacts. It is essential that you make sure your images are all able to fit on the smallest of the texture page sizes that your game will use, and if not then you should split them
-    into smaller images and then draw them together in your game to give the illusion of one large, complete, image.</p>
-  <p class="note"><strong>NOTE</strong>: Before you go off splitting up your graphics over various texture pages, you should be aware that this is not always necessary, nor is it always the most efficient way to work. Some games may be more CPU bound than GPU bound (see
-    the section on <a href="../../Introduction/Debugging.htm">Debugging</a> for more information) and those games will not benefit greatly from this optimisation, and you should also consider whether it would not be better to have all your images on two
-    texture pages and swap between them rather than spread out over several, which is just wasting memory.</p>
+  <h1>텍스처 페이지</h1>
+  <p>GameMaker Studio 2로 게임을 만들 때, 스프라이트, 타일셋 및 글꼴과 함께 그래픽을 만들었을 것입니다. 이 그래픽은 GameMaker Studio 2가 게임에 포함 된 모든 이미지 리소스에서 빌드 한 <strong>Texture Pages</strong> 에 저장됩니다. 아래는 완성 된 텍스처 페이지의 예입니다.</p>
+  <p><img alt="Texture Page Example" class="center" src="../../assets/Images/Settings/Texture_Page_Example.png"/>보시다시피, 게임 그래픽은 모두 2x 크기 페이지 (예 : 512x512, 1024x512 등)의 최대 크기 4096x4096 픽셀 페이지에 맞도록 서로 뒤섞입니다. 일부 대상은 2048x2048px보다 큰 페이지를 허용하지 않기 때문에 텍스처 페이지의 최대 크기는 선택한 내보내기 플랫폼에 따라 달라지며 대상 플랫폼 OS를 사용하는 모든 장치에 대해 사용 가능한 최대 크기가 최적이 아닐 수 있습니다. .</p>
+  <p>이미지에 빈 공간이 많이있는 경우 (예 : 투명 픽셀) 기본적으로 이러한 &quot;보이지 않는&quot;픽셀을 제거하고 가능한 한 많은 이미지를 단일 텍스처 페이지에 압축하기 위해 이미지가 잘립니다. 이것이 원하는 것이 아닌 경우, <a href="../Texture_Groups.htm">Texture Groups</a> 창에서 비활성화해야합니다.</p>
+  <p>사용 가능한 다양한 텍스처 설정이 이미지에 어떤 영향을 미치는지 이해하는 것이 중요하므로 아래에 표시된 <strong>Texture Settings</strong> 라는 <a href="../../The_Asset_Editors/Sprites.htm">스프라이트 편집기</a> 섹션을 살펴보십시오.</p>
+  <p><img alt="Texture Page Options" class="center" src="../../assets/Images/Settings/Texture_Page_Options.png"/>여기에서 이미지를 텍스처 페이지에 저장하는 방법과 3D 전용 이미지인지, 별도로 저장해야하는지, 그리고 어떤 텍스처 페이지 (있는 경우)를 할당해야하는지 정의 할 수 있습니다 몇 가지 다른 옵션으로 ( <a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a> 페이지의 epth에서 설명). 관심있는 옵션은 처음 두 가지입니다 : Tile Horizontal (타일 가로) 및 Tile Vertical (타일 세로). 텍스처 페이지에 배치 할 때 이미지의 가장자리가 생성되는 방식과 관련이 있습니다.</p>
+  <p>바둑판 식으로 배열 할 이미지는 반대쪽 가장자리에서 가장자리에 가로 (가로 또는 세로) 가장자리가 추가되고 타일링을 선택하지 않으면 스프라이트가 <em>고정</em> 되고 가장자리 픽셀이 반복됩니다 (타일 렛도 출력 경계 너비 <a href="../../The_Asset_Editors/Tile_Sets.htm">설정 (세트의</a> 각 타일에 대해서만 동일한 작업을 수행하는 <a href="../../The_Asset_Editors/Tile_Sets.htm">타일 ​​세트 속성에</a> 있음) 다음 이미지는이를 보여줍니다.</p>
+  <p><img alt="Texture Page Results" class="center" src="../../assets/Images/Settings/Texture_Page_Results.png"/>이 설정 아래에는 <strong>분리 텍스처 페이지</strong> 설정이 있습니다. 이 옵션을 사용하면 GameMaker Studio 2에서이 이미지를 고유 한 텍스처 페이지에 배치 할 수 있으며 타일링 또는 클램핑이 코드를 통해 직접 제어되므로 이와 관련된 옵션이 없습니다. 이것은 3D 모델의 텍스처링에 가장 일반적으로 사용되며 (이 경우 텍스처는 2의 거듭 제곱이어야합니다 (예 : 128x128, 512x512, 256x1024 등)). 이미지를 강제로 그려야합니다. 고유 한 페이지.</p>
+  <p class="note"><strong>참고</strong> : 텍스처 페이지가 너무 많은 경우 특히 모바일 장치에서 사용 가능한 모든 텍스처 메모리를 빠르게 사용할 수 있으므로이 옵션을 사용할 때는주의하십시오.</p>
+  <p>이제 게임에 많은 예술적 자원이있는 경우 GameMaker Studio 2가 자동으로 이러한 페이지를 생성하는 방식이 대상 장치를 최대한 활용하는 데 적합하지 않을 수 있습니다. 게임에 4 가지 텍스처 페이지의 리소스가 필요하기 때문에 장치는 이러한 페이지를 메모리로 (및 메모리에서) 지속적으로 교체해야하므로 성능이 저하 될 수 있습니다. 이를 위해 GameMaker Studio 2에게 특정 <strong>텍스처 그룹</strong> 에 이미지를 할당하여 특정 텍스처 페이지에 어떤 이미지를 배치할지 지정할 수 있습니다. 이것의 최종 목적은 스왑의 수 (텍스처 페이지가에서 추가 할 수 있습니다 한 번에 게임에서 수행되고있는 최소화하는 <a href="../Texture_Groups.htm">텍스처 그룹</a> 창).</p>
+  <p><a href="../Game_Options.htm">게임 옵션</a> 에서 찾을 수있는 개별 플랫폼 탭에는 각 대상에 대해 생성 된 것처럼 정의한 텍스처 페이지를 볼 수있는 버튼이 있습니다. 이것은 얼마나 많은 페이지가 만들어지고 있고 어떤 페이지에 무엇이 있는지를 계산하는 데 매우 편리합니다.</p>
+  <p>게임에서 선택한 최대 텍스처 페이지 크기보다 큰 텍스처가있는 경우 최대 페이지 크기에 맞을 때까지이 텍스처의 크기 <em>가 절반으로 줄어 듭니다</em> (필요한 경우 다시 절반). 다양한 텍스처 페이지의 섹션으로 분할 <em>되지 않습니다</em> . 즉, Windows, Ubuntu (Linux) 또는 MacOS에서 게임을 테스트 할 때 더 큰 텍스처 페이지를 사용할 때 게임이 좋지만 iOS (또는 최적의 성능을 위해 더 작은 텍스처 페이지 크기가 필요한 다른 대상)에서 게임이 잘 보일 수 있습니다. ) 질감이 흐리게 보이거나 인공물이있을 수 있습니다. 게임에서 사용할 텍스처 페이지 크기 중 가장 작은 이미지에 모두 이미지를 맞출 수 있는지 확인하는 것이 중요합니다. 그렇지 않은 경우 이미지를 작은 이미지로 분할 한 다음 게임에서 함께 그려야합니다. 하나의 크고 완전한 이미지의 환상.</p>
+  <p class="note"><strong>참고</strong> : 다양한 텍스처 페이지에 그래픽을 분할하기 전에 반드시 필요한 것은 아니며 작업하기에 가장 효율적인 방법도 아닙니다. 일부 게임은 GPU 바운드보다 CPU 바운드가 많을 수 있으며 (자세한 내용은 <a href="../../Introduction/Debugging.htm">디버깅</a> 섹션 참조) 이러한 게임은 이러한 최적화로 큰 이점을 얻지 못하고 모든 이미지를 두 개의 텍스처로 표시하는 것이 더 나은지 여부도 고려해야합니다. 여러 페이지에 분산되지 않고 페이지를 교환하고 메모리를 낭비하는 것입니다.</p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings/Texture_Information/Texture_Pages.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Texture_Groups.htm">Texture Groups</a></div>
-        <div style="float:right">Next: <a href="Non-Bitmap_Sprites.htm">Non-Bitmap Sprites</a></div>
+        <div style="float:left">목록: <a href="../Texture_Groups.htm">텍스처 그룹</a></div>
+        <div style="float:right">다음: <a href="Non-Bitmap_Sprites.htm">비트 맵이 아닌 스프라이트</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Texture Pages
@@ -131,4 +115,4 @@ Textures
 texture_pages
 -->
 
-</body></html>
+</body></html> 

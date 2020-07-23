@@ -71,7 +71,7 @@
         <span>physics_joint_gear_create</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,66 +81,62 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_joint_gear_create</h1>
-  <p>If you want to create a sophisticated mechanical contraption you might want to use gears. In principle you can create gears in GameMaker Studio 2 by using compounding instances to model gear teeth, but this is not very efficient and might be
-    tedious to author! Thankfully there is a simpler method, and that is to use a <i>gear joint</i>. To make one you need to have previously defined your fixtures and created the two basic joints that are going to comprise your gear - these <b>must</b>    be made up of one <a href="physics_joint_revolute_create.htm">revolute joint</a> and either a <a href="physics_joint_prismatic_create.htm">prismatic joint</a> or another <i>revolute joint</i>. The image below shows how a gear would typically be created
-    in a game:</p>
-  <p><img alt="Gear joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/gear_joint_image.png"/>So what happens? Well, once the two joints are added into the gear, interaction with one will have an
-    effect on the other, so in the example image above, if you rotate inst2, inst3 will move up and down, or if you move inst3 up and down then inst2 will rotate. You can also change the gear ratio, meaning that you need to move one instance more (or
-    less) to get the desired effect. The code in the example at the bottom shows how something like the image above can be created.</p>
-  <p class="note"><b>NOTE</b>: If you need to delete either of the two instances that are involved in the gear joint (or just delete their joints) then you <b>must</b> delete the gear joint first using <span style="font-size:1px;"><a href="physics_joint_delete.htm"><tt style="font-size: 14px">physics_joint_delete()</tt></a></span>    or else you will get an error!</p>
+  <p>정교한 기계식 잠금 장치를 만들려면 기어를 사용할 수 있습니다. 원칙적으로 컴 파운딩 인스턴스를 사용하여 기어 치형을 모델링하여 GameMaker Studio 2에서 기어를 만들 수 있지만, 이는 매우 효율적이지 않으며 제작하기가 지루할 수 있습니다! 고맙게도 더 간단한 방법이 있으며 <i>기어 조인트</i> 를 사용하는 것입니다. 하나를 만들려면 미리 픽스쳐를 정의하고 기어를 구성 할 두 개의 기본 조인트를 <b>만들어야합니다.</b> 이들은 하나의 <a href="physics_joint_revolute_create.htm">회전 조인트</a> 와 <a href="physics_joint_prismatic_create.htm">프리즘 조인트</a> 또는 다른 <i>회전 조인트로 구성되어야</i> 합니다. 아래 이미지는 일반적으로 게임에서 기어가 생성되는 방법을 보여줍니다.</p>
+  <p><img alt="Gear joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/gear_joint_image.png"/>어떻게됩니까? 일단 두 개의 조인트가 기어에 추가되면 하나와의 상호 작용이 다른 것과의 상호 작용에 영향을 미치므로 위의 예제 이미지에서 inst2를 회전하면 inst3이 위아래로 이동하거나 inst3을 위아래로 이동하면 inst2가 회전합니다. 기어비를 변경할 수도 있습니다. 즉, 원하는 효과를 얻으려면 하나의 인스턴스를 더 많이 (또는 더 적게) 이동해야합니다. 아래 예제의 코드는 위의 이미지와 같은 것을 만드는 방법을 보여줍니다.</p>
+  <p class="note"><b>참고</b> : 기어 조인트와 관련된 두 인스턴스 중 하나를 삭제하거나 조인트 <b>를</b> 삭제 <b>해야하는</b> 경우 먼저 <span style="font-size:1px;"><a href="physics_joint_delete.htm"><tt style="font-size: 14px">physics_joint_delete ()를</tt></a></span> 사용하여 기어 조인트를 삭제 <b>해야합니다.</b> 그렇지 않으면 오류가 발생합니다!</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">physics_joint_gear_create(inst1, inst2, joint_1, joint_2, ratio)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>inst1</td>
-        <td>The first instance to connect with the joint</td>
+        <td>조인트와 연결하는 첫 번째 인스턴스</td>
       </tr>
       <tr>
         <td>inst2</td>
-        <td>The second instance to connect with the joint</td>
+        <td>조인트와 연결할 두 번째 인스턴스</td>
       </tr>
       <tr>
         <td>joint_1</td>
-        <td>A previously defined <b>revolute</b> joint</td>
+        <td>이전에 정의 된 <b>회전</b> 조인트</td>
       </tr>
       <tr>
         <td>joint_2</td>
-        <td>A previously defined revolute <i>or</i> prismatic joint</td>
+        <td>이전에 정의 된 회전 <i>또는</i> 프리즘 조인트</td>
       </tr>
       <tr>
-        <td>ratio</td>
-        <td>Set the velocity ratio between the two joints</td>
+        <td>비율</td>
+        <td>두 조인트 사이의 속도 비율을 설정하십시오</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Integer (index of the joint)</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">var t_fix, g_fix, inst1, inst2, inst3, r_joint, p_joint;<br/> g_fix = physics_fixture_create();<br/> physics_fixture_set_box_shape(g_fix, 40, 10);<br/> t_fix = physics_fixture_create();<br/> physics_fixture_set_circle_shape(t_fix, 10);<br/> physics_fixture_set_density(t_fix,
     0.5);<br/> inst1 = instance_create_layer(60, room_height - 30, &quot;Background&quot;, obj_Ground);<br/> inst2 = instance_create_layer(40, room_height - 300, &quot;Instances&quot;, obj_Cog);<br/> inst3 = instance_create_layer(150, room_height - 300,
     &quot;Instances&quot;, obj_Barrel);<br/> physics_fixture_bind(g_fix, inst1);<br/> physics_fixture_bind(t_fix, inst2);<br/> physics_fixture_bind(t_fix, inst3);<br/> r_joint = physics_create_revolute_joint(inst1, inst2, 40, room_height - 300, -80, 80,
     1, 10, 0.5, 1, 0);<br/> p_joint = physics_create_prismatic_joint(inst1, inst3, 150, room_height - 300, 0, 1, -10, 10, true, 0, 0, 0, 0);<br/> physics_create_gear_joint(inst2, inst3, r_joint, p_joint, 0.5);</p>
-  <p>The above code creates and defines two fixture and then creates three instances, one &quot;obj_Ground&quot; and two others, &quot;obj_Cog&quot; and &quot;obj_Barrel&quot;. The fixtures are then bound to these instances and two joints are created. A
-    revolute joint between the ground and the cog, and a prismatic joint between the ground and the barrel. Finally a gear joint is created between the cog and barrel instances using the previously defined revolute and prismatic joints.</p>
+  <p>위의 코드는 두 개의 조명기를 만들고 정의한 다음 하나의 &quot;obj_Ground&quot;와 다른 두 개의 &quot;obj_Cog&quot;및 &quot;obj_Barrel&quot;인스턴스를 만듭니다. 그런 다음 고정구가 이러한 인스턴스에 바인딩되고 두 개의 조인트가 작성됩니다. 지면과 코그 사이의 회전 조인트 및지면과 배럴 사이의 프리즘 조인트. 마지막으로 미리 정의 된 회전 및 프리즘 조인트를 사용하여 코그와 배럴 인스턴스간에 기어 조인트가 생성됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Physics/Joints/physics_joint_gear_create.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_rope_create.htm">physics_joint_rope_create</a></div>
+        <div style="float:left">목록: <a href="Joints.htm">관절</a></div>
+        <div style="float:right">다음: <a href="physics_joint_rope_create.htm">physics_joint_rope_create</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 physics_joint_gear_create
@@ -149,4 +145,4 @@ physics_joint_gear_create
 physics_joint_gear_create
 -->
 
-</body></html>
+</body></html> 

@@ -3046,7 +3046,7 @@ body.media-desktop {
             font-size: 1.2em; }
   body.media-desktop div.topic a.to_top {
     position: absolute;
-    right: 8em;
+    right: 12em;
     bottom: 0;
     display: block;
     height: 3.5em;

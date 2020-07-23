@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Steam">
-        <span>Steam</span>
+        <span>증기</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,100 +80,78 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Steam</h1>
-  <p><img alt="Steam Event" class="center" src="../../../assets/Images/Asset_Editors/Async_Steam.png"/>This event can only be triggered by <a class="tooltip" title="A callback is simply a function that runs and then triggers another function (or code block) when it has finished doing whatever it was assigned to do. For example, the funtion sprite_add() will trigger a callback in the asynchronous Image Loaded event when the sprite has been loaded.">callback</a><span class="glossextra">s</span> from some of
-    the <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam.htm">Steam API</a> functions and will return a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> stored in the variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>,
-    containing different key/value pairs depending on the call-back from the function that has triggered the event. The map will always contain the key &quot;<span class="inline">event_type</span>&quot; which can then be parsed to find the type of function
-    that triggered the event and change the code required to suit.</p>
-  <p>When calling any function that triggers this event, it will generate a unique async ID value which should be stored in a variable and checked, as the async_load map will always contain an ID key which you can then parse and ensure that you are responding
-    to the correct event. In fact, the map will always hold the following keys, regardless of the Steam function used to generate the async response:</p>
+  <h1>증기</h1>
+  <p><img alt="Steam Event" class="center" src="../../../assets/Images/Asset_Editors/Async_Steam.png"/>이 이벤트는 일부 <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam.htm">Steam API</a> 함수의 <a class="tooltip" title="콜백은 단순히 실행 된 다음 수행 된 작업을 모두 마쳤을 때 다른 함수 (또는 코드 블록)를 트리거하는 함수입니다. 예를 들어, sprite_add () 함수는 스프라이트가로드 될 때 비동기 이미지로드 이벤트에서 콜백을 트리거합니다.">콜백에</a> 의해서만 트리거 될 수 있으며 이벤트를 트리거 한 함수의 <a class="tooltip" title="콜백은 단순히 실행 된 다음 수행 된 작업을 모두 마쳤을 때 다른 함수 (또는 코드 블록)를 트리거하는 함수입니다. 예를 들어, sprite_add () 함수는 스프라이트가로드 될 때 비동기 이미지로드 이벤트에서 콜백을 트리거합니다.">콜백</a> 에 따라 다른 키 / 값 쌍을 포함하는 변수 <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load에</span></a> 저장된 <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> 을 반환합니다. 맵에는 항상 &quot; <span class="inline">event_type</span> &quot;키가 포함되며, 이벤트를 트리거 한 함수 유형을 찾고 해당 코드를 변경하기 위해 구문 분석 할 수 있습니다.</p>
+  <p>이 이벤트를 트리거하는 함수를 호출 할 때 async_load 맵에는 항상 구문 분석 할 수있는 ID 키가 포함되므로 변수에 저장하고 확인해야하는 고유 한 비동기 ID 값을 생성합니다. 올바른 이벤트. 실제로 비동기 응답을 생성하는 데 사용 된 Steam 기능에 관계없이 맵에는 항상 다음 키가 있습니다.</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">id</span>&quot; - The async ID returned by the function that triggered the event</li>
-    <li>&quot;<span class="inline">result</span>&quot; - The result of the operation (a real value). This will either be the GML constant <span class="inline">ugc_result_success</span> or some other real number. You should check for this constant to ensure
-      that the call was successful, and if another value is returned something has not worked correctly. The rest of the possible values returned are shown as the result of the Steam &quot;<span class="inline">EResult</span>&quot; value and you should
-      see <span class="inline">steamclientpublic.h</span> in the SDK headers for all possible values.</li>
-    <li>&quot;<span class="inline">event_type</span>&quot; - A string denoting the type of event (see below for the details)</li>
+    <li>&quot; <span class="inline">id</span> &quot;-이벤트를 트리거 한 함수가 리턴 한 비동기 ID</li>
+    <li>&quot; <span class="inline">result</span> &quot;-작업 결과 (실제 값). 이것은 GML 상수 <span class="inline">ugc_result_success</span> 또는 다른 실수입니다. 이 상수를 확인하여 호출이 성공했는지 확인하고 다른 값이 리턴되면 무언가 올바르게 작동하지 않았는지 확인해야합니다. 반환 된 나머지 가능한 값은 Steam &quot; <span class="inline">EResult</span> &quot;값의 결과로 표시되며 SDK 헤더에 <span class="inline">steamclientpublic.h</span> 가 표시되어 가능한 모든 값이 표시됩니다.</li>
+    <li>&quot; <span class="inline">event_type</span> &quot;-이벤트 유형을 나타내는 문자열 (자세한 내용은 아래 참조)</li>
   </ul>
   <p> </p>
-  <h2>Uploading Data</h2>
-  <p>When using the Steam functions for uploading a leaderboard (either <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_upload_score.htm"><span class="inline">steam_upload_score()</span></a> or <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_upload_score_buffer.htm"><span class="inline">steam_upload_score_buffer()</span></a>)
-    the returned DS map will have the following key/value pairs:</p>
+  <h2>데이터 업로드</h2>
+  <p>리더 보드 ( <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_upload_score.htm"><span class="inline">steam_upload_score ()</span></a> 또는 <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_upload_score_buffer.htm"><span class="inline">steam_upload_score_buffer ()</span></a> )를 업로드하기 위해 Steam 함수를 사용할 때 반환 된 DS 맵은 다음과 같은 키 / 값 쌍을 갖습니다.</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the value &quot;<span class="inline">leaderboard_upload</span>&quot;</li>
-    <li>&quot;<span class="inline">post_id</span>&quot; - This key should match the ID value returned by the upload calling function</li>
-    <li>&quot;<span class="inline">lb_name</span>&quot; - This key holds the name of the leaderboard which was posted to</li>
-    <li>&quot;<span class="inline">success</span>&quot; - Will be 1 if the post succeeded, 0 failed</li>
-    <li>&quot;<span class="inline">updated</span>&quot; - Will be 1 if the leaderboard score was actually updated (ie: the new score was better) or 0 otherwise</li>
-    <li>&quot;<span class="inline">score</span>&quot; - This key holds the score which was posted</li>
+    <li>&quot; <span class="inline">event_type</span> &quot;-이 키는 &quot; <span class="inline">leaderboard_upload</span> &quot;값을 보유합니다</li>
+    <li>&quot; <span class="inline">post_id</span> &quot;-이 키는 업로드 호출 함수가 반환 한 ID 값과 일치해야합니다.</li>
+    <li>&quot; <span class="inline">lb_name</span> &quot;-이 키에는 게시 된 리더 보드의 이름이 있습니다.</li>
+    <li>&quot; <span class="inline">성공</span> &quot;-게시물이 성공하면 1이되고 0은 실패합니다.</li>
+    <li>&quot; <span class="inline">업데이트</span> &quot;-순위표 점수가 실제로 업데이트 된 경우 1이되고 (예 : 새 점수가 높을 경우) 0이 아닌 경우</li>
+    <li>&quot; <span class="inline">score</span> &quot;-이 키는 게시 된 점수를 보유합니다</li>
   </ul>
-  <p>You can see examples of this on the pages for the score upload functions.</p>
+  <p>점수 업로드 기능에 대한 페이지에서이 예제를 볼 수 있습니다.</p>
   <p> </p>
-  <h2>Downloading Leaderboards</h2>
-  <p>When using the Steam functions for downloading a leaderboard (<a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_download_scores.htm"><span class="inline">steam_download_scores()</span></a>, <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_download_scores_around_user.htm"><span class="inline">steam_download_scores_around_user()</span></a> or
-    <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_download_friends_scores.htm"><span class="inline">steam_download_friends_scores()</span></a>) the returned DS map will have the following key/value pairs:</p>
+  <h2>리더 보드 다운로드</h2>
+  <p>리더 보드 ( <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_download_scores.htm"><span class="inline">steam_download_scores ()</span></a> , <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_download_scores_around_user.htm"><span class="inline">steam_download_scores_around_user ()</span></a> 또는 <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_download_friends_scores.htm"><span class="inline">steam_download_friends_scores ()</span></a> )를 다운로드하기 위해 Steam 함수를 사용할 때 반환 된 DS 맵에는 다음과 같은 키 / 값 쌍이 있습니다.</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the value &quot;<span class="inline">leaderboard_download</span>&quot;</li>
-    <li>&quot;<span class="inline">id</span>&quot; - This key should match the ID value returned by the download calling function</li>
-    <li>&quot;<span class="inline">status</span>&quot; - The status of the callback, where -1 equals a failure or that no results were returned, and 0 equals a success.</li>
-    <li>&quot;<span class="inline">lb_name</span>&quot; - This key holds the name of the leaderboard which was posted to</li>
-    <li>&quot;<span class="inline">numEntries</span>&quot; - The number of &quot;rows&quot; of leaderboard data that is being returned.</li>
-    <li>&quot;<span class="inline">entries</span>&quot; - A JSON object string that contains another DS map, which will either contain the key &quot;<span class="inline">default</span>&quot; (signifying that no results are contained within) or the key &quot;
-      <span class="inline">entries</span>&quot;, which you can then get the value of. This returned value for &quot;<span class="inline">entries</span>&quot; will be a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS list</a>      containing each of the ranks from the leaderboard, where each entry in the list will itself reference another DS Map which will contain the keys &quot;<span class="inline">name</span>&quot;, &quot;<span class="inline">score</span>&quot; and &quot;
-      <span class="inline">rank</span>&quot;, and it may also contain a &quot;<span class="inline">data</span>&quot; key depending on the function used to upload.</li>
+    <li>&quot; <span class="inline">event_type</span> &quot;-이 키는 &quot; <span class="inline">leaderboard_download</span> &quot;값을 보유합니다</li>
+    <li>&quot; <span class="inline">id</span> &quot;-이 키는 다운로드 호출 함수가 반환 한 ID 값과 일치해야합니다.</li>
+    <li>&quot; <span class="inline">status</span> &quot;-콜백의 상태로, -1은 실패이거나 결과가 반환되지 않았으며 0은 성공입니다.</li>
+    <li>&quot; <span class="inline">lb_name</span> &quot;-이 키에는 게시 된 리더 보드의 이름이 있습니다.</li>
+    <li>&quot; <span class="inline">numEntries</span> &quot;-반환되는 리더 보드 데이터의 &quot;행&quot;수입니다.</li>
+    <li>&quot; <span class="inline">entries</span> &quot;-키 &quot; <span class="inline">default</span> &quot;(결과가 포함되지 않음을 나타냄) 또는 키 &quot; <span class="inline">entries</span> &quot;를 포함하는 다른 DS 맵이 포함 된 JSON 객체 문자열입니다. 그러면 값을 얻을 수 있습니다. &quot; <span class="inline">entry</span> &quot;에 대한이 반환 값은 순위표의 각 순위가 포함 된 <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS 목록</a> 이되며, 목록의 각 항목 자체는 &quot; <span class="inline">name</span> &quot;, &quot; <span class="inline">score</span> &quot;및 &quot; <span class="inline">rank</span> &quot;키를 포함하는 다른 DS Map을 참조합니다. 업로드에 사용 된 기능에 따라 &quot; <span class="inline">data</span> &quot;키를 포함 할 수도 있습니다.</li>
   </ul>
-  <p>We will show an example of how downloading score data works by requesting the top ten ranking for the given leaderboard and parsing its results in the Steam Async Event (for uploading examples, please see the appropriate function pages). To start with
-    we need to request the scores with the following code:</p>
+  <p>주어진 순위표에 상위 10 개 순위를 요청하고 결과를 Steam Async Event에서 파싱하여 점수 데이터 다운로드가 작동하는 방법의 예를 보여줍니다 (업로드 예는 해당 기능 페이지 참조). 시작하려면 다음 코드로 점수를 요청해야합니다.</p>
   <p class="code">score_get = steam_download_scores(&quot;Game Scores&quot;, 1, 10);</p>
-  <p>This will send off a request to the Steam Server for the scores from the leaderboard &quot;Game Scores&quot;, storing the async ID of the request in the variable &quot;<span class="inline">score_get</span>&quot;. This will then be handled in the <strong>Steam Async Event</strong>    in the following way:</p>
+  <p>그러면 리더 보드 &quot;Game Scores&quot;에서 점수를 요청하고 변수 &quot; <span class="inline">score_get</span> &quot;에 요청의 비동기 ID를 저장하여 Steam Server에 요청을 보냅니다. 그런 다음 <strong>Steam 비동기 이벤트</strong> 에서 다음과 같은 방식으로 처리됩니다.</p>
   <p class="code">var async_id = ds_map_find_value(async_load, &quot;id&quot;);<br/> if async_id == score_get<br/>    {<br/>    var entries = ds_map_find_value(async_load, &quot;entries&quot;);<br/>    var map = json_decode(entries);<br/>    if ds_map_exists(map, &quot;default&quot;)<br/>        {<br/>       ds_map_destroy(map);<br/>       exit;<br/>       }<br/>    else<br/>       {<br/>       var list = ds_map_find_value(map, &quot;entries&quot;);<br/>       var len = ds_list_size(list);<br/>       var entry;<br/>       for(var i =
     0; i &lt; len; i++;)<br/>          {<br/>          entry = ds_list_find_value(list, i );<br/>          steam_name[i] = ds_map_find_value(entry, &quot;name&quot;);<br/>          steam_score[i] = ds_map_find_value(entry, &quot;score&quot;);<br/>    steam_rank[i]
     = ds_map_find_value(entry, &quot;rank&quot;);<br/>          if (ds_map_exists(entry, &quot;data&quot;))<br/>             {<br/>             var data = ds_map_find_value(entry, &quot;data&quot;);<br/>             var buffId = buffer_base64_decode(data);<br/>              var message = buffer_read(buffId, buffer_string);<br/>             show_debug_message( &quot; -- attached message: &quot; + string(message));<br/>             buffer_delete(buffId);<br/>             }<br/>          ds_map_destroy(entry);<br/>           }<br/>       ds_list_destroy(list)<br/>       }<br/>    ds_map_destroy(map)<br/>    }</p>
-  <p>What we do here is first check the &quot;<span class="inline">id</span>&quot; key of the special async_load map. If this value is the same as the value of the original callback function (stored in the &quot;<span class="inline">score_get</span>&quot;
-    variable) we then continue to process the data. The first thing we do is parse the <span class="inline">async_load</span> DS Map for the key &quot;<span class="inline">entries</span>&quot; which will contain a JSON object containing the leaderboard
-    data. This JSON object is then decoded (see <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_decode.htm"><span class="inline">json_decode()</span></a>) as another DS Map, and this new map ID is stored in the
-    variable &quot;<span class="inline">map</span>&quot;.</p>
-  <p>This map is checked for the key &quot;<span class="inline">default</span>&quot; and if that is found then the map is destroyed and the event is exited. If no &quot;<span class="inline">default</span>&quot; key is found, the code will then parse the
-    map to extract the necessary information about the leaderboard, by first extracting a DS List from the &quot;<span class="inline">entries</span>&quot; key of the DS Map, and then looping through each entry of the list to get another DS Map with the
-    <span class="inline">name</span>, <span class="inline">score</span> and <span class="inline">rank</span> of each entry. These values are then stored in arrays and then we check to see if there is an additional &quot;<span class="inline">data</span>&quot;
-    key. If there is (ie: the score was uploaded with an additional data package) then we also parse that and send it to the compiler console for debugging, before destroying the buffer and then continuing on to destroy the map. Note that if the &quot;
-    <span class="inline">data</span>&quot; key is included, it needs to be decoded using the <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_base64_decode.htm"><span class="inline">buffer_base64_decode()</span></a> function before it
-    can be correctly read.</p>
-  <p>Once the loop has finished, the entries list is destroyed as is the map that it was taken from. There is no need to destroy the <span class="inline">async_load</span> DS Map as this is handled for you by GameMaker Studio 2.</p>
+  <p>여기서하는 일은 먼저 특수한 async_load 맵의 &quot; <span class="inline">id</span> &quot;키를 확인하는 것입니다. 이 값이 원래 콜백 함수의 값 ( &quot; <span class="inline">score_get</span> &quot;변수에 저장 됨)의 값과 동일한 경우 데이터를 계속 처리합니다. 가장 먼저 할 일은 리더 보드 데이터를 포함하는 JSON 객체를 포함하는 &quot; <span class="inline">entry</span> &quot;키에 대한 <span class="inline">async_load</span> DS Map을 구문 분석하는 것입니다. 그런 다음이 JSON 객체가 다른 DS 맵으로 디코딩되고 ( <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_decode.htm"><span class="inline">json_decode ()</span></a> 참조 <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_decode.htm"><span class="inline">)</span></a> 이 새 맵 ID는 변수 &quot; <span class="inline">map</span> &quot;에 저장됩니다.</p>
+  <p>이 맵은 &quot; <span class="inline">default</span> &quot;키에 대해 점검되며, 발견되면 맵이 삭제되고 이벤트가 종료됩니다. &quot; <span class="inline">기본</span> &quot;키가 없으면 코드는지도를 구문 분석하여 먼저 DS 맵의 &quot; <span class="inline">항목</span> &quot;키에서 DS 목록을 추출한 다음지도의 각 항목을 반복하여 리더 보드에 대한 필요한 정보를 추출합니다. 각 항목의 <span class="inline">이름</span> , <span class="inline">점수</span> 및 <span class="inline">순위</span> 가 포함 된 다른 DS 맵을 가져 오려면 list를 입력하십시오. 이러한 값은 배열에 저장되고 추가 &quot; <span class="inline">데이터</span> &quot;키가 있는지 확인합니다. 이 경우 (즉, 추가 데이터 패키지로 점수가 업로드 된 경우) 버퍼를 파기 한 다음 맵을 계속 파괴하기 전에이를 파싱하여 디버깅을 위해 컴파일러 콘솔로 보냅니다. &quot; <span class="inline">data</span> &quot;키가 포함 된 경우 올바르게 읽으려면 <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_base64_decode.htm"><span class="inline">buffer_base64_decode ()</span></a> 함수를 사용하여 디코딩해야합니다.</p>
+  <p>루프가 완료되면 항목 목록은 가져온 맵과 같이 삭제됩니다. <span class="inline">async_load</span> DS 맵은 GameMaker Studio 2에서 처리하므로 <span class="inline">async_load</span> DS 맵을 삭제할 필요가 없습니다.</p>
   <p> </p>
-  <h2>Downloading UGC (user Generated Content)</h2>
-  <p>When using the Steam functions for downloading <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_UGC/Steam_UGC.htm">User Generated Content (UGC)</a>, a number of them will trigger this event. However, each function will generate an
-    <span class="inline">async_load</span> DS Map with differing key/value pairs (although they will always contain the general &quot;<span class="inline">id</span>&quot;, &quot;<span class="inline">result</span>&quot; and &quot;<span class="inline">event_type</span>&quot;
-      keys), so please see the page specific to the function being used for details and examples.</p>
+  <h2>UGC 다운로드 (사용자 생성 컨텐츠)</h2>
+  <p><a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_UGC/Steam_UGC.htm">UGC (User Generated Content)</a> 를 다운로드하기 위해 Steam 기능을 사용할 때 다수의 기능이이 이벤트를 트리거합니다. 그러나 각 함수는 서로 다른 키 / 값 쌍을 사용하여 <span class="inline">async_load</span> DS Map을 생성합니다 (항상 일반 &quot; <span class="inline">id</span> &quot;, &quot; <span class="inline">result</span> &quot;및 &quot; <span class="inline">event_type</span> &quot;키를 포함하지만)에는 사용중인 함수와 관련된 페이지를 참조하십시오. 세부 사항 및 예.</p>
   <p> </p>
-  <h2>Unique UGC Events</h2>
-  <p>The Steam Async Event can also be triggered when a user subscribes to an item outside of the game - for example, they tab away to a browser and subscribe to a new item then tab back to the game. In these cases the <span class="inline">async_load</span>    map will only contain the following details (and none of the default values listed at the top of this page):</p>
+  <h2>고유 한 UGC 이벤트</h2>
+  <p>사용자가 게임 외부의 항목을 구독 할 때 Steam 비동기 이벤트가 트리거 될 수도 있습니다. 예를 들어, 브라우저를 탭하고 새 항목을 구독 한 다음 게임으로 다시 탭합니다. 이 경우 <span class="inline">async_load</span> 맵에는 다음 세부 사항 만 포함 <span class="inline">되며이</span> 페이지의 맨 위에 나열된 기본값은 없습니다.</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the constant <span class="inline">ugc_item_installed</span>.</li>
-    <li>&quot;<span class="inline">published_file_id</span>&quot; - the ID of the newly installed UGC item (you can use the function <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_UGC/steam_ugc_get_item_update_info.htm"><span class="inline">steam_ugc_get_item_install_info()</span></a> to
-      get the path to the installed item)</li>
+    <li>&quot; <span class="inline">event_type</span> &quot;-이 키는 상수 <span class="inline">ugc_item_installed를</span> 유지합니다.</li>
+    <li>&quot; <span class="inline">published_file_id</span> &quot;-새로 설치된 UGC 항목의 ID ( <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam_UGC/steam_ugc_get_item_update_info.htm"><span class="inline">steam_ugc_get_item_install_info ()</span></a> 함수를 사용하여 설치된 항목의 경로를 가져올 수 있음)</li>
   </ul>
-  <p>The Steam Async event can also be triggered when a workshop item is subscribed to - either from within the app, or externally from a workshop browser - and in these cases the <span class="inline">async_load</span> map will contain the following key/value
-    pairs:</p>
+  <p>워크샵 항목이 앱 내에서 또는 워크샵 브라우저에서 외부로 구독 될 때 Steam Async 이벤트가 트리거 될 수도 있습니다.이 경우 <span class="inline">async_load</span> 맵에는 다음 키 / 값 쌍이 포함됩니다.</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the constant <span class="inline">ugc_item_subscribed</span>.</li>
-    <li>&quot;<span class="inline">published_file_id</span>&quot; : This key has the published file ID of the newly subscribed item</li>
+    <li>&quot; <span class="inline">event_type</span> &quot;-이 키는 상수 <span class="inline">ugc_item_subscribed를</span> 보유합니다.</li>
+    <li>&quot; <span class="inline">publish_file_id</span> &quot;:이 키에는 새로 구독 한 항목의 게시 된 파일 ID가 있습니다.</li>
   </ul>
-  <p>The event will be triggered should any item be un-subscribed too, with the DS map holding the following:</p>
+  <p>DS 맵이 다음을 보유한 상태에서 모든 항목을 구독 취소하면 이벤트가 트리거됩니다.</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the constant <span class="inline">ugc_item_unsubscribed</span>.</li>
-    <li>&quot;<span class="inline">published_file_id</span>&quot; : This key has the published file ID of the un-subscribed item</li>
+    <li>&quot; <span class="inline">event_type</span> &quot;-이 키는 상수 <span class="inline">ugc_item_unsubscribed를</span> 보유합니다.</li>
+    <li>&quot; <span class="inline">published_file_id</span> &quot;:이 키에는 구독 취소 된 항목의 게시 된 파일 ID가 있습니다.</li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Object_Properties/Async_Events/Steam.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="System.htm">System</a></div>
+        <div style="float:left">목록: <a href="../Async_Events.htm">비동기 이벤트</a></div>
+        <div style="float:right">다음: <a href="System.htm">체계</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Steam Event
@@ -188,4 +166,4 @@ ugc_item_unsubscribed
 ev_web_steam
 -->
 
-</body></html>
+</body></html> 

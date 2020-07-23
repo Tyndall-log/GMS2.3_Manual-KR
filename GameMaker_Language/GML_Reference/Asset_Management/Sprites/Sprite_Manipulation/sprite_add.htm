@@ -71,7 +71,7 @@
         <span>sprite_add</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,81 +81,72 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_add</h1>
-  <p>With this function you can add an image as a sprite, loading it from an external source where the image file to be loaded should <b>always</b> be in either <tt>*.png</tt>, <tt>*.gif</tt>, <tt>*.jpg/jpeg</tt> or <tt>*.json</tt> format (<tt>*json</tt>    files are used for loading <a href="../Skeletal_Animation/Skeletal_Animation.htm">skeleton animation sprites</a> made with Spine). The function returns the new sprite index which must then be used in all further codes that relate to the sprite. If
-    you use this function with HTML5 or are getting an image from an URL, this function will also generate an <b>Image Loaded</b> asynchronous event. See <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">The Asynchronous Event</a>    page for more information.</p>
-  <p>All images that are to be turned into animated sprites - except for <tt>*.gif</tt> (see below) - should have a &quot;strip&quot; format (see the image below) and it will be split into the number of sub-images specified following the rule <b>sprite width = strip width / sub images</b>.</p>
+  <p>이 기능을 사용하면로드 할 이미지 파일이 <b>항상</b> <tt>* .png</tt> , <tt>* .gif</tt> , <tt>* .jpg / jpeg</tt> 또는 <tt>* .json</tt> 형식이어야하는 외부 소스에서 이미지를 스프라이트로 추가 할 수 있습니다 ( <tt>* json</tt> 파일은 Spine으로 만든 <a href="../Skeletal_Animation/Skeletal_Animation.htm">스켈레톤 애니메이션 스프라이트</a> 를로드하는 데 사용됩니다. 이 함수는 새 스프라이트 인덱스를 반환하고 스프라이트와 관련된 모든 추가 코드에서 사용해야합니다. 이 함수를 HTML5와 함께 사용하거나 URL에서 이미지를 가져 오는 경우이 함수는 <b>이미지로드 된</b> 비동기 이벤트도 생성합니다. 자세한 내용 <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">은 비동기 이벤트</a> 페이지를 참조하십시오.</p>
+  <p><tt>* .gif</tt> (아래 참조)를 제외한 애니메이션 스프라이트로 변환 될 모든 이미지는 &quot;스트립&quot;형식이어야하며 (아래 이미지 참조) 규칙에 따라 지정된 하위 이미지 수로 분할됩니다. <b>스프라이트 너비 = 스트립 너비 / 하위 이미지</b> .</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png"/></p>
-  <p>As you can see in the above image, the sprite has been placed on a dark purple background, and this can be removed by setting the &quot;removeback&quot; argument to <tt>true</tt>. This works by checking the <i>bottom left</i> pixel of the sprite for
-    the colour there and then uses that as the colour to be removed. For example, in the above image, if we had the bottom left pixel colour as green, all the green parts of the sprite would have been removed and the rest of the purple background ignored.</p>
-  <p>If you choose the &quot;removeback&quot; option, you may also want GameMaker Studio 2 to smooth the edges of the sprite by setting the &quot;smooth&quot; argument to <tt>true</tt>. All this does is create a semi-transparent border around the edges of
-    the sprite after it has had its background removed.</p>
-  <p>Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is &quot;fixed&quot; onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of one sprite sub-image. So,
-    for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have its origin in the center.</p>
-  <p>If you are adding a <tt>*.gif</tt> format image, then you only need to specify the filename and image number (which should be 1 for the first frame) and can leave all the other arguments as 0, noting that <b>only the first image of the GIF will be loaded</b>.
-    For <tt>*.json</tt> sprites, the image number should be 1, and the &quot;removeback&quot; and &quot;smooth&quot; settings will be ignored.</p>
-  <p>By default all new sprites have their bounding boxes calculated automatically (the exact bounding box will depend on the size and transparency of the sprite), however you may wish to customise this, in which case you should also use the function
-    <a href="sprite_collision_mask.htm"><tt>sprite_collision_mask()</tt></a>.</p>
-  <p>It should be noted that the memory used when adding a sprite in this way will be larger than you may expect. This is because GameMaker Studio 2 will store the sprite as a texture page <i>and</i> it will also be stored in GPU memory, so the total memory
-    will be larger than would be expected for an image file of the same sprite.</p>
-  <p class="note"><b>NOTE:</b> When you load a sprite into GameMaker Studio 2 you must remember to remove it again (with <a href="sprite_delete.htm"><tt>sprite_delete()</tt></a>) when no longer needed, otherwise there is risk of a memory leak which will slow down and
-    eventually crash your game.</p>
-  <p class="note"><b>NOTE</b>: On <b>iOS</b>, if you are loading an included file from a folder, ie: with a path something like &quot;<span style="font-size:1px;"><tt>Backgrounds/background1.png</tt></span>&quot;, you do NOT need to include the folder as part of the
-    path and simply supplying the file name is sufficient. On all other platforms you must supply the folder(s) as part of the path to the file.</p>
-  <p class="note"><b>NOTE</b>: On <b>HTML5</b>, if you are loading a sprite from a secure server you may need to set the cross-origin type and use a relative path instead of an absolute path. See <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><tt style="font-size: 14px">http_set_request_crossorigin()</tt></a></span> for
-    more details.</p>
+  <p>위 이미지에서 볼 수 있듯이 스프라이트는 진한 자주색 배경에 배치되었으며 &quot;removeback&quot;인수를 <tt>true</tt> 로 설정하여 제거 할 수 있습니다. 스프라이트의 <i>왼쪽 아래</i> 픽셀에서 색상을 확인한 다음 제거 할 색상으로 사용합니다. 예를 들어 위의 이미지에서 왼쪽 아래 픽셀 색상이 녹색이면 스프라이트의 모든 녹색 부분이 제거되고 나머지 자주색 배경은 무시됩니다.</p>
+  <p>&quot;removeback&quot;옵션을 선택하면, &quot;smooth&quot;인수를 <tt>true</tt> 로 설정하여 GameMaker Studio 2가 스프라이트의 가장자리를 부드럽게 할 수도 있습니다. 이 모든 것은 스프라이트의 배경을 제거한 후 스프라이트 가장자리 주위에 반투명 테두리를 만드는 것입니다.</p>
+  <p>마지막으로 스프라이트의 x 및 y <i>원점</i> 을 지정할 수도 있습니다. 이것은 스프라이트가 그것을 사용하는 인스턴스에 스프라이트가 &quot;고정 된&quot;지점이며, 항상 하나의 스프라이트 서브 이미지의 왼쪽 상단의 0,0을 기준으로 계산됩니다. 예를 들어,이 값이 (16,16)으로 설정된 32 x 32 픽셀 인 스프라이트는 중심에 원점이 있습니다.</p>
+  <p><tt>* .gif</tt> 형식 이미지를 추가하는 경우 파일 이름과 이미지 번호 (첫 번째 프레임의 경우 1이어야 함) 만 지정하고 다른 모든 인수는 0으로 남겨 둘 수 있습니다 <b>. GIF가로드됩니다</b> . <tt>* .json</tt> 스프라이트의 경우 이미지 번호는 1이어야하며 &quot;removeback&quot;및 &quot;smooth&quot;설정은 무시됩니다.</p>
+  <p>기본적으로 모든 새 스프라이트에는 경계 상자가 자동으로 계산됩니다 (정확한 경계 상자는 스프라이트의 크기와 투명도에 따라 <a href="sprite_collision_mask.htm"><tt>다름)</tt></a> . 그러나이를 사용자 정의 할 수 있습니다.이 경우 <a href="sprite_collision_mask.htm"><tt>sprite_collision_mask ()</tt></a> 함수도 사용해야합니다.</p>
+  <p>이런 식으로 스프라이트를 추가 할 때 사용되는 메모리는 예상보다 클 것입니다. GameMaker 스튜디오 2는 텍스처 페이지로 스프라이트를 저장하기 때문입니다 <i>및</i> 총 메모리가 같은 스프라이트의 이미지 파일에 대해 예상되는 것보다 클 수 있도록 그것은 또한, GPU 메모리에 저장됩니다.</p>
+  <p class="note"><b>참고 :</b> Sprite를 GameMaker Studio 2에로드 할 때 더 이상 필요하지 않은 경우 스프라이트를 다시 제거해야합니다 ( <a href="sprite_delete.htm"><tt>sprite_delete () 사용</tt></a> ). 그렇지 않으면 메모리 누수로 인해 속도가 느려지고 게임이 충돌 할 수 있습니다.</p>
+  <p class="note"><b>참고</b> : <b>iOS</b> 의 경우 폴더에서 포함 된 파일을로드하는 경우 (예 : &quot; <span style="font-size:1px;"><tt>Backgrounds / background1.png</tt></span> &quot;와 같은 경로로) 폴더를 경로의 일부로 포함하지 않고 파일 이름 만 제공하면됩니다. 충분하다. 다른 모든 플랫폼에서는 파일 경로의 일부로 폴더를 제공해야합니다.</p>
+  <p class="note"><b>참고</b> : <b>HTML5</b> 의 경우 보안 서버에서 스프라이트를로드하는 경우 교차 출처 유형을 설정하고 절대 경로 대신 상대 경로를 사용해야합니다. 자세한 내용은 <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><tt style="font-size: 14px">http_set_request_crossorigin ()</tt></a></span> 을 참조하십시오.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>fname</td>
-        <td>The name (a string file path) of the file to add.</td>
+        <td>추가 할 파일의 이름 (문자열 파일 경로)입니다.</td>
       </tr>
       <tr>
         <td>imgnum</td>
-        <td>Use to indicate the number of sub-images (1 for a single image or for a <tt>*.gif</tt>).</td>
+        <td>하위 이미지 수를 나타내는 데 사용합니다 (단일 이미지 또는 <tt>* .gif의 경우 1</tt> ).</td>
       </tr>
       <tr>
-        <td>removeback</td>
-        <td>Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</td>
+        <td>제거</td>
+        <td>배경색 (왼쪽 아래 픽셀)이있는 모든 픽셀을 투명하게 만들지 여부를 나타냅니다.</td>
       </tr>
       <tr>
-        <td>smooth</td>
-        <td>Indicates whether to smooth the edges if transparent.</td>
+        <td>부드러운</td>
+        <td>투명한 경우 가장자리를 매끄럽게할지 여부를 나타냅니다.</td>
       </tr>
       <tr>
-        <td>xorig</td>
-        <td>Indicate the x position of the origin in the sprite.</td>
+        <td>코 리그</td>
+        <td>스프라이트에서 원점의 ​​x 위치를 나타냅니다.</td>
       </tr>
       <tr>
         <td>yorig</td>
-        <td>Indicate the y position of the origin in the sprite.</td>
+        <td>스프라이트에서 원점의 ​​y 위치를 나타냅니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real (sprite ID value)</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">spr = sprite_add(&quot;player_5.png&quot;, 16, true, true, 0, 0);</p>
-  <p>The above code loads a sprite into the game and stores its index in the variable &quot;spr&quot;.</p>
+  <p>위의 코드는 스프라이트를 게임에로드하고 해당 인덱스를 변수 &quot;spr&quot;에 저장합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_replace.htm">sprite_replace</a></div>
+        <div style="float:left">목록: <a href="Sprite_Manipulation.htm">스프라이트 조작</a></div>
+        <div style="float:right">다음: <a href="sprite_replace.htm">sprite_replace</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 sprite_add
@@ -164,4 +155,4 @@ sprite_add
 sprite_add
 -->
 
-</body></html>
+</body></html> 

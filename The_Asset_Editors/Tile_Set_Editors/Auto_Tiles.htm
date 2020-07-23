@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Auto Tiles">
-        <span>Auto Tiles</span>
+        <span>자동 타일</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,40 +80,29 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Auto Tiles</h1>
-  <p>The <strong>Auto Tile</strong> feature is an incredibly powerful tool that can be used to make level building much easier, whether it is for a top down or side on view project. Essentially, you create an auto tile <em>library</em>, and then whenever
-    you lay down a tile from that library it will &quot;connect&quot; with those tiles that are around it to create a seamless wall or platform.</p>
-  <p>Before you start using the auto tile feature however, it is very important that you have set up the tile set sprite correctly and that you choose an appropriate type of auto tile. The types available to you are <strong>47 tile </strong>auto tiles, or
-    <strong>16 tile </strong>auto tiles, with (in general) 16 tiles being used for top down or landscapes (since they give nicer transitions) and 47 being used for platformer/side on views or topdown where walls require multiple connections, but that
-    is by no means a hard and fast rule and will depend on how you want your final project to look.</p>
-  <p>The image below shows a typical 47 tile and 16 tile tile set for autotiling:</p>
-  <p><img alt="Two Autotile Examples" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Autotiles.png"/>Now, just looking at the images doesn&#39;t really tell you how they will fit together so we&#39;ll open the <strong>Autotile Editor</strong>    from the <a href="../Tile_Sets.htm">Tile Set Editor</a> and add them. The Autotile Editor looks like this:</p>
-  <p><img alt="Autotile Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_AutotileEditor.png"/>Note that the tile set sprite being used has ALL the tiles we require, and can also have other tiles, since you can pick and choose
-    which ones to be in the auto tile. You can now click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on the 47 tile button in the Templates area to create a new 47 tile library entry and it will
-    bring up the template to use for selecting the tiles you need:</p>
-  <p><img alt="47 Tile Template" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_47tiles.png"/>In the template, the light grey area represents the outside edge of the tile being used and the darker grey is the &quot;fill&quot; area.
-    To add a tile into the template, simply click on the first available template cell and then select the tile to add from the left:</p>
-  <p><img alt="Adding Auto Tiles To The Library" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Add_AutoTiles.gif"/>If you make a mistake, simply select the autotile that you want to remove and select the &quot;empty&quot; tile from
-    the tile set. After you have added them all in you can check the tiles against the template by clicking the &quot;Show Template&quot; button <img alt="Show Template Icon" class="icon" src="../../assets/Images/Icons/Icon_Tiles_Template.png"/> at the
-    top, and this will toggle the template overlay on the final autotile, as shown in the image below:</p>
-  <p><img alt="Show The Autotile Template" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Show_Template.gif"/>If you want to make a 16 tile autotile, the proceedure is exactly the same as that explained above, only instead of using
-    the 47 tile template you use the 16 tile template:</p>
-  <p><img alt="16 Tile Template" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_16Tiles.gif"/>We now have some auto tiles in our auto tile library taken from a tile set. These can be used in the room editor by simply creating a tile
-    map layer and then selecting one of the auto tiles from the library (which will select automatically the auto tile brush from the top of the room editor) and painting in your room. The tiles will now &quot;auto-magically&quot; connect up to create
-    properly sequenced tile maps.</p>
-  <p><img alt="Autotile In The Room Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_RoomTile.gif"/>Please note that the behaviour of an autotile around the room edges will depend on the <strong>Open Or Closed Edges</strong>    button <img alt="Open Close Edges Icon" class="icon" src="../../assets/Images/Icons/Icon_Tiles_OpenCloseEdges.png"/>. By default when an auto tile is placed along the edge of a room, it will choose a tile as if the outside of the room was empty (ie:
-    it&#39;ll give the room an &quot;edge&quot;). However if you click this button, the autotile will tile the room as if the area outside was filled with tiles and so choose tiles that blend and have no &quot;edge&quot;.</p>
+  <h1>자동 타일</h1>
+  <p><strong>자동 타일</strong> 기능은 하향식 또는 측면보기 프로젝트에 상관없이 레벨 구축을 훨씬 쉽게하는 데 사용할 수있는 매우 강력한 도구입니다. 기본적으로 자동 타일 <em>라이브러리</em> 를 만든 다음 해당 라이브러리에서 타일을 배치 할 때마다 주위의 타일과 &quot;연결&quot;되어 벽이나 플랫폼이 매끄럽게 만들어집니다.</p>
+  <p>그러나 자동 타일 기능을 사용하기 전에 타일 세트 스프라이트를 올바르게 설정하고 적절한 유형의 자동 타일을 선택하는 것이 매우 중요합니다. 사용 가능한 유형은 <strong>47 개의 타일</strong> 자동 타일 또는 <strong>16 개의 타일</strong> 자동 타일이며, 일반적으로 16 개의 타일은 하향식 또는 풍경에 사용되며 (전환이 더 우수하므로)보기 또는 하향식의 플랫 포머 / 측면에 사용됩니다. 벽이 여러 개의 연결을 필요로하는 곳이지만 이는 결코 어려운 규칙이 아니며 최종 프로젝트의 모양에 달려 있습니다.</p>
+  <p>아래 이미지는 자동 타일링을위한 일반적인 47 타일 및 16 타일 타일 세트를 보여줍니다.</p>
+  <p><img alt="Two Autotile Examples" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Autotiles.png"/>이제 이미지를 보는 것만으로는 실제로 어떻게 어울리는 지 알려주지 않으므로 <a href="../Tile_Sets.htm">타일 ​​세트 편집기</a> 에서 <strong>자동 편집 편집기</strong> 를 열고 추가합니다. Autotile Editor는 다음과 같습니다.</p>
+  <p><img alt="Autotile Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_AutotileEditor.png"/>사용되는 타일 세트 스프라이트에는 필요한 모든 타일이 있으며 자동 타일에 포함 할 타일을 선택하고 선택할 수 있기 때문에 다른 타일도 가질 수 있습니다. 이제 클릭 할 수 있습니다 템플릿 영역의 47 타일 버튼을 클릭하여 새로운 47 타일 라이브러리 항목을 생성하면 필요한 타일을 선택하는 데 사용할 템플릿이 나타납니다.</p>
+  <p><img alt="47 Tile Template" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_47tiles.png"/>템플릿에서 밝은 회색 영역은 사용중인 타일의 바깥 쪽 가장자리를 나타내고 어두운 회색은 &quot;채우기&quot;영역입니다. 템플릿에 타일을 추가하려면 사용 가능한 첫 번째 템플릿 셀을 클릭 한 다음 왼쪽에서 추가 할 타일을 선택하십시오.</p>
+  <p><img alt="Adding Auto Tiles To The Library" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Add_AutoTiles.gif"/>실수 한 경우 제거하려는 자동 타일을 선택하고 타일 세트에서 &quot;빈&quot;타일을 선택하십시오. 모두 추가 한 후 &quot;템플릿 표시&quot;버튼을 클릭하여 템플릿과 타일을 확인할 수 있습니다. 아래 이미지와 같이 최종 자동 타일에서 템플릿 오버레이를 토글합니다.</p>
+  <p><img alt="Show The Autotile Template" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Show_Template.gif"/>16 타일 자동 타일을 만들려면 47 타일 템플릿을 사용하는 대신 16 타일 템플릿을 사용하는 것만으로 위에서 설명한 것과 정확히 동일합니다.</p>
+  <p><img alt="16 Tile Template" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_16Tiles.gif"/>이제 자동 타일 라이브러리에 타일 세트에서 가져온 자동 타일이 있습니다. 타일 ​​맵 레이어를 만든 다음 라이브러리에서 자동 타일 중 하나를 선택하고 (룸 편집기 상단에서 자동 타일 브러시를 자동으로 선택 함) 룸에서 페인팅하여 룸 편집기에서 사용할 수 있습니다. 타일은 이제 &quot;자동으로&quot;연결되어 올바르게 순서가 지정된 타일 맵을 만듭니다.</p>
+  <p><img alt="Autotile In The Room Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_RoomTile.gif"/>실내 모서리 주변의 자동 타일의 동작은 <strong>열린 모서리 또는 닫힌 모서리</strong> 버튼에 따라 다릅니다. . 기본적으로 자동 타일이 방의 가장자리를 따라 배치되면 방의 외부가 비어있는 것처럼 타일이 선택됩니다 (즉, 방에 &quot;가장자리&quot;를 제공함). 그러나이 버튼을 클릭하면 자동 타일은 외부 영역이 타일로 채워진 것처럼 방을 타일링하므로 &quot;가장자리&quot;가없는 블렌드를 선택하십시오.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Tile_Set_Editors/Auto_Tiles.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Tile_Sets.htm">Tile Sets</a></div>
-        <div style="float:right">Next: <a href="Brush_Builder.htm">The Brush Builder</a></div>
+        <div style="float:left">목록: <a href="../Tile_Sets.htm">타일 ​​세트</a></div>
+        <div style="float:right">다음: <a href="Brush_Builder.htm">브러시 빌더</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Auto Tile
@@ -123,4 +112,4 @@ Autotiles
 tile_set_editor_autotiles
 -->
 
-</body></html>
+</body></html> 

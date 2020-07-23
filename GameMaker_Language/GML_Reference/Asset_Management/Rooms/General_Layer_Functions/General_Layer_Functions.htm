@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="General Layer Functions">
-        <span>General Layer Functions</span>
+        <span>일반 레이어 기능</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,11 +80,9 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>General Layer Functions</h1>
-  <p>The GameMaker Studio 2 <a href="../../../../../The_Asset_Editors/Rooms.htm">Room Editor</a> permits you to add <i>layers</i> of different assets to your room. These can be tile maps (using tile sets), backgrounds, sprites or sequences, and instances,
-    but note that unlike the room editor, you are <i>not</i> limited to a single asset type per layer, and can add multiple asset types to the same layer - for example you can have a background and a tile map all on the same layer. Note that each asset
-    that is added to a layer is considered an <strong>element</strong> of that layer.</p>
-  <p>This section outlines the general functions used when working with room layers, as well as a few functions specific to working with <strong><a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">instance layer</a> </strong>elements:</p>
+  <h1>일반 레이어 기능</h1>
+  <p>GameMaker Studio 2 <a href="../../../../../The_Asset_Editors/Rooms.htm">Room Editor를 사용</a> 하면 <a href="../../../../../The_Asset_Editors/Rooms.htm">방</a> 에 다른 자산의 <i>레이어</i> 를 추가 할 수 있습니다. 타일 ​​맵 (타일 세트 사용), 배경, 스프라이트 또는 시퀀스 및 인스턴스 일 수 있지만 룸 편집기와 달리 레이어 당 단일 자산 유형으로 제한 <i>되지 않으며</i> 동일한 자산에 여러 자산 유형을 추가 할 수 있습니다. 예를 들어 배경과 타일 맵을 모두 같은 레이어에 둘 수 있습니다. 레이어에 추가 된 각 자산은 해당 레이어의 <strong>요소</strong> 로 간주됩니다.</p>
+  <p>이 섹션에서는 룸 레이어 작업시 사용되는 일반적인 기능과 <strong><a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">인스턴스 레이어</a></strong> 요소 작업과 관련된 몇 가지 기능에 대해 간략하게 설명합니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="layer_exists.htm">layer_exists</a></li>
@@ -125,8 +123,7 @@
     <li><a href="layer_get_shader.htm">layer_get_shader</a></li>
   </ul>
   <p> </p>
-  <p>We also have a couple of extra functions relating to targeting layers in a different room. It may be that you want to change something in a room that is not the current room, or maybe you want to generate rooms procedurally, or any number of things.
-    To enable this we use the following functions:</p>
+  <p>또한 다른 방의 레이어를 타겟팅하는 것과 관련된 몇 가지 추가 기능이 있습니다. 현재 방이 아닌 방에서 무언가를 변경하고 싶거나 절차 상으로 방을 생성하거나 여러 가지를 원할 수도 있습니다. 이를 가능하게하기 위해 다음 기능을 사용합니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="layer_set_target_room.htm">layer_set_target_room</a></li>
@@ -134,12 +131,9 @@
     <li><a href="layer_reset_target_room.htm">layer_reset_target_room</a></li>
   </ul>
   <p> </p>
-  <p>What you do here is set the target room using the appropriate function and then call the layer functions are normal. These layer functions will now apply <i>only</i> to the target room and not the current one. When you are finished you&#39;d call the
-    reset function to return the code scope back to the current room again.</p>
-  <p class="note"><b>WARNING!</b> While targeting another room, you can use all the regular layer functions <b>except</b> you cannot create instances using <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><tt style="font-size: 14px">instance_create_layer()</tt></a></span>    or <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><tt style="font-size: 14px">instance_create_depth()</tt></a></span>, nor will the layer function <a href="layer_add_instance.htm"><span style="font-size:1px;"><tt style="font-size: 14px">layer_add_instance()</tt></span></a> be
-    available.</p>
-  <p>Finally, and this is exclusively for use with <i>instances</i> on layers (although the layer itself can have other elements, they will not be affected by the following functions), you have a couple of functions that can be used to deactivate or reactivate
-    all instances:</p>
+  <p>여기서 수행하는 작업은 적절한 기능을 사용하여 대상 룸을 설정 한 다음 레이어 기능이 정상이라고합니다. 이 레이어 기능은 이제 현재 룸이 아닌 대상 룸 <i>에만</i> 적용 <i>됩니다</i> . 완료되면 reset 함수를 호출하여 코드 범위를 다시 현재 회의실로 되돌립니다.</p>
+  <p class="note"><b>경고!</b> 다른 방을 대상으로하는 동안 <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><tt style="font-size: 14px">instance_create_layer ()</tt></a></span> 또는 <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><tt style="font-size: 14px">instance_create_depth ()를</tt></a></span> 사용하여 <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><tt style="font-size: 14px">인스턴스를</tt></a></span> 만들 수없고 <a href="layer_add_instance.htm"><span style="font-size:1px;"><tt style="font-size: 14px">layer_add_instance ()</tt></span></a> 레이어 함수를 사용할 수없는 <b>경우</b> 를 <b>제외하고</b> 모든 일반 레이어 함수를 사용할 수 있습니다.</p>
+  <p>마지막으로 이것은 레이어의 <i>인스턴스</i> 에만 사용하기위한 것입니다 (레이어 자체에 다른 요소가있을 수 있지만 다음 기능의 영향을받지는 않지만). 모든 인스턴스를 비활성화하거나 다시 활성화하는 데 사용할 수있는 몇 가지 기능이 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="../../Instances/Deactivating_Instances/instance_deactivate_layer.htm">instance_deactivate_layer</a></li>
@@ -147,15 +141,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/General_Layer_Functions.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next: <a href="../Tile_Map_Layers/Tile_Map_Layers.htm">Tile Map Layers</a></div>
+        <div style="float:left">목록: <a href="../Rooms.htm">객실</a></div>
+        <div style="float:right">다음: <a href="../Tile_Map_Layers/Tile_Map_Layers.htm">타일 ​​맵 레이어</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 General Layer Functions
@@ -164,4 +159,4 @@ General Layer Functions
 layer_functions
 -->
 
-</body></html>
+</body></html> 

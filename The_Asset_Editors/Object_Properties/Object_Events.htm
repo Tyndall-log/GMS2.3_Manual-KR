@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Object Events">
-        <span>Object Events</span>
+        <span>객체 이벤트</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,227 +80,181 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Object Events</h1>
-  <p>So, what are object <strong>events</strong>? Basically, these are discreet moments in the game loop where things are made to happen based on what you have programmed for them. GameMaker Studio 2 works with cycles of these events - from the moment a
-    room is started to the moment it is finished there is a game loop running where every <strong>step </strong>a series of events are run or checked, and you can choose to place code or DnD™ actions in your objects that respond to these events (a step
-    is a moment in game time, governed by the room speed setting, and can also be called a <strong>frame</strong>) .</p>
-  <p>Let&#39;s look at a typical object setup with events and code:</p>
-  <p><img alt="Object Editor Events View" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Events.png"/>As you can see in our example object there are a number of events listed that it should respond to, but initially when you create
-    an object this list is empty and you must decide which events you need and what instances of that object should do when those events are triggered. To add events into the object, you press the <em>Add Event</em> button found at the bottom of the events
-    list which will bring up the following window:</p>
-  <p><img alt="Object Editor Events List" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_EventList.png"/>This is the list of all the basic events and event categories which an object can respond to, and within each category are sub
-    events to further refine behaviours. For example, if you click on the <strong>K</strong><strong>ey Press</strong> <img alt="Key Press Icon" height="16" src="../../assets/Images/Icons/Icon_KeyboardPress.png" width="16"/> event category you will then
-    get a further window popping up with the events that allow you to select <em>which </em>key the object should respond to. Once you have selected your event, the code window (or DnD™ workspace window) will be chained to it and open up on the right.
-    You can now edit the code to give your object a specific behaviour or reaction to that event.</p>
-  <p>You can click the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png" style=""/> on any event that has been added to an object to get the following menu options:</p>
-  <p><img alt="Object Editor Events Menu" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_RMBMenu.png"/>These options are:</p>
+  <h1>객체 이벤트</h1>
+  <p>그렇다면 객체 <strong>이벤트는</strong> 무엇입니까? 기본적으로, 이것은 게임 루프에서 신중하게 프로그래밍 된 내용에 따라 상황이 발생하는 순간입니다. GameMaker Studio 2는 이러한 이벤트의주기와 함께 작동합니다. 방이 시작된 순간부터 완료 될 때까지 일련의 이벤트가 실행 또는 확인되는 모든 <strong>단계</strong> 에서 게임 루프가 실행되며 코드 또는 DnD를 배치하도록 선택할 수 있습니다. „¢ 이러한 이벤트에 반응하는 사물에서의 행동 (단계는 게임 시간의 순간이며, 실내 속도 설정에 의해 결정되며 <strong>프레임</strong> 이라고도 함).</p>
+  <p>이벤트 및 코드를 사용하여 일반적인 객체 설정을 살펴 보겠습니다.</p>
+  <p><img alt="Object Editor Events View" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Events.png"/>예제 객체에서 볼 수 있듯이 응답해야 할 이벤트가 많이 있지만 처음에는 객체를 만들 때이 목록이 비어 있으므로 필요한 이벤트와 해당 객체의 인스턴스가 수행 될 때 수행해야 할 이벤트를 결정해야합니다 이벤트가 트리거됩니다. 객체에 이벤트를 추가하려면 이벤트 목록 하단에있는 이벤트 <em>추가</em> 버튼을 누르면 다음 창이 나타납니다.</p>
+  <p><img alt="Object Editor Events List" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_EventList.png"/>이것은 객체가 응답 할 수있는 모든 기본 이벤트 및 이벤트 범주의 목록이며 각 범주에는 동작을 세분화하기위한 하위 이벤트가 있습니다. 예를 들어, <strong>K <strong>어이</strong></strong> <strong>눌러</strong> 클릭하면 이벤트 범주 당신은 더 창은 개체가 <em>응답해야하는</em> 키 선택할 수있는 이벤트와 함께 팝업 얻을 것이다. 이벤트를 선택하면 코드 창 (또는 DnD ™ 작업 공간 창)이 연결되어 오른쪽에 열립니다. 이제 코드를 편집하여 객체에 해당 이벤트에 대한 특정 동작이나 반응을 제공 할 수 있습니다.</p>
+  <p>마우스 오른쪽 버튼을 클릭 할 수 있습니다 다음 메뉴 옵션을 얻기 위해 객체에 추가 된 모든 이벤트에서</p>
+  <p><img alt="Object Editor Events Menu" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_RMBMenu.png"/>이러한 옵션은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><strong>Add Event</strong> - Add a new event from the event list.</li>
-    <li><strong>Cut </strong>/ <strong>Copy </strong>/ <strong>Paste Events</strong> - Cut, copy or paste the selected event. You can use the standard keyboard shortcuts too: <img alt="CTRL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <span class="inline">X</span>, <img alt="CTRL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <span class="inline">C</span>, and <img alt="CTRL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <span class="inline">V</span>.</li>
-    <li><strong>Duplicate Event</strong> - Duplicate the chosen event. This will take the contents of the chosen event and duplicate them in another event that you specify.</li>
-    <li><strong>Change Event</strong> - Change the event. This will prompt you to choose another event category and once selected the contents of the current event will be changed to the new event (removing the original event in the process).</li>
-    <li><strong>Convert To Drag and Drop / Code</strong> - Object events will be created using the method chosen when you created the project, either using code or using Drag and Drop™ actions. With this option you can convert from one to the other, regardless
-      of the project type.</li>
-    <li><strong>Delete Event</strong> - Delete the event (or events).</li>
+    <li><strong>이벤트 추가</strong> -이벤트 목록에서 새 이벤트를 추가하십시오.</li>
+    <li><strong>잘라 내기</strong> / <strong>복사</strong> / <strong>붙여 넣기 이벤트</strong> -선택한 이벤트를 잘라내거나 복사하거나 붙여 넣습니다. 표준 키보드 단축키도 사용할 수 있습니다. / + <span class="inline">X</span> , / + <span class="inline">C</span> / + <span class="inline">V.</span></li>
+    <li><strong>이벤트 복제</strong> -선택한 이벤트를 복제합니다. 선택한 이벤트의 내용을 가져와 지정한 다른 이벤트에 복제합니다.</li>
+    <li><strong>이벤트 변경</strong> - <strong>이벤트를</strong> 변경하십시오. 그러면 다른 이벤트 범주를 선택하라는 메시지가 표시되고 현재 이벤트의 내용이 선택되면 새 이벤트로 변경됩니다 (프로세스에서 원래 이벤트 제거).</li>
+    <li><strong>끌어서 놓기 / 코드로 변환</strong> -코드를 사용하거나 끌어서 놓기 작업을 사용하여 프로젝트를 만들 때 선택한 방법을 사용하여 개체 이벤트가 생성됩니다. 이 옵션을 사용하면 프로젝트 유형에 관계없이 하나에서 다른 것으로 변환 할 수 있습니다.</li>
+    <li><strong>이벤트 삭제</strong> - <strong>이벤트를</strong> 삭제합니다.</li>
   </ul>
-  <p>When removing events, you can use <img alt="Shift Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Shift.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to select multiple events
-    and then delete them all together.Each object you create has its own discreet list of events which are added into it from the <strong>Object Editor</strong>. These events fall into two categories:</p>
+  <p>이벤트를 제거 할 때 사용할 수 있습니다 + 여러 이벤트를 선택한 다음 모두 삭제합니다. 생성 한 각 <strong>개체</strong> 에는 <strong>개체 편집기</strong> 에서 추가 된 고유 한 이벤트 목록이 있습니다. 이러한 이벤트는 두 가지 범주로 분류됩니다.</p>
   <ul class="colour">
-    <li>those that run every single game step</li>
-    <li>those that are &quot;triggered&quot; by a game event, like the instance reaching the room edge or a keyboard or mouse press.</li>
+    <li>모든 단일 게임 단계를 실행하는 사람들</li>
+    <li>인스턴스가 방 가장자리에 도달하거나 키보드 또는 마우스를 누르는 것과 같이 게임 이벤트에 의해 &quot;트리거&quot;되는 것.</li>
   </ul>
-  <p>The full list of events is given below:</p>
+  <p>전체 이벤트 목록은 다음과 같습니다.</p>
   <p> </p>
-  <p><img alt="Create Event Icon" src="../../assets/Images/Icons/Icon_Create.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Create</span><span data-close-text="true">Create</span></a></p>
+  <p><img alt="Create Event Icon" src="../../assets/Images/Icons/Icon_Create.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">작성</span> <span data-close-text="true">작성</span></a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">This event happens when an instance of the object is first created, and is the very first thing that happens within an instance placed in the room through the Room Editor when a room is entered. This means that this event is the ideal place to initialize
-      <a class="tooltip" title="A variable is a named value within a program which can be modified, stored and displayed whenever required. For example, if we have an integer variable with a name XYZ and it stores a value 10, we can then do things like A = XYZ + 10, which will set the value of the variable A to 20, since XYZ is 10 and we are adding 10 to it. You can also change variable values using operators, so doing XYZ = XYZ + 100 would modify the value of our XYZ variable to be equal to 110. Variables can also be used to store identifiers and references to different assets.">variable</a><span class="glossextra">s</span>, start <a href="../Timelines.htm">Timelines</a>, set <a href="../Paths.htm">Paths</a> etc... and do anything else that generally only needs to
-      be done once or only when an instance is first created in the room. If your object has any <strong>Object Variables</strong> or <strong>Instance Variables</strong> added in either the Object Editor or the Room Editor, then these variables will be
-      initialised first and then the <strong>Create Event</strong> will be run.</p>
-    <p class="dropspot">Remember that you can modify anything you set up in the Create Event from the <a href="../Room_Properties/Layer_Properties.htm">Instance Creation Code</a> in the Room Editor, as this is run directly after the create event for the instance and can
-      be used to create <strong>Instance Variables</strong> or to override any variables added as Object Variables or in the actual Create Event.</p>
+    <p class="dropspot">이 이벤트는 객체의 인스턴스가 처음 생성 될 때 발생하며, 룸에 들어갈 때 룸 편집기를 통해 룸에 배치 된 인스턴스 내에서 가장 먼저 발생합니다. 즉,이 이벤트는 <a class="tooltip" title="변수는 프로그램 내에서 명명 된 값으로, 필요할 때마다 수정, 저장 및 표시 할 수 있습니다. 예를 들어 이름이 XYZ 인 정수 변수가 있고 값 10을 저장하는 경우 A = XYZ + 10과 같은 작업을 수행 할 수 있습니다. 그러면 XYZ가 10이고 변수 A의 값이 20으로 설정됩니다. 그것에 10을 더하고 있습니다. 연산자를 사용하여 변수 값을 변경할 수도 있으므로 XYZ = XYZ + 100을 수행하면 XYZ 변수의 값이 110으로 수정됩니다. 변수는 식별자와 다른 자산에 대한 참조를 저장하는 데 사용될 수도 있습니다.">변수</a> 를 초기화하고, <a href="../Timelines.htm">타임 라인을</a> 시작하고, <a href="../Paths.htm">경로</a> 등을 설정하고, 일반적으로 한 번만 또는 룸에서 인스턴스를 처음 만들 때만 수행해야하는 다른 작업을 수행하기에 이상적인 장소입니다. 객체에 객체 편집기 또는 룸 편집기에 <strong>객체 변수</strong> 또는 <strong>인스턴스 변수가</strong> 추가 된 경우 이러한 변수가 먼저 초기화 된 후 <strong>이벤트 생성</strong> 이 실행됩니다.</p>
+    <p class="dropspot">룸 편집기의 <a href="../Room_Properties/Layer_Properties.htm">인스턴스 생성 코드</a> 에서 이벤트 생성에서 설정 한 항목을 수정할 수 있습니다. 이는 <a href="../Room_Properties/Layer_Properties.htm">인스턴스</a> 의 생성 이벤트 직후에 실행되며 <strong>인스턴스 변수</strong> 를 생성하거나 다음과 같이 추가 된 변수를 재정의하는 데 사용할 수 있습니다. 객체 변수 또는 실제 생성 이벤트</p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Destroy Event Icon" src="../../assets/Images/Icons/Icon_Destroy.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Destroy</span><span data-close-text="true">Destroy</span></a></p>
+  <p><img alt="Destroy Event Icon" src="../../assets/Images/Icons/Icon_Destroy.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">파괴</span> <span data-close-text="true">파괴</span></a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot">This event is the event to be executed when an instance is destroyed. It is often overlooked when adding behaviours to objects, but it can be very useful, for example by creating explosion or particle effects when an enemy is killed, or for re-spawning
-      a new instance of the object in another part of the room, or even for adding points onto a score.</p>
+    <p class="dropspot">이 이벤트는 인스턴스가 파괴 될 때 실행되는 이벤트입니다. 객체에 행동을 추가 할 때 종종 간과되지만, 적을 죽일 때 폭발 또는 입자 효과를 생성하거나 방의 다른 부분에서 객체의 새로운 인스턴스를 다시 생성하는 등 매우 유용 할 수 있습니다. 점수에 점수를 추가하는 경우에도 마찬가지입니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Clean Up Event Icon" src="../../assets/Images/Icons/Icon_Destroy.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">Clean Up</span><span data-close-text="true">Clean Up</span></a></p>
+  <p><img alt="Clean Up Event Icon" src="../../assets/Images/Icons/Icon_Destroy.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">정리</span> <span data-close-text="true">정리</span></a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot"><span>This event will be called after any event that removes an instance of the object from the room. So, it will be triggered if:</span></p>
+    <p class="dropspot"><span>이 이벤트는 회의실에서 객체의 인스턴스를 제거하는 이벤트 후에 호출됩니다.</span> <span>따라서 다음과 같은 경우 트리거됩니다.</span></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span>the instance is destroyed</span></li>
-      <li class="dropspot"><span>the room ends</span></li>
-      <li class="dropspot"><span>the game ends</span></li>
+      <li class="dropspot"><span>인스턴스가 파괴되었습니다</span></li>
+      <li class="dropspot"><span>방 끝</span></li>
+      <li class="dropspot"><span>게임이 끝난다</span></li>
     </ul>
-    <p class="dropspot"><span>It is designed for you to use to &quot;clean up&quot; any dynamic resources that you may have in your game (like surfaces, data structures, etc...) or to perform any task that you need performed <em>once </em>when the instance is removed from the game in any way.</span></p>
-    <p class="dropspot"><span>Note that this event will be called <em>instantly </em>after the event that triggered it, but the instance will not actually be removed from the game <strong>until the end of the current event</strong>. For example, if you call <span class="inline">instance_destroy()</span>      in the Step Event, then the Destroy Event will be called, then the Clean Up Event, and then <em>the rest of the Step Event will finish running</em>. This means that any code you have after the call to <span class="inline">instance_destroy()</span>      will still be run and be a potential cause for errors if you&#39;ve cleaned up a data structure or some other resource that the code requires, so care must be taken when using this event.</span>
-    </p>
+    <p class="dropspot"><span>게임에있을 수있는 동적 리소스 (표면, 데이터 구조 등)를 &quot;정리&quot;하거나 인스턴스가 제거 될 때 <em>한 번</em> 수행해야하는 작업을 수행 할 수 있도록 설계되었습니다. 어떤 식 으로든 게임.</span></p>
+    <p class="dropspot"><span>이 이벤트를 트리거 한 이벤트 후 <em>즉시</em> 호출하지만, 인스턴스가 실제로 <strong>현재 이벤트가 끝날 때까지</strong> 게임에서 제거되지 않습니다.</span> <span>예를 들어, Step Event에서 <span class="inline">instance_destroy ()</span> 를 호출하면 Destroy Event가 호출되고 Clean Up <em>Event가 완료되고 나머지 Step Event가 실행을 완료합니다</em> .</span> <span>즉, <span class="inline">instance_destroy ()를</span> 호출 한 후 보유한 모든 코드는 데이터 구조 나 코드에 필요한 기타 리소스를 정리 한 경우 여전히 실행되고 오류의 잠재적 원인이 될 수 있으므로 사용할 때주의해야합니다. 이번 행사.</span></p>
     <p> </p>
   </div>
-  <p><img alt="Alarm Event Icon" src="../../assets/Images/Icons/Icon_Alarm.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#"><span data-open-text="true">Alarm</span><span data-close-text="true">Alarm</span></a></p>
+  <p><img alt="Alarm Event Icon" src="../../assets/Images/Icons/Icon_Alarm.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#"><span data-open-text="true">알람</span> <span data-close-text="true">알람</span></a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">The alarm category is split into 12 events, one for each of the possible alarms that can be set in an instance. So, when you click on the <em>Add Alarm </em>category you are presented with this window:</p>
-    <p class="dropspot"><img alt="Object Editor Alarm Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_AlarmEvents.png"/>Here you select the alarm that you wish to create and, once that is done, you will see that it has been added to the event
-      window allowing you to add code to it as normal. But what is an alarm? Well, it is a special event that does nothing unless the alarm has been previously set, and then it will wait until that alarm has counted down to 0 before running the actions
-      or code that you have added into it.</p>
-    <p class="dropspot">Once the alarm has reached 0 and run the code, it will then count down to -1, where it will remain until set again (meaning you can check the value of an alarm to see if it is greater than -1, which will tell you if it&#39;s running or not). So, say
-      you set <span class="inline">alarm[0]</span> in the create event of the object to 30, this means that GameMaker Studio 2 will count down 30 game steps before it runs the actions or code that are placed in the <span class="inline">alarm[0]</span>      event. Note that setting an alarm to 0 will <em>not </em>run the alarm code, as the event is triggered, but the alarm is set to -1 immediately, so the code is skipped. If you need an alarm to run the very next step, then you should set it to 1.</p>
-    <p class="dropspot">This can be very useful as it allows you to set things in motion at precise moments, and you can even have them repeat as there is nothing to stop you setting an alarm in its own event. Imagine you have a monster and you want it to turn right every
-      three seconds... well, you would set an alarm in its create event to the room speed * 3 (if the room speed is 30, that&#39;s 30 steps per second, so multiply that by 3 and you get 3 seconds!) and then in the alarm event you would have the code or
-      action to set its direction, as well as the action (or code) to set its alarm to room speed * 30 again. In this way, you can set up simple game loops where things only happen at specific intervals.</p>
-    <p class="dropspot">It is worth noting that an alarm with no actions or code in it in it will <em>not </em>count down. However, even with just a comment and no code or actions, then the alarm will continue to count down and can be set and checked as you would normally.</p>
+    <p class="dropspot">알람 범주는 인스턴스에서 설정할 수있는 가능한 각 알람마다 하나씩 12 개의 이벤트로 나뉩니다. 따라서 <em>알람 추가</em> 카테고리를 클릭하면 다음 창이 나타납니다.</p>
+    <p class="dropspot"><img alt="Object Editor Alarm Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_AlarmEvents.png"/>여기서 생성하려는 알람을 선택하고, 일단 완료되면 알람을 이벤트 창에 추가하여 정상적으로 코드를 추가 할 수 있습니다. 그러나 경보 란 무엇입니까? 글쎄, 그것은 알람이 이전에 설정되지 않은 한 아무것도하지 않는 특별한 이벤트이며, 알람이 추가 된 작업이나 코드를 실행하기 전에 알람이 0으로 카운트 다운 될 때까지 기다립니다.</p>
+    <p class="dropspot">알람이 0에 도달하고 코드를 실행하면 -1까지 카운트 다운되며 다시 설정 될 때까지 유지됩니다 (알람 값이 -1보다 큰지 여부를 확인하여 알람 값을 확인할 수 있음). 실행 중인지 아닌지). 따라서, 오브젝트 생성 이벤트에서 <span class="inline">alarm [0]</span> 을 30으로 설정했다고 가정하면, GameMaker Studio 2는 <span class="inline">알람 [0]</span> 이벤트에 배치 된 액션이나 코드를 실행하기 전에 30 개의 게임 단계를 카운트 다운합니다. 0에 알람을 설정하면 이벤트가 트리거 될 때, 알람 코드를 <em>실행하지</em> 않지만 코드가 생략하므로 경보가 즉시 -1로 설정되어 있습니다. 다음 단계를 실행하기 위해 알람이 필요한 경우 알람을 1로 설정해야합니다.</p>
+    <p class="dropspot">이 기능은 정확한 순간에 동작을 설정할 수 있기 때문에 매우 유용 할 수 있으며 자체 이벤트에서 알람 설정을 중지 할 항목이 없어서 반복하도록 할 수도 있습니다. 몬스터가 있고 3 초마다 오른쪽으로 돌리기를 원한다고 상상해보십시오. 음, 이벤트 생성시 알람을 실내 속도 * 3으로 설정합니다 (실내 속도가 30이면 초당 30 단계이므로, 그 값에 3을 곱하면 3 초가됩니다!) 그리고 알람 이벤트에서 방향을 설정하는 코드 또는 동작과 알람을 다시 실내 속도 * 30으로 설정하는 동작 (또는 코드)을 갖게됩니다. 이런 식으로 특정 간격으로 만 발생하는 간단한 게임 루프를 설정할 수 있습니다.</p>
+    <p class="dropspot">동작이나 코드가없는 알람은 카운트 다운 <em>되지 않습니다</em> . 그러나 주석 만 있고 코드 나 작업이 없어도 알람은 계속 카운트 다운되며 평소대로 설정 및 확인할 수 있습니다.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Step Event Icon" src="../../assets/Images/Icons/Icon_Step.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#"><span data-open-text="true">Step</span><span data-close-text="true">Step</span></a></p>
+  <p><img alt="Step Event Icon" src="../../assets/Images/Icons/Icon_Step.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#"><span data-open-text="true">단계</span> <span data-close-text="true">단계</span></a></p>
   <div class="droptext" data-targetname="drop-down12">
-    <p class="dropspot">GameMaker Studio 2 splits time into <strong>steps </strong>with the room speed defining how many of these steps there are supposed to be per second (a step can also be called a <strong>frame</strong>). A single step, is basically the loop that runs
-      constantly with all the events being checked and triggered as necessary while the game runs, so as you can imagine, the <strong>Step Event </strong>is an event that is checked every single step of the game while the instance exists.</p>
-    <p class="dropspot">The step event is actually comprised of three sub events that are outlined below:</p>
-    <p class="dropspot"><img alt="Object Editor Step Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Step.png"/>For most things the standard step event will be fine to use, but sometimes you want a bit more control over what code runs and at
-      what time, so for that you are provided with the <strong>Begin </strong>and <strong>End </strong>step events. All three are checked every step, but their order will never vary even if future updates to the GameMaker Studio 2 engine change other
-      events, which means that this is the only reliable method of making sure that something always happens before something else.</p>
-    <p class="dropspot">What can the step event be used for? Well, it can be used for actions or code that needs to be executed continuously. For example, if one object should follow another, here you can adapt the direction of motion towards the object we are following
-      to keep it moving smoothly behind. Be careful with this event though, and don&#39;t put many complicated actions in the step event of objects, especially if you are planning on having lots of instances of the object in your game room, as this might
-      slow the game down. Many things can be placed into alarms, or set to trigger using some of the <strong>Other </strong>events, rather than happening all the time.</p>
+    <p class="dropspot">GameMaker Studio 2는 시간을 <strong>단계적</strong> 으로 분할하여 초당 몇 <strong>단계</strong> 가 필요한지를 정의합니다 (단계는 <strong>프레임</strong> 이라고도 함). 단일 단계는 기본적으로 게임이 실행되는 동안 필요에 따라 모든 이벤트를 확인하고 트리거하여 지속적으로 실행되는 루프이므로 <strong>단계 이벤트</strong> 는 인스턴스 동안 게임의 모든 단계마다 확인되는 이벤트입니다. 존재합니다.</p>
+    <p class="dropspot">단계 이벤트는 실제로 아래에 설명 된 세 가지 하위 이벤트로 구성됩니다.</p>
+    <p class="dropspot"><img alt="Object Editor Step Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Step.png"/>대부분의 경우 표준 단계 이벤트를 사용하는 것이 좋지만 때때로 코드 실행 및 시간을 조금 더 제어하여 <strong>Begin</strong> 및 <strong>End</strong> 단계 이벤트가 제공되기도합니다. 세 단계 모두 매 단계마다 점검되지만, GameMaker Studio 2 엔진에 대한 향후 업데이트가 다른 이벤트를 변경하더라도 순서는 변하지 않을 것입니다. 이는 이것이 항상 다른 일보다 먼저 무언가가 발생하도록하는 유일한 신뢰할 수있는 방법임을 의미합니다.</p>
+    <p class="dropspot">스텝 이벤트는 무엇을 위해 사용될 수 있습니까? 지속적으로 실행해야하는 작업이나 코드에 사용할 수 있습니다. 예를 들어, 한 물체가 다른 물체를 따라야하는 경우, 우리가 따르는 물체를 향해 움직임의 방향을 조정하여 부드럽게 뒤로 움직일 수 있습니다. 그러나이 이벤트에주의를 기울이고 특히 게임 룸에 많은 오브젝트 인스턴스를 계획 할 경우 오브젝트의 단계 이벤트에서 많은 복잡한 조치를 수행하지 마십시오. 게임 속도가 느려질 수 있습니다. 많은 일이 알람에 배치되거나 항상 발생하지 않고 <strong>기타</strong> 이벤트 중 일부를 사용하여 트리거하도록 설정할 수 있습니다.</p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Collision Event Icon" src="../../assets/Images/Icons/Icon_Collision.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#"><span data-open-text="true">Collision</span><span data-close-text="true">Collision</span></a></p>
+  <p><img alt="Collision Event Icon" src="../../assets/Images/Icons/Icon_Collision.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#"><span data-open-text="true">충돌</span> <span data-close-text="true">충돌</span></a></p>
   <div class="droptext" data-targetname="drop-down13">
-    <p class="dropspot">Obviously when making a game, it is very important that you know when two (or more) instances of an object have collided, and for that we have the <strong>Collision Event</strong>. This is an event that you place in an object and then specify against
-      which other object you should be checking for collisions.</p>
-    <p class="dropspot">When you don&#39;t have physics turned on, these collisions will be calculated based on the mask of the two objects (the mask is defined within the sprite properties, or can be assigned independently in the object properties) and whether they overlap
-      or not. Note, that if one or the other instances in the collision does not have a mask assigned (or the sprite mask is set to nothing), <em>even if it is drawing something</em> no collisions will be detected.</p>
-    <p class="dropspot">If you have <strong>Physics </strong>on, then the collision will be based on the type of <strong>collision shape</strong> (<em>Fixture</em>) that you have defined for the object in its physics properties, as will its reaction to the collision. This
-      means you may not need any code to deal with the collision, but this event will still <em>need to have at least a comment in it </em>for the collisions to be detected.</p>
-    <p class="dropspot">Finally, it should be noted that all collisions will be calculated once per game step before the collision event is triggered, such that when the collision event runs, all collisions will have been calculated already and pre-assigned. This means that
-      if you create an instance in this event and then try to check for a collision with it, the collision wont be detected or resolved until the next <a class="tooltip" title="An iteration is a single pass through a set of operations in your project code. One form of iteration in computer programming is via loops. A loop will repeat a certain segment of code until a condition is met and it can proceed further. Each time the computer runs a loop, it is known as an iteration. In simple terms, iteration is the process of repeating a particular snippet of code over and over again to perform a certain action.">iteration</a> of the game loop.</p>
+    <p class="dropspot">분명히 게임을 만들 때 객체의 두 개 이상의 인스턴스가 충돌 한 시점과 <strong>충돌 이벤트</strong> 가 발생하는 시점을 아는 것이 매우 중요합니다. 이것은 객체에 놓은 다음 충돌을 확인해야하는 다른 객체에 대해 지정하는 이벤트입니다.</p>
+    <p class="dropspot">물리가 켜져 있지 않은 경우 이러한 충돌은 두 객체의 마스크를 기준으로 계산됩니다 (마스크는 스프라이트 속성 내에 정의되거나 객체 속성에 독립적으로 할당 될 수 있음). 충돌의 하나 또는 다른 인스턴스에 마스크가 할당되지 않은 경우 (또는 스프라이트 마스크가 아무것도 설정되지 않은 경우) <em>무언가를 그리는 경우에도</em> 충돌이 감지되지 않습니다.</p>
+    <p class="dropspot"><strong>물리</strong> 를 <em>켜면</em> <strong>충돌에</strong> 대한 반응과 마찬가지로 물리 속성에서 객체에 대해 정의한 <strong>충돌 형태</strong> ( <em>Fixture</em> ) 유형을 기준으로 <strong>충돌</strong> 이 발생합니다. 즉, 충돌을 처리하기 위해 코드가 필요하지 않을 수도 있지만이 이벤트에는 충돌을 감지하기 위해 <em>최소한 주석이 있어야</em> 합니다.</p>
+    <p class="dropspot">마지막으로, 충돌 이벤트가 트리거 될 때 모든 충돌이 이미 계산되어 사전에 할당되도록 충돌 이벤트가 트리거되기 전에 모든 충돌이 게임 단계 당 한 번 계산됩니다. 즉,이 이벤트에서 인스턴스를 생성 한 후 충돌을 확인하려고하면 게임 루프가 다음 <a class="tooltip" title="반복은 프로젝트 코드에서 일련의 작업을 통과하는 단일 단계입니다. 컴퓨터 프로그래밍에서 반복의 한 형태는 루프를 통하는 것입니다. 루프는 조건이 충족 될 때까지 특정 코드 세그먼트를 반복하여 계속 진행할 수 있습니다. 컴퓨터가 루프를 실행할 때마다 반복이라고합니다. 간단히 말해서 반복이란 특정 코드 조각을 반복해서 반복하여 특정 작업을 수행하는 프로세스입니다.">반복</a> 될 때까지 충돌이 감지되거나 해결되지 않습니다.</p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Keyboard Icon" src="../../assets/Images/Icons/Icon_Keyboard.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#"><span data-open-text="true">Keyboard,</span><span data-close-text="true">Keyboard,</span></a>  <img alt="Keyboard Press Icon" src="../../assets/Images/Icons/Icon_KeyboardPress.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#"><span data-open-text="true">Keyboard Press,</span><span data-close-text="true">Keyboard Press,</span></a>  <img alt="Keyboard Release Icon" height="16" src="../../assets/Images/Icons/Icon_KeyboardRelease.png" style="cursor: nwse-resize;" width="15"/>    <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#"><span data-open-text="true">Keyboard Release</span><span data-close-text="true">Keyboard Release</span></a></p>
+  <p><img alt="Keyboard Icon" src="../../assets/Images/Icons/Icon_Keyboard.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#"><span data-open-text="true">키보드,</span> <span data-close-text="true">키보드,</span></a> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#"><span data-open-text="true">키보드 프레스,</span> <span data-close-text="true">키보드 프레스,</span></a> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#"><span data-open-text="true">키보드 릴리스</span> <span data-close-text="true">키보드 릴리스</span></a></p>
   <div class="droptext" data-targetname="drop-down14">
-    <p class="dropspot">Letting the player control the different aspects of your game is very important, and to that end GameMaker Studio 2 provides you with a very comprehensive list of keyboard events that can be used in any of the three main keyboard categories. For the
-      general Keyboard category, it is triggered continuously every step for as long as the selected key is pressed down, while the Press and Release category events will only be triggered once when the key is initially pressed down or released.</p>
-    <p class="dropspot">It should be noted that keyboard events are actually triggered in all active instances in a room whenever a key is used, but only those that have an event defined for that particular key will respond and you can create multiple keyboard events in
-      any object and the instances of that object will respond to all of them while the game is running.</p>
-    <p class="dropspot">When you add any keyboard event to an object, you will be presented with the keyboard sub event menu where you can specify the key you are to be checking for:</p>
-    <p class="dropspot"><img alt="Object Editor Keyboard Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Keyboard.png"/>Most of them are fairly obvious, but let&#39;s just go through the sections briefly - at the top we have the arrow keys,
-      followed by the most used modifier keys, then the rest of the keyboard (split into further sub-sections so you can get the exact key required like <img alt="Escape Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Escape.png" width="55"/> or <img alt="Insert Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Insert.png" width="55"/>) and finally two very special sub events, <strong>No Key</strong> and <strong>Any Key</strong>. As their names imply, these are sub
-      events that check for when <em>no </em>key is pressed or for when <em>any </em>key is pressed. Please note that the keys on the numeric keypad only produce the corresponding events when <strong>Number Lock </strong>is enabled.</p>
-    <p class="dropspot">The <strong>Press </strong>and <strong>Release </strong>events for the keyboard are almost exactly the same as the regular keyboard event, except that instead of being triggered continuously, they are triggered once only. When the keyboard first registers
-      that a key has been pressed it will generate a <strong>Keyboard Pressed</strong> event (as well as a regular Keyboard event), and the first time after that where a key is no longer being detected as pressed it will trigger a single <strong>Keyboard Release</strong>      event.</p>
+    <p class="dropspot">플레이어가 게임의 다양한 측면을 제어하도록하는 것이 매우 중요하며,이를 위해 GameMaker Studio 2는 세 가지 주요 키보드 범주 중 하나에서 사용할 수있는 매우 포괄적 인 키보드 이벤트 목록을 제공합니다. 일반 키보드 범주의 경우 선택한 키를 누를 때마다 모든 단계가 연속적으로 트리거되는 반면, 키를 처음 눌렀거나 놓을 때 누르기 및 해제 범주 이벤트는 한 번만 트리거됩니다.</p>
+    <p class="dropspot">키보드 이벤트는 실제로 키를 사용할 때마다 회의실의 모든 활성 인스턴스에서 트리거되지만 해당 특정 키에 대해 이벤트가 정의 된 이벤트 만 응답하고 모든 객체 및 인스턴스에서 여러 키보드 이벤트를 생성 할 수 있습니다. 게임이 실행되는 동안 해당 개체의</p>
+    <p class="dropspot">키보드 이벤트를 객체에 추가하면 확인할 키를 지정할 수있는 키보드 하위 이벤트 메뉴가 표시됩니다.</p>
+    <p class="dropspot"><img alt="Object Editor Keyboard Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Keyboard.png"/>그것들의 대부분은 상당히 분명하지만 섹션을 간단히 살펴 보겠습니다. 맨 위에 화살표 키와 가장 많이 사용되는 수정 자 키, 키보드의 나머지 부분이 있습니다 (추가 하위 섹션으로 분할되어 더 많은 하위 섹션으로 분할됩니다) 필요한 정확한 키 또는 ) 그리고 마지막으로 두 개의 매우 특별한 하위 이벤트 인 <strong>No Key</strong> 및 <strong>Any Key가</strong> 있습니다. 이름에서 알 수있는 바와 같이, 이러한 하위 이벤트는 그 <em>어떤</em> 키를 누를되지 않은 경우 또는 <em>임의의</em> 키를 누르면 확인합니다. 숫자 키패드의 키는 숫자 <strong>잠금</strong> 이 활성화 된 경우에만 해당하는 이벤트를 생성합니다.</p>
+    <p class="dropspot">키보드의 <strong>Press</strong> and <strong>Release</strong> 이벤트는 일반 키보드 이벤트와 거의 동일하지만 연속적으로 트리거되는 대신 한 번만 트리거됩니다. 키보드가 키를 눌렀 음을 처음으로 등록하면 <strong>키보드 눌림</strong> 이벤트 (일반 키보드 이벤트)가 생성되고, 키가 더 이상 감지되지 않은 후 눌린 것으로 처음 감지되면 단일 <strong>키보드</strong> 가 트리거됩니다. <strong>출시</strong> 이벤트.</p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt=" Mouse Icon" height="16" src="../../assets/Images/Icons/Icon_MouseEvent.png" width="16"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#"><span data-open-text="true">Mouse</span><span data-close-text="true">Mouse</span></a></p>
+  <p><img alt=" Mouse Icon" height="16" src="../../assets/Images/Icons/Icon_MouseEvent.png" width="16"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#"><span data-open-text="true">마우스</span> <span data-close-text="true">마우스</span></a></p>
   <div class="droptext" data-targetname="drop-down16">
-    <p class="dropspot">The Mouse category is separated into a series of events that can be selected to give you a more precise control over what is happening in your game. Here you can see exactly what these events are:</p>
-    <p class="dropspot"><img alt="Object Editor Mouse Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Mouse.png"/>The left <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/>, right <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> and middle <img alt="MMB Icon" class="icon" src="../../assets/Images/Icons/Icon_MMB.png"/> button events (whether <strong>normal</strong>, <strong>pressed </strong>or <strong>released</strong>) all
-      work on the mask of the instance that has the event. What this means is that GameMaker Studio 2 will check the position of the mouse in the room when those buttons are used against the collision masks of the instances that have a mouse event. If
-      there is a &quot;collision&quot; with the instance <a class="tooltip" title="For sprites, the bounding-box is the name given to the edges of the area that collisions will initially be detected in, and it doesn&#39;t have to be the same size as the sprite it&#39;s being applied to. For sequences, the bounding box is the outer edge of the total space that one or more assets occupy in the canvas.">bounding box</a> then the event will be triggered, so make sure that any instance with these events has a sprite with a valid collision
-      mask or that the object has a mask sprite selected in the object properties. As their names imply, these events will be triggered either once when the chosen mouse button is first pressed or released, or continuously each step while the button is
-      maintained.</p>
-    <p class="dropspot">The mouse enter and leave events are also similar to the button events in that they too rely on the mask of the instance to work, but this time they are triggered when the mouse first &quot;enters&quot; (touches) the instance or when the mouse &quot;leaves&quot;
-      (stops touching) the instance. These events are not continuous however, and are triggered only once for each time the mouse enters or leaves the object - so they are an ideal method for creating, for example, buttons that need to change as the mouse
-      hovers over them before going back to normal when the mouse is removed.</p>
-    <p class="dropspot">Finally we have another section to the mouse events which is called the <strong>Global Mouse</strong>. In this sub-menu you will find a selection of events that are for recording mouse events in instances even when the mouse is not over them or even
-      near them. These are events that are generated for <em>all </em>instances and if there are actions or code defined for the specified event then it will be run, regardless of the position of the mouse within the game room.</p>
-    <p class="dropspot">Please note that on mobile or touch-screen devices the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> can also be used to check for a finger tab on a touch screen, and the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> is triggered by a double tap on the screen (this behaviour can be changed using code).</p>
+    <p class="dropspot">마우스 범주는 일련의 이벤트로 구분되어 선택되어 게임에서 일어나는 일을보다 정확하게 제어 할 수 있습니다. 다음은 이러한 이벤트가 정확히 무엇인지 확인할 수 있습니다.</p>
+    <p class="dropspot"><img alt="Object Editor Mouse Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Mouse.png"/>왼쪽 , 권리 그리고 중간 버튼 이벤트 ( <strong>보통</strong> , <strong>눌림</strong> 또는 <strong>놓음</strong> )는 모두 이벤트가있는 인스턴스의 마스크에서 작동합니다. 이것이 의미하는 것은 GameMaker Studio 2가 마우스 이벤트가있는 인스턴스의 충돌 마스크에 대해 해당 버튼을 사용할 때 회의실에서 마우스의 위치를 ​​확인한다는 것입니다. 인스턴스 <a class="tooltip" title="스프라이트의 경우 경계 상자는 충돌이 처음 감지되는 영역의 가장자리에 지정된 이름이며 적용되는 스프라이트와 크기가 같지 않아도됩니다. 시퀀스의 경우 경계 상자는 하나 이상의 자산이 캔버스에서 차지하는 전체 공간의 바깥 쪽 가장자리입니다.">경계 상자에</a> &quot;충돌&quot;이있는 경우 이벤트가 트리거되므로 이러한 이벤트가있는 인스턴스에 유효한 충돌 마스크가 포함 된 스프라이트가 있거나 개체 속성에서 마스크 스프라이트가 선택되어 있는지 확인하십시오. 이름에서 알 수 있듯이 이러한 이벤트는 선택한 마우스 버튼을 처음 눌렀거나 놓을 때 한 번 또는 버튼이 유지되는 동안 각 단계가 연속적으로 트리거됩니다.</p>
+    <p class="dropspot">마우스 입장 및 탈퇴 이벤트는 버튼 마스크와 비슷하지만 인스턴스 마스크를 사용하여 작동하지만 이번에는 마우스가 인스턴스를 처음 &quot;입력&quot;(터치) 할 때 또는 &quot; 인스턴스를 떠납니다. 그러나 이러한 이벤트는 연속적이지 않으며 마우스가 개체에 들어 오거나 개체를 떠날 때마다 한 번만 트리거되므로 예를 들어, 마우스가 마우스를 가져 가기 전에 마우스를 올리면 변경되어야하는 버튼을 만드는 이상적인 방법입니다. 마우스를 제거하면 정상입니다.</p>
+    <p class="dropspot">마지막으로 마우스 이벤트에 대한 또 다른 섹션 인 <strong>Global Mouse</strong> 라고합니다. 이 하위 메뉴에서는 마우스가 위에 있거나 근처에있을 때에도 마우스 이벤트를 기록하기위한 이벤트를 선택할 수 있습니다. 이는 <em>모든</em> 인스턴스에 대해 생성되는 이벤트이며 지정된 이벤트에 대해 정의 된 동작 또는 코드가있는 경우 게임 룸 내에서 마우스의 위치에 관계없이 실행됩니다.</p>
+    <p class="dropspot">모바일 또는 터치 스크린 장치에서 마우스 왼쪽 버튼 터치 스크린에서 손가락 탭과 마우스 오른쪽 버튼을 확인하는 데에도 사용할 수 있습니다 화면을 두 번 탭하면 트리거됩니다 (이 동작은 코드를 사용하여 변경할 수 있음).</p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Gestures Icon" src="../../assets/Images/Icons/Icon_Gesture.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18" href="#"><span data-open-text="true">Gestures</span><span data-close-text="true">Gestures</span></a></p>
+  <p><img alt="Gestures Icon" src="../../assets/Images/Icons/Icon_Gesture.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18" href="#"><span data-open-text="true">제스처</span> <span data-close-text="true">제스처</span></a></p>
   <div class="droptext" data-targetname="drop-down18">
-    <p class="dropspot">This event is the one that will be triggered by the user touching the screen (on mobile) or clicking and moving the mouse (on all other platforms). These events are similar to the mouse events, in that you have regular versions and <em>global</em> versions.
-      The regular versions of these events will only be triggered when the touches occur on an instance that has a sprite (or a mask) and the touches occur within its <a class="tooltip" title="For sprites, the bounding-box is the name given to the edges of the area that collisions will initially be detected in, and it doesn&#39;t have to be the same size as the sprite it&#39;s being applied to. For sequences, the bounding box is the outer edge of the total space that one or more assets occupy in the canvas.">bounding box</a>. The global
-      versions of these events, however, will be triggered by the user touching <em>anywhere </em>on the screen.</p>
-    <p class="dropspot">The gesture events detect the following:</p>
+    <p class="dropspot">이 이벤트는 사용자가 화면을 터치하거나 (모바일에서) 마우스를 클릭하고 움직일 때 (다른 모든 플랫폼에서) 발생하는 이벤트입니다. 이러한 이벤트는 일반 버전과 <em>전역</em> 버전이 있다는 점에서 마우스 이벤트와 유사합니다. 이러한 이벤트의 일반 버전은 스프라이트 (또는 마스크)가있는 인스턴스에서 터치가 발생하고 터치가 <a class="tooltip" title="스프라이트의 경우 경계 상자는 충돌이 처음 감지되는 영역의 가장자리에 지정된 이름이며 적용되는 스프라이트와 크기가 같지 않아도됩니다. 시퀀스의 경우 경계 상자는 하나 이상의 자산이 캔버스에서 차지하는 전체 공간의 바깥 쪽 가장자리입니다.">경계 상자</a> 내에서 발생하는 경우에만 트리거됩니다. 그러나 이러한 이벤트의 글로벌 버전은 사용자가 화면의 <em>아무 곳이나</em> 터치 <em>하면</em> 트리거됩니다.</p>
+    <p class="dropspot">제스처 이벤트는 다음을 감지합니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img alt="Tap Icon" class="icon" src="../../assets/Images/Icons/Icon_Tap.png"/> <strong>taps </strong>- when a user clicks/touches and releases quickly</li>
-      <li class="dropspot"><img alt="Drag Icon" class="icon" src="../../assets/Images/Icons/Icon_Drag.png"/> <strong>drags </strong>- when a user touches/clicks and maintains it then moves their finger/cursor</li>
-      <li class="dropspot"><img alt="Flick Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Flick.png" width="20"/> <strong>flicks </strong>- when the user moves and releases a touch/click in one movement</li>
-      <li class="dropspot"><img alt="Pinch Icon" class="icon" src="../../assets/Images/Icons/Icon_Pinch.png"/> <strong>pinches </strong>- when the user has two fingers on the screen and then moves them together/apart</li>
-      <li class="dropspot"><img alt="Rotate Icon" class="icon" src="../../assets/Images/Icons/Icon_Rotate.png"/> <strong>rotates </strong>- when the user has two fingers on the screen and then rotates them around a point</li>
+      <li class="dropspot"><strong>탭</strong> -사용자가 클릭 / 터치하고 빠르게 놓을 때</li>
+      <li class="dropspot"><strong>드래그</strong> -사용자가 터치 / 클릭하고 유지하면 손가락 / 커서를 움직입니다.</li>
+      <li class="dropspot"><strong>긋기</strong> -사용자가 한 번의 움직임으로 터치 / 클릭을 움직일 때</li>
+      <li class="dropspot"><strong>핀치</strong> -사용자가 화면에 두 손가락을 가지고있을 때 손가락을 함께 움직이거나 분리 할 때</li>
+      <li class="dropspot"><strong>회전</strong> -사용자가 화면에 두 손가락을 가지고 있고 점을 중심으로 회전 할 때</li>
     </ul>
-    <p class="dropspot"><img alt="Object Editor Gesture Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Gesture.png"/>The different events will always contain a DS Map called the &quot;<span class="inline">event_data</span>&quot; map, which
-      will contain a number of key/value pairs with data on the touch/click position and movement. For full details on all the available sub-events and how they work, please see the following section:</p>
+    <p class="dropspot"><img alt="Object Editor Gesture Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Gesture.png"/>다른 이벤트에는 항상 &quot; <span class="inline">event_data</span> &quot;맵이라는 DS 맵이 포함되며 여기에는 터치 / 클릭 위치 및 이동에 대한 데이터와 여러 키 / 값 쌍이 포함됩니다. 사용 가능한 모든 하위 이벤트 및 작동 방식에 대한 자세한 내용은 다음 섹션을 참조하십시오.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Gesture_Events.htm">The Gesture Event</a></li>
+      <li class="dropspot"><a href="Gesture_Events.htm">제스처 이벤트</a></li>
     </ul>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Other Icon" height="16" src="../../assets/Images/Icons/Icon_Other.png" width="16"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down19" href="#"><span data-open-text="true">Other</span><span data-close-text="true">Other</span></a></p>
+  <p><img alt="Other Icon" height="16" src="../../assets/Images/Icons/Icon_Other.png" width="16"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down19" href="#"><span data-open-text="true">기타</span> <span data-close-text="true">기타</span></a></p>
   <div class="droptext" data-targetname="drop-down19">
-    <p class="dropspot">There are a number of special events for use when making games with GameMaker Studio 2 and they are mostly grouped together under the Other event and can be selected from the pop up menu of sub events that comes up when you select this. Here is an
-      image of all these other events:</p>
-    <p class="dropspot"><img alt="Object Editor Other Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_OtherEvents.png"/>For more information on each of the events listed in the image above, please see the following section:</p>
+    <p class="dropspot">GameMaker Studio 2로 게임을 만들 때 사용할 특별한 이벤트가 많이 있으며 기타 이벤트 아래에 대부분 그룹화되어 있으며이를 선택할 때 나타나는 하위 이벤트의 팝업 메뉴에서 선택할 수 있습니다. 다른 모든 이벤트의 이미지는 다음과 같습니다.</p>
+    <p class="dropspot"><img alt="Object Editor Other Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_OtherEvents.png"/>위 이미지에 나열된 각 이벤트에 대한 자세한 내용은 다음 섹션을 참조하십시오.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Other_Events.htm">The Other Events</a></li>
+      <li class="dropspot"><a href="Other_Events.htm">다른 이벤트</a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Draw Event" src="../../assets/Images/Icons/Icon_Draw.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down20" href="#"><span data-open-text="true">Draw</span><span data-close-text="true">Draw</span></a></p>
+  <p><img alt="Draw Event" src="../../assets/Images/Icons/Icon_Draw.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down20" href="#"><span data-open-text="true">무승부</span> <span data-close-text="true">무승부</span></a></p>
   <div class="droptext" data-targetname="drop-down20">
-    <p class="dropspot">This event category is the one that governs what you see on the screen when you run your game, and is split into various discreet events:</p>
-    <p class="dropspot"><img alt="Draw Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Draw.png"/>As you can see, the draw event category has multiple different event types. <strong>Draw Begin</strong>, <strong>Draw </strong>and <strong>Draw End</strong>      are the &quot;standard&quot; draw events which you will probably use most. By default the main Draw event is always called for every instance, regardless of whether it has a sprite or not, although if you flag the instance as invisible, the event
-      will not be triggered (so keep this in mind if you have any game logic in the draw event of an invisible object, as it won&#39;t run). The main draw event is also where GameMaker Studio 2 default draws the instance sprite when there is no code nor
-      actions in the event (ie: you haven&#39;t added it into the event list for the object). Default drawing uses the sprite associated with the instance and will draw that with any transforms set in code or actions applied.</p>
-    <p class="dropspot">The standard draw events draw <em>before </em>the <strong>Draw GUI </strong>events and <em>between </em>the <strong>Pre Draw </strong>and <strong>Post Draw </strong>events, meaning that everything that is drawn in this event is drawn beneath that
-      of the <strong>Draw GUI </strong>event, regardless of the layer (ie: anything drawn in the Draw GUI event will always be drawn over anything drawn in the normal draw event, regardless of layer order).</p>
-    <p class="dropspot">Note that the above is simply an overview of how the Draw Events work, but for full details on all the available sub-events, please see the following section:</p>
+    <p class="dropspot">이 이벤트 범주는 게임을 실행할 때 화면에 표시되는 내용을 제어하는 ​​범주이며 다양한 신중한 이벤트로 나뉩니다.</p>
+    <p class="dropspot"><img alt="Draw Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Draw.png"/>보시다시피, draw 이벤트 범주에는 여러 가지 다른 이벤트 유형이 있습니다. <strong>Draw Begin</strong> , <strong>Draw</strong> 및 <strong>Draw End</strong> 는 아마도 가장 많이 사용하는 &quot;표준&quot;드로우 이벤트입니다. 기본 Draw 이벤트는 스프라이트의 유무에 관계없이 모든 인스턴스에 대해 항상 호출됩니다. 인스턴스를 보이지 않는 것으로 플래그를 지정하면 이벤트가 트리거되지 않습니다 (게임 로직이있는 경우이를 명심하십시오) 보이지 않는 객체의 그리기 이벤트에서 실행되지 않습니다). 메인 드로우 이벤트는 이벤트에 코드 나 액션이 없을 때 (예 : 오브젝트의 이벤트 목록에 추가하지 않은 경우) GameMaker Studio 2 기본이 인스턴스 스프라이트를 그리는 곳이기도합니다. 기본 드로잉은 인스턴스와 관련된 스프라이트를 사용하며 코드에서 설정된 변환이나 적용된 액션으로 그 스프라이트를 그립니다.</p>
+    <p class="dropspot">표준 추첨 이벤트 <strong>그리기 GUI 이벤트</strong> <em>전에</em> 그릴과 <strong>전</strong> <em>사이에</em> (즉 관계없이 층, <strong>그리기 GUI 이벤트의</strong> 아래에 그려진이 이벤트에 그려진 모든 것이 의미 <strong>그리기</strong> 및 <strong>포스트</strong> 이벤트를 <strong>그리기</strong> : 무엇이라도 그려 Draw GUI 이벤트는 레이어 순서와 상관없이 항상 일반 그리기 이벤트에서 그린 항목 위에 그려집니다.</p>
+    <p class="dropspot">위의 이벤트는 Draw 이벤트의 작동 방식에 대한 개요이지만 사용 가능한 모든 하위 이벤트에 대한 자세한 내용은 다음 섹션을 참조하십시오.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Draw_Events.htm">The Draw Event</a></li>
+      <li class="dropspot"><a href="Draw_Events.htm">추첨 이벤트</a></li>
     </ul>
     <p> </p>
     <p> </p>
     <p class="dropspot"> </p>
   </div>
-  <p><img alt="Async Event" src="../../assets/Images/Icons/Icon_Async.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down21" href="#"><span data-open-text="true">Asynchronous</span><span data-close-text="true">Asynchronous</span></a></p>
+  <p><img alt="Async Event" src="../../assets/Images/Icons/Icon_Async.png"/><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down21" href="#"><span data-open-text="true">비동기식</span> <span data-close-text="true">비동기</span></a></p>
   <div class="droptext" data-targetname="drop-down21">
-    <p class="dropspot">This event category is special in that the events it contains are not triggered by default by GameMaker Studio 2, but rather by the end of some other action, like the loading of a file, or the reply from a web server. The category is split into the
-      following events:</p>
+    <p class="dropspot">이 이벤트 범주는 포함 된 이벤트가 기본적으로 GameMaker Studio 2에 의해 트리거되는 것이 아니라 파일로드 또는 웹 서버의 응답과 같은 다른 작업이 끝날 때 특별하다는 점에서 특별합니다. 범주는 다음과 같은 이벤트로 나뉩니다.</p>
     <p class="dropspot"><img alt="Object Editor Asynchronous Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Async.png"/></p>
-    <p class="dropspot">So, say you want to add an image file to GameMaker Studio 2. Well, you would code this in another event (maybe the Create Event) of an object and then have that object draw a loading bar while waiting (for example), polling the appropriate asynchronous
-      event until the <a class="tooltip" title="A callback is simply a function that runs and then triggers another function (or code block) when it has finished doing whatever it was assigned to do. For example, the funtion sprite_add() will trigger a callback in the asynchronous Image Loaded event when the sprite has been loaded.">callback</a> that tells GameMaker Studio 2 the file has loaded. You can then use the data returned in this event to do other things, like change room, or purchase an item.</p>
-    <p class="dropspot">Note that the above is simply an overview of how the Asynchronous Event works, but for full details on all the available sub-events, please see the following section:</p>
+    <p class="dropspot">자, 이미지 파일을 GameMaker Studio 2에 추가하고 싶다고 가정 해 봅시다. 글쎄, 객체의 다른 이벤트 (아마도 Create Event)에서이 코드를 코딩하고 대기 중 (예를 들어) 폴링 중에 해당 객체가 로딩 바를 그리도록합니다. 파일이로드되었음을 GameMaker Studio 2에 알리는 <a class="tooltip" title="콜백은 단순히 실행 된 다음 수행 된 작업을 모두 마쳤을 때 다른 함수 (또는 코드 블록)를 트리거하는 함수입니다. 예를 들어, sprite_add () 함수는 스프라이트가로드 될 때 비동기 이미지로드 이벤트에서 콜백을 트리거합니다.">콜백</a> 까지 적절한 비동기 이벤트. 그런 다음이 이벤트에서 반환 된 데이터를 사용하여 탈의실과 같은 다른 작업을 수행하거나 품목을 구입할 수 있습니다.</p>
+    <p class="dropspot">위의 내용은 단순히 비동기 이벤트의 작동 방식에 대한 개요이지만 사용 가능한 모든 하위 이벤트에 대한 자세한 내용은 다음 섹션을 참조하십시오.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Async_Events.htm">Asynchronous Events List</a></li>
+      <li class="dropspot"><a href="Async_Events.htm">비동기 이벤트 목록</a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
-  <p>You should also note that you can name events, or at least give them a short descriptive text that will be shown beside them in the Event Editor. To do this, simply add the following into the very first line of the code editor for the event:</p>
+  <p>또한 이벤트 이름을 지정하거나 최소한 이벤트 편집기에서 이벤트 옆에 표시되는 간단한 설명 텍스트를 제공 할 수 있습니다. 이를 위해 이벤트 코드 편집기의 첫 번째 행에 다음을 추가하십시오.</p>
   <p class="code">/// @description Your text here</p>
-  <p>So, you could have something like this in - for example - an <strong>Alarm </strong>event</p>
+  <p>예를 들어, <strong>알람</strong> 이벤트에서 이와 같은 것을 가질 수 있습니다.</p>
   <p class="code">/// @description This is the AI Fight alarm</p>
-  <p>And now in your Event Editor you&#39;ll see this:</p>
+  <p>이제 이벤트 편집기에 다음이 표시됩니다.</p>
   <p><img alt="Object Editor Named Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_NamedEvents.png"/></p>
-  <p>For DnD™ users, adding a comment requires the use of the <strong>Execute Code</strong> action, which should be placed at the very top of the actions for the event, before everything else. When you add this action, you then give it the same line of code
-    that is shown above to name the event, eg:</p>
-  <p><img alt="Naming An Event In DnD" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_DnD_NamedEvents.png"/>For additional information on some of the above events and general event running order, please see the following sections:</p>
+  <p>DnD ™ 사용자의 경우 주석을 추가하려면 <strong>코드 실행</strong> 조치를 사용해야합니다.이 조치는 이벤트에 대한 조치의 맨 위에 배치해야합니다. 이 작업을 추가하면 위에 표시된 것과 같은 코드 줄을 지정하여 이벤트 이름을 지정합니다. 예 :</p>
+  <p><img alt="Naming An Event In DnD" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_DnD_NamedEvents.png"/>위의 이벤트 및 일반적인 이벤트 실행 순서에 대한 자세한 내용은 다음 섹션을 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="Event_Order.htm">Event Order</a></li>
-    <li><a href="Other_Events.htm">The Other Events</a></li>
-    <li><a href="Draw_Events.htm">The Draw Events</a></li>
-    <li><a href="Async_Events.htm">The Async Events</a></li>
-    <li><a href="Gesture_Events.htm">The Gesture Events</a></li>
+    <li><a href="Event_Order.htm">이벤트 순서</a></li>
+    <li><a href="Other_Events.htm">다른 이벤트</a></li>
+    <li><a href="Draw_Events.htm">추첨 이벤트</a></li>
+    <li><a href="Async_Events.htm">비동기 이벤트</a></li>
+    <li><a href="Gesture_Events.htm">제스처 이벤트</a></li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Object_Properties/Object_Events.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Objects.htm">The Object Editor</a></div>
+        <div style="float:left">목록: <a href="../Objects.htm">객체 편집기</a></div>
+        <div style="float:right">다음: 
+      <div class="clear">
+<div style="float:left"> 뒤로 : <a href="../Objects.htm">객체 편집기</a></a></div>
+        <div style="float:right">Next: Parent Objects</div>
         <div style="float:right">Next: Parent Objects</div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Object Events
@@ -310,4 +264,4 @@ Named Events
 object_events
 -->
 
-</body></html>
+</body></html> 

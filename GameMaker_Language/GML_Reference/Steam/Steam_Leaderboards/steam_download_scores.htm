@@ -71,7 +71,7 @@
         <span>steam_download_scores</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,42 +81,38 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>steam_download_scores</h1>
-  <p>This function is used retrieve a sequential range of leaderboard entries by leaderboard ranking. The <tt>start_idx</tt> and <tt>end_idx</tt> parameters control the requested range of ranks, for example, you can display the top 10 on a leaderboard for
-    your game by setting the start value to 1 and the end value to 10. The leaderboard name is a string that was defined when you created the leaderboard using the function <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard()</tt></a>,
-    and the function will return a value which can then be used to identify the call-back in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam Async Event</a>, or it will return -1 if it has failed. Note that when
-    downloading a leaderboard, the &quot;entries&quot; key of the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> map may have an additional &quot;data&quot; key if any additional buffer data was
-    uploaded along with the score(see <a href="steam_upload_score_buffer.htm"><tt>steam_upload_score_buffer()</tt></a>). This data buffer will be <b>Base 64 encoded</b> and so you will need to use the function <a href="../../Buffers/buffer_base64_decode.htm"><tt>buffer_base64_decode()</tt></a>    on the buffer before reading the data.</p>
+  <p>이 기능은 순위표 순위에 따라 순차적 인 순위표 항목을 검색하는 데 사용됩니다. <tt>start_idx</tt> 및 <tt>end_idx</tt> 매개 변수는 요청 된 순위 범위를 제어합니다. 예를 들어 시작 값을 1로 설정하고 종료 값을 10으로 설정하여 게임의 순위표에 상위 10 개를 표시 할 수 있습니다. 리더 보드 이름은 정의 된 문자열입니다. <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard ()</tt></a> 함수를 사용하여 리더 보드를 <a href="steam_create_leaderboard.htm"><tt>만들면</tt></a> 이 함수는 값을 반환 한 다음 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam Async Event</a> 에서 콜백을 식별하는 데 사용할 수 있으며 실패한 경우 -1을 반환합니다. 리더 보드를 다운로드 할 때 점수와 함께 추가 버퍼 데이터가 업로드 된 경우 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> 맵의 &quot;항목&quot;키에 추가 &quot;데이터&quot;키가있을 수 있습니다 ( <a href="steam_upload_score_buffer.htm"><tt>steam_upload_score_buffer ()</tt></a> 참조). 이 데이터 버퍼는 <b>Base 64로 인코딩</b> 되므로 데이터를 읽기 전에 버퍼에서 <a href="../../Buffers/buffer_base64_decode.htm"><tt>buffer_base64_decode ()</tt></a> 함수를 사용해야합니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">steam_download_scores(lb_name, start_idx, end_idx);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>lb_name</td>
-        <td>The name of the leaderboard that you are downloading the scores from (a string).</td>
+        <td>점수를 다운로드 할 리더 보드의 이름 (문자열)</td>
       </tr>
       <tr>
         <td>start_idx</td>
-        <td>The start position within the leaderboard.</td>
+        <td>리더 보드 내에서 시작 위치입니다.</td>
       </tr>
       <tr>
         <td>end_idx</td>
-        <td>The end position within the leaderboard.</td>
+        <td>리더 보드 내에서 끝 위치입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real</p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>In this extended example we will request the top ten ranking for the given leaderboard and parse its results in the <b>Steam Async Event</b>. to start with we need to request the scores with the following code:</p>
+  <h4>확장 된 예 :</h4>
+  <p>이 확장 된 예제에서는 지정된 리더 보드에 상위 10 개의 순위를 요청하고 결과를 <b>Steam Async Event</b> 에서 구문 분석합니다. 시작하려면 다음 코드로 점수를 요청해야합니다.</p>
   <p class="code">score_get = steam_download_scores(&quot;Game Scores&quot;, 1, 10);</p>
-  <p>This will send off a request to the Steam Server for the scores from the leaderboard &quot;Game Scores&quot;, storing the <b>async id</b> of the request in the variable &quot;score_get&quot;. this will then be handled in the <b>Steam Async Event</b>    in the following way:</p>
+  <p>그러면 리더 보드 &quot;Game Scores&quot;의 점수에 대한 요청을 Steam 서버로 보내 &quot;score_get&quot;변수에 요청의 <b>비동기 ID</b> 를 저장합니다. 그런 다음 <b>Steam 비동기 이벤트</b> 에서 다음과 같은 방식으로 처리됩니다.</p>
   <p class="code">var async_id = ds_map_find_value(async_load, &quot;id&quot;);<br/> if async_id == score_get<br/>     {
     <br/>     var entries = ds_map_find_value(async_load, &quot;entries&quot;);<br/>     var map = json_decode(entries);<br/>     if ds_map_exists(map, &quot;default&quot;)<br/>         {
     <br/>         ds_map_destroy(map);
@@ -131,23 +127,21 @@
     <br/>     ds_map_destroy(map)
     <br/>     }
   </p>
-  <p>What we do here is first check the &quot;id&quot; key of the special <tt>async_load</tt> DS map. If this value is the same as the value of the original call-back function (stored in the &quot;score_get&quot; variable) we then continue to process the
-    data. The first thing we do is parse the <tt>async_load</tt> ds_map for the key &quot;entries&quot; which will contain a JSON object containing the leaderboard data. This JSON object is then decoded (see <a href="../../File_Handling/Encoding_And_Hashing/json_decode.htm"><tt>json_decode()</tt></a>)
-    as another DS map, and this new map id is stored in the variable &quot;map&quot;.</p>
-  <p>This map is checked for the key &quot;default&quot; and if that is found then the map is destroyed and the event is exited. If no &quot;default&quot; key is found, the code will then parse the map to extract the necessary information about the leaderboard,
-    by first extracting a DS list from the &quot;entries&quot; key of the DS map, and then looping through each entry of the list to get <i>another</i> DS map with the name, score and rank of each entry. These values are then stored to arrays.</p>
-  <p>Once the loop has finished, the JSON DS map is destroyed (which in turn destroys all the internal maps and lists). There is no need to destroy the <tt>async_load</tt> DS map as this is handled for you by GameMaker Studio 2.</p>
+  <p>여기서하는 일은 먼저 특수한 <tt>async_load</tt> DS 맵의 &quot;id&quot;키를 확인하는 것입니다. 이 값이 &quot;score_get&quot;변수에 저장된 원래 콜백 함수의 값과 동일한 경우 데이터를 계속 처리합니다. 우리가하는 첫 번째 일은 리더 보드 데이터를 포함하는 JSON 객체를 포함 할 키 &quot;항목&quot;에 대한 <tt>async_load</tt> ds_map을 구문 분석하는 것입니다. 그런 다음이 JSON 객체가 다른 DS 맵으로 디코딩되고 ( <a href="../../File_Handling/Encoding_And_Hashing/json_decode.htm"><tt>json_decode ()</tt></a> 참조 <a href="../../File_Handling/Encoding_And_Hashing/json_decode.htm"><tt>)</tt></a> 이 새 맵 ID는 변수 &quot;map&quot;에 저장됩니다.</p>
+  <p>이 맵은 &quot;default&quot;키가 있는지 확인한 후 발견되면 맵이 삭제되고 이벤트가 종료됩니다. &quot;기본&quot;키가 없으면 코드는지도를 구문 분석하여 먼저 DS지도의 &quot;항목&quot;키에서 DS 목록을 추출한 다음 리더 보드에 대한 필요한 정보를 추출합니다. 각 항목의 이름, 점수 및 순위가 포함 된 <i>다른</i> DS 맵을 가져옵니다. 그런 다음이 값은 배열에 저장됩니다.</p>
+  <p>루프가 완료되면 JSON DS 맵이 삭제됩니다 (모든 내부 맵과 목록이 삭제됨). <tt>async_load</tt> DS 맵은 GameMaker Studio 2에서 처리하므로 <tt>async_load</tt> DS 맵을 삭제할 필요가 없습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_download_scores.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Steam_Leaderboards.htm">Leaderboards</a></div>
-        <div style="float:right">Next: <a href="steam_download_scores_around_user.htm">steam_download_scores_around_user</a></div>
+        <div style="float:left">목록: <a href="Steam_Leaderboards.htm">리더 보드</a></div>
+        <div style="float:right">다음: <a href="steam_download_scores_around_user.htm">steam_download_scores_around_user</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 steam_download_scores
@@ -156,4 +150,4 @@ steam_download_scores
 steam_download_scores
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Physics">
-        <span>Physics</span>
+        <span>물리학</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,45 +80,32 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Physics</h1>
-  <p>The integration of a dedicated physics library to GameMaker Studio 2 means that you can now take control over all aspects of the physical behaviour of objects within your game world, particularly collisions and object interaction. The &quot;traditional&quot;
-    collision system (which GameMaker Studio 2 defaults to) is a &quot;reactive&quot; system, where you check for a collision and <i>then</i> react to that collision with code that you place in individual objects. This is fine for simple games,
-    but when you have a large number of objects and have to code how they all react to different situations in the game world, it quickly becomes obvious that this system is just not enough. That&#39;s when you have to turn to the GameMaker Studio 2    physics system.</p>
-  <p>The physics system works in a very different way to normal collisions. It is more of a &quot;passive&quot; system where you define a series of properties for your objects in the game world, as well as the properties of the game world itself, before
-    any collisions or interactions occur. These coded &quot;rules&quot; will then govern the way everything in your game world interacts. In this way, with a few simple code and the correct room setup, you can create very complex interactions between
-    objects and the world which will occur and resolve <i>without</i> you having to code for every single possible outcome.</p>
-  <p>There are a few things that you should note when working with the GameMaker Studio 2 physics world:</p>
+  <h1>물리학</h1>
+  <p>전용 물리 라이브러리를 GameMaker Studio 2에 통합하면 게임 세계 내 오브젝트의 물리적 동작, 특히 충돌 및 오브젝트 상호 작용의 모든 측면을 제어 할 수 있습니다. &quot;전통적인&quot;충돌 시스템 (GameMaker Studio 2의 기본값)은 충돌을 확인한 <i>다음</i> 개별 객체에 배치 한 코드로 해당 충돌에 반응하는 &quot;반응 형&quot;시스템입니다. 이것은 간단한 게임에는 적합하지만 많은 객체가 있고 게임 세계에서 서로 다른 상황에 어떻게 반응하는지 코딩해야 할 때이 시스템으로는 충분하지 않다는 것이 금방 분명해집니다. 이때 GameMaker Studio 2 물리 시스템으로 전환해야합니다.</p>
+  <p>물리 시스템은 일반 충돌과 매우 다른 방식으로 작동합니다. 충돌이나 상호 작용이 발생하기 전에 게임 세계의 개체 속성뿐만 아니라 게임 세계의 개체에 대한 일련의 속성을 정의하는 &quot;수동적&quot;시스템에 가깝습니다. 이 코딩 된 &quot;규칙&quot;은 게임 세계의 모든 것이 상호 작용하는 방식을 통제합니다. 이러한 방식으로 간단한 코드 몇 개와 정확한 공간 설정을 통해 개체와 세계간에 매우 복잡한 상호 작용을 만들어 가능한 모든 단일 결과에 대해 코딩 할 필요 <i>없이</i> 발생하고 해결할 <i>수</i> 있습니다.</p>
+  <p>GameMaker Studio 2 물리 세계에서 작업 할 때주의해야 할 사항이 몇 가지 있습니다.</p>
   <ul class="colour">
-    <li>The physics system exists &quot;apart&quot; from the basic room and instance structure of GameMaker Studio 2 meaning that its timings and functions are not necessarily tied into the room speed and step order like everything else.</li>
-    <li>The physics system replaces many of the normal instance functions... for example, rather than set a speed and a direction for an instance, if it has been declared as being a fully simulated physical body, you would use a <i>force</i> or <i>impulse</i>      to get it to move around in the game world, or if it is not physics enabled you will need to set the x an y positions yourself. This takes a bit of getting used to, so experiment with the physics functions and get to know how everything works before
-      trying to integrate them into your project.</li>
-    <li>You should limit the number of instances that are created, as well as the number of collisions and collision groups that the physics world has to deal with. You <i>cannot</i> have thousands of instances, all with physical properties and collisions
-      and expect everything to work fine due to the fact that physics requires some pretty intensive calculations, so limit yourself and optimise where possible.</li>
-    <li>When setting up collisions, use parents as much as possible since the collision system has a limited number of <i>collision bits</i> available to assign to instances for Box2D to detect collisions. For example, if you have five different wall objects,
-      don&#39;t check for five collisions, rather, create a parent object and assign it to the five walls then have ONE collision check with the parent. The physical properties of the objects are <i>not inherited</i> only the collisions. In this way you
-      can keep your game optimised and error free.</li>
-    <li>Try not to move instances from one point of the room to another in any way other than using the physics functions (ie: do not set the x/y coordinates manual). Although this can be done and in some circumstances it may be necessary, this is generally
-      to be avoided due to the unpredictable results that it may have on the physics engine, especially when trying to resolve collisions.</li>
-    <li>Care should be taken when binding fixtures, as they can be bound to objects and instances independently. This means that if you bind a fixture to (for example) &quot;o_Wall&quot;, <b>all</b> instances of that object will get the fixture. If you only
-      want to bind a fixture to one instance, then use that instance&#39;s id in the appropriate function.</li>
-    <li>Please be aware that due to differences in floating point precision you may find that versions of your game for different target platforms may exhibit subtly different behaviour to the standard Windows version, though each version will be self-consistent
-      across subsequent executions.</li>
-    <li>To prevent instabilities in the physical simulation Box2D constrains to upper limits the amount a body may rotate and translate within a single update. The apparent limitations will vary according to the accuracy of the physical simulation in accordance
-      with the number of updates and update speed of the physics world, and also in accordance with the physics world scaling. This means that (for example) if you have a world update speed of 60, the maximum movement speed would be 20.</li>
+    <li>물리 시스템은 GameMaker Studio 2의 기본 룸 및 인스턴스 구조와 &quot;별도&quot;존재하며 타이밍 및 기능이 다른 모든 것과 마찬가지로 룸 속도 및 단계 순서에 반드시 연결되어 있지는 않습니다.</li>
+    <li>물리학 시스템이 완벽하게 시뮬레이션 육체, 당신이 사용하는 것 인 것으로 선언 된 경우, 속도와 인스턴스에 대한 방향을 설정하기보다는, 예를 들면 ... 일반 인스턴스 기능의 많은 대체 <i>힘을</i> 하거나 <i>충동</i> 얻을 수 게임 세계에서 움직이거나 물리가 가능하지 않은 경우 x와 y 위치를 직접 설정해야합니다. 이 작업에는 약간의 시간이 걸리므로 물리 함수를 실험하고 프로젝트에 통합하기 전에 모든 것이 어떻게 작동하는지 알아야합니다.</li>
+    <li>물리 세계가 처리해야하는 충돌 및 충돌 그룹뿐만 아니라 생성 된 인스턴스 수를 제한해야합니다. 물리적 특성과 충돌이 모두 발생하는 수천 개의 인스턴스를 가질 <i>수 없으며</i> 물리에는 꽤 집중적 인 계산이 필요하기 때문에 모든 것이 잘 작동 할 것으로 예상되므로 자신을 제한하고 가능한 경우 최적화하십시오.</li>
+    <li>충돌을 설정하는 경우 충돌을 감지하기 위해 충돌 시스템에 Box2D의 인스턴스에 할당 할 수있는 <i>충돌 비트</i> 수가 제한되어 있으므로 부모를 최대한 사용하십시오. 예를 들어, 5 개의 서로 다른 벽체 객체가있는 경우 5 개의 충돌을 확인하지 말고 부모 객체를 작성하여 5 개의 벽에 할당 한 다음 부모와 1 회의 충돌 검사를 수행하십시오. 객체의 물리적 속성은 충돌 만 <i>상속받지 않습니다</i> . 이런 식으로 게임을 최적화하고 오류없이 유지할 수 있습니다.</li>
+    <li>물리 기능을 사용하는 것 이외의 방법으로 실의 한 지점에서 다른 지점으로 인스턴스를 이동하지 마십시오 (즉, x / y 좌표 매뉴얼을 설정하지 마십시오). 이것이 수행 될 수 있고 어떤 상황에서는 필요할 수 있지만, 이는 특히 충돌을 해결하려고 할 때 물리 엔진에 미칠 수있는 예측할 수없는 결과로 인해 일반적으로 피해야합니다.</li>
+    <li>픽스처를 바인딩 할 때는 오브젝트와 인스턴스에 독립적으로 바인딩 될 수 있으므로주의해야합니다. 즉, 조명기를 &quot;o_Wall&quot;에 바인딩하면 해당 객체의 <b>모든</b> 인스턴스가 조명기를 가져옵니다. 조명기를 하나의 인스턴스에만 바인딩하려면 적절한 함수에서 해당 인스턴스의 ID를 사용하십시오.</li>
+    <li>부동 소수점 정밀도의 차이로 인해 대상 플랫폼마다 다른 게임 버전이 표준 Windows 버전과 미묘하게 다른 동작을 보일 수 있지만 각 버전은 후속 실행에서 자체 일관성을 갖습니다.</li>
+    <li>물리적 시뮬레이션 Box2D의 불안정성을 방지하기 위해 한 번의 업데이트로 신체가 회전하고 변환 할 수있는 양을 상한으로 제한합니다. 물리 세계의 업데이트 및 업데이트 속도와 물리 세계 스케일링에 따라 물리적 시뮬레이션의 정확도에 따라 명백한 한계가 달라집니다. 예를 들어 월드 업데이트 속도가 60 인 경우 최대 이동 속도는 20입니다.</li>
   </ul>
-  <p>Information on the physics functions can be found on the following pages:</p>
+  <p>물리 기능에 대한 정보는 다음 페이지에서 찾을 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="The_Physics_World/The_Physics_World.htm">The Physics World</a></li>
-    <li><a href="Forces/Forces.htm">Forces</a></li>
-    <li><a href="Fixtures/Fixtures.htm">Fixtures</a></li>
-    <li><a href="Joints/Joints.htm">Joints</a></li>
-    <li><a href="Soft_Body_Particles/Soft_Body_Particles.htm">Soft Body Particles</a></li>
-    <li><a href="Physics_Variables/Physics_Variables.htm">Physics Variables</a></li>
+    <li><a href="The_Physics_World/The_Physics_World.htm">물리 세계</a></li>
+    <li><a href="Forces/Forces.htm">부대</a></li>
+    <li><a href="Fixtures/Fixtures.htm">비품</a></li>
+    <li><a href="Joints/Joints.htm">관절</a></li>
+    <li><a href="Soft_Body_Particles/Soft_Body_Particles.htm">연체 입자</a></li>
+    <li><a href="Physics_Variables/Physics_Variables.htm">물리 변수</a></li>
   </ul>
   <p> </p>
-  <p>Finally, there are a couple of special physics functions which may be useful for more advanced physics simulations. The first is for testing for possible collisions at a specific point in the room, and the second is for generating custom mass and inertia
-    properties within an instance:</p>
+  <p>마지막으로, 고급 물리 시뮬레이션에 유용한 몇 가지 특수 물리 함수가 있습니다. 첫 번째는 방의 특정 지점에서 가능한 충돌을 테스트하기위한 것이고 두 번째는 인스턴스 내에서 사용자 정의 질량 및 관성 속성을 생성하기위한 것입니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="physics_test_overlap.htm">physics_test_overlap</a></li>
@@ -126,15 +113,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Physics/Physics.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../In_App_Purchases/In_App_Purchases.htm">In App Purchases</a></div>
+        <div style="float:left">목록: <a href="../GML_Reference.htm">GML 참조</a></div>
+        <div style="float:right">다음: <a href="../In_App_Purchases/In_App_Purchases.htm">인앱 구매</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Physics
@@ -144,4 +132,4 @@ Physics Functions
 physics_functions
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="while">
-        <span>while</span>
+        <span>동안</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,49 +80,44 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>while</h1>
-  <p>The GameMaker Language has a number of ways that you can perform <i>loops</i>, one of the most important is the <tt>while</tt> loop. This loop function has the form:</p>
+  <h1>동안</h1>
+  <p>GameMaker Language에는 <i>루프</i> 를 수행 할 수있는 여러 가지 방법이 있습니다. 가장 중요한 것 중 하나는 <tt>while</tt> 루프입니다. 이 루프 함수의 형식은 다음과 같습니다.</p>
   <p class="code">while (&lt;expression&gt;)<br/>     {<br/>     &lt;statement&gt;;<br/>     &lt;statement&gt;;<br/>     ...<br/>     }</p>
-  <p>Here you have a <a class="tooltip" title="In programming, a statement is a single line of code written legally in a programming language that expresses an action to be carried out. A statement might have internal components of its own, including expressions, operators and functions. An example of a statement is A = B + 5. A GameMaker Studio 2 program is nothing but a sequence of one or more statements that together perform a task (like move the player). ">statement</a> that is iterated over again and again based on the results of the evaluation of an <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a>, ie: with
-    a <span class="inline">while</span> loop, as long as the expression evaluates to <span class="inline">true</span>, the statement (which can also be a code block of multiple statements with curly brackets <tt>{}</tt>) is executed. Below you can find
-    an example of a typical way to use &quot;while&quot;:</p>
+  <p>여기에는 <a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">표현식</a> 의 평가 결과를 기반으로 반복해서 반복되는 <a class="tooltip" title="프로그래밍에서 명령문은 수행 할 동작을 나타내는 프로그래밍 언어로 합법적으로 작성된 단일 코드 행입니다. 명령문은 표현식, 연산자 및 함수를 포함하여 자체의 내부 구성 요소를 가질 수 있습니다. 문장의 예는 A = B + 5입니다. GameMaker Studio 2 프로그램은 함께 플레이어를 움직이는 것과 같이 작업을 수행하는 하나 이상의 문장 시퀀스 일뿐입니다.">명령문</a> 이 있습니다. 즉, <span class="inline">while</span> 루프를 사용하여 표현식이 <span class="inline">true로</span> 평가되는 한 명령문은 다음과 같습니다. 중괄호 ( <tt>{}</tt> )가있는 여러 명령문이 실행됩니다. 다음은 &quot;while&quot;을 사용하는 일반적인 방법의 예입니다.</p>
   <p class="code">while (place_meeting(x, y, obj_Wall))<br/>     {
     <br/>     x -= 1;<br/>     }
   </p>
-  <p>The above code is checking for a collision between the calling instance and a &quot;wall&quot; instance, and it will perform multiple <a class="tooltip" title="An iteration is a single pass through a set of operations in your project code. One form of iteration in computer programming is via loops. A loop will repeat a certain segment of code until a condition is met and it can proceed further. Each time the computer runs a loop, it is known as an iteration. In simple terms, iteration is the process of repeating a particular snippet of code over and over again to perform a certain action.">iteration</a><span class="glossextra">s</span> while one is
-    occurring - moving the instance left by one pixel - until the instance is no longer in collision.</p>
-  <p><strong>When should you use a <span class="inline">while</span> loop?</strong> It should be used any time you want to repeat one or more statements, but dont actually know -or care - how many times it has to repeat, keeping in mind that if the initial
-    evaluation is <span class="inline">false</span>, the statements may not even be run.</p>
-  <p>Please not that you should <strong>be very careful with your <tt>while</tt> loops</strong>! You can easily make <i>infinite</i> loops, in which case your game will hang and not react to any user input anymore and need to be force closed. For example:</p>
+  <p>위의 코드는 호출하는 인스턴스와 &quot;wall&quot;인스턴스 사이의 충돌을 확인하고 인스턴스가 더 이상 충돌하지 않을 때까지 인스턴스가 하나의 픽셀만큼 왼쪽으로 이동하는 동안 여러 번 <a class="tooltip" title="반복은 프로젝트 코드에서 일련의 작업을 통과하는 단일 단계입니다. 컴퓨터 프로그래밍에서 반복의 한 형태는 루프를 통하는 것입니다. 루프는 조건이 충족 될 때까지 특정 코드 세그먼트를 반복하여 계속 진행할 수 있습니다. 컴퓨터가 루프를 실행할 때마다 반복이라고합니다. 간단히 말해서 반복이란 특정 코드 조각을 반복해서 반복하여 특정 작업을 수행하는 프로세스입니다.">반복</a> 을 수행합니다.</p>
+  <p><strong>언제 <span class="inline">while</span> 루프를 사용해야합니까?</strong> 하나 이상의 명령문을 반복하고 싶을 때마다 사용해야하지만 실제로 반복해야하는 횟수를 모르거나주의를 기울이지 않아야합니다. 초기 평가가 <span class="inline">false</span> 이면 명령문이 실행되지 않을 수도 있습니다.</p>
+  <p><strong><tt>while</tt> 루프를 조심</strong> 해야 <strong>합니다</strong> ! <i>무한</i> 루프를 쉽게 만들 수 있습니다.이 경우 게임이 더 이상 중단되고 더 이상 사용자 입력에 반응하지 않으므로 강제 종료해야합니다. 예를 들면 다음과 같습니다.</p>
   <p class="code">while (!place_free(x, y))<br/>     {
     <br/>     x = random(rrom_width);<br/>     y = random(room_height);<br/>     }
   </p>
-  <p>Now, the above code may work fine, but it may also cause an infinite loop if the instance is unable to find an empty position to move to, and this will cause the game to hang. If you find yourself in a position where this kind of thing is a possibility,
-    then you should either use a different non-blocking loop kind, or use an additoinal variable check in the expression (you can use multiple expressions along with the <a href="../Expressions_And_Operators.htm"><span class="inline">and</span> (&amp;<span class="inline">&amp;</span>)</a>,
-    <a href="../Expressions_And_Operators.htm"><span class="inline">or</span> (<span class="inline">||</span>)</a> and <a href="../Expressions_And_Operators.htm"><span class="inline">xor</span> (<span class="inline">^^</span>)</a> <a class="tooltip" title="An operator is a term used to denote something which can manipulate different operands. In the expression A + B - C, + and - are the operators. Examples of different operators are + (addition), - (subtrtaction), = (equals), != (not equal) and &gt;= (greater than or equal to), but there are many more.">operator</a><span class="glossextra">s</span> for the check):</p>
+  <p>이제 위의 코드는 정상적으로 작동하지만 인스턴스가 이동할 빈 위치를 찾을 수 없으면 무한 루프가 발생할 수 있으며 이로 인해 게임이 중단됩니다. 당신이 이런 종류의 일이 가능성이있는 위치에 자신을 발견한다면, 당신도 다른 비 차단 루프 종류를 사용해야하거나 함께 여러 표현식을 사용할 수 있습니다 (표현에 additoinal 변수 검사를 사용 <a href="../Expressions_And_Operators.htm"><span class="inline">(및</span> <span class="inline">&amp;</span> )</a> , <a href="../Expressions_And_Operators.htm"><span class="inline">또는</span> ( <span class="inline">||</span> )</a> 및 <a href="../Expressions_And_Operators.htm"><span class="inline">xor</span> ( <span class="inline">^^</span> )</a> <a class="tooltip" title="연산자는 다른 피연산자를 조작 할 수있는 것을 나타내는 데 사용되는 용어입니다. 식 A + B-C에서 +와-는 연산자입니다. 다른 연산자의 예는 + (더하기),-(subtrtaction), = (같음),! = (같지 않음) 및&gt; = (보다 크거나 같음)이지만 더 많습니다.">연산자</a> 를 확인) :</p>
   <p class="code">var _check = 0;<br/> while ((!place_free(x, y)) &amp;&amp; (_check &lt; 100))<br/>     {
     <br/>     x = random(room_width);<br/>     y = random(room_height);<br/>     _check += 1;<br/>     }
     <br/> if _check &gt;= 100<br/>     {<br/>     // code failed, so deal with it<br/>     }</p>
-  <p>Alternatively you can use the <span class="inline"><a href="break.htm">break</a></span> statement to break out of the loop, for example, the following code will generate 100 random numbers then continue, even though the <span class="inline">while</span>    evaluation is <em>always</em> going to be <span class="inline">true</span>:</p>
+  <p>또는 <span class="inline"><a href="break.htm">break</a></span> 문을 사용하여 루프에서 <span class="inline"><a href="break.htm">벗어날</a></span> 수 있습니다. 예를 들어, 다음 코드는 100 개의 난수를 생성 한 다음 <span class="inline">while</span> 평가가 <em>항상</em> <span class="inline">true</span> 일지라도 계속 <span class="inline">합니다</span> .</p>
   <p class="code">var i = 0;<br/> while (true)<br/>     {
     <br/>     x[i] = random(room_width);<br/>     y[i] = random(room_height);<br/>     if ((i++) &gt;= 100)<br/>         {<br/>         break;<br/>         }<br/>     }
   </p>
-  <p>You may also use the <a href="continue.htm">continue</a> statement in a <span class="inline">while</span> loop. Using this will end the current loop iteration and restart the loop again on a new iteration, for example:</p>
+  <p><span class="inline">while</span> 문에서 <a href="continue.htm">continue</a> 문을 사용할 수도 있습니다. 이를 사용하면 현재 루프 반복을 종료하고 새 반복에서 루프를 다시 시작합니다 (예 :</p>
   <p class="code">var file = file_text_open_read(&quot;Game_Data.txt&quot;);<br/> var _num = 0;<br/> while (!file_text_eof(file))<br/>     {<br/>     var _s = file_text_readln(file);<br/>     if (_s == &quot;&quot;)<br/>         {<br/>         continue;<br/>       }<br/>        str[num++] = _s;<br/>     }<br/> file_text_close(file);
   </p>
-  <p>This code above will open a file and read a line from it each loop iteration until the end of the file contents are reached. If the line being read is an empty string, the current loop iteration is ended using the <span class="inline">continue</span>    statement and a new iteration will be started, otherwise the string is added into an <a href="../Arrays.htm">array</a> and the array position incremented.</p>
-  <p>For more examples of loop functions please see the sections on <a href="repeat.htm"><tt>repeat</tt></a>, <a href="do___until.htm"><tt>do... until</tt></a>, and <a href="for.htm"><tt>for</tt></a>.</p>
+  <p>위의 코드는 파일을 열고 파일 내용의 끝에 도달 할 때까지 각 루프 반복에서 한 줄을 읽습니다. 읽는 행이 빈 문자열 인 경우 <span class="inline">continue</span> 문을 사용하여 현재 루프 반복이 종료되고 새 반복이 시작됩니다. 그렇지 않으면 문자열이 <a href="../Arrays.htm">배열에</a> 추가되고 배열 위치가 증가합니다.</p>
+  <p>루프 함수에 대한 더 많은 예제는 <a href="repeat.htm"><tt>반복</tt></a> , <a href="do___until.htm"><tt>do ... until</tt></a> 및 <a href="for.htm"><tt>for</tt></a> 섹션을 참조하십시오.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Overview/Language_Features/while.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="do___until.htm">do / until</a></div>
+        <div style="float:left">목록: <a href="../Language_Features.htm">언어 특징</a></div>
+        <div style="float:right">다음: <a href="do___until.htm">할 때까지</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 while
@@ -131,4 +126,4 @@ while
 while
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Addressing Variables In Other Instances">
-        <span>Addressing Variables In Other Instances</span>
+        <span>다른 인스턴스의 변수 지정</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,61 +80,49 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Addressing Variables In Other Instances</h1>
-  <p>In the sections dedicated to <a href="Variables_And_Variable_Scope.htm">variables</a> you found out how to create and use variables within a single instance, or on a global scope, but what happens if you want one instance to access a variable in another,
-    different instance? There are many cases when you may want to do this, for example in a collision with a bullet object, you may want to find out how much damage the bullet does by accessing a variable in the bullet, or you might want to stop the motion
-    of all the balls in a puzzle, or you might want to move the main character to a particular position, or any number of other situations you typically come across in any game. Thankfully the GameMaker Language comes equipped with mechanisms to achieve
-    this.</p>
-  <p>One of the most common methods for accessing or changing a variable in another instance is to use its object name as an identifier and then use a point &quot;<span class="inline">.</span>&quot; to tell GameMaker Studio 2 that the variable used after
-    is to be assigned or changed in that object. The syntax for this is:</p>
+  <h1>다른 인스턴스의 변수 지정</h1>
+  <p><a href="Variables_And_Variable_Scope.htm">변수</a> 전용 섹션에서 단일 인스턴스 내에서 또는 전역 범위에서 변수를 작성하고 사용하는 방법을 찾았지만 한 인스턴스가 다른 인스턴스의 변수에 액세스하도록하려면 어떻게됩니까? 예를 들어 글 머리 기호 오브젝트와의 충돌과 같이이 작업을 수행하려는 경우가 많이 있습니다. 글 머리 기호의 변수에 액세스하여 글 머리 기호가 얼마나 많은 피해를 주 었는지 또는 동작을 중지하고 싶을 수 있습니다 퍼즐의 모든 공 중 하나를 선택하거나 메인 캐릭터를 특정 위치로 이동 시키거나 게임에서 일반적으로 발생하는 여러 가지 다른 상황을 원할 수 있습니다. 고맙게도 GameMaker Language는이를 달성하기위한 메커니즘을 갖추고 있습니다.</p>
+  <p>다른 인스턴스에서 변수에 접근하거나 변수를 변경하는 가장 일반적인 방법 중 하나는 객체 이름을 식별자로 사용한 다음 점 &quot; <span class="inline">.</span> &quot;을 사용하여 GameMaker Studio 2에게 그 이후에 사용 된 변수가 해당 변수에서 할당되거나 변경 될 것임을 알리는 것입니다 목적. 이에 대한 구문은 다음과 같습니다.</p>
   <p class="code">&lt;object_id&gt;.&lt;<em>variable</em>&gt; = &lt;value&gt;; </p>
-  <p>In practice it would look like this:</p>
+  <p>실제로는 다음과 같습니다.</p>
   <p class="code">obj_ball.speed = 0;</p>
-  <p>With the above code you are setting the speed of an instance of &quot;<tt>obj_ball</tt>&quot;. However if you have more than one instance of the given object in the room, <em>then it will apply to ALL of them equally</em> - unless you are using <b>HTML5</b>,
-    in which case it will affect only <em>one</em>, but you have no way of knowing which one it will affect - so if you need to access all instances of an object, you should be using <a href="Language_Features/with.htm"><tt>with()</tt></a>, as that is
-    100% cross platform compatible. In general, this format should only be used when you have a single instance of the object in the room, or (as you will see in the next part) when you have a specific <i>instance <b>ID</b></i>.</p>
-  <p>You can also access a single instance of an object when there are multiple instances within the room using the unique <b>instance name</b> to tell GameMaker Studio 2 exactly which instance we wish to address. The <b>instance name constant</b> is the
-    unique identifying constant that is given to each and every instance added to a room in your game. You can find this constant by double clicking on an instance in the <a href="../../The_Asset_Editors/Rooms.htm">room editor</a>:</p>
-  <p><img alt="The instance constant in the room editor" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/Instance_Constant.png"/>Note that this name can be be edited and given a more descriptive name - although the name <em>must</em> be
-    unique to the entire game - and it can be used as the left-hand side of the point:</p>
+  <p>위 코드를 사용하면 &quot; <tt>obj_ball</tt> &quot;인스턴스의 속도를 설정합니다. 그러나 방에 주어진 객체의 인스턴스가 두 개 이상인 경우 <b>HTML5</b> 를 사용하지 않는 한 <em>모든</em> 객체에 <em>동일하게 적용됩니다</em> .이 경우 <em>하나</em> 에 만 영향을 미치지 만 <em>어느</em> 것을 알 수있는 방법은 없습니다 영향을 미치므로 객체의 모든 인스턴스에 액세스해야하는 경우 100 % 크로스 플랫폼 호환이 가능한 <a href="Language_Features/with.htm"><tt>with ()</tt></a> 를 사용해야합니다. 일반적으로이 형식은 방에 객체의 단일 인스턴스가 있거나 특정 <i>인스턴스</i> <b>ID</b> 가있는 경우 (다음 부분에서 볼 수있는 경우)에만 사용해야합니다.</p>
+  <p>룸 내에 고유 한 <b>인스턴스 이름</b> 을 사용하여 여러 인스턴스가있을 때 오브젝트의 단일 인스턴스에 액세스하여 GameMaker Studio 2에 정확히 어떤 인스턴스를 지정해야하는지 알 수 있습니다. <b>인스턴스 이름 상수</b> 는 게임의 방에 추가 된 각각의 모든 인스턴스에 부여되는 고유 식별 상수입니다. <a href="../../The_Asset_Editors/Rooms.htm">룸 편집기</a> 에서 인스턴스를 두 번 클릭하여이 상수를 찾을 수 있습니다.</p>
+  <p><img alt="The instance constant in the room editor" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/Instance_Constant.png"/>이름은 게임 전체에 고유 <em>해야</em> 하지만이 이름 <em>은</em> 보다 설명적인 이름으로 편집하고 지정할 수 있으며 점의 왼쪽으로 사용할 수 있습니다.</p>
   <p class="code">inst_4DB70D2.speed = 0;</p>
-  <p>By far the most common and practical method, however, is to use a <i>variable</i> on the left of the point, as long as the variable in question<i> has stored a valid <b>instance id</b></i>. The following examples illustrate this.</p>
+  <p>그러나 가장 일반적이고 실용적인 방법은 문제의 변수 <i>가 유효한</i> <b>인스턴스 id를</b> <i>저장 한</i> 경우 포인트 왼쪽에 <i>변수</i> 를 사용하는 것입니다. 다음 예제는이를 보여줍니다.</p>
   <p class="code">// Example 1<br/> var _inst = instance_position(mouse_x, mouse_y, all);<br/> if instance_exists(_inst)<br/>     {
     <br/>     _inst.speed = 0;<br/>     }
     <br/>
     <br/> // Example 2<br/> var _inst = instance_create_layer(mouse_x, mouse_y, &quot;Enemies&quot;, obj_E_Parent);<br/> _inst.direction = point_direction(_inst.x, _inst.y, x, y);<br/> _inst.target = id;</p>
-  <p>In the above code for Example 1, there is an <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><tt>instance_exists()</tt></a> call in the code block. This is because using the point method to access or change another instances
-    value will give an error and crash the game if the instance does not exist, and there is the possibility that this is the case in that example. We don&#39;t need the check however in Examples 2 and 3 because we <i>know</i> that the instance is there
-    since in Example 2 we created it, and in Example 3, its the other instance in a collision event. However, if there is <i>any</i> possibility that the instance could be destroyed, deactivated, or otherwise removed from the room while using this method,
-    you should <i>always</i> check beforehand using the <tt>instance_exists()</tt> function or the <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><tt>instance_number()</tt></a> function.</p>
-  <p>Note that you cannot use the special <a href="Instance_Keywords.htm">keyword</a> &quot;<tt>all</tt>&quot; with this method to target all instances(eg: <span class="inline">all.val = 10</span> would give an error), but you <i>can</i> use the keywords
-    &quot;<tt>other</tt>&quot; and &quot;<tt>self</tt>&quot; without issues. For example, using <tt>other</tt> in a <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">collision event</a>:</p>
+  <p>위의 예제 1에 대한 코드에는 코드 블록에 <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><tt>instance_exists ()</tt></a> 호출이 있습니다. 이는 포인트 메소드를 사용하여 다른 인스턴스에 액세스하거나 변경하면 인스턴스가 존재하지 않는 경우 오류가 발생하고 게임이 중단되기 때문에 해당 예제에서 이러한 경우가 발생할 가능성이 있기 때문입니다. 그러나 예제 2와 3에서는 인스턴스가 생성 된 이후 인스턴스가 있고 인스턴스 3은 충돌 이벤트의 다른 인스턴스이므로 인스턴스가 존재한다는 것을 <i>알기</i> 때문에 예제 2와 3에서는 확인할 필요가 없습니다. 이 경우, <i>모든</i> 인스턴스가 파괴 비활성화, 또는 그렇지 않으면이 방법을 사용하는 동안 방에서 제거 될 수 있다는 가능성이, 당신은해야한다 <i>항상</i> 미리 <tt>instance_exists ()</tt> 함수 또는 사용 검사 <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><tt>instance_number ()</tt></a> 함수를.</p>
+  <p>당신은 특별한 사용할 수 없습니다 <a href="Instance_Keywords.htm">키워드를</a> <tt>&quot;모든&quot;이</tt> 방법으로 모든 인스턴스를 대상으로 (예 : <span class="inline">all.val = 10 오류를</span> 줄 것이다),하지만 당신은 <i>할 수 있습니다</i> <tt>&quot;기타&quot;와</tt> <tt>&quot;자기&quot;문제없이</tt> 키워드를 사용합니다. 예를 들어 <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">충돌 이벤트</a> 에서 <tt>other</tt> 사용 :</p>
   <p class="code">// Example 3 other.hp -= 10;<br/> if other.hp &lt;= 0<br/>     {
     <br/>     other.sprite_index = spr_E_Dead;<br/>     }
   </p>
-  <p>It is also important to note that you cannot use any function by itself as the left-hand side of an assignment. For example, the following code would give you an error:</p>
+  <p>또한 과제의 왼쪽으로 기능을 단독으로 사용할 수는 없습니다. 예를 들어 다음 코드는 오류를 발생시킵니다.</p>
   <p class="code">instance_nearest(x, y, obj).speed = 0;</p>
-  <p>The return value for the expression in that code example is an integer number (the unique ID value for the nearest instance) and so it must be enclosed in brackets <span class="inline">()</span> to be used in this way and properly address the instance
-    required. The above code would be correctly written as:</p>
+  <p>해당 코드 예제에서 표현식의 리턴 값은 정수 (가장 가까운 인스턴스의 고유 ID 값)이므로 이러한 방식으로 사용하고 필요한 인스턴스를 올바르게 처리하려면 괄호 <span class="inline">()</span> 로 묶어야합니다. 위 코드는 다음과 같이 올바르게 작성됩니다.</p>
   <p class="code">(instance_nearest(x, y, obj)).speed = 0;<br/>
     <br/> //or
     <br/>
     <br/> var inst = instance_nearest(x, y, obj);<br/> inst.speed = 0;</p>
-  <p>These are all perfectly valid ways of reading, changing and setting variables in other instances, and work because the point is actually an <i>operator</i>. It takes a value as the left <a class="tooltip" title="An operand is a term used to denote the values which can be manipulated using different operators. In the expression A + B + C, A, B and C are the operands.">operand</a>    and a variable as the right operand, and returns the address of this particular variable in the indicated object or instance. All the object names, constants, IDs etc... simply represent values and these can be dealt with like any other value.</p>
-  <p>The other way to reference variables in another instance is to use the GameMaker Language function <span class="inline">with()</span>, which is discussed in detail <a href="Language_Features/with.htm">here</a>:</p>
+  <p>이것들은 다른 인스턴스에서 변수를 읽고, 변경하고 설정하는 완벽하게 유효한 방법이며 포인트는 실제로 <i>연산자</i> 이기 때문에 <i>작동</i> 합니다. 왼쪽 <a class="tooltip" title="피연산자는 다른 연산자를 사용하여 조작 할 수있는 값을 나타내는 데 사용되는 용어입니다. 식 A + B + C에서 A, B 및 C는 피연산자입니다.">피연산자</a> 로 값을, 오른쪽 <a class="tooltip" title="피연산자는 다른 연산자를 사용하여 조작 할 수있는 값을 나타내는 데 사용되는 용어입니다. 식 A + B + C에서 A, B 및 C는 피연산자입니다.">피연산자</a> 로 변수를 가져 와서 표시된 오브젝트 또는 인스턴스에서이 특정 변수의 주소를 리턴합니다. 모든 객체 이름, 상수, ID 등은 단순히 값을 나타내며 다른 값과 같이 처리 할 수 ​​있습니다.</p>
+  <p>다른 인스턴스 변수를 참조하는 다른 방법이 상세히 <span class="inline">설명된다와</span> GameMaker 언어 함수 <span class="inline">()를</span> 사용하는 <a href="Language_Features/with.htm">여기를</a> :</p>
   <p class="code">// This will affect all instances of the object &quot;obj_Enemy&quot;<br/> with (obj_Enemy)<br/>     {<br/>     target = other.parent;<br/>     }<br/>
     <br/> // This will affect one instance of the object &quot;obj_Enemy&quot;<br/> var _enemy = instance_nearest(x, y, obj_Enemy);<br/> if instance_exists(_enemy)<br/>     {<br/>     with (_enemy)<br/>         {<br/>         target_x = mouse_x;<br/>            target.y = mouse_y;<br/>         }<br/>     }</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Overview/Addressing_Variables_In_Other_Instances.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a href="Evaluation_Order.htm">Evaluation Order</a></div>
+        <div style="float:left">목록: <a href="GML_Overview.htm">GML 개요</a></div>
+        <div style="float:right">다음: <a href="Evaluation_Order.htm">평가 순서</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 variables - addressing
@@ -144,4 +132,4 @@ addressing variables
 addressing_variables
 -->
 
-</body></html>
+</body></html> 

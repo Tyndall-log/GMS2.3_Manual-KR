@@ -71,7 +71,7 @@
         <span>steam_ugc_create_query_user_ex</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,18 +81,17 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>steam_ugc_create_query_user_ex</h1>
-  <p>This function can be used to query the UGC data base. The function requires the ID value for the user and the ID of the game that is going to consume the item and/or the ID of the game that created the item. You also need to use the following constants
-    for the type of data to query, the type of item to query and the order in which the returned items will be sorted, as well as a page number - note that a query will return a <i>maximum</i> number of 50 items.</p>
+  <p>이 함수는 UGC 데이터베이스를 쿼리하는 데 사용할 수 있습니다. 이 기능에는 사용자의 ID 값과 아이템을 소비 할 게임의 ID 및 / 또는 아이템을 생성 한 게임의 ID가 필요합니다. 또한 쿼리 할 데이터 유형, 쿼리 할 항목 유형 및 반환 된 항목이 정렬되는 순서 및 페이지 번호에 대해 다음 상수를 사용해야합니다. 쿼리는 <i>최대</i> 숫자를 리턴합니다. 50 개 항목 중</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>List Type Constant</th>
-        <th>Description</th>
+        <th>리스트 타입 상수</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>ugc_list_Published</td>
-        <td>See the <a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam Documentation</a>.</td>
+        <td><a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam 설명서를</a> 참조하십시오.</td>
       </tr>
       <tr>
         <td>ugc_list_VotedOn</td>
@@ -132,12 +131,12 @@
   <table>
     <tbody>
       <tr>
-        <th>Match Type Constant</th>
-        <th>Description</th>
+        <th>일치 유형 상수</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>ugc_match_Items</td>
-        <td>See the <a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam Documentation</a>.</td>
+        <td><a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam 설명서를</a> 참조하십시오.</td>
       </tr>
       <tr>
         <td>ugc_match_Items_Mtx</td>
@@ -189,12 +188,12 @@
   <table>
     <tbody>
       <tr>
-        <th>Sort Order Constant</th>
-        <th>Description</th>
+        <th>정렬 순서 상수</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>ugc_sortorder_CreationOrderDesc</td>
-        <td>See the <a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam Documentation</a>.</td>
+        <td><a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam 설명서를</a> 참조하십시오.</td>
       </tr>
       <tr>
         <td>ugc_sortorder_CreationOrderAsc</td>
@@ -222,65 +221,65 @@
       </tr>
     </tbody>
   </table>
-  <p><br/> The function returns a unique query handle value which should be stored in a variable for use in the other query functions. Note that this function only prepares the query but does not actually send it - for that you must call the function
-    <a href="steam_ugc_send_query.htm"><tt>steam_ugc_send_query()</tt></a> - and you can use further <tt>steam_ugc_query_*()</tt> functions to refine the search request before it is actually sent.</p>
+  <p>이 함수는 다른 쿼리 함수에서 사용하기 위해 변수에 저장해야하는 고유 한 쿼리 핸들 값을 반환합니다. 이 함수는 쿼리 만 준비하지만 실제로는 전송하지 않습니다. <a href="steam_ugc_send_query.htm"><tt>steam_ugc_send_query ()</tt></a> 함수를 호출해야합니다. 더 자세한 <tt>steam_ugc_query _ * ()</tt> 함수를 사용하여 검색 요청을 실제로 보내기 전에 세분화 할 수 있습니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">steam_ugc_create_query_user_ex(list_type, match_type, sort_order, page, account_id, creator_app_id, consumer_app_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>list_type</td>
-        <td>The type of data list to create (see constants listed below).</td>
+        <td>작성할 데이터 목록의 유형입니다 (아래에 나열된 상수 참조).</td>
       </tr>
       <tr>
         <td>match_type</td>
-        <td>The type of UGC items to query (see constants listed below).</td>
+        <td>쿼리 할 UGC 항목의 유형입니다 (아래에 나열된 상수 참조).</td>
       </tr>
       <tr>
         <td>sort_order</td>
-        <td>The way that the data should be ordered (see constants listed below).</td>
+        <td>데이터를 정렬하는 방법 (아래에 나열된 상수 참조).</td>
       </tr>
       <tr>
-        <td>page</td>
-        <td>The page number to query.</td>
+        <td>페이지</td>
+        <td>조회 할 페이지 번호입니다.</td>
       </tr>
       <tr>
-        <td>account_id</td>
-        <td>The Steam account ID.</td>
+        <td>계정 ID</td>
+        <td>Steam 계정 ID</td>
       </tr>
       <tr>
         <td>creator_app_id</td>
-        <td>The item creator app ID.</td>
+        <td>아이템 작성자 앱 ID</td>
       </tr>
       <tr>
         <td>consumer_app_id</td>
-        <td>The consumer app ID.</td>
+        <td>소비자 앱 ID</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Query Handle</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">query_handle = steam_ugc_create_query_user_ex(ugc_list_Published, ugc_match_Items, ugc_sortorder_TitleAsc, page, global.AccountID, 0, global.GameID);</p>
-  <p>The above code creates a query request and stores it&#39;s handle in a variable for future use.</p>
+  <p>위의 코드는 쿼리 요청을 생성하고 나중에 사용할 수 있도록 핸들에 변수를 저장합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Steam/Steam_UGC/steam_ugc_create_query_user_ex.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Steam_UGC.htm">UGC</a></div>
-        <div style="float:right">Next: <a href="steam_ugc_create_query_all.htm">steam_ugc_create_query_all</a></div>
+        <div style="float:left">목록: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">다음: <a href="steam_ugc_create_query_all.htm">steam_ugc_create_query_all</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 steam_ugc_create_query_user_ex
@@ -317,4 +316,4 @@ ugc_sortorder_ForModeration
 steam_ugc_create_query_user_ex
 -->
 
-</body></html>
+</body></html> 

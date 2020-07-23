@@ -71,7 +71,7 @@
         <span>asset_has_tags</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,110 +81,109 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>asset_has_tags</h1>
-  <p>With this function you can check to see if one or more tag strings is assigned to any asset from the asset browser. You supply either the asset name (as a string) or its asset index, as well as either a single tag string or an array where each item
-    is a single tag string. If you supply an asset index value, then you will need to supply the optional asset type argument (a constant), as assets of different types can have the same index, even though they cannot have the same name. The available
-    asset types are listed in the table below:</p>
+  <p>이 기능을 사용하면 자산 브라우저에서 하나 이상의 태그 문자열이 자산에 할당되어 있는지 확인할 수 있습니다. 자산 이름 (문자열) 또는 자산 색인뿐만 아니라 단일 태그 문자열 또는 각 항목이 단일 태그 문자열 인 배열을 제공합니다. 자산 색인 값을 제공하는 경우 다른 유형의 자산은 동일한 이름을 가질 수 없더라도 동일한 색인을 가질 수 있으므로 선택적 자산 유형 인수 (상수)를 제공해야합니다. 사용 가능한 자산 유형이 아래 표에 나열되어 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>일정한</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>asset_object</td>
-        <td>The given name refers to an <a href="../../../../The_Asset_Editors/Objects.htm">object</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Objects.htm">객체를</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_sprite</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Sprites.htm">스프라이트를</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_sound</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sounds.htm">sound</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Sounds.htm">소리를</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_room</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Rooms.htm">room</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Rooms.htm">방을</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_tiles</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Tile_Sets.htm">tile set</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Tile_Sets.htm">타일 ​​세트를</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_path</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Paths.htm">path</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Paths.htm">경로를</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_script</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Scripts.htm">script</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Scripts.htm">스크립트를</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_font</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Fonts.htm">font</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Fonts.htm">글꼴을</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_timeline</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Timelines.htm">time line</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Timelines.htm">타임 라인을</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_shader</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Shaders.htm">shader</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Shaders.htm">셰이더를</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_animationcurve</td>
-        <td>The given name refers to an <a href="../../../../The_Asset_Editors/Animation_Curves.htm">Animation Curve</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Animation_Curves.htm">애니메이션 커브를</a> 나타냅니다.</td>
       </tr>
       <tr>
         <td>asset_sequence</td>
-        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sequences.htm">Sequence</a>.</td>
+        <td>이름은 <a href="../../../../The_Asset_Editors/Sequences.htm">Sequence를</a> 나타냅니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>If the function succeeds and one or more of the tag(s) is present for the asset then it will return <tt>true</tt> otherwise it will return <tt>false</tt>.</p>
+  <p>함수가 성공하고 하나 이상의 태그가 자산에 존재하면 <tt>true</tt> 를 리턴 <tt>하고</tt> 그렇지 않으면 <tt>false</tt> 를 리턴합니다.</p>
   <p> </p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">asset_has_tags(name_or_index, tags, [asset_type]);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>name_or_index</td>
-        <td>The name of the asset (a string) or its index value (an integer).</td>
+        <td>자산의 이름 (문자열) 또는 색인 값 (정수).</td>
       </tr>
       <tr>
-        <td>tags</td>
-        <td>A single asset tag string or an array with various asset tags.</td>
+        <td>태그</td>
+        <td>단일 자산 태그 문자열 또는 다양한 자산 태그가있는 배열입니다.</td>
       </tr>
       <tr>
-        <td>[asset_type]</td>
-        <td>OPTIONAL! The type of asset to check the tags for, only used when supplying an index for the first argument.</td>
+        <td>[자산 _ 유형]</td>
+        <td>선택 과목! 태그를 확인할 자산 유형으로, 첫 번째 인수에 색인을 제공 할 때만 사용됩니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Boolean</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">var _a = array_create(3);<br/> _a[0] = &quot;enemy&quot;;<br/> _a[1] = &quot;all_levels&quot;;<br/> _a[2] = &quot;boss&quot;;<br/> asset_has_tags(obj_Enemy_Boss_Parent, _a, asset_object);</p>
-  <p>The above code will create an array of tags and then check to see if any of them are applied to the given object.</p>
+  <p>위의 코드는 태그 배열을 만든 다음 지정된 객체에 태그가 적용되어 있는지 확인합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Assets_And_Tags/asset_has_tags.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
-        <div style="float:right">Next: <a href="asset_clear_tags.htm">asset_clear_tags</a></div>
+        <div style="float:left">목록: <a href="Assets_And_Tags.htm">자산 및 태그</a></div>
+        <div style="float:right">다음: <a href="asset_clear_tags.htm">asset_clear_tags</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 asset_has_tags
@@ -205,4 +204,4 @@ asset_sequence
 asset_has_tags
 -->
 
-</body></html>
+</body></html> 

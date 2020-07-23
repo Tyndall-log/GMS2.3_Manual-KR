@@ -71,7 +71,7 @@
         <span>steam_upload_score_buffer</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,51 +81,46 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>steam_upload_score_buffer</h1>
-  <p>This function will send a score to the given leaderboard along with a data package created from a buffer. The buffer should be no more than 256 bytes in size - anything beyond that will be chopped off - and can contain any data you require. The score
-    to be uploaded should be a real number, and the leaderboard name is a string that was defined when you created the leaderboard using the function <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard()</tt></a>.</p>
-  <p>If the function fails, it will return a value of -1, while a successful post will return a unique ID for the upload and trigger an asynchronous <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam Event</a>. This event
-    will create a <tt>DS Map</tt> in the built in variable <tt>async_load</tt> with the following key/value pairs:</p>
+  <p>이 함수는 버퍼에서 생성 된 데이터 패키지와 함께 주어진 순위표에 점수를 전송합니다. 버퍼의 크기는 256 바이트를 넘지 않아야합니다. 그 이상은 잘려서 필요한 데이터를 포함 할 수 있습니다. 업로드 할 점수는 실수 여야하며 리더 보드 이름은 <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard ()</tt></a> 함수를 사용하여 리더 보드를 만들 때 정의 된 문자열입니다.</p>
+  <p>함수가 실패하면 -1의 값을 반환하지만 성공적인 게시는 업로드에 대한 고유 ID를 반환하고 비동기 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam 이벤트를</a> 트리거합니다. 이 이벤트는 다음과 같은 키 / 값 쌍을 사용하여 내장 변수 <tt>async_load</tt> 에 <tt>DS Map</tt> 을 만듭니다.</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - This key will hold the value &quot;<b>leaderboard_upload</b>&quot; when triggered by this function</li>
-    <li>&quot;<b>lb_name</b>&quot; - This key holds the name of the leaderboard which was posted to</li>
-    <li>&quot;<b>success</b>&quot; - Will be 1 if the post succeeded, 0 failed</li>
-    <li>&quot;<b>updated</b>&quot; - Will be 1 if the leaderboard score was actually updated (ie: the new score was better) or 0 otherwise. Note that if the score is updated, the uploaded buffer data will not be added either.</li>
-    <li>&quot;<b>post_id</b>&quot; - This key should match the ID value returned by the upload call</li>
-    <li>&quot;<b>score</b>&quot; - This key holds the score which was posted</li>
+    <li>&quot; <b>event_type</b> &quot;-이 키는이 기능에 의해 트리거 될 때 &quot; <b>leaderboard_upload</b> &quot;값을 유지합니다</li>
+    <li>&quot; <b>lb_name</b> &quot;-이 키에는 게시 된 리더 보드의 이름이 있습니다.</li>
+    <li>&quot; <b>성공</b> &quot;-게시물이 성공하면 1이되고 0은 실패합니다.</li>
+    <li>&quot; <b>업데이트</b> &quot;-순위표 점수가 실제로 업데이트 된 경우 1이되고 (예 : 새 점수가 높을 경우) 0이됩니다. 스코어가 업데이트되면 업로드 된 버퍼 데이터도 추가되지 않습니다.</li>
+    <li>&quot; <b>post_id</b> &quot;-이 키는 업로드 호출에서 반환 된 ID 값과 일치해야합니다</li>
+    <li>&quot; <b>score</b> &quot;-이 키는 게시 된 점수를 보유합니다</li>
   </ul>
-  <p>Note that when downloading the leaderboard, the &quot;entries&quot; key of the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> map will now have a &quot;data&quot; key so you can retrieve the
-    uploaded data buffer (see the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam Event</a> extended code example for further details). This data buffer will be <b>Base 64 encoded</b> and so you will need to use
-    the function <a href="../../Buffers/buffer_base64_decode.htm"><tt>buffer_base64_decode()</tt></a> on the data before reading from the buffer.</p>
+  <p>리더 보드를 다운로드 할 때 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> 맵의 &quot;entries&quot;키에 &quot;data&quot;키가 있으므로 업로드 된 데이터 버퍼를 검색 할 수 있습니다 (자세한 내용은 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam 이벤트</a> 확장 코드 예제 참조). 이 데이터 버퍼는 <b>Base 64로 인코딩</b> 되므로 버퍼에서 읽기 전에 데이터에서 <a href="../../Buffers/buffer_base64_decode.htm"><tt>buffer_base64_decode ()</tt></a> 함수를 사용해야합니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">steam_upload_score_buffer(lb_name, score, buffer);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>lb_name</td>
-        <td>The name of the leaderboard that you are uploading the scores to (a string).</td>
+        <td>점수를 업로드 할 리더 보드의 이름입니다 (문자열).</td>
       </tr>
       <tr>
-        <td>score</td>
-        <td>The score to upload (a real number).</td>
+        <td>점수</td>
+        <td>업로드 할 점수 (실수).</td>
       </tr>
       <tr>
-        <td>buffer</td>
-        <td>The ID of the buffer to attach.</td>
+        <td>완충기</td>
+        <td>첨부 할 버퍼의 ID입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real</p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>In this example, we first upload a score and then parse the <tt>async_load</tt> map returned if successful. The code below shows a typical example for uploading, with a buffer being created to hold a string telling us which level the score was uploaded
-    from:</p>
+  <h4>확장 된 예 :</h4>
+  <p>이 예에서는 먼저 점수를 업로드 한 다음 성공한 경우 반환 된 <tt>async_load</tt> 맵을 구문 분석합니다. 아래 코드는 업로드의 일반적인 예를 보여 주며, 점수를 올린 수준을 알려주는 문자열을 보유하기 위해 버퍼를 만듭니다.</p>
   <p class="code">if (hp &lt;= 0)<br/>     {
     <br/>     var buff = buffer_create(256, buffer_fixed, 1 );<br/>     buffer_write(buff, buffer_string, &quot;Uploaded on level &quot; + string(global.Level));<br/>     upload_ID = steam_upload_score(&quot;Game Scores&quot;, score, buff);<br/>     if
     (!upload_ID)<br/>         {
@@ -133,8 +128,7 @@
     <br/>     buffer_delete(buff);
     <br/>     }
   </p>
-  <p>Note that we have set an alarm if the call fails. This would be used to try the upload again at a later time and you can add extra code there to retry the upload or to save the score to a text file should it continue to fail, etc... Also note that we
-    immediately delete the buffer, since it is no longer required for the function. We now add the following into the <b>Steam async event</b> for the instance controlling the scores:</p>
+  <p>전화가 실패하면 알람을 설정했습니다. 이것은 나중에 다시 업로드를 시도하는 데 사용되며 추가 코드를 추가하여 업로드를 다시 시도하거나 계속 실패하면 텍스트 파일에 점수를 저장하는 등의 작업을 수행 할 수 있습니다. 또한 더 이상 함수에 필요하지 않으므로 버퍼. 점수를 제어하는 ​​인스턴스의 <b>Steam async 이벤트</b> 에 다음을 추가합니다.</p>
   <p class="code">var type = ds_map_find_value(async_load, &quot;event_type&quot;);<br/> if (type == &quot;leaderboard_upload&quot;)<br/>     {
     <br/>     var lb_ID = ds_map_find_value(async_load, &quot;post_id&quot;);<br/>     if lb_ID == upload_ID<br/>         {
     <br/>         var lb_name = ds_map_find_value(async_load, &quot;lb_name&quot;);<br/>         var lb_done = ds_map_find_value(async_load, &quot;success&quot;);<br/>         var lb_score = ds_map_find_value(async_load, &quot;score&quot;);<br/>         var
@@ -147,18 +141,19 @@
     <br/>         }
     <br/>     }
   </p>
-  <p>In the example we are simply outputting the return values to the compiler window as debug messages, but you can use this event to deal with the information in any way you choose.</p>
+  <p>이 예제에서는 단순히 반환 값을 컴파일러 창에 디버그 메시지로 출력하지만이 이벤트를 사용하여 원하는 방식으로 정보를 처리 할 수 ​​있습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Steam/Steam_Leaderboards/steam_upload_score_buffer.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Steam_Leaderboards.htm">Leaderboards</a></div>
-        <div style="float:right">Next: <a href="steam_download_scores.htm">steam_download_scores</a></div>
+        <div style="float:left">목록: <a href="Steam_Leaderboards.htm">리더 보드</a></div>
+        <div style="float:right">다음: <a href="steam_download_scores.htm">steam_download_scores</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 steam_upload_score_buffer
@@ -167,4 +162,4 @@ steam_upload_score_buffer
 steam_upload_score_buffer
 -->
 
-</body></html>
+</body></html> 

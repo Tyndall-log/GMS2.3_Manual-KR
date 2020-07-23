@@ -69,10 +69,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Using Animation Curves">
-        <span>Using Animation Curves</span>
+        <span>애니메이션 커브 사용</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,48 +81,41 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Using Animation Curves</h1>
-  <p>An important feature of the <a href="Using_The_Dope_Sheet.htm">dope sheet</a> is the ability to assign <a href="../Animation_Curves.htm">Animation Curves</a> to parameter tracks within the sequence. When doing this, it is very important that you create
-    your Animation Curve assets with the correct number of channels (curves) for the parameter track you want to target. This means that you will need:</p>
+  <h1>애니메이션 커브 사용</h1>
+  <p><a href="Using_The_Dope_Sheet.htm">도프 시트</a> 의 중요한 특징은 <a href="../Animation_Curves.htm">애니메이션 커브</a> 를 시퀀스 내의 파라미터 트랙에 할당하는 기능입니다. 이 작업을 수행 할 때 대상으로 지정할 파라미터 트랙에 대해 올바른 수의 채널 (커브)로 애니메이션 커브 애셋을 생성하는 것이 매우 중요합니다. 이것은 당신이 필요하다는 것을 의미합니다 :</p>
   <ul class="colour">
-    <li>4 channels for <strong>colour </strong>(Channels should be in <a class="tooltip" title="This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). ">ARGB</a> order, and the range for each should be 0 to 255)</li>
-    <li>2 channels for <strong>position</strong>, <strong>scale </strong>and <strong>origin</strong></li>
-    <li>1 channel for <strong>rotation</strong>, <strong>image index</strong> and <strong>image speed</strong></li>
-    <li>1 channel for <strong>pitch </strong>and <strong>volume </strong>(curve values should be between 0 and 1)</li>
+    <li><strong>색상</strong> 4 개 채널 (채널은 <a class="tooltip" title="이것은 Alpha, Red, Green, Blue의 약어이며 16 진수 값으로 지정된 색상 구성 요소를 나타내는 데 사용됩니다 (예 : # FF53E270). 여기서 두 자리 숫자 각각은 단일 구성 요소를 나타냅니다. 위의 ARGB 예제를 분류하면 Alpha (FF), Red (53), Green (E2) 및 Blue (70)의 구성 요소 값이 제공됩니다.">ARGB</a> 순서 여야하며 각 범위는 0-255 여야 함)</li>
+    <li><strong>위치</strong> , <strong>스케일</strong> 및 <strong>원점을</strong> 위한 2 개의 채널</li>
+    <li><strong>회전</strong> , <strong>이미지 인덱스</strong> 및 <strong>이미지 속도를</strong> 위한 1 채널</li>
+    <li><strong>피치</strong> 및 <strong>볼륨을</strong> 위한 1 채널 (곡선 값은 0과 1 사이 여야 함)</li>
   </ul>
-  <p>There are two types of animation curves that can be used in your sequences:</p>
+  <p>시퀀스에 사용할 수있는 두 가지 유형의 애니메이션 곡선이 있습니다.</p>
   <ul class="colour">
-    <li><strong>Embedded Curve</strong> - An embedded animation curve is a unique set of curve data assigned to a specific track in the track panel. An embedded curve can be edited like any other animation curve, but it will not appear in the asset browser,
-      as it is not a stand-alone asset but instead linked only to the track it is applied to.</li>
-    <li><strong>Asset Curve</strong> - An asset animation curve is one which has been created in the asset browser. These types of curves can be used on multiple different tracks and any changes to the animation curve asset will be propagated across all tracks
-      that use it.</li>
+    <li><strong>임베드 된 커브</strong> -임베드 된 애니메이션 커브는 트랙 패널의 특정 트랙에 지정된 고유 한 커브 데이터 세트입니다. 임베드 된 커브는 다른 애니메이션 커브와 같이 편집 할 수 있지만 독립형 애셋이 아니라 적용된 트랙에만 링크되므로 애셋 브라우저에 나타나지 않습니다.</li>
+    <li><strong>자산 곡선</strong> -자산 애니메이션 곡선은 자산 브라우저에서 작성된 것입니다. 이러한 유형의 커브는 여러 개의 다른 트랙에서 사용될 수 있으며 애니메이션 커브 자산에 대한 모든 변경 사항은이를 사용하는 모든 트랙에 전파됩니다.</li>
   </ul>
-  <p>To add an animation curve asset to a track, you must first give the track the required parameter track, for example, a position or a rotation parameter track. Once that has been added you can use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/> menu option <strong>Set To External Anim Curve </strong>to open the Asset Explorer and select the required curve from the ones presented to you. Note that <em>only those curve assets with the appropriate number of channels for the parameter track being used will be shown</em>.</p>
-  <p><img alt="Add An Animation Curve To A Parameter Track" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Add_AnimCurve.gif"/>Once you have added an animation curve to a parameter track, it can then be edited by simply double clicking
-    <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on it, which will open the <strong>Animation Curve Editor</strong> for the curve. You can also convert an animation curve into an embedded curve
-    using the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/> menu option <strong>Convert To Embedded Anim Curve</strong>. This will disassociate the curve from the asset used,
-    and link it <em>only </em>to the assigned asset track. You can still edit the curve by double clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on it, but any edits will only be assigned
-    to the curve on the track and nowhere else.</p>
-  <p>Conversely, you can convert an embedded animation curve into an animation curve asset using the right mouse button  menu option Export Embedded Animation Curve. This will convert the embedded curve into a new asset which can then be edited as normal
-    as well as applied to other parameter tracks if required.</p>
-  <p>Animation curves can also be converted into <a class="tooltip" title="A keyframe (also called a parameter key) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">keyframe</a><span class="glossextra">s</span>. This option is again available from the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/> menu, <strong>Convert To Keys</strong>:</p>
-  <p><img alt="Convert An Animation Curve To Keyframes" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Convert_AnimCurve.gif"/>It is important to note, however. that there are a couple of caveats associated with doing this:</p>
+  <p>애니메이션 곡선 자산을 트랙에 추가하려면 먼저 트랙에 필요한 매개 변수 트랙 (예 : 위치 또는 회전 매개 변수 트랙)을 지정해야합니다. 그것이 추가되면 오른쪽 마우스 버튼을 사용할 수 있습니다 메뉴 옵션 <strong>Set An External Anim Curve (</strong> 애셋 탐색기로 <strong>설정)</strong> 애셋 탐색기를 열고 제공된 커브에서 필요한 커브를 선택합니다. <em>사용중인 파라미터 트랙에 적절한 수의 채널을 가진 커브 자산 만 표시</em> 됩니다.</p>
+  <p><img alt="Add An Animation Curve To A Parameter Track" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Add_AnimCurve.gif"/>매개 변수 트랙에 애니메이션 곡선을 추가 한 후에는 두 번 클릭하여 편집 할 수 있습니다. <strong>곡선에</strong> 대한 <strong>애니메이션 곡선 편집기</strong> 가 열립니다. 마우스 오른쪽 버튼을 사용하여 애니메이션 커브를 포함 커브로 변환 할 수도 있습니다 메뉴 옵션 <strong>포함 된 애님 커브로 변환</strong> . 그러면 사용 된 자산에서 곡선이 분리되고 할당 된 자산 트랙 <em>에만</em> 연결됩니다. 더블 클릭하여 곡선을 편집 할 수 있습니다 그 위에 모든 편집 내용은 트랙의 커브와 다른 곳의 커브에만 할당됩니다.</p>
+  <p>반대로 마우스 오른쪽 버튼 메뉴 옵션 내장 애니메이션 곡선 내보내기를 사용하여 내장 애니메이션 곡선을 애니메이션 곡선 자산으로 변환 할 수 있습니다. 임베드 된 커브를 새로운 자산으로 변환 한 다음 필요에 따라 다른 파라미터 트랙에 적용 할 수있을뿐만 아니라 정상적으로 편집 할 수 있습니다.</p>
+  <p>애니메이션 커브도 <a class="tooltip" title="키 프레임 (파라미터 키라고도 함)은 도프 시트의 타임 라인에서 매개 변수 값의 변경이 정의 된 지점입니다.">키 프레임</a> 으로 변환 할 수 있습니다. 이 옵션은 마우스 오른쪽 버튼으로 다시 사용할 수 있습니다 메뉴, <strong>키로 변환</strong> :</p>
+  <p><img alt="Convert An Animation Curve To Keyframes" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Convert_AnimCurve.gif"/>그러나 유의해야합니다. 이 작업과 관련하여 몇 가지주의 사항이 있습니다.</p>
   <ul class="colour">
-    <li>Keyframes cannot be &quot;between&quot; frames, and so some curve values will need to be rounded to the nearest frame, which in turn will change the way the parameter track behaves.</li>
-    <li>If the animation curve uses <a class="tooltip" title="This is a type of non-linear interpolation based on mathematical splines. It is used to estimate a new value by connecting two adjacent known values using &#39;smooth&#39; curves (splines), and a new value can be derived from any point along the line.">catmull-rom interpolation</a>, this will be lost and the interpolation between keyframes will be set to <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>.</li>
+    <li>키 프레임은 &quot;중간&quot;프레임이 될 수 없으므로 일부 커브 값은 가장 가까운 프레임으로 반올림되어야하며, 이로 인해 파라미터 트랙의 동작 방식이 변경됩니다.</li>
+    <li>애니메이션 곡선이 <a class="tooltip" title="수학적 스플라인을 기반으로하는 비선형 보간 유형입니다. &#39;평활 한&#39;곡선 (스플라인)을 사용하여 인접한 두 개의 알려진 값을 연결하여 새 값을 추정하는 데 사용되며 새 값은 선을 따라 어느 지점에서나 얻을 수 있습니다.">catmull-rom 보간을</a> 사용하는 경우, 이것은 손실되고 키 프레임 사이의 보간은 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간</a> 으로 설정됩니다.</li>
   </ul>
-  <p>You can also convert keyframes into an embedded animation curve from the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/> menu using the option <strong>Convert To Embedded Anim Curve</strong>:</p>
+  <p>마우스 오른쪽 버튼으로 키 프레임을 포함 된 애니메이션 곡선으로 변환 할 수도 있습니다. <strong>임베드 된 애님 커브로 변환</strong> 옵션을 사용하는 메뉴 :</p>
   <p><img alt="Convert Keyframes To An Animation Curve" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Convert_Keyframes.gif"/></p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Sequence_Properties/Using_Animation_Curves.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="Broadcast_Messages.htm">Broadcast Messages</a></div>
+        <div style="float:left">목록: <a href="../Sequences.htm">시퀀스</a></div>
+        <div style="float:right">다음: <a href="Broadcast_Messages.htm">방송 메시지</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Room Editor
@@ -134,4 +127,4 @@ Layer Properties
 room_editor
 -->
 
-</body></html>
+</body></html> 

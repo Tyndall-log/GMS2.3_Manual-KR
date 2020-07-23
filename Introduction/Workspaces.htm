@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Workspaces">
-        <span>Workspaces</span>
+        <span>작업 공간</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,142 +80,113 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Workspaces</h1>
-  <p>After logging in and starting a new project, GameMaker Studio 2 will take you to the initial <strong>workspace </strong>with some basic windows docked to the <a class="tooltip" title="The IDE, or Integrated Development Environment, is a software application that provides comprehensive facilities to computer programmers for software development. In this case, the entire frontend of GameMaker Studio 2 is considered the IDE, and includes sections to create graphics, add sounds, and add code to make your games.">IDE</a>. In general, the workspace is simply
-    an area where you can organise the different assets for your game while you are working:</p>
+  <h1>작업 공간</h1>
+  <p>로그인하고 새 프로젝트를 시작하면 GameMaker Studio 2가 <a class="tooltip" title="IDE (Integrated Development Environment)는 컴퓨터 프로그래머에게 소프트웨어 개발을위한 포괄적 인 기능을 제공하는 소프트웨어 응용 프로그램입니다. 이 경우 GameMaker Studio 2의 전체 프론트 엔드는 IDE로 간주되며 그래픽을 생성하고 사운드를 추가하며 게임을 만들기위한 코드를 추가하는 섹션을 포함합니다.">IDE에</a> 도킹 된 기본 창이있는 초기 <strong>작업 공간</strong> 으로 이동합니다. 일반적으로 작업 공간은 작업하는 동안 게임의 여러 자산을 구성 할 수있는 영역입니다.</p>
   <p><img alt="Workspaces" class="center" src="../assets/Images/Introduction/QS_Workspace.png"/></p>
-  <p>As you can see, the initial workspace is on a tab at the top of the screen (and you can rename it by double clicking the tab), but you can create further workspaces for the project by clicking the  <img alt="Add New Workspace" class="icon" height="32" src="../assets/Images/Introduction/Icon_Add.png" style="max-width: 20px; max-height: 20px;" width="32"/> to the side, giving you multiple possible workspaces for any single project. For example, maybe you are working on interactions between the player
-    and several enemy objects, so you&#39;d have the player on it&#39;s own workspace and the enemy objects in another, and perhaps another workspace only to show the scripts that both use.</p>
-  <p>Another important feature of workspaces is that you can click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the tab and - still holding the mouse button  <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> down - drag it off of the main IDE window into its own individual window, making it very easy to organise things if you are using - for example - multiple displays. You also merge these secondary workspace windows back into the main one by dragging
-    the tab back onto the first window. Note that although you appear to have two instances of the IDE running when you do this, they are <strong>both for the same project</strong> and you cannot have one project in one and another in the other unless
-    you specifically open two instances of GameMaker Studio 2.</p>
-  <p>When you first start GameMaker Studio 2, your workspace will already be populated by a couple of windows which will be &quot; <strong>docked</strong>&quot; to the IDE. These are explained briefly below:</p>
+  <p>보시다시피 초기 작업 영역은 화면 상단의 탭에 있으며 탭을 두 번 클릭하여 이름을 바꿀 수 있지만 프로젝트를 클릭하여 프로젝트의 추가 작업 영역을 만들 수 있습니다 단일 프로젝트에 대해 여러 작업 공간을 제공합니다. 예를 들어, 플레이어와 여러 개의 적 대상 사이의 상호 작용을 수행하고있을 수 있으므로 플레이어는 자신의 작업 공간에 있고 다른 대상에는 다른 작업 공간에 있고 둘 다 사용하는 스크립트를 표시하기 위해 다른 작업 공간에 플레이어를 두어야합니다.</p>
+  <p>작업 공간의 또 다른 중요한 기능은 탭에서-마우스 버튼을 계속 누르고 있습니다. down-메인 IDE 창에서 개별 창으로 끌어다 놓기 때문에 여러 디스플레이를 사용하는 경우 작업을 매우 쉽게 구성 할 수 있습니다. 또한 탭을 다시 첫 번째 창으로 끌어서 보조 작업 공간 창을 기본 작업 공간 창으로 다시 병합합니다. 이 작업을 수행 할 때 두 개의 IDE 인스턴스가 실행중인 것처럼 보이지만 <strong>둘 다 동일한 프로젝트를위한 것이며</strong> GameMaker Studio 2의 두 인스턴스를 구체적으로 열지 않는 한 하나의 프로젝트를 다른 프로젝트에 가질 수 없습니다.</p>
+  <p>GameMaker Studio 2를 처음 시작하면 작업 공간이 이미 IDE에 &quot; <strong>도킹</strong> &quot;될 두 개의 창으로 채워집니다. 아래에 간단히 설명되어 있습니다.</p>
   <ul class="colour">
-    <li><strong>Output </strong>- You can also see in the image above the <a href="The_Output_Window.htm">Output Window</a>. There are a number of sub tabs in this window related to <strong>Source Control</strong>, <strong>Searching</strong>, and <strong>Debugging</strong>,
-      with the initial tab being for the console/compiler output, which shows you what is happening when you are compiling a game for testing or when creating a final package for distribution. This will also show any debug messages that you choose to
-      send from your project at runtime, and can be configured to show different quantities of information from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General_Preferences.htm">General Preferences</a>. If you close the output
-      window and wish to recover it you can use the <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows Menu</a>.</li>
-    <li><strong>Assets </strong>- On the right of the screen you can find the <a href="The_Asset_Browser.htm"> <strong>Asset Browser</strong></a>. Here is where you can create and edit the different assets that your game uses, as well as generate and change
-      configurations, game options, room order and other things. Assets are created by right-clicking  <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> on an asset folder (or anywhere in the main Asset Browser view) and selecting
-      <strong>Create</strong>, or by clicking the plus icon at the top and selecting an asset from the <strong>Create </strong><strong>Asset</strong> window (note that with this method you can create multiple assets of the same type at a time, by setting
-      the value at the bottom):<br/>
-      <br/>
-      <img alt="Resources Menu" class="center" src="../assets/Images/Introduction/QS_ResourcesMenu.png"/>Selecting any one of these options will create a new, empty resource of the given type for you, with the name field highlighted so you can immediately
-      give it a name. Note that while the Asset Browser is docked to the IDE by default, you can take it out and into its own window by clicking  <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the
-      &quot;Asset Browser&quot; text at the top and dragging. You can re-dock it again at any time by dragging it to the sides or bottom of the IDE. If you close the Asset Browser window and wish to recover it you can use the <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows Menu</a>.
-      For more information on the available assets please see the section on <a href="../The_Asset_Editors/The_Asset_Editors.htm">Editors</a>.</li>
+    <li><strong>출력</strong> — <a href="The_Output_Window.htm">출력 창</a> 위의 이미지에서도 볼 수 있습니다. 이 창에는 <strong>Source Control</strong> , <strong>Searching</strong> 및 <strong>Debugging</strong> 과 관련된 여러 개의 하위 탭이 있으며 초기 탭은 콘솔 / 컴파일러 출력용이며 테스트를 위해 게임을 컴파일하거나 게임을 만들 때 발생하는 상황을 보여줍니다 배포를위한 최종 패키지. 또한 런타임에 프로젝트에서 보내도록 선택한 디버그 메시지가 표시되고 <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General_Preferences.htm">일반 기본 설정</a> 에서 다른 수량의 정보를 표시하도록 구성 할 수 있습니다. 출력 창을 닫고 복구하려는 경우 <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows 메뉴를</a> 사용할 수 있습니다.</li>
+    <li><strong>자산</strong> -화면 오른쪽에서 <a href="The_Asset_Browser.htm"><strong>자산 브라우저를</strong></a> 찾을 수 있습니다. 여기에서 게임에서 사용하는 다양한 자산을 생성 및 편집 할 수있을뿐만 아니라 구성, 게임 옵션, 객실 주문 및 기타 항목을 생성 및 변경할 수 있습니다. 마우스 오른쪽 버튼을 클릭하여 자산을 생성합니다 자산 폴더 (또는 그 밖의 주요 자산 브라우저보기에서), 또는이 방법으로 같은 여러 자산을 만들 수 있습니다 상단에있는 플러스 아이콘을 클릭하고 <strong>자산</strong> <strong>작성</strong> <strong>창</strong> (주에서 자산을 선택하여 <strong>생성</strong> 및 선택 맨 아래에 값을 설정하여 한 번에 입력하십시오. 이 옵션 중 하나를 선택하면 이름 필드가 강조 표시되어 지정된 유형의 빈 자원이 새로 만들어져 즉시 이름을 지정할 수 있습니다. 애셋 브라우저가 기본적으로 IDE에 도킹되어있는 동안 클릭하면 해당 브라우저를 꺼내고 자체 창으로 이동할 수 있습니다. 상단의 &quot;자산 브라우저&quot;텍스트에서 드래그하십시오. IDE의 측면이나 하단으로 드래그하여 언제든지 다시 도킹 할 수 있습니다. 자산 브라우저 창을 닫고 복구하려는 경우 <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows 메뉴를</a> 사용할 수 있습니다. 사용 가능한 자산에 대한 자세한 내용은 <a href="../The_Asset_Editors/The_Asset_Editors.htm">편집자</a> 섹션을 참조하십시오.</li>
   </ul>
   <p> </p>
   <p> </p>
-  <h1>Workspace RMB Menu</h1>
-  <p>While within any workspace you can call up the Right Button Menu at any time by right-clicking  <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> anywhere, which will open the following menu:</p>
+  <h1>작업 공간 RMB 메뉴</h1>
+  <p>작업 공간 내에서 마우스 오른쪽 버튼을 클릭하여 언제든지 오른쪽 버튼 메뉴를 불러올 수 있습니다 다음 메뉴가 열립니다 :</p>
   <p><img alt="RMB Menu Options" class="center" src="../assets/Images/Introduction/QS_RMB_Options.png"/></p>
-  <p>Clicking <strong>Assets </strong>will open up a list of all the assets in the <a href="The_Asset_Browser.htm">Asset Browser</a> that you can create, and selecting any one of them will create that asset resource for you, as well as focus the workspace
-    on the editor window for that resource. If you click the <strong>Windows </strong>option, you will be shown a list of all the currently open windows within the workspace and you can select any of them to have the workspace focus on that window. Finally
-    you have the <strong>Go To </strong>option which will open the following window:</p>
+  <p><strong>자산</strong> 을 클릭하면 생성 할 수있는 <a href="The_Asset_Browser.htm">자산 브라우저</a> 의 모든 자산 목록이 열리고 그 중 하나를 선택하면 해당 자산 자원이 생성되고 해당 자원의 편집기 창에 작업 공간이 초점을 맞 춥니 다. <strong>Windows</strong> 옵션을 클릭하면 작업 공간 내에서 현재 열려있는 모든 창의 목록이 표시되며 해당 창에 작업 공간이 집중되도록 창을 선택할 수 있습니다. 마지막으로 다음과 같은 창을 여는 <strong>이동</strong> 옵션이 있습니다.</p>
   <p><img alt="Goto Window" class="center" src="../assets/Images/Introduction/QS_Goto.png"/></p>
-  <p>This window permits you to search though every asset, <strong>Game Option</strong> or <strong>Preference </strong>in your project for the search term you input. For example, typing &quot;icon&quot; as the search term will show all items in your project
-    that have icon somewhere in their name, eg: if a sprite is <tt> <span class="inline">spr_Icon_Play</span></tt>, then it will show up here, as will the object &quot; <span class="inlinecode"> <span class="inline">obj_Iconoclast</span></span>&quot;,
-    and you&#39;ll even see the Game Options for the different icons like &quot; <strong>Icon for hdpi</strong>&quot;. Clicking on any of the items shown on filtered list will open it in the current workspace or focus the workspace on it if it is already
-    open. Note that you can also use the keyboard shortcut <img alt="CTRL Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <strong>T</strong> to open the Go To window, and that the number of items listed is (by default) set to a maximum of 16, but this can be changed from the Go To section of the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General_Preferences.htm">General Preferences</a>.</p>
-  <p>For more information on Workspace Navigation, please see the section on <a href="../IDE_Navigation/IDE_Input.htm">IDE Input and Navigation</a>.</p>
+  <p>이 창에서는 입력 한 검색어에 대해 프로젝트의 모든 자산, <strong>게임 옵션</strong> 또는 <strong>환경 설정</strong> 을 검색 할 수 있습니다. 예를 들어, 검색어로 &quot;icon&quot;을 입력하면 프로젝트의 이름에 아이콘이있는 모든 항목이 표시됩니다 (예 : 스프라이트가 <tt><span class="inline">spr_Icon_Play</span></tt> 인 경우 &quot; <span class="inlinecode"><span class="inline">obj_Iconoclast</span></span> &quot;오브젝트와 같이 여기에 <span class="inlinecode"><span class="inline">표시됨)</span></span> &quot; <strong>Icon for hdpi</strong> &quot;와 같은 다른 아이콘에 대한 게임 옵션도 볼 수 있습니다. 필터링 된 목록에 표시된 항목을 클릭하면 현재 작업 영역에서 열리거나 이미 열려있는 경우 작업 영역에 초점이 맞춰집니다. 키보드 단축키를 사용할 수도 있습니다. / + <strong>T</strong> 를 눌러 이동 창을 열고 나열된 항목 수는 기본적으로 최대 16으로 설정되지만 <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General_Preferences.htm">일반 환경 설정</a> 의 이동 섹션에서 변경할 수 있습니다.</p>
+  <p>작업 공간 탐색에 대한 자세한 내용은 <a href="../IDE_Navigation/IDE_Input.htm">IDE 입력 및 탐색</a> 섹션을 참조하십시오.</p>
   <p> </p>
   <p> </p>
-  <h1>Docking</h1>
-  <p>We mentioned briefly above that you can dock many windows into the current workspace window and you can un-dock those that are already docked. If you click  <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on, for example, the Asset Browser tab at the top and drag it to the left of the current workspace, you will see that it becomes a free floating window.</p>
-  <p><img alt="Un-docking the asset browser" class="center" src="../assets/Images/Introduction/QS_UnDocking.gif"/>This converse is true and if you drag certain windows to the sides of the workspace (or the bottom) then they will be docked, meaning that
-    it essentially becomes part of the IDE window overlay and is no longer independent. When doing this, you drag the window to the area you want to dock to and it will be highlighted to show that you can dock the window there:</p>
-  <p><img alt="Docking The Asset Browser" class="center" src="../assets/Images/Introduction/QS_Docking.gif"/>In this way you can create a personalised IDE experience that fits your workflow and way of doing things. It&#39;s worth noting that all docked
-    windows can be hidden/unhidden individually by clicking the button to the side of the docked items (highlighted in the image at the top of this page), or you can hide/unhide all docked items using the quick-button  <img alt="Docking Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Docking.png" width="24"/> at the top of the IDE, and note too that the IDE will remember docked windows between sessions.</p>
-  <p class="note"><strong>NOTE</strong>: Some windows will disappear from the dock when you change editors, like in the room editor. However when you return to the editor in question, they will be re-opened in the dock again.</p>
+  <h1>도킹</h1>
+  <p>위에서 간단히 작업 창에 많은 창을 고정 할 수 있으며 이미 고정 된 창을 도킹 해제 할 수 있다고 언급했습니다. 클릭하면 예를 들어 상단의 자산 브라우저 탭에서 현재 작업 공간의 왼쪽으로 끌어다 놓으면 자유 부동 창이됩니다.</p>
+  <p><img alt="Un-docking the asset browser" class="center" src="../assets/Images/Introduction/QS_UnDocking.gif"/>이 대화는 사실이며 특정 창을 작업 영역의 측면 (또는 아래쪽)으로 드래그하면 고정되어 기본적으로 IDE 창 오버레이의 일부가되고 더 이상 독립적이지 않습니다. 이 작업을 수행 할 때 창을 도킹하려는 영역으로 드래그하면 창을 도킹 할 수 있음을 나타 내기 위해 강조 표시됩니다.</p>
+  <p><img alt="Docking The Asset Browser" class="center" src="../assets/Images/Introduction/QS_Docking.gif"/>이러한 방식으로 작업 흐름과 작업 방식에 맞는 개인화 된 IDE 환경을 만들 수 있습니다. 도킹 된 항목의 측면에있는 단추 (이 페이지 상단의 이미지에서 강조 표시됨)를 클릭하여 모든 도킹 된 창을 개별적으로 숨기거나 숨기기를 해제 할 수 있습니다. 또는 빠른 도킹을 사용하여 도킹 된 모든 항목을 숨기거나 숨기기 해제 할 수 있습니다. 단추 IDE의 맨 위에 있으며, IDE는 세션 간 도킹 된 창을 기억합니다.</p>
+  <p class="note"><strong>참고</strong> : 회의실 편집기와 같이 편집기를 변경하면 일부 창이 도크에서 사라집니다. 그러나 해당 편집기로 돌아 오면 Dock에서 다시 열립니다.</p>
   <p> </p>
   <p> </p>
-  <h1>Quick Buttons</h1>
-  <p>Below we list the quick buttons that are available by default with GameMaker Studio 2. These buttons can be found at the top of the IDE and represent many of the most common commands that you&#39;ll be using while working in GameMaker Studio 2 to make
-    your workflow smoother (note that most of these buttons have an equivalent <a href="../IDE_Navigation/Menus.htm">menu option</a> too):</p>
+  <h1>빠른 버튼</h1>
+  <p>아래에는 GameMaker Studio 2에서 기본적으로 사용할 수있는 빠른 버튼이 나열되어 있습니다.이 버튼은 IDE 상단에 있으며 GameMaker Studio 2에서 작업 할 때 가장 많이 사용하는 명령을 나타냅니다. 작업 흐름이 더 매끄 럽습니다 (대부분의 버튼에는 동등한 <a href="../IDE_Navigation/Menus.htm">메뉴 옵션이</a> 있습니다).</p>
   <p> </p>
   <table class="icons">
     <tbody>
       <tr>
-        <td class="icons"><img alt="Home Icon" class="icon" src="../assets/Images/Icons/Icon_Home.png"/></td>
-        <td class="text">Opens the Start Page in a new workspace</td>
+        <td class="icons"><img alt="홈 아이콘" class="icon" src="../assets/Images/Icons/Icon_Home.png"/></td>
+        <td class="text">새 작업 공간에서 시작 페이지를 엽니 다</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="New Project Icon" src="../assets/Images/Icons/Icon_NewProject.png"/></td>
-        <td class="text">Create a new project.</td>
+        <td class="icons"><img alt="새 프로젝트 아이콘" src="../assets/Images/Icons/Icon_NewProject.png"/></td>
+        <td class="text">새 프로젝트를 작성하십시오.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Open Project" src="../assets/Images/Icons/Icon_OpenProject.png"/></td>
-        <td class="text">Open a previously created project.</td>
+        <td class="icons"><img alt="프로젝트 열기" src="../assets/Images/Icons/Icon_OpenProject.png"/></td>
+        <td class="text">이전에 만든 프로젝트를 엽니 다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Save Project" src="../assets/Images/Icons/Icon_Save.png"/></td>
-        <td class="text">Save the current project. Note that by default GameMaker Studio 2 will save your project automatically (depending on the <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">Preferences</a> that you have set) and this button is
-          simply so you can force a save at any time.</td>
+        <td class="icons"><img alt="프로젝트를 저장하다" src="../assets/Images/Icons/Icon_Save.png"/></td>
+        <td class="text">현재 프로젝트를 저장하십시오. 기본적으로 GameMaker Studio 2는 <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">설정</a> 한 <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">기본 설정</a> 에 따라 프로젝트를 자동으로 저장하며이 버튼은 간단하게 저장하여 언제든지 저장할 수 있습니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Debug Project" src="../assets/Images/Icons/Icon_Debug.png"/></td>
-        <td class="text">Clicking this will test-run your current project along with the debug module. Use this to test and debug your game. You can find more about the debug module from the section on the <a href="../IDE_Tools/The_Debugger.htm">Debugger</a>.</td>
+        <td class="icons"><img alt="프로젝트 디버그" src="../assets/Images/Icons/Icon_Debug.png"/></td>
+        <td class="text">이것을 클릭하면 디버그 모듈과 함께 현재 프로젝트를 테스트 실행합니다. 이것을 사용하여 게임을 테스트하고 디버그하십시오. <a href="../IDE_Tools/The_Debugger.htm">디버거</a> 의 섹션에서 디버그 모듈에 대한 자세한 내용을 찾을 수 있습니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Test Play Game" src="../assets/Images/Icons/Icon_PlayGame.png"/></td>
-        <td class="text">Clicking this will test-run your project on the chosen target platform.</td>
+        <td class="icons"><img alt="테스트 게임" src="../assets/Images/Icons/Icon_PlayGame.png"/></td>
+        <td class="text">이것을 클릭하면 선택한 대상 플랫폼에서 프로젝트를 테스트 실행합니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Stop Game Test" src="../assets/Images/Icons/Icon_StopGame.png"/></td>
-        <td class="text">This button can be used to cancel the compilation of your games to the target module, or (on certain targets only) to stop the game while it is running after it has been compiled.</td>
+        <td class="icons"><img alt="게임 테스트 중지" src="../assets/Images/Icons/Icon_StopGame.png"/></td>
+        <td class="text">이 버튼을 사용하여 게임을 대상 모듈로 컴파일하는 것을 취소하거나 게임이 컴파일 된 후 실행중인 게임을 중지 할 수 있습니다 (일부 대상에서만).</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Clean Compiler Cache Icon" src="../assets/Images/Icons/Icon_Clean.png"/></td>
-        <td class="text">Pressing this button will clear the current asset compiler cache. GameMaker Studio 2 stores images, sounds, scripts etc... between use in a cache so as to save time when testing your game as it will only re-compile those things that have been
-          changed before testing. However, this cache may become corrupted or &quot;stale&quot; over time, or you may wish to do a full test with no caching being done previously, in which case you can clear the cache by pressing this button.
-          <div class="note"><b>IMPORTANT</b>: It is recommended that you always clear the cache before creating the executable for any target platform.</div>
-        </td>
+        <td class="icons"><img alt="컴파일러 캐시 정리 아이콘" src="../assets/Images/Icons/Icon_Clean.png"/></td>
+        <td class="text">이 버튼을 누르면 현재 자산 컴파일러 캐시가 지워집니다. GameMaker Studio 2는 이미지, 사운드, 스크립트 등을 캐시에 사용하는 사이에 저장하여 게임을 테스트 할 때 시간을 절약하기 위해 테스트 전에 변경된 것들만 다시 컴파일하므로 게임을 테스트합니다. 그러나이 캐시는 시간이 지남에 따라 손상되거나 &quot;stale&quot;이되거나 이전에 캐싱을 수행하지 않고 전체 테스트를 수행하려는 경우이 단추를 눌러 캐시를 지울 수 있습니다. <b>중요</b> : 대상 플랫폼의 실행 파일을 만들기 전에 항상 캐시를 지우는 것이 좋습니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Game Options" height="24" src="../assets/Images/Icons/Icon_GameOptions.png" width="24"/></td>
-        <td class="text">Clicking this will open up the <a href="../Settings/Game_Options.htm">Main Game Options Editor</a>. Note that this is only the main, general, options for the current project, but you may also have platform specific options being listed as a part
-          of the <a href="The_Asset_Browser.htm">Asset Browser</a>.</td>
+        <td class="icons"><img alt="게임 옵션" height="24" src="../assets/Images/Icons/Icon_GameOptions.png" width="24"/></td>
+        <td class="text">이것을 클릭하면 <a href="../Settings/Game_Options.htm">메인 게임 옵션 편집기</a> 가 열립니다. 이 옵션은 현재 프로젝트에 대한 기본적이고 일반적인 옵션이지만 플랫폼 별 옵션이 <a href="The_Asset_Browser.htm">자산 브라우저</a> 의 일부로 표시 될 수도 있습니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Help Icon" height="24" src="../assets/Images/Icons/Icon_Help.png" width="24"/></td>
-        <td class="text">Click this to open the manual (or alternatively, press  <img alt="Icon F1" class="icon" height="20" src="../assets/Images/Icons/Icon_f1.png" width="55"/>).</td>
+        <td class="icons"><img alt="도움말 아이콘" height="24" src="../assets/Images/Icons/Icon_Help.png" width="24"/></td>
+        <td class="text">이것을 클릭하면 매뉴얼을 열거 나 다른 방법으로 ).</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Zoom Out Icon" src="../assets/Images/Icons/Icon_ZoomOut.png"/></td>
-        <td class="text">This will zoom the focused workspace out to make everything smaller (you can also achieve this holding down <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> /  <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> and using the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21"/>).</td>
+        <td class="icons"><img alt="축소 아이콘" src="../assets/Images/Icons/Icon_ZoomOut.png"/></td>
+        <td class="text">초점을 맞춘 작업 공간을 축소하여 모든 것을 더 작게 만듭니다. / 마우스 휠 사용 ).</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Zoom Reset Icon" src="../assets/Images/Icons/Icon_ZoomReset.png"/></td>
-        <td class="text">This will reset the focused workspace to be 1:1 again.</td>
+        <td class="icons"><img alt="확대 / 축소 재설정 아이콘" src="../assets/Images/Icons/Icon_ZoomReset.png"/></td>
+        <td class="text">초점을 맞춘 작업 공간이 다시 1 : 1로 재설정됩니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Zoom In Icon" height="24" src="../assets/Images/Icons/Icon_ZoomIn.png" width="24"/></td>
-        <td class="text">This will zoom the focused workspace in to make everything larger (you can also achieve this holding down <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> /  <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> and using the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21"/>).</td>
+        <td class="icons"><img alt="아이콘 확대" height="24" src="../assets/Images/Icons/Icon_ZoomIn.png" width="24"/></td>
+        <td class="text">초점을 맞춘 작업 공간을 확대하여 모든 것을 더 크게 만듭니다. / 마우스 휠 사용 ).</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Open Close Docks Icon" src="../assets/Images/Icons/Icon_Docking.png"/></td>
-        <td class="text">This will toggle all the docked elements between hidden and unhidden.</td>
+        <td class="icons"><img alt="닫기 도크 아이콘 열기" src="../assets/Images/Icons/Icon_Docking.png"/></td>
+        <td class="text">그러면 고정 된 모든 요소가 숨겨 지거나 숨겨지지 않은 상태로 전환됩니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Laptop Mode" src="../assets/Images/Icons/Icon_LaptopMode.png"/></td>
-        <td class="text">This will toggle laptop mode on and off (This will only appear if you are currently using a laptop - see the section on <a href="../IDE_Navigation/IDE_Input.htm">IDE Input</a> for more details)</td>
+        <td class="icons"><img alt="노트북 모드" src="../assets/Images/Icons/Icon_LaptopMode.png"/></td>
+        <td class="text">랩톱 모드를 켜거나 끕니다. (현재 랩톱을 사용하는 경우에만 나타납니다. 자세한 내용은 <a href="../IDE_Navigation/IDE_Input.htm">IDE 입력</a> 섹션을 참조하십시오)</td>
       </tr>
     </tbody>
   </table>
-  <p>
-    <!--</div>-->
-  </p>
+  <p><!--</div>--></p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Introduction/Workspaces.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction To GameMaker Studio 2</a></div>
-        <div style="float:right">Next: <a href="The_Asset_Browser.htm">The Asset Browser</a></div>
+        <div style="float:left">목록: <a href="Introduction_To_GameMaker_Studio_2.htm">GameMaker Studio 2 소개</a></div>
+        <div style="float:right">다음: <a href="The_Asset_Browser.htm">자산 브라우저</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Workspaces
@@ -234,4 +205,4 @@ docking
 bookmarks
 -->
 
-</body></html>
+</body></html> 

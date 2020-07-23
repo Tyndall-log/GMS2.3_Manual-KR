@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="System">
-        <span>System</span>
+        <span>체계</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,80 +80,70 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>System</h1>
-  <p><img alt="System Event" class="center" src="../../../assets/Images/Asset_Editors/Async_System.png"/>This event can only be triggered by a <a class="tooltip" title="A callback is simply a function that runs and then triggers another function (or code block) when it has finished doing whatever it was assigned to do. For example, the funtion sprite_add() will trigger a callback in the asynchronous Image Loaded event when the sprite has been loaded.">callback</a> from a system level event (such as the detection
-    of a gamepad or the automatic signing in to XBox Live) and it will return a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> stored in the variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>,
-    containing different key/value pairs depending on the system level event that triggered the call-back. These events are:</p>
+  <h1>체계</h1>
+  <p><img alt="System Event" class="center" src="../../../assets/Images/Asset_Editors/Async_System.png"/>이 이벤트는 시스템 수준 이벤트 (예 : 게임 패드 감지 또는 XBox Live 자동 로그인)의 <a class="tooltip" title="콜백은 단순히 실행 된 다음 수행 된 작업을 모두 마쳤을 때 다른 함수 (또는 코드 블록)를 트리거하는 함수입니다. 예를 들어, sprite_add () 함수는 스프라이트가로드 될 때 비동기 이미지로드 이벤트에서 콜백을 트리거합니다.">콜백에</a> 의해서만 트리거 될 수 있으며 다른 키 / 값 쌍을 포함하는 변수 <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load에</span></a> 저장된 <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> 을 반환합니다. 콜백을 트리거 한 시스템 수준 이벤트에 따라 이러한 이벤트는 다음과 같습니다.</p>
   <p> </p>
-  <h2>Game Pads</h2>
-  <p>When this event is triggered for a gamepad being connected or disconnected it will return one of the following key/value pairs in the <span class="inline">async_load</span> map:</p>
+  <h2>게임 패드</h2>
+  <p>이 이벤트가 연결되거나 연결이 끊어진 게임 패드에 대해 트리거되면 <span class="inline">async_load</span> 맵에서 다음 키 / 값 쌍 중 하나를 반환합니다.</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - the type of system event received, which will be one of the following strings:
-      <ul>
-        <li><span>&quot;<span class="inline">gamepad discovered</span>&quot; - happens when the system reports a new gamepad has been connected</span>
-        </li>
-        <li><span>&quot;<span class="inline">gamepad lost</span>&quot; - happens when the system has lost connection to a gamepad</span>
-        </li>
+    <li class="dropspot">&quot; <span class="inline">event_type</span> &quot;-수신 된 시스템 이벤트 유형으로, 다음 문자열 중 하나입니다. <span>&quot; <span class="inline">gamepad found</span> &quot;-시스템이 새로운 게임 패드가 연결되었다고보고 할 때 발생합니다</span></li>
+        <li><span>&quot; <span class="inline">gamepad lost</span> &quot;-시스템이 게임 패드와의 연결이 끊어졌을 때 발생</span></li>
       </ul>
     </li>
-    <li class="dropspot">&quot;<span class="inline">pad_index</span>&quot; - the index of the pad that has been added or removed</li>
+    <li class="dropspot">&quot; <span class="inline">pad_index</span> &quot;-추가 또는 제거 된 패드의 색인</li>
   </ul>
-  <p>This event now permits you to move all your gamepad checking logic from the Step Event or an Alarm event into the System Event and only run it when it&#39;s actually required.</p>
-  <p class="note"><strong>IMPORTANT!</strong> This event will NOT be triggered unless you have at least one <a href="../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/Gamepad_Input.htm"><span class="inline">gamepad_*</span></a> function or <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Gamepad/Gamepad_Actions.htm">DnD™ action</a>    in your game code. The runner will only initialise the gamepad sub-system when the functions are used in the project, so if they aren&#39;t present, adding/removing gamepads will not trigger the System Event.</p>
+  <p>이 이벤트를 통해 모든 게임 패드 검사 로직을 단계 이벤트 또는 알람 이벤트에서 시스템 이벤트로 이동하고 실제로 필요할 때만 실행할 수 있습니다.</p>
+  <p class="note"><strong>중대한!</strong> 이 이벤트는 게임 코드에 적어도 하나의 <a href="../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/Gamepad_Input.htm"><span class="inline">gamepad_ *</span></a> 기능 또는 <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Gamepad/Gamepad_Actions.htm">DnD ™ 액션</a> 이 없으면 트리거되지 않습니다. 러너는 기능이 프로젝트에서 사용될 때만 게임 패드 서브 시스템을 초기화하므로, 기능이 없으면 게임 패드를 추가 / 제거해도 시스템 이벤트가 트리거되지 않습니다.</p>
   <p> </p>
-  <h2>Virtual Keyboards</h2>
-  <p>When this event is triggered for a virtual keyboard being opened or closed it will return the following key/value pairs in the <span class="inline">async_load</span> map:</p>
+  <h2>가상 키보드</h2>
+  <p>이 이벤트가 열려 있거나 닫힌 가상 키보드에 대해 트리거되면 <span class="inline">async_load</span> 맵에서 다음 키 / 값 쌍을 반환합니다.</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - the type of system event received, which will be &quot;<span class="inline">virtual keyboard status</span>&quot; for virtual keyboards.</li>
-    <li class="dropspot">&quot;<span class="inline">screen_height</span>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li class="dropspot">&quot;<span class="inline">keyboard_status</span>&quot; - the current status of the keyboard, returned as one of the following strings:
-      <ul>
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
-        <li>&quot;visible&quot;</li>
+    <li class="dropspot">&quot; <span class="inline">event_type</span> &quot;-수신 된 시스템 이벤트 유형으로, <span class="inline">가상 키보드의</span> 경우 &quot; <span class="inline">가상 키보드 상태</span> &quot;가됩니다.</li>
+    <li class="dropspot">&quot; <span class="inline">screen_height</span> &quot;-가상 키보드의 높이 (픽셀). 키보드가 보이지 않으면 0이됩니다.</li>
+    <li class="dropspot">&quot; <span class="inline">keyboard_status</span> &quot;- <span class="inline">키보드</span> 의 현재 상태로, 다음 문자열 중 하나로 반환됩니다. &quot;숨김&quot;</li>
+        <li>&quot;숨겨진&quot;</li>
+        <li>&quot;전시&quot;</li>
+        <li>&quot;명백한&quot;</li>
       </ul>
     </li>
   </ul>
-  <p>See <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">here</a> for more information on the virtual keyboard.</p>
+  <p>가상 키보드에 대한 자세한 내용은 <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">여기</a> 를 참조 <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">하십시오</a> .</p>
   <p> </p>
-  <h2>XBox Live</h2>
-  <p>The asynchronous system event can be triggered when targeting the XBox One using the UWP export and checking the Enable XBox Live option in the <a href="../../../Settings/Game_Options/Windows_UWP.htm">UWP Game Options</a>. When you start GameMaker Studio
-    2 UWP project that has Xbox Live enabled the project will automatically try to silently sign-in to Xbox Live. The results of this sign-in attempt will be returned as one of the following key/value pairs in the <span class="inline">async_load</span>    map:</p>
+  <h2>엑스 박스 라이브</h2>
+  <p>UWP 내보내기를 사용하여 XBox One을 대상으로 지정하고 <a href="../../../Settings/Game_Options/Windows_UWP.htm">UWP 게임 옵션</a> 에서 XBox 라이브 활성화 옵션을 확인할 때 비동기 시스템 이벤트가 트리거 될 수 있습니다. Xbox Live가 활성화 된 GameMaker Studio 2 UWP 프로젝트를 시작하면 프로젝트가 자동으로 Xbox Live에 자동 로그인을 시도합니다. 이 로그인 시도 결과는 <span class="inline">async_load</span> 맵에서 다음 키 / 값 쌍 중 하나로 반환됩니다.</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - the type of system event received, which will be one of the following strings:</li>
-    <li class="dropspot">&quot;<span class="inline">user signed in</span>&quot; - the silent user sign-in has been completed successfully</li>
-    <li class="dropspot">&quot;<span class="inline">user sign in failed</span>&quot; - the silent user sign-in has failed (when this happens you can use the function <a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_show_account_picker.htm"><span class="inline">xboxlive_show_account_picker()</span></a> to
-      get the user to choose an account to sign in with)</li>
-    <li class="dropspot">&quot;<span class="inline">user signed out</span>&quot; - the user has signed out</li>
+    <li class="dropspot">&quot; <span class="inline">event_type</span> &quot;-수신 된 시스템 이벤트 유형으로, 다음 문자열 중 하나입니다.</li>
+    <li class="dropspot">&quot; <span class="inline">사용자 로그인</span> &quot;-자동 사용자 로그인이 완료되었습니다</li>
+    <li class="dropspot">&quot; <span class="inline">사용자 로그인 실패</span> &quot;-자동 사용자 로그인이 실패했습니다 (이 경우 <a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_show_account_picker.htm"><span class="inline">xboxlive_show_account_picker ()</span></a> 함수를 사용하여 로그인 할 계정을 선택할 수 있습니다)</li>
+    <li class="dropspot">&quot; <span class="inline">사용자 로그 아웃</span> &quot;-사용자가 로그 아웃했습니다</li>
   </ul>
-  <p>Other functions for XBox Live may also trigger this event, but the different callbacks for those functions are detailed on the relevant function pages. For more information on the specific functions available for XBox Live, please see <a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/UWP_And_XBox_Live.htm">here</a>.</p>
+  <p>XBox Live의 다른 기능도이 이벤트를 트리거 할 수 있지만 해당 기능에 대한 다양한 콜백은 관련 기능 페이지에 자세히 설명되어 있습니다. XBox Live에 사용 가능한 특정 기능에 대한 자세한 내용은 <a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/UWP_And_XBox_Live.htm">여기</a> 를 참조 <a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/UWP_And_XBox_Live.htm">하십시오</a> .</p>
   <p> </p>
-  <h2>Audio System Status</h2>
-  <p>This event type is specifically for use when working with the HTML5 target, as it will be triggered every time the Web Audio context status changes. This means that if you have, for example, a piece of looping background music, then you can pause it
-    or stop and restart it, based on this event triggering. This can be checked by looking for the following key/value pair in the <span class="inline">async_load</span> map:</p>
+  <h2>오디오 시스템 상태</h2>
+  <p>이 이벤트 유형은 웹 오디오 컨텍스트 상태가 변경 될 때마다 트리거되므로 HTML5 대상으로 작업 할 때 특히 사용됩니다. 즉, 예를 들어 반복되는 배경 음악이 있으면이 이벤트 트리거를 기반으로 음악을 일시 중지하거나 중지했다가 다시 시작할 수 있습니다. <span class="inline">async_load</span> 맵에서 다음 키 / 값 쌍을 <span class="inline">찾아서 확인할 수</span> 있습니다.</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - the type of system event received, which will be the string &quot;<span class="inline">audio_system_status</span>&quot; if the audio system has initialised or the context has changed.</li>
+    <li class="dropspot">&quot; <span class="inline">event_type</span> &quot;-수신 된 시스템 이벤트 유형으로, 오디오 시스템이 초기화되었거나 컨텍스트가 변경된 경우 문자열 &quot; <span class="inline">audio_system_status</span> &quot;가됩니다.</li>
   </ul>
-  <p>If this event type is triggered, then there will be an additional key in the <span class="inline">async_load</span> map:</p>
+  <p>이 이벤트 유형이 트리거되면 <span class="inline">async_load</span> 맵에 추가 키가 있습니다.</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">status</span>&quot; - The status of the audio system, which will be one of the following two strings</li>
-    <li class="dropspot">&quot;<span class="inline">available</span>&quot; - The audio system is initialised and available to play sounds</li>
-    <li class="dropspot">&quot;<span class="inline">unavailable</span>&quot; - The audio system is not initialised, or the context is not currently running, and so can&#39;t play sounds (all sound playing functions will return -1)</li>
+    <li class="dropspot">&quot; <span class="inline">status</span> &quot;-오디오 시스템의 상태이며 다음 두 문자열 중 하나입니다.</li>
+    <li class="dropspot">&quot; <span class="inline">available</span> &quot;-오디오 시스템이 초기화되어 사운드를 재생할 수 있습니다</li>
+    <li class="dropspot">&quot; <span class="inline">available</span> &quot;-오디오 시스템이 초기화되지 않았거나 컨텍스트가 현재 실행 중이 아니므로 사운드를 재생할 수 없습니다 (모든 사운드 재생 기능은 -1을 반환 함)</li>
   </ul>
-  <p>For more information on the specific functions available for Audio, please see <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">here</a>.</p>
-  <p class="note"><strong>NOTE</strong>: While this event is designed for use with the HTML5 target, it will also be triggered on all other platforms, but on everything (except HTML5) it will only be triggered once on Game Start when the audio engine is first initialised.</p>
+  <p>오디오에 사용 가능한 특정 기능에 대한 자세한 내용은 <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">여기</a> 를 참조 <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">하십시오</a> .</p>
+  <p class="note"><strong>참고</strong> :이 이벤트는 HTML5 대상과 함께 사용하도록 디자인되었지만 다른 모든 플랫폼에서도 트리거되지만 오디오 엔진을 처음 초기화 할 때 모든 게임 (HTML5 제외)에서 게임 시작시 한 번만 트리거됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Object_Properties/Async_Events/System.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="Audio_Playback.htm">Audio Playback</a></div>
+        <div style="float:left">목록: <a href="../Async_Events.htm">비동기 이벤트</a></div>
+        <div style="float:right">다음: <a href="Audio_Playback.htm">오디오 재생</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Asynchronous System
@@ -167,4 +157,4 @@ ev_system_event
 ev_system_event
 -->
 
-</body></html>
+</body></html> 

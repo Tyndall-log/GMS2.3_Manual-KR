@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Brush Builder">
-        <span>Brush Builder</span>
+        <span>브러시 빌더</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,91 +80,66 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Tile Set Brush Builder</h1>
-  <p>By default when you &quot;paint&quot; tiles onto a <a class="tooltip" title="The tile map is the name given to a collection of tiles taken from a tile set and used to create levels in a game.">tile map</a> layer in the room editor, you select a single tile and paint with that. However, tile sets are almost always designed to have sections
-    that fit together in different ways to form whole areas or items. For example, an RPG tile set may have landscape feature tiles that can be connected to create larger or smaller features - like trees and buildings - depending on the number of tiles
-    used. Now, placing multiple features like this on a room layer would require you to go back and forth many times to change tile, which is not good for your workflow. To resolve this, GameMaker Studio 2 enables you to create tile <strong>Brushes </strong>in
-    the Tile Set editor, available when you click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on the <strong>Brush Builder</strong> button:</p>
-  <p><img alt="Brushes" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Brushes.png"/>In the <strong>Brush Builder</strong> you have the original tile set on the left and a blank &quot;canvas&quot; on the right. You can now select
-    any tile from the left and paint it on the right to create custom &quot;brushes&quot; which you can then use in the room editor. Note that you can click and hold the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> then drag on the tile set to select multiple tiles to paint into the brush canvas and you can also hold down <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to add specific individual tiles or hold down <img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55"/> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to remove specific tiles.</p>
-  <p>The following image shows our previously mentioned landscape features as an example of three custom brushes made from a single tile set:</p>
-  <p><img alt="Features As Brushes Example" class="center" height="534" src="../../assets/Images/Asset_Editors/Editor_Tilesets_FeaturesBrushes.png" width="940"/>On the right you can see three features that we&#39;ve made (highlighted with an orange box
-    in the image). Notice how we&#39;ve left a gap of one tile between each feature - this is because <em>any touching group of tiles will be treated as a single brush</em> in the room editor, so we leave a gap of one tile to show that each set is a distinct
-    brush we want to create. While creating your brushes, you paint with the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> and delete with the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/>. You can also zoom the tile sheet or the brush canvas using <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> and the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_MMB.png" width="21"/> when the mouse
-    is over one of the windows, or you can pan around using <img alt="Space Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Space.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> or
-    the middle mouse button <img alt="MMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_MMB.png" width="21"/> and dragging. Note that you can also use the zoom tools in the <strong>Toolbox</strong> within the editor windows to change
-    the zoom levels of either window as well as toggle the grid visibility and colour.</p>
-  <p>At the top right you can see the currently selected tool, and you can also set the size of the brush that you want to paint with. The default size is 1, which is a single tile, but if you set it to higher values then you can paint (and erase) with a
-    larger brush composed of the selected tile repeated, as shown in the image below:</p>
-  <p><img alt="Tile Size Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Tile_Size.gif"/>The toolbox is where you can select the tool to use for many different tasks in the Tile Set editor, some of which will depend on whether
-    you have anything defined in your <a href="Auto_Tiles.htm">auto tile</a> library. A brief outline of each tool is given below (note that when you have selected a tile layer in the Room Editor, then this toolbox is displayed at the top of the room
-    workspace, along with additional drawing tools):</p>
+  <h1>타일 ​​세트 브러시 빌더</h1>
+  <p>룸 편집기에서 <a class="tooltip" title="타일 ​​맵은 타일 세트에서 가져와 게임에서 레벨을 만드는 데 사용되는 타일 모음에 부여 된 이름입니다.">타일을 타일 맵</a> 레이어에 &quot;페인트&quot;할 때 기본적으로 단일 타일을 선택하고 해당 타일로 페인트합니다. 그러나 타일 세트는 거의 항상 전체 영역 또는 항목을 형성하기 위해 서로 다른 방식으로 함께 섹션을 갖도록 설계되었습니다. 예를 들어, RPG 타일 세트에는 사용 된 타일 수에 따라 나무 및 건물과 같이 더 크거나 작은 피처를 만들기 위해 연결할 수있는 가로 피처 타일이있을 수 있습니다. 이제 룸 레이어에 이와 같은 여러 기능을 배치하려면 타일을 변경하기 위해 여러 번 앞뒤로 이동해야하므로 워크 플로에 적합하지 않습니다. 이 문제를 해결하기 위해 GameMaker Studio 2를 사용하면 타일 세트 편집기에서 타일 <strong>브러시</strong> 를 만들 수 있습니다. <strong>브러시 빌더</strong> 버튼에서 :</p>
+  <p><img alt="Brushes" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Brushes.png"/><strong>브러시 빌더</strong> 에서 왼쪽에 원래 타일 세트가 있고 오른쪽에 빈 &quot;캔버스&quot;가 있습니다. 이제 왼쪽에서 타일을 선택하고 오른쪽에서 페인트하여 룸 편집기에서 사용할 수있는 사용자 정의 &quot;브러시&quot;를 만들 수 있습니다. 마우스 왼쪽 버튼을 클릭 한 상태로 유지할 수 있습니다. 그런 다음 타일 세트를 드래그하여 브러시 캔버스에 페인트 할 여러 타일을 선택합니다. / + 특정 개별 타일을 추가하거나 길게 누르기 + 특정 타일을 제거합니다.</p>
+  <p>다음 이미지는 단일 타일 세트로 만든 세 가지 사용자 지정 브러시의 예인 앞에서 언급 한 가로 방향 기능을 보여줍니다.</p>
+  <p><img alt="Features As Brushes Example" class="center" height="534" src="../../assets/Images/Asset_Editors/Editor_Tilesets_FeaturesBrushes.png" width="940"/>오른쪽에는 이미지에서 주황색 상자로 강조 표시된 3 가지 기능이 있습니다. 각 지형지 물 사이에 하나의 타일 간격을 두는 방법에 주목하십시오. 이는 <em>터치하는 타일 그룹이</em> 룸 편집기에서 <em>단일 브러시로 취급</em> 되므로 각 타일이 우리가 만들고 싶은 독특한 브러쉬. 브러쉬를 만드는 동안 마우스 왼쪽 버튼으로 페인트 마우스 오른쪽 버튼으로 삭제 . 타일 ​​시트 또는 브러시 캔버스를 사용하여 확대 / 축소 할 수도 있습니다. / 그리고 마우스 휠 마우스가 창 중 하나 위에 있거나 + 또는 가운데 마우스 버튼 그리고 끌기. 편집기 창의 <strong>도구 상자</strong> 에서 확대 / 축소 도구를 사용하여 격자 가시성 및 색상을 토글 할뿐만 아니라 창의 확대 / 축소 레벨을 변경할 수도 있습니다.</p>
+  <p>오른쪽 상단에서 현재 선택한 도구를 볼 수 있으며 페인트하려는 브러시의 크기를 설정할 수도 있습니다. 기본 크기는 1이며 단일 타일이지만 더 높은 값으로 설정하면 아래 이미지와 같이 선택한 타일로 구성된 더 큰 브러시를 반복하여 페인트하고 지우는 것이 가능합니다.</p>
+  <p><img alt="Tile Size Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Tile_Size.gif"/>툴박스는 타일 세트 편집기에서 다양한 작업에 사용할 툴을 선택할 수있는 곳으로, <a href="Auto_Tiles.htm">자동 타일</a> 라이브러리에 정의 된 항목이 있는지 여부에 따라 다릅니다. 각 도구에 대한 간략한 개요가 아래에 제공됩니다 (룸 편집기에서 타일 레이어를 선택한 경우이 도구 상자가 추가 작업 도구와 함께 룸 작업 공간 상단에 표시됨).</p>
   <table class="icons" style="margin-left: 32auto">
     <tbody>
       <tr>
-        <td class="icons"><img alt="Pencil Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Draw.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Pencil</strong></td>
-        <td class="text">This is the pencil tool. It uses the selected tile to paint in the Brushes window with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> and you can erase with the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/>.</td>
+        <td class="icons"><img alt="연필 도구 아이콘" src="../../assets/Images/Icons/Icon_Tile_Draw.png" style="margin-left: 24px;"/></td>
+        <td class="icons"><strong>연필</strong></td>
+        <td class="text">이것은 연필 도구입니다. 선택한 타일을 사용하여 마우스 왼쪽 버튼으로 브러쉬 창에서 페인트 마우스 오른쪽 버튼으로 지울 수 있습니다 .</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Eraser Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Erase.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Eraser</strong></td>
-        <td class="text">With the eraser tool you can use the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to erase a given tile in the Brushes window. Essentially, all this does is set the tile index to 0, which is
-          the reserved &quot;empty&quot; tile.</td>
+        <td class="icons"><img alt="지우개 도구 아이콘" src="../../assets/Images/Icons/Icon_Tile_Erase.png" style="margin-left: 24px;"/></td>
+        <td class="icons"><strong>지우개</strong></td>
+        <td class="text">지우개 도구를 사용하면 마우스 왼쪽 버튼을 사용할 수 있습니다 브러쉬 창에서 지정된 타일을 지우려면 기본적으로이 모든 작업은 타일 인덱스를 0으로 설정하는데, 이는 예약 된 &quot;빈&quot;타일입니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Selection Tool Icon" height="24" src="../../assets/Images/Icons/Icon_TileSelect.png" style="margin-left: 24px;" width="24"/></td>
-        <td class="icons"><strong>Selection</strong></td>
-        <td class="text">This is the selection tool, which can be used to define an area of the Brushes window for working on. You can click the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> and then drag the mouse
-          to create a rectangular area, or you can press <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to add multiple selections and <img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to clear a part of the selection. To clear the whole selection you can press <img alt="Escape Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Escape.png" width="55"/>. When you have an area of a Brushes window selected, the rest of the tools (Pencil, Flip, Rotate, etc...) will only work within the selected area. Note that you can also select tiles in the window then copy ( <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/>+ &quot;<span class="inline">C</span>&quot;), cut ( <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">X</span>&quot;) and paste
-          ( <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;
-          <font face="Lucida Console"><span style="font-size: 16px;"><b>V</b></span></font>&quot;) them, which will then switch the tool to the Pencil and permit you to &quot;paint&quot; with them.</td>
+        <td class="icons"><img alt="선택 도구 아이콘" height="24" src="../../assets/Images/Icons/Icon_TileSelect.png" style="margin-left: 24px;" width="24"/></td>
+        <td class="icons"><strong>선택</strong></td>
+        <td class="text">이것은 선택 도구로서, 작업 할 브러쉬 창의 영역을 정의하는 데 사용할 수 있습니다. 마우스 왼쪽 버튼을 클릭 할 수 있습니다 마우스를 끌어 직사각형 영역을 만들거나 / + 여러 선택을 추가하고 + 선택의 일부를 지우십시오. 전체 선택을 지우려면 . 브러쉬 창의 영역을 선택한 경우 나머지 도구 (연필, 뒤집기, 회전 등)는 선택한 영역 내에서만 작동합니다. 창에서 타일을 선택한 다음 복사 ( / + &quot; <span class="inline">C</span> &quot;) 컷 ( / + &quot; <span class="inline">X</span> &quot;) 및 붙여 넣기 ( / + &quot; <font face="Lucida Console"><span style="font-size: 16px;"><b>V</b></span></font> &quot;)를 사용하면 도구가 연필로 바뀌고 &quot;페인트&quot;할 수 있습니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Autotile Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Auto.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>AutoTile</strong></td>
-        <td class="text">Clicking this tool enables the <strong>Auto tiling</strong> paint style. When this is active you can select any tile from the Autotile Libraries tab, and then paint it into the Brushes window and GameMaker Studio 2 will automatically change it
-          to match the surrounding tiles, as long as you have correctly set up the <a href="Auto_Tiles.htm">Auto Tile Tab</a>. Note that selecting a tile from the tile set that is not part of the autotile libraries will reset the drawing tool to the standard
-          Pencil tool.</td>
+        <td class="icons"><img alt="자동 도구 아이콘" src="../../assets/Images/Icons/Icon_Tile_Auto.png" style="margin-left: 24px;"/></td>
+        <td class="icons"><strong>자동 타일</strong></td>
+        <td class="text">이 도구를 클릭하면 <strong>자동 타일링</strong> 페인트 스타일이 활성화됩니다. 이 기능이 활성화되면 Autotile Libraries 탭에서 타일을 선택한 다음 Brushes 창에 페인트하면 GameMaker Studio 2는 <a href="Auto_Tiles.htm">자동 타일 탭을</a> 올바르게 설정 한 경우 주변 타일과 일치하도록 자동으로 타일을 변경합니다. 자동 라이브러리의 일부가 아닌 타일 세트에서 타일을 선택하면 그리기 도구가 표준 연필 도구로 재설정됩니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Flip Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Flip.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Flip</strong></td>
-        <td class="text">Clicking the Flip tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot;<span class="inline">X</span>&quot; ) will flip the tile or tiles currently
-          selected for drawing along the <em>horizontal </em>axis, without changing drawing tool (if you have a custom brush selected for drawing, the whole brush will flip). If you have no tile selected for drawing, but do have a group of tiles selected
-          in the brush window, then the flip tool will Flip the selected tiles.</td>
+        <td class="icons"><img alt="뒤집기 도구 아이콘" src="../../assets/Images/Icons/Icon_Tile_Flip.png" style="margin-left: 24px;"/></td>
+        <td class="icons"><strong>튀기다</strong></td>
+        <td class="text">마우스 왼쪽 버튼으로 뒤집기 도구 클릭 (또는 키보드 단축키 &quot; <span class="inline">X</span> &quot;)를 사용하면 그리기 도구를 변경하지 않고 <em>수평</em> 축을 따라 현재 그리기 위해 선택된 타일을 뒤집습니다 (그리기 위해 사용자 정의 브러시가 선택된 경우 전체 브러시가 뒤집 힙니다). 그릴 타일을 선택하지 않았지만 브러시 창에서 타일 그룹을 선택한 경우 뒤집기 도구는 선택한 타일을 뒤집습니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Mirror Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Mirror.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Mirror</strong></td>
-        <td class="text">Clicking the Mirror tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot; <span class="inline">Y</span>&quot; ) will mirror the tile(s) currently
-          selected for drawing along the <em>vertical </em>axis, without changing drawing tool (if you have a custom brush selected for drawing, the whole brush will mirror). If you have no tile selected for drawing, but do have a group of tiles selected
-          in the brush window, then the Mirror tool will mirror the selected tiles.</td>
+        <td class="icons"><img alt="거울 도구 아이콘" src="../../assets/Images/Icons/Icon_Tile_Mirror.png" style="margin-left: 24px;"/></td>
+        <td class="icons"><strong>거울</strong></td>
+        <td class="text">마우스 왼쪽 버튼으로 미러 도구 클릭 (또는 키보드 단축키 &quot; <span class="inline">Y</span> &quot;)를 사용하면 그리기 도구를 변경하지 않고 현재 <em>세로</em> 축을 따라 그리기 위해 선택된 타일을 미러링합니다 (그리기 위해 사용자 정의 브러시가 선택된 경우 전체 브러시가 미러링됩니다). 그릴 타일을 선택하지 않았지만 브러시 창에서 타일 그룹을 선택한 경우 미러 도구는 선택한 타일을 미러링합니다.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Rotate Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Rotate.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Rotate</strong></td>
-        <td class="text">Clicking the Rotate tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot; <span class="inline">Z</span>&quot; ) will rotate the tile(s) currently
-          selected for drawing 90° <em>clockwise</em>, without changing drawing tool (if you have a custom brush selected for drawing, the whole brush will rotate). If you have no tile selected for drawing, but do have a group of tiles selected in the
-          brush window, then the Rotate tool will rotate the selected tiles.</td>
+        <td class="icons"><img alt="도구 아이콘 회전" src="../../assets/Images/Icons/Icon_Tile_Rotate.png" style="margin-left: 24px;"/></td>
+        <td class="icons"><strong>회전</strong></td>
+        <td class="text">마우스 왼쪽 버튼으로 회전 도구 클릭 키보드 단축키 &quot; <span class="inline">Z</span> &quot;를 사용하면 그리기 도구를 변경하지 않고 현재 그리기 위해 선택한 타일을 <em>시계 방향으로</em> 90도 회전합니다 (그리기 위해 사용자 정의 브러시가 선택된 경우 전체 브러시가 회전합니다). 그릴 타일을 선택하지 않았지만 브러시 창에서 타일 그룹을 선택한 경우 회전 도구는 선택한 타일을 회전시킵니다.</td>
       </tr>
     </tbody>
   </table>
-  <p>Below the tools, you can find two different sections for selecting any <a href="Auto_Tiles.htm"><strong>auto tile</strong></a> or <a href="Animated_Tiles.htm"><strong>animated</strong> tiles</a> that have been created using the current tile set image.
-    A single sprite that is used for a tile set can have many, many, single cell images in it, and these can be combined in the Animation or Autotile editor to create custom brushes which will show up in these sections and can be used in conjunction with
-    regular static tiles to create brushes (note that an animated tile will animate regardless of whether you have selected it from the library or from the base tile set).</p>
-  <p>Once you have set up all the brushes you require, you can then use them to paint tiles onto any tile map layer within the <a href="../Rooms.htm">Room Editor</a>.</p>
+  <p>도구 아래에는 현재 타일 세트 이미지를 사용하여 만든 <a href="Auto_Tiles.htm"><strong>자동 타일</strong></a> 또는 <a href="Animated_Tiles.htm"><strong>애니메이션</strong> 타일</a> 을 선택하기위한 두 가지 섹션이 있습니다. 타일 ​​세트에 사용되는 단일 스프라이트에는 여러 개의 단일 셀 이미지가있을 수 있으며, 애니메이션 또는 자동 타일 편집기에서 결합하여 이러한 섹션에 표시되고 함께 사용할 수있는 사용자 정의 브러시를 만들 수 있습니다. 일반 정적 타일을 사용하여 브러시를 만듭니다 (라이브러리 또는 기본 타일 세트에서 선택했는지 여부에 관계없이 애니메이션 타일이 애니메이션됩니다).</p>
+  <p>필요한 모든 브러쉬를 설정 한 다음이를 사용하여 <a href="../Rooms.htm">룸 편집기</a> 내의 타일 맵 레이어에 타일을 페인트 할 수 있습니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Tile_Set_Editors/Brush_Builder.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Tile_Sets.htm">Tile Sets</a></div>
-        <div style="float:right">Next: <a href="Animated_Tiles.htm">Animated Tiles</a></div>
+        <div style="float:left">목록: <a href="../Tile_Sets.htm">타일 ​​세트</a></div>
+        <div style="float:right">다음: <a href="Animated_Tiles.htm">애니메이션 타일</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Tile Brushes
@@ -174,4 +149,4 @@ Brush Builder
 tile_set_editor_brushes
 -->
 
-</body></html>
+</body></html> 

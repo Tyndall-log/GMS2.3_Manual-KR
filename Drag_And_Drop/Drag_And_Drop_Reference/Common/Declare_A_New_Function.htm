@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Declare A New Function">
-        <span>Declare A New Function</span>
+        <span>새로운 기능 선언</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,61 +80,50 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Declare A New Function Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Declare_Function.png"/> Declare A New Function</h1>
-  <p>This action can be used to create a new user-defined function, which can then be called at any time later in your code. A user-defined function is one that you define to do a task that isn&#39;t covered by the available DnD™ actions or GML runner functions,
-    and can be global, instance or local in scope (see <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">here</a> for more information on scope) and they can also be used as <b>constructors</b> to create <a href="../../../GameMaker_Language/GML_Overview/Structs.htm">structs</a>.
-    To find out more about using this action to create global functions, please see the section on <a href="../../Drag_And_Drop_Overview/Action_Block_Functions.htm">Creating Action Functions</a>. You may also flag the function as being <b>static</b>,
-    which means that it will only be defined once the first time it is used.</p>
-  <p>To use this action, you can add it to an instance event and then give the function you want to declare a name. You then provide the required argument names for each of the parameters that the function will take. If the function is to be used as a constructor
-    (ie: it&#39;s going to be creating a struct) then you need to check the <strong>Constructor </strong>flag and then to call the function you need to use the <a href="New.htm">New</a> action. If the function is only going to be used locally in the same
-    event and nowhere else then you can also select the <strong>Temp </strong>flag. Once you have defined the name and parameters you can add the actions that you want the function to run when it is called in your code by dropping them to the side of
-    the action, as shown in the image below:</p>
-  <p><img alt="Declare A New Function drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/drop_declare_function.png"/>You can see examples of use as both a regular function and a constructor function
-    below.</p>
+  <h1>새로운 기능 선언</h1>
+  <p>이 액션은 새로운 사용자 정의 함수를 만드는 데 사용될 수 있으며, 나중에 코드에서 언제든지 호출 할 수 있습니다. 사용자 정의 함수는 사용 가능한 DnD ™ 액션 또는 GML 러너 함수에서 다루지 않는 작업을 수행하도록 정의한 함수이며 전역, 인스턴스 또는 로컬 범위 일 수 있습니다 (범위에 대한 자세한 내용은 <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">여기</a> 참조). 또한 <a href="../../../GameMaker_Language/GML_Overview/Structs.htm">구조체</a> 를 생성하는 <b>생성자</b> 로도 사용할 수 있습니다. 이 조치를 사용하여 글로벌 함수를 작성하는 방법에 대한 자세한 정보는 <a href="../../Drag_And_Drop_Overview/Action_Block_Functions.htm">조치 함수 작성</a> 섹션을 참조하십시오. 함수를 <b>static</b> 으로 플래그를 지정할 수도 있습니다. 이는 처음 사용할 때 한 번만 정의됨을 의미합니다.</p>
+  <p>이 조치를 사용하려면이를 인스턴스 이벤트에 추가 한 후 이름을 선언하려는 함수를 제공하십시오. 그런 다음 함수가 사용할 각 매개 변수에 필요한 인수 이름을 제공하십시오. 함수가 생성자로 사용되는 경우 (즉, 구조체를 생성 할 예정인 경우) <strong>생성자</strong> 플래그를 확인한 다음 <a href="New.htm">New</a> 액션을 사용해야하는 함수를 호출해야합니다. 함수가 같은 이벤트에서 로컬에서만 사용될 예정이라면 <strong>Temp</strong> 플래그를 선택할 수도 있습니다. 이름과 매개 변수를 정의한 후에는 아래 이미지와 같이 코드를 호출 할 때 함수 옆에 놓아 함수를 실행할 동작을 추가 할 수 있습니다.</p>
+  <p><img alt="Declare A New Function drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/drop_declare_function.png"/>아래에서 일반 함수와 생성자 함수로 사용하는 예를 볼 수 있습니다.</p>
   <p> </p>
-  <h4>Action Syntax:</h4>
+  <h4>동작 구문 :</h4>
   <p><img alt="Declare A New Function Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Declare_Function.png"/></p>
-  <h4>Arguments:</h4>
+  <h4>인수 :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>Function</td>
-        <td>The name of the new function.</td>
+        <td>함수</td>
+        <td>새로운 기능의 이름.</td>
       </tr>
       <tr>
-        <td>Argument<em>0</em> ... Argument<em>X</em></td>
-        <td>The different arguments names for each of the parameters that are to be passed to the function.</td>
+        <td>인수 <em>0</em> ... 인수 <em>X</em></td>
+        <td>함수에 전달 될 각 매개 변수의 다른 인수 이름</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Extended Example 1:</h4>
-  <p><img alt="Declare A New Function Example 1" class="center" height="491" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_1.png" width="492"/>The above action block code would go in the <b>Create Event</b>    of an instance, and declares a new function <tt>set_vec</tt> with three arguments: <tt>_x</tt>, <tt>_y</tt> and <tt>spd</tt>. These arguments are then used in the actions that the function will call to set the direction and speed of the instance,
-    when the function is called. You would call the function using the <a href="Function_Call.htm">Function Call</a> action in any subsequent event, like this:</p>
-  <p><img alt="Declare A New Function Exmaple 2" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_2.png"/>The function is called and it sets the instance direction to point towards the
-    mouse X/Y position, and sets the speed of the instance to 5.</p>
+  <h4>확장 된 예 1 :</h4>
+  <p><img alt="Declare A New Function Example 1" class="center" height="491" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_1.png" width="492"/>위의 액션 블록 코드는 인스턴스의 <b>이벤트 생성에</b> <tt>들어가며</tt> <tt>_x</tt> , <tt>_y</tt> 및 <tt>spd의</tt> 세 가지 인수로 <tt>set_vec</tt> 새 함수를 선언합니다. 이러한 인수는 함수가 호출 될 때 함수가 인스턴스의 방향과 속도를 설정하기 위해 호출하는 작업에 사용됩니다. 다음과 같은 후속 이벤트에서 <a href="Function_Call.htm">함수 호출</a> 조치를 사용하여 <a href="Function_Call.htm">함수를 호출</a> 합니다.</p>
+  <p><img alt="Declare A New Function Exmaple 2" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_2.png"/>이 함수는 호출되고 인스턴스 방향을 마우스 X / Y 위치를 가리 키도록 설정하고 인스턴스 속도를 5로 설정합니다.</p>
   <p> </p>
-  <h4>Extended Example 2:</h4>
-  <p><img alt="Declare A New Function Exmaple 3" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_3.png"/>The above action block code would probably go in the <b>Create Event</b> of
-    an instance, and declares a new constructor function <tt>init_char_struct</tt> with four arguments: <tt>_str1</tt>, <tt>_str2</tt>, <tt>_val1</tt> and <tt>_val2</tt>. These arguments are then used to populate the given variables within the struct
-    that the function is creating. You would then call the function using the <a href="New.htm">New</a> action in any subsequent event, like this:</p>
-  <p><img alt="Declare A New Function Exmaple 4" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_4.png"/>The function is called and it will return a new struct to the array &quot;char&quot;,
-    and the struct will be populated with the variables &quot;name&quot;, &quot;location&quot;, &quot;hp&quot; and &quot;mana&quot;, set to the values used for the corresponding arguments in the function.</p>
+  <h4>확장 된 예 2 :</h4>
+  <p><img alt="Declare A New Function Exmaple 3" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_3.png"/>위의 액션 블록 코드는 아마도 인스턴스의 <b>이벤트 생성에</b> <tt>들어가고 _str1</tt> , <tt>_str2</tt> , <tt>_val1</tt> 및 <tt>_val2</tt> 와 같은 네 개의 인수를 사용하여 새로운 생성자 함수 <tt>init_char_struct</tt> 를 선언합니다. 그런 다음이 인수는 함수가 작성하는 구조체 내에서 주어진 변수를 채우는 데 사용됩니다. 그런 다음 다음과 같은 후속 이벤트에서 <a href="New.htm">New</a> 액션을 사용하여 함수를 호출합니다.</p>
+  <p><img alt="Declare A New Function Exmaple 4" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_4.png"/>함수가 호출되고 배열 &quot;char&quot;에 새 구조체를 반환하고 구조체에 변수 &quot;name&quot;, &quot;location&quot;, &quot;hp&quot;및 &quot;mana&quot;가 채워지고 함수의 해당 인수.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
-        <div style="float:right">Next: <a href="Assign_Variable.htm">Assign Variable</a></div>
+        <div style="float:left">목록: <a href="Common_Actions_Library.htm">일반적인 행동</a></div>
+        <div style="float:right">다음: <a href="Assign_Variable.htm">변수 할당</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Action - Declare A New Function
@@ -143,4 +132,4 @@ Action - Declare A New Function
 action_declare_function
 -->
 
-</body></html>
+</body></html> 

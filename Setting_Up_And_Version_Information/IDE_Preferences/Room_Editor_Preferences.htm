@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Room Editor Preferences">
-        <span>Room Editor Preferences</span>
+        <span>회의실 편집기 환경 설정</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,130 +80,79 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Room Editor Preferences</h1>
+  <h1>회의실 편집기 환경 설정</h1>
   <p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_Prefs.png"/></p>
-  <p>The <strong>Room Editor Preferences</strong> are used to define how the <a href="../../The_Asset_Editors/Rooms.htm">Room Editor</a> will look and behave. The general settings are as follows:</p>
+  <p><strong>회의실 편집기 환경 설정</strong> 은 <a href="../../The_Asset_Editors/Rooms.htm">회의실 편집기의</a> 모양과 동작을 정의하는 데 사용됩니다. 일반적인 설정은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><strong>Chain fade out start distance (px)</strong>: Sets the distance from the parent window for the chain link to fade out from. Default is 10px.</li>
-    <li><strong>Chain fade out stop distance (px)</strong>: Sets the distance from the parent window for the chain link to end fading out to. Default is 100px.</li>
-    <li><strong>Chain Minimum Alpha</strong>: Sets the final alpha value after the fade out falloff point for the chain alpha. Default is 0.3.</li>
-    <li><strong>Default layer depth spacing</strong>: When you create multiple layers in the room editor they are automatically assigned a depth based on their position within the layer list. This depth is incremented by the amount given here. The default
-      value is 100, so each layer will be previous layer + 100 in depth.</li>
-    <li><strong>Default room width</strong>: Sets the initial width that will be selected as the default for a new room. Default is 1024px.</li>
-    <li><strong>Default room height</strong>: Sets the initial height that will be selected as the default for a new room. Default is 768px.</li>
-    <li><strong>Add default room layers</strong>: When you create any new room resource, GameMaker Studio 2 will generate a couple of &quot;base&quot; layers for you - a background layer and an instance layer. You can switch that behaviour off here so that
-      new rooms will have no pre-made layers. This is on by default.</li>
-    <li><strong>Show room views</strong>: If you have views active within a room, this is shown by an outline where the view boundaries would be within the room, and the visibility of this area can be toggled using the dedicated button in the editor itself.
-      However you can choose to have view boundaries invisible when you open a room by un-checking this option (the button can still be used to show them again). The default value is on, making view boundaries visible when you open a room.</li>
-    <li><strong>General colour options</strong>: These are related to the different colours that are used throughout the room editor interface, and if you double click on any of the swatches you can edit the colour for that setting.</li>
-    <li><strong>Master-volume setting</strong>: The master volume setting for preview playback in the Room Editor, a value between 0 and 1. Default is 1.</li>
+    <li><strong>체인 페이드 아웃 시작 거리 (px)</strong> : 체인 링크가 페이드 아웃되는 부모 윈도우로부터의 거리를 설정합니다. 기본값은 10px입니다.</li>
+    <li><strong>체인 페이드 아웃 중지 거리 (px)</strong> : 체인 링크의 페이드 아웃 종료까지 부모 창에서 거리를 설정합니다. 기본값은 100px입니다.</li>
+    <li><strong>Chain Minimum Alpha</strong> : <strong>체인 알파</strong> 의 페이드 아웃 폴 오프 지점 이후의 최종 알파 값을 설정합니다. 기본값은 0.3입니다.</li>
+    <li><strong>기본 도면층 깊이 간격</strong> : 룸 편집기에서 여러 도면층을 작성하면 도면층리스트 내 위치에 따라 깊이가 자동으로 지정됩니다. 이 깊이는 여기에 주어진 양만큼 증가합니다. 기본값은 100이므로 각 레이어는 이전 레이어 + 깊이 100입니다.</li>
+    <li><strong>기본 회의실 너비</strong> : 새 회의실의 기본값으로 선택 될 초기 너비를 설정합니다. 기본값은 1024px입니다.</li>
+    <li><strong>기본 방 높이</strong> : 새 방의 기본값으로 선택 될 초기 높이를 설정합니다. 기본값은 768px입니다.</li>
+    <li><strong>기본 룸 레이어 추가</strong> : 새로운 룸 리소스를 만들면 GameMaker Studio 2는 배경 레이어와 인스턴스 레이어라는 몇 가지 &quot;기본&quot;레이어를 생성합니다. 새 방에 미리 만들어진 레이어가 없도록 해당 동작을 해제 할 수 있습니다. 이것은 기본적으로 켜져 있습니다.</li>
+    <li><strong>룸 뷰 표시</strong> : <strong>룸</strong> 내에서 뷰가 활성화 된 경우 뷰 경계가 룸 내에서 윤곽이 표시되며 편집기 자체의 전용 버튼을 사용하여이 영역의 가시성을 전환 할 수 있습니다. 그러나이 옵션을 선택 취소하여 룸을 열 때 뷰 경계가 보이지 않도록 선택할 수 있습니다 (단추를 사용하여 다시 표시 할 수 있음). 기본값은 켜져 있으며, 방을 열 때 뷰 경계가 표시됩니다.</li>
+    <li><strong>일반 색상 옵션</strong> : 이들은 룸 편집기 인터페이스 전체에서 사용되는 다양한 색상과 관련이 있으며 견본을 두 번 클릭하면 해당 설정의 색상을 편집 할 수 있습니다.</li>
+    <li><strong>마스터 볼륨 설정</strong> : Room Editor에서 미리보기 재생을위한 마스터 볼륨 설정으로, 0과 1 사이의 값입니다. 기본값은 1입니다.</li>
   </ul>
-  <p>Further options are available for editing from the sub-categories listed below:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Confirm Dialogs</span><span data-close-text="true">Confirm Dialogs</span></a></p>
+  <p>아래 나열된 하위 범주에서 추가 옵션을 편집 할 수 있습니다.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">대화 상자</span> <span data-close-text="true">확인 대화</span> <span data-open-text="true">상자</span> <span data-close-text="true">확인</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p>
-      <img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_Confirm_Prefs.png"/></p>
-    <p class="dropspot">
-      <strong></strong>The
-      <strong>Confirm Dialogs </strong>preferences are used to change the messages that are shown in the room editor when you perform certain actions. The messages you can change are:</p>
+    <p><img class="center" src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_Confirm_Prefs.png"/></p>
+    <p class="dropspot"><strong>대화 상자 확인</strong> 환경 설정은 특정 작업을 수행 할 때 회의실 편집기에 표시되는 메시지를 변경하는 데 사용됩니다. 변경할 수있는 메시지는 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li>
-        <strong>Automatic response to updating layer depths</strong>: hen you change layer depths a message is shown to warn you that doing this will also automatically update all the other layer depths. With this option you can choose to have the message
-        show, have it update the layers as if you&#39;d clicked &quot;Ok&quot;, or have it not update anything as if you&#39;d clicked &quot;No&quot;.</li>
-      <li>
-        <strong>Automatic response to layer locked warning</strong>: If you try to delete a layer in the room and it happens to be locked, you will be shown a message by default. However setting this option to &quot;Ok&quot; will not show the message
-        and just not let you delete the layer.</li>
-      <li>
-        <strong>Automatic response to item locked warning</strong>:
-        <strong> </strong>If you try to delete an item it happens to be locked, you will be shown a message by default. However setting this option to &quot;Ok&quot; will not show the message and just not let you delete the item.</li>
-      <li>
-        <strong>Automatic response to item owner layer locked warning</strong>: If you try to delete an item on a layer and the layer happens to be locked (even if the item is not), then you will be shown a message by default to inform you that it can&#39;t
-        be done. However setting this option to &quot;Ok&quot; will not show the message and just not let you delete the item.</li>
-      <li>
-        <strong>Create new asset layer when dragging sequences/sprites onto unsuitable layers</strong>: If you try to add a sprite (or a sequence) to a layer that is not an asset layer, then you will be shown a message by default to inform you that it
-        can&#39;t be done and ask if you want to create a new asset layer for the item being dragged. However setting this option to &quot;Ok&quot; will not show the message and automatically create a new layer for sprites (and sequences).</li>
-      <li>
-        <strong>Automatic response to parent room item deletion</strong>: Here you can choose what happens when you delete an item that is part of a parent room (and so present in all child rooms). The default is to show you a warning message and let
-        you decide what to do, but you can set it to &quot;Delete All&quot; to suppress the message and go ahead with the item delete from the parent room and all its children, or you can select &quot;Keep All&quot; to suppress the message abort the delete.</li>
-      <li>
-        <strong>Automatic response to parent room layer deletion</strong>: Here you can choose what happens when you delete a layer that is part of a parent room (and so present in all child rooms). The default is to show you a warning message and let
-        you decide what to do, but you can set it to &quot;Delete All&quot; to suppress the message and go ahead with the layer delete from the parent room and all its children, or you can select &quot;Keep All&quot; to suppress the message abort the
-        delete.
-      </li>
-      <li>
-        <strong>Automatic response to invalid asset drag error</strong>: If you try to add an asset to a layer that is not designated as being for that asset type (like adding a path to an instance layer), then you will be shown a message by default to
-        inform you that it can&#39;t be done. However setting this option to &quot;Ok&quot; will not show the message and just not let you add the asset. Note that this option does not apply to instances, sprites or sequences.</li>
-      <li>
-        <strong>Create new instance layer when dragging objects onto unsuitable layers</strong>: If you try to add an object instance to a layer that is not an instance layer, then you will be shown a message by default to inform you that it can&#39;t
-        be done and ask if you want to create a new instance layer for the item being dragged. However setting this option to &quot;Ok&quot; will not show the message and automatically create a new layer for the instance.</li>
-      <li>
-        <strong>Automatic response to invalid layer selection drag error</strong>: Here you can choose what happens when you drag a resource onto the room editor when you have selected multiple layers in the layer editor (or have not selected any layer
-        at all). The default is to show a warning message but you can set this option to &quot;OK&quot; to suppress the message and continue, without adding any resources.</li>
-      <li>
-        <strong>Automatic response to locked or invisible layer drag error</strong>: Here you can choose what happens when you drag a resource onto a layer that has been locked or is flagged as invisible. The default is to show a warning message but you
-        can set this option to &quot;OK&quot; to suppress the message and continue, without adding any resources.</li>
+      <li><strong>레이어 심도 업데이트에 대한 자동 응답</strong> : <strong>레이어 심도</strong> 를 변경하면이 작업을 수행하면 다른 모든 레이어 심도도 자동으로 업데이트된다는 경고 메시지가 표시됩니다. 이 옵션을 사용하면 메시지가 표시되도록하거나 &quot;확인&quot;을 클릭 한 것처럼 레이어를 업데이트하거나 &quot;아니요&quot;를 클릭 한 것처럼 아무것도 업데이트하지 않도록 선택할 수 있습니다.</li>
+      <li><strong>레이어 잠김 경고에 대한 자동 응답</strong> : 회의실에서 레이어를 삭제하려고 시도하고 잠긴 경우 기본적으로 메시지가 표시됩니다. 그러나이 옵션을 &quot;확인&quot;으로 설정하면 메시지가 표시되지 않고 레이어를 삭제할 수 없습니다.</li>
+      <li><strong>항목 잠금 경고에 대한 자동 응답</strong> : 항목을 삭제하려고하면 잠겨있는 경우 기본적으로 메시지가 표시됩니다. 그러나이 옵션을 &quot;확인&quot;으로 설정하면 메시지가 표시되지 않고 항목을 삭제할 수 없습니다.</li>
+      <li><strong>항목 소유자 레이어 잠김 경고에 대한 자동 응답</strong> : <strong>레이어에서 항목</strong> 을 삭제하려고 시도하고 레이어가 잠긴 경우 (항목이 아닌 경우에도) 기본적으로 메시지가 표시되어 하지마 그러나이 옵션을 &quot;확인&quot;으로 설정하면 메시지가 표시되지 않고 항목을 삭제할 수 없습니다.</li>
+      <li><strong>시퀀스 / 스프라이트를 부적합한 레이어로 드래그 할 때 새 자산 레이어 생성</strong> : 자산 레이어가 아닌 레이어에 스프라이트 (또는 시퀀스)를 추가하려고하면 기본적으로 메시지가 표시되어 끌지 말고 드래그 할 항목에 대해 새 자산 레이어를 만들지 묻습니다. 그러나이 옵션을 &quot;확인&quot;으로 설정하면 메시지가 표시되지 않고 스프라이트 (및 시퀀스)에 대한 새 레이어가 자동으로 생성됩니다.</li>
+      <li><strong>부모 방 항목 삭제에 대한 자동 응답</strong> : 여기에서 부모 방의 일부인 항목을 삭제할 때 수행되는 작업을 선택할 수 있습니다 (모든 자식 방에 있음). 기본값은 경고 메시지를 표시하고 수행 할 작업을 결정하는 것입니다. 그러나 &quot;모두 삭제&quot;로 설정하여 메시지를 표시하지 않고 상위 방과 모든 하위 항목에서 항목 삭제를 진행할 수 있습니다. 메시지가 삭제를 중단하지 않도록하려면 &quot;모두 유지&quot;를 선택하십시오.</li>
+      <li><strong>부모 방 레이어 삭제에 대한 자동 응답</strong> : <strong>부모 방의</strong> 일부인 레이어를 삭제할 때 발생하는 모든 작업을 선택할 수 있습니다 (따라서 모든 자식 방에 있음). 기본값은 경고 메시지를 표시하고 수행 할 작업을 결정하는 것입니다. 그러나 &quot;모두 삭제&quot;로 설정하여 메시지를 억제하고 부모 방과 모든 자식에서 계층 삭제를 진행할 수 있습니다. 메시지가 삭제를 중단하지 않도록하려면 &quot;모두 유지&quot;를 선택하십시오.</li>
+      <li><strong>유효하지 않은 자산 드래그 오류에 대한 자동 응답</strong> : 인스턴스 유형에 대한 경로 추가와 같이 자산 유형에 대해 지정되지 않은 레이어에 자산을 추가하려고하면 기본적으로 메시지가 표시됩니다 당신은 그것을 할 수 없다는 것을. 그러나이 옵션을 &quot;확인&quot;으로 설정하면 메시지가 표시되지 않고 자산을 추가 할 수 없습니다. 이 옵션은 인스턴스, 스프라이트 또는 시퀀스에는 적용되지 않습니다.</li>
+      <li><strong>객체를 부적합한 레이어로 드래그 할 때 새 인스턴스 레이어 생성</strong> : 인스턴스 레이어가 아닌 레이어에 객체 인스턴스를 추가하려고하면 기본적으로 메시지를 표시하여 수행 할 수 없다는 메시지가 표시됩니다 드래그 할 항목에 대한 새 인스턴스 레이어를 만들려는 경우 그러나이 옵션을 &quot;확인&quot;으로 설정하면 메시지가 표시되지 않고 인스턴스에 대한 새 레이어가 자동으로 생성됩니다.</li>
+      <li><strong>유효하지 않은 도면층 선택 끌기 오류에 대한 자동 응답</strong> : 여기에서 도면층 편집기에서 여러 도면층을 선택했거나 도면층을 전혀 선택하지 않은 경우 자원을 회의실 편집기로 끌 때 발생하는 상황을 선택할 수 있습니다. 기본값은 경고 메시지를 표시하는 것이지만이 옵션을 &quot;확인&quot;으로 설정하면 메시지를 표시하지 않고 리소스를 추가하지 않고 계속할 수 있습니다.</li>
+      <li><strong>잠겨 있거나 보이지 않는 레이어 드래그 오류에 대한 자동 응답</strong> : 리소스가 잠겨 있거나 보이지 않는 것으로 표시된 레이어로 리소스를 드래그 할 때 발생하는 작업을 선택할 수 있습니다. 기본값은 경고 메시지를 표시하는 것이지만이 옵션을 &quot;확인&quot;으로 설정하면 메시지를 표시하지 않고 리소스를 추가하지 않고 계속할 수 있습니다.</li>
     </ul>
     <p> </p>
-    <p>
-      <strong></strong></p>
+    <p><strong></strong></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Grid Settings</span><span data-close-text="true">Grid Settings</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">그리드 설정</span> <span data-close-text="true">그리드 설정</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p>
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_Grid_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_Grid_Prefs.png" class="center" alt="Room Editor Grid Settings Preferences"/></p>
-    <p class="dropspot">The
-      <strong>Grid Settings</strong> preferences are used to change how the grid overlay works, with the following options available:</p>
+    <p><img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_Grid_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_Grid_Prefs.png" class="center" alt="회의실 편집기 그리드 설정 환경 설정"/></p>
+    <p class="dropspot"><strong>그리드 설정</strong> 환경 설정은 다음 옵션을 사용하여 그리드 오버레이 작동 방식을 변경하는 데 사용됩니다.</p>
     <ul class="colour">
-      <li>
-        <strong>Grid horizontal spacing (px)</strong>: This will set the horizontal space for gird cells of the room grid in pixels. Default value is 32px.</li>
-      <li>
-        <strong>Grid vertical spacing (px)</strong>: This will set the vertical space for gird cells of the room grid in pixels. Default value is 32px.</li>
-      <li>
-        <strong>Display grid</strong>: This option will toggle on or off the room grid when you first open a room. It is on by default, but even if it is switched off you can enable it again using the appropriate button in the room editor itself.</li>
-      <li>
-        <strong>Snap to grid</strong>: With this option you can set whether a room will have assets snap to the room grid by default or not when a room is initially opened. It is on by default, but even if it is switched off you can enable it again using
-        the appropriate button in the room editor itself.</li>
-      <li>
-        <strong>Grid line colour</strong>: This option permits you to set the colour (including the alpha component) of the room grid lines. The default value is (
-        <a class="tooltip" title="This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). ">ARGB</a>) #30FFFFFF.</li>
+      <li><strong>그리드 수평 간격 (px)</strong> : 룸 그리드의 거더 셀에 대한 수평 공간을 픽셀 단위로 설정합니다. 기본값은 32px입니다.</li>
+      <li><strong>그리드 수직 간격 (px)</strong> : 룸 그리드의 거더 셀에 대한 수직 공간을 픽셀 단위로 설정합니다. 기본값은 32px입니다.</li>
+      <li><strong>그리드 표시</strong> :이 옵션은 룸을 처음 열 때 룸 그리드를 켜거나 끕니다. 기본적으로 켜져 있지만 꺼져 있어도 룸 편집기 자체에서 해당 버튼을 사용하여 다시 활성화 할 수 있습니다.</li>
+      <li><strong>그리드에 스냅</strong> :이 옵션을 사용하면 룸을 처음 열 때 룸에 자산이 룸 그리드에 스냅되는지 여부를 설정할 수 있습니다. 기본적으로 켜져 있지만 꺼져 있어도 룸 편집기 자체에서 해당 버튼을 사용하여 다시 활성화 할 수 있습니다.</li>
+      <li><strong>격자 선 색상</strong> :이 옵션을 사용하면 룸 격자 선의 색상 (알파 구성 요소 포함)을 설정할 수 있습니다. 기본값은 ( <a class="tooltip" title="이것은 Alpha, Red, Green, Blue의 약어이며 16 진수 값으로 지정된 색상 구성 요소를 나타내는 데 사용됩니다 (예 : # FF53E270). 여기서 두 자리 숫자 각각은 단일 구성 요소를 나타냅니다. 위의 ARGB 예제를 분류하면 Alpha (FF), Red (53), Green (E2) 및 Blue (70)의 구성 요소 값이 제공됩니다.">ARGB</a> ) # 30FFFFFF입니다.</li>
     </ul>
-    <p>
-      <br/><br/></p>
+    <p></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Smart Guides</span><span data-close-text="true">Smart Guides</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">스마트 가이드</span> <span data-close-text="true">스마트 가이드</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p>
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_SmartGuides_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_SmartGuides_Prefs.png" class="center" alt="Room Editor Smart Guides Preferences"/></p>
-    <p class="dropspot">This section details the
-      <strong>Smart Guides Preferences</strong> for the Room Editor. The available options are:</p>
+    <p><img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_SmartGuides_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/Room_Editor_SmartGuides_Prefs.png" class="center" alt="회의실 편집기 스마트 안내선 환경 설정"/></p>
+    <p class="dropspot">이 섹션에서는 회의실 편집기의 <strong>스마트 안내서 기본 설정에</strong> 대해 자세히 설명합니다. 사용 가능한 옵션은 다음과 같습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot">
-        <strong>Enable Smart Guides</strong>: This is used to enable/disable the use of smart guides in the Room Editor. Default is enabled.
-        <br/><br/></li>
-      <li class="dropspot">
-        <strong>Enable Rulers</strong>: This option will enable/disable the side rulers in the Room Editor. Default is enabled.
-        <br/><br/></li>
-      <li class="dropspot">
-        <strong>Snap Rulers To Edges</strong>: When enabled, this option will snap guides dragged into the Room Editor from the rulers to any assets placed in the room. Default is enabled.
-        <br/><br/></li>
-      <li class="dropspot">
-        <strong>Snap Distance</strong>: This setting tells the Room Editor at what distance a guide has to be from an asset before it will &quot;snap&quot; to the side of the asset. Default value is 6px.
-        <br/><br/></li>
+      <li class="dropspot"><strong>스마트 가이드 활성화</strong> : 룸 편집기에서 스마트 가이드 사용을 활성화 / 비활성화하는 데 사용됩니다. 기본값은 활성화입니다.</li>
+      <li class="dropspot"><strong>눈금자 활성화</strong> :이 옵션은 룸 편집기에서 사이드 눈금자를 활성화 / 비활성화합니다. 기본값은 활성화입니다.</li>
+      <li class="dropspot"><strong>눈금자를 모서리에 스냅</strong> :이 옵션을 선택하면 눈금자에서 룸에 배치 된 자산으로 룸 편집기로 드래그 한 안내선이 스냅됩니다. 기본값은 활성화입니다.</li>
+      <li class="dropspot"><strong>Snap Distance (스냅 거리)</strong> :이 설정은 룸 에디터에게 에셋의 측면으로 &quot;스냅&quot;되기 전에 가이드가 에셋에서 얼마나 떨어져 있어야하는지 알려줍니다. 기본값은 6px입니다.</li>
     </ul>
-    <p class="dropspot">
-      <br/><br/></p>
+    <p class="dropspot"></p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Spline_Editor.htm">Spline Editor Preferences</a></div>
+        <div style="float:left">목록: <a href="../IDE_Preferences.htm">IDE 환경 설정</a></div>
+        <div style="float:right">다음: <a href="Spline_Editor.htm">스플라인 편집기 환경 설정</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Preferences - Room Editor
@@ -212,4 +161,4 @@ Preferences - Room Editor
 prefs_room_editor
 -->
 
-</body></html>
+</body></html> 

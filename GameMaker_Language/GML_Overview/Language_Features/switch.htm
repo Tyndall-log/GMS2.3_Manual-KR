@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="switch">
-        <span>switch</span>
+        <span>스위치</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,29 +80,25 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>switch</h1>
-  <p>In a number of situations you want to let your instances complete different actions depending on a particular value. You can do this using a number of consecutive <a href="If_Else_and_Conditional_Operators.htm"><tt>if / else</tt></a> statements, but
-    when the possible choices gets above two or three it is usually easier to use the <tt>switch</tt> statement. A <tt>switch</tt> statement has the following form:</p>
+  <h1>스위치</h1>
+  <p>여러 상황에서 인스턴스가 특정 값에 따라 다른 조치를 완료하도록하려고합니다. 여러 <a href="If_Else_and_Conditional_Operators.htm"><tt>if / else</tt></a> 문을 사용하여이 작업을 수행 할 수 있지만 가능한 선택 항목이 2-3 개를 초과하면 일반적으로 <tt>switch</tt> 문을 사용하는 것이 더 쉽습니다. <tt>switch</tt> 문의 형식은 다음과 같습니다.</p>
   <p class="code">switch (&lt;expression&gt;)<br/>     {
     <br/>     case &lt;constant1&gt;: &lt;statement1&gt;; ... ; break;<br/>     case &lt;constant2&gt;: &lt;statement2&gt;; ... ; break;<br/>     ...
     <br/>     default: &lt;statement&gt;;<br/>     }
   </p>
-  <p>This works as follows:</p>
+  <p>이것은 다음과 같이 작동합니다.</p>
   <ul class="colour">
-    <li>First the <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a> is executed.</li>
-    <li>Next it is compared with the results of the different <a href="../Variables/Constants.htm">constants</a> after each of the <span class="inline">case</span> <a class="tooltip" title="In programming, a statement is a single line of code written legally in a programming language that expresses an action to be carried out. A statement might have internal components of its own, including expressions, operators and functions. An example of a statement is A = B + 5. A GameMaker Studio 2 program is nothing but a sequence of one or more statements that together perform a task (like move the player). ">statement</a><span class="glossextra">s</span>.
-      When we say &quot;constant&quot; what we mean is that the value in the case cannot be a variable expression and must be a fixed value of any <a href="../Data_Types.htm">data type</a>, like &quot;fight&quot; or 3 or the keyword <span class="inline"><a href="../Instance_Keywords.htm">noone</a></span>. </li>
-    <li>The execution continues after the first <span class="inline">case</span> statement with the correct value, <i>until a <a href="break.htm">break</a> statement is encountered</i>.</li>
-    <li>If no case statement has the right value, then the <span class="inline">default</span> statement will be executed (it is not required to have a <span class="inline">default</span> statement, and if none is supplied then no action will be taken).</li>
+    <li>먼저 <a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">식이</a> 실행됩니다.</li>
+    <li>그것은 다른 결과와 비교 옆 <a href="../Variables/Constants.htm">상수</a> <span class="inline">케이스</span> 각각 후의 <a class="tooltip" title="프로그래밍에서 명령문은 수행 할 동작을 나타내는 프로그래밍 언어로 합법적으로 작성된 단일 코드 행입니다. 명령문은 표현식, 연산자 및 함수를 포함하여 자체의 내부 구성 요소를 가질 수 있습니다. 문장의 예는 A = B + 5입니다. GameMaker Studio 2 프로그램은 함께 플레이어를 움직이는 것과 같이 작업을 수행하는 하나 이상의 문장 시퀀스 일뿐입니다.">문장</a> <span class="glossextra">들.</span> &quot;constant&quot;라고 말할 때, 케이스의 값은 변수 표현식이 될 수 없으며 &quot;fight&quot;또는 3 또는 <span class="inline"><a href="../Instance_Keywords.htm">noone</a></span> 키워드와 같은 모든 <a href="../Data_Types.htm">데이터 유형</a> 의 고정 된 값이어야합니다.</li>
+    <li><a href="break.htm">break</a> 문이 <i>나타날 때까지</i> 첫 번째 <span class="inline">case</span> 문 다음에 올바른 값으로 실행이 계속됩니다.</li>
+    <li>어떤 경우 문은 다음 <span class="inline">default 문이</span> 실행됩니다 올바른 값이없는 경우 <span class="inline">(기본</span> 문을 반드시 사용할 필요는 없으며, 아무도는 다음 제공되지 않는 경우에는 작업이 수행되지 않습니다).</li>
   </ul>
-  <p>A simple example of using a switch statement would be something like this:</p>
+  <p>switch 문을 사용하는 간단한 예는 다음과 같습니다.</p>
   <p class="code">switch (global.state)<br/>     {<br/>     case &quot;alert&quot;:<br/>         if (instance_exists(obj_Player))<br/>             {<br/>             if (point_distance(x, y, obj_Player.x, obj_Player.y) &lt; 100)<br/>                 {<br/>         
       global.state = &quot;chase&quot;;<br/>                 }<br/>             }<br/>     break;<br/>     case &quot;chase&quot;:<br/>         var _lost = false;<br/>         if (instance_exists(obj_Player))<br/>             {<br/>             move_towards_point(obj_Player.x,
     obj_Player.y, 2);<br/>             if (point_distance(x, y, obj_Player.x, obj_Player.y) &gt; 100)<br/>                 {<br/>                 _lost = true;<br/>                 }<br/>             }<br/>         else _lost = true;<br/>         if (_lost)<br/>                {<br/>             speed = 0;<br/>             global.state = &quot;alert&quot;;<br/>             }<br/>     break;<br/>     }</p>
-  <p>Here we have a global variable that holds a string value which is used to set the behaviour (state) of the instance. In this example the instance simply switches between two states, but it is extremely easy to expand this to include more states by adding
-    further <span class="inline">case</span> statements for additional state strings, like &quot;fight&quot; or &quot;die&quot;, etc...</p>
-  <p>Note that multiple <tt>case</tt> statements can be used to execute the same statement, as the <tt>break</tt> is not always required for each and every <span class="inline">case</span>. If there is no <span class="inline">break</span> statement for a
-    particular <span class="inline">case</span>, the execution simply continues with the code for the next case, eg:</p>
+  <p>여기에는 인스턴스의 동작 (상태)을 설정하는 데 사용되는 문자열 값을 보유하는 전역 변수가 있습니다. 이 예제에서 인스턴스는 단순히 두 상태 사이를 전환하지만 &quot;fight&quot;또는 &quot;die&quot;등과 같은 추가 상태 문자열에 대한 <span class="inline">case</span> 문을 추가하여 더 많은 상태를 포함하도록 확장하는 것이 매우 쉽습니다.</p>
+  <p><tt>휴식은</tt> 항상 각각의 모든 <span class="inline">경우에</span> 필요하지 않은 여러개의 <tt>경우 문이</tt> 같은 문을 실행하는 데 사용할 수 있습니다. 특정 <span class="inline">사례에</span> 대한 <span class="inline">break</span> 문이 없으면 다음 사례에 대한 코드로 실행이 계속됩니다. 예 :</p>
   <p class="code">switch (keyboard_key)<br/>     {
     <br/>     case vk_left:<br/>     case ord(&quot;A&quot;):<br/>         x -= 4;<br/>         break;
     <br/>     case vk_right:<br/>     case ord(&quot;D&quot;):<br/>         x += 4;<br/>         break;
@@ -110,20 +106,19 @@
     <br/>     case vk_down:<br/>     case ord(&quot;S&quot;):<br/>         y += 4;<br/>         break;
     <br/>     }
   </p>
-  <p>The above code uses <tt>switch</tt> to check for a keyboard event and then compares that to each <span class="inline">case</span> listed. If it meets any of the required values then the corresponding code is executed. Note how in the code we have used
-    the way that <tt>switch</tt> can check multiple <span class="inline">cases</span> and continue if no <span class="inline">break</span> is encountered to permit various keys to be used to get the same result. Note that each <span class="inline">case</span>    can have it&#39;s own code, and so you can set up a sort of &quot;inhertitance&quot; system where more than one <span class="inline">case</span> and it&#39;s code will run consecutively woth the next until a break is reached depending on the value
-    of the initial <span class="inline">switch</span> expression.</p>
+  <p>위의 코드는 <tt>스위치</tt> 를 사용하여 키보드 이벤트를 확인한 다음 나열된 각 <span class="inline">사례</span> 와 비교합니다. 필요한 값을 충족하면 해당 코드가 실행됩니다. 코드에서 <tt>스위치</tt> 가 여러 <span class="inline">사례를</span> 확인하고 동일한 결과를 얻기 위해 다양한 키를 사용할 수 있도록 <span class="inline">중단</span> 이없는 <span class="inline">경우</span> 계속할 수있는 방법을 사용했습니다. 각 <span class="inline">케이스</span> 는 자체 코드를 가질 수 있으므로 하나 이상의 <span class="inline">케이스</span> 와 일종의 &quot;상속성&quot;시스템을 설정할 수 있으며 초기 <span class="inline">스위치</span> 의 값에 따라 브레이크가 도달 할 때까지 다음 코드가 연속적으로 실행됩니다. 표현.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Overview/Language_Features/switch.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="break.htm">break</a></div>
+        <div style="float:left">목록: <a href="../Language_Features.htm">언어 특징</a></div>
+        <div style="float:right">다음: <a href="break.htm">단절</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 switch
@@ -132,4 +127,4 @@ switch
 switch
 -->
 
-</body></html>
+</body></html> 

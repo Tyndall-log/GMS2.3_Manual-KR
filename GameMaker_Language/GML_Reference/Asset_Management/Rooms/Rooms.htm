@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Rooms">
-        <span>Rooms</span>
+        <span>객실</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,25 +80,23 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Rooms</h1>
-  <p>Rooms are created in the <a href="../../../../The_Asset_Editors/Rooms.htm">Room Editor</a> in GameMaker Studio 2<span> and </span>are where everything happens in your game. You must have at least one room in any game for it to run, but you may
-    need many more depending on the type of game and how you structure your project. This section has all the general GML functions and variables related to rooms and for getting information about them as well as for setting certain properties within
-    them.</p>
-  <p>The following <a href="../../../GML_Overview/Variables/Global_Variables.htm">global variables</a> and functions can be used for getting basic information about any given room:</p>
+  <h1>객실</h1>
+  <p>객실은 만들어집니다 <a href="../../../../The_Asset_Editors/Rooms.htm">룸 에디터</a> GameMaker 스튜디오 2 <span>및</span> 모든 게임에서 일어나는 곳이다. 게임을 실행하려면 게임에 최소한 하나의 공간이 있어야하지만 게임 유형과 프로젝트 구성 방식에 따라 더 많은 공간이 필요할 수 있습니다. 이 섹션에는 회의실과 관련된 모든 일반 GML 기능 및 변수와 회의실에 대한 정보를 얻거나 회의실 내의 특정 속성을 설정하기위한 변수가 있습니다.</p>
+  <p>주어진 <a href="../../../GML_Overview/Variables/Global_Variables.htm">전역에</a> 대한 기본 정보를 얻는 데 다음 <a href="../../../GML_Overview/Variables/Global_Variables.htm">전역 변수</a> 및 함수를 사용할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="room_first.htm">room_first</a></li>
     <li><a href="room_last.htm">room_last</a></li>
     <li><a href="room_next.htm">room_next</a></li>
-    <li><a href="room_previous.htm">room_previous</a></li>
-    <li><a href="room.htm">room</a></li>
+    <li><a href="room_previous.htm">방 _ 이전</a></li>
+    <li><a href="room.htm">방</a></li>
     <li><a href="room_speed.htm">room_speed</a></li>
     <li><a href="room_height.htm">room_height</a></li>
     <li><a href="room_width.htm">room_width</a></li>
     <li><a href="room_persistent.htm">room_persistent</a></li>
   </ul>
   <p> </p>
-  <p>You can also use the following functions to get the name of the current room (as defined in the <a href="../../../../Introduction/The_Asset_Browser.htm">Asset Browser</a>) as well as move between rooms:</p>
+  <p>다음 기능을 사용하여 <a href="../../../../Introduction/The_Asset_Browser.htm">자산 검색기에</a> 정의 된대로 현재 회의실의 이름을 가져 <a href="../../../../Introduction/The_Asset_Browser.htm">오거나</a> 회의실간에 이동할 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="room_get_name.htm">room_get_name</a></li>
@@ -108,9 +106,7 @@
     <li><a href="room_restart.htm">room_restart</a></li>
   </ul>
   <p> </p>
-  <p>Next, we have a series of functions that can be used to change rooms and their contents or even create new rooms and add to them. It should be noted that these functions should <i>never be run from within the room that you wish to change</i>, but rather
-    be run from an instance in another room first. Also note that if you change any room asset in this way, the change is <strong>permanent</strong> and will be maintained for the entire duration of the game, even if you call the room_restart() function
-    (closing and restarting the game will reset the room properties though).</p>
+  <p>다음으로, 방과 그 내용을 바꾸거나 새로운 방을 만들어 추가 할 수있는 일련의 기능이 있습니다. 이러한 기능은 <i>변경하려는 룸 내에서</i> 실행하지 말고 다른 룸의 인스턴스에서 먼저 실행해야합니다. 또한 이런 방식으로 룸 자산을 변경하면 변경 사항은 <strong>영구적</strong> 이며 room_restart () 함수를 호출하더라도 게임의 전체 기간 동안 유지됩니다 (게임을 닫고 다시 시작하면 룸 속성이 재설정 됨) ).</p>
   <p> </p>
   <ul class="colour">
     <li><a href="room_exists.htm">room_exists</a></li>
@@ -129,29 +125,28 @@
     <li><a href="room_get_camera.htm">room_get_camera</a></li>
   </ul>
   <p> </p>
-  <p>There are also a number of different functions related to creating and manipulating the different types of elements that can be placed on layers in the room. These functions are listed in the appropriate sections for each element type listed below:</p>
+  <p>방의 레이어에 배치 할 수있는 다양한 유형의 요소를 만들고 조작하는 것과 관련된 여러 가지 기능도 있습니다. 이러한 기능은 아래 나열된 각 요소 유형에 해당하는 섹션에 나열되어 있습니다.</p>
   <ul class="colour">
-    <li><a href="General_Layer_Functions/General_Layer_Functions.htm">General Layer Functions</a></li>
-    <li><a href="Tile_Map_Layers/Tile_Map_Layers.htm">Tile Map Layers</a></li>
-    <li><a href="Background_Layers/Background_Layers.htm">Background Layers</a></li>
-    <li><a href="Sprite_Layers/Sprite_Layers.htm">Sprite Layers</a></li>
-    <li><a href="Sequence_Layers/Sequence_Layers.htm">Sequence Layers</a></li>
+    <li><a href="General_Layer_Functions/General_Layer_Functions.htm">일반 레이어 기능</a></li>
+    <li><a href="Tile_Map_Layers/Tile_Map_Layers.htm">타일 ​​맵 레이어</a></li>
+    <li><a href="Background_Layers/Background_Layers.htm">배경 레이어</a></li>
+    <li><a href="Sprite_Layers/Sprite_Layers.htm">스프라이트 레이어</a></li>
+    <li><a href="Sequence_Layers/Sequence_Layers.htm">시퀀스 레이어</a></li>
   </ul>
   <p> </p>
-  <p>An important thing to note when creating room layers is that <i>you can have multiple different element types on one layer</i>. So, for example, you may have a layer for enemies, and on that layer have the enemy instances as well as certain sprite assets
-    that are only related to that enemy. Or you could have a background element with a tile map element to create the look of a room. This is not permitted in the room editor, but when creating things dynamically you can do this, which is why functions
-    like <a href="General_Layer_Functions/layer_get_all_elements.htm"><tt>layer_get_all_elements()</tt></a> exist.</p>
+  <p>룸 레이어를 만들 때 유의해야 할 중요한 점은 <i>하나의 레이어에 여러 다른 요소 유형이있을 수</i> 있다는 <i>것</i> 입니다. 예를 들어, 당신은 적을위한 레이어를 가질 수 있고, 그 레이어에는 적 인스턴스와 그 적과 관련된 특정 스프라이트 자산이 있습니다. 또는 방 모양을 만들기 위해 타일 맵 요소가있는 배경 요소가있을 수 있습니다. 이것은 룸 편집기에서 허용되지 않지만, 물건을 동적으로 만들 때이 작업을 수행 할 수 있으므로 <a href="General_Layer_Functions/layer_get_all_elements.htm"><tt>layer_get_all_elements ()</tt></a> 와 같은 함수가 존재합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Rooms/Rooms.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asset_Management.htm">Asset Management</a></div>
-        <div style="float:right">Next: <a href="../Assets_And_Tags/Assets_And_Tags.htm">Assets And Tags</a></div>
+        <div style="float:left">목록: <a href="../Asset_Management.htm">자산 관리</a></div>
+        <div style="float:right">다음: <a href="../Assets_And_Tags/Assets_And_Tags.htm">자산 및 태그</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Rooms
@@ -162,4 +157,4 @@ Layer Functions
 room_functions
 -->
 
-</body></html>
+</body></html> 

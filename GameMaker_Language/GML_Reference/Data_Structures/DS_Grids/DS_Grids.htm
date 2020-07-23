@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="DS Grids">
-        <span>DS Grids</span>
+        <span>DS 그리드</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,21 +80,16 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>DS Grids</h1>
-  <p>A DS grid is basically a type of<span> <a href="../../../GML_Overview/Arrays.htm">array</a> with 2 dimensions</span>. You define the grid by setting its integer width and height, which then sets the total number of &quot;cells&quot; within the grid
-    (the width and height multiplied) and these cells are then used to hold different data values (real numbers or strings).</p>
-  <p><img alt="DS Grid Example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Data_Structures/ds_grid_basic.png"/>This type of structure allows you to set and retrieve the value of cells in the grid by giving the x and
-    y index of it (which starts with 0 for both the x and the y axis and goes up to the width - 1 and the height -1). But you can also set the value in specific grid regions, add single values, and retrieve the sum, maximum, minimum, and mean value over
-    a given region, making this data structure the most versatile of all those available to you.</p>
-  <p>When accessing DS grid data structures, you should always try to use <b>integer values</b> for the cell position, and all non-integer indices will be floored by GameMaker Studio 2 if you do not. If that is not what you require, then you will need to
-    do the rounding yourself previously before passing the index that you wish to check.</p>
-  <p class="note"><b>NOTE: </b>As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
-  <p class="note"><b>NOTE:</b> if you need to check if a data structure exists, you can use the <span style="font-size:1px;"><a href="../ds_exists.htm"><tt style="font-size: 14px">ds_exists()</tt></a></span> function.</p>
-  <p>Apart from the specific functions listed below you can all use an <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a> (called an <i>accessor</i>) to add or modify the contents of your DS grid. This accessor looks similar to a 2D
-    array with the following syntax:</p>
+  <h1>DS 그리드</h1>
+  <p>DS 그리드는 기본적으로 <span>2 차원 <a href="../../../GML_Overview/Arrays.htm">배열</a></span> 유형입니다. 정수 너비와 높이를 설정하여 그리드를 정의한 다음 그리드 내의 총 &quot;셀&quot;수 (너비와 높이를 곱한 값)를 설정 한 다음이 셀을 사용하여 다른 데이터 값 (실수 또는 문자열)을 보유합니다.</p>
+  <p><img alt="DS Grid Example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Data_Structures/ds_grid_basic.png"/>이 유형의 구조를 사용하면 x 및 y 인덱스를 제공하여 그리드의 셀 값을 설정하고 검색 할 수 있습니다 (x 및 y 축 모두에 대해 0으로 시작하고 너비-1 및 높이까지 올라갑니다) -1). 그러나 특정 그리드 영역에서 값을 설정하고 단일 값을 추가하며 주어진 영역에서 합계, 최대 값, 최소값 및 평균값을 검색하여이 데이터 구조를 사용 가능한 모든 것 중에서 가장 다목적으로 사용할 수 있습니다.</p>
+  <p>DS 그리드 데이터 구조에 접근 할 때는 항상 셀 위치에 <b>정수 값</b> 을 사용해야하며, 그렇지 않으면 <b>정수가</b> 아닌 모든 인덱스는 GameMaker Studio 2에 의해 계산됩니다. 그것이 당신이 필요하지 않은 경우, 확인하려는 색인을 전달하기 전에 미리 반올림을 수행해야합니다.</p>
+  <p class="note"><b>참고 :</b> 모든 동적 리소스와 마찬가지로 데이터 구조는 메모리를 차지하므로 더 이상 메모리 누수를 방지하기 위해 더 이상 필요하지 않을 때는 <b>항상</b> 파괴되어 게임 속도가 느려지고 게임이 중단됩니다.</p>
+  <p class="note"><b>참고 :</b> 데이터 구조가 있는지 확인해야하는 경우 <span style="font-size:1px;"><a href="../ds_exists.htm"><tt style="font-size: 14px">ds_exists ()</tt></a></span> 함수를 사용할 수 있습니다.</p>
+  <p>제외하고는 전혀 사용할 수 있습니다 아래에 나열된 특정 기능에서 <a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">식을</a> (AN라는 <i>접근</i> 추가하거나 DS 그리드의 내용을 수정을). 이 접근자는 다음 구문을 사용하여 2D 배열과 유사합니다.</p>
   <p class="code">grid_index[# xpos, ypos]</p>
-  <p>You can find more information, plus examples, from from the GML Overview page on <a href="../../../GML_Overview/Accessors.htm">Accessors</a>.</p>
-  <p>The following functions exist that deal with DS grids.</p>
+  <p>당신의 GML 개요 페이지에서 더 많은 정보 플러스 예를 찾을 수 있습니다 <a href="../../../GML_Overview/Accessors.htm">접근 자</a> .</p>
+  <p>DS 그리드를 처리하는 다음 기능이 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="ds_grid_create.htm">ds_grid_create</a></li>
@@ -138,15 +133,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Data_Structures.htm">Data Structures</a></div>
-        <div style="float:right">Next: <a href="../DS_Lists/DS_Lists.htm">DS Lists</a></div>
+        <div style="float:left">목록: <a href="../Data_Structures.htm">데이터 구조</a></div>
+        <div style="float:right">다음: <a href="../DS_Lists/DS_Lists.htm">DS 목록</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 DS Grids
@@ -155,4 +151,4 @@ DS Grids
 ds_grid_functions
 -->
 
-</body></html>
+</body></html> 

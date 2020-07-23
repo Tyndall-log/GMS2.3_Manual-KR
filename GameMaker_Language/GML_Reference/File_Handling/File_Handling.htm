@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="File Handling">
-        <span>File Handling</span>
+        <span>파일 처리</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,42 +80,37 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>File Handling</h1>
-  <p>At some point while creating your game it will be necessary to store information externally and be able to retrieve this information. For example, you may wish to store login details, or hi-scores, or maybe the progression of the player through your
-    levels. Whatever the reason, you will need to know how to use the different file functions that are available to you when working with GameMaker Studio 2.</p>
-  <p>It is very important to realise that GameMaker Studio 2 is <b>Sandboxed </b>by default, meaning that there are a number of limits and minor complications when using the file system functions that are available, and it is worth noting too that
-    the file system will work slightly differently depending on the platform you are targeting. For more information this, please see the following section:</p>
+  <h1>파일 처리</h1>
+  <p>어떤 시점에서 게임을 만드는 동안 정보를 외부에 저장하고이 정보를 검색 할 수 있어야합니다. 예를 들어, 로그인 정보, 하이 스코어 또는 레벨을 통한 플레이어의 진행을 저장할 수 있습니다. 이유가 무엇이든 GameMaker Studio 2로 작업 할 때 사용할 수있는 다양한 파일 기능을 사용하는 방법을 알아야합니다.</p>
+  <p>GameMaker Studio 2는 기본적으로 <b>샌드 박스 처리</b> 되어 있음을 이해하는 것이 중요합니다. 즉, 사용 가능한 파일 시스템 기능을 사용할 때 여러 가지 한계와 약간의 합병증이 있으며 파일 시스템이 약간 다르게 작동한다는 점도 주목할 가치가 있습니다. 타겟팅하는 플랫폼에 따라 자세한 내용은 다음 섹션을 참조하십시오.</p>
   <ul class="colour">
-    <li><a href="../../../Additional_Information/The_File_System.htm">The File System</a></li>
+    <li><a href="../../../Additional_Information/The_File_System.htm">파일 시스템</a></li>
   </ul>
-  <p>You can turn off sandboxing on the desktop targets (Windows, macOS and Ubuntu (Linux)) from the Game Options for the chosen platform, meaning that you can then save and load from anywhere, within the limits of the OS permissions.</p>
-  <p>If you have been granted permission by Steam to use their dedicated API with your game, you will find that there is also a new set of file functions available to you. These are explained in the <a href="../Steam/Steam.htm">Steam API</a> section of this
-    manual.</p>
-  <p>Finally, you should also note that there are some distinct differences between certain target platforms which would be taken into account when using the file functions. These are:<b></b></p>
+  <p>선택한 플랫폼의 게임 옵션에서 데스크탑 대상 (Windows, macOS 및 Ubuntu (Linux))의 샌드 박싱을 해제 할 수 있습니다. 즉, OS 권한의 제한 내에서 어디서나 저장하고로드 할 수 있습니다.</p>
+  <p>Steam에서 게임에 전용 API를 사용할 수있는 권한이 부여 된 경우 새로운 파일 기능도 사용할 수 있습니다. 이것들은이 매뉴얼의 <a href="../Steam/Steam.htm">Steam API</a> 섹션에 설명되어 있습니다.</p>
+  <p>마지막으로, 파일 기능을 사용할 때 고려해야 할 특정 대상 플랫폼 간에는 약간의 차이점이 있습니다. 이것들은:</p>
   <ul class="colour">
-    <li><b>iOS</b>: On iOS, if you are loading an included file from a folder, ie: with a path something like &quot;<tt>Backgrounds/background1.png</tt>&quot;, you do NOT need to include the folder as part of the path and simply supplying the file name is
-      sufficient. On all other platforms you must supply the folder(s) as part of the path to the file.<b></b></li>
-    <li><b>macOS and Ubuntu (Linux)</b>: On the macOS and Ubunutu, filenames and paths are case sensitive on these platforms, and so to prevent any potential issues, GameMaker Studio 2 will automatically make all names/paths use lower case by default.<b></b></li>
-    <li><b>HTML5</b>: On HTML5, saving and loading to and from <b>local storage</b> will work as explained within the different function pages, however if you are loading a file from a server, you <b>must only use the function <a href="../Buffers/buffer_load_async.htm"><tt>buffer_load_async()</tt></a></b>      as loading synchronously has been deprecated on most browsers and will eventually be obsoleted.</li>
+    <li><b>iOS</b> : iOS의 경우 폴더에서 포함 된 파일을로드하는 경우 (예 : &quot; <tt>Backgrounds / background1.png</tt> &quot;와 같은 경로로) 폴더를 경로의 일부로 포함하지 않고 파일 이름 만 제공하면됩니다. 충분하다. 다른 모든 플랫폼에서는 파일 경로의 일부로 폴더를 제공해야합니다.</li>
+    <li><b>macOS 및 Ubuntu (Linux)</b> : macOS 및 Ubunutu에서 파일 이름 및 경로는 이러한 플랫폼에서 대소 문자를 구분하므로 잠재적 인 문제를 방지하기 위해 GameMaker Studio 2는 기본적으로 모든 이름 / 경로를 소문자로 사용합니다. <b></b></li>
+    <li><b>HTML5</b> : HTML5에서 <b>로컬 스토리지</b> 로의 저장 및로드는 다른 기능 페이지에서 설명한대로 작동하지만 서버에서 파일을로드하는 경우 동 기적으로로드가 더 이상 사용되지 않으므로 <a href="../Buffers/buffer_load_async.htm"><tt>buffer_load_async ()</tt></a> <b>함수 만 사용해야합니다</b> . 대부분의 브라우저는 결국 폐기 될 예정입니다.</li>
   </ul>
-  <p>Information on the different file functions can be found in the following pages:</p>
+  <p>다른 파일 기능에 대한 정보는 다음 페이지에서 찾을 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="File_System/File_System.htm">File System</a></li>
-    <li><a href="Ini_Files/Ini_Files.htm">Ini Files</a></li>
-    <li><a href="Text_Files/Text_Files.htm">Text Files</a></li>
-    <li><a href="Binary_Files/Binary_Files.htm">Binary Files</a></li>
-    <li><a href="File_Directories/File_Directories.htm">File Directories</a></li>
+    <li><a href="File_System/File_System.htm">파일 시스템</a></li>
+    <li><a href="Ini_Files/Ini_Files.htm">Ini 파일</a></li>
+    <li><a href="Text_Files/Text_Files.htm">텍스트 파일</a></li>
+    <li><a href="Binary_Files/Binary_Files.htm">이진 파일</a></li>
+    <li><a href="File_Directories/File_Directories.htm">파일 디렉토리</a></li>
   </ul>
   <p> </p>
-  <p>GameMaker Studio 2 also includes a number of functions for <a class="tooltip" title="Encoding transforms data into another format using a scheme that is publicly available so that it can easily be reversed. This is not the same as encryption, as it does not require a key to decode it. Encoding is generally used to either change the data into a format for eaiser use by a different system (like sending data to a server), or for making data unreadable to the human eye.">encoding</a> and <a class="tooltip" title="Hashing is the method of creating a string or value that relates to a single source - usually a file - and ONLY that source. For example., in GameMaker you can generate a hash for a save file, then, before accessing it later, generate another hash for it and check the original hash and the new hash to determine if the file has been tampered with.">hashing</a> files and data, which you can find here:</p>
+  <p>GameMaker Studio 2에는 파일 및 데이터 <a class="tooltip" title="인코딩은 공개적으로 사용 가능한 체계를 사용하여 데이터를 다른 형식으로 변환하여 쉽게 되돌릴 수 있습니다. 암호화하는 데 키가 필요하지 않기 때문에 암호화와 동일하지 않습니다. 인코딩은 일반적으로 데이터를 다른 시스템 (예 : 서버로 데이터 전송)에서보다 쉽게 ​​사용할 수있는 형식으로 변경하거나 사람의 눈으로 읽을 수없는 형식으로 만드는 데 사용됩니다.">인코딩</a> 및 <a class="tooltip" title="해싱은 단일 소스 (일반적으로 파일)와 관련이 있고 해당 소스 만 관련된 문자열 또는 값을 작성하는 방법입니다. 예를 들어, GameMaker에서 저장 파일에 대한 해시를 생성 한 다음 나중에 액세스하기 전에 다른 해시를 생성하고 원본 해시와 새 해시를 확인하여 파일이 변조되었는지 확인할 수 있습니다.">해싱을</a> 위한 다양한 기능도 포함되어 있습니다.</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="Encoding_And_Hashing/Encoding_And_Hashing.htm">Encoding And Hashing</a></li>
+    <li><a href="Encoding_And_Hashing/Encoding_And_Hashing.htm">인코딩 및 해싱</a></li>
   </ul>
   <p> </p>
-  <p>Also note that there are some basic file functions for saving games available from the following pages (be aware that these functions are designed for beginners to get a basic save system up and running as quickly as possible, but for more complex projects,
-    you should create your own save system using the functions listed in the sections above):</p>
+  <p>또한 다음 페이지에서 사용할 수있는 게임 저장을위한 몇 가지 기본 파일 기능이 있습니다 (이 기능은 초보자가 기본 저장 시스템을 최대한 빨리 시작하고 실행하도록 설계되었지만보다 복잡한 프로젝트의 경우에는 작성해야합니다) 위 섹션에 나열된 기능을 사용하는 자체 저장 시스템) :</p>
   <p> </p>
   <ul class="colour">
     <li><a href="../General_Game_Control/game_load.htm">game_load</a></li>
@@ -124,7 +119,7 @@
     <li><a href="../General_Game_Control/game_save_buffer.htm">game_save_buffer</a></li>
   </ul>
   <p> </p>
-  <p>Finally you can find more advanced <a href="../Buffers/Buffers.htm">buffer</a> functions that can be used for loading and saving data on the following pages:</p>
+  <p>마지막으로 다음 페이지에서 데이터를로드하고 저장하는 데 사용할 수있는 고급 <a href="../Buffers/Buffers.htm">버퍼</a> 기능을 찾을 수 있습니다.</p>
   <p> </p>
   <ul class="colour">
     <li><a href="../Buffers/buffer_save.htm">buffer_save</a></li>
@@ -140,15 +135,16 @@
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/File_Handling/File_Handling.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Buffers/Buffers.htm">Buffers</a></div>
+        <div style="float:left">목록: <a href="../GML_Reference.htm">GML 참조</a></div>
+        <div style="float:right">다음: <a href="../Buffers/Buffers.htm">버퍼</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 File Handling
@@ -157,4 +153,4 @@ File Handling
 file_functions
 -->
 
-</body></html>
+</body></html> 

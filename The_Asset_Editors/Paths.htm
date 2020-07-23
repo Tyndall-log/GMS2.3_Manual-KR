@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Paths">
-        <span>Paths</span>
+        <span>경로</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,80 +80,68 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Path Editor</h1>
-  <p><img alt="The Path Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Paths.png"/>At some point while creating your games you may need one of your instances to follow a path through a level. Now, this can be done in code by simply creating
-    an array of positions within the room and then having an instance move between them, but that can be a chore to set up and is difficult to change, test and adapt for different instances. For this reason GameMaker Studio 2 has path resources and a
-    dedicated path editor.</p>
-  <p>The basic idea is rather simple - you define a path by drawing it in the path editor, then you can place an action (or code) in the creation event of an object to tell the instance to follow that particular path. You can also set the speed to follow
-    the path and a number of other actions relating to the position and orientation of the path within the room. When you first create a path resource the path editor window will open with the following options:</p>
+  <h1>경로 편집기</h1>
+  <p><img alt="The Path Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Paths.png"/>게임을 만드는 동안 어느 시점에서 레벨 중 하나를 따라 가려면 인스턴스 중 하나가 필요할 수 있습니다. 이제 이것은 방 안에서 위치의 배열을 만들고 그 사이에 인스턴스를 이동시킴으로써 코드로 수행 할 수 있지만 설정하기가 쉽지 않으며 다른 인스턴스에 대해 변경, 테스트 및 적응하기가 어렵습니다. 이러한 이유로 GameMaker Studio 2에는 경로 리소스와 전용 경로 편집기가 있습니다.</p>
+  <p>기본 아이디어는 다소 간단합니다. 경로 편집기에서 경로를 그려 경로를 정의한 다음 객체의 생성 이벤트에 동작 (또는 코드)을 배치하여 인스턴스가 해당 특정 경로를 따르도록 지시 할 수 있습니다. 경로를 따라 이동하는 속도와 방 내 경로의 위치 및 방향과 관련된 여러 가지 다른 작업을 설정할 수도 있습니다. 경로 리소스를 처음 만들면 다음 옵션이 포함 된 경로 편집기 창이 열립니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Path Properties</span><span data-close-text="true">Path Properties</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">경로 속성</span> <span data-close-text="true">경로 속성</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">As with all resources in GameMaker Studio 2 you should give your new path a unique name as this is what will be used to identify it throughout the game you are making, and a good system that a lot of people use is to prefix (or suffix) the resource
-      for easy recognition in code or actions (eg: <span class="inline">path_Enemy_1</span> or <span class="inline">PowerUp_path</span>). <br/></p>
-    <p class="dropspot">Once you have named the path, you can start to define it by placing points in the main editor on the right, with each point being added to the list here along with its position and speed. The speed value for path points is defined by a percentage
-      of the speed at which you make the instance move along the path (default is 100%). So if you start an instance at a speed of 2 (2 pixels per step) along a path and then one of the path points has a speed value of 50%, the instance will reduce speed
-      as it approaches this points to a speed of 1 (50% of the path speed). Equally, you can set the speed to 150% and the instance will accelerate as it reaches the point. In this way you can create some nice dynamic looking movement without any code
-      whatsoever.
-    </p>
-    <p class="dropspot">It is worth noting that you can fast double click <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/> on any of the defined points in the list to pan the editor to
-      the selected point, or slow double click <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/> on one of the values to edit it manually (x, y, or speed).<br/></p>
-    <p class="dropspot">You can also specify the connection kind for the whole path and whether the path should be closed or not (a closed path will connect the last point on the path with the first). The connection kind can be either <strong>straight line</strong>, or <strong>smooth </strong>where
-      a straight line connect simply connects the points of a path in a linear basis, with angular changes at each point, while a smooth connection will create a much softer path that may not pass directly through any of the points, but rather take an
-      approximate line, creating nice curves using <a class="tooltip" title="Smooth interpolation involves estimating a new value by connecting two adjacent known values with a mathematically generated spline curve . You can then get the interpolated value by checking any point along the line.">smooth interpolation</a>. You can also specify the precision for the curves (default is 4) which can be from 1 to 8 with 8 being the
-      smoothest. The image below shows an example of how these options affect the path:</p>
-    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_Examples.png" src="../assets/Images/Asset_Editors/Editor_Paths_Examples.png" alt="Path Editor Examples" class="center"/><br/></p>
+    <p class="dropspot">GameMaker Studio 2의 모든 리소스와 마찬가지로, 새로운 경로에 고유 한 이름을 지정해야합니다. 이것이 게임 내내 식별하는 데 사용될 이름이므로 많은 사람들이 사용하는 좋은 시스템은 접두사 (또는 접미사)입니다. ) 코드 또는 작업에서 쉽게 인식 할 수있는 리소스 (예 : <span class="inline">path_Enemy_1</span> 또는 <span class="inline">PowerUp_path</span> )</p>
+    <p class="dropspot">경로 이름을 지정하면 오른쪽의 기본 편집기에 점을 배치하여 위치를 정의 할 수 있습니다. 각 점은 여기에 위치 및 속도와 함께 목록에 추가됩니다. 패스 포인트의 속도 값은 인스턴스가 패스를 따라 이동하는 속도의 백분율로 정의됩니다 (기본값은 100 %). 따라서 경로를 따라 2 (스텝 당 2 픽셀)의 속도로 인스턴스를 시작한 경우 경로 포인트 중 하나의 속도 값이 50 % 인 경우 인스턴스가이 포인트에 접근 할 때 속도가 1로 감소합니다. (경로 속도의 50 %). 마찬가지로 속도를 150 %로 설정할 수 있으며 인스턴스가 포인트에 도달하면 가속됩니다. 이런 식으로 코드를 만들지 않고도 멋진 역동적 인 움직임을 만들 수 있습니다.</p>
+    <p class="dropspot">빠르게 더블 클릭 할 수 있다는 점은 주목할 가치가 있습니다. 목록의 정의 된 지점에서 편집기를 선택한 지점으로 이동하거나 두 번 클릭 속도를 느리게 값 중 하나를 수동으로 편집하려면 (x, y 또는 속도).</p>
+    <p class="dropspot">전체 경로에 대한 연결 종류와 경로를 닫을 지 여부를 지정할 수도 있습니다 (닫힌 경로는 경로의 마지막 지점을 첫 번째 지점과 연결 함). 연결 종류는 <strong>직선</strong> 이거나 <strong>매끄러</strong> 울 수 있습니다. 직선 연결은 단순히 각 점의 각도 변화와 함께 경로의 점을 직선으로 연결하는 반면 매끄럽게 연결하면 직접 통과하지 못하는 훨씬 더 부드러운 경로를 만듭니다. 점을 통과하지만 대략적인 선을 취하여 <a class="tooltip" title="부드러운 보간법은 인접한 두 개의 알려진 값을 수학적으로 생성 된 스플라인 곡선과 연결하여 새로운 값을 추정하는 것입니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다.">부드러운 보간을</a> 사용하여 멋진 곡선을 만듭니다. 곡선의 정밀도 (기본값은 4)를 지정할 수 있습니다 (기본값은 4). 8은 가장 부드럽습니다. 아래 이미지는 이러한 옵션이 경로에 미치는 영향의 예를 보여줍니다.</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_Examples.png" src="../assets/Images/Asset_Editors/Editor_Paths_Examples.png" alt="Path Editor Examples" class="center"/></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Path Editing</span><span data-close-text="true">Path Editing</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">경로 편집</span> <span data-close-text="true">경로 편집</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">You can add points to the path clicking <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/> anywhere in the edit window, and all subsequent clicks will add further
-      points. Once placed in the editor a point can be moved by clicking <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/> and dragging on it or by changing the values
-      presented to you on the left for the X and Y position and speed (see <strong>Path Properties</strong>, above). You can use <img data-cke-saved-src="../assets/Images/Icons/Icon_Ctrl.png" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" height="20" class="icon" alt="CTRL Icon"/> / <img data-cke-saved-src="../assets/Images/Icons/Icon_Cmd.png" src="../assets/Images/Icons/Icon_Cmd.png" width="55" height="20" class="icon" alt="CMD Icon"/> and left click <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/> on multiple points to select them together, and this group of points can then be dragged around and placed as you require. You can press <img data-cke-saved-src="../assets/Images/Icons/Icon_Delete.png" src="../assets/Images/Icons/Icon_Delete.png" width="55" height="20" alt="Delete Key Icon" class="icon"/> to delete the selected point or points too.</p>
-    <p class="dropspot">There is an additional menu available to you in the editor window when you right click <img data-cke-saved-src="../assets/Images/Icons/Icon_RMB.png" src="../assets/Images/Icons/Icon_RMB.png" class="icon" alt="RMB Icon"/>, shown below:<br/></p>
-    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_Menu.png" src="../assets/Images/Asset_Editors/Editor_Paths_Menu.png" class="center" alt="Path Editor RMB Menu"/>Each of the items in this menu work as follows:</p>
+    <p class="dropspot">경로 클릭에 포인트를 추가 할 수 있습니다 편집 창의 아무 곳이나 클릭하면 이후의 모든 클릭으로 더 많은 포인트가 추가됩니다. 편집기에 배치되면 클릭하여 포인트를 이동할 수 있습니다 드래그하여 또는 X 및 Y 위치 및 속도에 대해 왼쪽에 표시된 값을 변경하여 위의 <strong>경로 속성을</strong> 참조하십시오. 당신이 사용할 수있는 / 왼쪽 클릭 여러 포인트를 함께 선택하여 원하는대로이 포인트 그룹을 드래그하여 배치 할 수 있습니다. 누를 수 있습니다 선택한 포인트를 삭제합니다.</p>
+    <p class="dropspot">마우스 오른쪽 버튼을 클릭하면 편집기 창에 추가 메뉴가 있습니다 아래에 표시됩니다.</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_Menu.png" src="../assets/Images/Asset_Editors/Editor_Paths_Menu.png" class="center" alt="Path Editor RMB Menu"/>이 메뉴의 각 항목은 다음과 같이 작동합니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Delete Points</strong> - Delete the selected point or points.<br/></li>
-      <li class="dropspot"><strong>Pan To Path</strong> - Pan the view in the editor to the center of the path.</li>
-      <li class="dropspot"><strong>Reverse</strong> - Reverse the order of the path points. This doesn&#39;t move them, but rather changes the order that they will be processed in so that the start becomes the end and vice-versa.</li>
-      <li class="dropspot"><strong>Flip</strong> - Flip the path along the horizontal axis.</li>
-      <li class="dropspot"><strong>Minrror</strong> - Flip the path along the vertical axis.</li>
+      <li class="dropspot"><strong>포인트 삭제</strong> -선택한 포인트를 삭제합니다.</li>
+      <li class="dropspot"><strong>경로로 이동</strong> -편집기의보기 <strong>를 경로</strong> 중심으로 이동합니다.</li>
+      <li class="dropspot"><strong>반전</strong> -경로 점의 순서를 반대로 바꿉니다. 이것은 그것들을 움직이지 않고 시작이 끝이되고 그 반대가되도록 처리 순서를 변경합니다.</li>
+      <li class="dropspot"><strong>뒤집기</strong> -가로 축을 따라 패스를 뒤집습니다.</li>
+      <li class="dropspot"><strong>거울</strong> -수직 축을 따라 경로를 뒤집습니다.</li>
     </ul>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot"></p>
     <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">The Toolbox</span><span data-close-text="true">The Toolbox</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">도구 상자 도구</span> <span data-close-text="true">상자</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The tool box buttons at the top are where you can control how things are drawn in the editor window. You can toggle the background grid on or off, as well as set the addition of path points to either be snapped to this grid or not:<br/></p>
-    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_GridOptions.png" src="../assets/Images/Asset_Editors/Editor_Paths_GridOptions.png" class="center" alt="Path Editor Grid Options"/>The snap values indicate the size of the grid cells
-      and this can be changed to any value you require. The rest of the tools are dedicated to zooming in and out and panning the editor area, and you can click the <img data-cke-saved-src="../assets/Images/Icons/Icon_ZoomReset.png" src="../assets/Images/Icons/Icon_ZoomReset.png" alt="Zoom Reset Icon" class="icon"/> button to reset to be 1:1 with the display. Note that if you pan too far from where you want to draw the path, you can use the right mouse button <img data-cke-saved-src="../assets/Images/Icons/Icon_RMB.png" src="../assets/Images/Icons/Icon_RMB.png" class="icon" alt="RMB Icon"/> menu, and then click <strong>Pan to Path</strong> to scroll back to where you were working.</p>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot">상단의 도구 상자 버튼은 편집기 창에서 물건을 그리는 방법을 제어 할 수있는 곳입니다. 배경 그리드를 켜거나 끄고 경로 포인트 추가를이 그리드에 스냅할지 여부를 설정할 수 있습니다.</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Editor_Paths_GridOptions.png" src="../assets/Images/Asset_Editors/Editor_Paths_GridOptions.png" class="center" alt="Path Editor Grid Options"/>스냅 값은 그리드 셀의 크기를 나타내며 필요한 값으로 변경할 수 있습니다. 나머지 도구는 편집기 영역을 확대 및 축소하고 이동하는 데 사용되며 버튼을 누르면 디스플레이와 1 : 1로 재설정됩니다. 패스를 그리려는 위치에서 너무 멀리 이동하면 마우스 오른쪽 버튼을 사용할 수 있습니다. 메뉴를 클릭 한 다음 <strong>경로</strong> 로 이동을 클릭 <strong>하여</strong> 작업중인 위치로 다시 스크롤합니다.</p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Path Points</span><span data-close-text="true">Path Points</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">패스 포인트</span> <span data-close-text="true">패스 포인트</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">Paths are simply a collection of points joined together by a line. In the editor, you place these points by using the left mouse button <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/>. You can add points anywhere in the room editor and they will be added to the point list consecutively to make a path. If you place a point near a connecting line or another node, the new point will be inserted in the path rather than added to
-      it (you can set the detection distance for this in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Spline_Editor.htm">Preferences</a>). You can press <img data-cke-saved-src="../assets/Images/Icons/Icon_Ctrl.png" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" height="20" class="icon" alt="CTRL Icon"/> / <img data-cke-saved-src="../assets/Images/Icons/Icon_Cmd.png" src="../assets/Images/Icons/Icon_Cmd.png" width="55" height="20" class="icon" alt="CMD Icon"/> and click <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/> on already placed points to select them, and then any operations done on the path points like moving them, will be applied to all
-      the selected points as a group. To remove a point or selection of points you can right-click <img data-cke-saved-src="../assets/Images/Icons/Icon_RMB.png" src="../assets/Images/Icons/Icon_RMB.png" class="icon" alt="RMB Icon"/> and select &quot;Delete
-      Point&quot; or press the <img data-cke-saved-src="../assets/Images/Icons/Icon_Delete.png" src="../assets/Images/Icons/Icon_Delete.png" width="55" height="20" class="icon" alt="Delete Key Icon"/> key.</p>
-    <p class="dropspot">Note that you can also use the following shortcuts to perform some extra operations that are not available through the right mouse button menu on the choose path point(s):</p>
+    <p class="dropspot">경로는 단순히 선으로 연결된 점들의 모음입니다. 편집기에서 마우스 왼쪽 버튼을 사용하여 이러한 점을 배치합니다 . 룸 편집기의 아무 곳에 나 포인트를 추가 할 수 있으며 포인트 목록에 연속적으로 추가되어 경로를 만듭니다. 연결선이나 다른 노드 근처에 점을 배치하면 새 점이 경로에 추가되지 않고 경로에 삽입됩니다 ( <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Spline_Editor.htm">환경 설정</a> 에서이를위한 감지 거리를 설정할 수 있음). 누를 수 있습니다 / 클릭 이미 배치 된 점을 선택하여 선택한 다음 이동과 같은 경로 점에서 수행 된 작업은 선택한 모든 점에 그룹으로 적용됩니다. 포인트 또는 포인트 선택을 제거하려면 마우스 오른쪽 버튼을 클릭하십시오. &quot;포인트 삭제&quot;를 선택하거나 키.</p>
+    <p class="dropspot">다음 바로 가기를 사용하여 경로 선택 지점의 마우스 오른쪽 버튼 메뉴를 통해 사용할 수없는 추가 작업을 수행 할 수도 있습니다.</p>
     <ul class="dropspotlist">
-      <li class="dropspot">T + <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/>: Translate (move) the path points</li>
-      <li class="dropspot">R + <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/>: Rotate the path points</li>
-      <li class="dropspot">S + <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png"/>: Scale the path points</li>
+      <li class="dropspot">T + : 경로 점을 번역 (이동)</li>
+      <li class="dropspot">R + : 패스 포인트 회전</li>
+      <li class="dropspot">S + : 패스 포인트 스케일</li>
     </ul>
-    <p class="dropspot"><br/></p>
+    <p class="dropspot"></p>
     <p class="dropspot"></p>
   </div>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('The_Asset_Editors/Paths.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
+        <div style="float:left">목록: <a href="Rooms.htm">뒤로 : 자산 편집자</a></div>
+        <div style="float:right">다음: <a href="Rooms.htm">
+      <div class="clear">
         <div style="float:left"><a href="Rooms.htm">Back: The Asset Editors</a></div>
-        <div style="float:right"><a href="Rooms.htm">Next:</a> Rooms</div>
+        <div style="float:right"><a href="Rooms.htm">Next:</a> Rooms</div>iv class="clear">
+        <div style="float:left"><a href="Rooms.htm">뒤로 : 자산 편집자</a></div>
+        <div style="float:right"><a href="Rooms.htm">다음:</a> Rooms</div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Path Editor
@@ -163,4 +151,4 @@ Paths
 path_editor
 -->
 
-</body></html>
+</body></html> 

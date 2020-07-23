@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="with">
-        <span>with</span>
+        <span>와</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,45 +80,37 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>with</h1>
-  <p>As indicated in the section <a href="../Addressing_Variables_In_Other_Instances.htm">Addressing Variables in Other Instances</a>, it is possible to read and change the value of variables in instances other than the one currently executing any given
-    code. However, in a number of cases you want to do a lot more than just change a single variable within those other instances, and may want to perform more complex code actions that require multiple functions and lines of code. For example, imagine
-    that you want to move all the ball objects in your game 8 pixels. You may think that this is achieved simply by the following piece of code:</p>
+  <h1>와</h1>
+  <p><a href="../Addressing_Variables_In_Other_Instances.htm">다른 인스턴스의 변수 주소 지정</a> 섹션에 표시된대로 현재 지정된 코드를 실행중인 인스턴스 이외의 인스턴스에서 변수 값을 읽고 변경할 수 있습니다. 그러나 많은 경우에 다른 인스턴스 내에서 단일 변수를 변경하는 것 이상의 작업을 수행하고 여러 기능과 코드 행이 필요한보다 복잡한 코드 작업을 수행하고자 할 수 있습니다. 예를 들어 게임에서 모든 공 개체를 8 픽셀로 이동한다고 가정합니다. 이 작업은 다음 코드를 통해 간단히 달성 할 수 있습니다.</p>
   <p class="code">obj_ball.y = obj_ball.y + 8;</p>
-  <p>But this is not correct, as the right side of the assignment gets the value of the y-coordinate of the first ball and adds 8 to it. Next this new value is set as y-coordinate of <em>all </em>balls, so the result is that all balls get the same y-coordinate,
-    and even if you use the following:</p>
+  <p>그러나 과제의 오른쪽이 첫 번째 공의 y 좌표 값을 가져 와서 8을 더하기 때문에 이것은 정확하지 않습니다. 다음으로이 새로운 값은 <em>모든</em> 볼의 y 좌표로 설정되므로 모든 볼이 동일한 y 좌표를 얻게되며 다음을 사용하더라도</p>
   <p class="code">obj_ball.y += 8;</p>
-  <p>it will have exactly the same effect because it is simply an abbreviation of the first statement. So how <i>do</i> we achieve something like this? This is why the <tt>with</tt> statement exists in GML. The with statement has the following syntax:</p>
+  <p>그것은 단순히 첫 번째 진술의 약어이기 때문에 정확히 동일한 효과를 갖습니다. 그렇다면 어떻게 이런 <i>일을</i> 할 수 있습니까? 이것이 <tt>with</tt> 문이 GML에 존재하는 이유입니다. with 문의 구문은 다음과 같습니다.</p>
   <p class="code">with (&lt;expression&gt;)<br/>     {<br/>     &lt;statement&gt;;<br/>     &lt;statement&gt;;<br/>     ...<br/>     }</p>
-  <p>For the <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a>, you can indicate one or more instances to perform th code on, using an instance ID, the object ID (which indicatesthat <i>all instances</i> in the room of this object
-    are to run the code block) or one of the special <a href="../Instance_Keywords.htm">keywords</a> (<tt>all</tt> or <tt>other</tt>). This will then change the <strong>scope</strong> of the code within the curly brackets <span class="inline">{}</span> from the
-    instance or function that actually holds the code to the instance (or instances) given in the expression.</p>
-  <p>Once the expression has set the scope of the <span class="inline">with</span>, the <a class="tooltip" title="In programming, a statement is a single line of code written legally in a programming language that expresses an action to be carried out. A statement might have internal components of its own, including expressions, operators and functions. An example of a statement is A = B + 5. A GameMaker Studio 2 program is nothing but a sequence of one or more statements that together perform a task (like move the player). ">statement</a> will then be executed for each of the indicated instances, as if that instance is the current (
-    <span class="inline">self</span>) instance. So, returning to our original problem, to move all instances of the ball object 8 pixels down you would type:</p>
+  <p><a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">expression</a> 의 경우 인스턴스 ID, 객체 ID (이 객체의 방에있는 <i>모든 인스턴스</i> 가 코드 블록을 실행해야 함을 나타냄) 또는 특수 <a href="../Instance_Keywords.htm">키워드</a> 중 하나를 사용하여 코드를 수행 할 인스턴스를 하나 이상 지정할 수 있습니다. <tt>전부</tt> 또는 <tt>기타</tt> ). 그러면 실제로 코드를 보유하는 인스턴스 또는 함수에서 표현식에 제공된 인스턴스 (들)에 중괄호 ( <span class="inline">{})로</span> 코드 <strong>범위</strong> 가 변경됩니다.</p>
+  <p>표현식이 <span class="inline">with</span> 의 범위를 설정하면 해당 인스턴스가 현재 ( <span class="inline">self</span> ) 인스턴스 인 것처럼 표시된 각 인스턴스에 대해 <a class="tooltip" title="프로그래밍에서 명령문은 수행 할 동작을 나타내는 프로그래밍 언어로 합법적으로 작성된 단일 코드 행입니다. 명령문은 표현식, 연산자 및 함수를 포함하여 자체의 내부 구성 요소를 가질 수 있습니다. 문장의 예는 A = B + 5입니다. GameMaker Studio 2 프로그램은 함께 플레이어를 움직이는 것과 같이 작업을 수행하는 하나 이상의 문장 시퀀스 일뿐입니다.">명령문</a> 이 실행됩니다. 따라서 원래 문제로 돌아가서 볼 객체의 모든 인스턴스를 8 픽셀 아래로 이동하려면 다음과 같이 입력하십시오.</p>
   <p class="code">with (obj_ball)<br/>     {
     <br/>     y += 8;<br/>     }
   </p>
-  <p>Essentially this is a loop, and each <a class="tooltip" title="An iteration is a single pass through a set of operations in your project code. One form of iteration in computer programming is via loops. A loop will repeat a certain segment of code until a condition is met and it can proceed further. Each time the computer runs a loop, it is known as an iteration. In simple terms, iteration is the process of repeating a particular snippet of code over and over again to perform a certain action.">iteration</a> of the loop, the code will run on one instance of the object <span class="inline">obj_ball</span>.</p>
-  <p>If you want to execute multiple statements, just include them in the curly brackets, the same as you would around any other code block. So for example, to move all the balls in our example to a random position and gve them a random speed and direction,
-    you would use:</p>
+  <p>본질적으로 이것은 루프이며 루프의 각 <a class="tooltip" title="반복은 프로젝트 코드에서 일련의 작업을 통과하는 단일 단계입니다. 컴퓨터 프로그래밍에서 반복의 한 형태는 루프를 통하는 것입니다. 루프는 조건이 충족 될 때까지 특정 코드 세그먼트를 반복하여 계속 진행할 수 있습니다. 컴퓨터가 루프를 실행할 때마다 반복이라고합니다. 간단히 말해서 반복이란 특정 코드 조각을 반복해서 반복하여 특정 작업을 수행하는 프로세스입니다.">반복</a> 마다 코드는 <span class="inline">obj_ball</span> 객체의 한 인스턴스에서 실행됩니다.</p>
+  <p>여러 명령문을 실행하려면 다른 코드 블록과 마찬가지로 중괄호 안에 명령문을 포함하십시오. 예를 들어, 예제의 모든 공을 임의의 위치로 옮기고 임의의 속도와 방향을 부여하려면 다음을 사용하십시오.</p>
   <p class="code">with (obj_ball)<br/>     {
     <br/>     x = random(room_width);<br/>     y = random(room_height);<br/>     speed = 1 + random(2);<br/>     direction = random(360);<br/>     }
   </p>
-  <p>As mentioned above, within the statement(s), the indicated instance has become the target (<span class="inline">self</span>) instance that runs the code block, which means that the original instance (that contains the <tt>with</tt> and the code block)
-    has become the <tt>other</tt> instance. So for example, to move all balls to the position of the current instance that actually contains the code, you can type this:</p>
+  <p>위에서 언급 한 바와 같이, 명령문 내에서 표시된 인스턴스는 코드 블록을 실행하는 대상 ( <span class="inline">self</span> ) 인스턴스가되었으며 이는 원래 인스턴스 ( <tt>with</tt> 및 code 블록을 포함)가 <tt>다른</tt> 인스턴스가됨을 의미합니다. 예를 들어 모든 볼을 실제로 코드가 포함 된 현재 인스턴스의 위치로 이동하려면 다음을 입력하십시오.</p>
   <p class="code">with (obj_ball)<br/>     {
     <br/>     x = other.x;<br/>     y = other.y;<br/>     }
   </p>
-  <p>The <tt>with</tt> statement is an extremely powerful tool and is useful in many, many circumstances so it is important that you understand fully how it can be used. To help there are a few more examples of use below:</p>
+  <p><tt>with</tt> 문은 매우 강력한 도구이며 많은 환경에서 유용하므로 사용 방법을 완전히 이해하는 것이 중요합니다. 아래에 몇 가지 사용 예가 더 있습니다.</p>
   <p class="code">with (instance_create_layer(x, y, &quot;Instances&quot;, obj_Ball))<br/>     {
     <br/>     speed = other.speed;<br/>     direction = other.direction;<br/>     }
   </p>
-  <p>The above code will create an instance of <tt>obj_Ball</tt> and assign it the speed and direction of the instance that runs the whole code block.</p>
+  <p>위의 코드는 <tt>obj_Ball</tt> 의 인스턴스를 만들고 전체 코드 블록을 실행하는 인스턴스의 속도와 방향을 할당합니다.</p>
   <p class="code">with (instance_nearest(x, y, obj_Ball))<br/>     {
     <br/>     instance_destroy();
     <br/>     }
   </p>
-  <p>The above code will destroy the instance of <tt>obj_Ball</tt> nearest to the instance running the code.</p>
+  <p>위의 코드는 코드를 실행하는 인스턴스에 가장 가까운 <tt>obj_Ball</tt> 인스턴스를 삭제합니다.</p>
   <p class="code">var _inst = noone;<br/> with (obj_ball)<br/>     {
     <br/>     if (str &gt; other.str)<br/>         {
     <br/>         _inst = id;<br/>         }
@@ -126,37 +118,30 @@
     <br/> if (_inst != noone)<br/>     {
     <br/>     target = _inst;<br/>     }
   </p>
-  <p>The above code is slightly more complex than previous ones due to it using a <a href="../Variables_And_Variable_Scope.htm">local variable</a>. This variable is local to the either the <em>event</em> or the <em>script </em><em>function</em> and not to
-    the instance and so can be used and accessed by all instances that are referenced within the code block. So, in the code we have set it to the special keyword <tt>noone</tt> and then use the <tt>with</tt> construction to have every instance of <tt>obj_Ball</tt> check
-    their <tt>str</tt> variable against that of the instance running the code block. If the value of the variable is larger, then they store their unique ID in the <tt>inst</tt> local variable, meaning that at the end of the code, only the instance with
-    a value greater than the calling instance (or the keyword <tt>noone</tt> if none are larger) will be stored in the local variable <span class="inline">_inst</span>.</p>
-  <p>It is worth noting that you can use the special <span class="inline"><a href="break.htm">break</a></span> and <span class="inline"><a href="continue.htm">continue</a></span> statements within a
-    <font face="Lucida Console"><span style="font-size: 16px;"><b>with</b></span></font> call too. Using <span class="inline">break</span> will immediately exit the <span class="inline">with</span> code block and move on to any code that is in the event or function after the
-    <span class="inline">with</span> should have finished, eg:</p>
+  <p>위의 코드는 <a href="../Variables_And_Variable_Scope.htm">로컬 변수를</a> 사용하기 때문에 이전 코드보다 약간 더 복잡 <a href="../Variables_And_Variable_Scope.htm">합니다</a> . 이 변수는 인스턴스가 아닌 <em>이벤트</em> 또는 <em>스크립트</em> <em>함수에</em> 로컬이므로 코드 블록 내에서 참조되는 모든 인스턴스에서 사용하고 액세스 할 수 있습니다. 따라서 코드에서이를 특수 키워드 <tt>noone으로</tt> 설정 한 다음 <tt>with</tt> 구성을 사용하여 <tt>obj_Ball의</tt> 모든 인스턴스가 코드 블록을 실행하는 인스턴스의 <tt>str</tt> 변수와 <tt>str</tt> 변수를 확인하도록합니다. 변수의 값이 큰 경우, 그들은 코드, 호출 인스턴스보다 값이 더 만 인스턴스 (또는 키워드 <tt>아무도의</tt> 끝에서 아무도 큰없는 경우 즉, <tt>이달</tt> 지역 변수에 고유 ID를 저장 )는 로컬 변수 <span class="inline">_inst에</span> 저장됩니다.</p>
+  <p><font face="Lucida Console"><span style="font-size: 16px;"><b>with</b></span></font> call 내에서 특수 <span class="inline"><a href="break.htm">구분</a></span> 및 <span class="inline"><a href="continue.htm">continue</a></span> 문을 사용할 수 있다는 점은 주목할 가치가 있습니다. 바로 코드 <span class="inline">블록과를</span> 종료하고 예를 들어, <span class="inline">완료해야와</span> 후 이벤트 또는 함수에있는 코드로 이동합니다 <span class="inline">휴식을</span> 사용 :</p>
   <p class="code">var count = 0;<br/> with (obj_Enemy)<br/>     {
     <br/>     if (++count &gt; 10)<br/>         {
     <br/>         break;
     <br/>         }
     <br/>     hp = 100;<br/>     }
   </p>
-  <p>The above code loops through the instances in the room of the object <span class="inline">obj_Enemy</span> and sets the variable <span class="inline">hp</span> to 100 for the first 10 it finds. If any more than 10 instances exist, the with code will
-    call <span class="inline">break</span> and end.</p>
-  <p>An example of using <span class="inline">continue</span> in a <span class="inline">with</span> loop would be:</p>
+  <p>위의 코드는 <span class="inline">obj_Enemy</span> 객체의 방에있는 인스턴스를 반복하고 찾은 처음 10 개에 대해 변수 <span class="inline">hp</span> 를 100으로 설정합니다. 인스턴스가 10 개가 넘는 경우 with 코드는 <span class="inline">break</span> 및 end를 호출합니다.</p>
+  <p><span class="inline">with</span> 루프에서 <span class="inline">continue</span> 를 사용하는 예는 다음 <span class="inline">과</span> 같습니다.</p>
   <p class="code">with (obj_Enemy_Parent)<br/>     {<br/>     if (invulnerable == true)<br/>         {<br/>         continue;<br/>         }<br/>     hp -= 25;<br/>     }</p>
-  <p>This code will loop through all instance with the parent <span class="inline">obj_Enemy_Parent</span>, then checks each instance to see if the <span class="inline">invulnerable</span> instance variable is <span class="inline">true</span> or not. If
-    it is, the <span class="inline">continue</span> keyword ends the current iteration of the loop and moves on to the next available instance, otherwise it removes 25 from the <span class="inline">hp</span> variable. This will repeat until all instances
-    with that parent have been checked.</p>
+  <p>이 코드는 부모 <span class="inline">obj_Enemy_Parent</span> 와 함께 모든 인스턴스를 반복 한 다음 각 인스턴스를 검사하여 <span class="inline">무적의</span> 인스턴스 변수가 <span class="inline">true</span> 인지 여부를 확인합니다. 이 경우 <span class="inline">continue</span> 키워드는 루프의 현재 반복을 종료하고 사용 가능한 다음 인스턴스로 이동합니다. 그렇지 않으면 <span class="inline">hp</span> 변수에서 25가 제거됩니다. 해당 부모가있는 모든 인스턴스를 확인할 때까지이 과정이 반복됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Overview/Language_Features/with.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="return.htm">return</a></div>
+        <div style="float:left">목록: <a href="../Language_Features.htm">언어 특징</a></div>
+        <div style="float:right">다음: <a href="return.htm">반환</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 with
@@ -165,4 +150,4 @@ with
 with
 -->
 
-</body></html>
+</body></html> 

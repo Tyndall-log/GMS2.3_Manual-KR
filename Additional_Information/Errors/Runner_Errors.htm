@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Runner Errors">
-        <span>Runner Errors</span>
+        <span>러너 오류</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,308 +80,282 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Runner Errors</h1>
-  <p>Even after syntax checking in the code editor and then having the compiler check your code for <a href="Compiler_Errors.htm">compiler errors</a>, there are still occasions when something can go wrong. In most cases this will throw a <a class="tooltip" title="In GameMaker, the The VM (Virtual Machine) is a compiling method that uses a generic runner for each platform and then uses that to interpret the code for your game.">Virtual Machine (VM)</a> runner error (also called a <strong>runtime exception</strong>) which looks like this:</p>
-  <p><img alt="Runner Error Window" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Report.png"/>Runner errors are generally more serious than compile errors as it means that there is something seriously wrong with
-    your code that neither the code editor nor the compiler have been able to detect, and as such you should pay attention to all such errors. When one occurs, you can use the <strong>Copy</strong> button on the pop-up to copy the error to the clipboard
-    which you can then paste into a text file (or wherever) for future reference.</p>
-  <p>The structure of this error is as follows:</p>
+  <h1>러너 오류</h1>
+  <p>코드 편집기에서 구문 검사를 한 다음 <a href="Compiler_Errors.htm">컴파일러가</a> 코드에서 <a href="Compiler_Errors.htm">컴파일러 오류</a> 를 검사하도록 한 후에도 문제가 발생할 수 있습니다. 대부분의 경우 다음과 같은 <a class="tooltip" title="GameMaker에서 VM (가상 머신)은 각 플랫폼에 일반 러너를 사용한 다음이를 사용하여 게임의 코드를 해석하는 컴파일 방법입니다.">VM (가상 머신)</a> 러너 오류 ( <strong>런타임 예외</strong> 라고도 함)가 <strong>발생</strong> 합니다.</p>
+  <p><img alt="Runner Error Window" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Report.png"/>러너 오류는 코드 오류나 코드 편집기에서 감지 할 수없는 코드에 심각한 문제가 있음을 의미하므로 컴파일 오류보다 일반적으로 더 심각합니다. 따라서 모든 오류에주의를 기울여야합니다. 문제가 발생하면 팝업의 <strong>복사</strong> 단추를 사용하여 오류를 클립 보드에 복사 한 다음 나중에 참조 할 수 있도록 텍스트 파일에 붙여 넣을 수 있습니다.</p>
+  <p>이 오류의 구조는 다음과 같습니다.</p>
   <ul class="colour">
-    <li><img alt="Error Object And Event" class="icon" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Text_ObjectEvent.png"/><br/> This shows the Event that the error has occurred in as well as the Object (where applicable).</li>
-    <li><img alt="Error Text Information" class="icon" height="16" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_Text_Information.png" width="436"/><br/> This shows the actual error.  So, it shows the <em>scope </em>of the error
-      and the type of error it is. The first value in the brackets will be the instance ID of the instance that was running the code - or it could be one of the special values listed in the table below - and the second is an internal value that YYG uses
-      for identifying bugs and can be ignored. In the case of the image above, it&#39;s saying that the variable <span class="inline">_image</span> has not been set (ie: does not exist before being accessed) on the object <span class="inline">obj_EA_DEMO_Control</span>.</li>
-    <li><img alt="Error Line Number Position" class="icon" height="16" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_LineNumber.png" width="354"/><br/> This shows the line number that the error occurs on as well as a snippet of
-      code showing the position. Note that this is not always 100% accurate due to the way the game is compiled, but it should be enough to help you find exactly where the issue is.</li>
+    <li>오류가 발생한 이벤트와 개체 (해당되는 경우)가 표시됩니다.</li>
+    <li>실제 오류를 보여줍니다. 따라서 오류의 <em>범위</em> 와 오류 유형이 표시됩니다. 괄호 안의 첫 번째 값은 코드를 실행 한 인스턴스의 인스턴스 ID이거나 아래 표에 나열된 특수 값 중 하나 일 수 있습니다. 두 번째는 YYG가 버그를 식별하는 데 사용하는 내부 값이며 무시하십시오. (예 : 액세스하기 전에 존재하지 않음) 위의 이미지의 경우, 변수의 <span class="inline">_image가</span> 설정을되지 않았 음을 말하는 객체 <span class="inline">obj_EA_DEMO_Control에.</span></li>
+    <li>오류가 발생한 줄 번호와 위치를 나타내는 코드 스 니펫을 보여줍니다. 게임이 컴파일되는 방식으로 인해 항상 100 % 정확하지는 않지만 문제가있는 정확한 위치를 찾는 데 도움이됩니다.</li>
   </ul>
-  <p>As mentioned above, certain error messages will be identify the scope not by an instance ID value, but rather by a <em>negative </em>value. These values can be used to pinpoint the exact nature of the error and what it refers to with the following values
-    possible:</p>
+  <p>위에서 언급 한 것처럼 특정 오류 메시지는 인스턴스 ID 값이 아니라 <em>음수</em> 값으로 범위를 식별합니다. 이러한 값은 오류의 정확한 특성과 가능한 다음 값과 관련하여 정확히 무엇을 나타내는 데 사용될 수 있습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Prefix</th>
-        <th>Scope</th>
+        <th>접두사</th>
+        <th>범위</th>
       </tr>
       <tr>
         <td style="text-align: center">-1</td>
-        <td>Self</td>
+        <td>본인</td>
       </tr>
       <tr>
         <td style="text-align: center">-2</td>
-        <td>Other</td>
+        <td>다른</td>
       </tr>
       <tr>
-        <td style="text-align: center">-3</td>
-        <td>All</td>
+        <td style="text-align: center">-삼</td>
+        <td>모두</td>
       </tr>
       <tr>
         <td style="text-align: center">-4</td>
-        <td>Noone</td>
+        <td>아무도</td>
       </tr>
       <tr>
         <td style="text-align: center">-5</td>
-        <td>Global</td>
+        <td>글로벌</td>
       </tr>
       <tr>
         <td style="text-align: center">-6</td>
-        <td>Not Specified</td>
+        <td>명시되지 않은</td>
       </tr>
       <tr>
         <td style="text-align: center">-7</td>
-        <td>Local</td>
+        <td>현지</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>The possible errors from the VM runner are as follows:</p>
+  <p>VM 러너에서 발생할 수있는 오류는 다음과 같습니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Error</th>
-        <th>Message</th>
-        <th>Operation</th>
-        <th>Description</th>
+        <th>오류</th>
+        <th>메시지</th>
+        <th>조작</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSet</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Invalid comparison type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Data Types</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This denotes that the runner has tried to compare two incompatible data types, like a real number with a string.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 비교 유형</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">데이터 타입</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이것은 러너가 문자열과 실수와 같이 호환되지 않는 두 가지 데이터 유형을 비교하려고 시도했음을 나타냅니다.</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoConv</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Data Types</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This denotes an error in the conversion of one data-type into another.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">데이터 타입</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이는 한 데이터 유형을 다른 데이터 유형으로 변환 할 때 발생하는 오류를 나타냅니다.</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <hr/>
-        </td>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAdd</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when using the addition (<span class="inline">+</span>) expression.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">더하기 ( <span class="inline">+</span> ) 표현식을 사용할 때 문제가 발생했습니다.</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMul</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when using the multiplication (<span class="inline">*</span>) expression.</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when using the subtraction (<span class="inline">-</span>) expression.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">도물</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">곱셈 ( <span class="inline">*</span> ) 표현식을 사용할 때 문제가 발생했습니다.</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine - Cannot operate on string type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to subtract the wrong type of variables (for example subtract a string from a real).</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">빼기 ( <span class="inline">-</span> ) 표현식을 사용할 때 문제가 발생했습니다.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진-문자열 유형에서 작동 할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 유형의 변수를 빼려고합니다 (예 : 실수에서 문자열을 빼기).</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when using the division (<span class="inline">/</span> or <span class="inline">div</span>) expression.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">나누기 ( <span class="inline">/</span> 또는 <span class="inline">div</span> ) 표현식을 사용할 때 문제가 발생했습니다.</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine - Cannot operate on string type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to divide the wrong type of variables (for example divide a string by a real).</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진-문자열 유형에서 작동 할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 유형의 변수를 나누려고합니다 (예 : 문자열을 실수로 나누기).</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Divide by zero</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are attempting to divide by 0.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">0으로 나누기</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">0으로 나누려고합니다.</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when using the modulo (<span class="inline">mod</span>) expression.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">모듈로 ( <span class="inline">mod</span> ) 표현식을 사용할 때 문제가 발생했습니다.</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine - Cannot operate on string type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to use modulo (<span class="inline">mod</span>) on the wrong type of variables (for example <span class="inline">mod</span> a string by a real).</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진-문자열 유형에서 작동 할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">수학</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 유형의 변수에 대해 modulo ( <span class="inline">mod</span> )를 사용하려고합니다 (예 : 실수로 문자열을 <span class="inline">수정</span> 하십시오).</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <hr/>
-        </td>
-      </tr>
-      <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when using the bitwise &quot;and&quot; (<span class="inline">&amp;</span>) expression.</td>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine - Cannot operate on string type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to use bitwise &quot;and&quot; (<span class="inline">&amp;</span>) on the wrong type of variables (for example trying to &quot;and&quot; a string with a real).</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위 &quot;and&quot;( <span class="inline">&amp;</span> ) 표현식을 사용할 때 문제가 발생했습니다.</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoOr</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when using the bitwise &quot;or&quot; (<span class="inline">|</span>) expression.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진-문자열 유형에서 작동 할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 유형의 변수에 비트 단위 &quot;and&quot;( <span class="inline">&amp;</span> )를 사용하려고합니다 (예 : 실수로 문자열을 &quot;and&quot;하려고 시도).</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoOr</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine - Cannot operate on string type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to use &quot;or&quot; (<span class="inline">|</span>) on the wrong type of variables (for example trying to &quot;or&quot; a string with a real).</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">문</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위 &quot;또는&quot;( <span class="inline">|</span> ) 표현식을 사용할 때 문제가 발생했습니다.</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoXor</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when using the bitwise &quot;xor&quot; (<span class="inline">^</span>) expression.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">문</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진-문자열 유형에서 작동 할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 유형의 변수에 &quot;또는&quot;( <span class="inline">|</span> )을 사용하려고합니다 (예 : 실수로 문자열을 &quot;또는&quot;하려고 시도).</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoXor</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine - Cannot operate on string type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to use &quot;xor&quot; (<span class="inline">^</span>) on the wrong type of variables (for example trying to &quot;xor&quot; a string with a real).</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">독소</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위 &quot;xor&quot;( <span class="inline">^</span> ) 표현식을 사용할 때 문제가 발생했습니다.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">독소</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진-문자열 유형에서 작동 할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 유형의 변수에 &quot;xor&quot;( <span class="inline">^</span> )를 사용하려고합니다 (예 : 실수로 문자열을 &quot;xor&quot;하려고 함).</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShl</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when bitshifting left (<span class="inline">&lt;&lt;</span>) a value.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 시프 팅시 값이 왼쪽 ( <span class="inline">&lt;&lt;</span> )에 잘못되었습니다.</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShl</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine - Cannot operate on string type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to left bitshift (<span class="inline">&lt;&lt;</span>) the wrong type of variables (for example trying to bitshift a string).</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진-문자열 유형에서 작동 할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 시프트 ( <span class="inline">&lt;&lt;</span> )를 잘못된 유형의 변수로 남겨 두려고합니다 (예 : 문자열을 비트 시프트하려고 함).</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShr</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Something has gone wrong when bitshifting right (<span class="inline">&gt;&gt;</span>) a value.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 시프트 값 ( <span class="inline">&gt;&gt;</span> )을 잘못 입력하면 문제가 발생했습니다.</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShr</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine - Cannot operate on string type</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Bitwise</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to right bitshift (<span class="inline">&gt;&gt;</span>) the wrong type of variables (for example trying to bitshift a string).</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진-문자열 유형에서 작동 할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">비트 단위</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">잘못된 유형의 변수를 비트 시프트 ( <span class="inline">&gt;&gt;</span> )하려고합니다 (예 : 문자열을 비트 시프트하려는 경우).</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <hr/>
-        </td>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoNeg</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Negate</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to turn a variable type into a negative when this type does not permit such an operation.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">도네 그</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">부정하다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 유형이 그러한 조작을 허용하지 않을 때 변수 유형을 음수로 바꾸려고합니다.</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoNot</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Negate</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are trying to &quot;not&quot; a variable type when this type does not permit such an operation.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">하지 마라</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">부정하다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이 유형이 그러한 조작을 허용하지 않을 때 변수 유형을 &quot;하지&quot;않으려 고합니다.</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <hr/>
-        </td>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Push</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Error - Variable Index out of range (var)</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Stack</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">The variable being accessed is out with the established range for the runner.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">푸시</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 오류-가변 인덱스 범위를 벗어남 (var)</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">스택</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">액세스되는 변수가 러너에 대해 설정된 범위를 벗어났습니다.</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Push</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Variable Get (var)</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Stack</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">The given variable has not been defined or is unknown.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">푸시</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">변수 가져 오기 (var)</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">스택</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">주어진 변수가 정의되지 않았거나 알 수 없습니다.</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Pop</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Variable Index out of range (var)</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Stack</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">The variable being accessed is out with the established range for the runner.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">팝</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">범위를 벗어난 변수 색인 (var)</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">스택</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">액세스되는 변수가 러너에 대해 설정된 범위를 벗어났습니다.</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Pop</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Variable Get (var)</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Stack</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">The given variable has not been defined or is unknown.</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">팝</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">변수 가져 오기 (var)</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">스택</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">주어진 변수가 정의되지 않았거나 알 수 없습니다.</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <hr/>
-        </td>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Cannot use global in with statement</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">With</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You have tried to use &quot;<span class="inline">global</span>&quot; as a variable within a &quot;<span class="inline">with</span>&quot; statement, ie:<br/>
-          <span class="inline">with (global)<br/>
-			   {<br/>
-			   //do something;<br/>
-			   }</span></td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">와</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">with with 문을 사용할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">와</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">&quot; <span class="inline">with</span> &quot;문 내에서 &quot; <span class="inline">global</span> &quot;을 변수로 사용하려고했습니다. 예 : <span class="inline">with (global) {// do something;</span> <span class="inline">}</span></td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Cannot use local in with statement</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">With</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You have tried to use &quot;<span class="inline">local</span>&quot; as a variable within a &quot;<span class="inline">with</span>&quot; statement, ie:<br/>
-          <span class="inline">with (local)<br/>
-			   {<br/>
-			   //do something;<br/>
-			   }</span></td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">와</span></td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">with with 문을 사용할 수 없습니다</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">와</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">&quot; <span class="inline">with</span> &quot;문 내에서 &quot; <span class="inline">local</span> &quot;을 변수로 사용하려고했습니다. 예 : <span class="inline">with (local) {// do something;</span> <span class="inline">}</span></td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <hr/>
-        </td>
+        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><hr/></td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoCall</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Execution Engine type error</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Engine</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">This is an undefined error within the Virtual Machine. You should file a bug report should this happen (see: The Help Menu for details on how to do this.</td>
+        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">실행 엔진 유형 오류</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">엔진</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">이것은 가상 머신 내에서 정의되지 않은 오류입니다. 이 경우 버그 보고서를 제출해야합니다 (이 작업을 수행하는 방법에 대한 자세한 내용은 도움말 메뉴 참조).</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Stack Overflow</span></td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">스택 오버플로</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">-</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Engine</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">A stack overflow occurs when too much memory is used on the call stack and when your game attempts to use more space than is available on the call stack (that is, when it attempts to access memory beyond the call stack&#39;s bounds, which is essentially
-          a buffer overflow), the stack is said to overflow, resulting in a program crash. Restart your computer and GameMaker: Studio and if the error persists please get in touch with support and/or file a bug (as explained above).</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">엔진</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">스택 오버플로는 호출 스택에서 너무 많은 메모리를 사용하고 게임에서 호출 스택에서 사용할 수있는 것보다 더 많은 공간을 사용하려고 할 때 (즉, 호출 스택의 경계를 넘어 메모리에 액세스하려고 할 때 발생합니다. 버퍼 오버 플로우) 스택이 오버 플로우되어 프로그램 충돌이 발생합니다. 컴퓨터와 GameMaker : Studio를 다시 시작하십시오. 오류가 지속되면 지원 센터에 연락하거나 버그를 제기하십시오 (위 설명 참조).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Additional_Information/Errors/Runner_Errors.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Error_Reporting.htm">Error Reporting</a></div>
-        <div style="float:right">Next: <a href="Syntax_Errors.htm">Syntax Errors</a></div>
+        <div style="float:left">목록: <a href="../Error_Reporting.htm">오류보고</a></div>
+        <div style="float:right">다음: <a href="Syntax_Errors.htm">구문 오류</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 Runner Errors
@@ -390,4 +364,4 @@ Runner Errors
 runner_errors
 -->
 
-</body></html>
+</body></html> 

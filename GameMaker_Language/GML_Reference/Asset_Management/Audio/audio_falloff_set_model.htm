@@ -71,7 +71,7 @@
         <span>audio_falloff_set_model</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,91 +81,88 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>audio_falloff_set_model</h1>
-  <p>To add more versatility to the audio engine, GameMaker Studio 2 permits you to select the falloff model that suits your game. This model will be used for <b>all</b> the audio functions in the
-    game or app, and so you should make sure that the model you choose is the correct one, as each one will affect how the listener perceives the sounds you play through emitters or with the function <a><tt>audio_play_sound_at</tt></a>.</p>
-  <p>When setting falloff in your game with the appropriate functions there are three arguments that you will need to set, and each one is appropriate to a specific, model and will affect the way the final sound is &quot;heard&quot; by the player depending
-    on the distance that the listener is from the source. The three arguments are:</p>
+  <p>오디오 엔진의 다양성을 높이기 위해 GameMaker Studio 2에서는 게임에 적합한 폴 오프 모델을 선택할 수 있습니다. 이 모델은 게임 또는 앱의 <b>모든</b> 오디오 기능에 사용되므로 선택한 모델이 올바른 모델인지 확인해야합니다. 각 모델은 청취자가 이미 터를 통해 또는 사운드를 통해 재생하는 사운드를 인식하는 방법에 영향을 미치므로 <a><tt>audio_play_sound_at</tt></a> 함수.</p>
+  <p>적절한 기능으로 게임에서 폴 오프를 설정할 때 세 가지 인수를 설정해야합니다. 각 인수는 특정 모델에 적합하며 거리에 따라 플레이어가 최종 사운드를 &quot;듣는&quot;방식에 영향을 미칩니다 리스너가 소스에서 온 것입니다. 세 가지 주장은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><b>reference distance</b> - this is the distance from the listener the distance under which the volume for the sound playing would normally drop by half before being influenced by rolloff factor or the specified maximum distance.<b></b></li>
-    <li><b>maximum distance</b> - this sets the distance where there will no longer be any attenuation of the source sound. This can be the point at which the sound is no longer heard <i>or</i> the point at which the
-      sound volume no longer decreases below the minimum threshold defined by the model chosen.<b></b></li>
-    <li><b>falloff factor</b> - The falloff factor is used in distance attenuation based on the inverse distance model and sets the final minimum threshold for a sound with falloff.</li>
+    <li><b>기준 거리</b> -롤오프 계수 또는 지정된 최대 거리의 영향을 받기 전에 사운드 재생 볼륨이 일반적으로 절반으로 떨어질 거리를 청취자로부터의 거리입니다. <b></b></li>
+    <li><b>최대 거리</b> -소스 사운드가 더 이상 감쇠되지 않는 거리를 설정합니다. 이것은 소리가 더 이상 들리지 않는 지점 <i>이거나</i> 소리 볼륨이 더 이상 선택한 모델에 의해 정의 된 최소 임계 값 아래로 감소하지 않는 지점 일 수 있습니다.</li>
+    <li><b>폴 오프 계수</b> -폴 오프 계수는 역 거리 모델을 기반으로 한 거리 감쇠에 사용되며 폴 오프가있는 사운드의 최종 최소 임계 값을 설정합니다.</li>
   </ul>
-  <p>The falloff models that are affected by these arguments are represented in GameMaker Studio 2 by the following constants (the table shows the exact calculations used too):</p>
+  <p>이러한 인수의 영향을받는 폴 오프 모델은 GameMaker Studio 2에서 다음 상수로 표시됩니다 (표에 사용 된 정확한 계산도 표시됨).</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Function</th>
+        <th>일정한</th>
+        <th>함수</th>
       </tr>
       <tr>
         <td>audio_falloff_exponent_distance</td>
-        <td><br/> gain = (listener_distance / reference_distance) ^ (-falloff_factor)</td>
+        <td>이득 = (청취자 거리 / 참조 거리) ^ (-falloff_factor)</td>
       </tr>
       <tr>
         <td>audio_falloff_exponent_distance_clamped</td>
-        <td><br/> distance = clamp(listener_distance, reference_distance, maximum_distance)<br/> gain = (distance / reference_distance) ^ (-falloff_factor)</td>
+        <td>거리 = 클램프 (리스너 거리, 기준 거리, 최대 거리) 게인 = (거리 / 기준 거리) ^ (-falloff_factor)</td>
       </tr>
       <tr>
         <td>audio_falloff_inverse_distance</td>
-        <td><br/> gain = reference_distance / (reference_distance + falloff_factor * (listener_distance - reference_distance))</td>
+        <td>이득 = reference_distance / (reference_distance + falloff_factor * (listener_distance-reference_distance))</td>
       </tr>
       <tr>
         <td>audio_falloff_inverse_distance_clamped</td>
-        <td><br/> distance = clamp(listener_distance, reference_distance, maximum_distance)<br/> gain = reference_distance / (reference_distance + falloff_factor * (distance - reference_distance))</td>
+        <td>거리 = 클램프 (리스너 거리, 기준 거리, 최대 거리) 게인 = 기준 거리 / (기준 거리 + 폴 오프 계수 * (거리-기준 거리))</td>
       </tr>
       <tr>
         <td>audio_falloff_linear_distance</td>
-        <td><br/> distance = min(distance, maximum_distance)<br/> gain = (1 - falloff_factor * (distance - reference_distance) / (maximum_distance - reference_distance))</td>
+        <td>거리 = 최소 (거리, 최대 거리) 게인 = (1-falloff_factor * (거리-reference_distance) / (최대 거리-reference_distance))</td>
       </tr>
       <tr>
         <td>audio_falloff_linear_distance_clamped</td>
-        <td><br/> distance = clamp(listener_distance, reference_distance, maximum_distance)<br/> gain = (1 - falloff_factor * (distance - reference_distance) / (maximum_distance - reference_distance))</td>
+        <td>거리 = 클램프 (리스너 거리, 기준 거리, 최대 거리) 게인 = (1-falloff_factor * (거리-기준 거리) / (최대 거리-기준 거리))</td>
       </tr>
       <tr>
         <td>audio_falloff_none</td>
-        <td><br/> gain = 1</td>
+        <td>이득 = 1</td>
       </tr>
     </tbody>
   </table>
-  <p><br/> The following graphs are visual representations of how the above constants work and affect the sound being played:</p>
+  <p>다음 그래프는 위 상수가 작동하는 방식을 시각적으로 나타낸 것이며 재생되는 사운드에 영향을줍니다.</p>
   <p><img alt="Distance Model Examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Distance_Models.png"/></p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">audio_falloff_set_model(model);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>model</td>
-        <td>The <b>constant</b> used to set the falloff model.</td>
+        <td>모델</td>
+        <td>폴 오프 모델을 설정하는 데 사용되는 <b>상수</b> 입니다.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">audio_falloff_set_model(audio_falloff_exponent_distance_clamped);<br/> audio_play_sound_at(snd_Waterfall, x, y, 0, 100, 300, 1, true, 1);</p>
-  <p>The above code sets the falloff model and then plays the sound indexed in the variable &quot;snd_Waterfall&quot;, which will be looped at its room position, with a fall-off reference of 100, a falloff distance of 300, a falloff factor of 1 and a low
-    priority.</p>
+  <p>위의 코드는 폴 오프 모델을 설정 한 다음 변수 &quot;snd_Waterfall&quot;에 인덱스 된 사운드를 재생합니다.이 변수는 폴 오프 기준 100, 폴 오프 거리 300, 폴 오프 계수 1 및 낮은 우선 순위.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_falloff_set_model.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a href="audio_sound_gain.htm">audio_sound_gain</a></div>
+        <div style="float:left">목록: <a href="Audio.htm">오디오</a></div>
+        <div style="float:right">다음: <a href="audio_sound_gain.htm">audio_sound_gain</a></div>
         <div style="float:right"> </div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 audio_falloff_set_model
@@ -181,4 +178,4 @@ audio_falloff_none
 audio_falloff_set_model
 -->
 
-</body></html>
+</body></html> 

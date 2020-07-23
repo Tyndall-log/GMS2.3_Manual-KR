@@ -71,7 +71,7 @@
         <span>font_replace</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,185 +81,178 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>font_replace</h1>
-  <p>This function can be used to replace a font to your game from those fonts that are installed on the system it is running on. Note that the font being replaces <em>cannot</em> be a font fromt he Asset Browser, and must be a font that was added previously
-    using the function <a href="font_add.htm"><span class="inline">font_add()</span></a>.</p>
-  <p>When replacing a font in this way, you can define the size of the font (in points), as well as whether the font should be <b>bold</b> or <i>italic</i>, and you can also define the range of characters to include. If the funtion fails then it will fail
-    silently and the given font will not be replaced.</p>
-  <p>For the HTML5 target module, this function <b>can only be used to replace <i>Web Fonts</i></b>, and will only work if WebGL is <b>not</b> enabled - if WebGL is enabled then you must use a general font resource (ie: using <a href="../../Drawing/Text/draw_set_font.htm"><tt>draw_set_font()</tt></a>    along with a font from the Asset Browser) or bitmap fonts (see <a href="font_add_sprite.htm"><tt>font_add_sprite()</tt></a>).</p>
-  <p class="note"><b>IMPORTANT!</b> When targeting HTML5, italics and bold text is only supported if the font asset or web font itself has these characters included. They will not be synthesised from the base font.</p>
-  <p>The following table shows the fonts that are standard across all browsers and that should be be available for use without problems. Any other font may or may not exist on the computer or device that is running your game, so the use of this function
-    should be limited to these standard fonts:</p>
+  <p>이 기능을 사용하여 실행중인 시스템에 설치된 글꼴에서 게임의 글꼴을 게임으로 교체 할 수 있습니다. 대체되는 글꼴은 Asset Browser의 글꼴 일 <em>수 없으며</em> <a href="font_add.htm"><span class="inline">font_add ()</span></a> 함수를 사용하여 이전에 추가 한 글꼴이어야합니다.</p>
+  <p>이러한 방식으로 글꼴을 교체 할 때 글꼴의 크기 (포인트)와 글꼴을 <b>굵게</b> 또는 <i>기울임 꼴로</i> 정의 할 수 있으며 포함 할 문자 범위를 정의 할 수도 있습니다. 기능이 실패하면 자동으로 실패하고 지정된 글꼴이 바뀌지 않습니다.</p>
+  <p>HTML5 대상 모듈의 경우이 함수 <b>는</b> <i>웹 글꼴</i> <b>을 대체하는 데만 사용할 수 있으며</b> WebGL을 사용 <b>하지 않는</b> 경우에만 작동합니다. WebGL을 사용하는 경우 일반 글꼴 자원 (예 : 글꼴과 함께 <a href="../../Drawing/Text/draw_set_font.htm"><tt>draw_set_font ()</tt></a> 사용)을 <a href="../../Drawing/Text/draw_set_font.htm"><tt>사용해야합니다</tt></a> 자산 브라우저에서) 또는 비트 맵 글꼴 ( <a href="font_add_sprite.htm"><tt>font_add_sprite ()</tt></a> 참조).</p>
+  <p class="note"><b>중대한!</b> HTML5를 타겟팅 할 때 기울임 꼴 및 굵은 체 텍스트는 글꼴 자산 또는 웹 글꼴 자체에 이러한 문자가 포함 된 경우에만 지원됩니다. 기본 글꼴에서 합성되지 않습니다.</p>
+  <p>다음 표는 모든 브라우저에서 표준이며 문제없이 사용할 수있는 글꼴을 보여줍니다. 게임을 실행하는 컴퓨터 나 장치에 다른 글꼴이 있거나 없을 수 있으므로이 기능의 사용은 다음 표준 글꼴로 제한되어야합니다.</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Windows Font Name</th>
-        <th>Mac Font Name</th>
-        <th>Font Family</th>
+        <th>윈도우 폰트 이름</th>
+        <th>맥 폰트 이름</th>
+        <th>폰트 패밀리</th>
       </tr>
       <tr>
-        <td>Arial</td>
-        <td>Arial / Helvetica</td>
-        <td>sans-serif</td>
+        <td>아리아</td>
+        <td>아리 아르 / 헬 베티 카</td>
+        <td>산세 리프</td>
       </tr>
       <tr>
-        <td>Arial Black</td>
-        <td>Arial Black / Gadget</td>
-        <td>sans-serif</td>
+        <td>아리아 블랙</td>
+        <td>아리아 블랙 / 가제트</td>
+        <td>산세 리프</td>
       </tr>
       <tr>
-        <td>Comic Sans MS</td>
-        <td>Comic Sans MS</td>
-        <td>cursive</td>
+        <td>코믹 산스 MS</td>
+        <td>코믹 산스 MS</td>
+        <td>필기체</td>
       </tr>
       <tr>
-        <td>Courier New</td>
-        <td>Courier New</td>
-        <td>monospaced</td>
+        <td>택배</td>
+        <td>택배</td>
+        <td>고정 폭</td>
       </tr>
       <tr>
-        <td>Georgia</td>
-        <td>Georgia</td>
-        <td>serif</td>
+        <td>그루지야</td>
+        <td>그루지야</td>
+        <td>가는 장식 선</td>
       </tr>
       <tr>
-        <td>Impact</td>
-        <td>Impact / Charcoal</td>
-        <td>sans-serif</td>
+        <td>타격</td>
+        <td>충격 / 숯</td>
+        <td>산세 리프</td>
       </tr>
       <tr>
-        <td>Lucida Console</td>
-        <td>Monaco</td>
-        <td>monospaced</td>
+        <td>루시다 콘솔</td>
+        <td>모나코</td>
+        <td>고정 폭</td>
       </tr>
       <tr>
-        <td>Lucida Sans Unicode</td>
-        <td>Lucida Grande</td>
-        <td>sans-serif</td>
+        <td>루시다 산스 유니 코드</td>
+        <td>루시다 그란데</td>
+        <td>산세 리프</td>
       </tr>
       <tr>
-        <td>Palatino Linotype / Book Antiqua</td>
-        <td>Palatino</td>
-        <td>serif</td>
+        <td>팔라티노 리노 타입</td>
+        <td>팔라티노</td>
+        <td>가는 장식 선</td>
       </tr>
       <tr>
-        <td>Tahoma</td>
-        <td>Geneva</td>
-        <td>sans-serif</td>
+        <td>타호 마</td>
+        <td>제네바</td>
+        <td>산세 리프</td>
       </tr>
       <tr>
-        <td>Times New Roman</td>
-        <td>Times New Roman / Times</td>
-        <td>serif</td>
+        <td>타임즈 뉴 로마</td>
+        <td>타임즈 뉴 로마 / 타임즈</td>
+        <td>가는 장식 선</td>
       </tr>
       <tr>
         <td>Trebuchet MS</td>
         <td>Trebuchet MS</td>
-        <td>sans-serif</td>
+        <td>산세 리프</td>
       </tr>
       <tr>
-        <td>Verdana</td>
-        <td>Verdana / Geneva</td>
-        <td>sans-serif</td>
+        <td>베르 다나</td>
+        <td>베르 다나 / 제네바</td>
+        <td>산세 리프</td>
       </tr>
       <tr>
-        <td>Georgia</td>
-        <td>Georgia</td>
-        <td>serif</td>
+        <td>그루지야</td>
+        <td>그루지야</td>
+        <td>가는 장식 선</td>
       </tr>
       <tr>
-        <td>Symbol</td>
-        <td>Symbol</td>
-        <td>N/A</td>
+        <td>상징</td>
+        <td>상징</td>
+        <td>해당 없음</td>
       </tr>
       <tr>
-        <td>Webdings</td>
-        <td>Webdings</td>
-        <td>N/A</td>
+        <td>웹딩</td>
+        <td>웹딩</td>
+        <td>해당 없음</td>
       </tr>
       <tr>
-        <td>Wingdings</td>
+        <td>날개</td>
         <td>Zapf Dingbats</td>
-        <td>N/A</td>
+        <td>해당 없음</td>
       </tr>
       <tr>
-        <td>MS Sans Serif</td>
-        <td>Geneva</td>
-        <td>sans-serif</td>
+        <td>MS 산세 리프</td>
+        <td>제네바</td>
+        <td>산세 리프</td>
       </tr>
       <tr>
-        <td>MS Serif</td>
-        <td>New York</td>
-        <td>sans-serif</td>
+        <td>MS 세리프</td>
+        <td>뉴욕</td>
+        <td>산세 리프</td>
       </tr>
     </tbody>
   </table>
-  <p><br/>
-    <br/> On all other (non Web) targets, you can use this function to replace a font from a file. The file <b>must be included in the game bundle</b> using the <a href="../../../../Settings/Included_Files.htm">Included Files</a> functionality of GameMaker
-    Studio 2, and must be a <tt>*.ttf</tt> format font file, useful for adding non-standard fonts like Asian or Arabic.</p>
-  <p class="note"><b>WARNING!: </b>If you include a font in <span style="font-size:1px;"><tt style="font-size: 14px">*.ttf</tt></span> format with a game, it <b>must be licensed</b> for distribution with the game.</p>
-  <p>When loading a font from a file in this way the <i>size</i> of the font is in <b>pixels</b> and the <i>first</i> and <i>last</i> values are ignored, meaning all glyphs in the font will be added. Fonts added in this way are assigned to their own texture
-    page, so care should be taken when using this function as it will increment the number of texture swaps when drawing. It is also worth noting that fonts may appear slightly larger when drawn, since glyphs may have parts that are drawn outside of the
-    bounding box defined for the font. You should be aware too that there is a limitation of around 200 glyphs that can be rendered in a single frame for a particular font.</p>
-  <p class="note"><b>NOTE: </b>When you load a font into GameMaker Studio 2: Studio you must remember to remove it again (with <span style="font-size:1px;"><a href="font_delete.htm"><tt style="font-size: 14px">font_delete()</tt></a></span>) when no longer needed, otherwise
-    there is risk of a memory leak which will slow down and eventually crash your game.</p>
+  <p>웹 이외의 다른 모든 대상에서이 기능을 사용하여 파일에서 글꼴을 바꿀 수 있습니다. 파일 <b>은</b> GameMaker Studio 2의 <a href="../../../../Settings/Included_Files.htm">포함 된 파일</a> 기능을 사용하여 <b>게임 번들</b> 에 <a href="../../../../Settings/Included_Files.htm">포함</a> 되어야하며 <tt>* .ttf</tt> 형식의 글꼴 파일이어야하며 아시아 또는 아랍어와 같은 비표준 글꼴을 추가하는 데 유용합니다.</p>
+  <p class="note"><b>경고! :</b> 게임에 <span style="font-size:1px;"><tt style="font-size: 14px">* .ttf</tt></span> 형식의 글꼴을 포함 시키면 게임과 함께 배포 <b>할 수있는 라이센스</b> 가 <b>있어야합니다</b> .</p>
+  <p>이런 방식으로 파일에서 글꼴을로드 할 때 글꼴의 <i>크기</i> 는 <b>픽셀 단위</b> 이며 <i>첫 번째</i> 값과 <i>마지막</i> 값은 무시되므로 글꼴의 모든 글리프가 추가됩니다. 이런 방식으로 추가 된 글꼴은 자체 텍스처 페이지에 할당되므로이 함수를 사용할 때는 그릴 때 텍스처 스왑 수가 증가하므로주의를 기울여야합니다. 글리프에는 글꼴에 대해 정의 된 경계 상자 외부에 그려진 부분이있을 수 있으므로 글꼴을 그릴 때 글꼴이 약간 더 크게 나타날 수도 있습니다. 특정 글꼴에 대해 단일 프레임으로 렌더링 할 수있는 약 200 개의 글리프 제한이 있다는 점도 알고 있어야합니다.</p>
+  <p class="note"><b>참고 :</b> GameMaker Studio 2 : Studio에 글꼴을로드 할 때 더 이상 필요하지 않은 경우 글꼴을 다시 제거해야합니다 ( <span style="font-size:1px;"><a href="font_delete.htm"><tt style="font-size: 14px">font_delete () 사용</tt></a></span> ). 그렇지 않으면 메모리 누수로 인해 속도가 느려지고 게임이 충돌 할 수 있습니다.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">font_replace(ind, name, size, bold, italic, first, last);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td>The index of the (previously added) font to be replaced.</td>
+        <td>산업</td>
+        <td>대체 할 (이전에 추가 된) 글꼴의 색인입니다.</td>
       </tr>
       <tr>
-        <td>name</td>
-        <td>The name of the font to be used (eg &#39;Arial&#39;), or the file path if the font is an included <tt>*.ttf</tt> file.</td>
+        <td>이름</td>
+        <td>사용할 글꼴 이름 (예 : &#39;Arial&#39;) 또는 글꼴이 포함 된 <tt>* .ttf</tt> 파일 인 경우 파일 경로</td>
       </tr>
       <tr>
-        <td>size</td>
-        <td>The size of the font - points for Web Fonts, pixels for <tt>*.ttf</tt> fonts.</td>
+        <td>크기</td>
+        <td>글꼴 크기-웹 글꼴, <tt>* .ttf</tt> 글꼴의 픽셀을 가리 킵니다.</td>
       </tr>
       <tr>
-        <td>bold</td>
-        <td>Whether the font is bold (true) or not (false).</td>
+        <td>굵게</td>
+        <td>글꼴이 굵은 체인지 (true) 아닌지 (false)</td>
       </tr>
       <tr>
-        <td>italics</td>
-        <td>Whether the font is italic (true) or not (false).</td>
+        <td>이탤릭체</td>
+        <td>글꼴이 기울임 체인지 (true) 아닌지 (false)</td>
       </tr>
       <tr>
-        <td>first</td>
-        <td>The first character to include (if you&#39;re unsure, go for 32).</td>
+        <td>먼저</td>
+        <td>포함 할 첫 번째 문자 (확실하지 않은 경우 32로 이동)</td>
       </tr>
       <tr>
-        <td>last</td>
-        <td>The last character to include (if you&#39;re unsure, go for 128).</td>
+        <td>마지막</td>
+        <td>포함 할 마지막 문자입니다 (확실하지 않은 경우 128로 이동).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real</p>
   <p> </p>
-  <h4>Example:</h4>
+  <h4>예:</h4>
   <p class="code">font_replace(myfont, &quot;Arial&quot;, 24, true, true, 32, 128);</p>
-  <p>This will replace the font indexed in the variable &quot;myfont&quot; with a new font that is 24pt in size, uses &quot;Arial&quot; and which is bold and italic. The font range includes capital and lower case letters, numbers and all common punctuation.</p>
+  <p>이렇게하면 변수 &quot;myfont&quot;에 색인 된 글꼴이 24pt 크기의 새 글꼴로 바뀌고 &quot;Arial&quot;이 사용되며 굵고 기울임 꼴입니다. 글꼴 범위에는 대문자와 소문자, 숫자 및 모든 일반적인 문장 부호가 포함됩니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Fonts/font_replace.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a href="font_replace_sprite.htm">font_replace_sprite</a></div>
+        <div style="float:left">목록: <a href="Fonts.htm">폰트</a></div>
+        <div style="float:right">다음: <a href="font_replace_sprite.htm">font_replace_sprite</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 font_replace_sprite
@@ -268,4 +261,4 @@ font_replace_sprite
 font_replace_sprite
 -->
 
-</body></html>
+</body></html> 

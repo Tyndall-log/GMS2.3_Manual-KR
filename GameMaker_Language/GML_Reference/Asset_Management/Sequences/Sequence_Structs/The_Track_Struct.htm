@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="The Track Struct">
-        <span>The Track Struct</span>
+        <span>트랙 구조</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,137 +80,128 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Track Struct</h1>
-  <p>The track struct can be used either for top-level <i></i><a class="tooltip" title="A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.">asset track</a><span class="glossextra">s</span> or for sub-track <i></i><a class="tooltip" title="A track that has been assigned to an asset track in the track panel and that changes a single parameter for the asset track it&#39;s linked to, like the position, or the image index.">parameter tracks</a>, and the behaviour of the track is defined by two things, its <b>name</b> and it&#39;s <b>type</b>. Track <a href="../../../../GML_Overview/Structs.htm">structs</a> are created using
-    the function <a href="../sequence_track_new.htm"><tt>sequence_track_new()</tt></a> and the properties available to it are:</p>
+  <h1>트랙 구조</h1>
+  <p>트랙 구조체는 최상위 레벨에 사용할 수 있습니다 <a class="tooltip" title="단일 트랙, 스프라이트, 사운드, 인스턴스 또는 시퀀스를 보유하는 시퀀스 트랙 패널의 트랙.">자산 트랙</a> 또는 하위 트랙 <a class="tooltip" title="트랙 패널에서 자산 트랙에 할당되고 위치 또는 이미지 색인과 같이 링크 된 자산 트랙의 단일 매개 변수를 변경하는 트랙.">파라미터 트랙</a> 및 <a class="tooltip" title="트랙 패널에서 자산 트랙에 할당되고 위치 또는 이미지 색인과 같이 링크 된 자산 트랙의 단일 매개 변수를 변경하는 트랙.">트랙</a> 의 동작은 <b>이름</b> 과 <b>유형</b> 의 두 가지로 정의됩니다. 트랙 <a href="../../../../GML_Overview/Structs.htm">구조체</a> 는 <a href="../sequence_track_new.htm"><tt>sequence_track_new ()</tt></a> 함수를 사용하여 생성되며 사용 가능한 속성은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><tt>type</tt>: The following constants can all be used to define the type of track that is being created in the sequence (these constants are also used when generating keyframes and keyframe data, explained in sections below):</li>
+    <li><tt>type</tt> : 다음 상수는 시퀀스에서 생성되는 트랙의 유형을 정의하는 데 사용할 수 있습니다 (이 상수는 키 프레임 및 키 프레임 데이터를 생성 할 때도 사용되며 아래 섹션에서 설명).</li>
   </ul>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>일정한</th>
+        <th>기술</th>
+        <th>값</th>
       </tr>
       <tr>
         <td>seqtracktype_graphic</td>
-        <td>This is a graphics (sprite) asset track.</td>
+        <td>그래픽 (스프라이트) 자산 트랙입니다.</td>
         <td>1</td>
       </tr>
       <tr>
         <td>seqtracktype_audio</td>
-        <td>This is an audio asset track.</td>
+        <td>이것은 오디오 자산 트랙입니다.</td>
         <td>2</td>
       </tr>
       <tr>
         <td>seqtracktype_instance</td>
-        <td>This is an instance asset track.</td>
+        <td>이것은 인스턴스 자산 트랙입니다.</td>
         <td>14</td>
       </tr>
       <tr>
         <td>seqtracktype_sequence</td>
-        <td>This is a sequence asset track.</td>
+        <td>시퀀스 자산 트랙입니다.</td>
         <td>7</td>
       </tr>
       <tr>
         <td>seqtracktype_clipmask</td>
-        <td>This is a clip mask group asset track.</td>
+        <td>클립 마스크 그룹 자산 트랙입니다.</td>
         <td>8</td>
       </tr>
       <tr>
         <td>seqtracktype_clipmask_mask</td>
-        <td>This is a clip mask sprite asset track used for generating the clip mask.</td>
+        <td>클립 마스크 생성에 사용되는 클립 마스크 스프라이트 자산 트랙입니다.</td>
         <td>9</td>
       </tr>
       <tr>
         <td>seqtracktype_clipmask_subject</td>
-        <td>This is a clip mask sprite asset track that is being masked.</td>
+        <td>이것은 마스크되고있는 클립 마스크 스프라이트 자산 트랙입니다.</td>
         <td>10</td>
       </tr>
       <tr>
         <td>seqtracktype_group</td>
-        <td>This group folder asset track.</td>
+        <td>이 그룹 폴더 자산 추적</td>
         <td>11</td>
       </tr>
       <tr>
         <td>seqtracktype_colour</td>
-        <td>This is a colour data parameter track.</td>
+        <td>이것은 컬러 데이터 파라미터 트랙입니다.</td>
         <td>4</td>
       </tr>
       <tr>
         <td>seqtracktype_real</td>
-        <td>This is a real number value parameter track.</td>
-        <td>3</td>
+        <td>이것은 실수 값 파라미터 트랙입니다.</td>
+        <td>삼</td>
       </tr>
       <tr>
         <td>seqtracktype_message</td>
-        <td>This is a broadcast message track.</td>
+        <td>방송 메시지 트랙입니다.</td>
         <td>15</td>
       </tr>
       <tr>
         <td>seqtracktype_moment</td>
-        <td>This is an event/moment track.</td>
+        <td>이벤트 / 모멘트 트랙입니다.</td>
         <td>16</td>
       </tr>
       <tr>
         <td>seqtracktype_bool</td>
-        <td>Not used currently.</td>
+        <td>현재 사용되지 않습니다.</td>
         <td>5</td>
       </tr>
       <tr>
         <td>seqtracktype_string</td>
-        <td>Not used currently.</td>
+        <td>현재 사용되지 않습니다.</td>
         <td>6</td>
       </tr>
       <tr>
         <td>seqtracktype_spriteframes</td>
-        <td>Not used currently.</td>
+        <td>현재 사용되지 않습니다.</td>
         <td>13</td>
       </tr>
       <tr>
         <td>seqtracktype_empty</td>
-        <td>Not used currently.</td>
+        <td>현재 사용되지 않습니다.</td>
         <td>12</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <ul class="colour">
-    <li><tt>name</tt>: When creating an asset track, the name you give here can be any string that you require to identify the track, however for parameter tracks, you need to specify specific strings to tell GameMaker Studio 2 what
-      kind of parameter track you are creating (these strings are only applicable to the <tt>seqtracktype_real</tt> and <tt>seqtracktype_colour</tt> parameter track types):
-      <ul class="colour">
-        <li>&quot;<strong>position</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as positional data.</li>
-        <li>&quot;<strong>scale</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as scaling data.</li>
-        <li>&quot;<strong>rotation</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as rotation data.</li>
-        <li>&quot;<strong>blend_multiply</strong>&quot; - when set on a track which is of type <tt>seqtracktype_colour</tt> this indicates that the contents of this track should be used as colour multiplication data. The keyframe data for such a track should
-          be an array of four values with the format [A, R, G, B]. Note that the values for each component are expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX value #FF (0 - 255 as shown in the colour
-          picker for image blend tracks in the Sequences Editor).</li>
-        <li>&quot;<strong>image_speed</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as the image speed value.</li>
-        <li>&quot;<strong>image_index</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as the image index value.</li>
-        <li>&quot;<strong>image_angle</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as the image angle value.</li>
-        <li>&quot;<strong>image_blend</strong>&quot; - when set on a track which is of type <tt>seqtracktype_colour</tt> this indicates that the contents of this track should be used as the image blend value. The keyframe data for such a track should be an
-          array of four values with the format [A, R, G, B]. Note that the values for each component are expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX value #FF (0 - 255 as shown in the colour picker
-          for colour multiply tracks in the Sequences Editor).</li>
+    <li><tt>name</tt> : 애셋 트랙을 생성 할 때 여기에 지정한 이름은 트랙을 식별하는 데 필요한 문자열 일 수 있지만, 파라미터 트랙의 경우 특정 문자열을 지정하여 GameMaker Studio 2에 생성하는 파라미터 트랙의 종류를 알려야합니다 ( 이 문자열은 <tt>seqtracktype_real</tt> 및 <tt>seqtracktype_colour</tt> 매개 변수 트랙 유형에만 적용됩니다. &quot; <strong>position</strong> &quot;-유형이 <tt>seqtracktype_real 인</tt> 트랙에 설정되면이 트랙의 내용이 위치 데이터로 사용되어야 함을 나타냅니다.</li>
+        <li>&quot; <strong>scale</strong> &quot;-유형이 <tt>seqtracktype_real 인</tt> 트랙에 설정되면이 트랙의 내용이 스케일링 데이터로 사용되어야 함을 나타냅니다.</li>
+        <li>&quot; <strong>rotation</strong> &quot; <tt>-seqtracktype_real</tt> 유형의 트랙에 설정되면이 트랙의 내용이 회전 데이터로 사용되어야 함을 나타냅니다.</li>
+        <li>&quot; <strong>blend_multiply</strong> &quot;-유형이 <tt>seqtracktype_colour 인</tt> 트랙에 설정되면이 트랙의 내용이 색상 곱셈 데이터로 사용되어야 함을 나타냅니다. 이러한 트랙의 키 프레임 데이터는 [A, R, G, B] 형식의 4 개 값으로 구성된 배열이어야합니다. 각 구성 요소의 값은 0과 1 사이로 표현됩니다. 여기서 0은 HEX 값 # 00에 해당하고 1은 HEX 값 #FF에 해당합니다 (시퀀스에서 이미지 블렌드 트랙의 색상 선택기에 표시되는 0-255). 편집자).</li>
+        <li><strong>&quot;image_speed는&quot;-</strong> 형 <tt>seqtracktype_real이다</tt> 트랙 설정할 때이 트랙의 콘텐츠가 화상의 속도 값으로 사용하는 것을 나타낸다.</li>
+        <li><strong>&quot;image_index는&quot;-</strong> 형 <tt>seqtracktype_real이다</tt> 트랙 설정할 때이 트랙의 콘텐츠가 화상의 인덱스 값으로 사용하는 것을 나타낸다.</li>
+        <li><strong>&quot;image_angle는&quot;-</strong> 형 <tt>seqtracktype_real이다</tt> 트랙 설정할 때이 트랙의 콘텐츠가 화상의 각도 값으로 사용하는 것을 나타낸다.</li>
+        <li>&quot; <strong>image_blend</strong> &quot;-유형이 <tt>seqtracktype_colour 인</tt> 트랙에 설정되면이 트랙의 내용이 이미지 블렌드 값으로 사용되어야 함을 나타냅니다. 이러한 트랙의 키 프레임 데이터는 [A, R, G, B] 형식의 4 개 값으로 구성된 배열이어야합니다. 각 구성 요소의 값은 0과 1 사이로 표현됩니다. 여기서 0은 HEX 값 # 00에 해당하고 1은 HEX 값 #FF에 해당합니다 (시퀀스의 색상 곱하기 트랙에 대한 색상 선택기에 표시된대로 0-255). 편집자).</li>
       </ul>
     </li>
-    <li><tt>tracks</tt>: This property allows access to the list of tracks which are children of this track. When getting this property an <a href="../../../../GML_Overview/Arrays.htm">array</a> of track structs is returned, and when setting this property
-      an array of track structs should be specified.</li>
-    <li><tt>visible</tt>: This indicates whether this track is visible (the value is <tt>true</tt>) or not (the value is <tt>false</tt>). You can get or set this value and if a track not visible then none of its child tracks will be drawn either.</li>
-    <li><tt>keyframes</tt>: This property allows access to the list of <a href="The_Keyframe_Struct.htm">keyframe structs</a> for the track. When getting this property an array of keyframe structs is returned, and when setting this property an array of keyframe
-      structs should be specified.</li>
+    <li><tt>tracks</tt> :이 속성을 사용하면이 트랙의 자식 인 트랙 목록에 액세스 할 수 있습니다. 이 속성을 가져 오면 트랙 구조체 <a href="../../../../GML_Overview/Arrays.htm">배열</a> 이 반환되고이 속성을 설정할 때 트랙 구조체 배열을 지정해야합니다.</li>
+    <li><tt>visible</tt> :이 트랙이 표시되는지 (값이 <tt>true</tt> ) 아닌지 (값이 <tt>false</tt> ) 여부를 나타냅니다. 이 값을 가져 오거나 설정할 수 있으며 트랙이 보이지 않으면 하위 트랙 중 어느 것도 그려지지 않습니다.</li>
+    <li><tt>keyframes</tt> :이 속성을 사용하면 트랙의 <a href="The_Keyframe_Struct.htm">키 프레임 구조체</a> 목록에 액세스 할 수 있습니다. 이 속성을 가져 오면 키 프레임 구조체의 배열이 반환되고이 속성을 설정할 때 키 프레임 구조체의 배열을 지정해야합니다.</li>
   </ul>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="The_Keyframe_Struct.htm">The Keyframe Struct</a></div>
+        <div style="float:left">목록: <a href="../Sequences.htm">시퀀스</a></div>
+        <div style="float:right">다음: <a href="The_Keyframe_Struct.htm">키 프레임 구조</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 The Track Struct
@@ -240,4 +231,4 @@ keyframes
 sequence_track
 -->
 
-</body></html>
+</body></html> 

@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="macOS">
-        <span>macOS</span>
+        <span>맥 OS</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,74 +80,53 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>macOS Game Options</h1>
-  <p>This section outlines the different options available to you that control how your macOS game projects will be compiled. The different sections are:</p>
+  <h1>macOS 게임 옵션</h1>
+  <p>이 섹션에서는 macOS 게임 프로젝트를 컴파일하는 방법을 제어 할 수있는 다양한 옵션을 간략하게 설명합니다. 다른 섹션은 다음과 같습니다.</p>
   <p> </p>
-  <h2>General</h2>
-  <p><img alt="Mac General Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_General_Options.png"/>In the <strong>Product Information </strong>section, the first thing to do is fill in the <strong>Display Name </strong>of your game
-    then fill in its <strong>Version Number</strong>, <strong>App ID</strong>, <strong>App Output file</strong> and the <strong>Copyright</strong> details. The App Output is the location to which your game installation files go to on your Mac development
-    machine. When you create your <span class="inline">.app.zip</span>, that file can go anywhere (the location you specify when doing the save dialogue is not the only copy made of that <span class="inline">.app.zip</span>), but the <span class="inline">.pkg</span>    and other files are left in this folder, permitting you to test local installations via Terminal in such a way as to simulate Mac Store purchasing, etc...</p>
-  <p>Here you also need to give the <strong>Team Identifier</strong> that you wish to use for signing the final application that GameMaker Studio 2 creates for you. Setting it here will overide the Team ID that you have supplied in the <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/macOS.htm">macOS Preferences</a>.
-    After the Team Identifier you also have the option to supply the <strong>Signing Identifier</strong>, which is required by Apple for all non-appstore applications (like Steam games, for example).</p>
-  <p>The next option is for enabling <strong>Steam </strong>in your game. If you enable this option, make sure you have the Steamworks SDK installed (see <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/Steam.htm">here</a>), and that
-    you have added the <strong>Steam app ID</strong> into the <a href="../Game_Options.htm">General Options</a> for the game.</p>
-  <p>Finally you have the option to <strong>Disable file system sandbox</strong>. Checking this will disable the GameMaker Studio 2 sandboxing for saving and loading files, permitting your games to access files from anywhere on the system running the game.
-    This option is unchecked by default, as we recomend that you maintain the GameMaker Studio 2 sandbox for files on all systems and when checked, some save/load areas may still not be available depending on the OS-level permissions. For more information
-    on the sandbox, please see the pages on the GameMaker Studio 2 <a href="../../Additional_Information/The_File_System.htm">File System</a>.</p>
+  <h2>일반</h2>
+  <p><img alt="Mac General Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_General_Options.png"/><strong>제품 정보</strong> 섹션에서 가장 먼저 할 일은 게임의 <strong>표시 이름</strong> 을 입력 한 다음 <strong>버전 번호</strong> , <strong>앱 ID</strong> , <strong>앱 출력 파일</strong> 및 <strong>저작권</strong> 정보를 입력하는 것입니다. 앱 출력은 Mac 설치 시스템에서 게임 설치 파일이있는 위치입니다. <span class="inline">.app.zip</span> 을 만들면 해당 파일은 어디든 갈 수 있습니다 (저장 대화를 수행 할 때 지정한 위치는 해당 <span class="inline">.app.zip으로</span> 만들어진 유일한 사본이 <span class="inline">아닙니다</span> ) <span class="inline">.pkg</span> 및 기타 파일은이 폴더에 남아 있습니다 , Mac Store 구매 등을 시뮬레이션하는 방식으로 터미널을 통해 로컬 설치를 테스트 할 수 있습니다.</p>
+  <p>여기에는 GameMaker Studio 2가 생성 한 최종 응용 프로그램에 서명 할 때 사용할 <strong>팀 식별자</strong> 도 제공해야합니다. 여기에 설정하면 <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/macOS.htm">macOS 환경 설정</a> 에서 제공 한 팀 ID보다 <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/macOS.htm">우선</a> 합니다. Team Identifier 다음에는 Apple이 모든 비 Appstore 응용 프로그램 (예 : Steam 게임)에 필요한 <strong>Signing Identifier</strong> 를 제공 할 수도 있습니다.</p>
+  <p>다음 옵션은 게임에서 <strong>Steam</strong> 을 활성화하는 것입니다. 이 옵션을 활성화하면 Steamworks SDK가 설치되어 있고 ( <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/Steam.htm">여기</a> 참조) 게임의 <a href="../Game_Options.htm">일반 옵션</a> 에 <strong>Steam 앱 ID</strong> 를 추가했는지 확인하십시오.</p>
+  <p>마지막으로 <strong>파일 시스템 샌드 박스 비활성화</strong> 옵션이 있습니다. 이를 체크하면 파일을 저장하고로드하기위한 GameMaker Studio 2 샌드 박싱이 비활성화되어 게임이 게임을 실행하는 시스템의 어느 곳에서나 파일에 액세스 할 수 있습니다. 모든 시스템의 파일에 대해 GameMaker Studio 2 샌드 박스를 유지하는 것이 좋습니다.이 옵션을 선택하면 OS 수준 권한에 따라 일부 저장 /로드 영역을 사용하지 못할 수도 있습니다. 샌드 박스에 대한 자세한 내용은 GameMaker Studio 2 <a href="../../Additional_Information/The_File_System.htm">파일 시스템</a> 페이지를 참조하십시오.</p>
   <p> </p>
-  <h2>Graphics</h2>
-  <p><img alt="Mac Graphics Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_Graphics_Options.png"/>The graphics options are those that you should configure to determine how your game will use the graphics card of your target Mac.
-    The following options are included for you to modify:</p>
+  <h2>제도법</h2>
+  <p><img alt="Mac Graphics Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_Graphics_Options.png"/>그래픽 옵션은 게임에서 대상 Mac의 그래픽 카드를 사용하는 방법을 결정하기 위해 구성해야하는 옵션입니다. 수정할 수있는 옵션은 다음과 같습니다.</p>
   <ul class="colour">
-    <li><strong>Allow Menu And Dock In Fullscreen</strong>: When checked, this option will show the OS menu and dock if the game is in fullscreen mode. This is off by default.</li>
-    <li><strong>Display Cursor</strong>: When this is checked the regular macOS cursor will be show, and un-checking it will mean that no cursor is shown unless you have created one in your game code. This is off by default.</li>
-    <li><strong>Start Fullscreen</strong>: If this is checked, the game will start in fullscreen mode otherwise it will start windowed. This is off by default.</li>
-    <li><strong>Allow Fullscreen Switching</strong>: With this ticked the user can switch from fullscreen to windowed and back again using the standard macOS shortcuts. This is off by default.</li>
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be off, but
-      if you have nice alpha blends and smoothed edged graphics it is better left on. This is off by default.</li>
-    <li><strong>Use synchronization to avoid tearing</strong>: This toggles <a class="tooltip" title="V-sync or vertical synchronisation is used to synchronise your game update speed to the refresh rate of the monitor. This can reduce screen tearing - which is when your screen displays portions of multiple frames in one go - but can also cause performance issues or problems on monitors with high refresh-rates.">v-sync</a> on or off. Note, that if you have a game with a room speed of 120 and the player has a monitor with a refresh rate
-      of 60, turning this option on will lock your game speed to 60 too. This is off by default.</li>
-    <li><strong>Allow window resize</strong>: Checking this permits the user to change the size of the game window (the Borderless Window option needs to be off for this to work). This option is off by default.</li>
-    <li><strong>Enable Retina</strong>: Checking this will set the back buffer to be at the higher (actual) resolution when the game is run on a retina enabled monitor, while un-checking it will set the back buffer to be at the apparent (lower) resolution.
-      What this means is that the initial game window will be set to twice the width and height that the room/view port that the first room is set to. However, this does NOT scale the application surface to suit, and so if you want your game to make the
-      most of the retina display you should also set the application surface to be the same as the window size (note that this will double the pixels along the width and height, so only enable this and scale the application surface if your game will benefit
-      from the increased resolution). This option is off by default.</li>
-    <li><strong>Scaling</strong>: Here you can choose to maintain aspect ratio (so a 4:3 room will be &quot;letter boxed&quot; on a 16:9) or to scale fully (stretching the image to fit the full screen).<br/>
-      <br/>
-      <span style="font-size:16px;"><strong>WARNING!</strong> <em>Switching off the application surface will disable all the scaling options set in the Windows Game Options until it has been switched back on again. See The Application Surface for further details.</em></span></li>
+    <li><strong>전체 화면에서 메뉴 및 도킹 허용</strong> :이 옵션을 선택하면 게임이 전체 화면 모드 인 경우 OS 메뉴 및 도킹이 표시됩니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>커서 표시</strong> : 이것이 체크되면 일반 macOS 커서가 표시되며, 체크 해제하면 게임 코드에서 커서를 만들지 않는 한 커서가 표시되지 않습니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>전체 화면 시작</strong> :이 옵션을 선택하면 게임이 전체 화면 모드에서 시작되고 그렇지 않으면 창이 시작됩니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>전체 화면 전환 허용</strong> :이 <strong>확인란을</strong> 선택하면 표준 macOS 단축키를 사용하여 전체 화면에서 창으로 전환 한 후 다시 전환 할 수 있습니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>픽셀 간 색상 보간</strong> : 기본적으로 &quot;매끄러운&quot;픽셀 인 <a class="tooltip" title="선형 보간에는 인접한 두 개의 알려진 값을 직선으로 연결하여 새 값을 추정하는 작업이 포함됩니다. 그런 다음 선을 따라 점을 확인하여 보간 된 값을 얻을 수 있습니다. 그래픽에서 선형 보간은 픽셀 가장자리를 부드럽게하는 기본 방법을 나타냅니다.">선형 보간을</a> 켭니다. 선명한 픽셀 그래픽의 경우 꺼져 있어야하지만 멋진 알파 블렌드와 매끄러운 가장자리 그래픽이있는 경우 그대로 유지하는 것이 좋습니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>동기화를 사용하여 테어</strong> 링 <strong>방지</strong> : <a class="tooltip" title="V-sync 또는 수직 동기화는 게임 업데이트 속도를 모니터의 재생률과 동기화하는 데 사용됩니다. 이렇게하면 화면이 여러 프레임의 일부를 한 번에 표시 할 때 화면이 찢어 질 수 있지만 화면 주사율이 높은 모니터에서 성능 문제 나 문제가 발생할 수 있습니다.">v-sync를</a> 켜거나 끕니다. 룸 속도가 120 인 게임의 플레이어에 새로 고침 빈도가 60 인 모니터가있는 경우이 옵션을 켜면 게임 속도도 60으로 고정됩니다. 기본적으로 해제되어 있습니다.</li>
+    <li><strong>창 크기 조정 허용</strong> :이 옵션을 선택하면 사용자가 게임 창의 크기를 변경할 수 있습니다 (이 작업을하려면 Borderless Window 옵션이 꺼져 있어야합니다). 이 옵션은 기본적으로 해제되어 있습니다.</li>
+    <li><strong>Retina 활성화</strong> :이 옵션을 선택하면 게임이 retina 가능 모니터에서 실행될 때 백 버퍼가 더 높은 (실제) 해상도로 설정되고, 체크 해제하면 백 버퍼가 명백한 (낮은) 해상도로 설정됩니다. 이것이 의미하는 것은 초기 게임 창이 첫 번째 방이 설정된 방 /보기 포트의 너비와 높이의 두 배로 설정된다는 것입니다. 그러나 이것은 응용 프로그램 표면에 맞게 크기를 조정하지 않으므로 게임에서 레티 나 디스플레이를 최대한 활용하려면 응용 프로그램 표면을 창 크기와 동일하게 설정해야합니다 (이는 픽셀을 두 배로 늘릴 것입니다. 너비와 높이를 따라 설정해야합니다. 게임의 해상도가 향상되면이 기능을 활성화하고 응용 프로그램 표면의 크기를 조정하십시오. 이 옵션은 기본적으로 해제되어 있습니다.</li>
+    <li><strong>크기 조정</strong> : 가로 세로 비율을 유지하거나 (16 : 4에서 4 : 3 회의실이 &quot;편지함&quot;으로) 또는 전체 크기로 전체 화면에 맞게 이미지를 늘릴 수 있습니다. <span style="font-size:16px;"><strong>경고!</strong></span> <span style="font-size:16px;"><em>응용 프로그램 화면을 끄면 다시 켜질 때까지 Windows 게임 옵션에 설정된 모든 크기 조정 옵션이 비활성화됩니다.</em></span> <span style="font-size:16px;"><em>자세한 내용은 응용 프로그램 표면을 참조하십시오.</em></span></li>
   </ul>
-  <p>Finally there is the option to set the size of the <a class="tooltip" title="A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There
-    is also a button marked <strong><strong>Preview </strong></strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are
-    structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
-  <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be on PC&#39;s with lower specifications.</p>
+  <p>마지막으로 <a class="tooltip" title="텍스처 페이지 (텍스처 아틀라스라고도 함)는 게임에서 가장 적은 텍스처 메모리를 차지하도록 최적의 방식으로 그룹화 된 이미지 모음 (스프라이트, 타일셋, 글꼴 문자 등)입니다. 실행됩니다.">텍스처 페이지</a> 의 크기를 설정하는 옵션이 있습니다. 기본 (가장 호환되는) 크기는 2048x2048이지만 256x256에서 최대 8192x8192 사이에서 선택할 수 있습니다. 또한이 플랫폼에 대한 텍스처 페이지를 생성 한 다음 창을 열어서 모양을 볼 수있는 <strong><strong>미리보기</strong></strong> 버튼이 있습니다. 텍스처 페이지가 어떻게 구성되어 있는지 확인하고 텍스처 페이지가 필요 이상으로 커지는 것을 방지하려는 경우 매우 유용 할 수 있습니다. 텍스처 페이지에 대한 자세한 내용은 <a href="../Texture_Information/Texture_Pages.htm">여기</a> 를 참조 <a href="../Texture_Information/Texture_Pages.htm">하십시오</a> .</p>
+  <p class="note"><strong>참고</strong> : 텍스처 페이지의 크기가 클수록 게임 사양이 낮은 PC에서 게임 호환성이 떨어집니다.</p>
   <p> </p>
-  <h2>Images</h2>
-  <p><img alt="Mac Images Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_Images_Options.png"/>The images section is where you supply the images that your game requires. For Mac, you need to supply an <strong>Icon </strong>file
-    (that must be in <span class="inline">.png</span> format and 1024x1024px) and also a <strong>Splash Screen</strong> (which can be <span class="inline">.png</span>, <span class="inline">.bmp</span>, <span class="inline">.jpg</span> or <span class="inline">.gif</span>    format). The splash screen will be shown while the game loads.</p>
-  <p>It is worth noting that GameMaker Studio 2 has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game
-    is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require.</p>
+  <h2>이미지</h2>
+  <p><img alt="Mac Images Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_Images_Options.png"/>이미지 섹션은 게임에 필요한 이미지를 제공하는 곳입니다. Mac의 경우 <strong>아이콘</strong> 파일 ( <span class="inline">.png</span> 형식 및 1024x1024px 여야 함)과 <strong>스플래시 화면</strong> ( <span class="inline">.png</span> , <span class="inline">.bmp</span> , <span class="inline">.jpg</span> 또는 <span class="inline">.gif</span> 형식)을 제공해야합니다. 게임이로드되는 동안 스플래시 화면이 표시됩니다.</p>
+  <p>GameMaker Studio 2에는 게임이 컴파일되는 모든 다른 대상 플랫폼에 필요한 모든 이미지를 자동으로 만드는 데 사용할 수있는 <a href="../../IDE_Tools/Project_Image_Generator.htm">프로젝트 이미지 생성기</a> 도구가 있습니다. 이 도구를 사용하는 경우 필요한 이미지가되도록 만들어진 이미지를 수정해야합니다.</p>
   <p> </p>
-  <h2>Packaging</h2>
-  <p><img alt="Mac Packaging Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_Packaging_Options.png"/>If you wish the finished game to be App Store Ready then you need to check the <strong>Build for Mac App Store</strong> option,
-    but be aware that this will only function if you are a registered Developer and have the necessary certificates. Under that are the app <strong>Permissions </strong>which you should only check if they are true as Apple can reject your app if they
-    are checked when they are not needed or vice-versa. These options simply permit your game to use the <span class="inline">http_</span> and <span class="inline">url_</span> functions. It is worth noting that if you wish to support GamePads in your
-    game then the option to create an App Store ready package should be <em>off</em>.</p>
-  <p>Finally, you need to select its <strong>App Category</strong> (for more information, see <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html">here</a>).</p>
+  <h2>포장</h2>
+  <p><img alt="Mac Packaging Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_Packaging_Options.png"/>완성 된 게임이 App Store Ready가 되려면 <strong>Mac App Store 용 빌드</strong> 옵션을 확인해야하지만 등록 된 개발자이고 필요한 인증서가있는 경우에만 작동합니다. 애플 리케이션이 필요하지 않거나 그 반대의 경우 앱이 확인되면 앱을 거부 할 수 있으므로 앱 <strong>권한</strong> 은 참인지 확인해야합니다. 이 옵션을 사용하면 게임에서 <span class="inline">http_</span> 및 <span class="inline">url_</span> 함수를 사용할 수 있습니다. 게임에서 게임 패드를 지원하려면 App Store 준비 패키지를 생성하는 옵션이 <em>꺼져</em> 있어야합니다.</p>
+  <p>마지막으로 <strong>앱 범주</strong> 를 선택해야합니다 (자세한 내용은 <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html">여기</a> 참조).</p>
   <p> </p>
-  <h2>Social</h2>
-  <p><img alt="Mac Social Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_Social_Options.png"/>This option is for using the <strong>Apple Sign In Extension</strong> on Mac. You can get this extension from the <a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">YoYo Games Marketplace</a>,
-    and the extension itself contains full instructions for use. If you are not using this extension then you should not tick this option.</p>
+  <h2>사회적인</h2>
+  <p><img alt="Mac Social Options" class="center" src="../../assets/Images/Settings/Game_Options/Mac_Social_Options.png"/>이 옵션은 Mac에서 <strong>Apple Sign In Extension</strong> 을 사용하기위한 것입니다. 이 확장은 <a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">YoYo Games Marketplace</a> 에서 얻을 수 있으며 확장 자체에는 사용 지침이 포함되어 있습니다. 이 확장을 사용하지 않는 경우이 옵션을 선택하지 마십시오.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('Settings/Game_Options/macOS.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a href="Ubuntu.htm">Ubuntu</a></div>
+        <div style="float:left">목록: <a href="../Game_Options.htm">게임 옵션</a></div>
+        <div style="float:right">다음: <a href="Ubuntu.htm">우분투</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 macOS Game Options
@@ -158,4 +137,4 @@ game_settings
 macos_options
 -->
 
-</body></html>
+</body></html> 

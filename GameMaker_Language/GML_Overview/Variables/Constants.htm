@@ -68,10 +68,10 @@
     </div>
     <div class="nav">
       <div class="title" title="Constants">
-        <span>Constants</span>
+        <span>상수</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -80,77 +80,67 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Constants</h1>
-  <p>A constant is a type of variable that is set once at the start of the game and then never changes. In fact, constant values <em>cannot be changed after they have been declared</em>. This makes them ideal for holding values that are used throughout the
-    game to identify special data.</p>
-  <p>In the GameMaker Language there are two types of user-defined constant: <strong>macros</strong> and <strong>enums</strong>, both of which are explained below. Also note that any value that is always the same is classed as a constant, regardless of the
-    <a href="../Data_Types.htm">data type</a>, for example, a string or the number 3.</p>
-  <p class="note"><strong>NOTE</strong>: The GameMaker Language also has a number of built-in constant values that are used to identify specific things. These are outlined on the appropriate pages for the runtime functions that require them in the <a href="../../GML_Reference/GML_Reference.htm">GML Reference</a>    section.</p>
+  <h1>상수</h1>
+  <p>상수는 게임을 시작할 때 한 번 설정되고 변경되지 않는 변수 유형입니다. 실제로 상수 값 <em>은 선언 된 후에는 변경할 수 없습니다</em> . 따라서 게임 전체에서 사용되는 값을 유지하여 특수 데이터를 식별하는 데 이상적입니다.</p>
+  <p>GameMaker Language에는 두 가지 유형의 사용자 정의 상수가 있습니다 : <strong>macros</strong> 및 <strong>enums</strong> , 둘 다 아래에 설명되어 있습니다. 또한 항상 같은 값은 <a href="../Data_Types.htm">데이터 유형 (</a> 예 : 문자열 또는 숫자 3)에 관계없이 상수로 분류됩니다.</p>
+  <p class="note"><strong>참고</strong> : GameMaker 언어에는 특정 사물을 식별하는 데 사용되는 여러 내장 상수 값도 있습니다. 이것들은 <a href="../../GML_Reference/GML_Reference.htm">GML 참조</a> 섹션에 필요한 런타임 기능에 대한 해당 페이지에 요약되어 있습니다.</p>
   <p> </p>
-  <h2>Macros</h2>
-  <p>While not exactly variables, macros are similar to them in how they are used, ie: they are named values that you can use throughout your code to replace <a class="tooltip" title="In computer programming, the term hard-coded is used to describe code that is considered fixed and not likely to change. Hardcoded features are built into hardware or software in such a way that they cannot be modified later on. For example, if you are making a game and &#39;hard-code&#39; the player health to 10, then you would be using the value 10 throughout the game code rather than using a variable.">hard-coded</a> values. Basically, a macro
-    is a named variable that holds a constant single value of any <a href="../Data_Types.htm">data type</a>. You can define your own macros using the <a href="../Script_Functions.htm">Script Editor</a> and then use them in your code and DnD™ as if they
-    were regular variables, with the one difference being that they <i>can&#39;t be changed in the game</i>.</p>
-  <p>The syntax structure for a macro is as follows:</p>
+  <h2>매크로</h2>
+  <p>변수는 정확하지 않지만 매크로는 사용 방법면에서 매크로와 유사합니다. 즉, 코드 전체에서 <a class="tooltip" title="컴퓨터 프로그래밍에서 하드 코딩이라는 용어는 고정 된 것으로 간주되고 변경되지 않는 코드를 설명하는 데 사용됩니다. 하드 코드 된 기능은 나중에 수정할 수없는 방식으로 하드웨어 나 소프트웨어에 내장되어 있습니다. 예를 들어 게임을 만들고 플레이어 상태를 10으로 &#39;하드 코딩&#39;하는 경우 변수를 사용하는 대신 게임 코드 전체에서 값 10을 사용하게됩니다.">하드 코딩 된</a> 값을 대체하는 데 사용할 수있는 명명 <a class="tooltip" title="컴퓨터 프로그래밍에서 하드 코딩이라는 용어는 고정 된 것으로 간주되고 변경되지 않는 코드를 설명하는 데 사용됩니다. 하드 코드 된 기능은 나중에 수정할 수없는 방식으로 하드웨어 나 소프트웨어에 내장되어 있습니다. 예를 들어 게임을 만들고 플레이어 상태를 10으로 &#39;하드 코딩&#39;하는 경우 변수를 사용하는 대신 게임 코드 전체에서 값 10을 사용하게됩니다.">된</a> 값입니다. 기본적으로 매크로는 모든 <a href="../Data_Types.htm">데이터 유형</a> 의 상수 단일 값을 보유하는 명명 된 변수입니다. <a href="../Script_Functions.htm">스크립트 편집기를</a> 사용하여 고유 한 매크로를 정의한 다음 코드와 DnD ™에서 마치 일반 변수 인 것처럼 <i>사용할 수 있습니다</i> . 한 가지 차이점 <i>은 게임에서 변경할 수 없다는 것</i> 입니다.</p>
+  <p>매크로의 구문 구조는 다음과 같습니다.</p>
   <p class="code">#macro <i>&lt;variable&gt;</i> <i>&lt;value&gt;</i></p>
-  <p>For example say you define the following macro &quot;<span class="inline">total_weapons</span>&quot; (note the preceding &quot;<span class="inline">#</span>&quot; and the lack of a colon &quot;<span class="inline">;</span>&quot; at the end):</p>
+  <p>예를 들어, 다음 매크로 &quot; <span class="inline">total_weapons</span> &quot;를 정의한다고 가정하십시오 (앞의 &quot; <span class="inline">#</span> &quot;및 끝에 콜론 &quot; <span class="inline">;</span> &quot;이 없음).</p>
   <p class="code">#macro total_weapons 10</p>
-  <p>You would then call this in your code like this:</p>
+  <p>그런 다음 코드에서 이것을 다음과 같이 호출합니다.</p>
   <p class="code">if ++pos == total_weapons<br/>     {
     <br/>     pos = 0;<br/>     }
   </p>
-  <p>Note that you would not be able to change the constant value, so code like this will cause the game to crash:</p>
+  <p>상수 값을 변경할 수 없으므로 다음과 같은 코드로 게임이 중단됩니다.</p>
   <p class="code">total_weapons = 11;</p>
-  <p>You can define a macro anywhere in your code or in a script and it will be <i>pre-compiled</i> and included in your game as if it was there from the start, but we recommend that you create a dedicated script asset and define all your macros in there.
-    It will be easier to organise and debug later!</p>
-  <p>If you need the value of a macro to change at run-time then you should probably make it a <a href="Global_Variables.htm">global variable</a>, since these can be changed from code during a game, unless you set the macro to be a<span> <a href="../Runtime_Functions.htm">runtime </a></span>    <a href="../Runtime_Functions.htm">function</a>. By setting the macro to a function it means that this function will be called every time you use the macro. For example:</p>
+  <p>코드 나 스크립트의 어느 곳에서나 매크로를 정의 할 수 있으며, <i>사전에 컴파일 된</i> 것처럼 <i>사전 컴파일</i> 되어 게임에 포함되지만, 전용 스크립트 자산을 만들고에 모든 매크로를 정의하는 것이 좋습니다. 그곳에. 나중에 구성하고 디버그하는 것이 더 쉬울 것입니다!</p>
+  <p>매크로를 런타임에 변경하기 위해 매크로의 값이 필요한 경우 매크로를 <span><a href="../Runtime_Functions.htm">런타임</a></span> <a href="../Runtime_Functions.htm">함수</a> 로 설정하지 않으면 게임 도중 코드에서 변경 될 수 있으므로 <a href="Global_Variables.htm">전역 변수로</a> 만들어야합니다. 매크로를 함수로 설정하면 매크로를 사용할 때마다이 함수가 호출됩니다. 예를 들면 다음과 같습니다.</p>
   <p class="code">#macro col make_colour_hsv(irandom(255), 255, 255)</p>
-  <p>You would then call this macro something like this:</p>
+  <p>그런 다음이 매크로를 다음과 같이 호출하십시오.</p>
   <p class="code">image_blend = col;</p>
-  <p>Using this code will make the image blend a different colour every time the macro is used. It is worth noting that you can also split macros over multiple lines using the <span class="inline"><tt>\</tt></span> character to show where the line breaks.
-    An example would be something like:</p>
+  <p>이 코드를 사용하면 매크로를 사용할 때마다 이미지가 다른 색상으로 혼합됩니다. <span class="inline"><tt>\\</tt></span> 문자를 사용하여 줄을 나누는 위치를 표시하여 매크로를 여러 줄로 나눌 수도 있습니다. 예를 들면 다음과 같습니다.</p>
   <p class="code">#macro hello show_debug_message(&quot;Hello&quot; + \<br/> string(player_name) + \<br/> &quot;, how are you today?&quot;);</p>
-  <p>This is purely cosmetic, in that splitting a macro like this will have no effect over the result of the final macro when used, and is simply to provide support for multiline text on macros that have longer lines of code.</p>
-  <p>One very important feature of macros is that they can be defined for use with specific <a href="../../../Settings/Configurations.htm">Configurations</a> (configs), meaning you can have the same macro name but give it different values based on the currently
-    selected config. For example, say you have a configuration for Android Ads and another for iOS Ads, then you could define a single macro to hold the required app ID value:</p>
+  <p>이것은 매크로를 이와 같이 분할해도 최종 매크로 결과에 영향을 미치지 않으며 코드 줄이 더 긴 매크로에서 여러 줄 텍스트를 지원하는 것입니다.</p>
+  <p>매크로의 매우 중요한 기능 중 하나는 특정 <a href="../../../Settings/Configurations.htm">구성</a> (구성)과 함께 사용하도록 정의 할 수 있다는 것입니다. 즉, 동일한 매크로 이름을 사용할 수 있지만 현재 선택된 구성에 따라 다른 값을 지정할 수 있습니다. 예를 들어 Android Ads와 iOS Ads에 대한 구성이 있다고 가정하면 필요한 앱 ID 값을 보유 할 단일 매크로를 정의 할 수 있습니다.</p>
   <p class="code">#macro ad_id &quot;&quot;;<br/> #macro Android:ad_id &quot;com.yoyogames.googlegame&quot;<br/> #macro iOS:ad_id &quot;com.yoyogames.appstoregame&quot;</p>
-  <p>As you can see, you give the config name first then a colon <span class="inline">:</span> and then the macro name and value. Note that you cannot have any whitespace between the colon <span class="inline">:</span> and either the config name nor the
-    macro name otherwise you will get an error.</p>
+  <p>다음 매크로 이름과 값 <span class="inline">:</span> 당신이 볼 수 있듯이, 당신은 먼저 설정 이름에 콜론을 제공합니다. 콜론 <span class="inline">:</span> 과 구성 이름 또는 매크로 이름 사이에는 공백이 없어야합니다. 그렇지 않으면 오류가 발생합니다.</p>
   <p> </p>
-  <h2>Enums</h2>
-  <p>An enum is an &quot;enumerator&quot;, and it essentially permits you to create your own limited data type with a list of constant values, and they have the following structure:</p>
+  <h2>열거 형</h2>
+  <p>열거 형은 &quot;열거 기&quot;이며 기본적으로 상수 값 목록을 사용하여 고유 한 제한된 데이터 형식을 만들 수 있으며 다음과 같은 구조를 갖습니다.</p>
   <p class="code">enum <i>&lt;variable&gt; </i>{<br/>
     <i>&lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br/>
     <i>&lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br/> // etc...<br/> }
   </p>
-  <p>In the following example, we create an enum for the colours of the rainbow and assign it various constants and default values:</p>
+  <p>다음 예제에서는 무지개의 색상에 대한 열거 형을 만들고 다양한 상수와 기본값을 할당합니다.</p>
   <p class="code">enum rainbowcolours {<br/>     red,<br/>     orange,<br/>     yellow,<br/>     green,<br/>     blue,<br/>     indigo,<br/>     violet<br/>     }</p>
-  <p>The enum entries can only be <b>integer numbers</b> or <b><a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a><span class="glossextra">s</span> with previous enums that evaluate to an integer number</b>, and by default are numbered
-    from 0 upwards, so our example given above would default to <tt>red = 0</tt>, <tt>orange = 1</tt>, <tt>yellow = 2</tt>, etc...</p>
-  <p>You can also assign values to the enum variables at the time of creation:</p>
+  <p>열거 형 항목은 <b>정수</b> 또는 <b>정수로</b> 평가되는 이전 열거 형의 <a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">표현식</a> 일 수 있으며 기본적으로 0부터 번호가 매겨 지므로 위의 예제는 기본적으로 <tt>red = 0</tt> , <tt>orange = 1</tt> , <tt>yellow = 2</tt> 등이됩니다. ...</p>
+  <p>생성시 열거 형 변수에 값을 할당 할 수도 있습니다.</p>
   <p class="code">enum enum_test {<br/> val = 10;<br/> }
     <br/>
     <br/> enum rainbowcolours {<br/>     red = 5,<br/>     orange = 5 * 2,<br/>     yellow = 15,<br/>     green = 20,<br/>     blue = 25,<br/>     indigo = 30,<br/>     violet = 35 * enum_test.val<br/>     }</p>
-  <p>Notice in the above example we use another enum to create an expression for &quot;violet&quot;. This only works if the enum being referenced was created <i>before</i> the enum that is using it in an expression, but it will not work for variables or
-    functions, since the enum value must be able to be evaluated as a constant when the project is <a class="tooltip" title="Compiling is when GameMaker takes your code and collects it together in such a way as to create an executable package that will run on a device as a game.">Compiling</a>. Also note that all enum values evaluate to <b>integer</b> values, and when you create
-    your own you should be aware that <i>only integer values are permitted</i> for enums to work. This value can be any integer number that a floating point double precision number can represent, including negative values.</p>
-  <p>To later access the value within a given enum type, you can use the point <tt>&quot;.&quot;</tt> method, like this:</p>
+  <p>위 예제에서 다른 열거 형을 사용하여 &quot;violet&quot;에 대한 표현식을 만듭니다. 이것은 참조에서 열거 형이 표현식에서 열거 형을 사용하는 열거 형 <i>보다 먼저</i> 생성 된 경우에만 작동하지만 프로젝트가 <a class="tooltip" title="컴파일은 GameMaker가 코드를 가져와 장치에서 게임으로 실행되는 실행 패키지를 만드는 방식으로 함께 수집하는 시점입니다.">컴파일</a> 될 때 열거 형 값을 상수로 평가 할 수 있어야하기 때문에 변수 또는 함수에는 작동하지 않습니다. 또한 모든 열거 형 값은 <b>정수</b> 값으로 평가되며 사용자가 자신을 만들 때 열거 형이 작동하려면 <i>정수 값만 허용</i> 된다는 점에 유의하십시오. 이 값은 음수 값을 포함하여 부동 소수점 배정도 숫자가 나타낼 수있는 정수일 수 있습니다.</p>
+  <p>주어진 열거 형 유형 내의 값에 나중에 액세스하려면 <tt>&quot;.&quot;</tt> 지점을 사용할 수 있습니다 <tt>.</tt> 이 같은 방법 :</p>
   <p class="code">variable = &lt;enum_name&gt;.&lt;<em>enum_variable</em>&gt;;</p>
-  <p>As an example, let&#39;s use the &quot;<span class="inline">rainbowcolours</span>&quot; enum that we created in the code above:</p>
+  <p>예를 들어, 위 코드에서 만든 &quot; <span class="inline">rainbowcolours</span> &quot;열거 형을 사용하십시오.</p>
   <p class="code">colour_value = rainbowcolours.green * rainbowcolours.red;</p>
-  <p>The <span class="inline">colour_value</span> variable would now hold the value 100 (20 * 5).</p>
-  <p>Note that you <em>cannot </em>modify the values for any enum constant after it has been created, much the same as you can&#39;t modify macros after they have been created.</p>
+  <p><span class="inline">colour_value</span> 변수는 이제 100 (20 * 5) 값을 보유합니다.</p>
+  <p>이 생성 된 후에는 생성 된 후 매크로를 수정할 수 없습니다 당신이 어떤 열거 형 정수 훨씬 동일한 값을 수정할 <em>수 없습니다.</em></p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Overview/Variables/Constants.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Variables_And_Variable_Scope.htm">Variables And Variables Scope</a></div>
-        <div style="float:right">Next: <a href="Local_Variables.htm">Local Variables</a></div>
+        <div style="float:left">목록: <a href="../Variables_And_Variable_Scope.htm">변수와 변수 범위</a></div>
+        <div style="float:right">다음: <a href="Local_Variables.htm">지역 변수</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 constants
@@ -165,4 +155,4 @@ macro
 enum
 -->
 
-</body></html>
+</body></html> 

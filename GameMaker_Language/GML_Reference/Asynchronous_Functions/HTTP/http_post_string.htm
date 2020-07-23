@@ -71,7 +71,7 @@
         <span>http_post_string</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -81,73 +81,66 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>http_post_string</h1>
-  <p>In computing, a <b>post</b> request is used when the client needs to send data to the server as part of the retrieval request, such as when uploading a file or submitting a completed form, and the same is true of this function in GameMaker Studio 2.
-    In contrast to the <span class="inline"><a href="http_get.htm">http_get()</a></span> request method where only a URL is sent to the server, <tt>http_post_string()</tt> also includes a string that is sent to the server and may result in the creation
-    of a new resource or the update of an existing resource or both. It should be noted that HTTP request parameters (the bits sometimes &quot;tacked on&quot; to the end of a URL when you submit a form on a web page) are perfectly acceptable when using
-    this function too.</p>
-  <p>This event will generate a &quot;call back&quot; which is picked up by any <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP Events</a>, in which case it will generate a <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a>    (more commonly known as a &quot;dictionary&quot;) that is exclusive to this event and is stored in the special variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. This ds_map will contain
-    different values depending on whether there is data being returned or not. For example, if you have requested a file, the event will trigger multiple times as each packet of data is received so that you can show a progress bar, for example. The general
-    structure for the ds_map will be as follows:</p>
+  <p>컴퓨팅에서, <b>포스트</b> 요청은 클라이언트가 파일을 업로드하거나 완성 된 양식을 제출할 때와 같이 검색 요청의 일부로 서버에 데이터를 보내야 할 때 사용되며 GameMaker Studio 2의 경우에도 동일합니다. 받는 반면 <span class="inline"><a href="http_get.htm">HTTP_GET ()</a></span> 만을 URL은 <tt>(서버, http_post_string로</tt> 전송 요청 <tt>방법)도</tt> 서버에 송신되어 새로운 자원의 생성 또는 기존 자원의 갱신 또는 될 수있는 문자열을 포함 양자 모두. 이 함수를 사용할 때 HTTP 요청 매개 변수 (웹 페이지에서 양식을 제출할 때 때때로 URL의 끝에 &quot;고정 된 비트&quot;)를 사용할 수 있습니다.</p>
+  <p>이 이벤트는 모든 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP 이벤트에</a> 의해 선택되는 &quot;콜백&quot;을 생성합니다.이 경우이 이벤트 전용의 <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS 맵</a> (일반적으로 &quot;사전&quot;이라고 함)이 생성되고 특수 변수에 저장됩니다. <b>async_load</b> 이 ds_map은 리턴되는 데이터의 유무에 따라 다른 값을 포함합니다. 예를 들어 파일을 요청한 경우 각 데이터 패킷이 수신 될 때 이벤트가 여러 번 트리거되어 진행률 표시 줄을 표시 할 수 있습니다. ds_map의 일반적인 구조는 다음과 같습니다.</p>
   <ul class="colour">
-    <li><b>id: </b>The ID which was returned from the command. If you fire off a series of <tt>http_</tt> requests then you need to know which one you are getting the reply to, and so you would use this value to compare to the value you stored when you originally
-      sent the request to find the right one.</li>
-    <li><b>status: </b>Returns a value of less than 0 for an error, 0 for complete and 1 for receiving packets (see below for more details).</li>
-    <li><b>result: </b>The data received (string only).</li>
-    <li><b>url: </b>The complete URL you requested.</li>
-    <li><b>http_status: </b>The raw http status code (if available). This returns the standard web status code for most browsers, eg: 304 for &quot;Not Modified&quot; or 204 for &quot;No Content&quot;, etc...</li>
+    <li><b>id :</b> 명령에서 반환 된 ID입니다. 일련의 <tt>http_</tt> 요청을 발생시키는 경우 응답을받는 요청을 알아야 <tt>하므로이</tt> 값을 사용하여 원래 요청을 보낼 때 저장 한 값과 비교하여 올바른 요청을 찾습니다.</li>
+    <li><b>status :</b> 오류의 경우 0, 완료의 경우 0, 패킷 수신의 경우 1보다 작은 값을 반환합니다 (자세한 내용은 아래 참조).</li>
+    <li><b>결과 :</b> 수신 된 데이터 (문자열 만 해당)</li>
+    <li><b>url :</b> 요청한 전체 URL입니다.</li>
+    <li><b>http_status :</b> 원시 http 상태 코드 (사용 가능한 경우). 이것은 대부분의 브라우저에서 표준 웹 상태 코드를 반환합니다.</li>
   </ul>
-  <p>If there are multiple packets being returned to your game, the callback &quot;status&quot; key will return 1, in which case the DS map will have the following additional keys:</p>
+  <p>게임에 여러 개의 패킷이 반환되면 콜백 &quot;상태&quot;키는 1을 반환하며,이 경우 DS 맵에는 다음과 같은 추가 키가 있습니다.</p>
   <ul class="colour">
-    <li><b>&quot;contentLength&quot;: </b>This is the size of file that the web server has said you should expect to receive (may be -1 if the server does not return this data).</li>
-    <li><b>&quot;sizeDownloaded&quot;: </b>The size of the data that has already been downloaded.</li>
+    <li><b>&quot;contentLength&quot;:</b> 웹 서버가 수신해야한다고 말한 파일의 크기입니다 (서버가이 데이터를 반환하지 않으면 -1 일 수 있음).</li>
+    <li><b>&quot;sizeDownloaded&quot;:</b> 이미 다운로드 된 데이터의 크기입니다.</li>
   </ul>
-  <p class="note"><b>NOTE: </b>You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results. Please see the part on <a href="HTTP.htm">Cross Domain Issues</a>    for further details.</p>
+  <p class="note"><b>참고 :</b> 브라우저의 XSS 보호로 인해 도메인 간 리소스 요청 및로드 시도가 차단되어 빈 결과가 반환 될 수 있습니다. 자세한 내용은 <a href="HTTP.htm">도메인 간 문제</a> 부분을 ​​참조하십시오.</p>
   <p> </p>
-  <h4>Syntax:</h4>
+  <h4>통사론:</h4>
   <p class="code">http_post_string(url, string);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>논의</th>
+        <th>기술</th>
       </tr>
       <tr>
         <td>url</td>
-        <td>The web address of the server that you wish to get information from</td>
+        <td>정보를 얻으려는 서버의 웹 주소</td>
       </tr>
       <tr>
-        <td>string</td>
-        <td>The string you wish to send to the specified URL</td>
+        <td>끈</td>
+        <td>지정된 URL로 보내려는 문자열</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns:</h4>
+  <h4>보고:</h4>
   <p class="code">Real</p>
   <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The <tt>http_post_string()</tt> function can be called from any event, and since it is asynchronous the callback can be almost instantaneous or could take several seconds. Calling the function is simple and would look something like this:</p>
+  <h4>확장 된 예 :</h4>
+  <p><tt>http_post_string ()</tt> 함수는 모든 이벤트에서 호출 할 수 있으며, 비동기이기 때문에 콜백은 거의 즉각적이거나 몇 초가 걸릴 수 있습니다. 함수를 호출하는 것은 간단하며 다음과 같습니다.</p>
   <p class="code">var str = &quot;name=&quot; + global.player_name + &quot;&amp;score=&quot; + string(global.player_score);<br/> post = http_post_string(&quot;http://www.angusgames.com/game?game_id=&quot; + string(global.game_id), str);</p>
-  <p>The above code sends a retrieval request to the specified URL with the given parameters as well as sending the additional data (player name and score in URL-encoded form) stored in the variable str. This will trigger all defined asynchronous <b>Http Events</b>    if a callback is received, and you can check the &quot;id&quot; returned against that stored in the variable <tt>post</tt> to make sure that you run the correct code should you have used various <tt>http_post_string()</tt> functions. The following
-    example code shows how this would be done:</p>
+  <p>위의 코드는 변수 str에 저장된 추가 데이터 (URL 인코딩 형식의 플레이어 이름 및 점수)와 함께 지정된 매개 변수를 사용하여 검색 요청을 지정된 URL로 보냅니다. 이 정의 된 모든 비동기 트리거 <b>HTTP를 이벤트</b> 콜백이 수신되면, 당신은 다양한 <tt>http_post_string ()</tt> 함수를 사용해야 당신은 당신이 올바른 코드를 실행할 수 있는지 확인하기 위해 가변 <tt>포스트에</tt> 저장된에 대해 반환 된 &quot;ID&quot;를 확인할 수 있습니다. 다음 예제 코드는이를 수행하는 방법을 보여줍니다.</p>
   <p class="code">var r_str = &quot;null&quot;;<br/> if ds_map_find_value(async_load, &quot;id&quot;) == post<br/>     {
     <br/>     if ds_map_find_value(async_load, &quot;status&quot;) == 0<br/>         {
     <br/>         r_str = ds_map_find_value(async_load, &quot;result&quot;);<br/>         }
     <br/>     }
   </p>
-  <p>The above code will first check the id of the DS map that has been created, then check the status of the callback. If the value is equal to 0 (signalling success) the result from the callback will then be stored in a variable for future use, otherwise
-    the variable will simply hold a default value (in this case &quot;null&quot;).</p>
+  <p>위 코드는 먼저 생성 된 DS 맵의 ID를 확인한 다음 콜백 상태를 확인합니다. 값이 0 (신호 성공)과 같으면 콜백의 결과는 나중에 사용하기 위해 변수에 저장되며, 그렇지 않으면 변수는 기본값 (이 경우 &quot;null&quot;)을 유지합니다.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
+  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Original_text" onclick="winopen('GameMaker_Language/GML_Reference/Asynchronous_Functions/HTTP/http_post_string.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="HTTP.htm">HTTP</a></div>
-        <div style="float:right">Next: <a href="http_get_request_crossorigin.htm">http_get_request_crossorigin</a></div>
+        <div style="float:left">목록: <a href="HTTP.htm">HTTP</a></div>
+        <div style="float:right">다음: <a href="http_get_request_crossorigin.htm">http_get_request_crossorigin</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 http_post_string
@@ -156,4 +149,4 @@ http_post_string
 http_post_string
 -->
 
-</body></html>
+</body></html> 
