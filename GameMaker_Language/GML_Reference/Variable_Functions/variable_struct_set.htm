@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.1.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>variable_struct_set</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function variable_struct_set"/>
+  <meta name="rh-index-keywords" content="variable_struct_set"/>
+  <meta name="search-keywords" content="variable_struct_set"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="variable_struct_set">
+        <span>variable_struct_set</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>variable_struct_set</h1>
+  <p>이 함수를 사용하면 구조체 참조자안에 변수값을 설정할 수 있습니다. 함수의 인자값으론 설정하고 싶은 변수의 이름<i>(문자형 데이터)</i> 뿐만 아니라 구조체 참조자도 들어가야 하고, 마지막으로 변수에 설정하고 싶은 값(<a href="../../GML_Overview/Data_Types.htm">data type</a>
+  항목에 부합되는 어떠한 형태든 상관없다)을 넣어줘야 합니다(아래 예제코드에서 확인가능). 만약 변수가 구조체 참조자 내부에 존재하지 않다면, 인자로 넣어준 변수이름과 값으로 생성하고, 초기화할 것입니다.</p>
+  <p> </p>
+  <h4>문법:</h4>
+  <p class="code">variable_struct_set(struct, name, val);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
+      </tr>
+      <tr>
+        <td>struct</td>
+        <td>설정하고 싶은 구조체 참조자</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>설정하고 싶은 변수의 이름(문자형 데이터)</td>
+      </tr>
+      <tr>
+        <td>val</td>
+        <td>변수에 설정하고 싶은 값</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>반환값:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>예제:</h4>
+  <p class="code">if !variable_struct_exists(mystruct, &quot;shields&quot;)<br/>    {
+    <br/>    variable_struct_set(mystruct, &quot;shields&quot;, 0);<br/>    }
+  </p>
+  <p>위 코드는 주어진 구조체 참조자안에 변수의 존재여부를 확인하고, 해당 이름의 변수가 존재하지 않다면 새로 생성하고 0으로 초기화 해줍니다.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">이전: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">다음: <a href="variable_struct_get_names.htm">variable_struct_get_names</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+variable_struct_set
+-->
+  <!-- TAGS
+variable_struct_set
+-->
+
+</body></html>

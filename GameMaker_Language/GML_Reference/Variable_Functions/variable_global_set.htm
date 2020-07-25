@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.1.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>variable_global_set</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function variable_global_set"/>
+  <meta name="rh-index-keywords" content="variable_global_set"/>
+  <meta name="search-keywords" content="variable_global_set"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="variable_global_set">
+        <span>variable_global_set</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>variable_global_set</h1>
+  <p>이 함수를 사용하시면 인자로 넣어준 전역변수의 값을 설정할 수 있습니다. 함수의 인자값은 설정하길 원하는 전역변수의 <i>이름(문자열 데이터)</i>과 설정하고 싶은 <i>값</i>(<a href="../../GML_Overview/Data_Types.htm">data type</a>항목에 부합되면 어떤 형태든 상관없음)을 넣어주시면 됩니다.
+    만약 인자값으로 넣어준 전역변수의 이름이 게임내에 존재하지 않다면 해당 변수이름의 값을 생성하고 값을 부여하게 됩니다.</p>
+  <p> </p>
+  <h4>문법:</h4>
+  <p class="code">variable_global_set(name, val);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>값을 설정하고 싶은 전역변수의 이름(문자열 데이터)</td>
+      </tr>
+      <tr>
+        <td>val</td>
+        <td>전역변수를 설정하고 싶은 값</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>반환값:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>예제:</h4>
+  <p class="code">if !variable_global_exists(&quot;enemy_num&quot;)<br/>    {
+    <br/>    variable_global_set(&quot;enemy_num&quot;, 0);<br/>    }
+  </p>
+  <p>위 코드는 전역변수가 존재하는지 여부를 판단하고, 존재하지 않는다면 해당 변수이름으로 생성하고 0으로 값을 부여해줍니다.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">이전: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">다음: <a href="variable_struct_exists.htm">variable_struct_exists</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+variable_global_set
+-->
+  <!-- TAGS
+variable_global_set
+-->
+
+</body></html>

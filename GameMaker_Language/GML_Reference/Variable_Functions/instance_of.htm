@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.1.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>instance_of</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function instance_of"/>
+  <meta name="rh-index-keywords" content="instance_of"/>
+  <meta name="search-keywords" content="instance_of"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="instance_of">
+        <span>instance_of</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_of</h1>
+  <p>이 함수는 <a href="../../GML_Overview/Structs.htm">constructor function</a>(생성자 함수) 또는 <a href="../../GML_Overview/Language_Features/new.htm"><tt>new</tt></a> 연산자를 사용해서 구조체를 생성할 때 쓰인 함수의 이름을 찾는데 사용됩니다.
+     함수인자값으로 확인하고 싶은 구조체 참조자를 넣어주면, 함수를 사용했다면 문자열 데이터로 함수의 이름을 반환하고, 그렇지 않다면 <tt>&quot;undefined&quot;</tt>를 반환합니다(구조체 참조자 이외에 변수를 넣어주면 undefined가 출력됨).
+     만약 구조체 리터럴(a struct literal : 구조체를 생성할 때 &quot;생성자 함수&quot;를 사용하지 않는 참조자를 의미함)인 참조자를 인자값으로 넣어주면 함수는 단순히  &quot;struct&quot;이란 문자열 데이터값을 반환할 것입니다.</p>
+  <p> </p>
+  <h4>문법:</h4>
+  <p class="code">instanceof(struct_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>인자값(Argument)</th>
+        <th>설명(Description)</th>
+      </tr>
+      <tr>
+        <td>struct</td>
+        <td>생성자 함수를 알고 싶은 구조체 참조자</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>반환값:</h4>
+  <p class="code">String or <tt>undefined</tt></p>
+  <p> </p>
+  <h4>확장 예제:</h4>
+  <p>이 예제에선 우리는 먼저 구조체 생성자 함수로 사용될 함수를 정의를 해야 합니다. :</p>
+  <p class="code">function init_struct(_a, _b, _c) constructor<br/>     {
+    <br/>     a = _a;<br/>     b = _b;<br/>     c = _c;<br/>     }
+  </p>
+  <p>정의된 함수는 <tt>new</tt>연산자를 같이 사용해서 구조체를 생성하면서 인자값으로 넣어준 값으로 함수 내부에 선언된 변수들을 초기화 해줍니다. :</p>
+  <p class="code">mystruct = new init_struct(10, 100, &quot;Hello World&quot;);</p>
+  <p>그런다면 함수의 이름을 다음과 같은 방법으로 얻으실 수 있습니다. :</p>
+  <p class="code">var _name = instanceof(mystruct);<br/> if is_string(_name)<br/>     {
+    <br/>     show_debug_message(_name);
+    <br/>     }
+  </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">이전: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">다음: <a href="array_create.htm">array_create</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+variable_struct_names_count
+-->
+  <!-- TAGS
+variable_struct_names_count
+-->
+
+</body></html>
