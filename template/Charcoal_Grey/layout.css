@@ -1910,8 +1910,7 @@ body.media-mobile {
         overflow: auto;
         position: absolute;
         top: 0.7em;
-        left: 2.8em;
-        right: 4em; }
+        left: 2.8em;}
       body.media-mobile div.header div.brs_next, body.media-mobile div.header div.brs_previous, body.media-mobile div.header div.search {
         float: right;
         height: 3.125em;
