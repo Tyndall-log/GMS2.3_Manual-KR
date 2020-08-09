@@ -71,7 +71,7 @@
         <span>draw_text</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
       </div>
     </div>
   </div>
@@ -79,11 +79,8 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text</h1>
-  <p>
-      이 함수를 사용하면 룸에 어디에 있든 문자열을 그릴수 있습니다. (만약 실수 숫자를 사용하고 싶다면  <a href="../../Strings/string.htm"><tt>string</tt><tt>()</tt></a> 함수를 문자에 감싸면 됩니다.) 만약 문자열을 결합하고 싶으면
-      <b>+</b>를 사용하면 됩니다. (아래 예제 참고) 또한  <b>\n</b>을 문자열안에 넣으면 줄바꿈이 되어 여러 줄을 그릴 수 있게 됩니다. (어떻게 옳바른 형식을 사용하고 어떤 이스케이프 문자를 사용할 수 있는지는 <a href="../../Strings/Strings.htm">여기</a>를 참고해 주세요.)
-      문자의 색과 알파값(투명값)은 미리 설정된 <a href="../Colour_And_Alpha/draw_set_alpha.htm"><tt>draw_set_alpha</tt><tt>()</tt><tt></tt></a> 함수와 <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour</tt><tt>()</tt><tt></tt></a> 함수로 결정됩니다. </p>
-  <p class="NOTE"><b>NOTE</b>: 정확한 문자의 위치는 <a href="draw_set_halign.htm"><tt><span style="font-size:14px;">draw_set_halign</span></tt><tt>()</tt><tt></tt></a> 와 <a href="draw_set_valign.htm"><tt><span style="font-size:14px;">draw_set_valign</span></tt><tt>()</tt><tt></tt></a>에 영향을 받습니다.</p>
+  <p> 이 함수를 사용하면 룸에 어디에 있든 문자열을 그릴 수 있습니다. (만약 실수 숫자를 사용하고 싶다면 <a href="../../Strings/string.htm"><tt>string()</tt></a> 함수를 문자에 감싸면 됩니다.) 만약 문자열을 결합하고 싶으면 <b>+</b>를 사용하면 됩니다. (아래 예제 참고) 또한 <b>\n</b>을 문자열 안에 넣으면 줄바꿈이 되어 여러 줄을 그릴 수 있게 됩니다. (어떻게 옳바른 형식을 사용하고, 어떤 이스케이프 문자를 사용할 수 있는지는 <a href="../../Strings/Strings.htm">여기</a>를 참고해 주세요.) 문자의 색과 알파값(투명도)은 미리 설정된 <a href="../Colour_And_Alpha/draw_set_alpha.htm"><tt>draw_set_alpha()</tt></a> 함수와 <a href="../Colour_And_Alpha/draw_set_colour.htm"><tt>draw_set_colour()</tt></a> 함수로 결정됩니다.</p>
+  <p class="note"><b>참고 :</b> 정확한 문자의 위치는 <a href="draw_set_halign.htm"><tt><span style="font-size:14px;">draw_set_halign</span>()</tt></a>와 <a href="draw_set_valign.htm"><tt><span style="font-size:14px;">draw_set_valign</span>()</tt></a>에 영향을 받습니다.</p>
   <p> </p>
   <h4>문법:</h4>
   <p class="code">draw_text(x, y, string);</p>
@@ -95,15 +92,15 @@
       </tr>
       <tr>
         <td>x</td>
-        <td>그려진 문자열의 x 좌표값.</td>
+        <td>그려진 문자열의 x 좌표값</td>
       </tr>
       <tr>
         <td>y</td>
-        <td>그려진 문자열의 y 좌표값.</td>
+        <td>그려진 문자열의 y 좌표값</td>
       </tr>
       <tr>
         <td>string</td>
-        <td>그려질 문자열.</td>
+        <td>그려질 문자열</td>
       </tr>
     </tbody>
   </table>
@@ -111,9 +108,9 @@
   <h4>반환값:</h4>
   <p class="code">N/A</p>
   <p> </p>
-  <h4>예시:</h4>
+  <h4>예제:</h4>
   <p class="code">draw_text(x, y, &quot;Hello, &quot; + global.Name + &quot;!\nI hope you are well!&quot;);</p>
-  <p>이 위의 코드는 개체의 x/y 에 문자열이 그려집니다, 이는 전역변수 &quot;Name&quot;에 저장된 문자열을 사용하고 2줄로 나눠집니다.</p>
+  <p>위 예제는 개체의 x/y 에 문자열이 그려집니다. 이는 전역변수 &quot;Name&quot;에 저장된 문자열을 사용하고 두 줄로 나눠집니다.</p>
   <p> </p>
   <p> </p>
   <div class='Participant'>한글화 : 왕초보 개발자ㅠ(alst****)</div>
@@ -121,11 +118,11 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">목록: <a href="Text.htm">Text</a></div>
+        <div style="float:left">목록: <a href="Text.htm">텍스트(글자)</a></div>
         <div style="float:right">다음: <a href="draw_text_ext.htm">draw_text_ext</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
   </div>
   <!-- KEYWORDS
 draw_text
