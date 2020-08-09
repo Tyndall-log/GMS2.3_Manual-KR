@@ -32,7 +32,7 @@
     }
 
     -->
-  
+
 /*]]>*/</style>
 
   <script type="text/javascript">//<![CDATA[
@@ -40,7 +40,7 @@
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
     gTopicId = "2.0_1";
-  
+
 //]]></script>
 
   <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
@@ -53,7 +53,7 @@
   <meta name="topic-status" content="Draft"/>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>What Is Programming?</title>
+  <title>프로그래밍이란?</title>
   <meta name="generator" content="Adobe RoboHelp 2019"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
   <meta name="rh-authors" content="Mark Alexander"/>
@@ -82,51 +82,52 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>프로그래밍이란?</h1>
-  <p><a href="Quick_Start_Guide.htm">이전 섹션에서는</a> GameMaker Studio 2가 어떻게 게임을 만드는 방법에 대해 설명했지만 추가 한 스프라이트, 오브젝트 또는 룸에 관계없이 <strong>프로그래밍</strong> 하도록 설정하지 않으면 아무 일도 일어나지 않습니다. 그러나 프로그램이란 무엇입니까?</p>
-  <p>일반적으로 프로그램은 단순히 특정 작업을 수행하도록 컴퓨터에 지시하는 일련의 명령 (또는 <strong><a class="tooltip" title="프로그래밍에서 명령문은 수행 할 동작을 나타내는 프로그래밍 언어로 합법적으로 작성된 단일 코드 행입니다. 명령문은 표현식, 연산자 및 함수를 포함하여 자체의 내부 구성 요소를 가질 수 있습니다. 문장의 예는 A = B + 5입니다. GameMaker Studio 2 프로그램은 함께 플레이어를 움직이는 것과 같이 작업을 수행하는 하나 이상의 문장 시퀀스 일뿐입니다.">설명</a></strong> )입니다. 이러한 작업은 단순히 컴퓨터에 화면에 무언가를 그리도록 지시하는 것, 일부 사용자 입력을 기반으로 값을 계산 한 후 반응하는 것까지 크게 다를 수 있지만, 모든 경우에 결과를 제공하는 논리적 구조입니다. 이전 페이지에서 객체의 인스턴스를 오른쪽으로 2 픽셀 씩 이동하는 것에 대해 이야기 했으므로 실제 프로그램을 살펴 보겠습니다.</p>
-  <p>끌어서 놓기 (DnD ™)에서는 다음과 같습니다.</p>
+  <p><a href="Quick_Start_Guide.htm">이전 섹션</a>에서는 게임메이커 스튜디오 2(이하 GMS2)가 게임을 어떻게 만들어내는지를 살펴봤습니다. 하지만 스프라이트, 오브젝트, 룸과 상관없이 <strong>프로그램</strong>을 짜지 않는다면 아무 일도 일어나지 않습니다. 프로그램이란 무엇일까요?</p>
+  <p>일반적으로 프로그램이란 컴퓨터가 특정 작업을 수행하도록 컴퓨터에 지시하는 일련의 명령어(또는 <strong><a class="tooltip" title="프로그래밍에서 명령문은 수행 할 동작을 나타내는 프로그래밍 언어로 합법적으로 작성된 단일 코드 행입니다. 명령문은 표현식, 연산자 및 함수를 포함하여 자체의 내부 구성 요소를 가질 수 있습니다. 문장의 예는 A = B + 5입니다. GameMaker Studio 2 프로그램은 함께 플레이어를 움직이는 것과 같이 작업을 수행하는 하나 이상의 문장 시퀀스 일뿐입니다.">명령문(statement)</a></strong>)을 말합니다. 단순히 화면에 그림을 띄우는 것부터, 입력된 값을 계산하고 반응하는 것까지 어떤 식으로든 모종의 결과를 제공하는 논리적인 구조입니다. 이전 페이지에서는 오브젝트의 인스턴스를 2픽셀만큼 오른쪽으로 이동시키는 방법을 생각해봤습니다. 이번에는 그것을 실제로 어떻게 프로그램하는지 알아봅시다.</p>
+  <p>드래그-앤-드롭(DnD™)에서는 이렇게 만듭니다:</p>
   <p><img alt="DnD Example" class="center" src="../assets/Images/QS_Guide/QS_DnD_Example.png"/></p>
-  <p>그리고 GML (GameMaker Language)을 사용하면 다음과 같습니다.</p>
+  <p>게임메이커 언어(GML)에서는 이렇게 만듭니다:</p>
   <p class="code">x = x + 2;</p>
-  <p>위에서 무슨 일이 일어나고 있는지 이해하려면 먼저 <strong>Variables</strong> 에 대해 이야기하고 나서 <strong>함수</strong> 와 마지막으로 <strong>조건부</strong> 에 대해 논의 할 것입니다.이 세 가지가 일반적으로 모든 프로그램의 대부분을 구성하기 때문입니다.</p>
+  <p>위에서 쓴 것이 어떤 의미인지 알기 위해서는 <strong>변수</strong>, <strong>함수</strong>, 그리고 <strong>조건</strong>에 대한 이해가 필요합니다. 어떤 프로그램이든 이 세 가지가 개발의 기초 단위가 됩니다.</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="What_Is_Programming_.htm#"><span data-open-text="true">변수</span> <span data-close-text="true">변수</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="What_Is_Programming_.htm#"><span data-open-text="true">변수</span><span data-close-text="true">변수</span></a></p>
   <div class="droptext" data-targetname="drop_down">
-    <p class="dropspot">변수는 <strong>함수</strong> 와 함께 프로그래밍의 초석입니다 (잠깐 살펴 보겠습니다). 변수는 단순히 <em>이름이 지정된 값</em> 이며, 위의 경우 변수는 &quot; <span class="inline">x</span> &quot;입니다. 이제, <span class="inline">&quot;x&quot;는</span> -126, 또는 583, 또는 1.56378 같은 값이 될 수 있지만 (따라서 이름 &quot;변수&quot;)가 달라질 수있는 <span class="inline">&quot;X&quot;의</span> 실제 값은 무관하다. 중요한 것은 &quot; <span class="inline">x</span> &quot;를 취해 2를 더한다는 것입니다. 이 경우 &quot; <span class="inline">x</span> &quot;는 <strong>내장 변수</strong> 이므로 모든 객체에 대해 GameMaker Studio 2에서 생성 한 변수이지만 자체 변수도 만들 수 있습니다.</p>
-    <p class="dropspot">변수를 만들려면 변수를 사용하기 전에 <strong>선언</strong> 해야합니다. 변수를 선언하면 GameMaker Studio 2에이 새로운 변수가 존재하며 초기 값을가집니다. 변수를 계산하려면 다음과 같이하면됩니다 :</p>
+    <p class="dropspot">변수는 (잠시 뒤에 설명할) <strong>함수</strong>와 함께 프로그래밍의 바탕이 되는 초석입니다. 변수는 간단히 말해 <em>이름 매겨진 값</em>을 뜻하는데, 위 예시에서는 &quot;<span class="inline">x</span>&quot;가 되겠습니다. &quot;<span class="inline">x</span>&quot;는 -126이든, 583이든, 1.56378이든, 어떤 값이든 될 수 있습니다. 또한, &quot;<span class="inline">x</span>&quot;라는 이름은 값과 상관이 없습니다. (&quot;variable&quot; 같은 이름도 될 수 있겠지요.) 중요한 것은 우리가 &quot;<span class="inline">x</span>&quot;를 만들어 거기에 2를 더할 것이라는 점입니다. 주의할 점은, &quot;<span class="inline">x</span>&quot;는 GMS2가 모든 오브젝트에 대하여 만들어 놓은 <strong>내장 변수</strong>입니다. 그 외에도 나만의 변수를 만들 수도 있습니다.</p>
+    <p class="dropspot">변수를 사용하기 전에는 먼저 변수를 <strong>선언</strong>해야 합니다. 변수를 선언한다는 것은 GMS2에게 새로운 변수가 생겼으며, 그 초깃값은 이러하다 하고 알려주는 것입니다. 변수를 선언하기 위해서는 다음과 같이 하면 됩니다:</p>
     <p class="dropspot"><img alt="Declare DnD Variables" class="center" src="../assets/Images/QS_Guide/QS_DnD_Declare.png"/></p>
     <p class="dropspot">또는:</p>
     <p class="code">points = 0;</p>
-    <p class="dropspot">변수가 선언되면 추가 프로그래밍 된 코드 또는 작업에 사용할 수 있습니다. 변수의 장점은 실제로 값이 무엇인지 걱정할 필요없이 여러 위치에서 값을 &quot;재사용&quot;할 수 있다는 것입니다. 예를 들어, &quot; <span class="inline">Damage</span> &quot;변수가 있고 여러 곳에서 변수를 사용하여 GameMaker Studio 2에게 게임의 다른 물체에 일정량의 손상을가하도록 지시합니다. &quot; <span class="inline">손상</span> &quot;을 20으로 선언 할 수 있지만 나중에이 값이 너무 커서 10으로 변경하고 싶다고 결정합니다. 변수 대신 값 20을 사용하려면 모든 것을 수행해야합니다. 코드 또는 작업을 수행하고 20에서 10으로 변경하면 시간이 많이 걸리고 오류가 발생하기 쉽습니다. 그러나 변수를 사용하면 변수를 선언 할 때 변수를 <em>한 번</em> 10으로 변경하면 나머지 코드 나 작업에서이 새로운 값을 사용하게됩니다.</p>
-    <p class="dropspot">다양한 유형의 변수가 있으며 각 변수마다 사용할 수있는 방법이 약간 다릅니다. 여기서는 다루지 않지만 설명서의 <a href="../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">GameMaker 언어 개요</a> 섹션에서 자세한 정보를 찾을 수 있습니다.</p>
-    <p class="dropspot">그러나 변수는 이야기의 첫 부분 일뿐입니다. 다음 부분은 함수 사용입니다.</p>
+    <p class="dropspot">한 번 변수가 선언되면 이후의 코드와 액션에 계속 쓰일 수 있습니다. 변수의 장점이라 하면 실제 그 값과 관련 없이 여러 위치에서 값을 &quot;재사용&quot;할 수 있다는 점입니다. 예를 들어, &quot;<span class="inline">Damage</span>&quot;라는 변수로 다른 오브젝트에 일정 대미지를 주는 시스템을 만들었다고 생각해봅시다. &quot;<span class="inline">Damage</span>&quot;를 숫자 20으로 그냥 쓸 수도 있겠지만, 도중에 대미지가 너무 커서 10으로 변경하려고 했을 때 단순히 20이라고 썼다면 대미지를 주는 모든 곳의 값을 10으로 일일이 바꿔줘야 합니다. 시간도 많이 걸리고 오류가 발생하기도 쉽습니다. 하지만 변수를 사용한다면, 맨 처음에 변수를 선언할 때 20을 10으로만 <em>한 번</em> 바꿔주기만 한다면 똑같은 작업을 훨씬 수월하게 해낼 수 있습니다.</p>
+    <p class="dropspot">변수에는 많은 종류가 있고 쓰이는 방식도 조금씩 다릅니다. 여기서는 다루지 않지만 <a href="../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">게임메이커 언어 개요(GML 개요)</a> 섹션에서 자세한 정보를 볼 수 있습니다.</p>
+    <p class="dropspot">그렇지만, 변수는 어디까지나 이야기의 처음일 뿐입니다. 다음 파트에서는 함수 사용에 대해 알아보겠습니다...</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="What_Is_Programming_.htm#"><span data-open-text="true">기능</span> <span data-close-text="true">기능</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="What_Is_Programming_.htm#"><span data-open-text="true">함수</span><span data-close-text="true">함수</span></a></p>
   <div class="droptext" data-targetname="drop_down1">
-    <p class="dropspot">프로그래밍의 다음으로 중요한 부분은 변수와 함께 <strong>함수</strong> 를 사용하는 것입니다. 함수는 단순히 컴퓨터로 하여금 무언가를하도록 지시하는 명령이며, 출력 값뿐만 아니라 입력 값도 가질 수 있습니다 (예 : 값을 줄 수 있고 어떤 작업을 수행 한 다음 다른 값을 반환 할 수 있습니다). 모든 기능에 입력이 필요한 것은 아니며 출력도 없습니다. 이를 더 잘 이해하기 위해 GameMaker Studio 2의 내장 기능을 살펴 보겠습니다.</p>
-    <p class="dropspot">우리가 살펴볼 함수는 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number ()</span></a> 이며 DnD ™에서 <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Get_Instance_Count.htm">Get Instance Count</a> 액션입니다. 이 함수 / 액션은 게임 룸에서 주어진 오브젝트의 인스턴스 수를 검색하며 다음과 같이 사용합니다 :</p>
+    <p class="dropspot">프로그래밍에 있어 다음으로 중요한 것은 변수와 함께 함수를 사용하는 것입니다. <strong>함수</strong>는 간단히 말해 컴퓨터에게 무언가를 하도록 지시하는 명령을 말하며, 입력 값을 받으면 결괏값을 내놓는 구조입니다. (예: 함수에 값을 입력하면 모종의 조작을 한 뒤 어떠한 값을 반환한다.) 모든 함수에 입력 값이 필요하진 않습니다. 마찬가지로 모든 함수가 결괏값을 반환하지는 않습니다. 이해를 위해 GMS2의 내장 함수를 살펴봅시다.</p>
+    <p class="dropspot">우리가 살펴볼 함수는 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a>, DnD™에서는 <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Get_Instance_Count.htm">Get Instance Count</a> 액션입니다. 이 함수/액션은 입력된 오브젝트의 인스턴스 수를 현재 룸에서 검색합니다. 다음과 같이 사용합니다:</p>
     <p class="dropspot"><img alt="Get Instance Count DnD Action" class="center" src="../assets/Images/QS_Guide/QS_DnD_GetInstanceCount.png"/></p>
     <p class="dropspot">또는:</p>
     <p class="code">number = instance_number(obj_Enemy);</p>
-    <p class="dropspot">위의 두 가지 예에서 함수는 객체 ID를 입력 값 ( <strong><a class="tooltip" title="인수 (파라미터라고도 함)는 함수에 전달되는 값입니다. 예를 들어, GameMaker 언어 함수 &#39;sqr (num)&#39;은 인수로 제공 한 숫자의 제곱을 제공하는 함수입니다. 예 : &#39;a = sqr (4);&#39; 여기서 인수는 4이고 함수는 변수 &#39;a&#39;에 저장된 16을 리턴합니다.">인수</a></strong> 또는 <strong>매개 변수</strong> )으로 사용하고 출력 값 ( <strong>반환</strong> 값)을 제공합니다.이 값은 룸에있는 지정된 객체의 인스턴스 수입니다. 함수 / 액션이 호출되었습니다. 변수를 사용하여 반환 된 값인 변수 &quot; <span class="inline">number</span> &quot;를 저장합니다. 이 변수는이 코드가 실행되기 전에 선언 될 수 있거나 코드가 실행될 때 선언 된 것으로 간주되고 함수 / 작업에 할당 된 값이 반환됩니다.</p>
-    <p class="dropspot">내장 GameMaker Language 또는 DnD ™ 액션을 사용하는 것에 만 국한되지 않고 프로그래밍 할 때 가능한 것을 확장하는 데 사용할 함수를 실제로 구성 할 수 있습니다 (GML에 대한 자세한 내용은 <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">여기</a> 를 참조 <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">하십시오).</a> <a href="../Drag_And_Drop/Drag_And_Drop_Overview/Action_Block_Functions.htm">여기</a> DnD ™).</p>
-    <p class="dropspot">함수와 변수로 많은 것을 할 수 있지만 프로그래밍 이야기, <strong>조건부</strong> ...의 마지막 중요한 부분이 없으면 거의 쓸모가 없습니다.</p>
+    <p class="dropspot">두 예시에서 함수는 오브젝트 ID를 입력 값(<strong><a class="tooltip" title="인수 (파라미터라고도 함)는 함수에 전달되는 값입니다. 예를 들어, GameMaker 언어 함수 &#39;sqr(num)&#39;은 인수로 제공 한 숫자의 제곱을 제공하는 함수입니다. 예 : &#39;a = sqr(4);&#39; 여기서 인수는 4이고 함수는 변수 &#39;a&#39;에 저장된 16을 리턴합니다.">인수(argument)</a></strong> 혹은 <strong>매개변수(parameter)</strong>)으로 받습니다. 그리고 실행된 시점에서 현재 룸에 있는 해당 오브젝트의 인스턴스의 개수를 결괏값(<strong>반환값</strong>)으로 내놓습니다. 이 값을 &quot;<span class="inline">number</span>&quot;에 저장한다는 점을 주목하세요. 이 변수는 이 코드가 실행되기 전에 선언되거나, 코드가 실행되는 동시에 선언되는 것으로 간주되고 결괏값으로 값이 설정됩니다.</p>
+    <p class="dropspot">기본으로 제공되는 내장 함수 / 액션뿐 아니라 나만의 함수를 만들 수도 있습니다. (자세한 것은 <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">여기</a>(GML)와 <a href="../Drag_And_Drop/Drag_And_Drop_Overview/Action_Block_Functions.htm">여기</a>(DnD™)를 참고하세요.)</p>
+    <p class="dropspot">함수와 변수로 아무리 많은 것을 할 수 있다 하더라도, 프로그래밍에 관해서 마지막으로 중요한 부분인 <strong>조건</strong>가 없으면 프로그램은 있으나 마나입니다...</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="What_Is_Programming_.htm#"><span data-open-text="true">조건부</span> <span data-close-text="true">조건부</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="What_Is_Programming_.htm#"><span data-open-text="true">조건</span><span data-close-text="true">조건</span></a></p>
   <div class="droptext" data-targetname="drop_down2">
-    <p class="dropspot">프로그래밍의 대부분은 질문을하는 것으로 구성됩니다. 이러한 질문은 일반적으로 true 또는 false로 평가 될 수있는 간단한 질문이며 <strong>조건부</strong> 라고하며 <span class="inline">true</span> 및 <span class="inline">false</span> 의 값을 <strong>부울</strong> 값이라고합니다. 가장 일반적이고 널리 사용되는 조건은 &quot; <span class="inline">if</span> &quot;라는 질문입니다. 이는 &quot; <span class="inline">true</span> &quot;입니다. 이는 어떤 것이 <span class="inline">참</span> 인지 <span class="inline">거짓</span> 인지 확인한 다음 그에 따라 행동합니다. 간단한 예는 체력이 0 이하로 떨어지면 게임에서 캐릭터를 제거하는 것입니다. 일반 언어에서는 다음과 같이 표현됩니다.</p>
-    <p class="code">if the character variable &quot;hp&quot; is less than or equal to zero, then destroy it.</p>
-    <p class="dropspot">위 코드를 코드로 만들려면 다음과 같이하십시오.</p>
+    <p class="dropspot">프로그래밍의 대부분은 질문으로 구성됩니다. 일반적으로 true(참) 혹은 false(거짓)로 대답할 수 있는 간단한 질문이며, 이를 <strong>조건</strong>이라고 합니다.(<span class="inline">true</span>와 <span class="inline">false</span>은 <strong>불리언(boolean)</strong>이라고 부릅니다.) 가장 일반적이고 널리 사용되는 조건은 &quot;<span class="inline">if</span>&quot; 질문입니다. 어떤 것이 <span class="inline">true</span>인지 <span class="inline">false</span>인지 확인한 다음 그에 따라 행동하는 것입니다. 간단한 예시로 체력이 0 이하로 떨어지면 게임에서 캐릭터를 없애는 것을 들 수 있습니다. 일반 언어로는 아래와 같이 표현합니다:</p>
+    <p class="code">만약 캐릭터의 &quot;hp&quot; 변수가 0보다 작거나 같다면, 캐릭터를 제거한다.</p>
+    <p class="dropspot">위 문장을 아래와 같이 만들어봅시다:</p>
     <p class="dropspot"><img alt="DnD Conditional" class="center" src="../assets/Images/QS_Guide/QS_DnD_Conditional.png"/></p>
     <p class="dropspot">또는:</p>
     <p class="code">if (hp &lt;= 0)<br/>
       <br/>     {<br/>
       <br/>     instance_destroy();<br/>
       <br/>     }</p>
-    <p class="dropspot">따라서 위의 &quot;hp 변수가 0보다 작거나 같은 경우&quot;라는 질문을 한 다음 true로 평가되면 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_destroy.htm"><span class="inline">instance_destroy ()</span></a> 함수 또는 <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Destroy_Object_Instance.htm">Destroy Object Instance</a> 함수 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_destroy.htm"><span class="inline">를</span></a> 호출합니다. &quot; <span class="inline">then</span> &quot;(만약 무언가 ... 다음 무언가 ...)은 <em>암시 적</em> 이며 추가 할 필요가 없으며 GML 코드에서 중괄호 <span class="inline">{}</span> 를 사용하여 코드를 &quot;차단&quot;합니다. &quot; <span class="inline">if</span> &quot;가 <span class="inline">true로</span> 평가 될 때 실행되기를 원합니다 (DnD ™에서 이는 &quot; <span class="inline">If</span> &quot;조치의 <em>오른쪽</em> 에 조치를 드롭하여 표시됨). 중괄호 사이에 추가 된 것은 &quot; <span class="inline">if</span> &quot;가 <span class="inline">true로</span> 평가되는 <span class="inline">경우</span> 에만 실행되므로 단일 &quot;블록&quot;에서 둘 이상의 명령문을 실행할 수 있습니다.</p>
-    <p class="dropspot">참고로 한 가지 더 사용 조건이 조건은 다음 <em>&quot;다른,</em> 다음 할 <span class="inline">사실</span> 뭔가를하면 뭔가 평가하여 뭔가 다른 작업을 수행&quot;가 될 수 있도록 우리가, 그것도에 <span class="inline">&quot;다른&quot;문을</span> 추가 할 수 있다는 것입니다 <span class="inline">&quot;만일&quot;.</span> 이런 식으로 <span class="inline">true</span> <em>또는</em> <span class="inline">false를</span> 반환하는 조건식을 처리 할 수 ​​있습니다. 그것의 예도 봅시다 :</p>
+    <p class="dropspot">그러니까, &quot;만약 hp가 0보다 작거나 같다면&quot;라는 질문에 true(참)으로 대답하면 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_destroy.htm"><span class="inline">instance_destroy()</span></a> 함수 또는 <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Destroy_Object_Instance.htm">Destroy Object Instance</a> 액션을 호출하는 것입니다. &quot;<span class="inline">if 조건... then 코드...</span>&quot;처럼 다른 언어에서 사용하는 &quot;<span class="inline">then</span>&quot;은 <em>꼭 쓰지 않아도</em> 됩니다. GML 코드에서는 &quot;<span class="inline">if 조건... {코드...}</span>&quot;처럼 &quot; <span class="inline">if</span>&quot;가 &quot; <span class="inline">true</span>&quot;일 때 실행될 코드를 중괄호 <span class="inline">{}</span>로 &quot;구분&quot;하여 묶을 수 있습니다. (DnD™에서는 &quot;<span class="inline">If</span>&quot; 블록의 <em>오른쪽</em>에, 실행될 블록을 붙이는 방식으로 표현합니다.) 중괄호 안의 코드는  &quot;<span class="inline">if</span>&quot;가 <span class="inline">true</span>일 때만 실행되는 것으로 단일 &quot;블록&quot; 안에 여러 개의 명령문을 넣을 수 있습니다.</p>
+    <p class="dropspot">
+    &quot;<span class="inline">if</span>&quot;를 사용하면 &quot;<span class="inline">else</span>&quot;(그 외)도 사용할 수 있습니다. 이를 이용하면 &quot;만약(if) 어떤 것이 참(<span class="inline">true</span>)이라면 이러이러한 것을 해라, <em>그 외(else)</em>에는 이러이러한 것을 해라&quot;라는 구문을 만들 수 있습니다. 이런 식으로 <span class="inline">true </span> <em>또는</em> <span class="inline">false</span>에 따라 작동하는 조건식을 만들 수 있습니다. 예시를 함께 봅시다:</p>
     <p class="dropspot"><img alt="DnD If... Else.. Example" class="center" src="../assets/Images/QS_Guide/QS_DnD_IfElse.png"/></p>
     <p class="dropspot">또는:</p>
     <p class="code">if (countdown &lt;= 0)<br/>
@@ -139,17 +140,16 @@
       <br/>     {<br/>
       <br/>     countdown = countdown - 1;<br/>
       <br/>     }</p>
-    <p class="dropspot">위 코드는 다음과 같이 일반 언어로 번역됩니다.</p>
-    <p class="code">if the countdown variable is less than or equal to zero then:<br/>
-      <br/>     create an instance of the object &quot;obj_Bullet&quot; at the current x/y position on the layer &quot;instances&quot;,<br/>
-      <br/>     reset the countdown variable to 30.<br/>
-      <br/> else:
-      <br/>
-      <br/>     subtract one from the countdown variable.</p>
-    <p class="dropspot">위의 코드에서 실제 인스턴스 생성 부분에 대해 너무 걱정하지 마십시오. 다음 섹션에서 자세히 설명합니다. 여기서 이해해야 할 중요한 것은 무언가가 <span class="inline">참</span> 인지 <span class="inline">거짓</span> 인지 확인하고 프로그램이 다른 방식으로 응답하도록하는 조건식을 만들 수 있다는 것입니다. 이것은 매우 간단한 것처럼 보이지만 실제로는 매우 강력하며 GameMaker Studio 2에서 프로그래밍 할 때 수행하는 거의 모든 작업의 ​​기초를 형성합니다.</p>
+    <p class="dropspot">위 코드를 일반 언어로 번역하면 다음과 같습니다:</p>
+    <p class="code">만약(if) countdown 변수가 0보다 작거나 같다면:<br/>
+      <br/>     &quot;obj_Bullet&quot; 오브젝트의 인스턴스를 현재 x/y 위치, &quot;instances&quot;라는 레이어에 생성한다.<br/>
+      <br/>     countdown 변수를 30으로 리셋한다.<br/>
+      <br/>그렇지 않으면(countdown 변수가 0보다 크다면):<br/>
+      <br/>     countdown 변수에서 1을 뺀다.</p>
+    <p class="dropspot">위 코드에서 실제 인스턴스를 생성하는 부분은 다음 섹션에서 자세히 설명할 것이니 걱정하지 마세요. 여기서 이해해야 할 것은 무언가가 <span class="inline">true</span>(참)인지 <span class="inline">false</span>(거짓)인지 판단하고 프로그램이 다른 방식으로 반응할 조건식을 만들 수 있다는 것입니다. 간단해 보이지만 GMS2를 통해 프로그램할 거의 모든 것의 놀랍도록 강력한 기초가 될 것입니다.</p>
   </div>
   <p> </p>
-  <p>&quot;프로그래밍이란 무엇인가?&quot;라는 질문에 답하기 위해, <strong>프로그래밍</strong> 은 <strong><a class="tooltip" title="변수는 프로그램 내에서 명명 된 값으로, 필요할 때마다 수정, 저장 및 표시 할 수 있습니다. 예를 들어 이름이 XYZ 인 정수 변수가 있고 값 10을 저장하는 경우 A = XYZ + 10과 같은 작업을 수행 할 수 있습니다. 그러면 XYZ가 10이고 변수 A의 값이 20으로 설정됩니다. 그것에 10을 더하고 있습니다. 연산자를 사용하여 변수 값을 변경할 수도 있으므로 XYZ = XYZ + 100을 수행하면 XYZ 변수의 값이 110으로 수정됩니다. 변수는 식별자와 다른 자산에 대한 참조를 저장하는 데 사용될 수도 있습니다.">변수</a></strong> 를 사용할 수있는 <strong>문장</strong> 의 조합을 사용한다고 말할 수 있습니다. <strong><a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">expression</a></strong> , 작업 수행 <strong>기능</strong> 및 질문을 <strong><a class="tooltip" title="조건부, 조건문 및 조건식은 일반 프로그래밍 언어의 기능이며 결과가 참 또는 거짓 인 경우 코드를 선택하는 데 도움이됩니다. 이들은 프로그래머의 필요에 따라 다른 조치를 수행 할 수 있으며 조건의 최종 값이 true 또는 false 인 경우 여러 조건을 단일 조건으로 결합 할 수 있습니다. 조건 문의 예는 &#39;if&#39;와 &#39;while&#39;입니다.">조건부</a></strong> 로 구성한 다음 목표를 달성하기 위해이 명령문을 동시에 실행합니다. 아래는 DnD ™ 및 GML에서 약간 더 복잡한 프로그램을 볼 수 있습니다. 그것이 무엇을 추측 할 수 있습니까?</p>
+  <p>이상으로, &quot;프로그래밍이란?&quot;에 대한 대답으로 우리는 &quot;<strong>프로그래밍</strong>은 <strong>명령문</strong>의 조합이다.&quot;라고 말할 수 있습니다. 무언가를 <strong><a class="tooltip" title="표현식은 특정 우선 순위 규칙 및 다른 값을 리턴하기 위해 연관되는 규칙에 따라 해석되는 하나 이상의 상수, 변수, 연산자 및 / 또는 함수의 조합입니다. 간단한 표현은 (5 + 5)이며 10을 반환합니다.">표현(expressions)</a></strong>하기 위해 <strong><a class="tooltip" title="변수는 프로그램 내에서 명명 된 값으로, 필요할 때마다 수정, 저장 및 표시 할 수 있습니다. 예를 들어 이름이 XYZ 인 정수 변수가 있고 값 10을 저장하는 경우 A = XYZ + 10과 같은 작업을 수행 할 수 있습니다. 그러면 XYZ가 10이고 변수 A의 값이 20으로 설정됩니다. 그것에 10을 더하고 있습니다. 연산자를 사용하여 변수 값을 변경할 수도 있으므로 XYZ = XYZ + 100을 수행하면 XYZ 변수의 값이 110으로 수정됩니다. 변수는 식별자와 다른 자산에 대한 참조를 저장하는 데 사용될 수도 있습니다.">변수</a></strong>를 사용하고, 어떤 일을 수행하기 위해 <strong>함수</strong>를 사용하고, 질문하기 위해 <strong><a class="tooltip" title="조건, 조건문 및 조건식은 일반 프로그래밍 언어의 기능이며 결과가 참 또는 거짓 인 경우 코드를 선택하는 데 도움이됩니다. 이들은 프로그래머의 필요에 따라 다른 조치를 수행 할 수 있으며 조건의 최종 값이 true 또는 false 인 경우 여러 조건을 단일 조건으로 결합 할 수 있습니다. 조건 문의 예는 &#39;if&#39;와 &#39;while&#39;입니다.">조건</a></strong>을 사용합니다. 동시에, 목표를 달성하기 위한 명령문을 실행합니다. 아래는 DnD™와 GML로 만들어진 조금 더 복잡한 프로그램입니다. 이것을 일반 언어로 표현하자면 무슨 말일까요?</p>
   <p><img alt="DnD Final Code Example" class="center" src="../assets/Images/QS_Guide/QS_DnD_FinalCode.png"/></p>
   <p>또는:</p>
   <p class="code">if mouse_check_button_pressed(mb_left) == true<br/>
@@ -166,17 +166,18 @@
     <br/>         image_blend = c_white;<br/>
     <br/>         }<br/>
     <br/>     }</p>
-  <p><a class="expandspot" data-rhwidget="ExpandSpot" data-target="expanding" href="What_Is_Programming_.htm#"><span data-open-text="true">스포일러</span> <span data-close-text="true">스포일러</span></a> <span class="expandtext" data-targetname="expanding">위의 코드는 먼저 마우스 버튼을 누르고 있는지 확인합니다 ( <strong>왼쪽</strong> 마우스 버튼, 상수 &quot; <span class="inline">mb_left</span> &quot;를 사용하여 정의 됨).이 버튼을 누르면 코드를 실행하는 인스턴스가 현재 마우스 위치로 이동합니다. (내장 변수 &quot; <span class="inline">mouse_x</span> &quot;및 &quot; <span class="inline">mouse_y</span> &quot;를 사용하여 정의) 또한 인스턴스 블렌드 색상을 <strong>빨간색으로</strong> 설정합니다.</span> <span class="expandtext" data-targetname="expanding"><span class="inline">&quot;c_red&quot;-</span> 마우스 버튼을 누르면되지 않은 경우, 다음 마우스 버튼이 <strong>해제되어</strong> 있는지 확인하고,이 경우 우리가 일부 내장 <strong>상수</strong> 사용이 다시 (흰색 참고로 인스턴스 혼합 색상을 재설정 및 &quot; <span class="inline">c_white</span> &quot;-색상을 쉽게 정의합니다).</span></p>
+  <p><a class="expandspot" data-rhwidget="ExpandSpot" data-target="expanding" href="What_Is_Programming_.htm#"><span data-open-text="true">정답</span><span data-close-text="true">정답</span></a><span class="expandtext" data-targetname="expanding">위 코드에서는 처음에 마우스 버튼이 눌렸는지 확인합니다.(&quot;<span class="inline">mb_left</span>&quot;로 표현되는 <strong>왼쪽</strong> 마우스 버튼입니다.) 버튼이 눌렸을 때, 인스턴스는 현재 마우스 위치(내장 변수 &quot;<span class="inline">mouse_x</span>&quot;, &quot;<span class="inline">mouse_y</span>&quot;)로 이동하고 인스턴스의 합성 색상을 <strong>붉은색</strong>으로 설정합니다. 만약 마우스 버튼이 눌리지 않았다면, 마우스 버튼을 누르다가 손을 <strong>뗐는지</strong> 확인하고, 만약 그렇다면 인스턴스의 합성 색상을 하얀색으로 리셋합니다. (이때 색상을 쉽게 지정하기 위해 내장 <strong>상수</strong> &quot;<span class="inline">c_red</span>&quot;와 &quot;<span class="inline">c_white</span>&quot;를 이용합니다.)</span>
+  </p>
   <p> </p>
-  <p>바라건대 이제 프로그래밍이 무엇인지에 대한 아이디어가 조금 더 생길 것이므로 GameMaker Studio 2 <a class="tooltip" title="IDE (Integrated Development Environment)는 컴퓨터 프로그래머에게 소프트웨어 개발을위한 포괄적 인 기능을 제공하는 소프트웨어 응용 프로그램입니다. 이 경우 GameMaker Studio 2의 전체 프론트 엔드는 IDE로 간주되며 그래픽을 생성하고 사운드를 추가하며 게임을 만들기위한 코드를 추가하는 섹션을 포함합니다.">IDE</a> 를 살펴보고 게임에 필요한 <em>스프라이트</em> , <em>오브젝트</em> 및 기타 중요한 리소스와 같은 자산을 추가하는 방법을 살펴 보겠습니다.</p>
+  <p>프로그래밍이 무엇인지 조금이나마 감이 왔으면 좋겠습니다. 다음에는 GMS2의 <a class="tooltip" title="IDE (Integrated Development Environment)는 컴퓨터 프로그래머에게 소프트웨어 개발을위한 포괄적 인 기능을 제공하는 소프트웨어 응용 프로그램입니다. 이 경우 GameMaker Studio 2의 전체 프론트 엔드는 IDE로 간주되며 그래픽을 생성하고 사운드를 추가하며 게임을 만들기위한 코드를 추가하는 섹션을 포함합니다.">IDE</a>를 살펴보고 게임에 필요한 <em>스프라이트</em>와 <em>오브젝트</em> 및 다른 중요한 자원들을 추가하는 방법을 알아보겠습니다.</p>
   <p> </p>
   <p> </p>
-  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Participant">한글화 : 익명[#Q94P]</div>
   <div class="Original_text" onclick="winopen('Quick_Start_Guide/What_Is_Programming_.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">목록: <a href="../Content.htm">인덱스</a></div>
+        <div style="float:left">목록: <a href="../Content.htm">GMS2 안내서 목차</a></div>
         <div style="float:right">다음: <a href="Creating_Sprites.htm">스프라이트 만들기</a></div>
       </div>
     </div>
@@ -190,4 +191,4 @@ Quick Start: Programming
 qs_programming
 -->
 
-</body></html> 
+</body></html>
