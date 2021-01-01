@@ -86,7 +86,7 @@
   <p><img alt="Revolute joint angle limits illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/revolute_joint_image_2.png"/>보시다시피 물리 세계의 각도는 표준 GameMaker Studio 2 각도와 같지 <i>않습니다</i> . 여기서 오른쪽은 0도이고 시계 반대 방향으로 올라가 위로 90은 왼쪽, 180은 아래, 270입니다. 회전 조인트를 다룰 때, 0도 축은 조인트 위치에서 함수에 의해 정의 된 두 번째 인스턴스의 원점까지 이어지고 각도는 시계 방향으로 계산됩니다. 각도 제한을 켜면 한계가이 0도 축을 기준으로 정의되며 한계 범위에 <i>0이 포함되어야합니다</i> . 그렇지 않으면 룸이 시작될 때 조인트가 돌출됩니다. 마지막으로 관절에 모터가 있는지 여부를 정의 할 수 있습니다. 이는 충돌에 영향을받지 않을 때 조인트가 방향으로 이동한다는 것을 의미합니다. 이는 모터 속도에 의해 정의되며 양수는 시계 방향이고 음수는 반 시계 방향입니다. &quot;max_motor_torque&quot;인수는 회전 속도를 제한하여 지속적으로 가속되는 모터를 얻지 못하고 충돌이 회전에 미치는 영향을 제한합니다. 이러한 방식으로 조인트 모터를 사용하여 조인트 속도를 0으로 설정하고 최대 토크를 작지만 중요한 값으로 설정하여 조인트 마찰을 시뮬레이션 할 수 있습니다. 모터는 조인트의 회전을 막으려 고하지만 상당한 부하를 발생시킵니다.</p>
   <p>모든 관절과 마찬가지로 &quot;col&quot;값을 <tt>true</tt> 로 설정하면 두 인스턴스가 서로 상호 작용하고 충돌 할 수 있지만 충돌 이벤트가있는 경우 <i>에만</i> 충돌이 발생합니다. 그러나 <tt>false</tt> 로 설정되어 있으면 충돌이 발생하지 않습니다. .</p>
   <p> </p>
-  <h4>통사론:</h4>
+  <h4>구문:</h4>
   <p class="code">physics_joint_revolute_create(inst1, inst2, w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit, max_motor_torque, motor_speed, motor, col)</p>
   <table>
     <tbody>
@@ -141,7 +141,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>보고:</h4>
+  <h4>반환값:</h4>
   <p class="code">Integer (index of the joint)</p>
   <p> </p>
   <h4>예:</h4>

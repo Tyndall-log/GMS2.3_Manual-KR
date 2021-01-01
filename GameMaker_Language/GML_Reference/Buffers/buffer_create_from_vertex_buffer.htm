@@ -125,7 +125,7 @@
   <p class="note"><b>참고</b> : 정점 버퍼는 1 바이트로 정렬되지만 정점 데이터는 단순히 버퍼로의 원시 메모리 복사본이므로 데이터 처리 방법에 따라 정렬로 버퍼를 만들 수 있습니다.</p>
   <p class="note"><b>참고</b> : 메모리 누수를 방지하기 위해 더 이상 필요없는 메모리에서 이와 같이 동적으로 생성 된 리소스를 제거하는 것이 중요합니다. 따라서 생성 한 버퍼를 완료하면 <span style="font-size:1px;"><a href="buffer_delete.htm"><tt style="font-size: 14px">buffer_delete ()를</tt></a></span> 사용하여 다시 해제해야합니다. 또한 새 버퍼를 만드는 데 사용 된 정점 버퍼도 메모리에서 제거되지 않으며 더 이상 필요하지 않은 경우 <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><tt style="font-size: 14px">vertex_delete_buffer ()</tt></a></span> 함수를 사용해야합니다.</p>
   <p> </p>
-  <h4>통사론:</h4>
+  <h4>구문:</h4>
   <p class="code">buffer_create_from_vertex_buffer(vertex_buffer, type, alignment)</p>
   <table>
     <tbody>
@@ -148,7 +148,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>보고:</h4>
+  <h4>반환값:</h4>
   <p class="code">Int (Vertex buffer ID)</p>
   <p> </p>
   <h4>예:</h4>

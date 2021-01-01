@@ -86,7 +86,7 @@
   <p><img alt="Prismatic joint limits illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/prismatic_joint_image_2.png"/>관절에 모터가 있는지 여부를 정의 할 수도 있습니다. 이는 충돌에 영향을받지 않으면 조인트가 축을 따라 한 방향으로 움직입니다. 이 방향은 모터 속도로 정의되며 양수는 축 좌표를 향하고 ( &quot;오른쪽&quot;), 음수는 기준점을 향합니다 ( &quot;왼쪽&quot;). &quot;max_motor_force&quot;인수는 이동 속도를 제한하여 지속적으로 가속되는 모터를 얻지 못하고 충돌이 이동에 미칠 수있는 영향을 제한합니다. 이런 방식으로 조인트 모터를 사용하여 조인트 속도를 0으로 설정하고 최대 힘을 ​​작지만 중요한 값으로 설정하여 조인트 마찰을 시뮬레이션 할 수 있습니다. 모터는 조인트가 움직이지 않도록 시도하지만 상당한 하중을 발생시킵니다.</p>
   <p>모든 관절과 마찬가지로 &quot;col&quot;값을 <tt>true</tt> 로 설정하면 두 인스턴스가 서로 상호 작용하고 충돌 할 수 있지만 충돌 이벤트가있는 경우 <i>에만</i> 충돌이 발생합니다. 그러나 <tt>false</tt> 로 설정되어 있으면 충돌이 발생하지 않습니다. .</p>
   <p> </p>
-  <h4>통사론:</h4>
+  <h4>구문:</h4>
   <p class="code">physics_joint_prismatic_create(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
   <table>
     <tbody>
@@ -149,7 +149,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>보고:</h4>
+  <h4>반환값:</h4>
   <p class="code">Integer (index of the joint)</p>
   <p> </p>
   <h4>예:</h4>

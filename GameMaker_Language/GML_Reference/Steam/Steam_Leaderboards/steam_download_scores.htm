@@ -83,7 +83,7 @@
   <h1>steam_download_scores</h1>
   <p>이 기능은 순위표 순위에 따라 순차적 인 순위표 항목을 검색하는 데 사용됩니다. <tt>start_idx</tt> 및 <tt>end_idx</tt> 매개 변수는 요청 된 순위 범위를 제어합니다. 예를 들어 시작 값을 1로 설정하고 종료 값을 10으로 설정하여 게임의 순위표에 상위 10 개를 표시 할 수 있습니다. 리더 보드 이름은 정의 된 문자열입니다. <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard ()</tt></a> 함수를 사용하여 리더 보드를 <a href="steam_create_leaderboard.htm"><tt>만들면</tt></a> 이 함수는 값을 반환 한 다음 <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam Async Event</a> 에서 콜백을 식별하는 데 사용할 수 있으며 실패한 경우 -1을 반환합니다. 리더 보드를 다운로드 할 때 점수와 함께 추가 버퍼 데이터가 업로드 된 경우 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> 맵의 &quot;항목&quot;키에 추가 &quot;데이터&quot;키가있을 수 있습니다 ( <a href="steam_upload_score_buffer.htm"><tt>steam_upload_score_buffer ()</tt></a> 참조). 이 데이터 버퍼는 <b>Base 64로 인코딩</b> 되므로 데이터를 읽기 전에 버퍼에서 <a href="../../Buffers/buffer_base64_decode.htm"><tt>buffer_base64_decode ()</tt></a> 함수를 사용해야합니다.</p>
   <p> </p>
-  <h4>통사론:</h4>
+  <h4>구문:</h4>
   <p class="code">steam_download_scores(lb_name, start_idx, end_idx);</p>
   <table>
     <tbody>
@@ -106,7 +106,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>보고:</h4>
+  <h4>반환값:</h4>
   <p class="code">Real</p>
   <p> </p>
   <h4>확장 된 예 :</h4>
