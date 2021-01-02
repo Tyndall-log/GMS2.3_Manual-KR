@@ -32,7 +32,7 @@
     }
 
     -->
-  
+
 /*]]>*/</style>
 
   <script type="text/javascript">//<![CDATA[
@@ -40,7 +40,7 @@
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
     gTopicId = "10.0_2";
-  
+
 //]]></script>
 
   <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
@@ -81,31 +81,31 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>파일 시스템</h1>
-  <p>GameMaker Studio 2와 함께 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Handling.htm">파일 시스템 기능</a> 또는 <a href="../Settings/Included_Files.htm">포함 된 파일을</a> 사용하는 경우 파일 시스템의 작동 방식과 뒤에서 일어나는 일을 정확히 아는 것이 매우 중요합니다. 이를 위해이 섹션은 물건이 <em>어떻게</em> 저장되어 있는지, <em>어디에</em> 저장되어 있는지,이 시스템에 어떤 가능한 한계 나 해결 방법이 <em>있는지</em> 설명하고 명확하게 설명하기 위해 고안되었습니다.</p>
-  <p>파일 함수에 대해 가장 먼저 알아 두어야 할 중요한 사항은 일반적으로 <strong>샌드 박스</strong> 로 제한되어 있다는 것입니다. 이는 GameMaker Studio 2 <strong>가</strong> 사용자의 <em>명시적인</em> 입력 없이는 <strong>게임 번들 또는 장치의 로컬 저장소에 속하지 않는 어느 곳에서나 파일을 저장하거나로드 할 수 없으며</strong> ,이 입력도 Windows, macOS 및 우분투 (Linux) 대상 플랫폼.</p>
-  <p class="note"><strong>중대한!</strong> 그러나 대상 플랫폼의 <a href="../Settings/Game_Options.htm">게임 옵션</a> 에서 <strong>파일 시스템 샌드 박스 비활성화</strong> 옵션을 선택하여 데스크탑 대상 (Windows, macOS 및 Ubuntu (Linux))에서 샌드 박싱을 끌 수 있습니다. 귀하는 자신의 책임하에이 작업을 수행해야합니다. 이렇게하면 파일 저장 및로드가 열리고 지정된 시스템의 어느 곳에서나 파일에 액세스 할 수 있지만 여전히 OS 권한에 의해 제한을받을 수 있으며 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/program_directory.htm"><span style="font-size:1px;"><span class="inline" style="font-size: 14px">program_directory</span></span></a> 폴더.</p>
-  <p>샌드 박스를 이해하려면 먼저 파일에 대해 두 가지 고유 한 영역이 있음을 이해해야합니다.</p>
+  <p>GameMaker Studio 2로 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Handling.htm">파일 시스템 기능</a> 또는 <a href="../Settings/Included_Files.htm">포함 된 파일을</a> 사용하는 경우, 파일 시스템의 작동 방식과 뒤에서 일어나는 일을 정확히 아는 것이 매우 중요합니다. 이를 위해이 섹션은 물건이 <em>어떻게</em> 저장되어 있는지, <em>어디에</em> 저장되어 있는지, 이 시스템에 어떤 가능한 한계나 해결 방법이 <em>있는지</em> 설명하고 명확하게 설명하기 위해 고안되었습니다.</p>
+  <p>파일 함수에 대해 가장 먼저 알아두어야 할 중요한 사항은 일반적으로 <strong>샌드 박스</strong>로 제한되어 있다는 것입니다. 이는 GameMaker Studio 2 <strong>가</strong> 사용자의 <em>명시적인</em> 입력 없이는 <strong>게임 번들 또는 장치의 로컬 저장소에 속하지 않는 어느 곳에서나 파일을 저장하거나로드 할 수 없으며</strong> ,이 입력도 Windows, macOS 및 우분투 (Linux) 대상 플랫폼.</p>
+  <p class="note"><strong>중요!</strong> 그러나 대상 플랫폼의 <a href="../Settings/Game_Options.htm">게임 옵션</a>에서 <strong>파일 시스템 샌드 박스 비활성화</strong> 옵션을 선택하여 데스크탑 대상(Windows, macOS 및 Ubuntu (Linux))에서 샌드 박싱을 끌 수 있습니다. 귀하는 자신의 책임하에 이 작업을 수행해야 합니다. 이렇게 하면 파일 저장 및 로드가 열리고 지정된 시스템의 어느 곳에서나 파일에 액세스 할 수 있지만 여전히 OS 권한에 의해 제한을 받을 수 있으며 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/program_directory.htm"><span style="font-size:1px;"><span class="inline" style="font-size: 14px">program_directory</span></span></a> 폴더에서 파일을 쓸 수 없습니다. </p>
+  <p>샌드 박스를 이해하려면 먼저 파일에 대해 두 가지 고유한 영역이 있음을 이해해야 합니다.</p>
   <ul class="colour">
-    <li><strong>File Bundle (파일 번들)</strong> -GameMaker Studio 2 IDE (포함 된 외부 파일)의 <strong>Included Files</strong> 자산 목록에 추가 한 파일을 포함하여 실행 가능한 게임과 함께 패키지 된 모든 파일이 저장되는 위치 게임).</li>
-    <li><strong>저장 영역</strong> -게임에서 안전하게 쓸 수있는 장치 저장 영역이며 게임은 쓰기 가능한 영역임을 보장합니다.</li>
+    <li><strong>File Bundle (파일 번들)</strong> - GameMaker Studio 2 IDE (포함 된 외부 파일)의 <strong>Included Files</strong> 자산 목록에 추가 한 파일을 포함하여 실행 가능한 게임과 함께 패키지 된 모든 파일이 저장되는 위치 게임).</li>
+    <li><strong>저장 영역</strong> - 게임에서 안전하게 쓸 수있는 장치 저장 영역이며 게임은 쓰기 가능한 영역임을 보장합니다.</li>
   </ul>
-  <p>다음 다이어그램은이를 더 잘 시각화하는 데 도움이 될 수 있습니다.</p>
+  <p>다음 다이어그램은 이를 더 잘 시각화하는 데 도움이 될 수 있습니다.</p>
   <p><img alt="File System Save Areas" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Files_SaveAreas.png"/></p>
   <p class="note"><strong>참고</strong> : 파일 번들 (프로그램) 디렉토리에는 쓸 수 없습니다.</p>
-  <p>게임을 샌드 박스로 만들면 번들 디렉토리와 로컬 스토리지 영역의 두 대상 영역을 각 대상 플랫폼에서 사용할 수 있지만 각각의 대상 영역에서 약간 다르게 작동합니다. 그러나 GameMaker Studio 2는 수행 할 수있는 작업과 수행 할 수없는 작업의 주요 내용을 추상화하여 게임을 여러 환경으로 쉽게 재 타겟팅 할 수 있습니다.</p>
-  <p>먼저 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/working_directory.htm"><span class="inline">working_directory에</span></a> 대해 이야기 할 때 의미가 무엇인지 이해해야합니다. 이것은 가능한 두 개의 저장 위치 (위의 다이어그램으로 표시)의 동의어이며, 해당 디렉토리를 사용하면 읽고 있는지 또는 읽고있는 파일과 읽고있는 파일이 있는지에 따라 두 가지 중 하나를 수행합니다. 변경 여부 :</p>
+  <p>게임을 샌드 박스로 만들면 번들 디렉토리와 로컬 스토리지 영역의 두 대상 영역을 각 대상 플랫폼에서 사용할 수 있지만 각각의 대상 영역에서 약간 다르게 작동합니다. 그러나 GameMaker Studio 2는 수행 할 수있는 작업과 수행 할 수 없는 작업의 주요 내용을 추상화하여 게임을 여러 환경으로 쉽게 재 타겟팅 할 수 있습니다.</p>
+  <p>먼저 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/working_directory.htm"><span class="inline">working_directory에</span></a> 대해 이야기 할 때 의미가 무엇인지 이해해야 합니다. 이것은 가능한 두 개의 저장 위치 (위의 다이어그램으로 표시)의 동의어이며, 해당 디렉토리를 사용하면 읽고 있는지 쓰고 있는지, 그리고 읽고 있는 파일이 변경되었는지에 따라 두 가지 중 하나를 수행합니다. 변경 여부 :</p>
   <ul class="colour">
-    <li><strong>읽기 작업</strong> -working_directory는 먼저 저장 영역을 확인하여 액세스중인 파일이 있는지, 파일이 사용 중인지 확인합니다. 그러나 파일이 저장 영역에 존재하지 않으면 파일 번들 영역을 확인하고이를 사용합니다 (찾고있는 파일이 게임에 포함 된 파일 인 경우).</li>
-    <li><strong>쓰기 작업</strong> -저장 영역에서만 가능합니다.</li>
+    <li><strong>읽기 작업</strong> - working_directory는 먼저 저장 영역을 확인하여 액세스중인 파일이 있는지, 파일이 사용 중인지 확인합니다. 그러나 파일이 저장 영역에 존재하지 않으면 파일 번들 영역을 확인하고 이를 사용합니다. (찾고있는 파일이 게임에 포함 된 파일 인 경우)</li>
+    <li><strong>쓰기 작업</strong> - 저장 영역에서만 가능합니다.</li>
   </ul>
-  <p class="note"><strong>참고</strong> : 일반적으로 GameMaker Studio 2는이 모든 것을 처리하므로 <span class="inline" style="font-size: 14px">working_directory</span> 내장 변수를 <strong>거의</strong> 사용할 필요가 <strong>없습니다</strong> .</p>
-  <p>이 두 가지 간단한 규칙을 사용하여 다음 함수의 작동 방식을 확인할 수 있습니다 (이것은 사용 가능한 다른 함수에 대한 프로세스를 시각화하는 데 도움이되는 예입니다).</p>
+  <p class="note"><strong>참고</strong> : 일반적으로 GameMaker Studio 2는 이 모든 것을 처리하므로 <span class="inline" style="font-size: 14px">working_directory</span> 내장 변수를 <strong>거의</strong> 사용할 필요가 <strong>없습니다</strong>.</p>
+  <p>이 두 가지 간단한 규칙을 사용하여 다음 함수의 작동 방식을 확인할 수 있습니다. (이것은 사용 가능한 다른 함수에 대한 프로세스를 시각화하는 데 도움이 되는 예입니다)</p>
   <ul class="colour">
     <li><a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/directory_create.htm"><span class="inline">directory_create ()</span></a> (및 다른 디렉토리 함수)는 <strong>저장</strong> 영역에서만 작동합니다.</li>
     <li><a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/File_System.htm">파일 시스템 기능은</a> <strong>번들</strong> 및 지역 <strong>저장</strong> <em>모두에서</em> 파일에 대한 정보를 반환하지만에만 <strong>저장</strong> 영역에 <em>기록합니다.</em></li>
     <li>텍스트, 바이너리 또는 <span class="inline">INI</span> 파일을 작성하는 기능은 저장 영역에 파일이없는 경우 새 파일을 만들어 게임 번들에 포함 된 원본 파일의 정보를 복사합니다. 원본 파일은 여전히 ​​저장 디렉토리의 읽기 전용 부분에 남아 있지만, 저장 영역의 읽기 / 쓰기 섹션에 버전이 존재하는 한 참조되지 않습니다.</li>
   </ul>
-  <p><strong>Windows</strong> , <strong>macOS</strong> 및 <strong>Ubuntu</strong> (Linux) 플랫폼에는 샌드 박스 외부에서 파일을 저장하고로드하는 두 가지 방법이 있으며 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/get_open_filename.htm"><span class="inline">get_open_filename ()</span></a> 및 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/get_save_filename.htm"><span class="inline">get_save_filename ()</span></a> 함수를 사용합니다 (이러한 기능 모두 사용자가 선택해야합니다) 로드 및 저장 영역과 반환 문자열을 나머지 파일 함수에서 사용하여 샌드 박스를 우회 할 수 있습니다 (자세한 내용은 설명서의 언어 섹션에있는 함수 설명 참조). 다른 방법은 대상 플랫폼에 대한 <a href="../Settings/Game_Options.htm">게임 옵션</a> 에서 샌드 박스를 모두 비활성화하는 것입니다 (이 페이지에서 추가로 논의 된 바와 같이 데스크탑 대상에만 사용 가능).</p>
+  <p><strong>Windows</strong> , <strong>macOS</strong> 및 <strong>Ubuntu</strong> (Linux) 플랫폼에는 샌드 박스 외부에서 파일을 저장하고 로드하는 두 가지 방법이 있으며 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/get_open_filename.htm"><span class="inline">get_open_filename ()</span></a> 및 <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/get_save_filename.htm"><span class="inline">get_save_filename ()</span></a> 함수를 사용합니다 (이러한 기능 모두 사용자가 선택해야합니다) 로드 및 저장 영역과 반환 문자열을 나머지 파일 함수에서 사용하여 샌드 박스를 우회 할 수 있습니다 (자세한 내용은 설명서의 언어 섹션에있는 함수 설명 참조). 다른 방법은 대상 플랫폼에 대한 <a href="../Settings/Game_Options.htm">게임 옵션</a> 에서 샌드 박스를 모두 비활성화하는 것입니다 (이 페이지에서 추가로 논의 된 바와 같이 데스크탑 대상에만 사용 가능).</p>
   <p>HTML5에서는 서버에서 샌드 박스 외부에서 파일을로드 할 수도 있지만 <a href="../GameMaker_Language/GML_Reference/Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async ()</span></a> 함수 만 사용하면로드가 대부분의 브라우저에서 더 이상 사용되지 않으며 결국 폐기됩니다. 즉, 이런 방식으로로드되는 파일은 이진 파일로 저장되어야합니다. 예를 들어 <span class="inline">* .ini</span> 를 문자열로 저장 한 다음 <a href="../GameMaker_Language/GML_Reference/File_Handling/Ini_Files/Ini_Files.htm"><span class="inline">(ini_close ()</span></a> 참조) 버퍼에 파일을 저장 한 다음 저장할 수 있습니다. 비동기 함수를 사용하여로드되었습니다. <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm"><span class="inline">sprite_add ()</span></a> 를 사용하여 이미지를로드하는 경우 이미 비동기 적으로 처리됩니다.</p>
   <p>또한 각 대상 플랫폼에는 파일과 디렉토리를 읽고 쓸 수있는 자체 저장 영역이 있습니다. 아래는 샌드 박스를 만들 때 각 대상에 대한 영역 목록입니다.</p>
   <ul class="colour">
@@ -119,7 +119,7 @@
   <p>HTML5 대상 모듈에는 로컬 스토리지 (브라우저에 따라 1MB ~ 5MB 사이)에 대한 제한이 있으므로 큰 스프라이트, 스크린 샷 등을 저장할 수 없습니다.</p>
   <p> </p>
   <p> </p>
-  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Participant">부분 한글화 : WOKET(qorw****), 번역 : 구글번역기</div>
   <div class="Original_text" onclick="winopen('Additional_Information/The_File_System.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
@@ -141,4 +141,4 @@ Local Storage
 file_system
 -->
 
-</body></html> 
+</body></html>
