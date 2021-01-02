@@ -32,7 +32,7 @@
     }
 
     -->
-  
+
 /*]]>*/</style>
 
   <script type="text/javascript">//<![CDATA[
@@ -40,7 +40,7 @@
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
     gTopicId = "2.0_4";
-  
+
 //]]></script>
 
   <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
@@ -69,7 +69,7 @@
     </div>
     <div class="nav">
       <div class="title" title="Creating Sound Effects">
-        <span>음향 효과 만들기</span>
+        <span>사운드 효과 만들기</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
         <span>이 페이지를 전체 내용으로 보려면 여기를 클릭하십시오</span>
@@ -81,26 +81,26 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>음향 효과 만들기</h1>
-  <p>모든 게임에는 사운드 효과가 있어야하며 대부분 음악도 있어야합니다. 즉, GameMaker Studio 2에서 게임에 게임을 추가 할 수 있어야합니다. 이는 새 사운드를 만들 때마다 열리는 <a href="../The_Asset_Editors/Sounds.htm"><strong>사운드 편집기를</strong></a> 통해 수행됩니다. 자산 브라우저의 자산 :</p>
+  <h1>사운드 효과 만들기</h1>
+  <p>모든 게임에는 사운드 효과가 있어야 하며 대부분 음악도 있어야 합니다. 즉, 게임메이커 스튜디오 2에서 당신의 게임에 그것들을 추가할 수 있어야 합니다. 이는 새 사운드를 생성할 때마다 열리는 <a href="../The_Asset_Editors/Sounds.htm"><strong>사운드 편집기</strong></a>를 통해 실현됩니다.</p>
   <p><img alt="The Sound Editor" class="center" src="../assets/Images/QS_Guide/QS_SoundEditor.png"/></p>
-  <p>GameMaker Studio 2의 사운드는 런타임에 처리하는 방법에 대한 추가 옵션이있는 압축 사운드를 사용하여 압축 <strong>해제</strong> 또는 <strong>압축</strong> 할 수 있습니다. 압축되지 않은 사운드는 <span class="inline">WAV</span> 형식 파일로 저장된 사운드이며 압축 된 사운드는 <span class="inline">MP3</span> 또는 <span class="inline">OGG</span> 형식 일 수 있습니다. 일반적으로 작은 사운드 효과는 <span class="inline">WAV</span> 와 같은 촬영 사운드 또는 버튼 사운드 등이고 큰 효과 나 음악은 <span class="inline">MP3</span> 또는 <span class="inline">OGG</span> 입니다. 다른 리소스와 마찬가지로 &quot; <span class="inline">snd_</span> &quot;와 같은 적절한 접두사를 사용하여 사운드의 이름을 지정하여 나중에 쉽게 식별 할 수 있도록하는 것이 좋습니다.</p>
-  <p class="note"><strong>참고</strong> : 압축되지 않은 사운드는 단순히 어떤 유형의 압축 <strong><a class="tooltip" title="알고리즘은 기본적으로 명확한 문제를 해결하도록 설계된 일련의 명령 또는 규칙입니다. 비디오 파일을 한 형식에서 다른 형식으로 변환하거나 오디오를 작은 파일 크기로 압축하는 등 두 개의 숫자를 추가하거나 복잡한 숫자를 추가하는 등의 문제는 간단 할 수 있습니다.">알고리즘도</a></strong> 적용되지 않았 음을 의미합니다. 사운드에 <a class="tooltip" title="압축은 파일 크기를 줄이기 위해 수학적 알고리즘을 사용하는 것입니다. 특히 JPG (이미지) 및 MP3 (오디오)와 같은 형식이 압축 된 형식 인 오디오 및 이미지 파일에 사용됩니다. 압축은 일반적으로 파일 크기가 훨씬 작지만 사용 된 압축의 유형 및 강도에 따라 눈에 띄지 않을 수도있는 일부 데이터 손실이 있습니다. 압축되지 않은 형식은 파일 크기는 크지 만 데이터 손실은없는 BMP (이미지) 또는 WAV (오디오)입니다.">압축</a> 을 적용하면 저장 공간이 적게 필요하지만 재생하기 전에 압축을 풀어야하며 작은 사운드 효과가 일반적으로 매우 빠르게 사용되므로 저장 공간을 많이 차지하지 않기 때문에 압축을 풀어야합니다. -당신은 그것이 실행될 때 압축을 푸는 데 추가 CPU 비용을 원하지 않습니다. 그러나 음악 파일과 같은 것은 일반적으로 매우 큰 파일 일 수 있기 때문에 압축 된 파일을 원합니다. 저장 공간을 덜 차지하고 압축 해제에 필요한 추가 CPU 비용은 무시할 수 있습니다. 한번에 한.</p>
-  <p>사운드 추가 버튼을 클릭하는 것만으로 간단하게 사운드를 추가 할 수 있습니다. 사용하려는 파일을 여는 파일 탐색기를 탐색합니다 (사운드 파일을 GameMaker Studio 2 IDE로 드래그 앤 릴리스하면 새 사운드 자산으로 추가됩니다). 하나를 선택하여로드 한 후에는 표시된 재생 컨트롤을 사용하여 미리보고 파일을 내보내는 방법에 대한 특정 속성을 변경할 수 있습니다. 음악이나 <span class="inline">MP3</span> / <span class="inline">OGG</span> 형식 사운드를 추가하는 경우 <em>압축</em> 형식 <em>-스트리밍되지 않음</em> 형식으로 변경해야하지만,이 점에 대해 잘 모르면 모든 것을 &quot;있는 그대로&quot;그대로 두십시오.</p>
-  <p>아래 링크 된 페이지에서 사운드 편집기에 대한 자세한 정보를 찾을 수 있습니다.</p>
+  <p>게임메이커 스튜디오 2의 사운드는 <strong>압축 해제</strong>되거나 <strong>압축</strong>될 수 있으며, 런타임에는 압축된 사운드를 처리하는 방법에 대한 추가 옵션이 있습니다. 압축되지 않은 사운드는 <span class="inline">WAV</span> 형식 파일로 저장된 사운드이며 압축된 사운드는 <span class="inline">MP3</span> 또는 <span class="inline">OGG</span> 형식일 수 있습니다. 일반적으로 작은 사운드 효과는 <span class="inline">WAV</span> 와 같은 촬영 사운드 또는 버튼 사운드 등이고 큰 효과나 음악은 <span class="inline">MP3</span> 또는 <span class="inline">OGG</span> 로 만드는 것이 좋습니다. 다른 리소스와 마찬가지로 &quot; <span class="inline">snd_</span> &quot;와 같은 적절한 접두사를 사용하여 사운드의 이름을 지정하여 나중에 쉽게 식별할 수 있도록 하는 것이 좋습니다.</p>
+  <p class="note"><strong>참고</strong> : 압축되지 않은 사운드는 단순히 어떤 유형의 압축 <strong><a class="tooltip" title="알고리즘은 기본적으로 명확한 문제를 해결하도록 설계된 일련의 명령 또는 규칙입니다. 비디오 파일을 한 형식에서 다른 형식으로 변환하거나 오디오를 작은 파일 크기로 압축하는 등 두 개의 숫자를 추가하거나 복잡한 숫자를 추가하는 등의 문제는 간단 할 수 있습니다.">알고리즘</a></strong>도 적용되지 않았음을 의미합니다. 사운드에 <a class="tooltip" title="압축은 파일 크기를 줄이기 위해 수학적 알고리즘을 사용하는 것입니다. 특히 JPG (이미지) 및 MP3 (오디오)와 같은 형식이 압축된 형식인 오디오 및 이미지 파일에 사용됩니다. 압축의 결과로는 일반적으로 파일 크기가 훨씬 작아진다는 것이지만 사용된 압축의 유형 및 강도에 따라 눈에 띄지 않는 일부 데이터 손실이 있을 수 있습니다. 압축되지 않은 형식은 파일 크기는 크지만 데이터 손실은 없는 BMP (이미지) 또는 WAV (오디오)입니다.">압축</a>을 적용하면 저장 공간이 줄어들지만 재생하기 전에 압축을 풀어야 한다는 의미이기도 합니다. 또한 작은 사운드 효과가 일반적으로 많이 사용되고 저장 공간을 많이 차지하지 않기 때문에 재생 시 압축을 해제하는 데에 드는 추가 CPU 비용이 필요하지 않을 것입니다. 그러나 일반적으로 음악 파일과 같은 파일은 매우 큰 파일일 수 있으므로 압축해야 합니다. 이러한 방식으로 저장 공간을 덜 차지하게 되고, 일반적으로 한 번에 하나씩만 재생되기 때문에 압축 해제에 따른 추가 CPU 비용은 거의 들지 않습니다.</p>
+  <p>사운드 추가 버튼을 클릭하고 파일 탐색기로 원하는 파일을 찾는 것만으로 간단하게 사운드를 추가할 수 있습니다. (사운드 파일을 게임메이커 스튜디오 2 IDE로 끌어다 놓을 수도 있으며 그것들은 새 사운드 에셋으로 추가될 것입니다.) 파일을 선택하고 로드한 후에는 표시된 재생 컨트롤을 사용하여 미리 볼 수 있을 뿐만 아니라 파일을 내보내는 방법에 대한 특정 속성을 변경할 수 있습니다. 음악이나 <span class="inline">MP3</span> / <span class="inline">OGG</span> 형식의 사운드를 추가하는 경우 <em>압축 - 스트리밍되지 않음</em> 형식으로 변경해야 하지만, 확신할 수 없다면 모든 내용을 &quot;있는 그대로&quot; 두십시오.</p>
+  <p>아래 링크된 페이지에서 사운드 편집기에 대한 자세한 정보를 찾을 수 있습니다.</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Sounds.htm">편집자 : 사운드 편집자</a></li>
+    <li><a href="../The_Asset_Editors/Sounds.htm">편집기 : 사운드 편집기</a></li>
   </ul>
-  <p>사운드는 디스크에서 많은 공간을 차지하므로 게임 프로젝트 용으로 사운드를 만들 때주의해야합니다. 1 분의 1 초 동안 만 재생되는 48KHz 사운드 효과가 정말로 필요합니까? 아마 아닙니다! 따라서 여기에서는 <a class="tooltip" title="샘플 속도는 Hz 또는 kHz (1kHz는 1000Hz)로 측정 된 초당 운반되는 오디오 샘플 수입니다. 샘플 속도가 높을수록 사운드는 원래 아날로그 파형에 더 가깝지만 파일 크기는 커집니다. 일반적으로 사운드 효과는 음악보다 샘플 속도가 낮습니다.">샘플 속도</a> 를 11025 또는 22050으로 줄여서 효과를, 음악이나 루핑 효과와 같은 더 긴 것들을 위해 압축 형식을 사용하는 것에 대해서도 생각하십시오. 3D 위치 오디오 효과를 사용하려는 경우 초기 사운드 파일은 <em>모노</em> 여야합니다.</p>
-  <p>사운드 에디터를 닫고 <strong>Objects and Instances</strong> 를 살펴볼 수 있습니다.</p>
+  <p>사운드는 디스크에서 많은 공간을 차지하므로 게임 프로젝트 용으로 사운드를 만들 때는 주의해야 합니다. 당신은 단 몇 초 동안만 재생되는 48KHz 사운드 효과가 정말 필요할까요? 아마 아닐 겁니다! 따라서 여기에서는 효과를 위해 <a class="tooltip" title="샘플 속도는 Hz 또는 kHz (1kHz는 1000Hz)로 측정된 초당 운반되는 오디오 샘플 수입니다. 샘플 속도가 높을수록 사운드는 원래의 아날로그 파형에 더 가까워지겠지만 파일 크기도 더 커질 겁니다. 일반적으로 사운드 효과는 음악보다 샘플 속도가 낮습니다.">샘플 속도</a>를 11025 또는 22050으로 줄이고, 음악이나 루핑 효과와 같은 더 긴 것들을 위해 압축 형식을 사용하는 것에 대해서도 생각하십시오. 또한 3D 위치 오디오 효과를 사용하려는 경우에는, 초기 사운드 파일이 <em>모노</em>여야 한다는 것을 명심하십시오.</p>
+  <p>사운드 에디터를 닫고, 우리는 이제 <strong>오브젝트와 인스턴스</strong>를 살펴볼 수 있습니다.</p>
   <p> </p>
-  <div class="Participant">번역 : 구글번역기</div>
+  <div class="Participant">한글화 : 듀우퐁(cas3****)</div>
   <div class="Original_text" onclick="winopen('Quick_Start_Guide/Creating_Sound_Effects.htm');">영문 페이지 보기</div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">목록: <a href="../Content.htm">인덱스</a></div>
-        <div style="float:right">다음: <a href="Objects_And_Instances.htm">객체와 인스턴스</a></div>
+        <div style="float:right">다음: <a href="Objects_And_Instances.htm">오브젝트와 인스턴스</a></div>
       </div>
     </div>
     <h5>© 저작권 YoYo Games Ltd. 2020 판권 소유</h5>
