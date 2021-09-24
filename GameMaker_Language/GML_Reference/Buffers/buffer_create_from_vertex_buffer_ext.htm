@@ -126,7 +126,7 @@
   <p>마지막 두 인수는 새로 만든 버퍼에 복사 할 정점 데이터의 범위를 지정하는 데 사용됩니다. 시작 정점은 0과 정점 수 -1 사이에있을 수 있으며 그 시점부터 복사 할 정점 수를 지정합니다. 정점 버퍼에서 <tt><a href="../Drawing/Primitives/vertex_get_number.htm">vertex_get_number ()</a></tt> 함수를 사용하여 저장된 총 정점 수를 얻을 수 있습니다.</p>
   <p class="note"><b>참고</b> : 메모리 누수를 방지하기 위해 더 이상 필요없는 메모리에서 이와 같이 동적으로 생성 된 리소스를 제거하는 것이 중요합니다. 따라서 생성 한 버퍼를 완료하면 <span style="font-size:1px;"><a href="buffer_delete.htm"><tt style="font-size: 14px">buffer_delete ()를</tt></a></span> 사용하여 다시 해제해야합니다. 또한 새 버퍼를 만드는 데 사용 된 정점 버퍼도 메모리에서 제거되지 않으며 더 이상 필요하지 않은 경우 <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><tt style="font-size: 14px">vertex_delete_buffer ()</tt></a></span> 함수를 사용해야합니다.</p>
   <p> </p>
-  <h4>통사론:</h4>
+  <h4>구문:</h4>
   <p class="code">buffer_create_from_vertex_buffer_ext(vertex_buffer, type, alignment, start_vertex, num_vertices)</p>
   <table>
     <tbody>
